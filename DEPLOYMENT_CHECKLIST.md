@@ -58,14 +58,12 @@ For now, this free static version avoids server complexity.
 6. If a main skill is linked, check that its sub-skills also show the inherited bonus.
 
 
-## Multi-save test
+## Mobile test
 
-1. Type a Character Name.
-2. Click `Save character`.
-3. Create another character with a different name.
-4. Click `Save character`.
-5. Use the saved-character dropdown to choose the first character.
-6. Click `Load selected`.
-7. Confirm the first character returns.
-8. Click `Export all saves` to make a backup file.
-9. Import that backup file in another browser profile or device to restore saved characters.
+1. Open the site on a phone or narrow browser window.
+2. Confirm the top action buttons stack cleanly.
+3. Confirm identity fields reflow into fewer columns.
+4. Confirm trait and talent cards stack vertically and remain readable.
+5. Confirm weapons, equipment, and condition tables can scroll sideways on small screens.
+6. Confirm Save, Load, Download, and Import remain usable on touch devices.
+7. Press Print on desktop to confirm the print layout still uses A4 landscape pages.

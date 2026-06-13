@@ -86,21 +86,14 @@ Rule used:
 - Bonus cells are highlighted light green.
 
 
-## Multi-character saving
+## Mobile-friendly refinements
 
-This version can save multiple character sheets in the same browser.
+This version is improved for phones and tablets.
 
-Buttons:
-- `Save character` saves the current sheet using the Character Name as the save-slot name.
-- `Saved characters...` lets you choose a saved character.
-- `Load selected` loads the selected character.
-- `Delete selected` removes the selected saved character from this browser.
-- `Download JSON` exports the current character only.
-- `Export all saves` exports every saved character in this browser as one backup file.
-- `Import JSON` can import either one character file or a full backup file.
-
-Important:
-- Saves are stored in the player's browser using localStorage.
-- Players using different computers or browsers will not overwrite each other.
-- Browser saves do not automatically sync across devices.
-- For safety, players should export JSON after each session.
+What changed:
+- Header controls stack cleanly on smaller screens.
+- Identity, resources, traits, talents, and notes collapse into single-column or two-column mobile layouts.
+- Large tables are placed inside horizontal scroll containers for narrow screens.
+- Inputs and dropdowns use larger touch-friendly sizes.
+- Textareas are larger and easier to use on mobile.
+- The desktop print layout is preserved for A4 landscape printing.
