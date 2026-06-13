@@ -72,3 +72,15 @@ Use Netlify drag-and-drop first, because it is the easiest test:
 ## Privacy note
 
 In this free static version, the character is saved in the player's browser only. It is not uploaded to a server unless the player downloads/sends the JSON file.
+
+
+## Skill bonus automation
+
+This refined version links selected Traits and Talents to the skill table.
+
+Rule used:
+- Each selected Trait adds +1 to its Primary skill and +1 to its Secondary skill.
+- Each selected Talent adds +1 to its Primary skill and +1 to its Secondary skill.
+- If the linked skill is a main skill, the bonus flows to the sub-skills under that main skill.
+- The Rating cell displays the final rating, for example `8 (+1)`.
+- Bonus cells are highlighted light green.

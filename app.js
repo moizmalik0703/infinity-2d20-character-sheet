@@ -64,12 +64,95 @@ function buildMainSkills() {
   });
 }
 
-function skillRating(skill) {
+function normalizeSkillName(skill) {
+  const raw = (skill || "").trim();
+  if (!raw) return "";
+  const allSkills = skillOrder.concat(mainSkills);
+  const exact = allSkills.find(s => s.toLowerCase() === raw.toLowerCase());
+  return exact || raw;
+}
+
+function baseRating(skill) {
   if (mainSkills.includes(skill)) {
-    return document.querySelector(`[data-main-skill="${skill}"]`)?.value || "7";
+    return Number(document.querySelector(`[data-main-skill="${skill}"]`)?.value || "7");
   }
   const parent = parentOf[skill];
-  return document.querySelector(`[data-main-skill="${parent}"]`)?.value || "7";
+  return Number(document.querySelector(`[data-main-skill="${parent}"]`)?.value || "7");
+}
+
+function selectedTraitObjects() {
+  return [...document.querySelectorAll("select[data-trait-select]")]
+    .map(el => byName(DATA.traits, el.value))
+    .filter(t => t && t.name);
+}
+
+function selectedTalentObjects() {
+  return [...document.querySelectorAll("select[data-talent-select]")]
+    .map(el => byName(DATA.talents, el.value))
+    .filter(t => t && t.name);
+}
+
+function calculateSkillBonuses() {
+  const direct = {};
+  const main = {};
+  const details = {};
+  skillOrder.concat(mainSkills).forEach(skill => {
+    direct[skill] = 0;
+    main[skill] = 0;
+    details[skill] = [];
+  });
+
+  function addBonus(skillName, source) {
+    const skill = normalizeSkillName(skillName);
+    if (!skill) return;
+    if (mainSkills.includes(skill)) {
+      main[skill] = (main[skill] || 0) + 1;
+      details[skill] = details[skill] || [];
+      details[skill].push(source);
+      (skillGroups[skill] || []).forEach(child => {
+        details[child] = details[child] || [];
+        details[child].push(`${source} via ${skill}`);
+      });
+    } else if (skillOrder.includes(skill)) {
+      direct[skill] = (direct[skill] || 0) + 1;
+      details[skill] = details[skill] || [];
+      details[skill].push(source);
+    }
+  }
+
+  selectedTraitObjects().forEach(t => {
+    addBonus(t.primary, `Trait: ${t.name}`);
+    addBonus(t.secondary, `Trait: ${t.name}`);
+  });
+
+  selectedTalentObjects().forEach(t => {
+    addBonus(t.primary, `Talent: ${t.name}`);
+    addBonus(t.secondary, `Talent: ${t.name}`);
+  });
+
+  return { direct, main, details };
+}
+
+function skillRatingParts(skill) {
+  const bonuses = calculateSkillBonuses();
+  const base = baseRating(skill);
+  const parent = parentOf[skill];
+  const inherited = parent ? (bonuses.main[parent] || 0) : 0;
+  const ownMain = mainSkills.includes(skill) ? (bonuses.main[skill] || 0) : 0;
+  const direct = bonuses.direct[skill] || 0;
+  const bonus = inherited + ownMain + direct;
+  const total = base + bonus;
+  return {
+    base,
+    bonus,
+    total,
+    sources: bonuses.details[skill] || []
+  };
+}
+
+function skillRating(skill) {
+  const parts = skillRatingParts(skill);
+  return parts.bonus > 0 ? `${parts.total} (+${parts.bonus})` : String(parts.total);
 }
 
 function buildSkillTable(tableId, skills) {
@@ -87,15 +170,28 @@ function buildSkillTable(tableId, skills) {
       <td data-rating="${skill}">${skillRating(skill)}</td>
       ${focus}
       <td><input data-skill-note="${skill}"></td>
-      <td>${mainSkills.includes(skill) ? "Main skill" : "Sub-skill"}</td>`;
+      <td data-skill-rule="${skill}">${mainSkills.includes(skill) ? "Main skill" : "Sub-skill"}</td>`;
     body.appendChild(tr);
   });
   table.appendChild(body);
   table.querySelectorAll("select[data-focus]").forEach(sel => makeOptions(sel, DATA.lists.focus, ""));
 }
+
 function updateSkillRatings() {
   document.querySelectorAll("[data-rating]").forEach(cell => {
-    cell.textContent = skillRating(cell.dataset.rating);
+    const skill = cell.dataset.rating;
+    const parts = skillRatingParts(skill);
+    cell.textContent = parts.bonus > 0 ? `${parts.total} (+${parts.bonus})` : String(parts.total);
+    cell.title = parts.sources.length ? `Automatic bonus: ${parts.sources.join("; ")}` : "";
+    cell.classList.toggle("auto-bonus", parts.bonus > 0);
+
+    const ruleCell = document.querySelector(`[data-skill-rule="${skill}"]`);
+    if (ruleCell) {
+      const baseRule = mainSkills.includes(skill) ? "Main skill" : "Sub-skill";
+      ruleCell.textContent = parts.bonus > 0 ? `${baseRule}; bonus from Trait/Talent` : baseRule;
+      ruleCell.title = parts.sources.length ? parts.sources.join("; ") : "";
+      ruleCell.classList.toggle("auto-bonus", parts.bonus > 0);
+    }
   });
 }
 
@@ -124,6 +220,7 @@ function buildTraits() {
       setText(card.querySelector(`[data-trait-cost="${i}"]`), t.cost);
       setText(card.querySelector(`[data-trait-brief="${i}"]`), t.brief);
       setText(card.querySelector(`[data-trait-effect="${i}"]`), t.effect);
+      updateSkillRatings();
     });
   }
 }
@@ -157,6 +254,7 @@ function buildTalents() {
         const dataKey = k === "prereq" ? "prerequisite" : k;
         setText(card.querySelector(`[data-talent-${k}="${i}"]`), t[dataKey]);
       });
+      updateSkillRatings();
     });
   }
 }
@@ -240,6 +338,7 @@ function applyState(state) {
   (state.weapons || []).forEach((v,i) => { const el = document.querySelector(`select[data-weapon-select="${i}"]`); if (el) { el.value = v; el.dispatchEvent(new Event("change")); } });
   (state.equipment || []).forEach((v,i) => { const el = document.querySelector(`select[data-equipment-select="${i}"]`); if (el) { el.value = v; el.dispatchEvent(new Event("change")); } });
   (state.conditions || []).forEach((v,i) => { const el = document.querySelector(`select[data-condition-select="${i}"]`); if (el) { el.value = v; el.dispatchEvent(new Event("change")); } });
+  updateSkillRatings();
 }
 
 function downloadJSON() {

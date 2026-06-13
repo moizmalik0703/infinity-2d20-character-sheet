@@ -46,3 +46,13 @@ You will need a backend such as:
 - Airtable
 
 For now, this free static version avoids server complexity.
+
+
+## Skill bonus test
+
+1. Choose a Trait with a Primary or Secondary skill.
+2. Check the matching skill Rating cell.
+3. It should show the final rating with a bonus, such as `8 (+1)`.
+4. Choose a Talent with a Primary or Secondary skill.
+5. Confirm the bonus stacks if the same skill is linked again.
+6. If a main skill is linked, check that its sub-skills also show the inherited bonus.

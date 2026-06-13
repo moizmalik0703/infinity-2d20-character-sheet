@@ -217,3 +217,11 @@ td { font-size: .72rem; }
   @page { size: A4 landscape; margin: 8mm; }
   input, select, textarea { border: 1px solid #999; }
 }
+
+.auto-bonus {
+  background: #e8f7e8 !important;
+  font-weight: 700;
+}
+td[data-rating].auto-bonus {
+  color: #14532d;
+}
