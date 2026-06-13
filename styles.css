@@ -225,3 +225,18 @@ td { font-size: .72rem; }
 td[data-rating].auto-bonus {
   color: #14532d;
 }
+
+.actions select {
+  border: 0;
+  background: #ffffff;
+  color: var(--blue);
+  padding: .45rem .65rem;
+  border-radius: .35rem;
+  font-weight: 700;
+  min-width: 11rem;
+  min-height: auto;
+}
+.save-hint {
+  font-size: .75rem;
+  color: #d8e5f2;
+}

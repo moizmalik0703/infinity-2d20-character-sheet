@@ -56,3 +56,16 @@ For now, this free static version avoids server complexity.
 4. Choose a Talent with a Primary or Secondary skill.
 5. Confirm the bonus stacks if the same skill is linked again.
 6. If a main skill is linked, check that its sub-skills also show the inherited bonus.
+
+
+## Multi-save test
+
+1. Type a Character Name.
+2. Click `Save character`.
+3. Create another character with a different name.
+4. Click `Save character`.
+5. Use the saved-character dropdown to choose the first character.
+6. Click `Load selected`.
+7. Confirm the first character returns.
+8. Click `Export all saves` to make a backup file.
+9. Import that backup file in another browser profile or device to restore saved characters.

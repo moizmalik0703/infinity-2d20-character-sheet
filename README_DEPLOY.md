@@ -84,3 +84,23 @@ Rule used:
 - If the linked skill is a main skill, the bonus flows to the sub-skills under that main skill.
 - The Rating cell displays the final rating, for example `8 (+1)`.
 - Bonus cells are highlighted light green.
+
+
+## Multi-character saving
+
+This version can save multiple character sheets in the same browser.
+
+Buttons:
+- `Save character` saves the current sheet using the Character Name as the save-slot name.
+- `Saved characters...` lets you choose a saved character.
+- `Load selected` loads the selected character.
+- `Delete selected` removes the selected saved character from this browser.
+- `Download JSON` exports the current character only.
+- `Export all saves` exports every saved character in this browser as one backup file.
+- `Import JSON` can import either one character file or a full backup file.
+
+Important:
+- Saves are stored in the player's browser using localStorage.
+- Players using different computers or browsers will not overwrite each other.
+- Browser saves do not automatically sync across devices.
+- For safety, players should export JSON after each session.

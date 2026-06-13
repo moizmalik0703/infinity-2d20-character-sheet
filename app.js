@@ -341,9 +341,104 @@ function applyState(state) {
   updateSkillRatings();
 }
 
+const SAVE_INDEX_KEY = "infinity2d20-character-index";
+const SAVE_PREFIX = "infinity2d20-character-save:";
+
+function safeFileName(name) {
+  return (name || "infinity-character").replace(/[^\w\-]+/g, "_");
+}
+
+function currentCharacterName() {
+  return (inputField("characterName")?.value || "").trim() || "Unnamed Character";
+}
+
+function saveIdFromName(name) {
+  return name.trim().toLowerCase().replace(/[^\w\-]+/g, "_") || "unnamed_character";
+}
+
+function getSaveIndex() {
+  try {
+    return JSON.parse(localStorage.getItem(SAVE_INDEX_KEY) || "[]");
+  } catch {
+    return [];
+  }
+}
+
+function setSaveIndex(index) {
+  localStorage.setItem(SAVE_INDEX_KEY, JSON.stringify(index));
+}
+
+function saveCharacterToBrowser() {
+  const state = collectState();
+  state.characterName = state.characterName || currentCharacterName();
+  state.savedAt = new Date().toISOString();
+
+  const name = state.characterName || "Unnamed Character";
+  const id = saveIdFromName(name);
+  localStorage.setItem(SAVE_PREFIX + id, JSON.stringify(state));
+
+  let index = getSaveIndex().filter(item => item.id !== id);
+  index.push({ id, name, updatedAt: state.savedAt });
+  index.sort((a, b) => a.name.localeCompare(b.name));
+  setSaveIndex(index);
+  refreshSaveSlots(id);
+  alert(`Saved "${name}" to this browser.`);
+}
+
+function loadCharacterFromBrowser() {
+  const select = document.getElementById("characterSlotSelect");
+  const id = select?.value;
+  if (!id) {
+    alert("Choose a saved character first.");
+    return;
+  }
+  const raw = localStorage.getItem(SAVE_PREFIX + id);
+  if (!raw) {
+    alert("Saved character not found in this browser.");
+    refreshSaveSlots();
+    return;
+  }
+  applyState(JSON.parse(raw));
+  alert("Loaded selected character.");
+}
+
+function deleteSelectedSave() {
+  const select = document.getElementById("characterSlotSelect");
+  const id = select?.value;
+  if (!id) {
+    alert("Choose a saved character first.");
+    return;
+  }
+  const index = getSaveIndex();
+  const item = index.find(x => x.id === id);
+  if (!confirm(`Delete saved character "${item?.name || id}" from this browser?`)) return;
+  localStorage.removeItem(SAVE_PREFIX + id);
+  setSaveIndex(index.filter(x => x.id !== id));
+  refreshSaveSlots();
+}
+
+function refreshSaveSlots(selectedId = "") {
+  const select = document.getElementById("characterSlotSelect");
+  if (!select) return;
+  const index = getSaveIndex();
+  select.innerHTML = "";
+  const blank = document.createElement("option");
+  blank.value = "";
+  blank.textContent = index.length ? "Saved characters..." : "No saved characters";
+  select.appendChild(blank);
+  index.forEach(item => {
+    const opt = document.createElement("option");
+    opt.value = item.id;
+    const date = item.updatedAt ? new Date(item.updatedAt).toLocaleDateString() : "";
+    opt.textContent = date ? `${item.name} (${date})` : item.name;
+    select.appendChild(opt);
+  });
+  if (selectedId) select.value = selectedId;
+}
+
 function downloadJSON() {
   const state = collectState();
-  const name = (state.characterName || "infinity-character").replace(/[^\w\-]+/g, "_");
+  const name = safeFileName(state.characterName || "infinity-character");
   const blob = new Blob([JSON.stringify(state, null, 2)], {type: "application/json"});
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -351,6 +446,59 @@ function downloadJSON() {
   a.download = `${name}.json`;
   a.click();
   URL.revokeObjectURL(url);
+}
+
+function exportAllSaves() {
+  const index = getSaveIndex();
+  const saves = {};
+  index.forEach(item => {
+    const raw = localStorage.getItem(SAVE_PREFIX + item.id);
+    if (raw) saves[item.id] = JSON.parse(raw);
+  });
+  const backup = {
+    app: "Infinity 2D20 Web Character Sheet",
+    exportedAt: new Date().toISOString(),
+    index,
+    saves
+  };
+  const blob = new Blob([JSON.stringify(backup, null, 2)], {type: "application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `infinity_2d20_all_character_saves_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importJSONFile(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    const parsed = JSON.parse(reader.result);
+
+    // Backup file containing many characters.
+    if (parsed && parsed.saves && parsed.index) {
+      const existing = getSaveIndex();
+      const byId = {};
+      existing.forEach(item => byId[item.id] = item);
+      parsed.index.forEach(item => {
+        if (parsed.saves[item.id]) {
+          localStorage.setItem(SAVE_PREFIX + item.id, JSON.stringify(parsed.saves[item.id]));
+          byId[item.id] = item;
+        }
+      });
+      setSaveIndex(Object.values(byId).sort((a, b) => a.name.localeCompare(b.name)));
+      refreshSaveSlots();
+      alert("Imported all saved characters into this browser.");
+      return;
+    }
+
+    // Single character file.
+    applyState(parsed);
+    if (confirm("Import loaded. Save this character into browser slots now?")) {
+      saveCharacterToBrowser();
+    }
+  };
+  reader.readAsText(file);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -363,23 +511,20 @@ document.addEventListener("DOMContentLoaded", () => {
   buildItemTable("weaponTable", 5, "weapon");
   buildItemTable("equipmentTable", 10, "equipment");
   buildConditions();
+  refreshSaveSlots();
 
-  document.getElementById("saveBtn").addEventListener("click", () => {
-    localStorage.setItem("infinity2d20-character", JSON.stringify(collectState()));
-    alert("Saved to this browser.");
-  });
-  document.getElementById("loadBtn").addEventListener("click", () => {
-    applyState(JSON.parse(localStorage.getItem("infinity2d20-character") || "null"));
-  });
+  document.getElementById("saveBtn").addEventListener("click", saveCharacterToBrowser);
+  document.getElementById("loadBtn").addEventListener("click", loadCharacterFromBrowser);
+  document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);
   document.getElementById("newSheetBtn").addEventListener("click", () => {
-    if (confirm("Clear this character sheet?")) location.reload();
+    if (confirm("Clear this character sheet? Unsaved changes will be lost.")) location.reload();
   });
   document.getElementById("downloadBtn").addEventListener("click", downloadJSON);
+  document.getElementById("exportAllBtn").addEventListener("click", exportAllSaves);
   document.getElementById("importFile").addEventListener("change", (e) => {
     const file = e.target.files[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => applyState(JSON.parse(reader.result));
-    reader.readAsText(file);
+    importJSONFile(file);
+    e.target.value = "";
   });
 });

@@ -14,9 +14,12 @@
     </div>
     <div class="actions">
       <button id="newSheetBtn">New</button>
-      <button id="saveBtn">Save to browser</button>
-      <button id="loadBtn">Load from browser</button>
+      <select id="characterSlotSelect" title="Saved characters"></select>
+      <button id="saveBtn">Save character</button>
+      <button id="loadBtn">Load selected</button>
+      <button id="deleteSaveBtn">Delete selected</button>
       <button id="downloadBtn">Download JSON</button>
+      <button id="exportAllBtn">Export all saves</button>
       <label class="button-file">Import JSON<input id="importFile" type="file" accept="application/json"></label>
       <button onclick="window.print()">Print</button>
     </div>
