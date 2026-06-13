@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infinity 2D20 Campaign Character Sheet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header no-print">
+    <div>
+      <h1>Infinity 2D20 Campaign Character Sheet</h1>
+      <p>Browser-based, printable, fixed-layout character sheet.</p>
+    </div>
+    <div class="actions">
+      <button id="newSheetBtn">New</button>
+      <button id="saveBtn">Save to browser</button>
+      <button id="loadBtn">Load from browser</button>
+      <button id="downloadBtn">Download JSON</button>
+      <label class="button-file">Import JSON<input id="importFile" type="file" accept="application/json"></label>
+      <button onclick="window.print()">Print</button>
+    </div>
+  </header>
+
+  <main id="sheet" class="sheet">
+    <section class="page page-1">
+      <h2>Page 1 - Identity, Main Skills, Tracks & Skills</h2>
+
+      <div class="grid identity-grid">
+        <label>Character Name<input data-field="characterName"></label>
+        <label>Player<input data-field="player"></label>
+        <label>Faction<select data-field="faction" data-list="factions"></select></label>
+        <label>Homeworld / Habitat<select data-field="homeworld" data-list="homeworlds"></select></label>
+        <label>Concept<input data-field="concept"></label>
+        <label>XP<input data-field="xp"></label>
+        <label>Career / Role<select data-field="careerRole" data-list="careerRoles"></select></label>
+        <label>Doctrine / Unit Tree<select data-field="doctrine" data-list="doctrines"></select></label>
+        <label>Restriction<select data-field="restriction" data-list="restrictions"></select></label>
+        <label>Talent Faction<select data-field="talentFaction" data-list="talentFactions"></select></label>
+        <label class="wide">Campaign Notes<input data-field="campaignNotes"></label>
+      </div>
+
+      <div class="two-column">
+        <div class="panel">
+          <h3>Main Skill Ratings</h3>
+          <div class="main-skills" id="mainSkills"></div>
+        </div>
+        <div class="panel">
+          <h3>Resources & Tracks</h3>
+          <div class="track-grid">
+            <label>HP / Vigor<input data-field="hp"></label>
+            <label>Firewall<input data-field="firewall"></label>
+            <label>Armour<input data-field="armour"></label>
+            <label>Mental Stress<input data-field="mentalStress"></label>
+            <label>Infinity Points<input data-field="infinityPoints"></label>
+            <label>Credits<input data-field="credits"></label>
+            <label>Momentum<input data-field="momentum"></label>
+            <label>Heat<input data-field="heat"></label>
+            <label>Wounds<input data-field="wounds"></label>
+          </div>
+        </div>
+      </div>
+
+      <p class="rule">Main skills cannot use Focus. Change a main skill rating to update each sub-skill below it. Sub-skills may select Focus +1 to +20.</p>
+
+      <div class="skills-grid">
+        <table id="skillsLeft"></table>
+        <table id="skillsRight"></table>
+      </div>
+
+      <label class="notes">Scratch Notes / Session Log
+        <textarea data-field="scratchNotes" placeholder="Mission notes, clues, allies, consequences, rewards, and loose ends."></textarea>
+      </label>
+    </section>
+
+    <section class="page page-2">
+      <h2>Page 2 - Traits & Talents</h2>
+      <h3>Traits - 3 Slots</h3>
+      <div id="traitSlots" class="card-stack"></div>
+
+      <h3>Talents - 3 Slots</h3>
+      <div id="talentSlots" class="card-stack"></div>
+    </section>
+
+    <section class="page page-3">
+      <h2>Page 3 - Weapons, Equipment, Conditions & Notes</h2>
+
+      <h3>Weapons - 5 Slots</h3>
+      <table id="weaponTable" class="item-table"></table>
+
+      <h3>Equipment - 10 Slots</h3>
+      <table id="equipmentTable" class="item-table"></table>
+
+      <div class="two-column lower">
+        <div>
+          <h3>Conditions / Status - 2 Slots</h3>
+          <table id="conditionTable" class="item-table"></table>
+        </div>
+        <div>
+          <h3>Contacts, Lifepath & Notes</h3>
+          <div class="contact-blocks">
+            <label>Faction / Doctrine Contact<textarea data-field="contactFaction" placeholder="Who can help, pressure, train, or command you?"></textarea></label>
+            <label>Personal Contact / Rival<textarea data-field="contactPersonal" placeholder="Who do you trust? Who wants you exposed, captured, or disgraced?"></textarea></label>
+            <label>Lifepath Event / Secret<textarea data-field="lifepathSecret" placeholder="What shaped you? What secret, debt, oath, or obligation can complicate play?"></textarea></label>
+            <label>Campaign Notes<textarea data-field="campaignLongNotes" placeholder="Mission leads, rewards, injuries, relationships, discoveries, recurring enemies, and loose ends."></textarea></label>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
