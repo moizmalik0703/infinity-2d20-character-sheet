@@ -605,16 +605,63 @@ function assignTenRandomSkillPoints(preferredSkills = []) {
   }
 }
 
-function assignRandomFocusPoints(totalPoints, preferredSkills = [], maxPerSkill = 2) {
-  resetStartingBonuses();
-
-  // Generated starting points live in Focus, not Rating.
+function clearFocusAllocations() {
   document.querySelectorAll("select[data-focus]").forEach(element => {
     element.value = "";
   });
   document.querySelectorAll("input[data-skill-note]").forEach(element => {
     element.value = "";
   });
+  updateFocusAllocationStatus();
+}
+
+function setFocusValue(skill, points, notePrefix = "Start Focus") {
+  const focus = document.querySelector(`select[data-focus="${skill}"]`);
+  const note = document.querySelector(`input[data-skill-note="${skill}"]`);
+  const target = points > 0 ? `+${points}` : "";
+
+  if (!focus) return false;
+  let option = [...focus.options].find(item => item.value === target);
+  if (!option && target) {
+    option = document.createElement("option");
+    option.value = target;
+    option.textContent = target;
+    focus.appendChild(option);
+  }
+  focus.value = target;
+
+  // Defensive fallback: browsers should accept an existing option, but this
+  // ensures the allocation is never silently lost.
+  if (focus.value !== target && target) {
+    focus.selectedIndex = [...focus.options].findIndex(item => item.value === target);
+  }
+
+  if (note) note.value = points > 0 ? `${notePrefix} +${points}` : "";
+  return focus.value === target;
+}
+
+function updateFocusAllocationStatus() {
+  const status = document.getElementById("focusAllocationStatus");
+  if (!status) return;
+
+  const allocations = [...document.querySelectorAll("select[data-focus]")]
+    .map(element => ({ skill: element.dataset.focus, value: element.value }))
+    .filter(entry => entry.value);
+
+  if (!allocations.length) {
+    status.textContent = "Generated Focus allocation: none.";
+    return;
+  }
+
+  const total = allocations.reduce((sum, entry) => sum + Number(String(entry.value).replace("+", "")), 0);
+  status.textContent = `Generated Focus allocation: ${total} point${total === 1 ? "" : "s"} — ${allocations.map(entry => `${entry.skill} ${entry.value}`).join(", ")}.`;
+}
+
+function assignRandomFocusPoints(totalPoints, preferredSkills = [], maxPerSkill = 2) {
+  resetStartingBonuses();
+
+  // Generated points always go directly into Focus, never into Rating.
+  clearFocusAllocations();
 
   const allocation = {};
   subSkills.forEach(skill => allocation[skill] = 0);
@@ -622,7 +669,7 @@ function assignRandomFocusPoints(totalPoints, preferredSkills = [], maxPerSkill 
   let allocated = 0;
   let attempts = 0;
 
-  while (allocated < totalPoints && attempts < 800) {
+  while (allocated < totalPoints && attempts < 1000) {
     attempts += 1;
     const weightedPool = [...subSkills, ...preferred, ...preferred, ...preferred, ...preferred];
     const skill = randomChoice(weightedPool);
@@ -631,13 +678,17 @@ function assignRandomFocusPoints(totalPoints, preferredSkills = [], maxPerSkill 
     allocated += 1;
   }
 
+  const failures = [];
   Object.entries(allocation).forEach(([skill, points]) => {
-    const focus = document.querySelector(`select[data-focus="${skill}"]`);
-    const note = document.querySelector(`input[data-skill-note="${skill}"]`);
-    if (focus) ensureSelectValue(focus, points > 0 ? `+${points}` : "");
-    if (note) note.value = points > 0 ? `Start Focus +${points}` : "";
+    if (points > 0 && !setFocusValue(skill, points)) failures.push(skill);
   });
+
+  updateFocusAllocationStatus();
   updateSkillRatings();
+
+  if (failures.length) {
+    console.warn("Focus allocation could not be applied to:", failures.join(", "));
+  }
 }
 
 function assignTenRandomFocusPoints(preferredSkills = []) {
@@ -645,7 +696,7 @@ function assignTenRandomFocusPoints(preferredSkills = []) {
 }
 
 function assignFiveBeginnerFocusPoints(preferredSkills = []) {
-  // Five distinct +1 Focus allocations for starter portfolios.
+  // Five distinct +1 Focus allocations for portfolio-based starters.
   assignRandomFocusPoints(5, preferredSkills, 1);
 }
 
@@ -659,20 +710,48 @@ function preferredSkillsFor(traits, talents) {
   return linked;
 }
 
+function setArmourValue(value) {
+  const armour = inputField("armour");
+  if (!armour) return;
+
+  const target = String(value);
+  let option = [...armour.options].find(item => item.value === target);
+  if (!option) {
+    option = document.createElement("option");
+    option.value = target;
+    option.textContent = target;
+    armour.appendChild(option);
+  }
+  armour.value = target;
+  if (armour.value !== target) {
+    armour.selectedIndex = [...armour.options].findIndex(item => item.value === target);
+  }
+}
+
+function updateArmourStatus(value, itemName = "") {
+  const status = document.getElementById("armourStatus");
+  if (!status) return;
+  status.textContent = value > 0
+    ? `Armour: ${value} — auto-calculated from ${itemName || "equipped armour"}.`
+    : "Armour: 0 — no armour equipment selected.";
+}
+
 function setDefaultTracks() {
   setFieldValue("hp", "20");
   setFieldValue("mentalStress", "20");
   setFieldValue("firewall", "20");
-  setFieldValue("armour", "0");
+  setArmourValue(0);
+  updateArmourStatus(0);
 }
 
 function clearEditableNotes() {
-  document.querySelectorAll("select[data-focus], select[data-condition-select]").forEach(element => element.value = "");
-  document.querySelectorAll("input[data-skill-note], input[data-weapon-note], input[data-equipment-note], input[data-condition-note]").forEach(element => element.value = "");
+  document.querySelectorAll("select[data-condition-select]").forEach(element => element.value = "");
+  document.querySelectorAll("input[data-weapon-note], input[data-equipment-note], input[data-condition-note]").forEach(element => element.value = "");
   ["scratchNotes", "contactFaction", "contactPersonal", "lifepathSecret", "campaignLongNotes"].forEach(field => {
     const element = inputField(field);
     if (element) element.value = "";
   });
+  clearFocusAllocations();
 }
 
 function armourValueForItem(item) {
@@ -686,9 +765,21 @@ function armourValueForItem(item) {
 
 function applyArmourFromEquipment() {
   const selectedEquipment = [...document.querySelectorAll("select[data-equipment-select]")]
-    .map(element => byName(DATA.equipment, element.value));
-  const armour = selectedEquipment.reduce((highest, item) => Math.max(highest, armourValueForItem(item)), 0);
-  setFieldValue("armour", String(armour));
+    .map(element => byName(DATA.equipment, element.value))
+    .filter(item => item && item.name);
+
+  let armourItem = null;
+  let armourValue = 0;
+  selectedEquipment.forEach(item => {
+    const value = armourValueForItem(item);
+    if (value > armourValue) {
+      armourValue = value;
+      armourItem = item;
+    }
+  });
+
+  setArmourValue(armourValue);
+  updateArmourStatus(armourValue, armourItem?.name || "");
 }
 
 function setWeaponsAndEquipment(weapons = [], equipment = []) {
@@ -986,14 +1077,14 @@ function newCharacterSheet() {
   setFieldValue("restriction", "No Restrictions");
   refreshRestrictionChoices();
   clearTraitAndTalentSlots();
-  setWeaponsAndEquipment([], []);
-  document.querySelectorAll("select[data-condition-select], select[data-focus]").forEach(element => {
+
+  // Clear all gear first, then deliberately set Armour to 0.
+  document.querySelectorAll("select[data-weapon-select], select[data-equipment-select], select[data-condition-select]").forEach(element => {
     element.value = "";
-  });
-  document.querySelectorAll("input[data-skill-note], input[data-weapon-note], input[data-equipment-note], input[data-condition-note]").forEach(element => {
-    element.value = "";
+    element.dispatchEvent(new Event("change"));
   });
 
+  clearFocusAllocations();
   setMainSkillsToStartingBaseline();
   resetStartingBonuses();
   setDefaultTracks();
@@ -1014,6 +1105,8 @@ document.addEventListener("DOMContentLoaded", () => {
   buildConditions();
   setDefaultTracks();
   resetStartingBonuses();
+  clearFocusAllocations();
+  applyArmourFromEquipment();
   refreshSaveSlots();
 
   document.getElementById("randomCharacterBtn").addEventListener("click", randomCharacter);

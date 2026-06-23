@@ -539,3 +539,16 @@ textarea {
     grid-column: 1 / -1;
   }
 }
+
+
+.track-status,
+#focusAllocationStatus {
+  margin: .45rem 0 0;
+  padding: .45rem .55rem;
+  border: 1px solid var(--soft-line);
+  border-radius: .3rem;
+  background: #f7fafc;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.35;
+}
