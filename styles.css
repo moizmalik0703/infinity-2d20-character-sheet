@@ -177,7 +177,10 @@ td { font-size: .72rem; }
   background: white;
 }
 .card-trait {
-  grid-template-columns: 1.25fr .7fr .7fr .45fr .45fr 1.8fr 2.1fr;
+  grid-template-columns: 1.55fr .8fr .8fr 1fr .35fr .25fr;
+}
+.card-trait .trait-effect .big-text {
+  min-height: 5.5rem;
 }
 .card-talent {
   grid-template-columns: 1.2fr .4fr .75fr .95fr .7fr .9fr .7fr .7fr .85fr .45fr .45fr;
@@ -241,6 +244,45 @@ td[data-rating].auto-bonus {
   color: #d8e5f2;
 }
 
+
+/* Conditions table: prioritise readable descriptions in browser view. */
+#conditionTable {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#conditionTable th:nth-child(1),
+#conditionTable td:nth-child(1) {
+  width: 4%;
+  text-align: center;
+}
+
+#conditionTable th:nth-child(2),
+#conditionTable td:nth-child(2) {
+  width: 18%;
+}
+
+#conditionTable th:nth-child(3),
+#conditionTable td:nth-child(3) {
+  width: 44%;
+}
+
+#conditionTable th:nth-child(4),
+#conditionTable td:nth-child(4) {
+  width: 22%;
+}
+
+#conditionTable th:nth-child(5),
+#conditionTable td:nth-child(5) {
+  width: 12%;
+}
+
+#conditionTable td:nth-child(3),
+#conditionTable td:nth-child(4) {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
 
 /* Mobile-friendly refinements */
 html { -webkit-text-size-adjust: 100%; }
@@ -551,4 +593,12 @@ textarea {
   color: var(--muted);
   font-size: .78rem;
   line-height: 1.35;
+}
+
+
+.card-trait .wide-text {
+  grid-column: 1 / -1;
+}
+.card-trait .big-text {
+  width: 100%;
 }

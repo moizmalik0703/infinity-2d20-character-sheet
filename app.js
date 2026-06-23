@@ -249,8 +249,8 @@ function buildTraits() {
       <label>Eligibility<div class="output" data-trait-restriction="${i}"></div></label>
       <label>Rarity<div class="output" data-trait-rarity="${i}"></div></label>
       <label>Cost<div class="output" data-trait-cost="${i}"></div></label>
-      <label>Brief Description<div class="output big-text" data-trait-brief="${i}"></div></label>
-      <label>Effect<div class="output big-text" data-trait-effect="${i}"></div></label>`;
+      <label class="wide-text">Brief Description<div class="output big-text" data-trait-brief="${i}"></div></label>
+      <label class="wide-text trait-effect">Effect<div class="output big-text" data-trait-effect="${i}"></div></label>`;
     wrap.appendChild(card);
 
     const sel = card.querySelector(`[data-trait-select="${i}"]`);
