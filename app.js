@@ -251,8 +251,14 @@ function buildTraits() {
         <label>Rarity<div class="output" data-trait-rarity="${i}"></div></label>
         <label class="trait-cost">Cost<div class="output" data-trait-cost="${i}"></div></label>
       </div>
-      <label class="trait-full trait-brief">Brief Description<div class="output big-text" data-trait-brief="${i}"></div></label>
-      <label class="trait-full trait-effect">Effect<div class="output big-text" data-trait-effect="${i}"></div></label>`;
+      <div class="trait-full text-panel trait-brief">
+        <div class="text-panel-heading">Brief Description</div>
+        <div class="output big-text" data-trait-brief="${i}"></div>
+      </div>
+      <div class="trait-full text-panel trait-effect">
+        <div class="text-panel-heading">Effect</div>
+        <div class="output big-text" data-trait-effect="${i}"></div>
+      </div>`;
     wrap.appendChild(card);
 
     const sel = card.querySelector(`[data-trait-select="${i}"]`);
@@ -278,8 +284,14 @@ function buildTalents() {
       <label>Restriction<div class="output" data-talent-restriction="${i}"></div></label>
       <label>Rarity<div class="output" data-talent-rarity="${i}"></div></label>
       <label>Cost<div class="output" data-talent-cost="${i}"></div></label>
-      <label class="wide-text">Description<div class="output big-text" data-talent-description="${i}"></div></label>
-      <label class="wide-text">Effect<div class="output big-text" data-talent-effect="${i}"></div></label>`;
+      <div class="wide-text text-panel talent-description">
+        <div class="text-panel-heading">Description</div>
+        <div class="output big-text" data-talent-description="${i}"></div>
+      </div>
+      <div class="wide-text text-panel talent-effect">
+        <div class="text-panel-heading">Effect</div>
+        <div class="output big-text" data-talent-effect="${i}"></div>
+      </div>`;
     wrap.appendChild(card);
 
     const sel = card.querySelector(`[data-talent-select="${i}"]`);
