@@ -46,8 +46,13 @@ function initLists() {
     const listName = select.dataset.list;
     makeOptions(select, DATA.lists[listName] || [], "Choose...");
   });
-}
 
+  const restriction = inputField("restriction");
+  if (restriction) {
+    restriction.value = "No Restrictions";
+    restriction.addEventListener("change", refreshRestrictionChoices);
+  }
+}
 function buildMainSkills() {
   const wrap = document.getElementById("mainSkills");
   wrap.innerHTML = "";
@@ -67,8 +72,7 @@ function buildMainSkills() {
 function normalizeSkillName(skill) {
   const raw = (skill || "").trim();
   if (!raw) return "";
-  const allSkills = skillOrder.concat(mainSkills);
-  const exact = allSkills.find(s => s.toLowerCase() === raw.toLowerCase());
+  const exact = skillOrder.find(s => s.toLowerCase() === raw.toLowerCase());
   return exact || raw;
 }
 
@@ -94,59 +98,42 @@ function selectedTalentObjects() {
 
 function calculateSkillBonuses() {
   const direct = {};
-  const main = {};
   const details = {};
-  skillOrder.concat(mainSkills).forEach(skill => {
+  skillOrder.forEach(skill => {
     direct[skill] = 0;
-    main[skill] = 0;
     details[skill] = [];
   });
 
-  function addBonus(skillName, source) {
+  function addSubskillBonus(skillName, source) {
     const skill = normalizeSkillName(skillName);
-    if (!skill) return;
-    if (mainSkills.includes(skill)) {
-      main[skill] = (main[skill] || 0) + 1;
-      details[skill] = details[skill] || [];
-      details[skill].push(source);
-      (skillGroups[skill] || []).forEach(child => {
-        details[child] = details[child] || [];
-        details[child].push(`${source} via ${skill}`);
-      });
-    } else if (skillOrder.includes(skill)) {
-      direct[skill] = (direct[skill] || 0) + 1;
-      details[skill] = details[skill] || [];
-      details[skill].push(source);
-    }
+    // Main skills are references only. They never gain or pass on automatic Rating bonuses.
+    if (!skill || mainSkills.includes(skill) || !skillOrder.includes(skill)) return;
+    direct[skill] = (direct[skill] || 0) + 1;
+    details[skill].push(source);
   }
 
   selectedTraitObjects().forEach(t => {
-    addBonus(t.primary, `Trait: ${t.name}`);
-    addBonus(t.secondary, `Trait: ${t.name}`);
+    addSubskillBonus(t.primary, `Trait: ${t.name}`);
+    addSubskillBonus(t.secondary, `Trait: ${t.name}`);
   });
 
   selectedTalentObjects().forEach(t => {
-    addBonus(t.primary, `Talent: ${t.name}`);
-    addBonus(t.secondary, `Talent: ${t.name}`);
+    addSubskillBonus(t.primary, `Talent: ${t.name}`);
+    addSubskillBonus(t.secondary, `Talent: ${t.name}`);
   });
 
-  return { direct, main, details };
+  return { direct, details };
 }
 
 function skillRatingParts(skill) {
   const bonuses = calculateSkillBonuses();
   const base = baseRating(skill);
-  const parent = parentOf[skill];
-  const inherited = parent ? (bonuses.main[parent] || 0) : 0;
-  const ownMain = mainSkills.includes(skill) ? (bonuses.main[skill] || 0) : 0;
-  const direct = bonuses.direct[skill] || 0;
-  const bonus = inherited + ownMain + direct;
-  const total = base + bonus;
+  const bonus = mainSkills.includes(skill) ? 0 : (bonuses.direct[skill] || 0);
   return {
     base,
     bonus,
-    total,
-    sources: bonuses.details[skill] || []
+    total: base + bonus,
+    sources: mainSkills.includes(skill) ? [] : (bonuses.details[skill] || [])
   };
 }
 
@@ -182,53 +169,85 @@ function updateSkillRatings() {
     const skill = cell.dataset.rating;
     const parts = skillRatingParts(skill);
     cell.textContent = parts.bonus > 0 ? `${parts.total} (+${parts.bonus})` : String(parts.total);
-    cell.title = parts.sources.length ? `Automatic bonus: ${parts.sources.join("; ")}` : "";
+    cell.title = parts.sources.length ? `Automatic Rating bonus: ${parts.sources.join("; ")}` : "";
     cell.classList.toggle("auto-bonus", parts.bonus > 0);
 
     const ruleCell = document.querySelector(`[data-skill-rule="${skill}"]`);
     if (ruleCell) {
-      const baseRule = mainSkills.includes(skill) ? "Main skill" : "Sub-skill";
-      ruleCell.textContent = parts.bonus > 0 ? `${baseRule}; bonus from Trait/Talent` : baseRule;
+      const baseRule = mainSkills.includes(skill) ? "Main skill — no automatic Rating bonus" : "Sub-skill";
+      ruleCell.textContent = parts.bonus > 0 ? `${baseRule}; +${parts.bonus} Rating from Trait/Talent` : baseRule;
       ruleCell.title = parts.sources.length ? parts.sources.join("; ") : "";
       ruleCell.classList.toggle("auto-bonus", parts.bonus > 0);
     }
   });
 }
 
+function activeRestriction() {
+  return inputField("restriction")?.value || "No Restrictions";
+}
+
+function isEligibleForRestriction(item) {
+  const selected = activeRestriction();
+  if (!selected || selected === "No Restrictions") return true;
+  const itemRestriction = item.restriction || "No Restrictions";
+  return itemRestriction === "No Restrictions" || itemRestriction === selected;
+}
+
+function eligibleTraits() {
+  return DATA.traits.filter(isEligibleForRestriction);
+}
+
+function eligibleTalents() {
+  return DATA.talents.filter(isEligibleForRestriction);
+}
+
+function setTraitCard(index, traitName) {
+  const t = byName(DATA.traits, traitName);
+  setText(document.querySelector(`[data-trait-primary="${index}"]`), t.primary);
+  setText(document.querySelector(`[data-trait-secondary="${index}"]`), t.secondary);
+  setText(document.querySelector(`[data-trait-restriction="${index}"]`), t.restriction || "No Restrictions");
+  setText(document.querySelector(`[data-trait-rarity="${index}"]`), t.rarity);
+  setText(document.querySelector(`[data-trait-cost="${index}"]`), t.cost);
+  setText(document.querySelector(`[data-trait-brief="${index}"]`), t.brief);
+  setText(document.querySelector(`[data-trait-effect="${index}"]`), t.effect);
+  updateSkillRatings();
+}
+
+function setTalentCard(index, talentName) {
+  const t = byName(DATA.talents, talentName);
+  ["level","career","doctrine","faction","prereq","primary","secondary","restriction","rarity","cost","description","effect"].forEach(k => {
+    const dataKey = k === "prereq" ? "prerequisite" : k;
+    setText(document.querySelector(`[data-talent-${k}="${index}"]`), t[dataKey]);
+  });
+  updateSkillRatings();
+}
+
 function buildTraits() {
   const wrap = document.getElementById("traitSlots");
   wrap.innerHTML = "";
-  for (let i=0; i<3; i++) {
+  for (let i = 0; i < 3; i++) {
     const card = document.createElement("div");
     card.className = "card card-trait";
     card.innerHTML = `
       <label>Trait<select data-trait-select="${i}"></select></label>
       <label>Primary<div class="output" data-trait-primary="${i}"></div></label>
       <label>Secondary<div class="output" data-trait-secondary="${i}"></div></label>
+      <label>Eligibility<div class="output" data-trait-restriction="${i}"></div></label>
       <label>Rarity<div class="output" data-trait-rarity="${i}"></div></label>
       <label>Cost<div class="output" data-trait-cost="${i}"></div></label>
       <label>Brief Description<div class="output big-text" data-trait-brief="${i}"></div></label>
       <label>Effect<div class="output big-text" data-trait-effect="${i}"></div></label>`;
     wrap.appendChild(card);
+
     const sel = card.querySelector(`[data-trait-select="${i}"]`);
-    makeOptions(sel, DATA.lists.traitNames, "Choose trait...");
-    sel.addEventListener("change", () => {
-      const t = byName(DATA.traits, sel.value);
-      setText(card.querySelector(`[data-trait-primary="${i}"]`), t.primary);
-      setText(card.querySelector(`[data-trait-secondary="${i}"]`), t.secondary);
-      setText(card.querySelector(`[data-trait-rarity="${i}"]`), t.rarity);
-      setText(card.querySelector(`[data-trait-cost="${i}"]`), t.cost);
-      setText(card.querySelector(`[data-trait-brief="${i}"]`), t.brief);
-      setText(card.querySelector(`[data-trait-effect="${i}"]`), t.effect);
-      updateSkillRatings();
-    });
+    sel.addEventListener("change", () => setTraitCard(i, sel.value));
   }
 }
 
 function buildTalents() {
   const wrap = document.getElementById("talentSlots");
   wrap.innerHTML = "";
-  for (let i=0; i<3; i++) {
+  for (let i = 0; i < 3; i++) {
     const card = document.createElement("div");
     card.className = "card card-talent";
     card.innerHTML = `
@@ -246,16 +265,38 @@ function buildTalents() {
       <label class="wide-text">Description<div class="output big-text" data-talent-description="${i}"></div></label>
       <label class="wide-text">Effect<div class="output big-text" data-talent-effect="${i}"></div></label>`;
     wrap.appendChild(card);
+
     const sel = card.querySelector(`[data-talent-select="${i}"]`);
-    makeOptions(sel, DATA.lists.talentNames, "Choose talent...");
-    sel.addEventListener("change", () => {
-      const t = byName(DATA.talents, sel.value);
-      ["level","career","doctrine","faction","prereq","primary","secondary","restriction","rarity","cost","description","effect"].forEach(k => {
-        const dataKey = k === "prereq" ? "prerequisite" : k;
-        setText(card.querySelector(`[data-talent-${k}="${i}"]`), t[dataKey]);
-      });
-      updateSkillRatings();
-    });
+    sel.addEventListener("change", () => setTalentCard(i, sel.value));
+  }
+}
+
+function refreshRestrictionChoices() {
+  const selected = activeRestriction();
+  const traits = eligibleTraits();
+  const talents = eligibleTalents();
+
+  document.querySelectorAll("select[data-trait-select]").forEach((sel, i) => {
+    const current = sel.value;
+    makeOptions(sel, traits.map(t => t.name), "Choose trait...");
+    if (traits.some(t => t.name === current)) sel.value = current;
+    else sel.value = "";
+    setTraitCard(i, sel.value);
+  });
+
+  document.querySelectorAll("select[data-talent-select]").forEach((sel, i) => {
+    const current = sel.value;
+    makeOptions(sel, talents.map(t => t.name), "Choose talent...");
+    if (talents.some(t => t.name === current)) sel.value = current;
+    else sel.value = "";
+    setTalentCard(i, sel.value);
+  });
+
+  const status = document.getElementById("restrictionStatus");
+  if (status) {
+    status.textContent = selected === "No Restrictions"
+      ? `Restriction: No Restrictions — all ${DATA.traits.length} Traits and ${DATA.talents.length} Talents are available.`
+      : `Restriction: ${selected} — ${traits.length} eligible Traits (including general options) and ${talents.length} eligible Talents are available.`;
   }
 }
 
@@ -264,9 +305,16 @@ function buildItemTable(id, rows, type) {
   const isWeapon = type === "weapon";
   table.innerHTML = `<thead><tr><th>#</th><th>${isWeapon ? "Weapon" : "Item"}</th><th>${isWeapon ? "Skill" : "Type"}</th><th>Weight</th><th>Rules / Notes</th><th>Rarity</th><th>Notes</th></tr></thead>`;
   const body = document.createElement("tbody");
-  for (let i=0; i<rows; i++) {
+  for (let i = 0; i < rows; i++) {
     const tr = document.createElement("tr");
-    tr.innerHTML = `<td>${i+1}</td><td><select data-${type}-select="${i}"></select></td><td data-${type}-type="${i}"></td><td data-${type}-weight="${i}"></td><td data-${type}-rules="${i}"></td><td data-${type}-rarity="${i}"></td><td><input data-${type}-note="${i}"></td>`;
+    tr.innerHTML = `
+      <td data-label="#">${i + 1}</td>
+      <td data-label="${isWeapon ? "Weapon" : "Item"}"><select data-${type}-select="${i}"></select></td>
+      <td data-label="${isWeapon ? "Skill" : "Type"}" data-${type}-type="${i}"></td>
+      <td data-label="Weight" data-${type}-weight="${i}"></td>
+      <td data-label="Rules / Notes" data-${type}-rules="${i}"></td>
+      <td data-label="Rarity" data-${type}-rarity="${i}"></td>
+      <td data-label="Player Notes"><input data-${type}-note="${i}"></td>`;
     body.appendChild(tr);
   }
   table.appendChild(body);
@@ -282,6 +330,7 @@ function buildItemTable(id, rows, type) {
     });
   });
 }
+
 function inferWeaponSkill(name) {
   if (name.includes("CC / BS")) return "CC/BS";
   if (name.includes("(CC)")) return "CC";
@@ -293,9 +342,14 @@ function buildConditions() {
   const table = document.getElementById("conditionTable");
   table.innerHTML = `<thead><tr><th>#</th><th>Condition</th><th>Description</th><th>Removal / Check</th><th>Notes</th></tr></thead>`;
   const body = document.createElement("tbody");
-  for (let i=0; i<2; i++) {
+  for (let i = 0; i < 2; i++) {
     const tr = document.createElement("tr");
-    tr.innerHTML = `<td>${i+1}</td><td><select data-condition-select="${i}"></select></td><td data-condition-desc="${i}"></td><td data-condition-removal="${i}"></td><td><input data-condition-note="${i}"></td>`;
+    tr.innerHTML = `
+      <td data-label="#">${i + 1}</td>
+      <td data-label="Condition"><select data-condition-select="${i}"></select></td>
+      <td data-label="Description" data-condition-desc="${i}"></td>
+      <td data-label="Removal / Check" data-condition-removal="${i}"></td>
+      <td data-label="Player Notes"><input data-condition-note="${i}"></td>`;
     body.appendChild(tr);
   }
   table.appendChild(body);
@@ -328,17 +382,149 @@ function collectState() {
 }
 function applyState(state) {
   if (!state) return;
-  document.querySelectorAll("input[data-field], textarea[data-field], select[data-field]").forEach(el => { if (state[el.dataset.field] !== undefined) el.value = state[el.dataset.field]; });
-  Object.entries(state.mainSkills || {}).forEach(([k,v]) => { const el = document.querySelector(`select[data-main-skill="${k}"]`); if (el) el.value = v; });
+
+  document.querySelectorAll("input[data-field], textarea[data-field], select[data-field]").forEach(el => {
+    if (state[el.dataset.field] !== undefined) el.value = state[el.dataset.field];
+  });
+
+  const restriction = inputField("restriction");
+  if (restriction && !restriction.value) restriction.value = "No Restrictions";
+  refreshRestrictionChoices();
+
+  Object.entries(state.mainSkills || {}).forEach(([k, v]) => {
+    const el = document.querySelector(`select[data-main-skill="${k}"]`);
+    if (el) el.value = v;
+  });
+  Object.entries(state.focus || {}).forEach(([k, v]) => {
+    const el = document.querySelector(`select[data-focus="${k}"]`);
+    if (el) el.value = v;
+  });
+  Object.entries(state.skillNotes || {}).forEach(([k, v]) => {
+    const el = document.querySelector(`input[data-skill-note="${k}"]`);
+    if (el) el.value = v;
+  });
+
+  (state.traits || []).forEach((v, i) => {
+    const el = document.querySelector(`select[data-trait-select="${i}"]`);
+    if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+  });
+  (state.talents || []).forEach((v, i) => {
+    const el = document.querySelector(`select[data-talent-select="${i}"]`);
+    if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+  });
+  (state.weapons || []).forEach((v, i) => {
+    const el = document.querySelector(`select[data-weapon-select="${i}"]`);
+    if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+  });
+  (state.equipment || []).forEach((v, i) => {
+    const el = document.querySelector(`select[data-equipment-select="${i}"]`);
+    if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+  });
+  (state.conditions || []).forEach((v, i) => {
+    const el = document.querySelector(`select[data-condition-select="${i}"]`);
+    if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+  });
   updateSkillRatings();
-  Object.entries(state.focus || {}).forEach(([k,v]) => { const el = document.querySelector(`select[data-focus="${k}"]`); if (el) el.value = v; });
-  Object.entries(state.skillNotes || {}).forEach(([k,v]) => { const el = document.querySelector(`input[data-skill-note="${k}"]`); if (el) el.value = v; });
-  (state.traits || []).forEach((v,i) => { const el = document.querySelector(`select[data-trait-select="${i}"]`); if (el) { el.value = v; el.dispatchEvent(new Event("change")); } });
-  (state.talents || []).forEach((v,i) => { const el = document.querySelector(`select[data-talent-select="${i}"]`); if (el) { el.value = v; el.dispatchEvent(new Event("change")); } });
-  (state.weapons || []).forEach((v,i) => { const el = document.querySelector(`select[data-weapon-select="${i}"]`); if (el) { el.value = v; el.dispatchEvent(new Event("change")); } });
-  (state.equipment || []).forEach((v,i) => { const el = document.querySelector(`select[data-equipment-select="${i}"]`); if (el) { el.value = v; el.dispatchEvent(new Event("change")); } });
-  (state.conditions || []).forEach((v,i) => { const el = document.querySelector(`select[data-condition-select="${i}"]`); if (el) { el.value = v; el.dispatchEvent(new Event("change")); } });
+}
+
+const RANDOM_GIVEN_NAMES = ["Aster", "Badr", "Celia", "Dara", "Elias", "Farah", "Galen", "Hana", "Iris", "Juno", "Kade", "Lina"];
+const RANDOM_CALLSIGNS = ["Aegis", "Comet", "Dagger", "Ember", "Falcon", "Ghost", "Harrier", "Ibis", "Javelin", "Kestrel", "Lynx", "Nova"];
+
+function randomChoice(items) {
+  return items[Math.floor(Math.random() * items.length)];
+}
+
+function randomDistinct(items, count) {
+  const pool = [...items];
+  const chosen = [];
+  while (pool.length && chosen.length < count) {
+    const index = Math.floor(Math.random() * pool.length);
+    chosen.push(pool.splice(index, 1)[0]);
+  }
+  return chosen;
+}
+
+function setSelectValue(selector, value) {
+  const el = document.querySelector(selector);
+  if (!el) return;
+  el.value = value || "";
+  el.dispatchEvent(new Event("change"));
+}
+
+function factionForTalentFaction(talentFaction) {
+  const map = {
+    "ALEPH": "ALEPH",
+    "Ariadna": "Ariadna",
+    "Haqqislam": "Haqqislam",
+    "Japanese Secessionist Army": "Japanese Secessionist Army",
+    "NA2": "NA2 / Mercenaries",
+    "Nomads": "Nomads",
+    "O-12": "O-12",
+    "O-12 / Nomads": "O-12 / Nomads - Circular Crew",
+    "PanOceania": "PanOceania",
+    "PanOceania / Yu Jing": "PanOceania",
+    "Yu Jing": "Yu Jing"
+  };
+  return map[talentFaction] || randomChoice(DATA.lists.factions);
+}
+
+function randomBeginnerCharacter() {
+  const beginnerTalents = DATA.talents.filter(t => String(t.level) === "1");
+  const anchorTalent = randomChoice(beginnerTalents);
+  const faction = factionForTalentFaction(anchorTalent.faction);
+  const factionInfo = DATA.factions.find(f => f.faction === faction) ||
+    DATA.factions.find(f => f.faction.startsWith((faction || "").split(" - ")[0]));
+
+  inputField("characterName").value = `${randomChoice(RANDOM_GIVEN_NAMES)} "${randomChoice(RANDOM_CALLSIGNS)}"`;
+  inputField("player").value = "";
+  inputField("faction").value = faction;
+  inputField("homeworld").value = factionInfo?.homeworld || randomChoice(DATA.lists.homeworlds);
+  inputField("concept").value = "Random beginner operative";
+  inputField("xp").value = "0";
+  inputField("careerRole").value = anchorTalent.career || "";
+  inputField("doctrine").value = anchorTalent.doctrine || "";
+  inputField("restriction").value = "No Restrictions";
+  inputField("talentFaction").value = anchorTalent.faction || "";
+  inputField("campaignNotes").value = "Generated beginner character — review before play.";
+
+  // Default resource values are deliberately conservative; review them for your campaign.
+  ["hp", "firewall", "mentalStress", "armour"].forEach(field => {
+    const el = inputField(field);
+    if (el) el.value = "0";
+  });
+  ["infinityPoints", "credits", "momentum", "heat", "wounds"].forEach(field => {
+    const el = inputField(field);
+    if (el) el.value = "";
+  });
+
+  document.querySelectorAll("select[data-main-skill]").forEach(el => el.value = "7");
+  const raised = randomDistinct(mainSkills, 3);
+  if (raised[0]) document.querySelector(`[data-main-skill="${raised[0]}"]`).value = "9";
+  if (raised[1]) document.querySelector(`[data-main-skill="${raised[1]}"]`).value = "8";
+  if (raised[2]) document.querySelector(`[data-main-skill="${raised[2]}"]`).value = "8";
+
+  refreshRestrictionChoices();
+
+  const starterTalentPool = DATA.talents.filter(t => String(t.level) === "1" && t.faction === anchorTalent.faction);
+  const chosenTalents = randomDistinct(
+    starterTalentPool.length >= 3 ? starterTalentPool : beginnerTalents,
+    3
+  );
+  chosenTalents.forEach((t, i) => setSelectValue(`select[data-talent-select="${i}"]`, t?.name || ""));
+
+  const traitPool = DATA.traits.filter(t => t.restriction === "No Restrictions");
+  randomDistinct(traitPool, 3).forEach((t, i) => setSelectValue(`select[data-trait-select="${i}"]`, t?.name || ""));
+
+  randomDistinct(DATA.lists.weapons, 2).forEach((name, i) => setSelectValue(`select[data-weapon-select="${i}"]`, name));
+  randomDistinct(DATA.lists.equipment, 5).forEach((name, i) => setSelectValue(`select[data-equipment-select="${i}"]`, name));
+
+  document.querySelectorAll("select[data-condition-select], select[data-focus]").forEach(el => el.value = "");
+  document.querySelectorAll("input[data-skill-note], input[data-weapon-note], input[data-equipment-note], input[data-condition-note], textarea").forEach(el => {
+    if (!el.dataset.field || !["campaignNotes"].includes(el.dataset.field)) el.value = "";
+  });
+
   updateSkillRatings();
+  alert("Random beginner created. Review Vigor, Mental Stress, Firewall, Armour, gear, and restrictions before play. You can now save, download, or print the sheet.");
 }
 
 const SAVE_INDEX_KEY = "infinity2d20-character-index";
@@ -508,11 +694,13 @@ document.addEventListener("DOMContentLoaded", () => {
   buildSkillTable("skillsRight", skillOrder.slice(16));
   buildTraits();
   buildTalents();
+  refreshRestrictionChoices();
   buildItemTable("weaponTable", 5, "weapon");
   buildItemTable("equipmentTable", 10, "equipment");
   buildConditions();
   refreshSaveSlots();
 
+  document.getElementById("randomCharacterBtn").addEventListener("click", randomBeginnerCharacter);
   document.getElementById("saveBtn").addEventListener("click", saveCharacterToBrowser);
   document.getElementById("loadBtn").addEventListener("click", loadCharacterFromBrowser);
   document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);

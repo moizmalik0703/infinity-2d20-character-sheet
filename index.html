@@ -14,6 +14,7 @@
     </div>
     <div class="actions">
       <button id="newSheetBtn">New</button>
+      <button id="randomCharacterBtn">Random beginner</button>
       <select id="characterSlotSelect" title="Saved characters"></select>
       <button id="saveBtn">Save character</button>
       <button id="loadBtn">Load selected</button>
@@ -42,6 +43,7 @@
         <label>Talent Faction<select data-field="talentFaction" data-list="talentFactions"></select></label>
         <label class="wide">Campaign Notes<input data-field="campaignNotes"></label>
       </div>
+      <p id="restrictionStatus" class="filter-status">Restriction: No Restrictions — all Traits and Talents are available.</p>
 
       <div class="two-column">
         <div class="panel">
@@ -51,10 +53,10 @@
         <div class="panel">
           <h3>Resources & Tracks</h3>
           <div class="track-grid">
-            <label>HP / Vigor<input data-field="hp"></label>
-            <label>Firewall<input data-field="firewall"></label>
-            <label>Armour<input data-field="armour"></label>
-            <label>Mental Stress<input data-field="mentalStress"></label>
+            <label>HP / Vigor<select data-field="hp" data-list="track20"></select></label>
+            <label>Firewall<select data-field="firewall" data-list="track20"></select></label>
+            <label>Armour<select data-field="armour" data-list="armour"></select></label>
+            <label>Mental Stress<select data-field="mentalStress" data-list="track20"></select></label>
             <label>Infinity Points<input data-field="infinityPoints"></label>
             <label>Credits<input data-field="credits"></label>
             <label>Momentum<input data-field="momentum"></label>
@@ -64,7 +66,7 @@
         </div>
       </div>
 
-      <p class="rule">Main skills cannot use Focus. Change a main skill rating to update each sub-skill below it. Sub-skills may select Focus +1 to +20.</p>
+      <p class="rule">Main skills cannot use Focus. Change a main skill rating to update each sub-skill below it. Automatic Trait/Talent Rating bonuses apply only to named sub-skills; main skills never gain automatic Rating bonuses.</p>
 
       <div class="skills-grid">
         <div class="table-wrap"><table id="skillsLeft"></table></div>

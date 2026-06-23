@@ -456,3 +456,86 @@ textarea {
     padding: .3rem;
   }
 }
+
+
+/* Page 3 mobile cards: mirrors the readable Trait/Talent card approach. */
+@media (max-width: 760px) {
+  .page-3 .table-wrap {
+    overflow: visible;
+  }
+
+  .item-table {
+    min-width: 0 !important;
+    border-collapse: separate;
+    border-spacing: 0 .55rem;
+  }
+
+  .item-table thead {
+    display: none;
+  }
+
+  .item-table,
+  .item-table tbody,
+  .item-table tr,
+  .item-table td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .item-table tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: .35rem;
+    padding: .45rem;
+    border: 1px solid var(--line);
+    background: #ffffff;
+    border-radius: .35rem;
+  }
+
+  .item-table td {
+    min-width: 0;
+    border: 1px solid var(--soft-line);
+    padding: .3rem;
+    background: #ffffff;
+  }
+
+  .item-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: .18rem;
+    font-size: .67rem;
+    color: var(--muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+  }
+
+  .item-table td:nth-child(1),
+  .item-table td:nth-child(5),
+  .item-table td:nth-child(7) {
+    grid-column: 1 / -1;
+  }
+
+  #conditionTable td:nth-child(1),
+  #conditionTable td:nth-child(3),
+  #conditionTable td:nth-child(4),
+  #conditionTable td:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+
+  .item-table input,
+  .item-table select {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-table tr {
+    grid-template-columns: 1fr;
+  }
+
+  .item-table td,
+  .item-table td:nth-child(n) {
+    grid-column: 1 / -1;
+  }
+}
