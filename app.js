@@ -341,6 +341,7 @@ function buildItemTable(id, rows, type) {
       document.querySelector(`[data-${type}-weight="${i}"]`).textContent = e.weight || "";
       document.querySelector(`[data-${type}-rules="${i}"]`).textContent = e.mechanic || e.brief || "";
       document.querySelector(`[data-${type}-rarity="${i}"]`).textContent = e.rarity || "";
+      if (type === "equipment") applyArmourFromEquipment();
     });
   });
 }
@@ -440,6 +441,7 @@ function applyState(state) {
     const el = document.querySelector(`select[data-condition-select="${i}"]`);
     if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
   });
+  applyArmourFromEquipment();
   updateSkillRatings();
 }
 
@@ -603,6 +605,50 @@ function assignTenRandomSkillPoints(preferredSkills = []) {
   }
 }
 
+function assignRandomFocusPoints(totalPoints, preferredSkills = [], maxPerSkill = 2) {
+  resetStartingBonuses();
+
+  // Generated starting points live in Focus, not Rating.
+  document.querySelectorAll("select[data-focus]").forEach(element => {
+    element.value = "";
+  });
+  document.querySelectorAll("input[data-skill-note]").forEach(element => {
+    element.value = "";
+  });
+
+  const allocation = {};
+  subSkills.forEach(skill => allocation[skill] = 0);
+  const preferred = preferredSkills.filter(skill => subSkills.includes(skill));
+  let allocated = 0;
+  let attempts = 0;
+
+  while (allocated < totalPoints && attempts < 800) {
+    attempts += 1;
+    const weightedPool = [...subSkills, ...preferred, ...preferred, ...preferred, ...preferred];
+    const skill = randomChoice(weightedPool);
+    if (allocation[skill] >= maxPerSkill) continue;
+    allocation[skill] += 1;
+    allocated += 1;
+  }
+
+  Object.entries(allocation).forEach(([skill, points]) => {
+    const focus = document.querySelector(`select[data-focus="${skill}"]`);
+    const note = document.querySelector(`input[data-skill-note="${skill}"]`);
+    if (focus) ensureSelectValue(focus, points > 0 ? `+${points}` : "");
+    if (note) note.value = points > 0 ? `Start Focus +${points}` : "";
+  });
+  updateSkillRatings();
+}
+
+function assignTenRandomFocusPoints(preferredSkills = []) {
+  assignRandomFocusPoints(10, preferredSkills, 2);
+}
+
+function assignFiveBeginnerFocusPoints(preferredSkills = []) {
+  // Five distinct +1 Focus allocations for starter portfolios.
+  assignRandomFocusPoints(5, preferredSkills, 1);
+}
+
 function preferredSkillsFor(traits, talents) {
   const linked = [];
   [...traits, ...talents].filter(Boolean).forEach(item => {
@@ -729,9 +775,9 @@ function randomCharacter() {
   const gear = randomGenericGear();
   setWeaponsAndEquipment(gear.weapons, gear.equipment);
 
-  assignTenRandomSkillPoints(preferredSkillsFor(chosenTraits, chosenTalents));
+  assignTenRandomFocusPoints(preferredSkillsFor(chosenTraits, chosenTalents));
   updateSkillRatings();
-  alert("Random Character created with 10 starting sub-skill points. Vigor, Mental Stress, and Firewall are 20. Armour is set from the generated armour item.");
+  alert("Random Character created with 10 starting Focus points. Vigor, Mental Stress, and Firewall are 20. Armour is set from the generated armour item.");
 }
 
 function randomBeginnerCharacter() {
@@ -761,10 +807,10 @@ function randomBeginnerCharacter() {
   setSelectValue('select[data-talent-select="0"]', template.talent);
   setWeaponsAndEquipment(template.weapons, template.equipment);
 
-  assignTenRandomSkillPoints(preferredSkillsFor([trait], [talent]));
+  assignFiveBeginnerFocusPoints(preferredSkillsFor([trait], [talent]));
   updateSkillRatings();
 
-  alert(`Random Beginner Character created from the ${template.name} starter portfolio pattern. It has 2 weapons, 5 non-weapon equipment items, 1 Trait, 1 Level 1 Talent, and 10 starting sub-skill points.`);
+  alert(`Random Beginner Character created from the ${template.name} starter portfolio pattern. It has 2 weapons, 5 non-weapon equipment items, 1 Trait, 1 Level 1 Talent, and 5 starting Focus points.`);
 }
 
 const SAVE_INDEX_KEY = "infinity2d20-character-index";
@@ -927,6 +973,34 @@ function importJSONFile(file) {
   reader.readAsText(file);
 }
 
+function newCharacterSheet() {
+  if (!confirm("Start a new character sheet? Unsaved changes will be lost.")) return;
+
+  document.querySelectorAll("input[data-field], textarea[data-field]").forEach(element => {
+    element.value = "";
+  });
+  document.querySelectorAll("select[data-field]").forEach(element => {
+    element.value = "";
+  });
+
+  setFieldValue("restriction", "No Restrictions");
+  refreshRestrictionChoices();
+  clearTraitAndTalentSlots();
+  setWeaponsAndEquipment([], []);
+  document.querySelectorAll("select[data-condition-select], select[data-focus]").forEach(element => {
+    element.value = "";
+  });
+  document.querySelectorAll("input[data-skill-note], input[data-weapon-note], input[data-equipment-note], input[data-condition-note]").forEach(element => {
+    element.value = "";
+  });
+
+  setMainSkillsToStartingBaseline();
+  resetStartingBonuses();
+  setDefaultTracks();
+  applyArmourFromEquipment();
+  updateSkillRatings();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initLists();
   buildMainSkills();
@@ -947,9 +1021,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("saveBtn").addEventListener("click", saveCharacterToBrowser);
   document.getElementById("loadBtn").addEventListener("click", loadCharacterFromBrowser);
   document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);
-  document.getElementById("newSheetBtn").addEventListener("click", () => {
-    if (confirm("Clear this character sheet? Unsaved changes will be lost.")) location.reload();
-  });
+  document.getElementById("newSheetBtn").addEventListener("click", newCharacterSheet);
   document.getElementById("downloadBtn").addEventListener("click", downloadJSON);
   document.getElementById("exportAllBtn").addEventListener("click", exportAllSaves);
   document.getElementById("importFile").addEventListener("change", (e) => {
