@@ -243,14 +243,16 @@ function buildTraits() {
     const card = document.createElement("div");
     card.className = "card card-trait";
     card.innerHTML = `
-      <label>Trait<select data-trait-select="${i}"></select></label>
-      <label>Primary<div class="output" data-trait-primary="${i}"></div></label>
-      <label>Secondary<div class="output" data-trait-secondary="${i}"></div></label>
-      <label>Eligibility<div class="output" data-trait-restriction="${i}"></div></label>
-      <label>Rarity<div class="output" data-trait-rarity="${i}"></div></label>
-      <label>Cost<div class="output" data-trait-cost="${i}"></div></label>
-      <label class="wide-text">Brief Description<div class="output big-text" data-trait-brief="${i}"></div></label>
-      <label class="wide-text trait-effect">Effect<div class="output big-text" data-trait-effect="${i}"></div></label>`;
+      <div class="trait-meta">
+        <label class="trait-name">Trait<select data-trait-select="${i}"></select></label>
+        <label>Primary<div class="output" data-trait-primary="${i}"></div></label>
+        <label>Secondary<div class="output" data-trait-secondary="${i}"></div></label>
+        <label>Eligibility<div class="output" data-trait-restriction="${i}"></div></label>
+        <label>Rarity<div class="output" data-trait-rarity="${i}"></div></label>
+        <label class="trait-cost">Cost<div class="output" data-trait-cost="${i}"></div></label>
+      </div>
+      <label class="trait-full trait-brief">Brief Description<div class="output big-text" data-trait-brief="${i}"></div></label>
+      <label class="trait-full trait-effect">Effect<div class="output big-text" data-trait-effect="${i}"></div></label>`;
     wrap.appendChild(card);
 
     const sel = card.querySelector(`[data-trait-select="${i}"]`);

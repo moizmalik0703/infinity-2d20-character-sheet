@@ -176,12 +176,68 @@ td { font-size: .72rem; }
   padding: .35rem;
   background: white;
 }
+
+/* Trait cards use a dedicated two-part layout: compact metadata, then full-width rules text. */
 .card-trait {
-  grid-template-columns: 1.55fr .8fr .8fr 1fr .35fr .25fr;
+  display: block;
 }
+
+.card-trait .trait-meta {
+  display: grid;
+  grid-template-columns: minmax(15rem, 2.2fr) minmax(5.5rem, .8fr) minmax(5.5rem, .8fr) minmax(9rem, 1.1fr) minmax(3.2rem, .4fr) minmax(2.6rem, .28fr);
+  gap: .25rem;
+  align-items: start;
+}
+
+.card-trait .trait-name {
+  min-width: 0;
+}
+
+.card-trait .trait-cost {
+  min-width: 0;
+}
+
+.card-trait .trait-full {
+  display: flex;
+  width: 100%;
+  margin-top: .35rem;
+}
+
+.card-trait .trait-brief .big-text {
+  min-height: 4.75rem;
+  width: 100%;
+}
+
 .card-trait .trait-effect .big-text {
-  min-height: 5.5rem;
+  min-height: 6rem;
+  width: 100%;
 }
+
+@media (max-width: 1100px) {
+  .card-trait .trait-meta {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .card-trait .trait-name {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .card-trait .trait-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .card-trait .trait-name,
+  .card-trait .trait-cost {
+    grid-column: auto;
+  }
+
+  .card-trait .trait-full {
+    grid-column: auto !important;
+  }
+}
+
 .card-talent {
   grid-template-columns: 1.2fr .4fr .75fr .95fr .7fr .9fr .7fr .7fr .85fr .45fr .45fr;
 }
@@ -343,17 +399,7 @@ textarea {
   .skills-grid {
     grid-template-columns: 1fr;
   }
-
-  .card-trait {
-    grid-template-columns: 1fr 1fr;
-  }
-  .card-trait label:nth-child(1),
-  .card-trait label:nth-child(6),
-  .card-trait label:nth-child(7) {
-    grid-column: 1 / -1;
-  }
-
-  .card-talent {
+.card-talent {
     grid-template-columns: 1fr 1fr;
   }
   .card-talent label:nth-child(1),
@@ -431,11 +477,9 @@ textarea {
     gap: .35rem;
   }
 
-  .card-trait,
   .card-talent {
     grid-template-columns: 1fr;
   }
-  .card-trait label,
   .card-talent label,
   .card .wide-text {
     grid-column: 1 / -1 !important;
@@ -596,9 +640,3 @@ textarea {
 }
 
 
-.card-trait .wide-text {
-  grid-column: 1 / -1;
-}
-.card-trait .big-text {
-  width: 100%;
-}
