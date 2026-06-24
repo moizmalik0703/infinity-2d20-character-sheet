@@ -1243,3 +1243,32 @@ textarea {
     word-break: break-word;
   }
 }
+
+
+/* v6 isolated-print window: only compact portfolio markup exists in this tab. */
+body.print-window {
+  background: #fff;
+}
+
+body.print-window #printPortfolio {
+  display: block !important;
+  width: 283mm;
+  margin: 0 auto;
+  color: #172033;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen {
+  body.print-window #printPortfolio {
+    padding: 7mm 0;
+  }
+
+  body.print-window .print-page {
+    width: 283mm;
+    min-height: 196mm;
+    margin: 0 auto 7mm;
+    padding: 0;
+    background: #fff;
+    box-shadow: 0 1mm 3mm rgba(0,0,0,.12);
+  }
+}

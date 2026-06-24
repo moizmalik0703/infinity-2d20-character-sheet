@@ -1485,32 +1485,92 @@ function buildPrintPortfolio() {
   container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
 }
 
-let printPortfolioRestoreTimer = null;
+const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v6";
 
+function printStylesheetUrl() {
+  return new URL("styles.css", window.location.href).href;
+}
+
+function compactPrintWindowHtml(markup, title) {
+  const stylesheet = printEscape(printStylesheetUrl());
+  const safeTitle = printEscape(title || PRINT_WINDOW_MARKER);
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${safeTitle}</title>
+  <link rel="stylesheet" href="${stylesheet}">
+  <style>
+    /* This document contains only the generated print portfolio. */
+    html, body { margin: 0; padding: 0; background: #fff; }
+    body.print-window { background: #fff; }
+    body.print-window #printPortfolio { display: block !important; }
+    body.print-window .print-page { margin: 0 auto; }
+    @media print {
+      html, body { margin: 0 !important; padding: 0 !important; }
+      body.print-window #printPortfolio { display: block !important; }
+    }
+  </style>
+</head>
+<body class="print-window print-portfolio-mode">
+  <section id="printPortfolio" aria-label="Compact print portfolio">${markup}</section>
+  <script>
+    window.addEventListener('load', function () {
+      // CSS must finish loading before the native print preview takes its snapshot.
+      window.setTimeout(function () {
+        window.focus();
+        window.print();
+      }, 500);
+    });
+  <\/script>
+</body>
+</html>`;
+}
+
+function printCharacterSheet() {
+  buildPrintPortfolio();
+  const source = document.getElementById("printPortfolio");
+  const markup = source?.innerHTML?.trim() || "";
+  if (!markup) {
+    alert("The compact portfolio could not be built. Please refresh the page and try again.");
+    return;
+  }
+
+  // Open synchronously from the user action so browsers do not block the print window.
+  const printWindow = window.open("", "_blank", "popup=yes,width=1200,height=900");
+  if (!printWindow) {
+    alert("Your browser blocked the compact print window. Allow pop-ups for this site, then select Open Compact Print Portfolio again.");
+    return;
+  }
+
+  const characterName = printValue("characterName") || "Infinity 2D20 Character";
+  printWindow.document.open();
+  printWindow.document.write(compactPrintWindowHtml(markup, `${characterName} - ${PRINT_WINDOW_MARKER}`));
+  printWindow.document.close();
+}
+
+// Ctrl/Cmd+P is redirected before the browser begins its normal editable-sheet preview.
+document.addEventListener("keydown", event => {
+  const key = String(event.key || "").toLowerCase();
+  if ((event.ctrlKey || event.metaKey) && key === "p") {
+    event.preventDefault();
+    event.stopPropagation();
+    printCharacterSheet();
+  }
+}, true);
+
+// Fallback for the browser menu's native Print command. The dedicated button and
+// Ctrl/Cmd+P route above are the reliable path because they open a clean document.
 function activateCompactPrintMode() {
   buildPrintPortfolio();
   document.body.classList.add("print-portfolio-mode");
 }
 
 function restoreCompactPrintMode() {
-  if (printPortfolioRestoreTimer) window.clearTimeout(printPortfolioRestoreTimer);
-  printPortfolioRestoreTimer = window.setTimeout(() => {
-    document.body.classList.remove("print-portfolio-mode");
-  }, 180);
+  window.setTimeout(() => document.body.classList.remove("print-portfolio-mode"), 180);
 }
 
-function printCharacterSheet() {
-  // Switch away from the editable sheet before the preview opens. This avoids
-  // printing the long browser form when a print engine delays @media handling.
-  activateCompactPrintMode();
-  window.requestAnimationFrame(() => {
-    window.requestAnimationFrame(() => {
-      window.setTimeout(() => window.print(), 80);
-    });
-  });
-}
-
-// Ctrl+P uses the same compact portfolio, rather than the editable browser form.
 window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
@@ -1537,6 +1597,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("loadBtn").addEventListener("click", loadCharacterFromBrowser);
   document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);
   document.getElementById("newSheetBtn").addEventListener("click", newCharacterSheet);
+  document.getElementById("printBtn").addEventListener("click", printCharacterSheet);
   document.getElementById("downloadBtn").addEventListener("click", downloadJSON);
   document.getElementById("exportAllBtn").addEventListener("click", exportAllSaves);
   document.getElementById("importFile").addEventListener("change", (e) => {
