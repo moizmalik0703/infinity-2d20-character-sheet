@@ -1460,12 +1460,34 @@ function buildPrintPortfolio() {
   container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
 }
 
-function printCharacterSheet() {
+let printPortfolioRestoreTimer = null;
+
+function activateCompactPrintMode() {
   buildPrintPortfolio();
-  window.print();
+  document.body.classList.add("print-portfolio-mode");
 }
 
-window.addEventListener("beforeprint", buildPrintPortfolio);
+function restoreCompactPrintMode() {
+  if (printPortfolioRestoreTimer) window.clearTimeout(printPortfolioRestoreTimer);
+  printPortfolioRestoreTimer = window.setTimeout(() => {
+    document.body.classList.remove("print-portfolio-mode");
+  }, 180);
+}
+
+function printCharacterSheet() {
+  // Switch away from the editable sheet before the preview opens. This avoids
+  // printing the long browser form when a print engine delays @media handling.
+  activateCompactPrintMode();
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      window.setTimeout(() => window.print(), 80);
+    });
+  });
+}
+
+// Ctrl+P uses the same compact portfolio, rather than the editable browser form.
+window.addEventListener("beforeprint", activateCompactPrintMode);
+window.addEventListener("afterprint", restoreCompactPrintMode);
 
 document.addEventListener("DOMContentLoaded", () => {
   initLists();

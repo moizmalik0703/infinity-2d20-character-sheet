@@ -298,8 +298,21 @@ td { font-size: .72rem; }
   }
 }
 
-/* Print-only portfolio v3: compact, aligned, portfolio-style pages. */
+/* Print-only portfolio v4: compact, isolated, portfolio-style pages. */
 #printPortfolio { display: none; }
+
+/* The print button (and Ctrl+P via beforeprint) force this mode before preview. */
+body.print-portfolio-mode {
+  background: #fff;
+}
+
+body.print-portfolio-mode > :not(#printPortfolio) {
+  display: none !important;
+}
+
+body.print-portfolio-mode #printPortfolio {
+  display: block !important;
+}
 
 @media print {
   @page { size: A4 landscape; margin: 7mm; }
@@ -315,6 +328,8 @@ td { font-size: .72rem; }
 
   *, *::before, *::after { box-sizing: border-box; }
 
+  /* Only the generated compact portfolio can reach the printer. */
+  body > :not(#printPortfolio) { display: none !important; }
   .no-print,
   .sheet { display: none !important; }
 
@@ -327,8 +342,12 @@ td { font-size: .72rem; }
   }
 
   .print-page {
-    width: 100%;
+    width: 283mm;
+    min-width: 283mm;
+    max-width: 283mm;
     height: 196mm;
+    min-height: 196mm;
+    max-height: 196mm;
     overflow: hidden;
     break-after: page;
     page-break-after: always;
