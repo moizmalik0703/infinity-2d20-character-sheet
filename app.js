@@ -1366,10 +1366,13 @@ function buildPrintSingleOptionsPage(page, total, kind, items, supplementMarkup 
   </section>`;
 }
 
-function printGearTable(kind, items) {
+function printGearTable(kind, items, options = {}) {
   const isWeapon = kind === "weapon";
   const hasPlayerNotes = items.some(item => item.note);
-  const rulesLimit = items.length >= 8 ? 96 : 210;
+  const compactBeginner = Boolean(options.compactBeginner);
+  // Beginner gear rows are intentionally concise so that both sections can share
+  // the dossier page without clipping descriptions in the PDF.
+  const rulesLimit = compactBeginner ? (isWeapon ? 120 : 118) : (items.length >= 8 ? 96 : 210);
   const rows = items.map(item => {
     const entry = item.entry;
     const type = isWeapon ? inferWeaponSkill(entry.name || "") : entry.type || "";
@@ -1429,6 +1432,19 @@ function buildPrintGearPage(page, total, content) {
   </section>`;
 }
 
+function buildPrintBeginnerGearRows(content) {
+  const sections = [
+    content.weapons.length
+      ? `<div class="print-beginner-gear-row print-beginner-weapons-row">${printSection(`Weapons - ${content.weapons.length} Selected`, printGearTable("weapon", content.weapons, { compactBeginner: true }))}</div>`
+      : "",
+    content.equipment.length
+      ? `<div class="print-beginner-gear-row print-beginner-equipment-row">${printSection(`Equipment - ${content.equipment.length} Selected`, printGearTable("equipment", content.equipment, { compactBeginner: true }))}</div>`
+      : ""
+  ].filter(Boolean);
+  if (!sections.length) return "";
+  return `<div class="print-beginner-gear-stack">${sections.join("")}</div>`;
+}
+
 function buildPrintBeginnerDossierPage(page, total, traits, talents, content) {
   const traitCards = traits.length ? traits.map(item => printOptionCard("trait", item, 440, 760)).join("") : "";
   const talentCards = talents.length ? talents.map(item => printOptionCard("talent", item, 440, 760)).join("") : "";
@@ -1437,8 +1453,11 @@ function buildPrintBeginnerDossierPage(page, total, traits, talents, content) {
     talentCards ? `<div>${printSection("Starting Talent", `<div class="print-option-list">${talentCards}</div>`)}</div>` : ""
   ].filter(Boolean);
   const optionGridClass = optionColumns.length === 1 ? "print-options-grid one-column" : "print-options-grid";
-  const gearMarkup = buildPrintGearMarkup(content, "print-beginner-gear-grid");
-  const supplementMarkup = buildPrintSupplementMarkup(content);
+  const gearMarkup = buildPrintBeginnerGearRows(content);
+  // The generated beginner's default campaign reminder is boilerplate, not a player note.
+  // Omitting it in print protects equal space for the Weapons and Equipment rows.
+  const beginnerNotes = content.notes.filter(([, value]) => value !== "Portfolio-based beginner character - review and personalise before play.");
+  const supplementMarkup = buildPrintSupplementMarkup({ ...content, notes: beginnerNotes });
 
   return `<section class="print-page print-beginner-dossier-page">${printHeader(page, total, "Starter trait, talent, selected gear and notes")}
     ${optionColumns.length ? `<div class="${optionGridClass} print-beginner-options-grid">${optionColumns.join("")}</div>` : ""}
@@ -1513,7 +1532,7 @@ function buildPrintPortfolio() {
   container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
 }
 
-const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v9 - strict sub-skill labels";
+const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v10 - balanced beginner gear rows";
 
 function printStylesheetUrl() {
   return new URL("styles.css", window.location.href).href;

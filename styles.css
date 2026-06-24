@@ -1347,3 +1347,79 @@ body.print-window #printPortfolio {
     gap: 1.7mm;
   }
 }
+
+
+/* v10: Beginner dossier gear uses two equal full-width rows. This applies in the
+   dedicated print window before preview opens and in the final PDF. */
+.print-beginner-dossier-page .print-beginner-gear-stack {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: minmax(34mm, auto) minmax(34mm, auto) !important;
+  gap: 2.2mm !important;
+  margin-top: 1.8mm;
+  min-width: 0;
+}
+
+.print-beginner-dossier-page .print-beginner-gear-row {
+  min-width: 0;
+  min-height: 34mm;
+}
+
+.print-beginner-dossier-page .print-beginner-gear-row .print-section {
+  height: 100%;
+  margin-bottom: 0 !important;
+}
+
+.print-beginner-dossier-page .print-beginner-gear-row .print-section-body {
+  padding: 1.35mm 1.7mm 1.45mm;
+}
+
+.print-beginner-dossier-page .print-beginner-gear-row .print-gear-table {
+  width: 100%;
+  font-size: 5.35pt;
+}
+
+.print-beginner-dossier-page .print-beginner-gear-row .print-gear-table th,
+.print-beginner-dossier-page .print-beginner-gear-row .print-gear-table td {
+  padding: .34mm .55mm;
+  line-height: 1.15;
+  vertical-align: top;
+}
+
+/* Description is intentionally the widest column. */
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.no-player-notes th:nth-child(1) { width: 3%; }
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.no-player-notes th:nth-child(2) { width: 16%; }
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.no-player-notes th:nth-child(3) { width: 9%; }
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.no-player-notes th:nth-child(4) { width: 7%; }
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.no-player-notes th:nth-child(5) { width: 65%; }
+
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.with-player-notes th:nth-child(1) { width: 3%; }
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.with-player-notes th:nth-child(2) { width: 15%; }
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.with-player-notes th:nth-child(3) { width: 8%; }
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.with-player-notes th:nth-child(4) { width: 7%; }
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.with-player-notes th:nth-child(5) { width: 49%; }
+.print-beginner-dossier-page .print-beginner-equipment-row .print-equipment-table.with-player-notes th:nth-child(6) { width: 18%; }
+
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.no-player-notes th:nth-child(1) { width: 3%; }
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.no-player-notes th:nth-child(2) { width: 17%; }
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.no-player-notes th:nth-child(3) { width: 9%; }
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.no-player-notes th:nth-child(4) { width: 7%; }
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.no-player-notes th:nth-child(5) { width: 64%; }
+
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.with-player-notes th:nth-child(1) { width: 3%; }
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.with-player-notes th:nth-child(2) { width: 15%; }
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.with-player-notes th:nth-child(3) { width: 8%; }
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.with-player-notes th:nth-child(4) { width: 7%; }
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.with-player-notes th:nth-child(5) { width: 49%; }
+.print-beginner-dossier-page .print-beginner-weapons-row .print-weapon-table.with-player-notes th:nth-child(6) { width: 18%; }
+
+.print-beginner-dossier-page .print-beginner-gear-row .print-gear-table td:nth-child(5) {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media print {
+  .print-beginner-dossier-page .print-beginner-gear-stack {
+    grid-template-rows: minmax(34mm, auto) minmax(34mm, auto) !important;
+  }
+}
