@@ -1,4 +1,4 @@
-window.INFINITY_DATA = {
+window.DATA = {
   "traits": [
     {
       "category": "Combat",
@@ -6,7 +6,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Close Combat",
       "brief": "Extensive training in Stealth and Close Combat, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to fight effectively at close range and control dangerous melee engagements. This trait represents the character's broad aptitude as a Ambusher.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Close Combat for a task where the Ambusher trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -17,7 +17,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Resistance",
       "brief": "Extensive training in Hacking and Resistance, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Anti Virus.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Resistance for a task where the Anti Virus trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Hacking or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -28,7 +28,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Resistance",
       "brief": "Extensive training in Discipline and Resistance, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Battle Hardened.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where the Battle Hardened trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -39,7 +39,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Thievery",
       "brief": "Extensive training in Close Combat and Thievery, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to bypass security, manipulate locks, plant devices, and handle covert intrusion work. This trait represents the character's broad aptitude as a Breacher.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Thievery for a task where the Breacher trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -50,7 +50,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Observation",
       "brief": "Extensive training in Close Combat and Observation, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a CQB Specialist.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Observation for a task where the CQB Specialist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -61,7 +61,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "brief": "Extensive training in Observation and Discipline, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Combat Instinct.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where the Combat Instinct trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -72,7 +72,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "brief": "Extensive training in Observation and Discipline, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Counter Sniper.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where the Counter Sniper trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -83,7 +83,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Defender.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Defender trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -94,7 +94,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Discipline",
       "brief": "Extensive training in Resistance and Discipline, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Dogged.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where the Dogged trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -103,9 +103,9 @@ window.INFINITY_DATA = {
       "category": "Combat",
       "name": "Duelist",
       "primary": "Close Combat",
-      "secondary": "Agility",
-      "brief": "Extensive training in Close Combat and Agility, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Duelist.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Agility for a task where the Duelist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Stealth",
+      "brief": "Focused training in Close Combat and Stealth, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to avoid detection, infiltrate secure areas, and conceal movement. This trait represents the character's specialised aptitude as a Duelist.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -114,9 +114,9 @@ window.INFINITY_DATA = {
       "category": "Combat",
       "name": "Eagle Eye",
       "primary": "Observation",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Observation and Awareness, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Eagle Eye.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Awareness for a task where the Eagle Eye trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Analysis",
+      "brief": "Focused training in Observation and Analysis, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Eagle Eye.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -127,7 +127,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Executioner.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Executioner trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -138,7 +138,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Fatality.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Fatality trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -149,7 +149,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Discipline",
       "brief": "Extensive training in Resistance and Discipline, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Frenzy.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where the Frenzy trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -160,7 +160,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "brief": "Extensive training in Tech and Observation, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Grenadier.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where the Grenadier trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -168,10 +168,10 @@ window.INFINITY_DATA = {
     {
       "category": "Combat",
       "name": "Gunslinger",
-      "primary": "Observation",
-      "secondary": "Agility",
-      "brief": "Extensive training in Observation and Agility, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Gunslinger.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Agility for a task where the Gunslinger trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Ballistics",
+      "secondary": "Observation",
+      "brief": "Focused training in Ballistics and Observation, allowing the character to place accurate ranged fire and handle weapons under pressure while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Gunslinger.",
+      "effect": "Reduce Difficulty by 1 when using Ballistics or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -179,10 +179,10 @@ window.INFINITY_DATA = {
     {
       "category": "Combat",
       "name": "Heavy Gunner",
-      "primary": "Brawn",
+      "primary": "Ballistics",
       "secondary": "Observation",
-      "brief": "Extensive training in Brawn and Observation, allowing the character to apply raw strength, lift heavy loads, break obstacles, and overpower resistance while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Heavy Gunner.",
-      "effect": "Reduce Difficulty by 1 when using Brawn or Observation for a task where the Heavy Gunner trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Ballistics and Observation, allowing the character to place accurate ranged fire and handle weapons under pressure while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Heavy Gunner.",
+      "effect": "Reduce Difficulty by 1 when using Ballistics or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -191,9 +191,9 @@ window.INFINITY_DATA = {
       "category": "Combat",
       "name": "Mimetism",
       "primary": "Stealth",
-      "secondary": "Agility",
-      "brief": "Extensive training in Stealth and Agility, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Mimetism.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Agility for a task where the Mimetism trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Thievery",
+      "brief": "Focused training in Stealth and Thievery, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to bypass security, manipulate locks, and handle covert intrusion work. This trait represents the character's specialised aptitude as a Mimetism.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -201,10 +201,10 @@ window.INFINITY_DATA = {
     {
       "category": "Combat",
       "name": "Quick Draw",
-      "primary": "Agility",
+      "primary": "Ballistics",
       "secondary": "Observation",
-      "brief": "Extensive training in Agility and Observation, allowing the character to react quickly, coordinate movement, and avoid sudden danger while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Quick Draw.",
-      "effect": "Reduce Difficulty by 1 when using Agility or Observation for a task where the Quick Draw trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Ballistics and Observation, allowing the character to place accurate ranged fire and handle weapons under pressure while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Quick Draw.",
+      "effect": "Reduce Difficulty by 1 when using Ballistics or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -215,7 +215,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Religious Troop.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Religious Troop trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "PanOceania Military Orders"
@@ -224,9 +224,9 @@ window.INFINITY_DATA = {
       "category": "Combat",
       "name": "Resilient",
       "primary": "Close Combat",
-      "secondary": "Agility",
-      "brief": "Extensive training in Close Combat and Agility, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Resilient.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Agility for a task where the Resilient trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Resistance",
+      "brief": "Focused training in Close Combat and Resistance, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Resilient.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -237,7 +237,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Resistance (Shock).",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Resistance (Shock) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -248,7 +248,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "brief": "Extensive training in Observation and Discipline, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Sharpshooter.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where the Sharpshooter trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -259,7 +259,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Resistance",
       "brief": "Extensive training in Close Combat and Resistance, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Shield Specialist.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Resistance for a task where the Shield Specialist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -270,18 +270,18 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "brief": "Extensive training in Observation and Discipline, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Sniper.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where the Sniper trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
     },
     {
       "category": "Combat",
-      "name": "Superior Tactics",
+      "name": "Superior Doctrine",
       "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Superior Tactics.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Superior Tactics trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Superior Doctrine.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -292,7 +292,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "brief": "Extensive training in Observation and Discipline, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Suppressive Shooter.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where the Suppressive Shooter trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -303,7 +303,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "brief": "Extensive training in Tech and Observation, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a TAG Hunter.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where the TAG Hunter trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -314,7 +314,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Total Reaction.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Total Reaction trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -325,7 +325,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Trigger Happy.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Trigger Happy trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -336,7 +336,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Survival",
       "brief": "Extensive training in Close Combat and Survival, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to navigate harsh terrain, endure hazards, and keep a group alive in the field. This trait represents the character's broad aptitude as a Urban Fighter.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Survival for a task where the Urban Fighter trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -347,7 +347,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Resistance",
       "brief": "Extensive training in Discipline and Resistance, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Veteran.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where the Veteran trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -358,7 +358,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Weapon Master.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Weapon Master trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -369,7 +369,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a sixth sense.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the sixth sense trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -380,7 +380,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Arctic Survivor.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Arctic Survivor trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -391,7 +391,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Cartographer.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Cartographer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -402,7 +402,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Cave Delver.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Cave Delver trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -413,7 +413,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Climbing Plus.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Climbing Plus trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -421,10 +421,10 @@ window.INFINITY_DATA = {
     {
       "category": "Exploration",
       "name": "Defensive Play",
-      "primary": "Agility",
-      "secondary": "Close Combat",
-      "brief": "Extensive training in Agility and Close Combat, allowing the character to react quickly, coordinate movement, and avoid sudden danger while also being able to fight effectively at close range and control dangerous melee engagements. This trait represents the character's broad aptitude as a Defensive Play.",
-      "effect": "Reduce Difficulty by 1 when using Agility or Close Combat for a task where the Defensive Play trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Close Combat",
+      "secondary": "Resistance",
+      "brief": "Focused training in Close Combat and Resistance, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Defensive Play.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -435,7 +435,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Desert Walker.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Desert Walker trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -446,7 +446,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Environmental Expert.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Environmental Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -457,7 +457,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Expedition Leader.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Expedition Leader trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -468,7 +468,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Forager.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Forager trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -479,7 +479,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Frontier Guide.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Frontier Guide trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -487,10 +487,10 @@ window.INFINITY_DATA = {
     {
       "category": "Exploration",
       "name": "Graceful",
-      "primary": "Acrobatics",
-      "secondary": "Agility",
-      "brief": "Extensive training in Acrobatics and Agility, allowing the character to move through difficult spaces, keep balance, and perform precise physical maneuvers while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Graceful.",
-      "effect": "Reduce Difficulty by 1 when using Acrobatics or Agility for a task where the Graceful trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Stealth",
+      "secondary": "Athletics",
+      "brief": "Focused training in Stealth and Athletics, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's specialised aptitude as a Graceful.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -499,9 +499,9 @@ window.INFINITY_DATA = {
       "category": "Exploration",
       "name": "Jungle Veteran",
       "primary": "Survival",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Survival and Awareness, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Jungle Veteran.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Awareness for a task where the Jungle Veteran trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Observation",
+      "brief": "Focused training in Survival and Observation, allowing the character to navigate hazards, find resources, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Jungle Veteran.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -512,7 +512,7 @@ window.INFINITY_DATA = {
       "primary": "Athletics",
       "secondary": "Survival",
       "brief": "Extensive training in Athletics and Survival, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to navigate harsh terrain, endure hazards, and keep a group alive in the field. This trait represents the character's broad aptitude as a Mountaineer.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Survival for a task where the Mountaineer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -521,9 +521,9 @@ window.INFINITY_DATA = {
       "category": "Exploration",
       "name": "Navigator",
       "primary": "Survival",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Survival and Awareness, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Navigator.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Awareness for a task where the Navigator trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Observation",
+      "brief": "Focused training in Survival and Observation, allowing the character to navigate hazards, find resources, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Navigator.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -534,7 +534,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Athletics",
       "brief": "Extensive training in Survival and Athletics, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's broad aptitude as a Ocean Explorer.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Athletics for a task where the Ocean Explorer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -545,7 +545,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Pathfinder.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Pathfinder trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -556,7 +556,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "brief": "Extensive training in Extraplanetary and Survival, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to navigate harsh terrain, endure hazards, and keep a group alive in the field. This trait represents the character's broad aptitude as a Planetary Explorer.",
-      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Survival for a task where the Planetary Explorer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -567,7 +567,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Analysis",
       "brief": "Extensive training in Extraplanetary and Analysis, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Starship Navigator.",
-      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Analysis for a task where the Starship Navigator trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -578,7 +578,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "brief": "Extensive training in Analysis and Observation, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Surveyor.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where the Surveyor trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -589,7 +589,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Terrain Specialist.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Terrain Specialist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -600,7 +600,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Tracker.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Tracker trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -611,7 +611,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Athletics",
       "brief": "Extensive training in Survival and Athletics, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's broad aptitude as a Trailblazer.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Athletics for a task where the Trailblazer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -622,7 +622,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Urban Explorer.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Urban Explorer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -633,7 +633,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Resistance",
       "brief": "Extensive training in Extraplanetary and Resistance, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Void Traveller.",
-      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Resistance for a task where the Void Traveller trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -644,7 +644,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Resistance",
       "brief": "Extensive training in Survival and Resistance, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Wasteland Survivor.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Resistance for a task where the Wasteland Survivor trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -653,9 +653,9 @@ window.INFINITY_DATA = {
       "category": "Exploration",
       "name": "Wild Empathy",
       "primary": "Animal Handling",
-      "secondary": "Personality",
-      "brief": "Extensive training in Animal Handling and Personality, allowing the character to control, train, calm, and coordinate animals or companion creatures while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Wild Empathy.",
-      "effect": "Reduce Difficulty by 1 when using Animal Handling or Personality for a task where the Wild Empathy trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Psychology",
+      "brief": "Focused training in Animal Handling and Psychology, allowing the character to control, train, calm, and coordinate animals or companion creatures while also being able to read behaviour, resist manipulation, and understand motives. This trait represents the character's specialised aptitude as a Wild Empathy.",
+      "effect": "Reduce Difficulty by 1 when using Animal Handling or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -666,7 +666,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Resistance",
       "brief": "Extensive training in Survival and Resistance, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Bourak Survivor.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Resistance for a task where the Bourak Survivor trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Haqqislam or academic background"
@@ -677,7 +677,7 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Persuade",
       "brief": "Extensive training in Lifestyle and Persuade, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a Caravanserai Trader.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where the Caravanserai Trader trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Mercenary, criminal, or trade-route background"
@@ -688,7 +688,7 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Lifestyle",
       "brief": "Extensive training in Education and Lifestyle, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's broad aptitude as a Concilium Insider.",
-      "effect": "Reduce Difficulty by 1 when using Education or Lifestyle for a task where the Concilium Insider trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Education or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "O-12, legal, diplomatic, or command background"
@@ -699,10 +699,10 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Persuade",
       "brief": "Extensive training in Lifestyle and Persuade, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a Corporate Elite.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where the Corporate Elite trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "PanOceania or intelligence-service background"
+      "restriction": "PanOceania or covert-service background"
     },
     {
       "category": "Faction",
@@ -710,7 +710,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Lifestyle",
       "brief": "Extensive training in Hacking and Lifestyle, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's broad aptitude as a Data Anarchist.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Lifestyle for a task where the Data Anarchist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Hacking or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Nomad or advanced Hacking background"
@@ -721,7 +721,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Resistance",
       "brief": "Extensive training in Survival and Resistance, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Dawn Survivor.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Resistance for a task where the Dawn Survivor trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Ariadna or frontier survival background"
@@ -730,9 +730,9 @@ window.INFINITY_DATA = {
       "category": "Faction",
       "name": "Enhanced Cognition",
       "primary": "Analysis",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Analysis and Intelligence, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Enhanced Cognition.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Intelligence for a task where the Enhanced Cognition trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Science",
+      "brief": "Focused training in Analysis and Science, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's specialised aptitude as a Enhanced Cognition.",
+      "effect": "Reduce Difficulty by 1 when using Analysis or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "ALEPH access or Posthuman background"
@@ -743,7 +743,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Education",
       "brief": "Extensive training in Discipline and Education, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's broad aptitude as a Free Thinker.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Education for a task where the Free Thinker trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Discipline or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Nomad or infiltration background"
@@ -754,7 +754,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Tech",
       "brief": "Extensive training in Survival and Tech, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's broad aptitude as a Frontier Born.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Tech for a task where the Frontier Born trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Ariadna or frontier survival background"
@@ -765,7 +765,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Athletics",
       "brief": "Extensive training in Survival and Athletics, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's broad aptitude as a Helot Heritage.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Athletics for a task where the Helot Heritage trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "PanOceania, Varuna, or aquatic operations background"
@@ -776,10 +776,10 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Education",
       "brief": "Extensive training in Lifestyle and Education, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's broad aptitude as a Hyperpower Citizen.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Education for a task where the Hyperpower Citizen trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "PanOceania or intelligence-service background"
+      "restriction": "PanOceania or covert-service background"
     },
     {
       "category": "Faction",
@@ -787,7 +787,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Command",
       "brief": "Extensive training in Discipline and Command, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to lead allies, issue orders, and coordinate group action. This trait represents the character's broad aptitude as a Imperial Loyalty.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Command for a task where the Imperial Loyalty trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Discipline or Command for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Yu Jing or command/security background"
@@ -798,7 +798,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Command",
       "brief": "Extensive training in Resistance and Command, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to lead allies, issue orders, and coordinate group action. This trait represents the character's broad aptitude as a Invincible Doctrine.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Command for a task where the Invincible Doctrine trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Command for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Military command or Yu Jing background"
@@ -809,7 +809,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Close Combat",
       "brief": "Extensive training in Discipline and Close Combat, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to fight effectively at close range and control dangerous melee engagements. This trait represents the character's broad aptitude as a Knightly Discipline.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Close Combat for a task where the Knightly Discipline trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Discipline or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "PanOceania Military Orders"
@@ -820,7 +820,7 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Lifestyle",
       "brief": "Extensive training in Education and Lifestyle, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's broad aptitude as a Low-Tech Ingenuity.",
-      "effect": "Reduce Difficulty by 1 when using Education or Lifestyle for a task where the Low-Tech Ingenuity trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Education or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Ariadna or GM approval"
@@ -831,7 +831,7 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Hacking",
       "brief": "Extensive training in Lifestyle and Hacking, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to breach networks, defend systems, and manipulate quantronic infrastructure. This trait represents the character's broad aptitude as a Maya Native.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Hacking for a task where the Maya Native trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Nomad or advanced Hacking background"
@@ -842,7 +842,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Close Combat",
       "brief": "Extensive training in Command and Close Combat, allowing the character to lead allies, issue orders, and coordinate group action while also being able to fight effectively at close range and control dangerous melee engagements. This trait represents the character's broad aptitude as a Mercenary Veteran.",
-      "effect": "Reduce Difficulty by 1 when using Command or Close Combat for a task where the Mercenary Veteran trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Command or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Mercenary, criminal, or trade-route background"
@@ -853,7 +853,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Tech",
       "brief": "Extensive training in Extraplanetary and Tech, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's broad aptitude as a Nomad Shipborn.",
-      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Tech for a task where the Nomad Shipborn trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Nomad or advanced Hacking background"
@@ -864,7 +864,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Survival",
       "brief": "Extensive training in Discipline and Survival, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to navigate harsh terrain, endure hazards, and keep a group alive in the field. This trait represents the character's broad aptitude as a Paradiso Veteran.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Survival for a task where the Paradiso Veteran trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Discipline or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Military or security background"
@@ -872,10 +872,10 @@ window.INFINITY_DATA = {
     {
       "category": "Faction",
       "name": "Posthuman Conditioning",
-      "primary": "Intelligence",
+      "primary": "Resistance",
       "secondary": "Discipline",
-      "brief": "Extensive training in Intelligence and Discipline, allowing the character to plan, solve problems, and apply logic under pressure while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Posthuman Conditioning.",
-      "effect": "Reduce Difficulty by 1 when using Intelligence or Discipline for a task where the Posthuman Conditioning trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Resistance and Discipline, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's specialised aptitude as a Posthuman Conditioning.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "ALEPH access or Posthuman background"
@@ -886,7 +886,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "brief": "Extensive training in Analysis and Observation, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Predictive Thinking.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where the Predictive Thinking trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "ALEPH access or Posthuman background"
@@ -897,7 +897,7 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Analysis",
       "brief": "Extensive training in Education and Analysis, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Search for Knowledge.",
-      "effect": "Reduce Difficulty by 1 when using Education or Analysis for a task where the Search for Knowledge trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Education or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Haqqislam or academic background"
@@ -908,7 +908,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Science",
       "brief": "Extensive training in Medicine and Science, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's broad aptitude as a Silk Adept.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where the Silk Adept trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Haqqislam or advanced Medicine background"
@@ -919,7 +919,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Education",
       "brief": "Extensive training in Discipline and Education, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's broad aptitude as a State Discipline.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Education for a task where the State Discipline trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Discipline or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Yu Jing or state-security background"
@@ -930,7 +930,7 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Thievery",
       "brief": "Extensive training in Lifestyle and Thievery, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to bypass security, manipulate locks, plant devices, and handle covert intrusion work. This trait represents the character's broad aptitude as a Submondo Ties.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Thievery for a task where the Submondo Ties trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "Mercenary, criminal, or trade-route background"
@@ -941,7 +941,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Extraplanetary",
       "brief": "Extensive training in Survival and Extraplanetary, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to operate safely in space, vacuum, zero gravity, and hostile off-world environments. This trait represents the character's broad aptitude as a All Terrain Expert.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Extraplanetary for a task where the All Terrain Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Extraplanetary for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -952,7 +952,7 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Berserk.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Berserk trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -963,7 +963,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Medicine",
       "brief": "Extensive training in Resistance and Medicine, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to treat injuries, stabilize casualties, and apply medical or biotech knowledge. This trait represents the character's broad aptitude as a Bio Immunity.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where the Bio Immunity trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -974,18 +974,18 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Discipline",
       "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Brutal Critical.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where the Brutal Critical trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
     },
     {
       "category": "General",
-      "name": "Counter Intelligence",
+      "name": "Counter-Intel",
       "primary": "Analysis",
       "secondary": "Discipline",
-      "brief": "Extensive training in Analysis and Discipline, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Counter Intelligence.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Discipline for a task where the Counter Intelligence trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Extensive training in Analysis and Discipline, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Counter-Intel.",
+      "effect": "Reduce Difficulty by 1 when using Analysis or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -996,7 +996,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Resistance",
       "brief": "Extensive training in Discipline and Resistance, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Courageous.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where the Courageous trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1004,10 +1004,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Dumb Luck",
-      "primary": "Personality",
+      "primary": "Lifestyle",
       "secondary": "Discipline",
-      "brief": "Extensive training in Personality and Discipline, allowing the character to project presence, charm others, and hold attention while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Dumb Luck.",
-      "effect": "Reduce Difficulty by 1 when using Personality or Discipline for a task where the Dumb Luck trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Lifestyle and Discipline, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's specialised aptitude as a Dumb Luck.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1016,9 +1016,9 @@ window.INFINITY_DATA = {
       "category": "General",
       "name": "Enhanced (Meta Humans only)",
       "primary": "Analysis",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Analysis and Intelligence, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Enhanced (Meta Humans only).",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Intelligence for a task where the Enhanced (Meta Humans only) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Science",
+      "brief": "Focused training in Analysis and Science, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's specialised aptitude as a Enhanced (Meta Humans only).",
+      "effect": "Reduce Difficulty by 1 when using Analysis or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH access or Posthuman background"
@@ -1026,10 +1026,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Formation (for fireteam talent only)",
-      "primary": "Analysis",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Analysis and Intelligence, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Formation (for fireteam talent only).",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Intelligence for a task where the Formation (for fireteam talent only) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Command",
+      "secondary": "Analysis",
+      "brief": "Focused training in Command and Analysis, allowing the character to lead allies, issue orders, and coordinate group action while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Formation (for fireteam talent only).",
+      "effect": "Reduce Difficulty by 1 when using Command or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "Military or security background"
@@ -1040,7 +1040,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Discipline",
       "brief": "Extensive training in Resistance and Discipline, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Hard to Kill.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where the Hard to Kill trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1048,10 +1048,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Hyper-Dynamics",
-      "primary": "Analysis",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Analysis and Intelligence, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Hyper-Dynamics.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Intelligence for a task where the Hyper-Dynamics trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Athletics",
+      "secondary": "Stealth",
+      "brief": "Focused training in Athletics and Stealth, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to avoid detection, infiltrate secure areas, and conceal movement. This trait represents the character's specialised aptitude as a Hyper-Dynamics.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1059,10 +1059,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Immunity (Total)",
-      "primary": "Analysis",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Analysis and Intelligence, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Immunity (Total).",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Intelligence for a task where the Immunity (Total) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Resistance",
+      "secondary": "Medicine",
+      "brief": "Focused training in Resistance and Medicine, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to treat injuries, stabilize casualties, and apply medical or biotech knowledge. This trait represents the character's specialised aptitude as a Immunity (Total).",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1070,10 +1070,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Impetuous",
-      "primary": "Agility",
+      "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Extensive training in Agility and Discipline, allowing the character to react quickly, coordinate movement, and avoid sudden danger while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Impetuous.",
-      "effect": "Reduce Difficulty by 1 when using Agility or Discipline for a task where the Impetuous trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's specialised aptitude as a Impetuous.",
+      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1081,10 +1081,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Lucky",
-      "primary": "Personality",
+      "primary": "Lifestyle",
       "secondary": "Discipline",
-      "brief": "Extensive training in Personality and Discipline, allowing the character to project presence, charm others, and hold attention while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Lucky.",
-      "effect": "Reduce Difficulty by 1 when using Personality or Discipline for a task where the Lucky trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Lifestyle and Discipline, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's specialised aptitude as a Lucky.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1092,10 +1092,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Mnemonica (only for ALF or any Combined Army faction members)",
-      "primary": "Analysis",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Analysis and Intelligence, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Mnemonica (only for ALF or any Combined Army faction members).",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Intelligence for a task where the Mnemonica (only for ALF or any Combined Army faction members) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Education",
+      "secondary": "Analysis",
+      "brief": "Focused training in Education and Analysis, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Mnemonica (only for ALF or any Combined Army faction members).",
+      "effect": "Reduce Difficulty by 1 when using Education or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH access or Posthuman background"
@@ -1104,9 +1104,9 @@ window.INFINITY_DATA = {
       "category": "General",
       "name": "Night Vision",
       "primary": "Observation",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Observation and Awareness, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Night Vision.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Awareness for a task where the Night Vision trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Survival",
+      "brief": "Focused training in Observation and Survival, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to navigate hazards, find resources, and keep a group alive in the field. This trait represents the character's specialised aptitude as a Night Vision.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1114,10 +1114,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Regeneration (NOTE: for AI, Neo Humans and ALF only)",
-      "primary": "Analysis",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Analysis and Intelligence, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Regeneration (NOTE: for AI, Neo Humans and ALF only).",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Intelligence for a task where the Regeneration (NOTE: for AI, Neo Humans and ALF only) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Medicine",
+      "secondary": "Resistance",
+      "brief": "Focused training in Medicine and Resistance, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Regeneration (NOTE: for AI, Neo Humans and ALF only).",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH access or Posthuman background"
@@ -1126,9 +1126,9 @@ window.INFINITY_DATA = {
       "category": "General",
       "name": "Rigorous Training",
       "primary": "Athletics",
-      "secondary": "Brawn",
-      "brief": "Extensive training in Athletics and Brawn, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to apply raw strength, lift heavy loads, break obstacles, and overpower resistance. This trait represents the character's broad aptitude as a Rigorous Training.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Brawn for a task where the Rigorous Training trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Resistance",
+      "brief": "Focused training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Rigorous Training.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1137,9 +1137,9 @@ window.INFINITY_DATA = {
       "category": "General",
       "name": "Risk Taker",
       "primary": "Discipline",
-      "secondary": "Personality",
-      "brief": "Extensive training in Discipline and Personality, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Risk Taker.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Personality for a task where the Risk Taker trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Psychology",
+      "brief": "Focused training in Discipline and Psychology, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to read behaviour, resist manipulation, and understand motives. This trait represents the character's specialised aptitude as a Risk Taker.",
+      "effect": "Reduce Difficulty by 1 when using Discipline or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1148,9 +1148,9 @@ window.INFINITY_DATA = {
       "category": "General",
       "name": "Sharp Senses",
       "primary": "Observation",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Observation and Awareness, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Sharp Senses.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Awareness for a task where the Sharp Senses trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Analysis",
+      "brief": "Focused training in Observation and Analysis, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Sharp Senses.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -1161,7 +1161,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Analysis",
       "brief": "Extensive training in Command and Analysis, allowing the character to lead allies, issue orders, and coordinate group action while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Strategist.",
-      "effect": "Reduce Difficulty by 1 when using Command or Analysis for a task where the Strategist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Command or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1169,10 +1169,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Strong Grip",
-      "primary": "Brawn",
+      "primary": "Athletics",
       "secondary": "Resistance",
-      "brief": "Extensive training in Brawn and Resistance, allowing the character to apply raw strength, lift heavy loads, break obstacles, and overpower resistance while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Strong Grip.",
-      "effect": "Reduce Difficulty by 1 when using Brawn or Resistance for a task where the Strong Grip trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Strong Grip.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1181,20 +1181,20 @@ window.INFINITY_DATA = {
       "category": "General",
       "name": "Super Jump",
       "primary": "Athletics",
-      "secondary": "Agility",
-      "brief": "Extensive training in Athletics and Agility, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Super Jump.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Agility for a task where the Super Jump trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Resistance",
+      "brief": "Focused training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Super Jump.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
     },
     {
       "category": "General",
-      "name": "Tactical Awareness",
+      "name": "Tactical Perception",
       "primary": "Command",
       "secondary": "Observation",
-      "brief": "Extensive training in Command and Observation, allowing the character to lead allies, issue orders, and coordinate group action while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Tactical Awareness.",
-      "effect": "Reduce Difficulty by 1 when using Command or Observation for a task where the Tactical Awareness trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Extensive training in Command and Observation, allowing the character to lead allies, issue orders, and coordinate group action while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Tactical Perception.",
+      "effect": "Reduce Difficulty by 1 when using Command or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1205,7 +1205,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Terrain Expert.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Terrain Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1213,10 +1213,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Total Regeneration (NOTE: for AI, Neo Humans and ALF only)",
-      "primary": "Analysis",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Analysis and Intelligence, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Total Regeneration (NOTE: for AI, Neo Humans and ALF only).",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Intelligence for a task where the Total Regeneration (NOTE: for AI, Neo Humans and ALF only) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Medicine",
+      "secondary": "Resistance",
+      "brief": "Focused training in Medicine and Resistance, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Total Regeneration (NOTE: for AI, Neo Humans and ALF only).",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH access or Posthuman background"
@@ -1224,10 +1224,10 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Wild Card",
-      "primary": "Personality",
+      "primary": "Persuade",
       "secondary": "Command",
-      "brief": "Extensive training in Personality and Command, allowing the character to project presence, charm others, and hold attention while also being able to lead allies, issue orders, and coordinate group action. This trait represents the character's broad aptitude as a Wild Card.",
-      "effect": "Reduce Difficulty by 1 when using Personality or Command for a task where the Wild Card trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Persuade and Command, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to lead allies, issue orders, and coordinate group action. This trait represents the character's specialised aptitude as a Wild Card.",
+      "effect": "Reduce Difficulty by 1 when using Persuade or Command for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1238,7 +1238,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "brief": "Extensive training in Medicine and Analysis, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Biomedical Master.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where the Biomedical Master trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1249,7 +1249,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Science",
       "brief": "Extensive training in Medicine and Science, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's broad aptitude as a Biotech Specialist.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where the Biotech Specialist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1260,7 +1260,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Discipline",
       "brief": "Extensive training in Medicine and Discipline, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Combat Healer.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Discipline for a task where the Combat Healer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1271,7 +1271,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Discipline",
       "brief": "Extensive training in Medicine and Discipline, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Combat Medic.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Discipline for a task where the Combat Medic trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1282,7 +1282,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Tech",
       "brief": "Extensive training in Medicine and Tech, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's broad aptitude as a Cybernetic Surgeon.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Tech for a task where the Cybernetic Surgeon trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1291,9 +1291,9 @@ window.INFINITY_DATA = {
       "category": "Medical",
       "name": "Emergency Responder",
       "primary": "Medicine",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Medicine and Awareness, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Emergency Responder.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Awareness for a task where the Emergency Responder trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Observation",
+      "brief": "Focused training in Medicine and Observation, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Emergency Responder.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1304,7 +1304,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "brief": "Extensive training in Medicine and Analysis, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Fanatic (Hassassin Bahram Affiliate).",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where the Fanatic (Hassassin Bahram Affiliate) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "Hassassin Bahram, martial, or covert-ops background"
@@ -1315,7 +1315,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Medicine",
       "brief": "Extensive training in Resistance and Medicine, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to treat injuries, stabilize casualties, and apply medical or biotech knowledge. This trait represents the character's broad aptitude as a Fast Healer.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where the Fast Healer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1326,7 +1326,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Survival",
       "brief": "Extensive training in Medicine and Survival, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to navigate harsh terrain, endure hazards, and keep a group alive in the field. This trait represents the character's broad aptitude as a Field Doctor.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Survival for a task where the Field Doctor trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1335,9 +1335,9 @@ window.INFINITY_DATA = {
       "category": "Medical",
       "name": "First-Aider",
       "primary": "Medicine",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Medicine and Intelligence, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a First-Aider.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Intelligence for a task where the First-Aider trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Education",
+      "brief": "Focused training in Medicine and Education, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's specialised aptitude as a First-Aider.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1348,7 +1348,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Science",
       "brief": "Extensive training in Medicine and Science, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's broad aptitude as a Geneticist.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where the Geneticist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1359,7 +1359,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "brief": "Extensive training in Medicine and Analysis, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Medical Expert.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where the Medical Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1370,7 +1370,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Education",
       "brief": "Extensive training in Medicine and Education, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's broad aptitude as a Medical Instructor.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Education for a task where the Medical Instructor trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1381,7 +1381,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Science",
       "brief": "Extensive training in Medicine and Science, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's broad aptitude as a Neurologist.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where the Neurologist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1392,7 +1392,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "brief": "Extensive training in Medicine and Analysis, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Pathologist.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where the Pathologist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1403,7 +1403,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Science",
       "brief": "Extensive training in Medicine and Science, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's broad aptitude as a Pharmacologist.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where the Pharmacologist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1414,7 +1414,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Psychology",
       "brief": "Extensive training in Medicine and Psychology, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to read behavior, resist manipulation, and understand motives. This trait represents the character's broad aptitude as a Rehabilitation Expert.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Psychology for a task where the Rehabilitation Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1425,7 +1425,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Science",
       "brief": "Extensive training in Medicine and Science, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's broad aptitude as a Research Physician.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where the Research Physician trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1436,7 +1436,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Discipline",
       "brief": "Extensive training in Medicine and Discipline, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Resuscitation Expert.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Discipline for a task where the Resuscitation Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1447,7 +1447,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Science",
       "brief": "Extensive training in Medicine and Science, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's broad aptitude as a Silk Researcher.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where the Silk Researcher trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1456,9 +1456,9 @@ window.INFINITY_DATA = {
       "category": "Medical",
       "name": "Surgeon",
       "primary": "Medicine",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Medicine and Intelligence, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Surgeon.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Intelligence for a task where the Surgeon trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Education",
+      "brief": "Focused training in Medicine and Education, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's specialised aptitude as a Surgeon.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1469,7 +1469,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Science",
       "brief": "Extensive training in Medicine and Science, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's broad aptitude as a Toxicologist.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where the Toxicologist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1480,7 +1480,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "brief": "Extensive training in Medicine and Analysis, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Trauma Expert.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where the Trauma Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1491,7 +1491,7 @@ window.INFINITY_DATA = {
       "primary": "Science",
       "secondary": "Medicine",
       "brief": "Extensive training in Science and Medicine, allowing the character to test hypotheses, evaluate data, and apply scientific principles while also being able to treat injuries, stabilize casualties, and apply medical or biotech knowledge. This trait represents the character's broad aptitude as a Xenobiologist.",
-      "effect": "Reduce Difficulty by 1 when using Science or Medicine for a task where the Xenobiologist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Science or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1499,10 +1499,10 @@ window.INFINITY_DATA = {
     {
       "category": "Physical",
       "name": "Agile",
-      "primary": "Acrobatics",
-      "secondary": "Agility",
-      "brief": "Extensive training in Acrobatics and Agility, allowing the character to move through difficult spaces, keep balance, and perform precise physical maneuvers while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Agile.",
-      "effect": "Reduce Difficulty by 1 when using Acrobatics or Agility for a task where the Agile trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Stealth",
+      "secondary": "Athletics",
+      "brief": "Focused training in Stealth and Athletics, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's specialised aptitude as a Agile.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1511,9 +1511,9 @@ window.INFINITY_DATA = {
       "category": "Physical",
       "name": "Athletic",
       "primary": "Athletics",
-      "secondary": "Brawn",
-      "brief": "Extensive training in Athletics and Brawn, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to apply raw strength, lift heavy loads, break obstacles, and overpower resistance. This trait represents the character's broad aptitude as a Athletic.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Brawn for a task where the Athletic trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Resistance",
+      "brief": "Focused training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Athletic.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1524,7 +1524,7 @@ window.INFINITY_DATA = {
       "primary": "Athletics",
       "secondary": "Resistance",
       "brief": "Extensive training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Battle Fit.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where the Battle Fit trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1532,10 +1532,10 @@ window.INFINITY_DATA = {
     {
       "category": "Physical",
       "name": "Catlike",
-      "primary": "Acrobatics",
-      "secondary": "Agility",
-      "brief": "Extensive training in Acrobatics and Agility, allowing the character to move through difficult spaces, keep balance, and perform precise physical maneuvers while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Catlike.",
-      "effect": "Reduce Difficulty by 1 when using Acrobatics or Agility for a task where the Catlike trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Stealth",
+      "secondary": "Thievery",
+      "brief": "Focused training in Stealth and Thievery, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to bypass security, manipulate locks, and handle covert intrusion work. This trait represents the character's specialised aptitude as a Catlike.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1544,9 +1544,9 @@ window.INFINITY_DATA = {
       "category": "Physical",
       "name": "Climber",
       "primary": "Athletics",
-      "secondary": "Acrobatics",
-      "brief": "Extensive training in Athletics and Acrobatics, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to move through difficult spaces, keep balance, and perform precise physical maneuvers. This trait represents the character's broad aptitude as a Climber.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Acrobatics for a task where the Climber trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Survival",
+      "brief": "Focused training in Athletics and Survival, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to navigate hazards, find resources, and keep a group alive in the field. This trait represents the character's specialised aptitude as a Climber.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1557,7 +1557,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Athletics",
       "brief": "Extensive training in Resistance and Athletics, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's broad aptitude as a Enduring.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Athletics for a task where the Enduring trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1566,9 +1566,9 @@ window.INFINITY_DATA = {
       "category": "Physical",
       "name": "High-G Adapted",
       "primary": "Athletics",
-      "secondary": "Brawn",
-      "brief": "Extensive training in Athletics and Brawn, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to apply raw strength, lift heavy loads, break obstacles, and overpower resistance. This trait represents the character's broad aptitude as a High-G Adapted.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Brawn for a task where the High-G Adapted trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Resistance",
+      "brief": "Focused training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a High-G Adapted.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1579,7 +1579,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Medicine",
       "brief": "Extensive training in Resistance and Medicine, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to treat injuries, stabilize casualties, and apply medical or biotech knowledge. This trait represents the character's broad aptitude as a Iron Constitution.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where the Iron Constitution trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1590,7 +1590,7 @@ window.INFINITY_DATA = {
       "primary": "Athletics",
       "secondary": "Resistance",
       "brief": "Extensive training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Marathon Runner.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where the Marathon Runner trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1601,7 +1601,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Survival",
       "brief": "Extensive training in Resistance and Survival, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to navigate harsh terrain, endure hazards, and keep a group alive in the field. This trait represents the character's broad aptitude as a Natural Survivor.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Survival for a task where the Natural Survivor trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1612,7 +1612,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Discipline",
       "brief": "Extensive training in Resistance and Discipline, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Pain Tolerant.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where the Pain Tolerant trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1620,21 +1620,21 @@ window.INFINITY_DATA = {
     {
       "category": "Physical",
       "name": "Parkour Expert",
-      "primary": "Acrobatics",
-      "secondary": "Athletics",
-      "brief": "Extensive training in Acrobatics and Athletics, allowing the character to move through difficult spaces, keep balance, and perform precise physical maneuvers while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's broad aptitude as a Parkour Expert.",
-      "effect": "Reduce Difficulty by 1 when using Acrobatics or Athletics for a task where the Parkour Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Athletics",
+      "secondary": "Stealth",
+      "brief": "Focused training in Athletics and Stealth, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to avoid detection, infiltrate secure areas, and conceal movement. This trait represents the character's specialised aptitude as a Parkour Expert.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
     },
     {
       "category": "Physical",
-      "name": "Quick Reflexes",
-      "primary": "Agility",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Agility and Awareness, allowing the character to react quickly, coordinate movement, and avoid sudden danger while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Quick Reflexes.",
-      "effect": "Reduce Difficulty by 1 when using Agility or Awareness for a task where the Quick Reflexes trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "name": "Quick Reactions",
+      "primary": "Ballistics",
+      "secondary": "Observation",
+      "brief": "Focused training in Ballistics and Observation, allowing the character to place accurate ranged fire and handle weapons under pressure while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Quick Reactions.",
+      "effect": "Reduce Difficulty by 1 when using Ballistics or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1643,9 +1643,9 @@ window.INFINITY_DATA = {
       "category": "Physical",
       "name": "Sprinter",
       "primary": "Athletics",
-      "secondary": "Agility",
-      "brief": "Extensive training in Athletics and Agility, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Sprinter.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Agility for a task where the Sprinter trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Resistance",
+      "brief": "Focused training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Sprinter.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1653,10 +1653,10 @@ window.INFINITY_DATA = {
     {
       "category": "Physical",
       "name": "Steady Hands",
-      "primary": "Agility",
+      "primary": "Ballistics",
       "secondary": "Tech",
-      "brief": "Extensive training in Agility and Tech, allowing the character to react quickly, coordinate movement, and avoid sudden danger while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's broad aptitude as a Steady Hands.",
-      "effect": "Reduce Difficulty by 1 when using Agility or Tech for a task where the Steady Hands trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Ballistics and Tech, allowing the character to place accurate ranged fire and handle weapons under pressure while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's specialised aptitude as a Steady Hands.",
+      "effect": "Reduce Difficulty by 1 when using Ballistics or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1664,10 +1664,10 @@ window.INFINITY_DATA = {
     {
       "category": "Physical",
       "name": "Strong Back",
-      "primary": "Brawn",
+      "primary": "Resistance",
       "secondary": "Athletics",
-      "brief": "Extensive training in Brawn and Athletics, allowing the character to apply raw strength, lift heavy loads, break obstacles, and overpower resistance while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's broad aptitude as a Strong Back.",
-      "effect": "Reduce Difficulty by 1 when using Brawn or Athletics for a task where the Strong Back trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Resistance and Athletics, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's specialised aptitude as a Strong Back.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1676,9 +1676,9 @@ window.INFINITY_DATA = {
       "category": "Physical",
       "name": "Sure-Footed",
       "primary": "Athletics",
-      "secondary": "Brawn",
-      "brief": "Extensive training in Athletics and Brawn, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to apply raw strength, lift heavy loads, break obstacles, and overpower resistance. This trait represents the character's broad aptitude as a Sure-Footed.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Brawn for a task where the Sure-Footed trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Stealth",
+      "brief": "Focused training in Athletics and Stealth, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to avoid detection, infiltrate secure areas, and conceal movement. This trait represents the character's specialised aptitude as a Sure-Footed.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1689,7 +1689,7 @@ window.INFINITY_DATA = {
       "primary": "Athletics",
       "secondary": "Survival",
       "brief": "Extensive training in Athletics and Survival, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to navigate harsh terrain, endure hazards, and keep a group alive in the field. This trait represents the character's broad aptitude as a Swimmer.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Survival for a task where the Swimmer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Athletics or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1697,10 +1697,10 @@ window.INFINITY_DATA = {
     {
       "category": "Physical",
       "name": "Zero-G Adapted",
-      "primary": "Athletics",
-      "secondary": "Brawn",
-      "brief": "Extensive training in Athletics and Brawn, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to apply raw strength, lift heavy loads, break obstacles, and overpower resistance. This trait represents the character's broad aptitude as a Zero-G Adapted.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Brawn for a task where the Zero-G Adapted trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Extraplanetary",
+      "secondary": "Athletics",
+      "brief": "Focused training in Extraplanetary and Athletics, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's specialised aptitude as a Zero-G Adapted.",
+      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1709,9 +1709,9 @@ window.INFINITY_DATA = {
       "category": "Physical/Exploration",
       "name": "Sturdy",
       "primary": "Resistance",
-      "secondary": "Brawn",
-      "brief": "Extensive training in Resistance and Brawn, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to apply raw strength, lift heavy loads, break obstacles, and overpower resistance. This trait represents the character's broad aptitude as a Sturdy.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Brawn for a task where the Sturdy trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Athletics",
+      "brief": "Focused training in Resistance and Athletics, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's specialised aptitude as a Sturdy.",
+      "effect": "Reduce Difficulty by 1 when using Resistance or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -1719,10 +1719,10 @@ window.INFINITY_DATA = {
     {
       "category": "Social",
       "name": "Automatic Response Order (ARO)",
-      "primary": "Persuade",
-      "secondary": "Personality",
-      "brief": "Extensive training in Persuade and Personality, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Automatic Response Order (ARO).",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Personality for a task where the Automatic Response Order (ARO) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Command",
+      "secondary": "Observation",
+      "brief": "Focused training in Command and Observation, allowing the character to lead allies, issue orders, and coordinate group action while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Automatic Response Order (ARO).",
+      "effect": "Reduce Difficulty by 1 when using Command or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1733,7 +1733,7 @@ window.INFINITY_DATA = {
       "primary": "Psychology",
       "secondary": "Close Combat",
       "brief": "Extensive training in Psychology and Close Combat, allowing the character to read behavior, resist manipulation, and understand motives while also being able to fight effectively at close range and control dangerous melee engagements. This trait represents the character's broad aptitude as a Brutality.",
-      "effect": "Reduce Difficulty by 1 when using Psychology or Close Combat for a task where the Brutality trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Psychology or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1744,7 +1744,7 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Lifestyle",
       "brief": "Extensive training in Education and Lifestyle, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's broad aptitude as a Bureaucrat.",
-      "effect": "Reduce Difficulty by 1 when using Education or Lifestyle for a task where the Bureaucrat trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Education or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1755,7 +1755,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Discipline",
       "brief": "Extensive training in Stealth and Discipline, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Cammo - TO 1.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Discipline for a task where the Cammo - TO 1 trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1766,7 +1766,7 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Persuade",
       "brief": "Extensive training in Lifestyle and Persuade, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a Celebrity.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where the Celebrity trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1777,7 +1777,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "brief": "Extensive training in Command and Discipline, allowing the character to lead allies, issue orders, and coordinate group action while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Chain of command.",
-      "effect": "Reduce Difficulty by 1 when using Command or Discipline for a task where the Chain of command trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Command or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1786,9 +1786,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Charismatic",
       "primary": "Persuade",
-      "secondary": "Personality",
-      "brief": "Extensive training in Persuade and Personality, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Charismatic.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Personality for a task where the Charismatic trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Lifestyle",
+      "brief": "Focused training in Persuade and Lifestyle, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Charismatic.",
+      "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1796,10 +1796,10 @@ window.INFINITY_DATA = {
     {
       "category": "Social",
       "name": "Corporate Insider",
-      "primary": "Persuade",
-      "secondary": "Personality",
-      "brief": "Extensive training in Persuade and Personality, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Corporate Insider.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Personality for a task where the Corporate Insider trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Lifestyle",
+      "secondary": "Persuade",
+      "brief": "Focused training in Lifestyle and Persuade, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's specialised aptitude as a Corporate Insider.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1808,9 +1808,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Counsellor",
       "primary": "Psychology",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Psychology and Intelligence, allowing the character to read behavior, resist manipulation, and understand motives while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Counsellor.",
-      "effect": "Reduce Difficulty by 1 when using Psychology or Intelligence for a task where the Counsellor trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Education",
+      "brief": "Focused training in Psychology and Education, allowing the character to read behaviour, resist manipulation, and understand motives while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's specialised aptitude as a Counsellor.",
+      "effect": "Reduce Difficulty by 1 when using Psychology or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1821,7 +1821,7 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Persuade",
       "brief": "Extensive training in Education and Persuade, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a Cultural Expert.",
-      "effect": "Reduce Difficulty by 1 when using Education or Persuade for a task where the Cultural Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Education or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1832,7 +1832,7 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Lifestyle",
       "brief": "Extensive training in Persuade and Lifestyle, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's broad aptitude as a Diplomatic.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where the Diplomatic trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1841,9 +1841,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Empathic",
       "primary": "Psychology",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Psychology and Awareness, allowing the character to read behavior, resist manipulation, and understand motives while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Empathic.",
-      "effect": "Reduce Difficulty by 1 when using Psychology or Awareness for a task where the Empathic trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Persuade",
+      "brief": "Focused training in Psychology and Persuade, allowing the character to read behaviour, resist manipulation, and understand motives while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's specialised aptitude as a Empathic.",
+      "effect": "Reduce Difficulty by 1 when using Psychology or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1854,7 +1854,7 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Persuade",
       "brief": "Extensive training in Lifestyle and Persuade, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a Fixer.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where the Fixer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1863,9 +1863,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Honest Face",
       "primary": "Persuade",
-      "secondary": "Personality",
-      "brief": "Extensive training in Persuade and Personality, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Honest Face.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Personality for a task where the Honest Face trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Lifestyle",
+      "brief": "Focused training in Persuade and Lifestyle, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Honest Face.",
+      "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1874,9 +1874,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Imposing Figure",
       "primary": "Command",
-      "secondary": "Personality",
-      "brief": "Extensive training in Command and Personality, allowing the character to lead allies, issue orders, and coordinate group action while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Imposing Figure.",
-      "effect": "Reduce Difficulty by 1 when using Command or Personality for a task where the Imposing Figure trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Persuade",
+      "brief": "Focused training in Command and Persuade, allowing the character to lead allies, issue orders, and coordinate group action while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's specialised aptitude as a Imposing Figure.",
+      "effect": "Reduce Difficulty by 1 when using Command or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1885,9 +1885,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Inspiring",
       "primary": "Command",
-      "secondary": "Personality",
-      "brief": "Extensive training in Command and Personality, allowing the character to lead allies, issue orders, and coordinate group action while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Inspiring.",
-      "effect": "Reduce Difficulty by 1 when using Command or Personality for a task where the Inspiring trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Persuade",
+      "brief": "Focused training in Command and Persuade, allowing the character to lead allies, issue orders, and coordinate group action while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's specialised aptitude as a Inspiring.",
+      "effect": "Reduce Difficulty by 1 when using Command or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1898,7 +1898,7 @@ window.INFINITY_DATA = {
       "primary": "Psychology",
       "secondary": "Persuade",
       "brief": "Extensive training in Psychology and Persuade, allowing the character to read behavior, resist manipulation, and understand motives while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a Interrogator.",
-      "effect": "Reduce Difficulty by 1 when using Psychology or Persuade for a task where the Interrogator trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Psychology or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1909,7 +1909,7 @@ window.INFINITY_DATA = {
       "primary": "Psychology",
       "secondary": "Persuade",
       "brief": "Extensive training in Psychology and Persuade, allowing the character to read behavior, resist manipulation, and understand motives while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a Mediator.",
-      "effect": "Reduce Difficulty by 1 when using Psychology or Persuade for a task where the Mediator trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Psychology or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1920,7 +1920,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Education",
       "brief": "Extensive training in Command and Education, allowing the character to lead allies, issue orders, and coordinate group action while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's broad aptitude as a Mentor.",
-      "effect": "Reduce Difficulty by 1 when using Command or Education for a task where the Mentor trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Command or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1929,9 +1929,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Natural Born Warrior",
       "primary": "Command",
-      "secondary": "Personality",
-      "brief": "Extensive training in Command and Personality, allowing the character to lead allies, issue orders, and coordinate group action while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Natural Born Warrior.",
-      "effect": "Reduce Difficulty by 1 when using Command or Personality for a task where the Natural Born Warrior trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Close Combat",
+      "brief": "Focused training in Command and Close Combat, allowing the character to lead allies, issue orders, and coordinate group action while also being able to fight effectively at close range and control dangerous melee engagements. This trait represents the character's specialised aptitude as a Natural Born Warrior.",
+      "effect": "Reduce Difficulty by 1 when using Command or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -1940,9 +1940,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Negotiator",
       "primary": "Persuade",
-      "secondary": "Personality",
-      "brief": "Extensive training in Persuade and Personality, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Negotiator.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Personality for a task where the Negotiator trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Lifestyle",
+      "brief": "Focused training in Persuade and Lifestyle, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Negotiator.",
+      "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1951,9 +1951,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Networker",
       "primary": "Lifestyle",
-      "secondary": "Personality",
-      "brief": "Extensive training in Lifestyle and Personality, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Networker.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Personality for a task where the Networker trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Persuade",
+      "brief": "Focused training in Lifestyle and Persuade, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's specialised aptitude as a Networker.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1964,7 +1964,7 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Analysis",
       "brief": "Extensive training in Lifestyle and Analysis, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Political Operator.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Analysis for a task where the Political Operator trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1973,9 +1973,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Professional",
       "primary": "Command",
-      "secondary": "Personality",
-      "brief": "Extensive training in Command and Personality, allowing the character to lead allies, issue orders, and coordinate group action while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Professional.",
-      "effect": "Reduce Difficulty by 1 when using Command or Personality for a task where the Professional trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Education",
+      "brief": "Focused training in Command and Education, allowing the character to lead allies, issue orders, and coordinate group action while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's specialised aptitude as a Professional.",
+      "effect": "Reduce Difficulty by 1 when using Command or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1986,7 +1986,7 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Persuade",
       "brief": "Extensive training in Lifestyle and Persuade, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a Public Figure.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where the Public Figure trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1997,7 +1997,7 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Command",
       "brief": "Extensive training in Persuade and Command, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to lead allies, issue orders, and coordinate group action. This trait represents the character's broad aptitude as a Recruiter.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Command for a task where the Recruiter trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Persuade or Command for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2006,20 +2006,20 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Silver Tongue",
       "primary": "Persuade",
-      "secondary": "Personality",
-      "brief": "Extensive training in Persuade and Personality, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Silver Tongue.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Personality for a task where the Silver Tongue trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Lifestyle",
+      "brief": "Focused training in Persuade and Lifestyle, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Silver Tongue.",
+      "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
     },
     {
       "category": "Social",
-      "name": "Streetwise",
+      "name": "Street Operator",
       "primary": "Lifestyle",
       "secondary": "Thievery",
-      "brief": "Extensive training in Lifestyle and Thievery, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to bypass security, manipulate locks, plant devices, and handle covert intrusion work. This trait represents the character's broad aptitude as a Streetwise.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Thievery for a task where the Streetwise trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Extensive training in Lifestyle and Thievery, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to bypass security, manipulate locks, plant devices, and handle covert intrusion work. This trait represents the character's broad aptitude as a Street Operator.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2028,9 +2028,9 @@ window.INFINITY_DATA = {
       "category": "Social",
       "name": "Stubborn",
       "primary": "Discipline",
-      "secondary": "Personality",
-      "brief": "Extensive training in Discipline and Personality, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Stubborn.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Personality for a task where the Stubborn trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Resistance",
+      "brief": "Focused training in Discipline and Resistance, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Stubborn.",
+      "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -2038,10 +2038,10 @@ window.INFINITY_DATA = {
     {
       "category": "Social",
       "name": "Stunning Presence",
-      "primary": "Personality",
+      "primary": "Persuade",
       "secondary": "Psychology",
-      "brief": "Extensive training in Personality and Psychology, allowing the character to project presence, charm others, and hold attention while also being able to read behavior, resist manipulation, and understand motives. This trait represents the character's broad aptitude as a Stunning Presence.",
-      "effect": "Reduce Difficulty by 1 when using Personality or Psychology for a task where the Stunning Presence trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Focused training in Persuade and Psychology, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to read behaviour, resist manipulation, and understand motives. This trait represents the character's specialised aptitude as a Stunning Presence.",
+      "effect": "Reduce Difficulty by 1 when using Persuade or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2050,9 +2050,9 @@ window.INFINITY_DATA = {
       "category": "Stealth",
       "name": "Blending In",
       "primary": "Stealth",
-      "secondary": "Agility",
-      "brief": "Extensive training in Stealth and Agility, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Blending In.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Agility for a task where the Blending In trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Lifestyle",
+      "brief": "Focused training in Stealth and Lifestyle, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Blending In.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2063,7 +2063,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Survival",
       "brief": "Extensive training in Stealth and Survival, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to navigate harsh terrain, endure hazards, and keep a group alive in the field. This trait represents the character's broad aptitude as a Cammo - TO 2.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Survival for a task where the Cammo - TO 2 trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2074,7 +2074,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Survival",
       "brief": "Extensive training in Stealth and Survival, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to navigate harsh terrain, endure hazards, and keep a group alive in the field. This trait represents the character's broad aptitude as a Camouflage.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Survival for a task where the Camouflage trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2085,7 +2085,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "brief": "Extensive training in Observation and Stealth, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to avoid detection, infiltrate secure areas, and conceal movement. This trait represents the character's broad aptitude as a Counter Surveillance.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Stealth for a task where the Counter Surveillance trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2094,9 +2094,9 @@ window.INFINITY_DATA = {
       "category": "Stealth",
       "name": "Deep Cover",
       "primary": "Stealth",
-      "secondary": "Personality",
-      "brief": "Extensive training in Stealth and Personality, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Deep Cover.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Personality for a task where the Deep Cover trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Lifestyle",
+      "brief": "Focused training in Stealth and Lifestyle, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Deep Cover.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2105,9 +2105,9 @@ window.INFINITY_DATA = {
       "category": "Stealth",
       "name": "Disguise Expert",
       "primary": "Stealth",
-      "secondary": "Personality",
-      "brief": "Extensive training in Stealth and Personality, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Disguise Expert.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Personality for a task where the Disguise Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Persuade",
+      "brief": "Focused training in Stealth and Persuade, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's specialised aptitude as a Disguise Expert.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2116,9 +2116,9 @@ window.INFINITY_DATA = {
       "category": "Stealth",
       "name": "Escape Artist",
       "primary": "Thievery",
-      "secondary": "Acrobatics",
-      "brief": "Extensive training in Thievery and Acrobatics, allowing the character to bypass security, manipulate locks, plant devices, and handle covert intrusion work while also being able to move through difficult spaces, keep balance, and perform precise physical maneuvers. This trait represents the character's broad aptitude as a Escape Artist.",
-      "effect": "Reduce Difficulty by 1 when using Thievery or Acrobatics for a task where the Escape Artist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Stealth",
+      "brief": "Focused training in Thievery and Stealth, allowing the character to bypass security, manipulate locks, and handle covert intrusion work while also being able to avoid detection, infiltrate secure areas, and conceal movement. This trait represents the character's specialised aptitude as a Escape Artist.",
+      "effect": "Reduce Difficulty by 1 when using Thievery or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2129,7 +2129,7 @@ window.INFINITY_DATA = {
       "primary": "Thievery",
       "secondary": "Persuade",
       "brief": "Extensive training in Thievery and Persuade, allowing the character to bypass security, manipulate locks, plant devices, and handle covert intrusion work while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a False Identity.",
-      "effect": "Reduce Difficulty by 1 when using Thievery or Persuade for a task where the False Identity trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Thievery or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2140,7 +2140,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Observation",
       "brief": "Extensive training in Stealth and Observation, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Ghost.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Observation for a task where the Ghost trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2151,7 +2151,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Close Combat",
       "brief": "Extensive training in Stealth and Close Combat, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to fight effectively at close range and control dangerous melee engagements. This trait represents the character's broad aptitude as a Hidden Blade.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Close Combat for a task where the Hidden Blade trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2162,7 +2162,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "brief": "Extensive training in Stealth and Thievery, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to bypass security, manipulate locks, plant devices, and handle covert intrusion work. This trait represents the character's broad aptitude as a Infiltrator.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where the Infiltrator trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2171,9 +2171,9 @@ window.INFINITY_DATA = {
       "category": "Stealth",
       "name": "Misdirection",
       "primary": "Thievery",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Thievery and Awareness, allowing the character to bypass security, manipulate locks, plant devices, and handle covert intrusion work while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Misdirection.",
-      "effect": "Reduce Difficulty by 1 when using Thievery or Awareness for a task where the Misdirection trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Stealth",
+      "brief": "Focused training in Thievery and Stealth, allowing the character to bypass security, manipulate locks, and handle covert intrusion work while also being able to avoid detection, infiltrate secure areas, and conceal movement. This trait represents the character's specialised aptitude as a Misdirection.",
+      "effect": "Reduce Difficulty by 1 when using Thievery or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2182,9 +2182,9 @@ window.INFINITY_DATA = {
       "category": "Stealth",
       "name": "Observation Expert",
       "primary": "Observation",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Observation and Awareness, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Observation Expert.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Awareness for a task where the Observation Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Analysis",
+      "brief": "Focused training in Observation and Analysis, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Observation Expert.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2195,7 +2195,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "brief": "Extensive training in Observation and Stealth, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to avoid detection, infiltrate secure areas, and conceal movement. This trait represents the character's broad aptitude as a Recon Specialist.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Stealth for a task where the Recon Specialist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2206,7 +2206,7 @@ window.INFINITY_DATA = {
       "primary": "Thievery",
       "secondary": "Tech",
       "brief": "Extensive training in Thievery and Tech, allowing the character to bypass security, manipulate locks, plant devices, and handle covert intrusion work while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's broad aptitude as a Saboteur.",
-      "effect": "Reduce Difficulty by 1 when using Thievery or Tech for a task where the Saboteur trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Thievery or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2217,7 +2217,7 @@ window.INFINITY_DATA = {
       "primary": "Thievery",
       "secondary": "Tech",
       "brief": "Extensive training in Thievery and Tech, allowing the character to bypass security, manipulate locks, plant devices, and handle covert intrusion work while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's broad aptitude as a Safecracker.",
-      "effect": "Reduce Difficulty by 1 when using Thievery or Tech for a task where the Safecracker trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Thievery or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2226,9 +2226,9 @@ window.INFINITY_DATA = {
       "category": "Stealth",
       "name": "Scout",
       "primary": "Stealth",
-      "secondary": "Agility",
-      "brief": "Extensive training in Stealth and Agility, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Scout.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Agility for a task where the Scout trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Survival",
+      "brief": "Focused training in Stealth and Survival, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to navigate hazards, find resources, and keep a group alive in the field. This trait represents the character's specialised aptitude as a Scout.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2239,7 +2239,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Tech",
       "brief": "Extensive training in Stealth and Tech, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's broad aptitude as a Sensor Evader.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Tech for a task where the Sensor Evader trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2250,7 +2250,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Discipline",
       "brief": "Extensive training in Stealth and Discipline, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Shadow Operative.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Discipline for a task where the Shadow Operative trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2259,9 +2259,9 @@ window.INFINITY_DATA = {
       "category": "Stealth",
       "name": "Silent Step",
       "primary": "Stealth",
-      "secondary": "Acrobatics",
-      "brief": "Extensive training in Stealth and Acrobatics, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to move through difficult spaces, keep balance, and perform precise physical maneuvers. This trait represents the character's broad aptitude as a Silent Step.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Acrobatics for a task where the Silent Step trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Thievery",
+      "brief": "Focused training in Stealth and Thievery, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to bypass security, manipulate locks, and handle covert intrusion work. This trait represents the character's specialised aptitude as a Silent Step.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2272,7 +2272,7 @@ window.INFINITY_DATA = {
       "primary": "Thievery",
       "secondary": "Lifestyle",
       "brief": "Extensive training in Thievery and Lifestyle, allowing the character to bypass security, manipulate locks, plant devices, and handle covert intrusion work while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's broad aptitude as a Smuggler.",
-      "effect": "Reduce Difficulty by 1 when using Thievery or Lifestyle for a task where the Smuggler trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Thievery or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2283,7 +2283,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Observation",
       "brief": "Extensive training in Stealth and Observation, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Stalker.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Observation for a task where the Stalker trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2294,7 +2294,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Persuade",
       "brief": "Extensive training in Stealth and Persuade, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a Undercover Agent.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Persuade for a task where the Undercover Agent trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2305,7 +2305,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "brief": "Extensive training in Stealth and Thievery, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to bypass security, manipulate locks, plant devices, and handle covert intrusion work. This trait represents the character's broad aptitude as a Vanguard (Infiltration).",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where the Vanguard (Infiltration) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2316,7 +2316,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Wilderness Scout.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where the Wilderness Scout trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2325,9 +2325,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "AI Specialist",
       "primary": "Tech",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Tech and Intelligence, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a AI Specialist.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Intelligence for a task where the AI Specialist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Hacking",
+      "brief": "Focused training in Tech and Hacking, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to breach networks, defend systems, and manipulate quantronic infrastructure. This trait represents the character's specialised aptitude as a AI Specialist.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2336,9 +2336,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Aerial Trooper",
       "primary": "Extraplanetary",
-      "secondary": "Agility",
-      "brief": "Extensive training in Extraplanetary and Agility, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Aerial Trooper.",
-      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Agility for a task where the Aerial Trooper trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Pilot",
+      "brief": "Focused training in Extraplanetary and Pilot, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to operate vehicles and manoeuvre through hostile conditions. This trait represents the character's specialised aptitude as a Aerial Trooper.",
+      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Pilot for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2349,7 +2349,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Education",
       "brief": "Extensive training in Hacking and Education, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's broad aptitude as a Code Savant.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Education for a task where the Code Savant trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Hacking or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2358,9 +2358,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Combat Analysis",
       "primary": "Analysis",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Analysis and Awareness, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Combat Analysis.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Awareness for a task where the Combat Analysis trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Observation",
+      "brief": "Focused training in Analysis and Observation, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Combat Analysis.",
+      "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2371,7 +2371,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "brief": "Extensive training in Tech and Observation, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Comms Expert.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where the Comms Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2382,7 +2382,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Medicine",
       "brief": "Extensive training in Tech and Medicine, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to treat injuries, stabilize casualties, and apply medical or biotech knowledge. This trait represents the character's broad aptitude as a Cyberneticist.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Medicine for a task where the Cyberneticist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2393,7 +2393,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Analysis",
       "brief": "Extensive training in Hacking and Analysis, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Cybersecurity Expert.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Analysis for a task where the Cybersecurity Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Hacking or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2404,7 +2404,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Analysis",
       "brief": "Extensive training in Hacking and Analysis, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Data Miner.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Analysis for a task where the Data Miner trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Hacking or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2415,7 +2415,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "brief": "Extensive training in Tech and Observation, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Drone Operator.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where the Drone Operator trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2426,7 +2426,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Thievery",
       "brief": "Extensive training in Tech and Thievery, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to bypass security, manipulate locks, plant devices, and handle covert intrusion work. This trait represents the character's broad aptitude as a Electronics Expert.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Thievery for a task where the Electronics Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2437,7 +2437,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "brief": "Extensive training in Tech and Education, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's broad aptitude as a Engineer.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Education for a task where the Engineer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2445,10 +2445,10 @@ window.INFINITY_DATA = {
     {
       "category": "Technical",
       "name": "Flying Ace",
-      "primary": "Extraplanetary",
-      "secondary": "Agility",
-      "brief": "Extensive training in Extraplanetary and Agility, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Flying Ace.",
-      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Agility for a task where the Flying Ace trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Pilot",
+      "secondary": "Extraplanetary",
+      "brief": "Focused training in Pilot and Extraplanetary, allowing the character to operate vehicles and manoeuvre through hostile conditions while also being able to operate safely in space, vacuum, zero gravity, and hostile off-world environments. This trait represents the character's specialised aptitude as a Flying Ace.",
+      "effect": "Reduce Difficulty by 1 when using Pilot or Extraplanetary for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2459,7 +2459,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Science",
       "brief": "Extensive training in Analysis and Science, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's broad aptitude as a Forensic Analyst.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Science for a task where the Forensic Analyst trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Analysis or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2468,9 +2468,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Hacker",
       "primary": "Hacking",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Hacking and Intelligence, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Hacker.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Intelligence for a task where the Hacker trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Tech",
+      "brief": "Focused training in Hacking and Tech, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's specialised aptitude as a Hacker.",
+      "effect": "Reduce Difficulty by 1 when using Hacking or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2481,7 +2481,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "brief": "Extensive training in Tech and Education, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's broad aptitude as a Industrial Technician.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Education for a task where the Industrial Technician trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2490,9 +2490,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Influencer",
       "primary": "Lifestyle",
-      "secondary": "Personality",
-      "brief": "Extensive training in Lifestyle and Personality, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Influencer.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Personality for a task where the Influencer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Persuade",
+      "brief": "Focused training in Lifestyle and Persuade, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's specialised aptitude as a Influencer.",
+      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2503,7 +2503,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Hacking",
       "brief": "Extensive training in Tech and Hacking, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to breach networks, defend systems, and manipulate quantronic infrastructure. This trait represents the character's broad aptitude as a Linked with the AI (Note: Free for Enhanced Humans).",
-      "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where the Linked with the AI (Note: Free for Enhanced Humans) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2514,7 +2514,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Hacking",
       "brief": "Extensive training in Tech and Hacking, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to breach networks, defend systems, and manipulate quantronic infrastructure. This trait represents the character's broad aptitude as a Linked with the EI (Note: Free for ALF or any Combined army factions).",
-      "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where the Linked with the EI (Note: Free for ALF or any Combined army factions) trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2523,9 +2523,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Mechanic",
       "primary": "Tech",
-      "secondary": "Brawn",
-      "brief": "Extensive training in Tech and Brawn, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to apply raw strength, lift heavy loads, break obstacles, and overpower resistance. This trait represents the character's broad aptitude as a Mechanic.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Brawn for a task where the Mechanic trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Science",
+      "brief": "Focused training in Tech and Science, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's specialised aptitude as a Mechanic.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2536,7 +2536,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Discipline",
       "brief": "Extensive training in Hacking and Discipline, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Multitask Matrix.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Discipline for a task where the Multitask Matrix trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Hacking or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2547,7 +2547,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "brief": "Extensive training in Hacking and Tech, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's broad aptitude as a Network Architect.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Tech for a task where the Network Architect trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Hacking or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2558,7 +2558,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Analysis",
       "brief": "Extensive training in Tech and Analysis, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Non-Hackable.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Analysis for a task where the Non-Hackable trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2567,9 +2567,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Pattern Recognition",
       "primary": "Analysis",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Analysis and Awareness, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Pattern Recognition.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Awareness for a task where the Pattern Recognition trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Observation",
+      "brief": "Focused training in Analysis and Observation, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Pattern Recognition.",
+      "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2577,10 +2577,10 @@ window.INFINITY_DATA = {
     {
       "category": "Technical",
       "name": "Pedal to the Metal",
-      "primary": "Extraplanetary",
-      "secondary": "Agility",
-      "brief": "Extensive training in Extraplanetary and Agility, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Pedal to the Metal.",
-      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Agility for a task where the Pedal to the Metal trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Pilot",
+      "secondary": "Extraplanetary",
+      "brief": "Focused training in Pilot and Extraplanetary, allowing the character to operate vehicles and manoeuvre through hostile conditions while also being able to operate safely in space, vacuum, zero gravity, and hostile off-world environments. This trait represents the character's specialised aptitude as a Pedal to the Metal.",
+      "effect": "Reduce Difficulty by 1 when using Pilot or Extraplanetary for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2591,7 +2591,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Education",
       "brief": "Extensive training in Hacking and Education, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's broad aptitude as a Programmer.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Education for a task where the Programmer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Hacking or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2600,9 +2600,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Remote Pilot",
       "primary": "Tech",
-      "secondary": "Agility",
-      "brief": "Extensive training in Tech and Agility, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to react quickly, coordinate movement, and avoid sudden danger. This trait represents the character's broad aptitude as a Remote Pilot.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Agility for a task where the Remote Pilot trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Pilot",
+      "brief": "Focused training in Tech and Pilot, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to operate vehicles and manoeuvre through hostile conditions. This trait represents the character's specialised aptitude as a Remote Pilot.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Pilot for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2613,7 +2613,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "brief": "Extensive training in Analysis and Observation, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Sensor Array.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where the Sensor Array trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
@@ -2624,7 +2624,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Tech",
       "brief": "Extensive training in Observation and Tech, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's broad aptitude as a Sensor Expert.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Tech for a task where the Sensor Expert trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Observation or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2635,7 +2635,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Hacking",
       "brief": "Extensive training in Tech and Hacking, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to breach networks, defend systems, and manipulate quantronic infrastructure. This trait represents the character's broad aptitude as a Signal Specialist.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where the Signal Specialist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2644,9 +2644,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Specialist",
       "primary": "Science",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Science and Intelligence, allowing the character to test hypotheses, evaluate data, and apply scientific principles while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Specialist.",
-      "effect": "Reduce Difficulty by 1 when using Science or Intelligence for a task where the Specialist trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Education",
+      "brief": "Focused training in Science and Education, allowing the character to test hypotheses, evaluate data, and apply scientific principles while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's specialised aptitude as a Specialist.",
+      "effect": "Reduce Difficulty by 1 when using Science or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -2655,9 +2655,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Speed Typing",
       "primary": "Hacking",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Hacking and Intelligence, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Speed Typing.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Intelligence for a task where the Speed Typing trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Tech",
+      "brief": "Focused training in Hacking and Tech, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's specialised aptitude as a Speed Typing.",
+      "effect": "Reduce Difficulty by 1 when using Hacking or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -2668,7 +2668,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Tech",
       "brief": "Extensive training in Analysis and Tech, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's broad aptitude as a Systems Analyst.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Tech for a task where the Systems Analyst trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "effect": "Reduce Difficulty by 1 when using Analysis or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2677,9 +2677,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Tech Whisperer",
       "primary": "Tech",
-      "secondary": "Personality",
-      "brief": "Extensive training in Tech and Personality, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to project presence, charm others, and hold attention. This trait represents the character's broad aptitude as a Tech Whisperer.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Personality for a task where the Tech Whisperer trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Education",
+      "brief": "Focused training in Tech and Education, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's specialised aptitude as a Tech Whisperer.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -2688,9 +2688,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Technician",
       "primary": "Tech",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Tech and Intelligence, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Technician.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Intelligence for a task where the Technician trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Science",
+      "brief": "Focused training in Tech and Science, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's specialised aptitude as a Technician.",
+      "effect": "Reduce Difficulty by 1 when using Tech or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -2699,9 +2699,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Wild Guess",
       "primary": "Education",
-      "secondary": "Intelligence",
-      "brief": "Extensive training in Education and Intelligence, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to plan, solve problems, and apply logic under pressure. This trait represents the character's broad aptitude as a Wild Guess.",
-      "effect": "Reduce Difficulty by 1 when using Education or Intelligence for a task where the Wild Guess trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Analysis",
+      "brief": "Focused training in Education and Analysis, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Wild Guess.",
+      "effect": "Reduce Difficulty by 1 when using Education or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -2710,9 +2710,9 @@ window.INFINITY_DATA = {
       "category": "Technical",
       "name": "Zero-Gravity",
       "primary": "Extraplanetary",
-      "secondary": "Awareness",
-      "brief": "Extensive training in Extraplanetary and Awareness, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to sense danger, notice changes, and respond to the environment. This trait represents the character's broad aptitude as a Zero-Gravity.",
-      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Awareness for a task where the Zero-Gravity trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Pilot",
+      "brief": "Focused training in Extraplanetary and Pilot, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to operate vehicles and manoeuvre through hostile conditions. This trait represents the character's specialised aptitude as a Zero-Gravity.",
+      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Pilot for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
@@ -2728,9 +2728,9 @@ window.INFINITY_DATA = {
       "level": "1",
       "name": "Breacher",
       "primary": "Close Combat",
-      "secondary": "Acrobatics",
-      "description": "Level 1 talent from the Khawarij Assault Doctrine. Use this training with Close Combat or Acrobatics to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +1d20 when using Close Combat or Acrobatics for Breacher. This bonus counts toward the +3d20 talent cap.",
+      "secondary": "Thievery",
+      "description": "Level 1 talent from the Khawarij Assault Doctrine. Use this training with Close Combat or Thievery during relevant missions.",
+      "effect": "Gain +1d20 when using Close Combat or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -2746,7 +2746,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Khawarij Assault Doctrine. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +2d20 when using Observation or Discipline for Shock Trooper. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Breacher",
       "rarity": "Uncommon",
       "cost": "10"
@@ -2762,7 +2762,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Khawarij Assault Doctrine. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +3d20 when using Observation or Discipline for Relentless Assault. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Shock Trooper",
       "rarity": "Rare",
       "cost": "15"
@@ -2778,7 +2778,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Janissary Defensive Doctrine. Use this training with Resistance or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +1d20 when using Resistance or Discipline for Hold Position. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Resistance or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -2794,7 +2794,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Janissary Defensive Doctrine. Use this training with Resistance or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +2d20 when using Resistance or Discipline for Shield Line. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Resistance or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Hold Position",
       "rarity": "Uncommon",
       "cost": "10"
@@ -2810,7 +2810,7 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Janissary Defensive Doctrine. Use this training with Resistance or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +3d20 when using Resistance or Discipline for Unbreakable Wall. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Resistance or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Shield Line",
       "rarity": "Rare",
       "cost": "15"
@@ -2826,7 +2826,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Mobile Brigada Heavy Weapons. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +1d20 when using Observation or Discipline for Stabilized Platform. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -2842,7 +2842,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Mobile Brigada Heavy Weapons. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +1d20 when using Observation or Discipline for Gunner. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -2858,7 +2858,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Mobile Brigada Heavy Weapons. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +2d20 when using Observation or Discipline for Suppression Expert. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Stabilized Platform",
       "rarity": "Uncommon",
       "cost": "10"
@@ -2874,7 +2874,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Mobile Brigada Heavy Weapons. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +2d20 when using Observation or Discipline for Gunnery Sergeant. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Gunner",
       "rarity": "Uncommon",
       "cost": "10"
@@ -2890,7 +2890,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Mobile Brigada Heavy Weapons. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +3d20 when using Observation or Discipline for Walking Arsenal. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Suppression Expert",
       "rarity": "Rare",
       "cost": "15"
@@ -2904,9 +2904,9 @@ window.INFINITY_DATA = {
       "level": "1",
       "name": "Brawler Training",
       "primary": "Close Combat",
-      "secondary": "Acrobatics",
-      "description": "Level 1 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Acrobatics to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +1d20 when using Close Combat or Acrobatics for Brawler Training. This bonus counts toward the +3d20 talent cap.",
+      "secondary": "Athletics",
+      "description": "Level 1 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Athletics during relevant missions.",
+      "effect": "Gain +1d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -2918,11 +2918,11 @@ window.INFINITY_DATA = {
       "faction": "Haqqislam",
       "restriction": "Hassassin Bahram, martial, or covert-ops background",
       "level": "2",
-      "name": "Gladiator Reflexes",
+      "name": "Gladiator Reactions",
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 2 talent from the Hassassin Close Combat Doctrine. Use this training with Tech or Education to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Tech or Education for Gladiator Reflexes. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Martial Arts Lvl 1",
       "rarity": "Uncommon",
       "cost": "10"
@@ -2936,9 +2936,9 @@ window.INFINITY_DATA = {
       "level": "3",
       "name": "Martial Arts L5",
       "primary": "Close Combat",
-      "secondary": "Acrobatics",
-      "description": "Level 3 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Acrobatics to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +3d20 when using Close Combat or Acrobatics for Martial Arts L5. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "secondary": "Athletics",
+      "description": "Level 3 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Athletics during relevant missions.",
+      "effect": "Gain +3d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Martial Arts Lvl 2",
       "rarity": "Rare",
       "cost": "15"
@@ -2954,7 +2954,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 1 talent from the Circular Void Operations Crew. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +1d20 when using Extraplanetary or Survival for Cosmonaut. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -2970,7 +2970,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 2 talent from the Circular Void Operations Crew. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +2d20 when using Extraplanetary or Survival for Space Walker. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Cosmonaut",
       "rarity": "Uncommon",
       "cost": "10"
@@ -2986,7 +2986,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 3 talent from the Circular Void Operations Crew. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +3d20 when using Extraplanetary or Survival for Hard Vacuum Legend. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Space Walker",
       "rarity": "Rare",
       "cost": "15"
@@ -3002,7 +3002,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Command or Discipline for Fire Team Member. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3018,7 +3018,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Command or Discipline for Fireteam: Duo. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3034,7 +3034,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Fusilier Fireteam Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +1d20 when using Observation or Discipline for Combat Drill. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3050,7 +3050,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Fusilier Fireteam Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +1d20 when using Observation or Discipline for Patient Aim. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3066,7 +3066,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Command or Discipline for Fireteam: Haris. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Fireteam: Duo",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3082,7 +3082,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Command or Discipline for Tactical Advance. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Combat Drill",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3098,7 +3098,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Command or Discipline for Fire Team Leader. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Patient Aim",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3114,7 +3114,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Command or Discipline for Fire Team Master. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Fireteam: Haris",
       "rarity": "Rare",
       "cost": "15"
@@ -3130,7 +3130,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Command or Discipline for Fireteam: Core. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Fireteam: Haris",
       "rarity": "Rare",
       "cost": "15"
@@ -3146,7 +3146,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Fusilier Fireteam Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +3d20 when using Observation or Discipline for Kill Zone. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Tactical Advance",
       "rarity": "Rare",
       "cost": "15"
@@ -3162,7 +3162,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Fusilier Fireteam Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +3d20 when using Observation or Discipline for One Shot Doctrine. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Tactical Advance",
       "rarity": "Rare",
       "cost": "15"
@@ -3178,7 +3178,7 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Stealth",
       "description": "Level 1 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Persuade or Stealth for Impersonation - Mimetism. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3194,7 +3194,7 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Stealth",
       "description": "Level 2 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Persuade or Stealth for Impersonation Level 1. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Impersonation - Mimetism",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3210,7 +3210,7 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Stealth",
       "description": "Level 3 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Persuade or Stealth for Perfect Cover. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Impersonation Level 1",
       "rarity": "Rare",
       "cost": "15"
@@ -3226,7 +3226,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Nisse Marksman Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +1d20 when using Observation or Discipline for Marksman Level 1. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3242,7 +3242,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Nisse Marksman Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +2d20 when using Observation or Discipline for Marksman Level 2. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Marksman Level 1",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3258,7 +3258,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Nisse Marksman Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +3d20 when using Observation or Discipline for Marksman Level 3. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Marksman Level 2",
       "rarity": "Rare",
       "cost": "15"
@@ -3272,9 +3272,9 @@ window.INFINITY_DATA = {
       "level": "1",
       "name": "Martial Arts Lvl 1",
       "primary": "Close Combat",
-      "secondary": "Acrobatics",
-      "description": "Level 1 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Acrobatics to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +1d20 when using Close Combat or Acrobatics for Martial Arts Lvl 1. This bonus counts toward the +3d20 talent cap.",
+      "secondary": "Athletics",
+      "description": "Level 1 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Athletics during relevant missions.",
+      "effect": "Gain +1d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3288,9 +3288,9 @@ window.INFINITY_DATA = {
       "level": "2",
       "name": "Martial Arts Lvl 2",
       "primary": "Close Combat",
-      "secondary": "Acrobatics",
-      "description": "Level 2 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Acrobatics to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +2d20 when using Close Combat or Acrobatics for Martial Arts Lvl 2. This bonus counts toward the +3d20 talent cap.",
+      "secondary": "Athletics",
+      "description": "Level 2 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Athletics during relevant missions.",
+      "effect": "Gain +2d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Martial Arts Lvl 1",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3304,9 +3304,9 @@ window.INFINITY_DATA = {
       "level": "3",
       "name": "Martial Arts Lvl 3",
       "primary": "Close Combat",
-      "secondary": "Acrobatics",
-      "description": "Level 3 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Acrobatics to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +3d20 when using Close Combat or Acrobatics for Martial Arts Lvl 3. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "secondary": "Athletics",
+      "description": "Level 3 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Athletics during relevant missions.",
+      "effect": "Gain +3d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Martial Arts Lvl 2",
       "rarity": "Rare",
       "cost": "15"
@@ -3322,7 +3322,7 @@ window.INFINITY_DATA = {
       "primary": "Athletics",
       "secondary": "Stealth",
       "description": "Level 1 talent from the Tiger Soldier Drop Troops. Use this training with Athletics or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Athletics or Stealth for Paratrooper. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Athletics or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3338,7 +3338,7 @@ window.INFINITY_DATA = {
       "primary": "Athletics",
       "secondary": "Stealth",
       "description": "Level 2 talent from the Tiger Soldier Drop Troops. Use this training with Athletics or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Athletics or Stealth for Combat Jumper. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Athletics or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Paratrooper",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3354,7 +3354,7 @@ window.INFINITY_DATA = {
       "primary": "Athletics",
       "secondary": "Stealth",
       "description": "Level 3 talent from the Tiger Soldier Drop Troops. Use this training with Athletics or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Athletics or Stealth for Drop zone Specialist. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Athletics or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Combat Jumper",
       "rarity": "Rare",
       "cost": "15"
@@ -3370,7 +3370,7 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Stealth",
       "description": "Level 1 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to approach targets, maintain cover, and strike decisively.",
-      "effect": "Gain +1d20 when using Persuade or Stealth for False Identity. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3386,7 +3386,7 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Stealth",
       "description": "Level 2 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to approach targets, maintain cover, and strike decisively.",
-      "effect": "Gain +2d20 when using Persuade or Stealth for Deep Cover. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "False Identity",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3402,7 +3402,7 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Stealth",
       "description": "Level 3 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +3d20 when using Persuade or Stealth for Impersonation Level 2. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Deep Cover",
       "rarity": "Rare",
       "cost": "15"
@@ -3418,7 +3418,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 1 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +1d20 when using Extraplanetary or Survival for Vacuum Familiar. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3434,7 +3434,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 1 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +1d20 when using Extraplanetary or Survival for Spacecraft Pilot - Level 1. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3450,7 +3450,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 2 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +2d20 when using Extraplanetary or Survival for Zero-G Manoeuvres. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Vacuum Familiar",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3466,7 +3466,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 2 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +2d20 when using Extraplanetary or Survival for Spacecraft Pilot - Level 2. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Spacecraft Pilot - Level 1",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3482,7 +3482,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 3 talent from the Circular Crew Operations. Use this training with Analysis or Observation to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +3d20 when using Analysis or Observation for Starship Trooper. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "One lower-level talent from Circular Crew Operations",
       "rarity": "Rare",
       "cost": "15"
@@ -3498,7 +3498,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 3 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +3d20 when using Extraplanetary or Survival for Hard Vacuum Legend. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Zero-G Manoeuvres",
       "rarity": "Rare",
       "cost": "15"
@@ -3514,7 +3514,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 3 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +3d20 when using Extraplanetary or Survival for Spacecraft Pilot - Level 3. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Spacecraft Pilot - Level 2",
       "rarity": "Rare",
       "cost": "15"
@@ -3530,7 +3530,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 1 talent from the Nisse Ranger Doctrine. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Stealth or Thievery for Snowline Scout. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3546,7 +3546,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 2 talent from the Nisse Ranger Doctrine. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Stealth or Thievery for Ghost Perch. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Snowline Scout",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3562,7 +3562,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 3 talent from the Nisse Ranger Doctrine. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Stealth or Thievery for White Noise Marksman. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Ghost Perch",
       "rarity": "Rare",
       "cost": "15"
@@ -3578,7 +3578,7 @@ window.INFINITY_DATA = {
       "primary": "Animal Handling",
       "secondary": "Command",
       "description": "Level 1 talent from the Antipode Handler Doctrine. Use this training with Animal Handling or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Animal Handling or Command for Animal Handler. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Animal Handling or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3594,7 +3594,7 @@ window.INFINITY_DATA = {
       "primary": "Animal Handling",
       "secondary": "Command",
       "description": "Level 2 talent from the Antipode Handler Doctrine. Use this training with Animal Handling or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Animal Handling or Command for Pack Ranger. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Animal Handling or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Animal Handler",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3610,7 +3610,7 @@ window.INFINITY_DATA = {
       "primary": "Animal Handling",
       "secondary": "Command",
       "description": "Level 3 talent from the Antipode Handler Doctrine. Use this training with Animal Handling or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Animal Handling or Command for Pack Leader. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Animal Handling or Command for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Pack Ranger",
       "rarity": "Rare",
       "cost": "15"
@@ -3626,7 +3626,7 @@ window.INFINITY_DATA = {
       "primary": "Athletics",
       "secondary": "Survival",
       "description": "Level 1 talent from the Varuna Amphibious Commandos. Use this training with Athletics or Survival to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +1d20 when using Athletics or Survival for Naval Diver. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3642,7 +3642,7 @@ window.INFINITY_DATA = {
       "primary": "Athletics",
       "secondary": "Survival",
       "description": "Level 2 talent from the Varuna Amphibious Commandos. Use this training with Athletics or Survival to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +2d20 when using Athletics or Survival for Combat Diver. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Naval Diver",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3658,7 +3658,7 @@ window.INFINITY_DATA = {
       "primary": "Athletics",
       "secondary": "Survival",
       "description": "Level 3 talent from the Varuna Amphibious Commandos. Use this training with Athletics or Survival to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +3d20 when using Athletics or Survival for Diving Specialist. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Combat Diver",
       "rarity": "Rare",
       "cost": "15"
@@ -3672,9 +3672,9 @@ window.INFINITY_DATA = {
       "level": "1",
       "name": "Rock Climber",
       "primary": "Athletics",
-      "secondary": "Acrobatics",
-      "description": "Level 1 talent from the Svalarheima Mountain Recon. Use this training with Athletics or Acrobatics to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +1d20 when using Athletics or Acrobatics for Rock Climber. This bonus counts toward the +3d20 talent cap.",
+      "secondary": "Survival",
+      "description": "Level 1 talent from the Svalarheima Mountain Recon. Use this training with Athletics or Survival during relevant missions.",
+      "effect": "Gain +1d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3688,9 +3688,9 @@ window.INFINITY_DATA = {
       "level": "2",
       "name": "Mountain Climber",
       "primary": "Athletics",
-      "secondary": "Acrobatics",
-      "description": "Level 2 talent from the Svalarheima Mountain Recon. Use this training with Athletics or Acrobatics to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +2d20 when using Athletics or Acrobatics for Mountain Climber. This bonus counts toward the +3d20 talent cap.",
+      "secondary": "Survival",
+      "description": "Level 2 talent from the Svalarheima Mountain Recon. Use this training with Athletics or Survival during relevant missions.",
+      "effect": "Gain +2d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Rock Climber",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3704,9 +3704,9 @@ window.INFINITY_DATA = {
       "level": "3",
       "name": "Climbing Expert",
       "primary": "Athletics",
-      "secondary": "Acrobatics",
-      "description": "Level 3 talent from the Svalarheima Mountain Recon. Use this training with Athletics or Acrobatics to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +3d20 when using Athletics or Acrobatics for Climbing Expert. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "secondary": "Survival",
+      "description": "Level 3 talent from the Svalarheima Mountain Recon. Use this training with Athletics or Survival during relevant missions.",
+      "effect": "Gain +3d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Mountain Climber",
       "rarity": "Rare",
       "cost": "15"
@@ -3722,7 +3722,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 1 talent from the Ariadna Ranger Doctrine. Use this training with Survival or Observation to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +1d20 when using Survival or Observation for Wilderness Training. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3738,7 +3738,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 2 talent from the Ariadna Ranger Doctrine. Use this training with Survival or Observation to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +2d20 when using Survival or Observation for Route Planner. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Wilderness Training",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3754,7 +3754,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 3 talent from the Ariadna Ranger Doctrine. Use this training with Survival or Observation to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +3d20 when using Survival or Observation for Master Ranger. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Route Planner",
       "rarity": "Rare",
       "cost": "15"
@@ -3770,7 +3770,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 1 talent from the O-12 Survey Corps. Use this training with Survival or Observation to survive hostile terrain and act independently in the field.",
-      "effect": "Gain +1d20 when using Survival or Observation for Scanner Sweep. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3786,7 +3786,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 2 talent from the O-12 Survey Corps. Use this training with Survival or Observation to survive hostile terrain and act independently in the field.",
-      "effect": "Gain +2d20 when using Survival or Observation for Hazard Mapping. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Scanner Sweep",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3802,7 +3802,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 3 talent from the O-12 Survey Corps. Use this training with Survival or Observation to survive hostile terrain and act independently in the field.",
-      "effect": "Gain +3d20 when using Survival or Observation for World Reader. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Hazard Mapping",
       "rarity": "Rare",
       "cost": "15"
@@ -3814,11 +3814,11 @@ window.INFINITY_DATA = {
       "faction": "ALEPH",
       "restriction": "ALEPH access or Posthuman background",
       "level": "1",
-      "name": "Enhanced Reflexes",
-      "primary": "Analysis",
-      "secondary": "Intelligence",
-      "description": "Level 1 talent from the Posthuman Proxy Program. Use this training with Analysis or Intelligence to apply specialist training during relevant missions.",
-      "effect": "Gain +1d20 when using Analysis or Intelligence for Enhanced Reflexes. This bonus counts toward the +3d20 talent cap.",
+      "name": "Enhanced Reactions",
+      "primary": "Ballistics",
+      "secondary": "Observation",
+      "description": "Level 1 talent from the Posthuman Proxy Program. Use this training with Ballistics or Observation during relevant missions.",
+      "effect": "Gain +1d20 when using Ballistics or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3830,12 +3830,12 @@ window.INFINITY_DATA = {
       "faction": "ALEPH",
       "restriction": "ALEPH access or Posthuman background",
       "level": "2",
-      "name": "Proxy Coordination",
-      "primary": "Analysis",
-      "secondary": "Intelligence",
-      "description": "Level 2 talent from the Posthuman Proxy Program. Use this training with Analysis or Intelligence to apply specialist training during relevant missions.",
-      "effect": "Gain +2d20 when using Analysis or Intelligence for Proxy Coordination. This bonus counts toward the +3d20 talent cap.",
-      "prerequisite": "Enhanced Reflexes",
+      "name": "Proxy Synchrony",
+      "primary": "Command",
+      "secondary": "Analysis",
+      "description": "Level 2 talent from the Posthuman Proxy Program. Use this training with Command or Analysis during relevant missions.",
+      "effect": "Gain +2d20 when using Command or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "prerequisite": "Enhanced Reactions",
       "rarity": "Uncommon",
       "cost": "10"
     },
@@ -3847,11 +3847,11 @@ window.INFINITY_DATA = {
       "restriction": "ALEPH access or Posthuman background",
       "level": "3",
       "name": "Posthuman Sync",
-      "primary": "Analysis",
-      "secondary": "Intelligence",
-      "description": "Level 3 talent from the Posthuman Proxy Program. Use this training with Analysis or Intelligence to apply specialist training during relevant missions.",
-      "effect": "Gain +3d20 when using Analysis or Intelligence for Posthuman Sync. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
-      "prerequisite": "Proxy Coordination",
+      "primary": "Hacking",
+      "secondary": "Analysis",
+      "description": "Level 3 talent from the Posthuman Proxy Program. Use this training with Hacking or Analysis during relevant missions.",
+      "effect": "Gain +3d20 when using Hacking or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "prerequisite": "Proxy Synchrony",
       "rarity": "Rare",
       "cost": "15"
     },
@@ -3866,7 +3866,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Resistance",
       "description": "Level 1 talent from the Ariadna Ranger Corps. Use this training with Survival or Resistance to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +1d20 when using Survival or Resistance for Frontier Survivor. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Survival or Resistance for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3882,7 +3882,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 2 talent from the Ariadna Ranger Corps. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Observation or Stealth for Antipode Hunter. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Frontier Survivor",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3898,7 +3898,7 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Resistance",
       "description": "Level 3 talent from the Ariadna Ranger Corps. Use this training with Survival or Resistance to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +3d20 when using Survival or Resistance for Hero of Dawn. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Survival or Resistance for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Antipode Hunter",
       "rarity": "Rare",
       "cost": "15"
@@ -3914,7 +3914,7 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Science",
       "description": "Level 1 talent from the Haqqislamite Scholar-Physician. Use this training with Education or Science to apply specialist training during relevant missions.",
-      "effect": "Gain +1d20 when using Education or Science for Search for Knowledge. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3930,7 +3930,7 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Science",
       "description": "Level 2 talent from the Haqqislamite Scholar-Physician. Use this training with Education or Science to apply specialist training during relevant missions.",
-      "effect": "Gain +2d20 when using Education or Science for Applied Wisdom. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Search for Knowledge",
       "rarity": "Uncommon",
       "cost": "10"
@@ -3946,7 +3946,7 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Science",
       "description": "Level 3 talent from the Haqqislamite Scholar-Physician. Use this training with Education or Science to apply specialist training during relevant missions.",
-      "effect": "Gain +3d20 when using Education or Science for Sage of Bourak. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Applied Wisdom",
       "rarity": "Rare",
       "cost": "15"
@@ -3962,7 +3962,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 3 talent from the Haqqislamite Scholar-Physician. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Stealth or Thievery for King of the Route. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Applied Wisdom",
       "rarity": "Rare",
       "cost": "15"
@@ -3978,7 +3978,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 1 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +1d20 when using Medicine or Analysis for Bio-Scanner. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -3994,7 +3994,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 1 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +1d20 when using Medicine or Analysis for Combat First Aid. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4010,7 +4010,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 1 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +1d20 when using Medicine or Analysis for Medicine - Medic. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4026,7 +4026,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Medicine or Analysis for Master Physician. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "One lower-level talent from Ghulam Doctor Field School",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4042,7 +4042,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Medicine or Analysis for Regeneration Protocol. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Bio-Scanner",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4058,7 +4058,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Medicine or Analysis for Emergency Treatment. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Combat First Aid",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4074,7 +4074,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Ghulam Doctor Field School. Use this training with Analysis or Observation to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Analysis or Observation for Medicine - Doctor. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Medicine - Medic",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4090,7 +4090,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 3 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +3d20 when using Medicine or Analysis for Silk Master. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Regeneration Protocol",
       "rarity": "Rare",
       "cost": "15"
@@ -4106,7 +4106,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 3 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +3d20 when using Medicine or Analysis for Miracle Worker. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Emergency Treatment",
       "rarity": "Rare",
       "cost": "15"
@@ -4122,7 +4122,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 1 talent from the Tunguska Interventor Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Hacking or Tech for System Cracker. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4138,7 +4138,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 2 talent from the Tunguska Interventor Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Hacking or Tech for Data Ghost. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "System Cracker",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4154,7 +4154,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Lifestyle",
       "description": "Level 3 talent from the Tunguska Interventor Program. Use this training with Hacking or Lifestyle to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Hacking or Lifestyle for Maya Legend. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Hacking or Lifestyle for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Data Ghost",
       "rarity": "Rare",
       "cost": "15"
@@ -4170,7 +4170,7 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Command",
       "description": "Level 1 talent from the Bureau Aegis Command Track. Use this training with Lifestyle or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Lifestyle or Command for Bureau Authority. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Lifestyle or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4186,7 +4186,7 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Command",
       "description": "Level 2 talent from the Bureau Aegis Command Track. Use this training with Lifestyle or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Lifestyle or Command for Concilium Mandate. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Lifestyle or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Bureau Authority",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4200,9 +4200,9 @@ window.INFINITY_DATA = {
       "level": "3",
       "name": "Voice of O-12",
       "primary": "Persuade",
-      "secondary": "Personality",
-      "description": "Level 3 talent from the Bureau Aegis Command Track. Use this training with Persuade or Personality to negotiate, influence others, and control social pressure.",
-      "effect": "Gain +3d20 when using Persuade or Personality for Voice of O-12. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "secondary": "Command",
+      "description": "Level 3 talent from the Bureau Aegis Command Track. Use this training with Persuade or Command during relevant missions.",
+      "effect": "Gain +3d20 when using Persuade or Command for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Concilium Mandate",
       "rarity": "Rare",
       "cost": "15"
@@ -4218,7 +4218,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Father Knight Order. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Command or Discipline for Faith and Steel. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4234,7 +4234,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Father Knight Order. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Command or Discipline for Knight Commander. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Faith and Steel",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4250,7 +4250,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Father Knight Order. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Command or Discipline for Living Saint. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Knight Commander",
       "rarity": "Rare",
       "cost": "15"
@@ -4266,7 +4266,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Command",
       "description": "Level 1 talent from the Imperial Service Agent. Use this training with Discipline or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Discipline or Command for State Discipline. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Discipline or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4282,7 +4282,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Command",
       "description": "Level 2 talent from the Imperial Service Agent. Use this training with Discipline or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Discipline or Command for Imperial Operative. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Discipline or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "State Discipline",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4298,7 +4298,7 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Command",
       "description": "Level 3 talent from the Imperial Service Agent. Use this training with Discipline or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Discipline or Command for Mandate of the StateEmpire. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Discipline or Command for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Imperial Operative",
       "rarity": "Rare",
       "cost": "15"
@@ -4314,7 +4314,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 1 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +1d20 when using Medicine or Analysis for Field Medic Initiate. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4330,7 +4330,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Medicine or Analysis for Medical Authority. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Field Medic Initiate",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4346,7 +4346,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 3 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +3d20 when using Medicine or Analysis for Voice of the StateEmpire. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Medical Authority",
       "rarity": "Rare",
       "cost": "15"
@@ -4356,13 +4356,13 @@ window.INFINITY_DATA = {
       "career": "Infiltrator",
       "doctrine": "Hexa Operative Cell",
       "faction": "PanOceania",
-      "restriction": "PanOceania or intelligence-service background",
+      "restriction": "PanOceania or covert-service background",
       "level": "1",
-      "name": "Counter Intelligence",
+      "name": "Counter-Intel",
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 1 talent from the Hexa Operative Cell. Use this training with Analysis or Observation to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Analysis or Observation for Counter Intelligence. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4372,14 +4372,14 @@ window.INFINITY_DATA = {
       "career": "Infiltrator",
       "doctrine": "Hexa Operative Cell",
       "faction": "PanOceania",
-      "restriction": "PanOceania or intelligence-service background",
+      "restriction": "PanOceania or covert-service background",
       "level": "2",
       "name": "Espionage",
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Hexa Operative Cell. Use this training with Analysis or Observation to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Analysis or Observation for Espionage. This bonus counts toward the +3d20 talent cap.",
-      "prerequisite": "Counter Intelligence",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "prerequisite": "Counter-Intel",
       "rarity": "Uncommon",
       "cost": "10"
     },
@@ -4388,13 +4388,13 @@ window.INFINITY_DATA = {
       "career": "Infiltrator",
       "doctrine": "Hexa Operative Cell",
       "faction": "PanOceania",
-      "restriction": "PanOceania or intelligence-service background",
+      "restriction": "PanOceania or covert-service background",
       "level": "3",
       "name": "Spy",
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 3 talent from the Hexa Operative Cell. Use this training with Analysis or Observation to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Analysis or Observation for Spy. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Espionage",
       "rarity": "Rare",
       "cost": "15"
@@ -4410,7 +4410,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Thievery",
       "description": "Level 1 talent from the Machinist Combat Engineer. Use this training with Tech or Thievery to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Thievery for Demolition Expert - Level 1. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4426,7 +4426,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Machinist Combat Engineer. Use this training with Analysis or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Analysis or Observation for Demolition Expert - Level 2. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Demolition Expert - Level 1",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4442,7 +4442,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Thievery",
       "description": "Level 3 talent from the Machinist Combat Engineer. Use this training with Tech or Thievery to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Tech or Thievery for Combat Fabricator. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Tech or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Demolition Expert - Level 2",
       "rarity": "Rare",
       "cost": "15"
@@ -4458,7 +4458,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "description": "Level 1 talent from the Seraph TAG Pilot Program. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Observation for Pilot - TAG Trainee. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4474,7 +4474,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Seraph TAG Pilot Program. Use this training with Analysis or Observation to operate heavy combat platforms and manage battlefield systems.",
-      "effect": "Gain +2d20 when using Analysis or Observation for Pilot - TAG Operator. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Pilot - TAG Trainee",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4490,7 +4490,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "description": "Level 3 talent from the Seraph TAG Pilot Program. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Tech or Observation for Pilot - TAG expert. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Pilot - TAG Operator",
       "rarity": "Rare",
       "cost": "15"
@@ -4506,7 +4506,7 @@ window.INFINITY_DATA = {
       "primary": "Thievery",
       "secondary": "Tech",
       "description": "Level 1 talent from the Druze Bayram Security Contractor. Use this training with Thievery or Tech to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Thievery or Tech for Thief - Pickpocket. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Thievery or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4522,7 +4522,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 1 talent from the Druze Bayram Security Contractor. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Stealth or Thievery for Hidden Compartments. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4538,7 +4538,7 @@ window.INFINITY_DATA = {
       "primary": "Thievery",
       "secondary": "Tech",
       "description": "Level 2 talent from the Druze Bayram Security Contractor. Use this training with Thievery or Tech to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Thievery or Tech for Thief - Acquisitions. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Thievery or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Thief - Pickpocket",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4554,7 +4554,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 2 talent from the Druze Bayram Security Contractor. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Stealth or Thievery for False Papers. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Hidden Compartments",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4570,7 +4570,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 3 talent from the Druze Bayram Security Contractor. Use this training with Analysis or Observation to move goods, evade inspection, and bypass security.",
-      "effect": "Gain +3d20 when using Analysis or Observation for Thief - Master. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Thief - Acquisitions",
       "rarity": "Rare",
       "cost": "15"
@@ -4586,7 +4586,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 1 talent from the Akbar Doctor Program. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +1d20 when using Medicine or Analysis for Steady Scalpel. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4602,7 +4602,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Akbar Doctor Program. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Medicine or Analysis for Rapid Triage. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Steady Scalpel",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4618,7 +4618,7 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 3 talent from the Akbar Doctor Program. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +3d20 when using Medicine or Analysis for Impossible Operation. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Rapid Triage",
       "rarity": "Rare",
       "cost": "15"
@@ -4632,9 +4632,9 @@ window.INFINITY_DATA = {
       "level": "1",
       "name": "Silver Tongue",
       "primary": "Persuade",
-      "secondary": "Personality",
-      "description": "Level 1 talent from the O-12 Liaison Corps. Use this training with Persuade or Personality to negotiate, influence others, and control social pressure.",
-      "effect": "Gain +1d20 when using Persuade or Personality for Silver Tongue. This bonus counts toward the +3d20 talent cap.",
+      "secondary": "Lifestyle",
+      "description": "Level 1 talent from the O-12 Liaison Corps. Use this training with Persuade or Lifestyle during relevant missions.",
+      "effect": "Gain +1d20 when using Persuade or Lifestyle for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4648,9 +4648,9 @@ window.INFINITY_DATA = {
       "level": "2",
       "name": "Negotiator",
       "primary": "Persuade",
-      "secondary": "Personality",
-      "description": "Level 2 talent from the O-12 Liaison Corps. Use this training with Persuade or Personality to negotiate, influence others, and control social pressure.",
-      "effect": "Gain +2d20 when using Persuade or Personality for Negotiator. This bonus counts toward the +3d20 talent cap.",
+      "secondary": "Lifestyle",
+      "description": "Level 2 talent from the O-12 Liaison Corps. Use this training with Persuade or Lifestyle during relevant missions.",
+      "effect": "Gain +2d20 when using Persuade or Lifestyle for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Silver Tongue",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4663,10 +4663,10 @@ window.INFINITY_DATA = {
       "restriction": "Diplomatic or legal authority background",
       "level": "3",
       "name": "Voice of Authority",
-      "primary": "Persuade",
-      "secondary": "Personality",
-      "description": "Level 3 talent from the O-12 Liaison Corps. Use this training with Persuade or Personality to negotiate, influence others, and control social pressure.",
-      "effect": "Gain +3d20 when using Persuade or Personality for Voice of Authority. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "primary": "Command",
+      "secondary": "Persuade",
+      "description": "Level 3 talent from the O-12 Liaison Corps. Use this training with Command or Persuade during relevant missions.",
+      "effect": "Gain +3d20 when using Command or Persuade for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Negotiator",
       "rarity": "Rare",
       "cost": "15"
@@ -4682,7 +4682,7 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Science",
       "description": "Level 1 talent from the O-12 Liaison Corps. Use this training with Education or Science to negotiate, influence others, and control social pressure.",
-      "effect": "Gain +1d20 when using Education or Science for Attache. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4695,10 +4695,10 @@ window.INFINITY_DATA = {
       "restriction": "Diplomatic, legal, or political background",
       "level": "2",
       "name": "Consul",
-      "primary": "Persuade",
-      "secondary": "Personality",
-      "description": "Level 2 talent from the O-12 Liaison Corps. Use this training with Persuade or Personality to negotiate, influence others, and control social pressure.",
-      "effect": "Gain +2d20 when using Persuade or Personality for Consul. This bonus counts toward the +3d20 talent cap.",
+      "primary": "Command",
+      "secondary": "Persuade",
+      "description": "Level 2 talent from the O-12 Liaison Corps. Use this training with Command or Persuade during relevant missions.",
+      "effect": "Gain +2d20 when using Command or Persuade for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Attache",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4714,7 +4714,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 3 talent from the O-12 Liaison Corps. Use this training with Analysis or Observation to negotiate, influence others, and control social pressure.",
-      "effect": "Gain +3d20 when using Analysis or Observation for Diplomat. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Consul",
       "rarity": "Rare",
       "cost": "15"
@@ -4730,7 +4730,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Yu Jing Imperial Command School. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Command or Discipline for Officer - Liutenant. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4746,7 +4746,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 1 talent from the Yu Jing Imperial Command School. Use this training with Analysis or Observation to apply specialist training during relevant missions.",
-      "effect": "Gain +1d20 when using Analysis or Observation for Read the Room. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4762,7 +4762,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Yu Jing Imperial Command School. Use this training with Analysis or Observation to apply specialist training during relevant missions.",
-      "effect": "Gain +2d20 when using Analysis or Observation for Officer - Captain. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Officer - Liutenant",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4774,11 +4774,11 @@ window.INFINITY_DATA = {
       "faction": "Yu Jing",
       "restriction": "Yu Jing or command/security background",
       "level": "2",
-      "name": "Human Intelligence",
+      "name": "Human Intel",
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Yu Jing Imperial Command School. Use this training with Analysis or Observation to apply specialist training during relevant missions.",
-      "effect": "Gain +2d20 when using Analysis or Observation for Human Intelligence. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Read the Room",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4794,7 +4794,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Yu Jing Imperial Command School. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Command or Discipline for Officer - Major. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Officer - Captain",
       "rarity": "Rare",
       "cost": "15"
@@ -4810,8 +4810,8 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 3 talent from the Yu Jing Imperial Command School. Use this training with Analysis or Observation to apply specialist training during relevant missions.",
-      "effect": "Gain +3d20 when using Analysis or Observation for Puppet Master. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
-      "prerequisite": "Human Intelligence",
+      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "prerequisite": "Human Intel",
       "rarity": "Rare",
       "cost": "15"
     },
@@ -4826,7 +4826,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Yu Jing Imperial Command School. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Command or Discipline for Command Cadet. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4842,7 +4842,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Yu Jing Imperial Command School. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Command or Discipline for Coordinated Assault. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Command Cadet",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4858,7 +4858,7 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Yu Jing Imperial Command School. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Command or Discipline for Battlefield Commander. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Coordinated Assault",
       "rarity": "Rare",
       "cost": "15"
@@ -4874,7 +4874,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 1 talent from the Hassassin Bahram Operative. Use this training with Stealth or Thievery to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +1d20 when using Stealth or Thievery for Precision Strike. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4890,7 +4890,7 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 2 talent from the Hassassin Bahram Operative. Use this training with Extraplanetary or Survival to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +2d20 when using Extraplanetary or Survival for Ghost Operative. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Precision Strike",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4906,7 +4906,7 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 3 talent from the Hassassin Bahram Operative. Use this training with Stealth or Thievery to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +3d20 when using Stealth or Thievery for Invisible Predator. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Ghost Operative",
       "rarity": "Rare",
       "cost": "15"
@@ -4922,7 +4922,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 1 talent from the Spektr Recon Cell. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Observation or Stealth for Recon Level 1. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4938,7 +4938,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 2 talent from the Spektr Recon Cell. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Observation or Stealth for Recon Level 2. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Recon Level 1",
       "rarity": "Uncommon",
       "cost": "10"
@@ -4954,7 +4954,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 3 talent from the Spektr Recon Cell. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Observation or Stealth for Recon Level 3. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Recon Level 2",
       "rarity": "Rare",
       "cost": "15"
@@ -4970,7 +4970,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 1 talent from the Croc Man Recon Doctrine. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Observation or Stealth for Silent Movement. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -4986,7 +4986,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 2 talent from the Croc Man Recon Doctrine. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Observation or Stealth for Recon Specialist. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Silent Movement",
       "rarity": "Uncommon",
       "cost": "10"
@@ -5002,7 +5002,7 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 3 talent from the Croc Man Recon Doctrine. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Observation or Stealth for Phantom Recon. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Recon Specialist",
       "rarity": "Rare",
       "cost": "15"
@@ -5018,7 +5018,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 1 talent from the Bureau Noir Counter-Intrusion Cell. Use this training with Tech or Education to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Tech or Education for Firewall Sense. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -5034,7 +5034,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 2 talent from the Bureau Noir Counter-Intrusion Cell. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Hacking or Tech for Counter-Intrusion. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Firewall Sense",
       "rarity": "Uncommon",
       "cost": "10"
@@ -5050,7 +5050,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 3 talent from the Bureau Noir Counter-Intrusion Cell. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Hacking or Tech for Black ICE Handler. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Counter-Intrusion",
       "rarity": "Rare",
       "cost": "15"
@@ -5066,7 +5066,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 3 talent from the Bureau Noir Counter-Intrusion Cell. Use this training with Tech or Education to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Tech or Education for Interdiction Daemon. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Counter-Intrusion",
       "rarity": "Rare",
       "cost": "15"
@@ -5082,7 +5082,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "description": "Level 1 talent from the Zond Remote Controller. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Observation for Remote Link. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -5098,7 +5098,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "description": "Level 1 talent from the Zond Remote Controller. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Observation for Pilot - Remote 1. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -5110,11 +5110,11 @@ window.INFINITY_DATA = {
       "faction": "Nomads",
       "restriction": "Remote, drone, or Tech background",
       "level": "2",
-      "name": "Swarm Coordination",
+      "name": "Swarm Synchrony",
       "primary": "Tech",
       "secondary": "Observation",
       "description": "Level 2 talent from the Zond Remote Controller. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Tech or Observation for Swarm Coordination. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Remote Link",
       "rarity": "Uncommon",
       "cost": "10"
@@ -5130,7 +5130,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Zond Remote Controller. Use this training with Analysis or Observation to coordinate remotes, drones, and automated support.",
-      "effect": "Gain +2d20 when using Analysis or Observation for Pilot - Remote 2. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Pilot - Remote 1",
       "rarity": "Uncommon",
       "cost": "10"
@@ -5146,8 +5146,8 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "description": "Level 3 talent from the Zond Remote Controller. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Tech or Observation for Ghost Fleet. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
-      "prerequisite": "Swarm Coordination",
+      "effect": "Gain +3d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "prerequisite": "Swarm Synchrony",
       "rarity": "Rare",
       "cost": "15"
     },
@@ -5162,7 +5162,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "description": "Level 3 talent from the Zond Remote Controller. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Tech or Observation for Pilot - Remote 3. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Pilot - Remote 2",
       "rarity": "Rare",
       "cost": "15"
@@ -5178,7 +5178,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 1 talent from the Nomad Clockmaker Cell. Use this training with Tech or Education to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Education for Patch Job. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -5194,7 +5194,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 1 talent from the Nomad Clockmaker Cell. Use this training with Analysis or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Analysis or Observation for Engineer Level 1. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -5210,7 +5210,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Nomad Clockmaker Cell. Use this training with Analysis or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Analysis or Observation for Engineer Level 2. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Engineer Level 1",
       "rarity": "Uncommon",
       "cost": "10"
@@ -5226,7 +5226,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 3 talent from the Nomad Clockmaker Cell. Use this training with Analysis or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Analysis or Observation for Engineer Level 3. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Engineer Level 2",
       "rarity": "Rare",
       "cost": "15"
@@ -5242,7 +5242,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 1 talent from the Japanese Secessionist Tech Cell. Use this training with Tech or Education to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Education for Field Technician. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -5258,7 +5258,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 2 talent from the Japanese Secessionist Tech Cell. Use this training with Tech or Education to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Tech or Education for Field Fabricator. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Field Technician",
       "rarity": "Uncommon",
       "cost": "10"
@@ -5274,7 +5274,7 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 3 talent from the Japanese Secessionist Tech Cell. Use this training with Tech or Education to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Tech or Education for Machine Whisperer. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Field Fabricator",
       "rarity": "Rare",
       "cost": "15"
@@ -5290,7 +5290,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 1 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Hacking or Tech for Codebreaker. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -5306,7 +5306,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 1 talent from the Interventor Cyberwarfare Program. Use this training with Analysis or Observation to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Analysis or Observation for Hacker Level 1. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -5322,7 +5322,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 1 talent from the Interventor Cyberwarfare Program. Use this training with Analysis or Observation to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Analysis or Observation for ICEbreaker. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -5338,7 +5338,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 2 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Hacking or Tech for Backdoor Access. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Codebreaker",
       "rarity": "Uncommon",
       "cost": "10"
@@ -5354,7 +5354,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Interventor Cyberwarfare Program. Use this training with Analysis or Observation to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Analysis or Observation for Hacker Level 2. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "ICEbreaker",
       "rarity": "Uncommon",
       "cost": "10"
@@ -5370,7 +5370,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Interventor Cyberwarfare Program. Use this training with Analysis or Observation to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Analysis or Observation for Killer Hacking Suite. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "ICEbreaker",
       "rarity": "Uncommon",
       "cost": "10"
@@ -5386,7 +5386,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 3 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Hacking or Tech for Network Phantom. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Backdoor Access",
       "rarity": "Rare",
       "cost": "15"
@@ -5402,7 +5402,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 3 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Hacking or Tech for Forward Signaler. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Killer Hacking Suite",
       "rarity": "Rare",
       "cost": "15"
@@ -5418,7 +5418,7 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 3 talent from the Interventor Cyberwarfare Program. Use this training with Analysis or Observation to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Analysis or Observation for Hacker Level 3. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Killer Hacking Suite",
       "rarity": "Rare",
       "cost": "15"
@@ -5434,7 +5434,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 1 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Hacking or Tech for Forward Observer. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
@@ -5450,7 +5450,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 2 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Hacking or Tech for Forward Analyst. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Forward Observer",
       "rarity": "Uncommon",
       "cost": "10"
@@ -5466,7 +5466,7 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 3 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Hacking or Tech for Signal Dominion. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Forward Analyst",
       "rarity": "Rare",
       "cost": "15"

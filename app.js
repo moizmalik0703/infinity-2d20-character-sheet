@@ -35,8 +35,27 @@ function makeOptions(select, values, placeholder = "") {
     select.appendChild(opt);
   });
 }
+const LEGACY_TRAIT_TALENT_ALIASES = {
+  "Counter Intelligence": "Counter-Intel",
+  "Tactical Awareness": "Tactical Perception",
+  "Proxy Coordination": "Proxy Synchrony",
+  "Human Intelligence": "Human Intel",
+  "Swarm Coordination": "Swarm Synchrony",
+  "Quick Reflexes": "Quick Reactions",
+  "Enhanced Reflexes": "Enhanced Reactions",
+  "Gladiator Reflexes": "Gladiator Reactions",
+  "Superior Tactics": "Superior Doctrine",
+  "Streetwise": "Street Operator"
+};
+
+function resolveLegacyTraitTalentName(value) {
+  const raw = String(value || "");
+  return LEGACY_TRAIT_TALENT_ALIASES[raw] || raw;
+}
+
 function byName(list, name) {
-  return list.find(x => x.name === name) || {};
+  const resolved = resolveLegacyTraitTalentName(name);
+  return list.find(x => x.name === resolved) || {};
 }
 function setText(el, value) {
   const text = value || "";
@@ -114,7 +133,9 @@ function calculateSkillBonuses() {
   function addSubskillBonus(skillName, source) {
     const skill = normalizeSkillName(skillName);
     // Main skills are references only. They never gain or pass on automatic Rating bonuses.
-    if (!skill || mainSkills.includes(skill) || !skillOrder.includes(skill)) return;
+    // Only explicit sub-skills may receive automatic Trait/Talent Rating bonuses.
+    // Main skills and unknown labels are never valid bonus targets.
+    if (!skill || !subSkills.includes(skill)) return;
     direct[skill] = (direct[skill] || 0) + 1;
     details[skill].push(source);
   }
@@ -440,11 +461,17 @@ function applyState(state) {
 
   (state.traits || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-trait-select="${i}"]`);
-    if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+    if (el) {
+      el.value = resolveLegacyTraitTalentName(v);
+      el.dispatchEvent(new Event("change"));
+    }
   });
   (state.talents || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-talent-select="${i}"]`);
-    if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+    if (el) {
+      el.value = resolveLegacyTraitTalentName(v);
+      el.dispatchEvent(new Event("change"));
+    }
   });
   (state.weapons || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-weapon-select="${i}"]`);
@@ -594,7 +621,8 @@ function setFieldValue(field, value) {
 function setSelectValue(selector, value) {
   const element = document.querySelector(selector);
   if (!element) return;
-  ensureSelectValue(element, value);
+  const resolved = resolveLegacyTraitTalentName(value);
+  ensureSelectValue(element, resolved);
   element.dispatchEvent(new Event("change"));
 }
 
@@ -1358,7 +1386,7 @@ function printGearTable(kind, items) {
 
   const name = isWeapon ? "Weapon" : "Item";
   const aux = isWeapon ? "Skill" : "Type";
-  return `<table class="print-table print-gear-table ${hasPlayerNotes ? "with-player-notes" : "no-player-notes"}">
+  return `<table class="print-table print-gear-table print-${isWeapon ? "weapon" : "equipment"}-table ${hasPlayerNotes ? "with-player-notes" : "no-player-notes"}">
     <thead><tr><th>#</th><th>${name}</th><th>${aux}</th><th>Weight</th><th>Rules / Notes</th>${hasPlayerNotes ? "<th>Player Notes</th>" : ""}</tr></thead>
     <tbody>${rows}</tbody>
   </table>`;
@@ -1485,7 +1513,7 @@ function buildPrintPortfolio() {
   container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
 }
 
-const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v6";
+const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v9 - strict sub-skill labels";
 
 function printStylesheetUrl() {
   return new URL("styles.css", window.location.href).href;
