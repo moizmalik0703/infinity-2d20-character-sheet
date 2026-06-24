@@ -23,7 +23,7 @@
       <button id="downloadBtn">Download JSON</button>
       <button id="exportAllBtn">Export all saves</button>
       <label class="button-file">Import JSON<input id="importFile" type="file" accept="application/json"></label>
-      <button onclick="window.print()">Print</button>
+      <button onclick="printCharacterSheet()">Print</button>
     </div>
   </header>
 
@@ -116,6 +116,8 @@
       </div>
     </section>
   </main>
+
+  <section id="printPortfolio" aria-hidden="true"></section>
 
   <script src="data.js"></script>
   <script src="app.js"></script>

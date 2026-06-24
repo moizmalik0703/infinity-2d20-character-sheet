@@ -1106,6 +1106,367 @@ function newCharacterSheet() {
   updateSkillRatings();
 }
 
+
+/* -------------------------------------------------------------------------
+   Print portfolio v3
+   The editable browser sheet remains unchanged. Printing builds a compact,
+   portfolio-style document that only includes populated cards and rows.
+   ------------------------------------------------------------------------- */
+function printEscape(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function printValue(field) {
+  return inputField(field)?.value?.trim() || "";
+}
+
+function printText(value, fallback = "-") {
+  const text = String(value ?? "").trim();
+  return text ? printEscape(text) : fallback;
+}
+
+function printShortText(value, limit = 420) {
+  const text = String(value ?? "").trim();
+  if (!text) return "";
+  if (text.length <= limit) return printEscape(text);
+  return `${printEscape(text.slice(0, Math.max(0, limit - 1)).trim())}... <span class="print-truncated">(continued in browser sheet)</span>`;
+}
+
+function printSigned(value) {
+  const number = Number(value || 0);
+  return number ? `${number > 0 ? "+" : ""}${number}` : "-";
+}
+
+function printField(label, value, wide = false) {
+  return `<div class="print-field${wide ? " wide" : ""}">
+    <span class="print-field-label">${printEscape(label)}</span>
+    <span class="print-field-value">${printText(value)}</span>
+  </div>`;
+}
+
+function printSection(title, body, extraClass = "") {
+  return `<section class="print-section ${extraClass}">
+    <h2 class="print-section-title">${printEscape(title)}</h2>
+    <div class="print-section-body">${body}</div>
+  </section>`;
+}
+
+function printHeader(page, total, subtitle = "") {
+  return `<header class="print-header">
+    <div>
+      <h1>INFINITY 2D20 CHARACTER PORTFOLIO</h1>
+      ${subtitle ? `<p class="print-subtitle">${printEscape(subtitle)}</p>` : ""}
+    </div>
+    <div class="print-page-number">Page ${page} of ${total}</div>
+  </header>`;
+}
+
+function selectedPrintTraits() {
+  return [...document.querySelectorAll("select[data-trait-select]")]
+    .map(select => byName(DATA.traits, select.value))
+    .filter(entry => entry && entry.name);
+}
+
+function selectedPrintTalents() {
+  return [...document.querySelectorAll("select[data-talent-select]")]
+    .map(select => byName(DATA.talents, select.value))
+    .filter(entry => entry && entry.name);
+}
+
+function selectedPrintGear(type) {
+  return [...document.querySelectorAll(`select[data-${type}-select]`)]
+    .map((select, index) => {
+      const entry = byName(DATA.equipment, select.value);
+      const note = document.querySelector(`input[data-${type}-note="${index}"]`)?.value?.trim() || "";
+      return { index: index + 1, entry, note };
+    })
+    .filter(item => item.entry && item.entry.name);
+}
+
+function selectedPrintConditions() {
+  return [...document.querySelectorAll("select[data-condition-select]")]
+    .map((select, index) => {
+      const entry = byName(DATA.conditions, select.value);
+      const note = document.querySelector(`input[data-condition-note="${index}"]`)?.value?.trim() || "";
+      return { index: index + 1, entry, note };
+    })
+    .filter(item => item.entry && item.entry.name);
+}
+
+function printMainSkillCard(skill) {
+  const parts = skillRatingParts(skill);
+  return `<div class="print-skill-chip">
+    <div class="print-skill-chip-name">${printEscape(skill)}</div>
+    <div class="print-skill-chip-stats">
+      <div><span>Base</span><b>${printEscape(parts.base)}</b></div>
+      <div><span>Bonus</span><b>${printEscape(printSigned(parts.bonus))}</b></div>
+      <div class="print-skill-chip-total"><span>Total</span><strong>${printEscape(parts.total)}</strong></div>
+    </div>
+  </div>`;
+}
+
+function printSkillTable(skills) {
+  const rows = skills.map(skill => {
+    const parts = skillRatingParts(skill);
+    const focus = mainSkills.includes(skill) ? "" : (document.querySelector(`select[data-focus="${skill}"]`)?.value || "");
+    const note = mainSkills.includes(skill) ? "" : (document.querySelector(`input[data-skill-note="${skill}"]`)?.value || "");
+    const source = [...parts.sources, note].filter(Boolean).join("; ") || (mainSkills.includes(skill) ? "Main skill" : "");
+    return `<tr class="${mainSkills.includes(skill) ? "print-main-row" : ""}">
+      <td class="print-skill-name">${printEscape(skill)}</td>
+      <td class="number">${printEscape(parts.base)}</td>
+      <td class="number">${printEscape(printSigned(parts.bonus))}</td>
+      <td class="number print-skill-total">${printEscape(parts.total)}</td>
+      <td class="number">${printText(focus, "")}</td>
+      <td class="print-skill-source">${printText(source, "")}</td>
+    </tr>`;
+  }).join("");
+
+  return `<table class="print-table print-skills-table">
+    <thead><tr><th>Skill</th><th>Base</th><th>Rating +</th><th>Total</th><th>Focus</th><th>Source</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+function buildPrintCorePage(page, total) {
+  const fields = [
+    ["Character Name", printValue("characterName") || "Unnamed Character", true],
+    ["Player", printValue("player")],
+    ["Faction", printValue("faction")],
+    ["Homeworld / Habitat", printValue("homeworld")],
+    ["Concept", printValue("concept"), true],
+    ["XP / Advancement", printValue("xp")],
+    ["Career / Role", printValue("careerRole")],
+    ["Doctrine / Unit", printValue("doctrine")],
+    ["Restriction", printValue("restriction")],
+    ["Talent Faction", printValue("talentFaction")]
+  ].filter(([, value]) => value);
+
+  const identity = printSection("Character Identity", `<div class="print-fields">${fields.map(field => printField(...field)).join("")}</div>`);
+
+  const mainSkillChips = mainSkills.map(printMainSkillCard).join("");
+  const tracks = [
+    ["HP / Vigor", printValue("hp")], ["Firewall", printValue("firewall")], ["Armour", printValue("armour")],
+    ["Mental Stress", printValue("mentalStress")], ["Infinity Points", printValue("infinityPoints")], ["Credits", printValue("credits")],
+    ["Momentum", printValue("momentum")], ["Heat", printValue("heat")], ["Wounds", printValue("wounds")]
+  ].map(([label, value]) => `<div class="print-track"><span>${printEscape(label)}</span><strong>${printText(value, "-")}</strong></div>`).join("");
+
+  const core = printSection("Main Skills & Resources", `<div class="print-core-grid">
+    <div class="print-main-skills">${mainSkillChips}</div>
+    <div class="print-tracks">${tracks}</div>
+  </div>`);
+
+  const skillBody = `<div class="print-skills-grid">
+    ${printSkillTable(skillOrder.slice(0, 16))}
+    ${printSkillTable(skillOrder.slice(16))}
+  </div>
+  <p class="print-skill-reminder">Main skills never use Focus. Each sub-skill inherits its Base value from its parent main skill; Rating bonuses and Focus are printed separately.</p>`;
+  const skills = printSection("Skills", skillBody);
+
+  return `<section class="print-page">${printHeader(page, total, "Identity, main skills, resources and skill calculations")}${identity}${core}${skills}</section>`;
+}
+
+function printMetaGrid(entries) {
+  const cells = entries.filter(([, value]) => value !== undefined && value !== null && String(value).trim() !== "")
+    .map(([label, value]) => `<div class="print-option-meta-cell"><span>${printEscape(label)}</span><b>${printText(value, "-")}</b></div>`)
+    .join("");
+  return cells ? `<div class="print-option-meta-grid">${cells}</div>` : "";
+}
+
+function printCopyBox(label, value, limit, extraClass = "") {
+  const text = printShortText(value, limit);
+  if (!text) return "";
+  return `<div class="print-copy-box ${extraClass}">
+    <span class="print-copy-label">${printEscape(label)}</span>
+    <div class="print-copy-text">${text}</div>
+  </div>`;
+}
+
+function printOptionCard(kind, item) {
+  const isTrait = kind === "trait";
+  const meta = isTrait
+    ? [["Primary", item.primary], ["Secondary", item.secondary], ["Rarity", item.rarity], ["Cost", item.cost]]
+    : [["Level", item.level], ["Career", item.career], ["Doctrine", item.doctrine], ["Skill Links", [item.primary, item.secondary].filter(Boolean).join(" / ")]];
+  const descriptionLabel = isTrait ? "Brief Description" : "Description";
+  const descriptionValue = isTrait ? item.brief : item.description;
+  return `<article class="print-option-card ${isTrait ? "trait" : "talent"}">
+    <div class="print-option-head"><span class="print-option-name">${printEscape(item.name)}</span><span class="print-option-tag">${isTrait ? "Trait" : "Talent"}</span></div>
+    <div class="print-option-body">
+      ${printMetaGrid(meta)}
+      ${printCopyBox(descriptionLabel, descriptionValue, 200, "print-copy-short")}
+      ${printCopyBox("Effect", item.effect, 400, "print-copy-effect")}
+    </div>
+  </article>`;
+}
+
+function buildPrintSupplementMarkup(content) {
+  const blocks = [
+    content.conditions.length ? `<div>${printSection("Conditions / Status", printConditionsTable(content.conditions))}</div>` : "",
+    content.notes.length ? `<div>${printSection("Contacts, Lifepath & Notes", printNoteSection(content.notes))}</div>` : ""
+  ].filter(Boolean);
+  if (!blocks.length) return "";
+  return `<div class="print-supplement-grid${blocks.length === 1 ? " one-column" : ""}">${blocks.join("")}</div>`;
+}
+
+function buildPrintOptionsPage(page, total, traits, talents, beginner = false, supplementMarkup = "") {
+  const traitCards = traits.length ? traits.map(item => printOptionCard("trait", item)).join("") : "";
+  const talentCards = talents.length ? talents.map(item => printOptionCard("talent", item)).join("") : "";
+  const columns = [
+    traitCards ? `<div>${printSection(beginner ? "Starting Trait" : "Traits", `<div class="print-option-list">${traitCards}</div>`)}</div>` : "",
+    talentCards ? `<div>${printSection(beginner ? "Starting Talent" : "Talents", `<div class="print-option-list">${talentCards}</div>`)}</div>` : ""
+  ].filter(Boolean);
+  const gridClass = columns.length === 1 ? "print-options-grid one-column" : "print-options-grid";
+  return `<section class="print-page">${printHeader(page, total, beginner ? "Starter trait and talent" : "Selected traits and talents")}
+    <div class="${gridClass}">${columns.join("")}</div>
+    ${supplementMarkup}
+  </section>`;
+}
+
+function buildPrintSingleOptionsPage(page, total, kind, items, supplementMarkup = "") {
+  const title = kind === "trait" ? "Traits" : "Talents";
+  const cards = items.map(item => printOptionCard(kind, item)).join("");
+  return `<section class="print-page">${printHeader(page, total, `Selected ${title.toLowerCase()}`)}
+    ${printSection(title, `<div class="print-option-list">${cards}</div>`)}
+    ${supplementMarkup}
+  </section>`;
+}
+
+function printGearTable(kind, items) {
+  const isWeapon = kind === "weapon";
+  const hasPlayerNotes = items.some(item => item.note);
+  const rulesLimit = items.length >= 8 ? 72 : 135;
+  const rows = items.map(item => {
+    const entry = item.entry;
+    const type = isWeapon ? inferWeaponSkill(entry.name || "") : entry.type || "";
+    const rules = entry.mechanic || entry.brief || "";
+    return `<tr>
+      <td>${item.index}</td>
+      <td>${printEscape(entry.name)}</td>
+      <td>${printText(type, "")}</td>
+      <td>${printText(entry.weight, "")}</td>
+      <td>${printShortText(rules, rulesLimit)}</td>
+      ${hasPlayerNotes ? `<td>${printShortText(item.note, 70)}</td>` : ""}
+    </tr>`;
+  }).join("");
+
+  const name = isWeapon ? "Weapon" : "Item";
+  const aux = isWeapon ? "Skill" : "Type";
+  return `<table class="print-table print-gear-table ${hasPlayerNotes ? "with-player-notes" : "no-player-notes"}">
+    <thead><tr><th>#</th><th>${name}</th><th>${aux}</th><th>Weight</th><th>Rules / Notes</th>${hasPlayerNotes ? "<th>Player Notes</th>" : ""}</tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+function printConditionsTable(items) {
+  if (!items.length) return "";
+  const rows = items.map(item => `<tr>
+    <td>${item.index}</td>
+    <td>${printEscape(item.entry.name)}</td>
+    <td>${printShortText(item.entry.description, 120)}</td>
+    <td>${printShortText(item.entry.removal, 90)}</td>
+    <td>${printShortText(item.note, 80)}</td>
+  </tr>`).join("");
+  return `<table class="print-table print-condition-table">
+    <thead><tr><th>#</th><th>Condition</th><th>Description</th><th>Removal / Check</th><th>Notes</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+function printNoteSection(notes) {
+  if (!notes.length) return "";
+  return `<div class="print-note-list">${notes.map(([label, value]) => `<div class="print-note"><b>${printEscape(label)}</b><span>${printShortText(value, 135)}</span></div>`).join("")}</div>`;
+}
+
+function buildPrintGearPage(page, total, content) {
+  const { weapons, equipment } = content;
+  const gearSections = [
+    weapons.length ? `<div>${printSection(`Weapons - ${weapons.length} Selected`, printGearTable("weapon", weapons))}</div>` : "",
+    equipment.length ? `<div>${printSection(`Equipment - ${equipment.length} Selected`, printGearTable("equipment", equipment))}</div>` : ""
+  ].filter(Boolean);
+
+  return `<section class="print-page">${printHeader(page, total, "Weapons and equipment")}
+    <div class="print-gear-grid${gearSections.length === 1 ? " one-column" : ""}">${gearSections.join("")}</div>
+    <div class="print-rule-reminder">Gear is split into Weapons and Equipment. Empty Weapon and Equipment rows are omitted from this compact print portfolio.</div>
+  </section>`;
+}
+
+function buildPrintSupplementPage(page, total, content) {
+  return `<section class="print-page">${printHeader(page, total, "Conditions, contacts, lifepath and notes")}${buildPrintSupplementMarkup(content)}</section>`;
+}
+
+function isBeginnerPrintCharacter() {
+  const xp = printValue("xp").toLowerCase();
+  const player = printValue("player").toLowerCase();
+  const notes = printValue("campaignNotes").toLowerCase();
+  return xp.includes("starting character") || player.includes("starting character") || notes.includes("portfolio-based beginner");
+}
+
+function printSupplementContent() {
+  const weapons = selectedPrintGear("weapon");
+  const equipment = selectedPrintGear("equipment");
+  const conditions = selectedPrintConditions();
+  const notes = [
+    ["Campaign Notes", printValue("campaignNotes")],
+    ["Faction / Doctrine Contact", printValue("contactFaction")],
+    ["Personal Contact / Rival", printValue("contactPersonal")],
+    ["Lifepath Event / Secret", printValue("lifepathSecret")],
+    ["Session Notes", printValue("scratchNotes")],
+    ["Campaign Log", printValue("campaignLongNotes")]
+  ].filter(([, value]) => value);
+  return { weapons, equipment, conditions, notes };
+}
+
+function buildPrintPortfolio() {
+  const container = document.getElementById("printPortfolio");
+  if (!container) return;
+
+  const beginner = isBeginnerPrintCharacter();
+  const traits = selectedPrintTraits();
+  const talents = selectedPrintTalents();
+  const supplement = printSupplementContent();
+  const hasGear = supplement.weapons.length || supplement.equipment.length;
+  const hasSupplement = supplement.conditions.length || supplement.notes.length;
+  const builders = [
+    (page, total) => buildPrintCorePage(page, total)
+  ];
+
+  if (beginner) {
+    if (traits.length || talents.length) {
+      builders.push((page, total) => buildPrintOptionsPage(page, total, traits, talents, true, buildPrintSupplementMarkup(supplement)));
+    } else if (hasSupplement) {
+      builders.push((page, total) => buildPrintSupplementPage(page, total, supplement));
+    }
+    if (hasGear) builders.push((page, total) => buildPrintGearPage(page, total, supplement));
+  } else if (traits.length && talents.length) {
+    const conditionsOnly = { ...supplement, notes: [] };
+    const notesOnly = { ...supplement, conditions: [] };
+    builders.push((page, total) => buildPrintSingleOptionsPage(page, total, "trait", traits, buildPrintSupplementMarkup(conditionsOnly)));
+    builders.push((page, total) => buildPrintSingleOptionsPage(page, total, "talent", talents, buildPrintSupplementMarkup(notesOnly)));
+    if (hasGear) builders.push((page, total) => buildPrintGearPage(page, total, supplement));
+  } else {
+    if (traits.length) builders.push((page, total) => buildPrintSingleOptionsPage(page, total, "trait", traits));
+    if (talents.length) builders.push((page, total) => buildPrintSingleOptionsPage(page, total, "talent", talents));
+    if (hasSupplement) builders.push((page, total) => buildPrintSupplementPage(page, total, supplement));
+    if (hasGear) builders.push((page, total) => buildPrintGearPage(page, total, supplement));
+  }
+
+  // A full manual sheet is capped at four pages by distributing Conditions and
+  // Notes across the Trait and Talent pages whenever both are present.
+  const total = builders.length;
+  container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
+}
+
+function printCharacterSheet() {
+  buildPrintPortfolio();
+  window.print();
+}
+
+window.addEventListener("beforeprint", buildPrintPortfolio);
+
 document.addEventListener("DOMContentLoaded", () => {
   initLists();
   buildMainSkills();

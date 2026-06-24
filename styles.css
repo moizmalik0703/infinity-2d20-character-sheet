@@ -298,21 +298,470 @@ td { font-size: .72rem; }
   }
 }
 
+/* Print-only portfolio v3: compact, aligned, portfolio-style pages. */
+#printPortfolio { display: none; }
+
 @media print {
-  body { background: white; }
-  .no-print { display: none; }
-  .sheet { margin: 0; width: 100%; }
-  .page {
-    box-shadow: none;
-    border: 0;
+  @page { size: A4 landscape; margin: 7mm; }
+
+  html, body {
+    width: auto;
+    height: auto;
     margin: 0;
-    page-break-after: always;
-    width: 100%;
-    min-height: auto;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  @page { size: A4 landscape; margin: 8mm; }
-  input, select, textarea { border: 1px solid #999; }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  .no-print,
+  .sheet { display: none !important; }
+
+  #printPortfolio {
+    display: block !important;
+    color: #172033;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    line-height: 1.2;
+  }
+
+  .print-page {
+    width: 100%;
+    height: 196mm;
+    overflow: hidden;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .print-page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .print-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8mm;
+    min-height: 16mm;
+    margin: 0 0 2.6mm;
+    padding: 3mm 4mm 2.8mm;
+    background: #17365d;
+    color: #fff;
+  }
+
+  .print-header h1 {
+    margin: 0;
+    font-size: 14.5pt;
+    line-height: 1.05;
+    letter-spacing: .012em;
+  }
+
+  .print-subtitle {
+    margin: 0.9mm 0 0;
+    font-size: 7.2pt;
+    line-height: 1.2;
+    color: #eaf3f8;
+  }
+
+  .print-page-number {
+    flex: 0 0 auto;
+    align-self: center;
+    font-size: 8.1pt;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  .print-section {
+    margin: 0 0 2.4mm;
+    border: .3mm solid #9aa7b1;
+    border-radius: 1.1mm;
+    overflow: hidden;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-section-title {
+    margin: 0;
+    padding: 1.45mm 2.2mm 1.35mm;
+    background: #1f4e79;
+    color: #fff;
+    font-size: 8.2pt;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+  }
+
+  .print-section-body { padding: 1.7mm 2mm 1.8mm; }
+
+  .print-fields {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.1mm;
+    align-items: stretch;
+  }
+
+  .print-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 0;
+    min-height: 8.7mm;
+    border: .24mm solid #9aa7b1;
+    border-radius: .75mm;
+    padding: .8mm 1.05mm .85mm;
+    background: #fff;
+  }
+
+  .print-field.wide { grid-column: span 2; }
+
+  .print-field-label {
+    display: block;
+    margin: 0 0 .4mm;
+    color: #536173;
+    font-size: 5.45pt;
+    line-height: 1.04;
+    font-weight: 700;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+  }
+
+  .print-field-value {
+    display: block;
+    min-height: 2.7mm;
+    overflow-wrap: anywhere;
+    font-size: 6.85pt;
+    line-height: 1.15;
+  }
+
+  .print-core-grid {
+    display: grid;
+    grid-template-columns: 1.32fr .68fr;
+    gap: 2mm;
+    align-items: start;
+  }
+
+  .print-main-skills {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: .9mm;
+    align-items: start;
+    align-self: start;
+  }
+
+  .print-skill-chip {
+    align-self: start;
+    overflow: hidden;
+    border: .24mm solid #9aa7b1;
+    border-radius: .8mm;
+    text-align: center;
+    background: #fff;
+  }
+
+  .print-skill-chip-name {
+    padding: .72mm .35mm .66mm;
+    background: #1f4e79;
+    color: #fff;
+    font-size: 5.35pt;
+    line-height: 1.1;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .print-skill-chip-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .print-skill-chip-stats > div {
+    min-width: 0;
+    min-height: 13.8mm;
+    padding: .8mm .25mm .7mm;
+    border-right: .18mm solid #d1d5db;
+  }
+
+  .print-skill-chip-stats > div:last-child { border-right: 0; }
+
+  .print-skill-chip-stats span {
+    display: block;
+    margin-bottom: .45mm;
+    color: #536173;
+    font-size: 4.6pt;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+  }
+
+  .print-skill-chip-stats b {
+    display: block;
+    font-size: 7.1pt;
+    line-height: 1;
+  }
+
+  .print-skill-chip-total { background: #eaf3f8; }
+  .print-skill-chip-total strong {
+    display: block;
+    margin-top: .1mm;
+    font-size: 18pt;
+    line-height: .82;
+    letter-spacing: -.03em;
+  }
+
+  .print-tracks {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .9mm;
+    align-content: start;
+  }
+
+  .print-track {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    min-height: 8.8mm;
+    padding: .68mm .85mm .65mm;
+    border: .24mm solid #9aa7b1;
+    border-radius: .7mm;
+    background: #f7fafc;
+  }
+
+  .print-track span {
+    display: block;
+    margin-bottom: .28mm;
+    color: #536173;
+    font-size: 5.05pt;
+    line-height: 1.04;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .print-track strong { display: block; font-size: 7.7pt; line-height: 1; }
+
+  .print-skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.7mm;
+  }
+
+  .print-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 5.65pt;
+  }
+
+  .print-table th,
+  .print-table td {
+    padding: .34mm .52mm;
+    border: .2mm solid #9aa7b1;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+    line-height: 1.12;
+  }
+
+  .print-table th {
+    background: #1f4e79;
+    color: #fff;
+    font-size: 5.15pt;
+    line-height: 1.02;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .print-table .print-main-row td { background: #d9eaf7; font-weight: 700; }
+  .print-table .number { text-align: center; white-space: nowrap; }
+  .print-table .print-skill-name { width: 25%; }
+  .print-table .print-skill-total { width: 9%; font-weight: 700; }
+  .print-table .print-skill-source { width: 33%; font-size: 5.1pt; color: #384657; }
+  .print-skills-table th:nth-child(1) { width: 25%; }
+  .print-skills-table th:nth-child(2),
+  .print-skills-table th:nth-child(3),
+  .print-skills-table th:nth-child(4) { width: 10%; }
+  .print-skills-table th:nth-child(5) { width: 12%; }
+  .print-skills-table th:nth-child(6) { width: 33%; }
+
+  .print-skill-reminder {
+    margin: .85mm 0 0;
+    padding-top: .75mm;
+    border-top: .18mm solid #d1d5db;
+    color: #536173;
+    font-size: 5.45pt;
+    line-height: 1.15;
+  }
+
+  .print-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.2mm;
+    align-items: start;
+  }
+
+  .print-options-grid.one-column { grid-template-columns: 1fr; }
+  .print-option-list { display: grid; gap: 1.9mm; }
+
+  .print-option-card {
+    border: .24mm solid #9aa7b1;
+    border-radius: .9mm;
+    overflow: hidden;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-option-card.trait .print-option-head { background: #245884; }
+  .print-option-card.talent .print-option-head { background: #1f4e79; }
+
+  .print-option-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2mm;
+    min-height: 8.1mm;
+    padding: 1.45mm 2mm 1.35mm;
+    color: #fff;
+  }
+
+  .print-option-name { font-size: 8.3pt; line-height: 1.1; font-weight: 700; }
+  .print-option-tag { font-size: 6pt; line-height: 1; text-align: right; text-transform: uppercase; }
+
+  .print-option-body { padding: 1.5mm 1.8mm 1.75mm; background: #f8fbfd; }
+
+  .print-option-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .9mm;
+    margin: 0 0 1.25mm;
+  }
+
+  .print-option-meta-cell {
+    min-width: 0;
+    min-height: 9.5mm;
+    padding: .85mm 1mm .8mm;
+    border: .18mm solid #c8d0d8;
+    border-radius: .55mm;
+    background: #fff;
+  }
+
+  .print-option-meta-cell span {
+    display: block;
+    margin-bottom: .4mm;
+    color: #536173;
+    font-size: 5.2pt;
+    line-height: 1.05;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .print-option-meta-cell b {
+    display: block;
+    overflow-wrap: anywhere;
+    font-size: 6.6pt;
+    line-height: 1.15;
+  }
+
+  .print-copy-box {
+    margin-top: 1.05mm;
+    padding: 1.05mm 1.25mm 1.15mm;
+    border: .18mm solid #c8d0d8;
+    border-radius: .55mm;
+    background: #fff;
+  }
+
+  .print-copy-label {
+    display: block;
+    margin-bottom: .55mm;
+    color: #536173;
+    font-size: 5.4pt;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+  }
+
+  .print-copy-text {
+    overflow-wrap: anywhere;
+    font-size: 6.5pt;
+    line-height: 1.28;
+  }
+
+  .print-copy-short { background: #f7fafc; }
+  .print-copy-effect { background: #fff; }
+
+  .print-gear-grid,
+  .print-supplement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5mm;
+    align-items: start;
+  }
+
+  .print-gear-grid.one-column,
+  .print-supplement-grid.one-column { grid-template-columns: 1fr; }
+  .print-supplement-grid { margin-top: 2.2mm; }
+
+  .print-gear-table { font-size: 5.15pt; }
+  .print-gear-table th,
+  .print-gear-table td { padding: .28mm .42mm; line-height: 1.08; }
+  .print-gear-table th:nth-child(1) { width: 5%; }
+  .print-gear-table.with-player-notes th:nth-child(2) { width: 24%; }
+  .print-gear-table.with-player-notes th:nth-child(3) { width: 13%; }
+  .print-gear-table.with-player-notes th:nth-child(4) { width: 11%; }
+  .print-gear-table.with-player-notes th:nth-child(5) { width: 36%; }
+  .print-gear-table.with-player-notes th:nth-child(6) { width: 11%; }
+  .print-gear-table.no-player-notes th:nth-child(2) { width: 26%; }
+  .print-gear-table.no-player-notes th:nth-child(3) { width: 13%; }
+  .print-gear-table.no-player-notes th:nth-child(4) { width: 11%; }
+  .print-gear-table.no-player-notes th:nth-child(5) { width: 45%; }
+  .print-gear-table td:nth-child(1) { text-align: center; }
+
+  .print-condition-table { font-size: 5.25pt; }
+  .print-condition-table th,
+  .print-condition-table td { padding: .34mm .48mm; line-height: 1.1; }
+  .print-condition-table th:nth-child(1) { width: 5%; }
+  .print-condition-table th:nth-child(2) { width: 22%; }
+  .print-condition-table th:nth-child(3) { width: 30%; }
+  .print-condition-table th:nth-child(4) { width: 27%; }
+  .print-condition-table th:nth-child(5) { width: 16%; }
+
+  .print-note-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9mm; }
+  .print-note {
+    min-height: 9.5mm;
+    padding: .8mm 1mm .85mm;
+    border: .18mm solid #c8d0d8;
+    border-radius: .55mm;
+    background: #fff;
+    overflow-wrap: anywhere;
+  }
+
+  .print-note b {
+    display: block;
+    margin-bottom: .38mm;
+    color: #536173;
+    font-size: 5.1pt;
+    line-height: 1.03;
+    text-transform: uppercase;
+  }
+
+  .print-note span { display: block; font-size: 5.95pt; line-height: 1.18; }
+
+  .print-rule-reminder {
+    margin-top: 2.2mm;
+    padding: 1.25mm 1.6mm 1.3mm;
+    border: .22mm solid #9aa7b1;
+    border-radius: .65mm;
+    background: #f4f6f8;
+    color: #384657;
+    font-size: 5.9pt;
+    line-height: 1.23;
+  }
+
+  .print-truncated { color: #536173; font-style: italic; }
 }
+
 
 .auto-bonus {
   background: #e8f7e8 !important;
