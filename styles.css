@@ -1145,3 +1145,101 @@ textarea {
 }
 
 
+
+
+/* Browser text-safety pass: no card or table cell should clip long values. */
+.page, .panel, .card, .trait-meta, .text-panel, .identity-grid, .two-column,
+.lower, .main-skills, .track-grid, .card-stack, .table-wrap, label {
+  min-width: 0;
+}
+
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+}
+
+.output, .text-panel .output, td, th, .filter-status, .track-status {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+input, select, textarea {
+  min-width: 0;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+}
+
+@media print {
+  /* V5: Beginner content is deliberately consolidated into page two. */
+  .print-beginner-dossier-page .print-beginner-options-grid {
+    margin-bottom: 2mm;
+  }
+
+  .print-beginner-dossier-page .print-option-card {
+    min-height: 0;
+  }
+
+  .print-beginner-dossier-page .print-option-head {
+    min-height: 7.2mm;
+    padding: 1.15mm 1.7mm 1.05mm;
+  }
+
+  .print-beginner-dossier-page .print-option-body {
+    padding: 1.15mm 1.45mm 1.3mm;
+  }
+
+  .print-beginner-dossier-page .print-option-meta-cell {
+    min-height: 8.2mm;
+    padding: .65mm .8mm;
+  }
+
+  .print-beginner-dossier-page .print-copy-box {
+    margin-top: .8mm;
+    padding: .8mm 1mm .9mm;
+  }
+
+  .print-beginner-dossier-page .print-copy-text {
+    font-size: 6.25pt;
+    line-height: 1.22;
+  }
+
+  .print-beginner-gear-grid {
+    margin-top: 2mm;
+  }
+
+  .print-beginner-dossier-page .print-gear-table {
+    font-size: 4.95pt;
+  }
+
+  .print-beginner-dossier-page .print-gear-table th,
+  .print-beginner-dossier-page .print-gear-table td {
+    padding: .24mm .36mm;
+    line-height: 1.05;
+  }
+
+  .print-beginner-supplement {
+    margin-top: 1.5mm;
+  }
+
+  .print-beginner-dossier-page .print-supplement-grid {
+    margin-top: 0;
+  }
+
+  .print-beginner-dossier-page .print-note {
+    min-height: 7.5mm;
+    padding: .6mm .85mm;
+  }
+
+  /* Keep every print cell readable and allow words/URLs to wrap instead of disappearing. */
+  .print-field-value, .print-option-name, .print-option-meta-cell b,
+  .print-copy-text, .print-table td, .print-note span, .print-track span,
+  .print-skill-source {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}

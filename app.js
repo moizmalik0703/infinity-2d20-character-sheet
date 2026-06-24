@@ -39,7 +39,10 @@ function byName(list, name) {
   return list.find(x => x.name === name) || {};
 }
 function setText(el, value) {
-  el.textContent = value || "";
+  const text = value || "";
+  el.textContent = text;
+  // Preserve the complete value on hover when a narrow browser layout wraps it.
+  el.title = text;
 }
 function inputField(field) {
   return document.querySelector(`[data-field="${field}"]`);
@@ -1108,7 +1111,7 @@ function newCharacterSheet() {
 
 
 /* -------------------------------------------------------------------------
-   Print portfolio v3
+   Print portfolio v5
    The editable browser sheet remains unchanged. Printing builds a compact,
    portfolio-style document that only includes populated cards and rows.
    ------------------------------------------------------------------------- */
@@ -1286,7 +1289,7 @@ function printCopyBox(label, value, limit, extraClass = "") {
   </div>`;
 }
 
-function printOptionCard(kind, item) {
+function printOptionCard(kind, item, descriptionLimit = 280, effectLimit = 560) {
   const isTrait = kind === "trait";
   const meta = isTrait
     ? [["Primary", item.primary], ["Secondary", item.secondary], ["Rarity", item.rarity], ["Cost", item.cost]]
@@ -1297,8 +1300,8 @@ function printOptionCard(kind, item) {
     <div class="print-option-head"><span class="print-option-name">${printEscape(item.name)}</span><span class="print-option-tag">${isTrait ? "Trait" : "Talent"}</span></div>
     <div class="print-option-body">
       ${printMetaGrid(meta)}
-      ${printCopyBox(descriptionLabel, descriptionValue, 200, "print-copy-short")}
-      ${printCopyBox("Effect", item.effect, 400, "print-copy-effect")}
+      ${printCopyBox(descriptionLabel, descriptionValue, descriptionLimit, "print-copy-short")}
+      ${printCopyBox("Effect", item.effect, effectLimit, "print-copy-effect")}
     </div>
   </article>`;
 }
@@ -1338,7 +1341,7 @@ function buildPrintSingleOptionsPage(page, total, kind, items, supplementMarkup 
 function printGearTable(kind, items) {
   const isWeapon = kind === "weapon";
   const hasPlayerNotes = items.some(item => item.note);
-  const rulesLimit = items.length >= 8 ? 72 : 135;
+  const rulesLimit = items.length >= 8 ? 96 : 210;
   const rows = items.map(item => {
     const entry = item.entry;
     const type = isWeapon ? inferWeaponSkill(entry.name || "") : entry.type || "";
@@ -1366,9 +1369,9 @@ function printConditionsTable(items) {
   const rows = items.map(item => `<tr>
     <td>${item.index}</td>
     <td>${printEscape(item.entry.name)}</td>
-    <td>${printShortText(item.entry.description, 120)}</td>
-    <td>${printShortText(item.entry.removal, 90)}</td>
-    <td>${printShortText(item.note, 80)}</td>
+    <td>${printShortText(item.entry.description, 170)}</td>
+    <td>${printShortText(item.entry.removal, 130)}</td>
+    <td>${printShortText(item.note, 110)}</td>
   </tr>`).join("");
   return `<table class="print-table print-condition-table">
     <thead><tr><th>#</th><th>Condition</th><th>Description</th><th>Removal / Check</th><th>Notes</th></tr></thead>
@@ -1378,19 +1381,42 @@ function printConditionsTable(items) {
 
 function printNoteSection(notes) {
   if (!notes.length) return "";
-  return `<div class="print-note-list">${notes.map(([label, value]) => `<div class="print-note"><b>${printEscape(label)}</b><span>${printShortText(value, 135)}</span></div>`).join("")}</div>`;
+  return `<div class="print-note-list">${notes.map(([label, value]) => `<div class="print-note"><b>${printEscape(label)}</b><span>${printShortText(value, 190)}</span></div>`).join("")}</div>`;
 }
 
-function buildPrintGearPage(page, total, content) {
+function buildPrintGearMarkup(content, extraClass = "") {
   const { weapons, equipment } = content;
   const gearSections = [
     weapons.length ? `<div>${printSection(`Weapons - ${weapons.length} Selected`, printGearTable("weapon", weapons))}</div>` : "",
     equipment.length ? `<div>${printSection(`Equipment - ${equipment.length} Selected`, printGearTable("equipment", equipment))}</div>` : ""
   ].filter(Boolean);
+  if (!gearSections.length) return "";
+  return `<div class="print-gear-grid${gearSections.length === 1 ? " one-column" : ""} ${extraClass}">${gearSections.join("")}</div>`;
+}
 
+function buildPrintGearPage(page, total, content) {
   return `<section class="print-page">${printHeader(page, total, "Weapons and equipment")}
-    <div class="print-gear-grid${gearSections.length === 1 ? " one-column" : ""}">${gearSections.join("")}</div>
+    ${buildPrintGearMarkup(content)}
     <div class="print-rule-reminder">Gear is split into Weapons and Equipment. Empty Weapon and Equipment rows are omitted from this compact print portfolio.</div>
+  </section>`;
+}
+
+function buildPrintBeginnerDossierPage(page, total, traits, talents, content) {
+  const traitCards = traits.length ? traits.map(item => printOptionCard("trait", item, 440, 760)).join("") : "";
+  const talentCards = talents.length ? talents.map(item => printOptionCard("talent", item, 440, 760)).join("") : "";
+  const optionColumns = [
+    traitCards ? `<div>${printSection("Starting Trait", `<div class="print-option-list">${traitCards}</div>`)}</div>` : "",
+    talentCards ? `<div>${printSection("Starting Talent", `<div class="print-option-list">${talentCards}</div>`)}</div>` : ""
+  ].filter(Boolean);
+  const optionGridClass = optionColumns.length === 1 ? "print-options-grid one-column" : "print-options-grid";
+  const gearMarkup = buildPrintGearMarkup(content, "print-beginner-gear-grid");
+  const supplementMarkup = buildPrintSupplementMarkup(content);
+
+  return `<section class="print-page print-beginner-dossier-page">${printHeader(page, total, "Starter trait, talent, selected gear and notes")}
+    ${optionColumns.length ? `<div class="${optionGridClass} print-beginner-options-grid">${optionColumns.join("")}</div>` : ""}
+    ${gearMarkup}
+    ${supplementMarkup ? `<div class="print-beginner-supplement">${supplementMarkup}</div>` : ""}
+    <div class="print-rule-reminder">Empty Trait, Talent, Weapon, Equipment, Condition and note fields are omitted. Main skills never use Focus; Focus and Rating bonuses remain separately recorded.</div>
   </section>`;
 }
 
@@ -1435,12 +1461,11 @@ function buildPrintPortfolio() {
   ];
 
   if (beginner) {
-    if (traits.length || talents.length) {
-      builders.push((page, total) => buildPrintOptionsPage(page, total, traits, talents, true, buildPrintSupplementMarkup(supplement)));
-    } else if (hasSupplement) {
-      builders.push((page, total) => buildPrintSupplementPage(page, total, supplement));
+    // A generated beginner has one Trait, one Talent, two weapons and five items.
+    // Keep its selected content together on a single compact dossier page.
+    if (traits.length || talents.length || hasGear || hasSupplement) {
+      builders.push((page, total) => buildPrintBeginnerDossierPage(page, total, traits, talents, supplement));
     }
-    if (hasGear) builders.push((page, total) => buildPrintGearPage(page, total, supplement));
   } else if (traits.length && talents.length) {
     const conditionsOnly = { ...supplement, notes: [] };
     const notesOnly = { ...supplement, conditions: [] };
