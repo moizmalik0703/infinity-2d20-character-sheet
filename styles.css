@@ -1464,3 +1464,46 @@ body.print-window #printPortfolio {
     word-break: break-word;
   }
 }
+
+
+/* v13: fixed, equal Skills Source columns in every compact portfolio. */
+@media print {
+  .print-skills-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .print-skills-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .print-skills-table col.print-skill-col-name { width: 20%; }
+  .print-skills-table col.print-skill-col-base { width: 9%; }
+  .print-skills-table col.print-skill-col-rating { width: 9%; }
+  .print-skills-table col.print-skill-col-total { width: 9%; }
+  .print-skills-table col.print-skill-col-focus { width: 9%; }
+  .print-skills-table col.print-skill-col-source { width: 44%; }
+
+  .print-skills-table th:nth-child(1),
+  .print-skills-table td:nth-child(1) { width: auto; }
+  .print-skills-table th:nth-child(2),
+  .print-skills-table td:nth-child(2),
+  .print-skills-table th:nth-child(3),
+  .print-skills-table td:nth-child(3),
+  .print-skills-table th:nth-child(4),
+  .print-skills-table td:nth-child(4),
+  .print-skills-table th:nth-child(5),
+  .print-skills-table td:nth-child(5),
+  .print-skills-table th:nth-child(6),
+  .print-skills-table td:nth-child(6) { width: auto; }
+
+  .print-skills-table td.print-skill-source {
+    font-size: 4.65pt;
+    line-height: 1.10;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}

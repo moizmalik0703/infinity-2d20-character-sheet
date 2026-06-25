@@ -1273,6 +1273,14 @@ function printSkillTable(skills) {
   }).join("");
 
   return `<table class="print-table print-skills-table">
+    <colgroup>
+      <col class="print-skill-col-name">
+      <col class="print-skill-col-base">
+      <col class="print-skill-col-rating">
+      <col class="print-skill-col-total">
+      <col class="print-skill-col-focus">
+      <col class="print-skill-col-source">
+    </colgroup>
     <thead><tr><th>Skill</th><th>Base</th><th>Rating +</th><th>Total</th><th>Focus</th><th>Source</th></tr></thead>
     <tbody>${rows}</tbody>
   </table>`;
@@ -1547,7 +1555,7 @@ function buildPrintPortfolio() {
   container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
 }
 
-const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v12 - quiet print preview";
+const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v13 - equal Skills Source columns";
 
 function printStylesheetUrl() {
   return new URL("styles.css", window.location.href).href;
@@ -1706,12 +1714,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);
   document.getElementById("newSheetBtn").addEventListener("click", newCharacterSheet);
   document.getElementById("printBtn").addEventListener("click", printCharacterSheet);
-  document.getElementById("downloadBtn").addEventListener("click", downloadJSON);
   document.getElementById("exportAllBtn").addEventListener("click", exportAllSaves);
-  document.getElementById("importFile").addEventListener("change", (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    importJSONFile(file);
-    e.target.value = "";
-  });
 });
