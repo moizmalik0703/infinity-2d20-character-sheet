@@ -1431,6 +1431,9 @@ body.print-window #printPortfolio {
 }
 
 
+/* v20: mobile direct-PDF export status. */
+.export-status{position:fixed;left:50%;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:9999;max-width:min(92vw,31rem);transform:translateX(-50%);padding:.72rem .95rem;border-radius:.55rem;background:#17365d;color:#fff;box-shadow:0 .35rem 1rem rgba(0,0,0,.22);font-size:.86rem;line-height:1.35;text-align:center}
+
 /* v12: quiet in-page print preview and wider Skill Source column. */
 .compact-print-frame {
   /* Mobile-safe export canvas: browsers derive print orientation from this document's
@@ -1726,7 +1729,7 @@ body.print-window #printPortfolio {
       <button id="saveBtn">Save character</button>
       <button id="loadBtn">Load selected</button>
       <button id="deleteSaveBtn">Delete selected</button>
-      <button id="printBtn" type="button" title="Exports the current character portfolio to the browser print preview">Export / Print Current Character Portfolio</button>
+      <button id="printBtn" type="button" title="Exports a true landscape PDF on mobile, or opens print preview on desktop">Export / Print Current Character Portfolio</button>
     </div>
   </header>
 
@@ -1821,6 +1824,7 @@ body.print-window #printPortfolio {
   </main>
 
   <section id="printPortfolio" aria-hidden="true"></section>
+  <div id="exportStatus" class="export-status" role="status" aria-live="polite" hidden></div>
 
   <script>window.INFINITY_DATA = {
   "traits": [
@@ -11296,7 +11300,7 @@ function buildPrintPortfolio() {
   container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
 }
 
-const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v18 - mobile landscape export";
+const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v20 - direct mobile PDF";
 
 function printStylesheetUrl() {
   const link = document.querySelector('link[data-portfolio-style]');
@@ -11409,72 +11413,241 @@ function compactPrintFrameHtml(markup, title, token) {
 }
 let activeCompactPrintFrame = null;
 
+function isMobilePortfolioExport() {
+  return window.matchMedia('(pointer: coarse)').matches || Math.min(window.innerWidth || 0, window.innerHeight || 0) <= 800;
+}
+
+function setExportStatus(message) {
+  const status = document.getElementById('exportStatus');
+  if (!status) return;
+  status.hidden = !message;
+  status.textContent = message || '';
+}
+
+function mobilePdfFilename(name) {
+  const cleaned = String(name || 'Infinity_2D20_Character').replace(/[\\/:*?"<>|]+/g, '-').trim().replace(/\s+/g, '_');
+  return `${cleaned || 'Infinity_2D20_Character'}_Portfolio.pdf`;
+}
+
+function pdfAscii(value) {
+  return String(value ?? '')
+    .normalize('NFKD')
+    .replace(/[\u2018\u2019]/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/[\u2013\u2014]/g, '-')
+    .replace(/[^\x20-\x7E]/g, '?')
+    .replace(/\\/g, '\\\\')
+    .replace(/\(/g, '\\(')
+    .replace(/\)/g, '\\)');
+}
+
+function pdfBytes(value) { return new TextEncoder().encode(String(value)); }
+function pdfJoin(parts) { const length = parts.reduce((sum, part) => sum + part.length, 0); const out = new Uint8Array(length); let at = 0; parts.forEach(part => { out.set(part, at); at += part.length; }); return out; }
+
+function makeTextPdf(pageStreams) {
+  const encoder = new TextEncoder();
+  const objects = [null];
+  const add = body => { objects.push(body); return objects.length - 1; };
+  const pagesId = add('');
+  const fontRegular = add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');
+  const fontBold = add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
+  const pageIds = [];
+  const W = 841.89, H = 595.28;
+  pageStreams.forEach(stream => {
+    const contentId = add(`<< /Length ${encoder.encode(stream).length} >>\nstream\n${stream}\nendstream`);
+    const pageId = add(`<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 ${W} ${H}] /Resources << /Font << /F1 ${fontRegular} 0 R /F2 ${fontBold} 0 R >> >> /Contents ${contentId} 0 R >>`);
+    pageIds.push(pageId);
+  });
+  objects[pagesId] = `<< /Type /Pages /Kids [${pageIds.map(id => `${id} 0 R`).join(' ')}] /Count ${pageIds.length} >>`;
+  const catalogId = add(`<< /Type /Catalog /Pages ${pagesId} 0 R >>`);
+  const chunks = [encoder.encode('%PDF-1.4\n%\xE2\xE3\xCF\xD3\n')];
+  const offsets = [0]; let size = chunks[0].length;
+  for (let id=1; id<objects.length; id+=1) {
+    offsets[id]=size;
+    const pre=encoder.encode(`${id} 0 obj\n`);
+    const body=typeof objects[id] === 'string' ? encoder.encode(objects[id]) : objects[id];
+    const post=encoder.encode('\nendobj\n');
+    chunks.push(pre,body,post); size += pre.length+body.length+post.length;
+  }
+  const xrefAt=size;
+  let xref=`xref\n0 ${objects.length}\n0000000000 65535 f \n`;
+  for(let id=1; id<objects.length; id+=1) xref += `${String(offsets[id]).padStart(10,'0')} 00000 n \n`;
+  chunks.push(encoder.encode(`${xref}trailer\n<< /Size ${objects.length} /Root ${catalogId} 0 R >>\nstartxref\n${xrefAt}\n%%EOF`));
+  return new Blob([pdfJoin(chunks)], {type:'application/pdf'});
+}
+
+function pdfPage() {
+  const H=595.28; const commands=[];
+  const color = (r,g,b,stroke=false) => commands.push(`${r} ${g} ${b} ${stroke?'RG':'rg'}`);
+  const rect = (x,top,w,h,fill=null,stroke='#9aa7b1',line=0.6) => {
+    const y=H-top-h;
+    if(fill){ const [r,g,b]=fill; color(r,g,b,false); commands.push(`${x} ${y} ${w} ${h} re f`); }
+    if(stroke){ const [r,g,b]=hexToRgb(stroke); color(r,g,b,true); commands.push(`${line} w ${x} ${y} ${w} ${h} re S`); }
+  };
+  const text = (x,top,value,size=9,bold=false,colour='#172033') => {
+    const [r,g,b]=hexToRgb(colour); color(r,g,b,false); const y=H-top-size;
+    commands.push(`BT /${bold?'F2':'F1'} ${size} Tf 1 0 0 1 ${x} ${y} Tm (${pdfAscii(value)}) Tj ET`);
+  };
+  const line = (x1,top1,x2,top2,colour='#9aa7b1',width=.5) => { const [r,g,b]=hexToRgb(colour); color(r,g,b,true); commands.push(`${width} w ${x1} ${H-top1} m ${x2} ${H-top2} l S`); };
+  return {commands,rect,text,line,H};
+}
+
+function hexToRgb(value) {
+  const hex=String(value || '#000000').replace('#','');
+  const n=parseInt(hex.length===3?hex.split('').map(x=>x+x).join(''):hex,16) || 0;
+  return [((n>>16)&255)/255,((n>>8)&255)/255,(n&255)/255];
+}
+
+function pdfWords(value, maxChars, maxLines=99) {
+  const raw=String(value || '').replace(/\s+/g,' ').trim();
+  if(!raw) return ['-'];
+  const words=raw.split(' '); const lines=[]; let line='';
+  words.forEach(word=>{
+    const next=line?`${line} ${word}`:word;
+    if(next.length<=maxChars || !line) line=next;
+    else { lines.push(line); line=word; }
+  });
+  if(line)lines.push(line);
+  if(lines.length>maxLines){ const kept=lines.slice(0,maxLines); kept[maxLines-1]=`${kept[maxLines-1].slice(0,Math.max(0,maxChars-4))}...`; return kept; }
+  return lines;
+}
+
+function pdfHeader(page, total, subtitle='') {
+  const p=pdfPage();
+  p.rect(18,16,805,46,[0.09,0.21,0.37],null);
+  p.text(32,29,'INFINITY 2D20 CHARACTER PORTFOLIO',15,true,'#ffffff');
+  if(subtitle) p.text(32,47,subtitle,7,false,'#eaf3f8');
+  p.text(748,34,`PAGE ${page} OF ${total}`,8,true,'#ffffff');
+  return p;
+}
+
+function pdfSection(p,title,x,top,w,h) {
+  p.rect(x,top,w,h,[1,1,1],'#9aa7b1');
+  p.rect(x,top,w,18,[0.12,0.31,0.48],null);
+  p.text(x+8,top+5,title.toUpperCase(),8,true,'#ffffff');
+  return {x,top:top+18,w,h:h-18};
+}
+
+function pdfBox(p,label,value,x,top,w,h) {
+  p.rect(x,top,w,h,[1,1,1],'#c8d0d8');
+  p.text(x+5,top+4,label.toUpperCase(),5,true,'#536173');
+  const lines=pdfWords(value || '-', Math.max(8,Math.floor((w-10)/3.6)), Math.max(1,Math.floor((h-16)/8)));
+  lines.forEach((line,index)=>p.text(x+5,top+14+index*8,line,7,false,'#172033'));
+}
+
+function pdfSkillPanel(p,skills,x,top,w,h) {
+  const cols=[.20,.09,.09,.09,.09,.44];
+  const xs=[x]; for(let i=0;i<cols.length;i++)xs.push(xs[i]+w*cols[i]);
+  const headerH=16; const rowH=(h-headerH)/skills.length;
+  p.rect(x,top,w,h,[1,1,1],'#9aa7b1');
+  p.rect(x,top,w,headerH,[0.12,0.31,0.48],null);
+  ['Skill','Base','Rating +','Total','Focus','Source'].forEach((label,i)=>p.text(xs[i]+3,top+4,label,4.7,true,'#ffffff'));
+  skills.forEach((skill,row)=>{
+    const parts=skillRatingParts(skill);
+    const focus=document.querySelector(`select[data-focus="${CSS.escape(skill)}"]`)?.value || '';
+    const note=document.querySelector(`input[data-skill-note="${CSS.escape(skill)}"]`)?.value?.trim() || '';
+    const source=[...parts.sources,note].filter(Boolean).join('; ') || '';
+    const y=top+headerH+row*rowH;
+    p.line(x,y+rowH,x+w,y+rowH,'#c8d0d8',.25);
+    [skill,parts.base,printSigned(parts.bonus),parts.total,focus,source].forEach((value,i)=>{
+      const char=Math.max(4,Math.floor((xs[i+1]-xs[i]-6)/2.6));
+      const lines=pdfWords(value, char, i===5?2:1);
+      lines.forEach((line,n)=>p.text(xs[i]+3,y+3+n*5.1,line,i===5?4.5:5.2,i===3,'#172033'));
+    });
+  });
+}
+
+function pdfCorePage(page,total) {
+  const p=pdfHeader(page,total,'Identity, main skills, resources and complete skill list');
+  const identity=pdfSection(p,'Character Identity',18,70,805,72);
+  const fields=[['Character Name',printValue('characterName')||'Unnamed Character'],['Faction',printValue('faction')],['Career / Role',printValue('careerRole')],['Doctrine / Unit',printValue('doctrine')],['Homeworld',printValue('homeworld')],['Concept',printValue('concept')],['XP / Advancement',printValue('xp')],['Restriction',printValue('restriction')]];
+  const boxW=(identity.w-18)/4; fields.forEach((field,i)=>pdfBox(p,field[0],field[1],identity.x+5+(i%4)*(boxW+4.5),identity.top+5+Math.floor(i/4)*24,boxW,20));
+  const main=pdfSection(p,'Main Skills and Resources',18,150,805,70);
+  const chipW=(main.w-16)/7;
+  mainSkills.forEach((skill,i)=>{ const parts=skillRatingParts(skill); const x=main.x+5+i*(chipW+1.6); pdfBox(p,skill,`B ${parts.base}  +${parts.bonus||0}  = ${parts.total}`,x,main.top+5,chipW,26); });
+  const tracks=[['HP / Vigor',printValue('hp')],['Firewall',printValue('firewall')],['Armour',printValue('armour')],['Mental Stress',printValue('mentalStress')],['Momentum',printValue('momentum')],['Heat',printValue('heat')]];
+  const trackW=(main.w-16)/6; tracks.forEach((track,i)=>pdfBox(p,track[0],track[1],main.x+5+i*(trackW+1.6),main.top+36,trackW,22));
+  const skillSec=pdfSection(p,'Skills',18,228,805,346);
+  const gap=10; const panelW=(skillSec.w-10-gap)/2; const panelH=skillSec.h-10;
+  pdfSkillPanel(p,skillOrder.slice(0,16),skillSec.x+5,skillSec.top+5,panelW,panelH);
+  pdfSkillPanel(p,skillOrder.slice(16),skillSec.x+5+panelW+gap,skillSec.top+5,panelW,panelH);
+  return p.commands.join('\n');
+}
+
+function pdfOptionCard(p,title,item,x,top,w,h,kind) {
+  p.rect(x,top,w,h,[0.97,0.985,0.995],'#9aa7b1');
+  p.rect(x,top,w,20,kind==='trait'?[0.14,0.35,0.52]:[0.12,0.31,0.48],null);
+  p.text(x+8,top+5,item?.name||title,8,true,'#ffffff');
+  const primary=item?.primary||'-', secondary=item?.secondary||'-';
+  p.text(x+8,top+28,`Primary: ${primary}     Secondary: ${secondary}`,6.3,true,'#172033');
+  const body=item?.description||item?.brief||''; const effect=item?.effect||'';
+  const bodyLines=pdfWords(body,Math.max(25,Math.floor((w-16)/3.3)),3); bodyLines.forEach((line,i)=>p.text(x+8,top+40+i*7,line,5.6,false,'#172033'));
+  const effectLines=pdfWords(effect,Math.max(25,Math.floor((w-16)/3.3)),3); effectLines.forEach((line,i)=>p.text(x+8,top+64+i*7,line,5.6,false,'#172033'));
+}
+
+function pdfGearBlock(p,title,items,x,top,w,h,kind) {
+  p.rect(x,top,w,h,[1,1,1],'#9aa7b1');
+  p.rect(x,top,w,20,[0.12,0.31,0.48],null);
+  p.text(x+8,top+5,title.toUpperCase(),8,true,'#ffffff');
+  const cols=[.03,.16,.09,.07,.65]; const xs=[x+5]; const innerW=w-10; for(let i=0;i<cols.length;i++)xs.push(xs[i]+innerW*cols[i]);
+  const tableTop=top+26; const headerH=14; const rows=Math.max(items.length, kind==='weapon'?2:5); const rowH=(h-32-headerH)/rows;
+  p.rect(x+5,tableTop,innerW,headerH,[0.12,0.31,0.48],null);
+  ['#','Item',kind==='weapon'?'Skill':'Type','Wt','Rules / Notes'].forEach((label,i)=>p.text(xs[i]+2,tableTop+4,label,4.7,true,'#ffffff'));
+  for(let row=0;row<rows;row++){
+    const item=items[row]; const y=tableTop+headerH+row*rowH; p.line(x+5,y+rowH,x+5+innerW,y+rowH,'#c8d0d8',.25);
+    if(!item)continue;
+    const entry=item.entry||{}; const type=kind==='weapon'?inferWeaponSkill(entry.name||''):entry.type||''; const rules=entry.mechanic||entry.brief||'';
+    const vals=[String(item.index||row+1),entry.name||'',type,entry.weight||'',rules];
+    vals.forEach((value,i)=>{const max=i===4?Math.max(18,Math.floor((xs[i+1]-xs[i]-4)/2.6)):Math.max(4,Math.floor((xs[i+1]-xs[i]-4)/3)); const lines=pdfWords(value,max,i===4?2:1); lines.forEach((line,n)=>p.text(xs[i]+2,y+3+n*5.1,line,i===4?4.5:5.1,false,'#172033'));});
+  }
+}
+
+function pdfGearPage(page,total,content,beginner=false) {
+  const p=pdfHeader(page,total,'Weapons and equipment');
+  const top=76; const h=beginner?190:226; const gap=16;
+  pdfGearBlock(p,`Weapons - ${content.weapons.length} Selected`,content.weapons,18,top,805,h,'weapon');
+  pdfGearBlock(p,`Equipment - ${content.equipment.length} Selected`,content.equipment,18,top+h+gap,805,h,'equipment');
+  return p.commands.join('\n');
+}
+
+function pdfOptionsPage(page,total,title,items,kind) {
+  const p=pdfHeader(page,total,title);
+  const cardH=Math.floor((500-((Math.max(1,items.length)-1)*12))/Math.max(1,items.length));
+  (items.length?items:[{name:`No ${kind==='trait'?'Traits':'Talents'} selected`}]).slice(0,3).forEach((item,index)=>pdfOptionCard(p,kind==='trait'?'Trait':'Talent',item,18,76+index*(cardH+12),805,cardH,kind));
+  return p.commands.join('\n');
+}
+
+function buildMobilePortfolioPdfPages() {
+  const beginner=isBeginnerPrintCharacter(); const traits=selectedPrintTraits(); const talents=selectedPrintTalents(); const content=printSupplementContent();
+  const pages=[];
+  if(beginner){ pages.push(pdfCorePage(1,2)); const p=pdfHeader(2,2,'Starter trait, talent, weapons and equipment'); if(traits[0])pdfOptionCard(p,'Trait',traits[0],18,76,390,105,'trait'); if(talents[0])pdfOptionCard(p,'Talent',talents[0],433,76,390,105,'talent'); const gearTop=194, gearH=176, gap=14; pdfGearBlock(p,`Weapons - ${content.weapons.length} Selected`,content.weapons,18,gearTop,805,gearH,'weapon'); pdfGearBlock(p,`Equipment - ${content.equipment.length} Selected`,content.equipment,18,gearTop+gearH+gap,805,gearH,'equipment'); pages.push(p.commands.join('\n')); return pages; }
+  pages.push(pdfCorePage(1,4)); pages.push(pdfOptionsPage(2,4,'Selected Traits',traits,'trait')); pages.push(pdfOptionsPage(3,4,'Selected Talents',talents,'talent')); pages.push(pdfGearPage(4,4,content,false)); return pages;
+}
+
+async function exportMobileLandscapePdf() {
+  setExportStatus('Preparing true A4 landscape PDF...');
+  await new Promise(resolve=>setTimeout(resolve,40));
+  const pdf=makeTextPdf(buildMobilePortfolioPdfPages());
+  const name=printValue('characterName')||'Infinity 2D20 Character'; const filename=mobilePdfFilename(name); const file=new File([pdf],filename,{type:'application/pdf'});
+  if(navigator.canShare && navigator.canShare({files:[file]})) {
+    try { await navigator.share({files:[file],title:filename,text:'Landscape character portfolio PDF'}); setExportStatus('Landscape PDF ready. Choose Print or Save in the share sheet.'); window.setTimeout(()=>setExportStatus(''),2800); return; }
+    catch(error){ if(error?.name==='AbortError'){setExportStatus('Landscape PDF export cancelled.');window.setTimeout(()=>setExportStatus(''),1800);return;} }
+  }
+  const url=URL.createObjectURL(pdf); const link=document.createElement('a'); link.href=url; link.download=filename; link.style.display='none'; document.body.appendChild(link); link.click(); link.remove(); window.setTimeout(()=>URL.revokeObjectURL(url),30000); setExportStatus('Landscape PDF exported. Open it from downloads to print or share.'); window.setTimeout(()=>setExportStatus(''),3500);
+}
+
 function printCharacterSheet() {
   buildPrintPortfolio();
-  const source = document.getElementById("printPortfolio");
-  const markup = source?.innerHTML?.trim() || "";
-  if (!markup) {
-    alert("The current character portfolio could not be built. Please refresh the page and try again.");
-    return;
-  }
-
-  // Keep the compact print document hidden in the current page. This avoids an
-  // unnecessary visible tab or popup before the browser's native print preview.
+  if (isMobilePortfolioExport()) { exportMobileLandscapePdf().catch(error=>{ console.error(error); setExportStatus('Landscape PDF export failed. Please refresh and try again.'); }); return; }
+  const source = document.getElementById("printPortfolio"); const markup = source?.innerHTML?.trim() || "";
+  if (!markup) { alert("The current character portfolio could not be built. Please refresh the page and try again."); return; }
   if (activeCompactPrintFrame?.isConnected) activeCompactPrintFrame.remove();
-  const frame = document.createElement("iframe");
-  const token = `infinity-print-${Date.now()}-${Math.random().toString(16).slice(2)}`;
-  let printed = false;
-  let cleanupTimer = null;
-
-  frame.className = "compact-print-frame";
-  frame.setAttribute("aria-hidden", "true");
-  frame.setAttribute("tabindex", "-1");
-  frame.title = "";
-  activeCompactPrintFrame = frame;
-
-  const cleanup = () => {
-    window.removeEventListener("message", onReady);
-    if (cleanupTimer) window.clearTimeout(cleanupTimer);
-    if (frame.isConnected) frame.remove();
-    if (activeCompactPrintFrame === frame) activeCompactPrintFrame = null;
-  };
-
-  const printFromFrame = () => {
-    if (printed || !frame.isConnected) return;
-    printed = true;
-    const frameWindow = frame.contentWindow;
-    if (!frameWindow) {
-      cleanup();
-      alert("The print preview could not be opened. Please refresh the page and try again.");
-      return;
-    }
-    frameWindow.addEventListener("afterprint", cleanup, { once: true });
-    // A brief delay lets browser print engines finish applying the linked stylesheet.
-    window.setTimeout(() => {
-      frameWindow.focus();
-      frameWindow.print();
-    }, 80);
-    // Some browsers do not fire afterprint when the preview is cancelled.
-    cleanupTimer = window.setTimeout(cleanup, 60000);
-  };
-
-  const onReady = event => {
-    if (event.source !== frame.contentWindow) return;
-    if (event.data?.type !== "infinity-compact-print-ready" || event.data?.token !== token) return;
-    printFromFrame();
-  };
-
-  window.addEventListener("message", onReady);
-  document.body.appendChild(frame);
-
-  const characterName = printValue("characterName") || "Infinity 2D20 Character";
-  const frameDocument = frame.contentDocument || frame.contentWindow?.document;
-  frameDocument.open();
-  frameDocument.write(compactPrintFrameHtml(markup, `${characterName} - ${PRINT_WINDOW_MARKER}`, token));
-  frameDocument.close();
-
-  // Reliable fallback if a browser does not emit the iframe load message.
-  window.setTimeout(printFromFrame, 1200);
+  const frame = document.createElement("iframe"); const token = `infinity-print-${Date.now()}-${Math.random().toString(16).slice(2)}`; let printed = false; let cleanupTimer = null;
+  frame.className = "compact-print-frame"; frame.setAttribute("aria-hidden", "true"); frame.setAttribute("tabindex", "-1"); frame.title = ""; activeCompactPrintFrame = frame;
+  const cleanup = () => { window.removeEventListener("message", onReady); if (cleanupTimer) window.clearTimeout(cleanupTimer); if (frame.isConnected) frame.remove(); if (activeCompactPrintFrame === frame) activeCompactPrintFrame = null; };
+  const printFromFrame = () => { if (printed || !frame.isConnected) return; printed = true; const frameWindow = frame.contentWindow; if (!frameWindow) { cleanup(); alert("The print preview could not be opened. Please refresh the page and try again."); return; } frameWindow.addEventListener("afterprint", cleanup, { once: true }); window.setTimeout(() => { frameWindow.focus(); frameWindow.print(); }, 80); cleanupTimer = window.setTimeout(cleanup, 60000); };
+  const onReady = event => { if (event.source !== frame.contentWindow) return; if (event.data?.type !== "infinity-compact-print-ready" || event.data?.token !== token) return; printFromFrame(); };
+  window.addEventListener("message", onReady); document.body.appendChild(frame); const characterName = printValue("characterName") || "Infinity 2D20 Character"; const frameDocument = frame.contentDocument || frame.contentWindow?.document; frameDocument.open(); frameDocument.write(compactPrintFrameHtml(markup, `${characterName} - ${PRINT_WINDOW_MARKER}`, token)); frameDocument.close(); window.setTimeout(printFromFrame, 1200);
 }
 
 // Ctrl/Cmd+P is redirected before the browser begins its normal editable-sheet preview.
@@ -11502,7 +11675,7 @@ window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v15-singlefile";
+  document.documentElement.dataset.infinityBuild = "v20-mobile-direct-pdf";
   initLists();
   buildMainSkills();
   buildSkillTable("skillsLeft", skillOrder.slice(0,16));
