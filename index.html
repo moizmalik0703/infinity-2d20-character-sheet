@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-v14.css" data-portfolio-style>
 </head>
-<body>
+<body data-build="v14-cacheproof">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
-      <p>Browser-based character sheet · Export / Print Current Character Portfolio v13 - equal Skills Source columns.</p>
+      <p>Browser-based character sheet · v14 cache-proof build · equal Skills Source columns.</p>
     </div>
     <div class="actions">
       <button id="newSheetBtn">New</button>
@@ -20,7 +20,6 @@
       <button id="saveBtn">Save character</button>
       <button id="loadBtn">Load selected</button>
       <button id="deleteSaveBtn">Delete selected</button>
-      <button id="exportAllBtn">Export all saves</button>
       <button id="printBtn" type="button" title="Exports the current character portfolio to the browser print preview">Export / Print Current Character Portfolio</button>
     </div>
   </header>
@@ -117,7 +116,7 @@
 
   <section id="printPortfolio" aria-hidden="true"></section>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="data-v14.js"></script>
+  <script src="app-v14.js"></script>
 </body>
 </html>
