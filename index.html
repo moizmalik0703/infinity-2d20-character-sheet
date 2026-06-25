@@ -1600,13 +1600,58 @@ body.print-window #printPortfolio {
 .print-beginner-gear-row[data-equal-gear-row] .print-section { height:100% !important; margin-bottom:0 !important; }
 .print-beginner-equipment-row .print-equipment-table col.print-gear-col-5 { width:65% !important; }
 #exportAllBtn, #downloadBtn, #importFile, label[for="importFile"] { display:none !important; }
+
+
+/* v16: random/manual gear uses the same full-width equal-row layout as beginner gear. */
+.print-full-gear-stack[data-equal-full-gear-stack] {
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) !important;
+  grid-template-rows:minmax(70mm,auto) minmax(70mm,auto) !important;
+  gap:2.2mm !important;
+  width:100% !important;
+  min-width:0 !important;
+  box-sizing:border-box !important;
+}
+.print-full-gear-row[data-equal-full-gear-row] {
+  min-width:0 !important;
+  min-height:70mm !important;
+  box-sizing:border-box !important;
+}
+.print-full-gear-row[data-equal-full-gear-row] .print-section {
+  height:100% !important;
+  margin-bottom:0 !important;
+}
+.print-full-gear-row[data-equal-full-gear-row] .print-section-body {
+  padding:1.35mm 1.7mm 1.45mm;
+}
+.print-full-gear-row[data-equal-full-gear-row] .print-gear-table {
+  width:100% !important;
+  table-layout:fixed !important;
+  font-size:5.25pt;
+}
+.print-full-gear-row[data-equal-full-gear-row] .print-gear-table th,
+.print-full-gear-row[data-equal-full-gear-row] .print-gear-table td {
+  padding:.34mm .55mm;
+  line-height:1.15;
+  vertical-align:top;
+}
+.print-full-equipment-row .print-equipment-table col.print-gear-col-5 { width:65% !important; }
+.print-full-weapons-row .print-weapon-table col.print-gear-col-5 { width:65% !important; }
+.print-full-gear-row[data-equal-full-gear-row] .print-gear-table td:nth-child(5) {
+  white-space:normal !important;
+  overflow-wrap:anywhere !important;
+  word-break:break-word !important;
+}
+@media print {
+  .print-full-gear-stack[data-equal-full-gear-stack] { grid-template-rows:minmax(70mm,auto) minmax(70mm,auto) !important; }
+}
 </style>
 </head>
-<body data-build="v15-singlefile">
+<body data-build="v16-singlefile">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
-      <p>Browser-based character sheet · v15 single-file build · locked Skills and Gear print geometry.</p>
+      <p>Browser-based character sheet · v16 single-file build · locked Skills and equal full gear rows.</p>
     </div>
     <div class="actions">
       <button id="newSheetBtn">New</button>
@@ -10975,7 +11020,10 @@ function printGearTable(kind, items, options = {}) {
   const isWeapon = kind === "weapon";
   const hasPlayerNotes = items.some(item => item.note);
   const compactBeginner = Boolean(options.compactBeginner);
-  const rulesLimit = compactBeginner ? (isWeapon ? 96 : 88) : (items.length >= 8 ? 96 : 210);
+  const compactFull = Boolean(options.compactFull);
+  // Full-character gear is constrained to two equal-height print rows. Compact rules text
+  // preserves the four-page cap; extended rules remain available in the browser sheet.
+  const rulesLimit = compactBeginner ? (isWeapon ? 96 : 88) : (compactFull ? (isWeapon ? 108 : 92) : (items.length >= 8 ? 96 : 210));
   const rows = items.map(item => {
     const entry = item.entry;
     const type = isWeapon ? inferWeaponSkill(entry.name || "") : entry.type || "";
@@ -10996,7 +11044,11 @@ function printGearTable(kind, items, options = {}) {
     ? (hasPlayerNotes
       ? (isWeapon ? [3, 15, 8, 7, 49, 18] : [3, 15, 8, 7, 49, 18])
       : (isWeapon ? [3, 17, 9, 7, 64] : [3, 16, 9, 7, 65]))
-    : (hasPlayerNotes ? [5, 24, 13, 11, 36, 11] : [5, 26, 13, 11, 45]);
+    : (compactFull
+      ? (hasPlayerNotes
+        ? (isWeapon ? [3, 14, 8, 7, 48, 20] : [3, 14, 8, 7, 48, 20])
+        : (isWeapon ? [3, 16, 9, 7, 65] : [3, 16, 9, 7, 65]))
+      : (hasPlayerNotes ? [5, 24, 13, 11, 36, 11] : [5, 26, 13, 11, 45]));
   const cols = widths.map((width, index) => `<col class="print-gear-col-${index + 1}" style="width:${width}%">`).join("");
   return `<table class="print-table print-gear-table print-${isWeapon ? "weapon" : "equipment"}-table ${hasPlayerNotes ? "with-player-notes" : "no-player-notes"}" style="width:100%;table-layout:fixed;">
     <colgroup>${cols}</colgroup>
@@ -11034,10 +11086,23 @@ function buildPrintGearMarkup(content, extraClass = "") {
   return `<div class="print-gear-grid${gearSections.length === 1 ? " one-column" : ""} ${extraClass}">${gearSections.join("")}</div>`;
 }
 
+function buildPrintFullGearRows(content) {
+  const sections = [
+    content.weapons.length
+      ? `<div class="print-full-gear-row print-full-weapons-row" data-equal-full-gear-row style="min-height:70mm;min-width:0;box-sizing:border-box;">${printSection(`Weapons - ${content.weapons.length} Selected`, printGearTable("weapon", content.weapons, { compactFull: true }))}</div>`
+      : "",
+    content.equipment.length
+      ? `<div class="print-full-gear-row print-full-equipment-row" data-equal-full-gear-row style="min-height:70mm;min-width:0;box-sizing:border-box;">${printSection(`Equipment - ${content.equipment.length} Selected`, printGearTable("equipment", content.equipment, { compactFull: true }))}</div>`
+      : ""
+  ].filter(Boolean);
+  if (!sections.length) return "";
+  return `<div class="print-full-gear-stack" data-equal-full-gear-stack style="display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto;gap:2.2mm;width:100%;min-width:0;box-sizing:border-box;">${sections.join("")}</div>`;
+}
+
 function buildPrintGearPage(page, total, content) {
-  return `<section class="print-page">${printHeader(page, total, "Weapons and equipment")}
-    ${buildPrintGearMarkup(content)}
-    <div class="print-rule-reminder">Gear is split into Weapons and Equipment. Empty Weapon and Equipment rows are omitted from this compact print portfolio.</div>
+  return `<section class="print-page print-full-gear-page">${printHeader(page, total, "Weapons and equipment")}
+    ${buildPrintFullGearRows(content)}
+    <div class="print-rule-reminder">Gear is split into Weapons and Equipment. Empty Weapon and Equipment rows are omitted. Longer rules are abbreviated here and remain available in the browser sheet.</div>
   </section>`;
 }
 
@@ -11141,7 +11206,7 @@ function buildPrintPortfolio() {
   container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
 }
 
-const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v15 - locked print geometry";
+const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v16 - equal full gear rows";
 
 function printStylesheetUrl() {
   const link = document.querySelector('link[data-portfolio-style]');
@@ -11178,6 +11243,12 @@ function compactPrintFrameHtml(markup, title, token) {
     .print-beginner-gear-row[data-equal-gear-row] .print-section{height:100%!important;margin-bottom:0!important;}
     .print-beginner-gear-row[data-equal-gear-row] .print-gear-table{width:100%!important;table-layout:fixed!important;}
     .print-beginner-equipment-row .print-equipment-table col.print-gear-col-5{width:65%!important;}
+    .print-full-gear-stack[data-equal-full-gear-stack]{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(70mm,auto) minmax(70mm,auto)!important;gap:2.2mm!important;width:100%!important;min-width:0!important;box-sizing:border-box!important;}
+    .print-full-gear-row[data-equal-full-gear-row]{min-width:0!important;min-height:70mm!important;box-sizing:border-box!important;}
+    .print-full-gear-row[data-equal-full-gear-row] .print-section{height:100%!important;margin-bottom:0!important;}
+    .print-full-gear-row[data-equal-full-gear-row] .print-gear-table{width:100%!important;table-layout:fixed!important;}
+    .print-full-equipment-row .print-equipment-table col.print-gear-col-5,.print-full-weapons-row .print-weapon-table col.print-gear-col-5{width:65%!important;}
+    .print-full-gear-row[data-equal-full-gear-row] .print-gear-table td:nth-child(5){white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important;}
     @media print{html,body{margin:0!important;padding:0!important;}body.print-window #printPortfolio{display:block!important;}.print-page{margin:0 auto!important;}}
   </style>
 </head>
@@ -11203,17 +11274,21 @@ function compactPrintFrameHtml(markup, title, token) {
           }
         });
       });
-      document.querySelectorAll('[data-equal-gear-stack]').forEach(function(stack){
-        var rows=[].slice.call(stack.querySelectorAll(':scope > [data-equal-gear-row]'));
-        if(rows.length!==2)return;
-        rows.forEach(function(row){row.style.removeProperty('height');});
-        var tallest=Math.ceil(Math.max.apply(null,rows.map(function(row){return row.getBoundingClientRect().height;})));
-        rows.forEach(function(row){
-          row.style.setProperty('height',tallest+'px','important');
-          var section=row.querySelector('.print-section');
-          if(section)section.style.setProperty('height','100%','important');
+      function lockEqualGearRows(stackSelector,rowSelector){
+        document.querySelectorAll(stackSelector).forEach(function(stack){
+          var rows=[].slice.call(stack.querySelectorAll(':scope > '+rowSelector));
+          if(rows.length!==2)return;
+          rows.forEach(function(row){row.style.removeProperty('height');});
+          var tallest=Math.ceil(Math.max.apply(null,rows.map(function(row){return row.getBoundingClientRect().height;})));
+          rows.forEach(function(row){
+            row.style.setProperty('height',tallest+'px','important');
+            var section=row.querySelector('.print-section');
+            if(section)section.style.setProperty('height','100%','important');
+          });
         });
-      });
+      }
+      lockEqualGearRows('[data-equal-gear-stack]','[data-equal-gear-row]');
+      lockEqualGearRows('[data-equal-full-gear-stack]','[data-equal-full-gear-row]');
     }
     window.addEventListener('load',function(){
       requestAnimationFrame(function(){requestAnimationFrame(function(){
