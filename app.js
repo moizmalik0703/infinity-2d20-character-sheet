@@ -1547,15 +1547,16 @@ function buildPrintPortfolio() {
   container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
 }
 
-const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v10 - balanced beginner gear rows";
+const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v12 - quiet print preview";
 
 function printStylesheetUrl() {
   return new URL("styles.css", window.location.href).href;
 }
 
-function compactPrintWindowHtml(markup, title) {
+function compactPrintFrameHtml(markup, title, token) {
   const stylesheet = printEscape(printStylesheetUrl());
   const safeTitle = printEscape(title || PRINT_WINDOW_MARKER);
+  const safeToken = JSON.stringify(String(token || ""));
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -1564,7 +1565,7 @@ function compactPrintWindowHtml(markup, title) {
   <title>${safeTitle}</title>
   <link rel="stylesheet" href="${stylesheet}">
   <style>
-    /* This document contains only the generated print portfolio. */
+    /* This hidden document contains only the generated print portfolio. */
     html, body { margin: 0; padding: 0; background: #fff; }
     body.print-window { background: #fff; }
     body.print-window #printPortfolio { display: block !important; }
@@ -1576,40 +1577,85 @@ function compactPrintWindowHtml(markup, title) {
   </style>
 </head>
 <body class="print-window print-portfolio-mode">
-  <section id="printPortfolio" aria-label="Compact print portfolio">${markup}</section>
+  <section id="printPortfolio" aria-label="Current character portfolio">${markup}</section>
   <script>
     window.addEventListener('load', function () {
-      // CSS must finish loading before the native print preview takes its snapshot.
-      window.setTimeout(function () {
-        window.focus();
-        window.print();
-      }, 500);
+      // Tell the parent that the stylesheet and compact portfolio are ready.
+      parent.postMessage({ type: 'infinity-compact-print-ready', token: ${safeToken} }, '*');
     });
   <\/script>
 </body>
 </html>`;
 }
 
+let activeCompactPrintFrame = null;
+
 function printCharacterSheet() {
   buildPrintPortfolio();
   const source = document.getElementById("printPortfolio");
   const markup = source?.innerHTML?.trim() || "";
   if (!markup) {
-    alert("The compact portfolio could not be built. Please refresh the page and try again.");
+    alert("The current character portfolio could not be built. Please refresh the page and try again.");
     return;
   }
 
-  // Open synchronously from the user action so browsers do not block the print window.
-  const printWindow = window.open("", "_blank", "popup=yes,width=1200,height=900");
-  if (!printWindow) {
-    alert("Your browser blocked the compact print window. Allow pop-ups for this site, then select Open Compact Print Portfolio again.");
-    return;
-  }
+  // Keep the compact print document hidden in the current page. This avoids an
+  // unnecessary visible tab or popup before the browser's native print preview.
+  if (activeCompactPrintFrame?.isConnected) activeCompactPrintFrame.remove();
+  const frame = document.createElement("iframe");
+  const token = `infinity-print-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  let printed = false;
+  let cleanupTimer = null;
+
+  frame.className = "compact-print-frame";
+  frame.setAttribute("aria-hidden", "true");
+  frame.setAttribute("tabindex", "-1");
+  frame.title = "";
+  activeCompactPrintFrame = frame;
+
+  const cleanup = () => {
+    window.removeEventListener("message", onReady);
+    if (cleanupTimer) window.clearTimeout(cleanupTimer);
+    if (frame.isConnected) frame.remove();
+    if (activeCompactPrintFrame === frame) activeCompactPrintFrame = null;
+  };
+
+  const printFromFrame = () => {
+    if (printed || !frame.isConnected) return;
+    printed = true;
+    const frameWindow = frame.contentWindow;
+    if (!frameWindow) {
+      cleanup();
+      alert("The print preview could not be opened. Please refresh the page and try again.");
+      return;
+    }
+    frameWindow.addEventListener("afterprint", cleanup, { once: true });
+    // A brief delay lets browser print engines finish applying the linked stylesheet.
+    window.setTimeout(() => {
+      frameWindow.focus();
+      frameWindow.print();
+    }, 80);
+    // Some browsers do not fire afterprint when the preview is cancelled.
+    cleanupTimer = window.setTimeout(cleanup, 60000);
+  };
+
+  const onReady = event => {
+    if (event.source !== frame.contentWindow) return;
+    if (event.data?.type !== "infinity-compact-print-ready" || event.data?.token !== token) return;
+    printFromFrame();
+  };
+
+  window.addEventListener("message", onReady);
+  document.body.appendChild(frame);
 
   const characterName = printValue("characterName") || "Infinity 2D20 Character";
-  printWindow.document.open();
-  printWindow.document.write(compactPrintWindowHtml(markup, `${characterName} - ${PRINT_WINDOW_MARKER}`));
-  printWindow.document.close();
+  const frameDocument = frame.contentDocument || frame.contentWindow?.document;
+  frameDocument.open();
+  frameDocument.write(compactPrintFrameHtml(markup, `${characterName} - ${PRINT_WINDOW_MARKER}`, token));
+  frameDocument.close();
+
+  // Reliable fallback if a browser does not emit the iframe load message.
+  window.setTimeout(printFromFrame, 1200);
 }
 
 // Ctrl/Cmd+P is redirected before the browser begins its normal editable-sheet preview.

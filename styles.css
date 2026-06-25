@@ -1423,3 +1423,44 @@ body.print-window #printPortfolio {
     grid-template-rows: minmax(34mm, auto) minmax(34mm, auto) !important;
   }
 }
+
+
+/* v12: quiet in-page print preview and wider Skill Source column. */
+.compact-print-frame {
+  position: fixed !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+@media print {
+  /* Source is deliberately the widest Skills column in each two-column table. */
+  .print-table .print-skill-name { width: 20%; }
+  .print-table .print-skill-total { width: 9%; }
+  .print-table .print-skill-source {
+    width: 44%;
+    font-size: 4.65pt;
+    line-height: 1.10;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .print-skills-table th:nth-child(1) { width: 20%; }
+  .print-skills-table th:nth-child(2),
+  .print-skills-table th:nth-child(3),
+  .print-skills-table th:nth-child(4) { width: 9%; }
+  .print-skills-table th:nth-child(5) { width: 9%; }
+  .print-skills-table th:nth-child(6) { width: 44%; }
+
+  .print-skills-table th:nth-child(6),
+  .print-skills-table td:nth-child(6) {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
