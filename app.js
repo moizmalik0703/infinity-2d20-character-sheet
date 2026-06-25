@@ -1,4 +1,19 @@
-const DATA = window.INFINITY_DATA;
+const DATA = window.INFINITY_DATA || window.DATA;
+
+// v11 boot guard: accept either historical data-global name and fail visibly instead of
+// leaving a partially rendered sheet with inactive controls.
+if (!DATA || !DATA.lists || !Array.isArray(DATA.traits) || !Array.isArray(DATA.talents)) {
+  window.addEventListener("DOMContentLoaded", () => {
+    const warning = document.createElement("div");
+    warning.setAttribute("role", "alert");
+    warning.style.cssText = "margin:1rem auto;padding:1rem;max-width:900px;border:2px solid #8b1e1e;background:#fff4f4;color:#5c1010;font:700 16px/1.4 Arial,sans-serif;";
+    warning.textContent = "Character data failed to load. Refresh the page once; if it persists, re-upload both data.js and app.js from the same release package.";
+    document.body.prepend(warning);
+  });
+  throw new Error("Infinity 2D20 data payload is missing or invalid.");
+}
+window.INFINITY_DATA = DATA;
+window.DATA = DATA;
 const mainSkills = ["Agility","Awareness","Brawn","Coordination","Intelligence","Personality","Willpower"];
 const skillGroups = {
   "Agility": ["Close Combat","Stealth"],

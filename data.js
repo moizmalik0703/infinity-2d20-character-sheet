@@ -1,4 +1,4 @@
-window.DATA = {
+window.INFINITY_DATA = {
   "traits": [
     {
       "category": "Combat",
@@ -7879,3 +7879,6 @@ window.DATA = {
     ]
   }
 };
+
+// Compatibility alias: older browser builds may still read window.DATA.
+window.DATA = window.INFINITY_DATA;
