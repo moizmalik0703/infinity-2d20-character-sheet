@@ -321,7 +321,7 @@ body.print-portfolio-mode #printPortfolio {
 }
 
 @media print {
-  @page { size: A4 landscape; margin: 7mm; }
+  @page { size: 297mm 210mm; margin: 7mm; }
 
   html, body {
     width: auto;
@@ -1433,15 +1433,31 @@ body.print-window #printPortfolio {
 
 /* v12: quiet in-page print preview and wider Skill Source column. */
 .compact-print-frame {
+  /* Mobile-safe export canvas: browsers derive print orientation from this document's
+     page geometry more reliably when it has a real landscape viewport. */
   position: fixed !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
+  left: -2400px !important;
+  top: -1800px !important;
+  width: 1123px !important;
+  height: 794px !important;
+  min-width: 1123px !important;
+  min-height: 794px !important;
   border: 0 !important;
   opacity: 0 !important;
   pointer-events: none !important;
-  visibility: hidden !important;
+  visibility: visible !important;
+  overflow: hidden !important;
+}
+
+/* v18 mobile export guard: explicit physical page geometry in the parent document. */
+@media print {
+  @page { size: 297mm 210mm !important; margin: 7mm !important; }
+  html, body {
+    width: 297mm !important;
+    min-width: 297mm !important;
+    height: 210mm !important;
+    min-height: 210mm !important;
+  }
 }
 
 @media print {
@@ -11280,7 +11296,7 @@ function buildPrintPortfolio() {
   container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
 }
 
-const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v17 - equal full gear rows";
+const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v18 - mobile landscape export";
 
 function printStylesheetUrl() {
   const link = document.querySelector('link[data-portfolio-style]');
@@ -11299,12 +11315,17 @@ function compactPrintFrameHtml(markup, title, token) {
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=1123, height=794, initial-scale=1, maximum-scale=1, viewport-fit=cover">
   <title>${safeTitle}</title>
   <style>${styleText}
+    /* v18: fixed A4 landscape geometry inside the export document. */
+    @page{size:297mm 210mm!important;margin:7mm!important;}
+    html{width:297mm!important;min-width:297mm!important;height:210mm!important;min-height:210mm!important;margin:0!important;padding:0!important;background:#fff!important;}
+    body{width:297mm!important;min-width:297mm!important;height:210mm!important;min-height:210mm!important;margin:0!important;padding:0!important;background:#fff!important;}
+    @media print{html,body{width:297mm!important;min-width:297mm!important;height:210mm!important;min-height:210mm!important;}}
     /* v15 hard geometry: critical rules live inside the print document. */
-    html,body{margin:0;padding:0;background:#fff;} body.print-window{background:#fff;}
-    body.print-window #printPortfolio{display:block!important;width:283mm;margin:0 auto;}
+    body.print-window{background:#fff;}
+    body.print-window #printPortfolio{display:block!important;width:283mm!important;min-width:283mm!important;margin:0 auto!important;}
     .print-skills-grid[data-equal-skills-grid]{display:flex!important;width:100%!important;gap:1.7mm!important;align-items:flex-start!important;box-sizing:border-box!important;}
     .print-skills-panel[data-equal-skills-panel]{flex:0 0 calc((100% - 1.7mm)/2)!important;width:calc((100% - 1.7mm)/2)!important;min-width:0!important;box-sizing:border-box!important;}
     .print-skills-table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:fixed!important;}
@@ -11338,7 +11359,7 @@ function compactPrintFrameHtml(markup, title, token) {
     @media print{html,body{margin:0!important;padding:0!important;}body.print-window #printPortfolio{display:block!important;}.print-page{margin:0 auto!important;}.print-locked-full-gear-stack[data-locked-full-gear-stack]{grid-template-rows:68mm 68mm!important;height:138.2mm!important;}.print-locked-full-gear-block[data-locked-full-gear-block]{height:68mm!important;min-height:68mm!important;max-height:68mm!important;}}
   </style>
 </head>
-<body class="print-window print-portfolio-mode">
+<body class="print-window print-portfolio-mode" data-print-orientation="landscape">
   <section id="printPortfolio" aria-label="Current character portfolio">${markup}</section>
   <script>
     function lockPortfolioGeometry(){
