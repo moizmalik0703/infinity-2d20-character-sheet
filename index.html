@@ -1432,7 +1432,11 @@ body.print-window #printPortfolio {
 
 
 /* v20: mobile direct-PDF export status. */
-.export-status{position:fixed;left:50%;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:9999;max-width:min(92vw,31rem);transform:translateX(-50%);padding:.72rem .95rem;border-radius:.55rem;background:#17365d;color:#fff;box-shadow:0 .35rem 1rem rgba(0,0,0,.22);font-size:.86rem;line-height:1.35;text-align:center}
+.export-status{position:fixed;left:50%;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:9999;max-width:min(92vw,34rem);transform:translateX(-50%);padding:.76rem .98rem;border-radius:.55rem;background:#17365d;color:#fff;box-shadow:0 .35rem 1rem rgba(0,0,0,.22);font-size:.86rem;line-height:1.35;text-align:center}
+.mobile-pdf-action{display:inline-flex;align-items:center;justify-content:center;margin:.62rem .25rem 0;padding:.54rem .78rem;border:1px solid #fff;border-radius:.38rem;background:#fff;color:#17365d;font-weight:700;text-decoration:none;min-height:2.35rem;touch-action:manipulation}
+.mobile-pdf-action:focus,.mobile-pdf-action:hover{outline:2px solid #d9eaf7;outline-offset:2px}
+.mobile-pdf-build{display:block;margin-top:.25rem;color:#d8e5f2;font-size:.72rem;line-height:1.2}
+@media print{.mobile-pdf-build{display:none!important}}
 
 /* v12: quiet in-page print preview and wider Skill Source column. */
 .compact-print-frame {
@@ -1729,8 +1733,9 @@ body.print-window #printPortfolio {
       <button id="saveBtn">Save character</button>
       <button id="loadBtn">Load selected</button>
       <button id="deleteSaveBtn">Delete selected</button>
-      <button id="printBtn" type="button" title="Exports a true landscape PDF on mobile, or opens print preview on desktop">Export / Print Current Character Portfolio</button>
+      <button id="printBtn" type="button" title="On mobile, creates a true A4 landscape PDF. Open or download that PDF, then print it from your PDF viewer.">Export / Print Current Character Portfolio</button>
     </div>
+  <span class="mobile-pdf-build" data-mobile-pdf-build="v21">Mobile export: direct A4 landscape PDF</span>
   </header>
 
   <main id="sheet" class="sheet">
@@ -1824,7 +1829,10 @@ body.print-window #printPortfolio {
   </main>
 
   <section id="printPortfolio" aria-hidden="true"></section>
-  <div id="exportStatus" class="export-status" role="status" aria-live="polite" hidden></div>
+  <div id="exportStatus" class="export-status" role="status" aria-live="polite" hidden>
+    <span id="exportStatusText"></span>
+    <a id="mobilePdfAction" class="mobile-pdf-action" hidden aria-label="Open landscape character portfolio PDF"></a>
+  </div>
 
   <script>window.INFINITY_DATA = {
   "traits": [
@@ -11300,7 +11308,7 @@ function buildPrintPortfolio() {
   container.innerHTML = builders.map((build, index) => build(index + 1, total)).join("");
 }
 
-const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v20 - direct mobile PDF";
+const PRINT_WINDOW_MARKER = "Infinity 2D20 Compact Portfolio v21 - direct mobile landscape PDF";
 
 function printStylesheetUrl() {
   const link = document.querySelector('link[data-portfolio-style]');
@@ -11414,19 +11422,37 @@ function compactPrintFrameHtml(markup, title, token) {
 let activeCompactPrintFrame = null;
 
 function isMobilePortfolioExport() {
-  return window.matchMedia('(pointer: coarse)').matches || Math.min(window.innerWidth || 0, window.innerHeight || 0) <= 800;
+  const ua = navigator.userAgent || '';
+  const mobileUa = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini|Mobile/i.test(ua);
+  const touchDevice = (navigator.maxTouchPoints || 0) > 0;
+  const shortEdge = Math.min(window.screen?.width || window.innerWidth || 0, window.screen?.height || window.innerHeight || 0);
+  const coarse = window.matchMedia?.('(any-pointer: coarse)').matches || window.matchMedia?.('(pointer: coarse)').matches;
+  // Covers Android phones/tablets, iPhones/iPads (including iPad desktop UA),
+  // and small touch-first browsers. Mobile never calls window.print().
+  return mobileUa || (touchDevice && shortEdge <= 1180) || (Boolean(coarse) && shortEdge <= 1024);
 }
 
-function setExportStatus(message) {
+function setExportStatus(message, actionLabel = '', actionUrl = '') {
   const status = document.getElementById('exportStatus');
-  if (!status) return;
+  const text = document.getElementById('exportStatusText');
+  const action = document.getElementById('mobilePdfAction');
+  if (!status || !text || !action) return;
   status.hidden = !message;
-  status.textContent = message || '';
+  text.textContent = message || '';
+  if (actionLabel && actionUrl) {
+    action.href = actionUrl;
+    action.textContent = actionLabel;
+    action.hidden = false;
+  } else {
+    action.removeAttribute('href');
+    action.textContent = '';
+    action.hidden = true;
+  }
 }
 
 function mobilePdfFilename(name) {
-  const cleaned = String(name || 'Infinity_2D20_Character').replace(/[\\/:*?"<>|]+/g, '-').trim().replace(/\s+/g, '_');
-  return `${cleaned || 'Infinity_2D20_Character'}_Portfolio.pdf`;
+  const cleaned = String(name || 'Infinity_2D20_Character').replace(/[\/:*?"<>|]+/g, '-').trim().replace(/\s+/g, '_');
+  return `${cleaned || 'Infinity_2D20_Character'}_Portfolio_Landscape.pdf`;
 }
 
 function pdfAscii(value) {
@@ -11455,11 +11481,11 @@ function makeTextPdf(pageStreams) {
   const W = 841.89, H = 595.28;
   pageStreams.forEach(stream => {
     const contentId = add(`<< /Length ${encoder.encode(stream).length} >>\nstream\n${stream}\nendstream`);
-    const pageId = add(`<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 ${W} ${H}] /Resources << /Font << /F1 ${fontRegular} 0 R /F2 ${fontBold} 0 R >> >> /Contents ${contentId} 0 R >>`);
+    const pageId = add(`<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 ${W} ${H}] /CropBox [0 0 ${W} ${H}] /BleedBox [0 0 ${W} ${H}] /TrimBox [0 0 ${W} ${H}] /Rotate 0 /Resources << /Font << /F1 ${fontRegular} 0 R /F2 ${fontBold} 0 R >> >> /Contents ${contentId} 0 R >>`);
     pageIds.push(pageId);
   });
   objects[pagesId] = `<< /Type /Pages /Kids [${pageIds.map(id => `${id} 0 R`).join(' ')}] /Count ${pageIds.length} >>`;
-  const catalogId = add(`<< /Type /Catalog /Pages ${pagesId} 0 R >>`);
+  const catalogId = add(`<< /Type /Catalog /Pages ${pagesId} 0 R /PageLayout /SinglePage /ViewerPreferences << /DisplayDocTitle true >> >>`);
   const chunks = [encoder.encode('%PDF-1.4\n%\xE2\xE3\xCF\xD3\n')];
   const offsets = [0]; let size = chunks[0].length;
   for (let id=1; id<objects.length; id+=1) {
@@ -11624,21 +11650,45 @@ function buildMobilePortfolioPdfPages() {
   pages.push(pdfCorePage(1,4)); pages.push(pdfOptionsPage(2,4,'Selected Traits',traits,'trait')); pages.push(pdfOptionsPage(3,4,'Selected Talents',talents,'talent')); pages.push(pdfGearPage(4,4,content,false)); return pages;
 }
 
-async function exportMobileLandscapePdf() {
-  setExportStatus('Preparing true A4 landscape PDF...');
-  await new Promise(resolve=>setTimeout(resolve,40));
-  const pdf=makeTextPdf(buildMobilePortfolioPdfPages());
-  const name=printValue('characterName')||'Infinity 2D20 Character'; const filename=mobilePdfFilename(name); const file=new File([pdf],filename,{type:'application/pdf'});
-  if(navigator.canShare && navigator.canShare({files:[file]})) {
-    try { await navigator.share({files:[file],title:filename,text:'Landscape character portfolio PDF'}); setExportStatus('Landscape PDF ready. Choose Print or Save in the share sheet.'); window.setTimeout(()=>setExportStatus(''),2800); return; }
-    catch(error){ if(error?.name==='AbortError'){setExportStatus('Landscape PDF export cancelled.');window.setTimeout(()=>setExportStatus(''),1800);return;} }
+function openOrDownloadLandscapePdf(pdf, filename) {
+  const url = URL.createObjectURL(pdf);
+  const action = document.getElementById('mobilePdfAction');
+  const ua = navigator.userAgent || '';
+  const isAppleMobile = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && (navigator.maxTouchPoints || 0) > 1);
+  const actionLabel = isAppleMobile ? 'Open Landscape PDF' : 'Download Landscape PDF';
+
+  if (action) {
+    action.href = url;
+    action.textContent = actionLabel;
+    action.setAttribute('aria-label', actionLabel);
+    action.hidden = false;
+    action.target = '_self';
+    action.rel = 'noopener';
+    if (isAppleMobile) action.removeAttribute('download');
+    else action.download = filename;
   }
-  const url=URL.createObjectURL(pdf); const link=document.createElement('a'); link.href=url; link.download=filename; link.style.display='none'; document.body.appendChild(link); link.click(); link.remove(); window.setTimeout(()=>URL.revokeObjectURL(url),30000); setExportStatus('Landscape PDF exported. Open it from downloads to print or share.'); window.setTimeout(()=>setExportStatus(''),3500);
+
+  // Do not use the device share API or the mobile browser print service: both can rebuild
+  // the job in portrait. This opens/downloads the actual A4 landscape PDF instead.
+  if (isAppleMobile) {
+    setExportStatus('Landscape PDF is ready. Tap Open Landscape PDF, then print from the PDF viewer.', actionLabel, url);
+  } else {
+    setExportStatus('Landscape PDF is ready. Tap Download Landscape PDF, then print from your PDF viewer.', actionLabel, url);
+    window.setTimeout(() => action?.click(), 0);
+  }
+  window.setTimeout(() => URL.revokeObjectURL(url), 10 * 60 * 1000);
+}
+
+function exportMobileLandscapePdf() {
+  setExportStatus('Creating true A4 landscape PDF...');
+  const pdf = makeTextPdf(buildMobilePortfolioPdfPages());
+  const name = printValue('characterName') || 'Infinity 2D20 Character';
+  openOrDownloadLandscapePdf(pdf, mobilePdfFilename(name));
 }
 
 function printCharacterSheet() {
   buildPrintPortfolio();
-  if (isMobilePortfolioExport()) { exportMobileLandscapePdf().catch(error=>{ console.error(error); setExportStatus('Landscape PDF export failed. Please refresh and try again.'); }); return; }
+  if (isMobilePortfolioExport()) { try { exportMobileLandscapePdf(); } catch(error) { console.error(error); setExportStatus('Landscape PDF export failed. Please refresh and try again.'); } return; }
   const source = document.getElementById("printPortfolio"); const markup = source?.innerHTML?.trim() || "";
   if (!markup) { alert("The current character portfolio could not be built. Please refresh the page and try again."); return; }
   if (activeCompactPrintFrame?.isConnected) activeCompactPrintFrame.remove();
@@ -11675,7 +11725,7 @@ window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v20-mobile-direct-pdf";
+  document.documentElement.dataset.infinityBuild = "v21-mobile-direct-download";
   initLists();
   buildMainSkills();
   buildSkillTable("skillsLeft", skillOrder.slice(0,16));
