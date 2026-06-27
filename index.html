@@ -1719,11 +1719,11 @@ body.print-window #printPortfolio {
 }
 </style>
 </head>
-<body data-build="v17-singlefile">
+<body data-build="v22-simplified-fields-final">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
-      <p>Browser-based character sheet · v17 single-file build · locked random-character gear rows and protected Rules / Notes.</p>
+      <p>Browser-based character sheet · v22 simplified character fields · Campaign Notes kept at the bottom.</p>
     </div>
     <div class="actions">
       <button id="newSheetBtn">New</button>
@@ -1735,7 +1735,7 @@ body.print-window #printPortfolio {
       <button id="deleteSaveBtn">Delete selected</button>
       <button id="printBtn" type="button" title="On mobile, creates a true A4 landscape PDF. Open or download that PDF, then print it from your PDF viewer.">Export / Print Current Character Portfolio</button>
     </div>
-  <span class="mobile-pdf-build" data-mobile-pdf-build="v21">Mobile export: direct A4 landscape PDF</span>
+  <span class="mobile-pdf-build" data-mobile-pdf-build="v22">Mobile export: direct A4 landscape PDF · v22 simplified fields</span>
   </header>
 
   <main id="sheet" class="sheet">
@@ -1747,15 +1747,11 @@ body.print-window #printPortfolio {
         <label>Player<input data-field="player"></label>
         <label>Faction<select data-field="faction" data-list="factions"></select></label>
         <label>Homeworld / Habitat<select data-field="homeworld" data-list="homeworlds"></select></label>
-        <label>Concept<input data-field="concept"></label>
         <label>XP<input data-field="xp"></label>
         <label>Career / Role<select data-field="careerRole" data-list="careerRoles"></select></label>
-        <label>Doctrine / Unit Tree<select data-field="doctrine" data-list="doctrines"></select></label>
-        <label>Restriction<select data-field="restriction" data-list="restrictions"></select></label>
-        <label>Talent Faction<select data-field="talentFaction" data-list="talentFactions"></select></label>
-        <label class="wide">Campaign Notes<input data-field="campaignNotes"></label>
+        <label>Career<select data-field="restriction" data-list="restrictions"></select></label>
       </div>
-      <p id="restrictionStatus" class="filter-status">Restriction: No Restrictions — all Traits and Talents are available.</p>
+      <p id="restrictionStatus" class="filter-status">Career filter: Any — all Traits and Talents are available.</p>
 
       <div class="two-column">
         <div class="panel">
@@ -1821,10 +1817,13 @@ body.print-window #printPortfolio {
             <label>Faction / Doctrine Contact<textarea data-field="contactFaction" placeholder="Who can help, pressure, train, or command you?"></textarea></label>
             <label>Personal Contact / Rival<textarea data-field="contactPersonal" placeholder="Who do you trust? Who wants you exposed, captured, or disgraced?"></textarea></label>
             <label>Lifepath Event / Secret<textarea data-field="lifepathSecret" placeholder="What shaped you? What secret, debt, oath, or obligation can complicate play?"></textarea></label>
-            <label>Campaign Notes<textarea data-field="campaignLongNotes" placeholder="Mission leads, rewards, injuries, relationships, discoveries, recurring enemies, and loose ends."></textarea></label>
           </div>
         </div>
       </div>
+
+      <label class="notes">Campaign Notes
+        <textarea data-field="campaignNotes" placeholder="Longer-running campaign notes, objectives, allies, threats, rewards, and unresolved story threads."></textarea>
+      </label>
     </section>
   </main>
 
@@ -10042,7 +10041,7 @@ function buildTalents() {
       <label>Prereq<div class="output" data-talent-prereq="${i}"></div></label>
       <label>Primary<div class="output" data-talent-primary="${i}"></div></label>
       <label>Secondary<div class="output" data-talent-secondary="${i}"></div></label>
-      <label>Restriction<div class="output" data-talent-restriction="${i}"></div></label>
+      <label>Eligibility<div class="output" data-talent-restriction="${i}"></div></label>
       <label>Rarity<div class="output" data-talent-rarity="${i}"></div></label>
       <label>Cost<div class="output" data-talent-cost="${i}"></div></label>
       <div class="wide-text text-panel talent-description">
@@ -10084,8 +10083,8 @@ function refreshRestrictionChoices() {
   const status = document.getElementById("restrictionStatus");
   if (status) {
     status.textContent = selected === "No Restrictions"
-      ? `Restriction: No Restrictions — all ${DATA.traits.length} Traits and ${DATA.talents.length} Talents are available.`
-      : `Restriction: ${selected} — ${traits.length} eligible Traits (including general options) and ${talents.length} eligible Talents are available.`;
+      ? `Career filter: Any — all ${DATA.traits.length} Traits and ${DATA.talents.length} Talents are available.`
+      : `Career filter: ${selected} — ${traits.length} eligible Traits (including general options) and ${talents.length} eligible Talents are available.`;
   }
 }
 
@@ -10996,12 +10995,9 @@ function buildPrintCorePage(page, total) {
     ["Player", printValue("player")],
     ["Faction", printValue("faction")],
     ["Homeworld / Habitat", printValue("homeworld")],
-    ["Concept", printValue("concept"), true],
     ["XP / Advancement", printValue("xp")],
     ["Career / Role", printValue("careerRole")],
-    ["Doctrine / Unit", printValue("doctrine")],
-    ["Restriction", printValue("restriction")],
-    ["Talent Faction", printValue("talentFaction")]
+    ["Career", printValue("restriction")]
   ].filter(([, value]) => value);
 
   const identity = printSection("Character Identity", `<div class="print-fields">${fields.map(field => printField(...field)).join("")}</div>`);
@@ -11259,12 +11255,11 @@ function printSupplementContent() {
   const equipment = selectedPrintGear("equipment");
   const conditions = selectedPrintConditions();
   const notes = [
-    ["Campaign Notes", printValue("campaignNotes")],
     ["Faction / Doctrine Contact", printValue("contactFaction")],
     ["Personal Contact / Rival", printValue("contactPersonal")],
     ["Lifepath Event / Secret", printValue("lifepathSecret")],
     ["Session Notes", printValue("scratchNotes")],
-    ["Campaign Log", printValue("campaignLongNotes")]
+    ["Campaign Notes", printValue("campaignNotes")]
   ].filter(([, value]) => value);
   return { weapons, equipment, conditions, notes };
 }
@@ -11586,7 +11581,7 @@ function pdfSkillPanel(p,skills,x,top,w,h) {
 function pdfCorePage(page,total) {
   const p=pdfHeader(page,total,'Identity, main skills, resources and complete skill list');
   const identity=pdfSection(p,'Character Identity',18,70,805,72);
-  const fields=[['Character Name',printValue('characterName')||'Unnamed Character'],['Faction',printValue('faction')],['Career / Role',printValue('careerRole')],['Doctrine / Unit',printValue('doctrine')],['Homeworld',printValue('homeworld')],['Concept',printValue('concept')],['XP / Advancement',printValue('xp')],['Restriction',printValue('restriction')]];
+  const fields=[['Character Name',printValue('characterName')||'Unnamed Character'],['Faction',printValue('faction')],['Homeworld / Habitat',printValue('homeworld')],['XP / Advancement',printValue('xp')],['Career / Role',printValue('careerRole')],['Career',printValue('restriction')]];
   const boxW=(identity.w-18)/4; fields.forEach((field,i)=>pdfBox(p,field[0],field[1],identity.x+5+(i%4)*(boxW+4.5),identity.top+5+Math.floor(i/4)*24,boxW,20));
   const main=pdfSection(p,'Main Skills and Resources',18,150,805,70);
   const chipW=(main.w-16)/7;
