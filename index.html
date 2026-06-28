@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="infinity-build" content="v28-tracks-clean">
+  <!-- DEPLOYMENT CHECK: v28-tracks-clean | XP and Heat removed | Wounds is a 0–3 dropdown. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -1727,11 +1729,11 @@ body.print-window #printPortfolio {
 .card-talent [data-talent-faction] { display:none !important; }
 </style>
 </head>
-<body data-build="v27-career-faction-homeworld-tracks">
+<body data-build="v28-tracks-clean">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
-      <p>Browser-based character sheet · v27 Career + Faction/Homeworld relationship · streamlined tracks · one Career field with linked eligibility and validated Faction/Homeworld choices.</p>
+      <p>Browser-based character sheet · v28 Career + Faction/Homeworld relationship · streamlined tracks · one Career field with linked eligibility and validated Faction/Homeworld choices.</p>
     </div>
     <div class="actions">
       <button id="newSheetBtn">New</button>
@@ -1743,7 +1745,7 @@ body.print-window #printPortfolio {
       <button id="deleteSaveBtn">Delete selected</button>
       <button id="printBtn" type="button" title="On mobile, creates a true A4 landscape PDF. Open or download that PDF, then print it from your PDF viewer.">Export / Print Current Character Portfolio</button>
     </div>
-  <span class="mobile-pdf-build" data-mobile-pdf-build="v24">Mobile export: direct A4 landscape PDF · v27 Career + Faction/Homeworld relationship · streamlined tracks</span>
+  <span class="mobile-pdf-build" data-mobile-pdf-build="v24">Mobile export: direct A4 landscape PDF · v28 Career + Faction/Homeworld relationship · streamlined tracks</span>
   </header>
 
   <main id="sheet" class="sheet">
@@ -9735,7 +9737,7 @@ window.INFINITY_DATA.homeworldsByFaction = {
   "NA2 / Mercenaries": ["Various worlds", "stations", "warzones", "caravanserai", "ships"],
   "O-12 / Nomads": ["Circulars", "stations", "orbital habitats", "Nomad and O-12 shipboard deployments"]
 };
-window.INFINITY_BUILD = "v27-career-faction-homeworld-tracks";
+window.INFINITY_BUILD = "v28-tracks-clean";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -11957,7 +11959,7 @@ window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v27-career-faction-homeworld-tracks";
+  document.documentElement.dataset.infinityBuild = "v28-tracks-clean";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
