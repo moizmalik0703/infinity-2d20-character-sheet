@@ -1717,13 +1717,21 @@ body.print-window #printPortfolio {
 @media print {
   .print-full-gear-stack[data-equal-full-gear-stack] { grid-template-rows:minmax(70mm,auto) minmax(70mm,auto) !important; }
 }
+
+/* v24: legacy profile controls are removed; the unified Career field drives eligibility. */
+.identity-grid label:has([data-field="doctrine"]),
+.identity-grid label:has([data-field="talentFaction"]),
+.identity-grid label:has([data-field="concept"]),
+.identity-grid label:has([data-field="campaignNotes"]) { display:none !important; }
+.card-talent [data-talent-doctrine],
+.card-talent [data-talent-faction] { display:none !important; }
 </style>
 </head>
-<body data-build="v22-simplified-fields-final">
+<body data-build="v24-career-faction-homeworld">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
-      <p>Browser-based character sheet · v22 simplified character fields · Campaign Notes kept at the bottom.</p>
+      <p>Browser-based character sheet · v24 career + faction homeworlds · one Career field with linked eligibility and related homeworld choices.</p>
     </div>
     <div class="actions">
       <button id="newSheetBtn">New</button>
@@ -1735,23 +1743,23 @@ body.print-window #printPortfolio {
       <button id="deleteSaveBtn">Delete selected</button>
       <button id="printBtn" type="button" title="On mobile, creates a true A4 landscape PDF. Open or download that PDF, then print it from your PDF viewer.">Export / Print Current Character Portfolio</button>
     </div>
-  <span class="mobile-pdf-build" data-mobile-pdf-build="v22">Mobile export: direct A4 landscape PDF · v22 simplified fields</span>
+  <span class="mobile-pdf-build" data-mobile-pdf-build="v24">Mobile export: direct A4 landscape PDF · v24 career + faction homeworlds</span>
   </header>
 
   <main id="sheet" class="sheet">
     <section class="page page-1">
       <h2>Page 1 - Identity, Main Skills, Tracks & Skills</h2>
 
-      <div class="grid identity-grid">
+      <div class="grid identity-grid" data-identity-grid>
         <label>Character Name<input data-field="characterName"></label>
         <label>Player<input data-field="player"></label>
         <label>Faction<select data-field="faction" data-list="factions"></select></label>
-        <label>Homeworld / Habitat<select data-field="homeworld" data-list="homeworlds"></select></label>
+        <label>Homeworld / Habitat<select data-field="homeworld" aria-describedby="homeworldRelationshipHint"></select></label>
         <label>XP<input data-field="xp"></label>
-        <label>Career / Role<select data-field="careerRole" data-list="careerRoles"></select></label>
-        <label>Career<select data-field="restriction" data-list="restrictions"></select></label>
+        <label>Career<select data-field="career" aria-describedby="restrictionStatus"></select></label>
       </div>
-      <p id="restrictionStatus" class="filter-status">Career filter: Any — all Traits and Talents are available.</p>
+      <p id="homeworldRelationshipHint" class="filter-status">Choose a Faction to see its related homeworlds and habitats.</p>
+      <p id="restrictionStatus" class="filter-status">Career: General / Unrestricted — all Traits and Talents are available.</p>
 
       <div class="two-column">
         <div class="panel">
@@ -9717,7 +9725,7 @@ body.print-window #printPortfolio {
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v14-cacheproof";
+window.INFINITY_BUILD = "v24-career-faction-homeworld";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -9803,18 +9811,177 @@ function inputField(field) {
   return document.querySelector(`[data-field="${field}"]`);
 }
 
+// v24 career and faction/homeworld refinement. Older saves may retain the former
+// careerRole and restriction values. They are migrated into the single visible Career
+// control without discarding the old eligibility information.
+const GENERAL_CAREER = "General / Unrestricted";
+const CAREER_FILTERS = {
+  "ALEPH Prestige": "ALEPH access or Posthuman background",
+  "Airborne": "Yu Jing or airborne operations background",
+  "Assassin": "Close combat or Hassassin background",
+  "Beastmaster": "Ariadna or frontier survival background",
+  "Diplomat": "Diplomatic, legal, or political background",
+  "Doctor": ["Medicine background", "Medicine or Haqqislamite military background", "Haqqislam or advanced Medicine background"],
+  "Engineer": ["Engineer or military support background", "Nomad, engineer, or remote-support background", "JSA, engineer, or battlefield support background"],
+  "Explorer": "O-12, scientific, or exploration background",
+  "Faction Prestige": "No Restrictions",
+  "Frontier Scout": "Ariadna or frontier survival background",
+  "Hacker": ["Nomad or advanced Hacking background", "O-12, Bureau Noir, or advanced Hacking background"],
+  "Haqqislam Scholar": "Haqqislam or academic background",
+  "Hassassin Bahram": "Haqqislam, Hassassin Bahram, or covert-ops background",
+  "Heavy Infantry": "Heavy infantry or military background",
+  "Imperial Service": "Yu Jing or state-security background",
+  "Infiltrator": "PanOceania or stealth recon background",
+  "Infowar Specialist": "O-12, Bureau Noir, or advanced Hacking background",
+  "Line Infantry": "Military or security background",
+  "O-12 Bureaucrat": "O-12, legal, diplomatic, or command background",
+  "Officer": "Military command or Yu Jing background",
+  "Recon": "Recon or sniper background",
+  "Remote Controller": "Nomad, engineer, or remote-support background",
+  "Skirmisher": "PanOceania or stealth recon background",
+  "Smuggler": "Mercenary, criminal, or trade-route background",
+  "TAG Pilot": "TAG, heavy infantry, or advanced Tech background",
+  "Voidfarer": "Extraplanetary or shipboard operations background"
+};
+
+function careerOptions() {
+  return [GENERAL_CAREER, ...(DATA.lists.careerRoles || [])]
+    .filter((value, index, values) => value && values.indexOf(value) === index);
+}
+
+function selectedCareer() {
+  return inputField("career")?.value || GENERAL_CAREER;
+}
+
+function careerFiltersFor(career) {
+  const raw = CAREER_FILTERS[career] || "No Restrictions";
+  return [...new Set((Array.isArray(raw) ? raw : [raw]).filter(Boolean))];
+}
+
+function careerFilterFor(career) {
+  return careerFiltersFor(career).join(" | ") || "No Restrictions";
+}
+
+function setCareerChoice(career, legacyRestriction = "") {
+  const select = inputField("career");
+  if (!select) return;
+  const value = career || GENERAL_CAREER;
+  const carried = (Array.isArray(legacyRestriction) ? legacyRestriction : [legacyRestriction])
+    .filter(entry => entry && entry !== "No Restrictions");
+  const existing = careerFiltersFor(value).filter(entry => entry !== "No Restrictions");
+  const combined = [...new Set([...existing, ...carried])];
+  // Saved/custom careers may not be in the current profile list. Preserve all
+  // matching legacy eligibility values so their Trait and Talent filtering works.
+  if (combined.length) CAREER_FILTERS[value] = combined;
+  else if (!Object.prototype.hasOwnProperty.call(CAREER_FILTERS, value)) CAREER_FILTERS[value] = "No Restrictions";
+  ensureSelectValue(select, value);
+  if (!select.value) select.value = GENERAL_CAREER;
+}
+
+function factionRecord(faction) {
+  const selected = String(faction || "");
+  return DATA.factions.find(entry => entry.faction === selected) ||
+    DATA.factions.find(entry => selected && entry.faction.startsWith(selected + " -")) ||
+    DATA.factions.find(entry => selected && selected.startsWith(entry.faction + " -")) || null;
+}
+
+function homeworldsForFaction(faction) {
+  const record = factionRecord(faction);
+  if (!record?.homeworld) return [];
+  const worlds = String(record.homeworld)
+    .split(/[,;]/)
+    .map(value => value.trim())
+    .filter(Boolean);
+  // Keep a campaign option available without exposing unrelated faction worlds.
+  return [...new Set([...worlds, "Other / campaign-specific"] )];
+}
+
+function closestFactionHomeworld(faction, preferred = "") {
+  const options = homeworldsForFaction(faction);
+  const requested = String(preferred || "").trim();
+  if (!requested) return options[0] || "";
+  if (options.includes(requested)) return requested;
+  const normalized = requested.toLowerCase();
+  const exactish = options.find(option => {
+    const candidate = option.toLowerCase();
+    return normalized.includes(candidate) || candidate.includes(normalized);
+  });
+  if (exactish) return exactish;
+  const tokenMatch = options.find(option => {
+    const candidate = option.toLowerCase();
+    return candidate.split(/\s+/).some(token => token.length > 3 && normalized.includes(token));
+  });
+  return tokenMatch || options[0] || requested;
+}
+
+function refreshHomeworldChoices({ value, preserve = true } = {}) {
+  const faction = inputField("faction")?.value || "";
+  const select = inputField("homeworld");
+  if (!select) return;
+  const requested = value !== undefined ? value : select.value;
+  const worlds = homeworldsForFaction(faction);
+  makeOptions(select, worlds, faction ? "Choose..." : "Choose Faction first...");
+  select.disabled = !faction;
+  select.title = faction
+    ? `Homeworld / Habitat choices linked to ${faction}.`
+    : "Choose a Faction first to filter Homeworld / Habitat choices.";
+  const hint = document.getElementById("homeworldRelationshipHint");
+  if (hint) hint.textContent = faction
+    ? `Homeworld / Habitat choices are linked to ${faction}.`
+    : "Choose a Faction to see its related homeworlds and habitats.";
+  if (!faction) return;
+  const selected = preserve ? closestFactionHomeworld(faction, requested) : (worlds[0] || "");
+  if (selected) ensureSelectValue(select, selected);
+}
+
+function pruneLegacyProfileFields() {
+  const retired = ["doctrine", "talentFaction", "concept", "careerRole", "restriction"];
+  retired.forEach(field => {
+    document.querySelectorAll(`[data-field="${field}"]`).forEach(control => {
+      const label = control.closest("label");
+      if (label) label.remove(); else control.remove();
+    });
+  });
+
+  document.querySelectorAll("[data-identity-grid] label").forEach(label => {
+    const field = label.querySelector("[data-field]")?.dataset.field || "";
+    const text = (label.textContent || "").replace(/\s+/g, " ").trim().toLowerCase();
+    if (retired.includes(field) ||
+        /^(doctrine|unit tree|talent faction|concept|campaign notes|career\s*\/\s*role|restriction)\b/.test(text)) {
+      label.remove();
+    }
+  });
+
+  const campaign = inputField("campaignNotes");
+  const page3 = document.querySelector(".page-3");
+  const bottomAnchor = page3?.querySelector(".two-column.lower");
+  const campaignLabel = campaign?.closest("label");
+  if (campaignLabel && page3 && !campaignLabel.closest(".page-3")) {
+    if (bottomAnchor) bottomAnchor.insertAdjacentElement("afterend", campaignLabel);
+    else page3.appendChild(campaignLabel);
+  }
+}
+
 function initLists() {
   document.querySelectorAll("select[data-list]").forEach(select => {
     const listName = select.dataset.list;
     makeOptions(select, DATA.lists[listName] || [], "Choose...");
   });
 
-  const restriction = inputField("restriction");
-  if (restriction) {
-    restriction.value = "No Restrictions";
-    restriction.addEventListener("change", refreshRestrictionChoices);
+  const career = inputField("career");
+  if (career) {
+    makeOptions(career, careerOptions(), "Choose...");
+    career.value = GENERAL_CAREER;
+    career.addEventListener("change", refreshRestrictionChoices);
   }
+
+  const faction = inputField("faction");
+  if (faction) {
+    faction.addEventListener("change", () => refreshHomeworldChoices({ preserve: false }));
+  }
+  refreshHomeworldChoices({ preserve: false });
 }
+
 function buildMainSkills() {
   const wrap = document.getElementById("mainSkills");
   wrap.innerHTML = "";
@@ -9956,15 +10123,19 @@ function updateSkillRatings() {
   });
 }
 
+function activeRestrictions() {
+  return careerFiltersFor(selectedCareer());
+}
+
 function activeRestriction() {
-  return inputField("restriction")?.value || "No Restrictions";
+  return activeRestrictions().join(" | ") || "No Restrictions";
 }
 
 function isEligibleForRestriction(item) {
-  const selected = activeRestriction();
-  if (!selected || selected === "No Restrictions") return true;
+  const selected = activeRestrictions();
+  if (!selected.length || selected.includes("No Restrictions")) return true;
   const itemRestriction = item.restriction || "No Restrictions";
-  return itemRestriction === "No Restrictions" || itemRestriction === selected;
+  return itemRestriction === "No Restrictions" || selected.includes(itemRestriction);
 }
 
 function eligibleTraits() {
@@ -9989,9 +10160,10 @@ function setTraitCard(index, traitName) {
 
 function setTalentCard(index, talentName) {
   const t = byName(DATA.talents, talentName);
-  ["level","career","doctrine","faction","prereq","primary","secondary","restriction","rarity","cost","description","effect"].forEach(k => {
+  ["level","career","prereq","primary","secondary","restriction","rarity","cost","description","effect"].forEach(k => {
     const dataKey = k === "prereq" ? "prerequisite" : k;
-    setText(document.querySelector(`[data-talent-${k}="${index}"]`), t[dataKey]);
+    const output = document.querySelector(`[data-talent-${k}="${index}"]`);
+    if (output) setText(output, t[dataKey]);
   });
   updateSkillRatings();
 }
@@ -10036,8 +10208,6 @@ function buildTalents() {
       <label>Talent<select data-talent-select="${i}"></select></label>
       <label>Level<div class="output" data-talent-level="${i}"></div></label>
       <label>Career<div class="output" data-talent-career="${i}"></div></label>
-      <label>Doctrine<div class="output" data-talent-doctrine="${i}"></div></label>
-      <label>Faction<div class="output" data-talent-faction="${i}"></div></label>
       <label>Prereq<div class="output" data-talent-prereq="${i}"></div></label>
       <label>Primary<div class="output" data-talent-primary="${i}"></div></label>
       <label>Secondary<div class="output" data-talent-secondary="${i}"></div></label>
@@ -10082,9 +10252,12 @@ function refreshRestrictionChoices() {
 
   const status = document.getElementById("restrictionStatus");
   if (status) {
-    status.textContent = selected === "No Restrictions"
-      ? `Career filter: Any — all ${DATA.traits.length} Traits and ${DATA.talents.length} Talents are available.`
-      : `Career filter: ${selected} — ${traits.length} eligible Traits (including general options) and ${talents.length} eligible Talents are available.`;
+    const career = selectedCareer();
+    const selectedFilters = activeRestrictions();
+    const eligibility = selectedFilters.filter(value => value !== "No Restrictions");
+    status.textContent = !eligibility.length
+      ? `Career: ${career} — all ${DATA.traits.length} Traits and ${DATA.talents.length} Talents are available.`
+      : `Career: ${career} — eligibility: ${eligibility.join("; ")}. ${traits.length} Traits (including general options) and ${talents.length} Talents are available.`;
   }
 }
 
@@ -10167,6 +10340,11 @@ function collectState() {
   state.weapons = [...document.querySelectorAll("select[data-weapon-select]")].map(el => el.value);
   state.equipment = [...document.querySelectorAll("select[data-equipment-select]")].map(el => el.value);
   state.conditions = [...document.querySelectorAll("select[data-condition-select]")].map(el => el.value);
+  state.careerRestriction = activeRestriction();
+  state.careerRestrictions = activeRestrictions();
+  // Compatibility keys make v24 saves understandable by earlier local copies.
+  state.careerRole = state.career || "";
+  state.restriction = activeRestriction();
   state.startBonuses = { ...startingSkillBonuses };
   return state;
 }
@@ -10178,8 +10356,10 @@ function applyState(state) {
     if (state[el.dataset.field] !== undefined) el.value = state[el.dataset.field];
   });
 
-  const restriction = inputField("restriction");
-  if (restriction && !restriction.value) restriction.value = "No Restrictions";
+  const legacyCareer = state.career || state.careerRole || GENERAL_CAREER;
+  const legacyRestriction = state.careerRestrictions || state.careerRestriction || state.restriction || "";
+  setCareerChoice(legacyCareer, legacyRestriction);
+  refreshHomeworldChoices({ value: state.homeworld || "", preserve: true });
   refreshRestrictionChoices();
 
   Object.entries(state.mainSkills || {}).forEach(([k, v]) => {
@@ -10616,31 +10796,26 @@ function randomCharacter() {
   const levelOneTalents = DATA.talents.filter(talent => String(talent.level) === "1");
   const anchorTalent = randomChoice(levelOneTalents);
   const faction = factionForTalentFaction(anchorTalent.faction);
-  const factionInfo = DATA.factions.find(entry => entry.faction === faction) ||
-    DATA.factions.find(entry => entry.faction.startsWith((faction || "").split(" - ")[0]));
-  const matchingTalents = levelOneTalents.filter(talent => talent.faction === anchorTalent.faction);
-  const chosenTalents = randomDistinct(matchingTalents.length >= 3 ? matchingTalents : levelOneTalents, 3);
 
   setFieldValue("characterName", `${randomChoice(RANDOM_GIVEN_NAMES)} "${randomChoice(RANDOM_CALLSIGNS)}"`);
   setFieldValue("player", "");
   setFieldValue("faction", faction);
-  setFieldValue("homeworld", factionInfo?.homeworld || randomChoice(DATA.lists.homeworlds));
-  setFieldValue("concept", "Randomly generated operative");
+  refreshHomeworldChoices({ preserve: false });
+  setFieldValue("homeworld", randomChoice(homeworldsForFaction(faction)) || "");
   setFieldValue("xp", "0");
-  setFieldValue("careerRole", anchorTalent.career || "");
-  setFieldValue("doctrine", anchorTalent.doctrine || "");
-  setFieldValue("restriction", "No Restrictions");
-  setFieldValue("talentFaction", anchorTalent.faction || "");
   setFieldValue("campaignNotes", "Generated random character - review before play.");
+  setCareerChoice(anchorTalent.career || GENERAL_CAREER, anchorTalent.restriction || "No Restrictions");
+  refreshRestrictionChoices();
 
   setDefaultTracks();
   clearEditableNotes();
   clearTraitAndTalentSlots();
   setMainSkillsToStartingBaseline();
-  refreshRestrictionChoices();
 
-  const generalTraits = DATA.traits.filter(trait => (trait.restriction || "No Restrictions") === "No Restrictions");
-  const chosenTraits = randomDistinct(generalTraits, 3);
+  const careerTalents = eligibleTalents().filter(talent => String(talent.level) === "1");
+  const chosenTalents = randomDistinct(careerTalents.length >= 3 ? careerTalents : levelOneTalents, 3);
+  const careerTraits = eligibleTraits();
+  const chosenTraits = randomDistinct(careerTraits.length >= 3 ? careerTraits : DATA.traits, 3);
   chosenTraits.forEach((trait, index) => setSelectValue(`select[data-trait-select="${index}"]`, trait?.name || ""));
   chosenTalents.forEach((talent, index) => setSelectValue(`select[data-talent-select="${index}"]`, talent?.name || ""));
 
@@ -10660,13 +10835,11 @@ function randomBeginnerCharacter() {
   setFieldValue("characterName", template.name);
   setFieldValue("player", "Starting Character");
   setFieldValue("faction", template.faction);
-  setFieldValue("homeworld", template.homeworld);
+  refreshHomeworldChoices({ preserve: false });
+  setFieldValue("homeworld", closestFactionHomeworld(template.faction, template.homeworld));
   setFieldValue("concept", template.concept);
   setFieldValue("xp", "Starting character");
-  setFieldValue("careerRole", template.career);
-  setFieldValue("doctrine", template.doctrine);
-  setFieldValue("restriction", template.restriction);
-  setFieldValue("talentFaction", template.talentFaction);
+  setCareerChoice(template.career || GENERAL_CAREER, template.restriction || "No Restrictions");
   setFieldValue("campaignNotes", "Portfolio-based beginner character - review and personalise before play.");
 
   setDefaultTracks();
@@ -10835,7 +11008,8 @@ function newCharacterSheet() {
     element.value = "";
   });
 
-  setFieldValue("restriction", "No Restrictions");
+  setCareerChoice(GENERAL_CAREER, "No Restrictions");
+  refreshHomeworldChoices({ preserve: false });
   refreshRestrictionChoices();
   clearTraitAndTalentSlots();
 
@@ -10996,8 +11170,7 @@ function buildPrintCorePage(page, total) {
     ["Faction", printValue("faction")],
     ["Homeworld / Habitat", printValue("homeworld")],
     ["XP / Advancement", printValue("xp")],
-    ["Career / Role", printValue("careerRole")],
-    ["Career", printValue("restriction")]
+    ["Career", printValue("career")]
   ].filter(([, value]) => value);
 
   const identity = printSection("Character Identity", `<div class="print-fields">${fields.map(field => printField(...field)).join("")}</div>`);
@@ -11044,7 +11217,7 @@ function printOptionCard(kind, item, descriptionLimit = 280, effectLimit = 560) 
   const isTrait = kind === "trait";
   const meta = isTrait
     ? [["Primary", item.primary], ["Secondary", item.secondary], ["Rarity", item.rarity], ["Cost", item.cost]]
-    : [["Level", item.level], ["Career", item.career], ["Doctrine", item.doctrine], ["Skill Links", [item.primary, item.secondary].filter(Boolean).join(" / ")]];
+    : [["Level", item.level], ["Career", item.career], ["Skill Links", [item.primary, item.secondary].filter(Boolean).join(" / ")]];
   const descriptionLabel = isTrait ? "Brief Description" : "Description";
   const descriptionValue = isTrait ? item.brief : item.description;
   return `<article class="print-option-card ${isTrait ? "trait" : "talent"}">
@@ -11364,7 +11537,15 @@ function compactPrintFrameHtml(markup, title, token) {
     .print-locked-gear-index{text-align:center!important;}
     .print-locked-gear-rules{display:block!important;max-height:2.65em!important;overflow:hidden!important;}
     @media print{html,body{margin:0!important;padding:0!important;}body.print-window #printPortfolio{display:block!important;}.print-page{margin:0 auto!important;}.print-locked-full-gear-stack[data-locked-full-gear-stack]{grid-template-rows:68mm 68mm!important;height:138.2mm!important;}.print-locked-full-gear-block[data-locked-full-gear-block]{height:68mm!important;min-height:68mm!important;max-height:68mm!important;}}
-  </style>
+  
+/* v24: legacy profile controls are removed; the unified Career field drives eligibility. */
+.identity-grid label:has([data-field="doctrine"]),
+.identity-grid label:has([data-field="talentFaction"]),
+.identity-grid label:has([data-field="concept"]),
+.identity-grid label:has([data-field="campaignNotes"]) { display:none !important; }
+.card-talent [data-talent-doctrine],
+.card-talent [data-talent-faction] { display:none !important; }
+</style>
 </head>
 <body class="print-window print-portfolio-mode" data-print-orientation="landscape">
   <section id="printPortfolio" aria-label="Current character portfolio">${markup}</section>
@@ -11581,7 +11762,7 @@ function pdfSkillPanel(p,skills,x,top,w,h) {
 function pdfCorePage(page,total) {
   const p=pdfHeader(page,total,'Identity, main skills, resources and complete skill list');
   const identity=pdfSection(p,'Character Identity',18,70,805,72);
-  const fields=[['Character Name',printValue('characterName')||'Unnamed Character'],['Faction',printValue('faction')],['Homeworld / Habitat',printValue('homeworld')],['XP / Advancement',printValue('xp')],['Career / Role',printValue('careerRole')],['Career',printValue('restriction')]];
+  const fields=[['Character Name',printValue('characterName')||'Unnamed Character'],['Faction',printValue('faction')],['Homeworld / Habitat',printValue('homeworld')],['XP / Advancement',printValue('xp')],['Career',printValue('career')]];
   const boxW=(identity.w-18)/4; fields.forEach((field,i)=>pdfBox(p,field[0],field[1],identity.x+5+(i%4)*(boxW+4.5),identity.top+5+Math.floor(i/4)*24,boxW,20));
   const main=pdfSection(p,'Main Skills and Resources',18,150,805,70);
   const chipW=(main.w-16)/7;
@@ -11720,13 +11901,15 @@ window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v21-mobile-direct-download";
+  document.documentElement.dataset.infinityBuild = "v24-career-faction-homeworld";
+  pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
   buildSkillTable("skillsLeft", skillOrder.slice(0,16));
   buildSkillTable("skillsRight", skillOrder.slice(16));
   buildTraits();
   buildTalents();
+  pruneLegacyProfileFields();
   refreshRestrictionChoices();
   buildItemTable("weaponTable", 5, "weapon");
   buildItemTable("equipmentTable", 10, "equipment");
