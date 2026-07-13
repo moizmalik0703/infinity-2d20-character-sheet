@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v33-skills-clean">
-  <!-- DEPLOYMENT CHECK: v33-skills-clean | Skill ratings show totals only in browser and exported PDF; PDF skills tables hide Base and Rating columns; Traits and Talents dropdowns remain alphabetized; XP and Heat removed; Wounds is a 0-3 dropdown. -->
+  <meta name="infinity-build" content="v34-skill-total-only">
+  <!-- DEPLOYMENT CHECK: v34-skill-total-only | Skill ratings show total numbers only in browser and exported PDF; any legacy (+x) suffix is stripped from skill cells; PDF skills tables hide Base and Rating columns; Traits and Talents dropdowns remain alphabetized; XP and Heat removed; Wounds is a 0-3 dropdown. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -1751,7 +1751,7 @@ body.print-window #printPortfolio {
 
 </style>
 </head>
-<body data-build="v33-skills-clean">
+<body data-build="v34-skill-total-only">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
@@ -9757,7 +9757,7 @@ window.INFINITY_DATA.homeworldsByFaction = {
   "NA2 / Mercenaries": ["Various worlds", "stations", "warzones", "caravanserai", "ships"],
   "O-12 / Nomads": ["Circulars", "stations", "orbital habitats", "Nomad and O-12 shipboard deployments"]
 };
-window.INFINITY_BUILD = "v33-skills-clean";
+window.INFINITY_BUILD = "v34-skill-total-only";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -10167,6 +10167,22 @@ function skillRating(skill) {
   return String(parts.total);
 }
 
+function stripSkillBonusSuffix(value) {
+  return String(value || "").replace(/\s*\(\+\d+\)\s*$/g, "").trim();
+}
+
+function sanitizeSkillRatingDisplays() {
+  document.querySelectorAll("[data-rating]").forEach(cell => {
+    const skill = cell.dataset.rating;
+    if (skill) {
+      const parts = skillRatingParts(skill);
+      cell.textContent = String(parts.total);
+    } else {
+      cell.textContent = stripSkillBonusSuffix(cell.textContent);
+    }
+  });
+}
+
 function buildSkillTable(tableId, skills) {
   const table = document.getElementById(tableId);
   table.innerHTML = `<thead><tr><th>Skill</th><th>Rating</th><th>Focus</th><th>Notes</th><th>Rule</th></tr></thead>`;
@@ -10179,7 +10195,7 @@ function buildSkillTable(tableId, skills) {
       : `<td><select data-focus="${skill}"></select></td>`;
     tr.innerHTML = `
       <td>${skill}</td>
-      <td data-rating="${skill}">${skillRating(skill)}</td>
+      <td data-rating="${skill}">${stripSkillBonusSuffix(skillRating(skill))}</td>
       ${focus}
       <td><input data-skill-note="${skill}"></td>
       <td data-skill-rule="${skill}">${mainSkills.includes(skill) ? "Main skill" : "Sub-skill"}</td>`;
@@ -10208,6 +10224,7 @@ function updateSkillRatings() {
       ruleCell.classList.toggle("auto-bonus", parts.bonus > 0);
     }
   });
+  sanitizeSkillRatingDisplays();
 }
 
 function activeRestrictions() {
@@ -11991,7 +12008,7 @@ window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v33-skills-clean";
+  document.documentElement.dataset.infinityBuild = "v34-skill-total-only";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -12007,8 +12024,12 @@ document.addEventListener("DOMContentLoaded", () => {
   setDefaultTracks();
   resetStartingBonuses();
   clearFocusAllocations();
+  sanitizeSkillRatingDisplays();
   applyArmourFromEquipment();
   refreshSaveSlots();
+  const skillRatingObserver = new MutationObserver(() => sanitizeSkillRatingDisplays());
+  document.querySelectorAll("[data-rating]").forEach(cell => skillRatingObserver.observe(cell, { childList: true, characterData: true, subtree: true }));
+
 
   document.getElementById("randomCharacterBtn").addEventListener("click", randomCharacter);
   document.getElementById("randomBeginnerCharacterBtn").addEventListener("click", randomBeginnerCharacter);
