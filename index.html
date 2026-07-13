@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v32-dropdown-pdf-clean">
-  <!-- DEPLOYMENT CHECK: v32-dropdown-pdf-clean | Traits and Talents dropdowns are alphabetized at render time | Desktop print and mobile PDF main-skill boxes show final values only | Header descriptions removed | XP and Heat removed | Wounds is a 0-3 dropdown. -->
+  <meta name="infinity-build" content="v33-skills-clean">
+  <!-- DEPLOYMENT CHECK: v33-skills-clean | Skill ratings show totals only in browser and exported PDF; PDF skills tables hide Base and Rating columns; Traits and Talents dropdowns remain alphabetized; XP and Heat removed; Wounds is a 0-3 dropdown. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -1740,9 +1740,18 @@ body.print-window #printPortfolio {
 .identity-grid label:has([data-field="campaignNotes"]) { display:none !important; }
 .card-talent [data-talent-doctrine],
 .card-talent [data-talent-faction] { display:none !important; }
+
+/* v33: exported PDF/print skill tables use Skill, Total, Focus, Source only. */
+.print-skills-table col.print-skill-col-name { width: 27% !important; }
+.print-skills-table col.print-skill-col-total { width: 13% !important; }
+.print-skills-table col.print-skill-col-focus { width: 13% !important; }
+.print-skills-table col.print-skill-col-source { width: 47% !important; }
+.print-skills-table th:nth-child(4),
+.print-skills-table td:nth-child(4) { white-space: normal !important; overflow-wrap: anywhere !important; word-break: break-word !important; }
+
 </style>
 </head>
-<body data-build="v32-dropdown-pdf-clean">
+<body data-build="v33-skills-clean">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
@@ -9748,7 +9757,7 @@ window.INFINITY_DATA.homeworldsByFaction = {
   "NA2 / Mercenaries": ["Various worlds", "stations", "warzones", "caravanserai", "ships"],
   "O-12 / Nomads": ["Circulars", "stations", "orbital habitats", "Nomad and O-12 shipboard deployments"]
 };
-window.INFINITY_BUILD = "v32-dropdown-pdf-clean";
+window.INFINITY_BUILD = "v33-skills-clean";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -10155,7 +10164,7 @@ function skillRatingParts(skill) {
 
 function skillRating(skill) {
   const parts = skillRatingParts(skill);
-  return parts.bonus > 0 ? `${parts.total} (+${parts.bonus})` : String(parts.total);
+  return String(parts.total);
 }
 
 function buildSkillTable(tableId, skills) {
@@ -10184,7 +10193,7 @@ function updateSkillRatings() {
   document.querySelectorAll("[data-rating]").forEach(cell => {
     const skill = cell.dataset.rating;
     const parts = skillRatingParts(skill);
-    cell.textContent = parts.bonus > 0 ? `${parts.total} (+${parts.bonus})` : String(parts.total);
+    cell.textContent = String(parts.total);
     cell.title = parts.sources.length ? `Rating modifiers: ${parts.sources.join("; ")}` : "";
     cell.classList.toggle("auto-bonus", parts.bonus > 0);
 
@@ -11226,26 +11235,22 @@ function printSkillTable(skills) {
     const source = [...parts.sources, note].filter(Boolean).join("; ") || (mainSkills.includes(skill) ? "Main skill" : "");
     return `<tr class="${mainSkills.includes(skill) ? "print-main-row" : ""}">
       <td class="print-skill-name">${printEscape(skill)}</td>
-      <td class="number">${printEscape(parts.base)}</td>
-      <td class="number">${printEscape(printSigned(parts.bonus))}</td>
       <td class="number print-skill-total">${printEscape(parts.total)}</td>
       <td class="number">${printText(focus, "")}</td>
       <td class="print-skill-source">${printText(source, "")}</td>
     </tr>`;
   }).join("");
 
-  /* Inline geometry is intentional: every print path receives the exact same six columns. */
+  /* Inline geometry is intentional: every print path receives the same simplified columns. */
   return `<div class="print-skills-panel" data-equal-skills-panel style="flex:0 0 calc((100% - 1.7mm) / 2);width:calc((100% - 1.7mm) / 2);min-width:0;box-sizing:border-box;">
     <table class="print-table print-skills-table" style="width:100%;min-width:0;max-width:100%;table-layout:fixed;">
       <colgroup>
-        <col class="print-skill-col-name" style="width:20%">
-        <col class="print-skill-col-base" style="width:9%">
-        <col class="print-skill-col-rating" style="width:9%">
-        <col class="print-skill-col-total" style="width:9%">
-        <col class="print-skill-col-focus" style="width:9%">
-        <col class="print-skill-col-source" style="width:44%">
+        <col class="print-skill-col-name" style="width:27%">
+        <col class="print-skill-col-total" style="width:13%">
+        <col class="print-skill-col-focus" style="width:13%">
+        <col class="print-skill-col-source" style="width:47%">
       </colgroup>
-      <thead><tr><th>Skill</th><th>Base</th><th>Rating +</th><th>Total</th><th>Focus</th><th>Source</th></tr></thead>
+      <thead><tr><th>Skill</th><th>Total</th><th>Focus</th><th>Source</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>
   </div>`;
@@ -11594,10 +11599,10 @@ function compactPrintFrameHtml(markup, title, token) {
     .print-skills-grid[data-equal-skills-grid]{display:flex!important;width:100%!important;gap:1.7mm!important;align-items:flex-start!important;box-sizing:border-box!important;}
     .print-skills-panel[data-equal-skills-panel]{flex:0 0 calc((100% - 1.7mm)/2)!important;width:calc((100% - 1.7mm)/2)!important;min-width:0!important;box-sizing:border-box!important;}
     .print-skills-table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:fixed!important;}
-    .print-skills-table col.print-skill-col-name{width:20%!important;}
-    .print-skills-table col.print-skill-col-base,.print-skills-table col.print-skill-col-rating,.print-skills-table col.print-skill-col-total,.print-skills-table col.print-skill-col-focus{width:9%!important;}
-    .print-skills-table col.print-skill-col-source{width:44%!important;}
-    .print-skills-table td:nth-child(6),.print-skills-table th:nth-child(6){white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important;}
+    .print-skills-table col.print-skill-col-name{width:27%!important;}
+    .print-skills-table col.print-skill-col-total,.print-skills-table col.print-skill-col-focus{width:13%!important;}
+    .print-skills-table col.print-skill-col-source{width:47%!important;}
+    .print-skills-table td:nth-child(4),.print-skills-table th:nth-child(4){white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important;}
     .print-beginner-gear-stack[data-equal-gear-stack]{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto auto!important;gap:2.2mm!important;width:100%!important;min-width:0!important;box-sizing:border-box!important;}
     .print-beginner-gear-row[data-equal-gear-row]{min-width:0!important;box-sizing:border-box!important;}
     .print-beginner-gear-row[data-equal-gear-row] .print-section{height:100%!important;margin-bottom:0!important;}
@@ -11823,12 +11828,12 @@ function pdfBox(p,label,value,x,top,w,h) {
 }
 
 function pdfSkillPanel(p,skills,x,top,w,h) {
-  const cols=[.20,.09,.09,.09,.09,.44];
+  const cols=[.27,.13,.13,.47];
   const xs=[x]; for(let i=0;i<cols.length;i++)xs.push(xs[i]+w*cols[i]);
   const headerH=16; const rowH=(h-headerH)/skills.length;
   p.rect(x,top,w,h,[1,1,1],'#9aa7b1');
   p.rect(x,top,w,headerH,[0.12,0.31,0.48],null);
-  ['Skill','Base','Rating +','Total','Focus','Source'].forEach((label,i)=>p.text(xs[i]+3,top+4,label,4.7,true,'#ffffff'));
+  ['Skill','Total','Focus','Source'].forEach((label,i)=>p.text(xs[i]+3,top+4,label,4.7,true,'#ffffff'));
   skills.forEach((skill,row)=>{
     const parts=skillRatingParts(skill);
     const focus=document.querySelector(`select[data-focus="${CSS.escape(skill)}"]`)?.value || '';
@@ -11836,10 +11841,10 @@ function pdfSkillPanel(p,skills,x,top,w,h) {
     const source=[...parts.sources,note].filter(Boolean).join('; ') || '';
     const y=top+headerH+row*rowH;
     p.line(x,y+rowH,x+w,y+rowH,'#c8d0d8',.25);
-    [skill,parts.base,printSigned(parts.bonus),parts.total,focus,source].forEach((value,i)=>{
+    [skill,parts.total,focus,source].forEach((value,i)=>{
       const char=Math.max(4,Math.floor((xs[i+1]-xs[i]-6)/2.6));
-      const lines=pdfWords(value, char, i===5?2:1);
-      lines.forEach((line,n)=>p.text(xs[i]+3,y+3+n*5.1,line,i===5?4.5:5.2,i===3,'#172033'));
+      const lines=pdfWords(value, char, i===3?2:1);
+      lines.forEach((line,n)=>p.text(xs[i]+3,y+3+n*5.1,line,i===3?4.5:5.2,i===1,'#172033'));
     });
   });
 }
@@ -11986,7 +11991,7 @@ window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v32-dropdown-pdf-clean";
+  document.documentElement.dataset.infinityBuild = "v33-skills-clean";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
