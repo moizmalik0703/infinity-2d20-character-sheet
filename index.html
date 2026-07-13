@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v28-tracks-clean">
-  <!-- DEPLOYMENT CHECK: v28-tracks-clean | XP and Heat removed | Wounds is a 0–3 dropdown. -->
+  <meta name="infinity-build" content="v31-pdf-main-skills-clean">
+  <!-- DEPLOYMENT CHECK: v31-pdf-main-skills-clean | PDF main-skill cards show final value only | Trait and Talent dropdowns sorted alphabetically | Header descriptions removed | XP and Heat removed | Wounds is a 0-3 dropdown. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -535,6 +535,21 @@ body.print-portfolio-mode #printPortfolio {
     margin-top: .1mm;
     font-size: 18pt;
     line-height: .82;
+    letter-spacing: -.03em;
+  }
+
+  .print-skill-chip-total-only {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 18.5mm;
+    background: #eaf3f8;
+  }
+
+  .print-skill-chip-total-only strong {
+    display: block;
+    font-size: 22pt;
+    line-height: .9;
     letter-spacing: -.03em;
   }
 
@@ -1437,8 +1452,6 @@ body.print-window #printPortfolio {
 .export-status{position:fixed;left:50%;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:9999;max-width:min(92vw,34rem);transform:translateX(-50%);padding:.76rem .98rem;border-radius:.55rem;background:#17365d;color:#fff;box-shadow:0 .35rem 1rem rgba(0,0,0,.22);font-size:.86rem;line-height:1.35;text-align:center}
 .mobile-pdf-action{display:inline-flex;align-items:center;justify-content:center;margin:.62rem .25rem 0;padding:.54rem .78rem;border:1px solid #fff;border-radius:.38rem;background:#fff;color:#17365d;font-weight:700;text-decoration:none;min-height:2.35rem;touch-action:manipulation}
 .mobile-pdf-action:focus,.mobile-pdf-action:hover{outline:2px solid #d9eaf7;outline-offset:2px}
-.mobile-pdf-build{display:block;margin-top:.25rem;color:#d8e5f2;font-size:.72rem;line-height:1.2}
-@media print{.mobile-pdf-build{display:none!important}}
 
 /* v12: quiet in-page print preview and wider Skill Source column. */
 .compact-print-frame {
@@ -1729,11 +1742,10 @@ body.print-window #printPortfolio {
 .card-talent [data-talent-faction] { display:none !important; }
 </style>
 </head>
-<body data-build="v28-tracks-clean">
+<body data-build="v31-pdf-main-skills-clean">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
-      <p>Browser-based character sheet · v28 Career + Faction/Homeworld relationship · streamlined tracks · one Career field with linked eligibility and validated Faction/Homeworld choices.</p>
     </div>
     <div class="actions">
       <button id="newSheetBtn">New</button>
@@ -1745,7 +1757,6 @@ body.print-window #printPortfolio {
       <button id="deleteSaveBtn">Delete selected</button>
       <button id="printBtn" type="button" title="On mobile, creates a true A4 landscape PDF. Open or download that PDF, then print it from your PDF viewer.">Export / Print Current Character Portfolio</button>
     </div>
-  <span class="mobile-pdf-build" data-mobile-pdf-build="v24">Mobile export: direct A4 landscape PDF · v28 Career + Faction/Homeworld relationship · streamlined tracks</span>
   </header>
 
   <main id="sheet" class="sheet">
@@ -9737,7 +9748,7 @@ window.INFINITY_DATA.homeworldsByFaction = {
   "NA2 / Mercenaries": ["Various worlds", "stations", "warzones", "caravanserai", "ships"],
   "O-12 / Nomads": ["Circulars", "stations", "orbital habitats", "Nomad and O-12 shipboard deployments"]
 };
-window.INFINITY_BUILD = "v28-tracks-clean";
+window.INFINITY_BUILD = "v31-pdf-main-skills-clean";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -9812,6 +9823,10 @@ function resolveLegacyTraitTalentName(value) {
 function byName(list, name) {
   const resolved = resolveLegacyTraitTalentName(name);
   return list.find(x => x.name === resolved) || {};
+}
+
+function sortByName(list) {
+  return [...list].sort((a, b) => String(a?.name || "").localeCompare(String(b?.name || ""), undefined, { sensitivity: "base" }));
 }
 function setText(el, value) {
   const text = value || "";
@@ -10186,11 +10201,11 @@ function isEligibleForRestriction(item) {
 }
 
 function eligibleTraits() {
-  return DATA.traits.filter(isEligibleForRestriction);
+  return sortByName(DATA.traits.filter(isEligibleForRestriction));
 }
 
 function eligibleTalents() {
-  return DATA.talents.filter(isEligibleForRestriction);
+  return sortByName(DATA.talents.filter(isEligibleForRestriction));
 }
 
 function setTraitCard(index, traitName) {
@@ -11181,13 +11196,9 @@ function selectedPrintConditions() {
 
 function printMainSkillCard(skill) {
   const parts = skillRatingParts(skill);
-  return `<div class="print-skill-chip">
+  return `<div class="print-skill-chip print-skill-chip-simple">
     <div class="print-skill-chip-name">${printEscape(skill)}</div>
-    <div class="print-skill-chip-stats">
-      <div><span>Base</span><b>${printEscape(parts.base)}</b></div>
-      <div><span>Bonus</span><b>${printEscape(printSigned(parts.bonus))}</b></div>
-      <div class="print-skill-chip-total"><span>Total</span><strong>${printEscape(parts.total)}</strong></div>
-    </div>
+    <div class="print-skill-chip-total-only"><strong>${printEscape(parts.total)}</strong></div>
   </div>`;
 }
 
@@ -11824,7 +11835,7 @@ function pdfCorePage(page,total) {
   const boxW=(identity.w-18)/4; fields.forEach((field,i)=>pdfBox(p,field[0],field[1],identity.x+5+(i%4)*(boxW+4.5),identity.top+5+Math.floor(i/4)*24,boxW,20));
   const main=pdfSection(p,'Main Skills and Resources',18,150,805,70);
   const chipW=(main.w-16)/7;
-  mainSkills.forEach((skill,i)=>{ const parts=skillRatingParts(skill); const x=main.x+5+i*(chipW+1.6); pdfBox(p,skill,`B ${parts.base}  +${parts.bonus||0}  = ${parts.total}`,x,main.top+5,chipW,26); });
+  mainSkills.forEach((skill,i)=>{ const parts=skillRatingParts(skill); const x=main.x+5+i*(chipW+1.6); pdfBox(p,skill,String(parts.total),x,main.top+5,chipW,26); });
   const tracks=[['HP / Vigor',printValue('hp')],['Firewall',printValue('firewall')],['Armour',printValue('armour')],['Mental Stress',printValue('mentalStress')],['Momentum',printValue('momentum')],['Wounds',printValue('wounds')]];
   const trackW=(main.w-16)/6; tracks.forEach((track,i)=>pdfBox(p,track[0],track[1],main.x+5+i*(trackW+1.6),main.top+36,trackW,22));
   const skillSec=pdfSection(p,'Skills',18,228,805,346);
@@ -11959,7 +11970,7 @@ window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v28-tracks-clean";
+  document.documentElement.dataset.infinityBuild = "v31-pdf-main-skills-clean";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
