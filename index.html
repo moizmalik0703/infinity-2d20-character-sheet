@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v31-pdf-main-skills-clean">
-  <!-- DEPLOYMENT CHECK: v31-pdf-main-skills-clean | PDF main-skill cards show final value only | Trait and Talent dropdowns sorted alphabetically | Header descriptions removed | XP and Heat removed | Wounds is a 0-3 dropdown. -->
+  <meta name="infinity-build" content="v32-dropdown-pdf-clean">
+  <!-- DEPLOYMENT CHECK: v32-dropdown-pdf-clean | Traits and Talents dropdowns are alphabetized at render time | Desktop print and mobile PDF main-skill boxes show final values only | Header descriptions removed | XP and Heat removed | Wounds is a 0-3 dropdown. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -1742,7 +1742,7 @@ body.print-window #printPortfolio {
 .card-talent [data-talent-faction] { display:none !important; }
 </style>
 </head>
-<body data-build="v31-pdf-main-skills-clean">
+<body data-build="v32-dropdown-pdf-clean">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
@@ -9748,7 +9748,7 @@ window.INFINITY_DATA.homeworldsByFaction = {
   "NA2 / Mercenaries": ["Various worlds", "stations", "warzones", "caravanserai", "ships"],
   "O-12 / Nomads": ["Circulars", "stations", "orbital habitats", "Nomad and O-12 shipboard deployments"]
 };
-window.INFINITY_BUILD = "v31-pdf-main-skills-clean";
+window.INFINITY_BUILD = "v32-dropdown-pdf-clean";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -9825,8 +9825,24 @@ function byName(list, name) {
   return list.find(x => x.name === resolved) || {};
 }
 
+function alphaCompare(a, b) {
+  return String(a || "").trim().localeCompare(String(b || "").trim(), undefined, { numeric: true, sensitivity: "base" });
+}
+
 function sortByName(list) {
-  return [...list].sort((a, b) => String(a?.name || "").localeCompare(String(b?.name || ""), undefined, { sensitivity: "base" }));
+  return [...list].sort((a, b) => alphaCompare(a?.name || "", b?.name || ""));
+}
+
+function sortNames(values) {
+  return [...new Set((values || []).filter(Boolean))].sort(alphaCompare);
+}
+
+// Keep the source lists alphabetised too, so any future dropdown that reads DATA.lists
+// directly will inherit the same order. The random-character logic still chooses from
+// the object data, not this display order.
+if (DATA?.lists) {
+  if (Array.isArray(DATA.lists.traits)) DATA.lists.traits = sortNames(DATA.lists.traits);
+  if (Array.isArray(DATA.lists.talents)) DATA.lists.talents = sortNames(DATA.lists.talents);
 }
 function setText(el, value) {
   const text = value || "";
@@ -10298,7 +10314,7 @@ function refreshRestrictionChoices() {
 
   document.querySelectorAll("select[data-trait-select]").forEach((sel, i) => {
     const current = sel.value;
-    makeOptions(sel, traits.map(t => t.name), "Choose trait...");
+    makeOptions(sel, sortNames(traits.map(t => t.name)), "Choose trait...");
     if (traits.some(t => t.name === current)) sel.value = current;
     else sel.value = "";
     setTraitCard(i, sel.value);
@@ -10306,7 +10322,7 @@ function refreshRestrictionChoices() {
 
   document.querySelectorAll("select[data-talent-select]").forEach((sel, i) => {
     const current = sel.value;
-    makeOptions(sel, talents.map(t => t.name), "Choose talent...");
+    makeOptions(sel, sortNames(talents.map(t => t.name)), "Choose talent...");
     if (talents.some(t => t.name === current)) sel.value = current;
     else sel.value = "";
     setTalentCard(i, sel.value);
@@ -11970,7 +11986,7 @@ window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v31-pdf-main-skills-clean";
+  document.documentElement.dataset.infinityBuild = "v32-dropdown-pdf-clean";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
