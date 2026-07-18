@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v34-skill-total-only">
-  <!-- DEPLOYMENT CHECK: v34-skill-total-only | Skill ratings show total numbers only in browser and exported PDF; any legacy (+x) suffix is stripped from skill cells; PDF skills tables hide Base and Rating columns; Traits and Talents dropdowns remain alphabetized; XP and Heat removed; Wounds is a 0-3 dropdown. -->
+  <meta name="infinity-build" content="v36-mobile-career-stability">
+  <!-- DEPLOYMENT CHECK: v36-mobile-career-stability | Career dropdown stabilized for mobile by making Trait/Talent filtering non-reentrant and batching skill rating updates. Skill ratings show totals only; PDF skill tables hide Base and Rating columns; Traits and Talents dropdowns are alphabetized; XP and Heat removed; Wounds is a 0-3 dropdown. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -1749,9 +1749,18 @@ body.print-window #printPortfolio {
 .print-skills-table th:nth-child(4),
 .print-skills-table td:nth-child(4) { white-space: normal !important; overflow-wrap: anywhere !important; word-break: break-word !important; }
 
+
+select[data-field="career"],
+select[data-trait-select],
+select[data-talent-select],
+select[data-field="faction"],
+select[data-field="homeworld"] {
+  touch-action: manipulation;
+}
+
 </style>
 </head>
-<body data-build="v34-skill-total-only">
+<body data-build="v36-mobile-career-stability">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
@@ -9757,7 +9766,7 @@ window.INFINITY_DATA.homeworldsByFaction = {
   "NA2 / Mercenaries": ["Various worlds", "stations", "warzones", "caravanserai", "ships"],
   "O-12 / Nomads": ["Circulars", "stations", "orbital habitats", "Nomad and O-12 shipboard deployments"]
 };
-window.INFINITY_BUILD = "v34-skill-total-only";
+window.INFINITY_BUILD = "v36-mobile-career-stability";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -9854,10 +9863,11 @@ if (DATA?.lists) {
   if (Array.isArray(DATA.lists.talents)) DATA.lists.talents = sortNames(DATA.lists.talents);
 }
 function setText(el, value) {
+  if (!el) return;
   const text = value || "";
-  el.textContent = text;
+  if (el.textContent !== text) el.textContent = text;
   // Preserve the complete value on hover when a narrow browser layout wraps it.
-  el.title = text;
+  if (el.title !== text) el.title = text;
 }
 function inputField(field) {
   return document.querySelector(`[data-field="${field}"]`);
@@ -9902,8 +9912,8 @@ const CAREER_FILTERS = {
 };
 
 function careerOptions() {
-  return [GENERAL_CAREER, ...(DATA.lists.careerRoles || [])]
-    .filter((value, index, values) => value && values.indexOf(value) === index);
+  const careers = sortNames(DATA.lists.careerRoles || []).filter(value => value !== GENERAL_CAREER);
+  return [GENERAL_CAREER, ...careers];
 }
 
 function selectedCareer() {
@@ -10174,12 +10184,8 @@ function stripSkillBonusSuffix(value) {
 function sanitizeSkillRatingDisplays() {
   document.querySelectorAll("[data-rating]").forEach(cell => {
     const skill = cell.dataset.rating;
-    if (skill) {
-      const parts = skillRatingParts(skill);
-      cell.textContent = String(parts.total);
-    } else {
-      cell.textContent = stripSkillBonusSuffix(cell.textContent);
-    }
+    const cleanText = skill ? String(skillRatingParts(skill).total) : stripSkillBonusSuffix(cell.textContent);
+    if (cell.textContent !== cleanText) cell.textContent = cleanText;
   });
 }
 
@@ -10250,6 +10256,9 @@ function eligibleTalents() {
   return sortByName(DATA.talents.filter(isEligibleForRestriction));
 }
 
+let suppressSkillRatingUpdates = false;
+let restrictionRefreshInProgress = false;
+
 function setTraitCard(index, traitName) {
   const t = byName(DATA.traits, traitName);
   setText(document.querySelector(`[data-trait-primary="${index}"]`), t.primary);
@@ -10259,7 +10268,7 @@ function setTraitCard(index, traitName) {
   setText(document.querySelector(`[data-trait-cost="${index}"]`), t.cost);
   setText(document.querySelector(`[data-trait-brief="${index}"]`), t.brief);
   setText(document.querySelector(`[data-trait-effect="${index}"]`), t.effect);
-  updateSkillRatings();
+  if (!suppressSkillRatingUpdates) updateSkillRatings();
 }
 
 function setTalentCard(index, talentName) {
@@ -10269,7 +10278,7 @@ function setTalentCard(index, talentName) {
     const output = document.querySelector(`[data-talent-${k}="${index}"]`);
     if (output) setText(output, t[dataKey]);
   });
-  updateSkillRatings();
+  if (!suppressSkillRatingUpdates) updateSkillRatings();
 }
 
 function buildTraits() {
@@ -10334,34 +10343,53 @@ function buildTalents() {
 }
 
 function refreshRestrictionChoices() {
-  const selected = activeRestriction();
-  const traits = eligibleTraits();
-  const talents = eligibleTalents();
+  if (restrictionRefreshInProgress) return;
+  restrictionRefreshInProgress = true;
+  suppressSkillRatingUpdates = true;
 
-  document.querySelectorAll("select[data-trait-select]").forEach((sel, i) => {
-    const current = sel.value;
-    makeOptions(sel, sortNames(traits.map(t => t.name)), "Choose trait...");
-    if (traits.some(t => t.name === current)) sel.value = current;
-    else sel.value = "";
-    setTraitCard(i, sel.value);
-  });
+  try {
+    const careerSelect = inputField("career");
+    const selectedCareerValue = careerSelect?.value || GENERAL_CAREER;
+    const traits = eligibleTraits();
+    const talents = eligibleTalents();
+    const traitNames = sortNames(traits.map(t => t.name));
+    const talentNames = sortNames(talents.map(t => t.name));
+    const traitNameSet = new Set(traitNames);
+    const talentNameSet = new Set(talentNames);
 
-  document.querySelectorAll("select[data-talent-select]").forEach((sel, i) => {
-    const current = sel.value;
-    makeOptions(sel, sortNames(talents.map(t => t.name)), "Choose talent...");
-    if (talents.some(t => t.name === current)) sel.value = current;
-    else sel.value = "";
-    setTalentCard(i, sel.value);
-  });
+    document.querySelectorAll("select[data-trait-select]").forEach((sel, i) => {
+      const current = sel.value;
+      makeOptions(sel, traitNames, "Choose trait...");
+      sel.value = traitNameSet.has(current) ? current : "";
+      setTraitCard(i, sel.value);
+    });
 
-  const status = document.getElementById("restrictionStatus");
-  if (status) {
-    const career = selectedCareer();
-    const selectedFilters = activeRestrictions();
-    const eligibility = selectedFilters.filter(value => value !== "No Restrictions");
-    status.textContent = !eligibility.length
-      ? `Career: ${career} — all ${DATA.traits.length} Traits and ${DATA.talents.length} Talents are available.`
-      : `Career: ${career} — eligibility: ${eligibility.join("; ")}. ${traits.length} Traits (including general options) and ${talents.length} Talents are available.`;
+    document.querySelectorAll("select[data-talent-select]").forEach((sel, i) => {
+      const current = sel.value;
+      makeOptions(sel, talentNames, "Choose talent...");
+      sel.value = talentNameSet.has(current) ? current : "";
+      setTalentCard(i, sel.value);
+    });
+
+    // Keep the Career dropdown stable. Trait/Talent filtering must never rewrite
+    // the selected Career back to General / Unrestricted.
+    if (careerSelect && careerSelect.value !== selectedCareerValue) {
+      ensureSelectValue(careerSelect, selectedCareerValue);
+    }
+
+    const status = document.getElementById("restrictionStatus");
+    if (status) {
+      const career = selectedCareer();
+      const selectedFilters = activeRestrictions();
+      const eligibility = selectedFilters.filter(value => value !== "No Restrictions");
+      status.textContent = !eligibility.length
+        ? `Career: ${career} — all ${DATA.traits.length} Traits and ${DATA.talents.length} Talents are available.`
+        : `Career: ${career} — eligibility: ${eligibility.join("; ")}. ${traits.length} Traits (including general options) and ${talents.length} Talents are available.`;
+    }
+  } finally {
+    suppressSkillRatingUpdates = false;
+    restrictionRefreshInProgress = false;
+    updateSkillRatings();
   }
 }
 
@@ -12008,7 +12036,7 @@ window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v34-skill-total-only";
+  document.documentElement.dataset.infinityBuild = "v36-mobile-career-stability";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -12027,9 +12055,10 @@ document.addEventListener("DOMContentLoaded", () => {
   sanitizeSkillRatingDisplays();
   applyArmourFromEquipment();
   refreshSaveSlots();
-  const skillRatingObserver = new MutationObserver(() => sanitizeSkillRatingDisplays());
-  document.querySelectorAll("[data-rating]").forEach(cell => skillRatingObserver.observe(cell, { childList: true, characterData: true, subtree: true }));
-
+  // Do not attach a MutationObserver to the skill Rating cells. Earlier builds
+  // rewrote those cells from inside the observer callback, which could retrigger
+  // itself and freeze the page after Career changes. updateSkillRatings() and
+  // sanitizeSkillRatingDisplays() now update the cells directly when needed.
 
   document.getElementById("randomCharacterBtn").addEventListener("click", randomCharacter);
   document.getElementById("randomBeginnerCharacterBtn").addEventListener("click", randomBeginnerCharacter);
