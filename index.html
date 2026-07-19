@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v39-pdf12-flow-mobile-stable">
-  <!-- DEPLOYMENT CHECK: v39-pdf12-flow-mobile-stable | PDF export uses true 12pt text paths, flow-height print boxes, unlocked gear sections, larger mobile direct-PDF pages, mobile Career filtering remains non-reentrant and batched, skill totals remain clean, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, and Wounds is a 0-3 dropdown. -->
+  <meta name="infinity-build" content="v40-pdf-font-box-stability">
+  <!-- DEPLOYMENT CHECK: v40-pdf-font-box-stability | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt browser print styling, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, and Wounds is a 0-3 dropdown. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2230,9 +2230,25 @@ body.print-window .print-locked-gear-header > div,
 body.print-window .print-skill-source { font-size: 12pt !important; line-height: 1.16 !important; }
 body.print-window .print-locked-gear-rules { max-height: none !important; overflow: visible !important; }
 
+
+
+/* v40 browser Save-to-PDF compact boxes: last CSS wins over older fixed-height print rules. */
+@media print{
+  #printPortfolio,#printPortfolio *{font-family:Arial,Helvetica,sans-serif!important;font-size:12pt!important;line-height:1.12!important;}
+  #printPortfolio .print-page{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-header{min-height:0!important;margin-bottom:1.4mm!important;padding:1.8mm 2.4mm!important;}
+  #printPortfolio .print-section{height:auto!important;min-height:0!important;max-height:none!important;margin-bottom:1.2mm!important;overflow:visible!important;}
+  #printPortfolio .print-section-body{padding:.75mm 1mm!important;}
+  #printPortfolio .print-field,#printPortfolio .print-track,#printPortfolio .print-note,#printPortfolio .print-copy-box,#printPortfolio .print-option-meta-cell{height:auto!important;min-height:0!important;max-height:none!important;padding:.45mm .6mm!important;}
+  #printPortfolio .print-table th,#printPortfolio .print-table td,#printPortfolio .print-locked-gear-row>div,#printPortfolio .print-locked-gear-header>div{font-size:12pt!important;line-height:1.08!important;padding:.3mm .45mm!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-locked-full-gear-stack[data-locked-full-gear-stack],#printPortfolio .print-locked-full-gear-block[data-locked-full-gear-block],#printPortfolio .print-locked-gear-table{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-locked-full-gear-stack[data-locked-full-gear-stack]{display:block!important;}
+  #printPortfolio .print-locked-full-gear-block[data-locked-full-gear-block]{display:block!important;margin-bottom:1mm!important;}
+  #printPortfolio .print-locked-gear-rules{max-height:none!important;overflow:visible!important;}
+}
 </style>
 </head>
-<body data-build="v39-pdf12-flow-mobile-stable">
+<body data-build="v40-pdf-font-box-stability">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
@@ -10238,7 +10254,7 @@ window.INFINITY_DATA.homeworldsByFaction = {
   "NA2 / Mercenaries": ["Various worlds", "stations", "warzones", "caravanserai", "ships"],
   "O-12 / Nomads": ["Circulars", "stations", "orbital habitats", "Nomad and O-12 shipboard deployments"]
 };
-window.INFINITY_BUILD = "v39-pdf12-flow-mobile-stable";
+window.INFINITY_BUILD = "v40-pdf-font-box-stability";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -12177,6 +12193,52 @@ body.print-window .print-locked-gear-rules{max-height:none!important;overflow:vi
 @media print{body.print-window .print-locked-full-gear-stack[data-locked-full-gear-stack],body.print-window .print-locked-full-gear-block[data-locked-full-gear-block]{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}}
 
 
+/* v40 compact PDF/print override: remove remaining fixed-height/dead-space rules while keeping 12pt readable text. */
+#_unused_v40_marker{display:none;}
+@media print{
+  #printPortfolio,#printPortfolio *{font-family:Arial,Helvetica,sans-serif!important;font-size:12pt!important;line-height:1.12!important;}
+  #printPortfolio{width:283mm!important;max-width:283mm!important;}
+  #printPortfolio .print-page{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;break-after:page!important;page-break-after:always!important;padding:0!important;}
+  #printPortfolio .print-page:last-child{break-after:auto!important;page-break-after:auto!important;}
+  #printPortfolio .print-header{min-height:0!important;margin:0 0 1.4mm!important;padding:1.8mm 2.4mm!important;}
+  #printPortfolio .print-header h1{font-size:16pt!important;line-height:1.0!important;}
+  #printPortfolio .print-subtitle,#printPortfolio .print-page-number{font-size:12pt!important;line-height:1.05!important;}
+  #printPortfolio .print-section{margin:0 0 1.2mm!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;break-inside:auto!important;page-break-inside:auto!important;}
+  #printPortfolio .print-section-title,#printPortfolio .print-locked-full-gear-title{font-size:12pt!important;line-height:1.05!important;padding:.75mm 1mm!important;}
+  #printPortfolio .print-section-body{padding:.75mm 1mm!important;height:auto!important;min-height:0!important;}
+  #printPortfolio .print-fields{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:.65mm!important;}
+  #printPortfolio .print-field,#printPortfolio .print-track,#printPortfolio .print-option-meta-cell,#printPortfolio .print-copy-box,#printPortfolio .print-note{height:auto!important;min-height:0!important;max-height:none!important;padding:.45mm .6mm!important;}
+  #printPortfolio .print-field-label,#printPortfolio .print-track span,#printPortfolio .print-note b{font-size:12pt!important;line-height:1.05!important;margin:0 0 .2mm!important;}
+  #printPortfolio .print-field-value,#printPortfolio .print-track strong,#printPortfolio .print-note span{font-size:12pt!important;line-height:1.1!important;min-height:0!important;}
+  #printPortfolio .print-core-grid{grid-template-columns:1fr!important;gap:.9mm!important;}
+  #printPortfolio .print-main-skills{grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:.6mm!important;}
+  #printPortfolio .print-skill-chip,#printPortfolio .print-skill-chip-total-only,#printPortfolio .print-skill-chip-total{height:auto!important;min-height:0!important;max-height:none!important;}
+  #printPortfolio .print-skill-chip-name{font-size:11pt!important;line-height:1.0!important;padding:.45mm .25mm!important;}
+  #printPortfolio .print-skill-chip-total-only strong,#printPortfolio .print-skill-chip-total strong{font-size:16pt!important;line-height:.9!important;margin:0!important;}
+  #printPortfolio .print-tracks{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:.65mm!important;}
+  #printPortfolio .print-table{font-size:12pt!important;line-height:1.08!important;width:100%!important;table-layout:fixed!important;}
+  #printPortfolio .print-table th,#printPortfolio .print-table td,#printPortfolio .print-locked-gear-row>div,#printPortfolio .print-locked-gear-header>div{font-size:12pt!important;line-height:1.08!important;padding:.3mm .45mm!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-skills-grid[data-equal-skills-grid]{gap:.9mm!important;align-items:flex-start!important;}
+  #printPortfolio .print-skill-reminder{font-size:12pt!important;line-height:1.1!important;margin:.5mm 0 0!important;padding-top:.3mm!important;}
+  #printPortfolio .print-options-grid,#printPortfolio .print-gear-grid,#printPortfolio .print-supplement-grid{gap:1mm!important;}
+  #printPortfolio .print-option-card,#printPortfolio .print-option-body,#printPortfolio .print-copy-box{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-copy-text{font-size:12pt!important;line-height:1.12!important;}
+  #printPortfolio .print-locked-full-gear-stack[data-locked-full-gear-stack],#printPortfolio .print-full-gear-stack[data-equal-full-gear-stack],#printPortfolio .print-beginner-gear-stack[data-equal-gear-stack]{display:block!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-locked-full-gear-block[data-locked-full-gear-block],#printPortfolio .print-full-gear-row[data-equal-full-gear-row],#printPortfolio .print-beginner-gear-row[data-equal-gear-row]{display:block!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;margin:0 0 1mm!important;}
+  #printPortfolio .print-locked-gear-table{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;padding:.5mm .7mm!important;}
+  #printPortfolio .print-locked-gear-rules{display:block!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-rule-reminder{font-size:12pt!important;line-height:1.1!important;margin-top:.7mm!important;padding:.6mm .8mm!important;}
+}
+body.print-window #printPortfolio,body.print-window #printPortfolio *{font-family:Arial,Helvetica,sans-serif!important;font-size:12pt!important;line-height:1.12!important;}
+body.print-window .print-page,body.print-window .print-section,body.print-window .print-field,body.print-window .print-track,body.print-window .print-locked-full-gear-stack[data-locked-full-gear-stack],body.print-window .print-locked-full-gear-block[data-locked-full-gear-block]{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+body.print-window .print-section{margin-bottom:1.2mm!important;}
+body.print-window .print-section-body{padding:.75mm 1mm!important;}
+body.print-window .print-field,body.print-window .print-track{padding:.45mm .6mm!important;}
+body.print-window .print-table th,body.print-window .print-table td,body.print-window .print-locked-gear-row>div,body.print-window .print-locked-gear-header>div{font-size:12pt!important;line-height:1.08!important;padding:.3mm .45mm!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+body.print-window .print-locked-full-gear-stack[data-locked-full-gear-stack]{display:block!important;}
+body.print-window .print-locked-full-gear-block[data-locked-full-gear-block]{display:block!important;margin-bottom:1mm!important;}
+
+
 </style>
 </head>
 <body class="print-window print-portfolio-mode" data-print-orientation="landscape">
@@ -12284,8 +12346,8 @@ function makeTextPdf(pageStreams) {
   const objects = [null];
   const add = body => { objects.push(body); return objects.length - 1; };
   const pagesId = add('');
-  const fontRegular = add('<< /Type /Font /Subtype /Type1 /BaseFont /Arial /Encoding /WinAnsiEncoding >>');
-  const fontBold = add('<< /Type /Font /Subtype /Type1 /BaseFont /Arial-BoldMT /Encoding /WinAnsiEncoding >>');
+  const fontRegular = add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');
+  const fontBold = add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
   const pageIds = [];
   const W = 841.89, H = 595.28;
   pageStreams.forEach(stream => {
@@ -12426,7 +12488,7 @@ function pdfGearBlock(p,title,items,x,top,w,h,kind) {
   p.rect(x,top,w,24,[0.12,0.31,0.48],null);
   p.text(x+8,top+5,title.toUpperCase(),12,true,'#ffffff');
   const cols=[.03,.16,.09,.07,.65]; const xs=[x+5]; const innerW=w-10; for(let i=0;i<cols.length;i++)xs.push(xs[i]+innerW*cols[i]);
-  const tableTop=top+30; const headerH=20; const rows=Math.max(items.length, kind==='weapon'?2:5); const rowH=(h-36-headerH)/rows;
+  const tableTop=top+30; const headerH=20; const rows=Math.max(items.length,1); const rowH=Math.max(22,(h-36-headerH)/rows);
   p.rect(x+5,tableTop,innerW,headerH,[0.12,0.31,0.48],null);
   ['#','Item',kind==='weapon'?'Skill':'Type','Wt','Rules / Notes'].forEach((label,i)=>p.text(xs[i]+2,tableTop+3,label,12,true,'#ffffff'));
   for(let row=0;row<rows;row++){
@@ -12553,13 +12615,13 @@ function pdfLineCapacity(width, avg = 6.2) {
   return Math.max(8, Math.floor((Number(width) || 0) / avg));
 }
 
-function pdfDynamicBox(p, label, value, x, top, w, minH = 36, maxLines = 3) {
-  const textWidth = Math.max(12, w - 12);
+function pdfDynamicBox(p, label, value, x, top, w, minH = 28, maxLines = 3) {
+  const textWidth = Math.max(12, w - 10);
   const lines = pdfWords(value || '-', pdfLineCapacity(textWidth, 6.2), maxLines);
-  const h = Math.max(minH, 24 + lines.length * MOBILE_PDF_LINE);
+  const h = Math.max(minH, 20 + lines.length * 13);
   p.rect(x, top, w, h, [1,1,1], '#c8d0d8');
-  p.text(x + 5, top + 4, String(label || '').toUpperCase(), MOBILE_PDF_FONT, true, '#536173');
-  lines.forEach((line, index) => p.text(x + 5, top + 20 + index * MOBILE_PDF_LINE, line, MOBILE_PDF_FONT, false, '#172033'));
+  p.text(x + 5, top + 3, String(label || '').toUpperCase(), MOBILE_PDF_FONT, true, '#536173');
+  lines.forEach((line, index) => p.text(x + 5, top + 17 + index * 13, line, MOBILE_PDF_FONT, false, '#172033'));
   return h;
 }
 
@@ -12582,7 +12644,7 @@ function pdfHeaderLarge(page, total, subtitle = '') {
 function pdfCorePage(page, total) {
   const p = pdfHeaderLarge(page, total, 'Identity, main skills and resources');
 
-  const identity = pdfSectionFrame(p, 'Character Identity', 18, 72, 805, 118);
+  const identity = pdfSectionFrame(p, 'Character Identity', 18, 72, 805, 112);
   const identityFields = [
     ['Character Name', printValue('characterName') || 'Unnamed Character'],
     ['Player', printValue('player')],
@@ -12593,22 +12655,22 @@ function pdfCorePage(page, total) {
   const gap = 7;
   const colW = (identity.w - gap) / 2;
   let y = identity.top;
-  let h1 = pdfDynamicBox(p, identityFields[0][0], identityFields[0][1], identity.x, y, identity.w, 38, 2);
-  y += h1 + 6;
+  let h1 = pdfDynamicBox(p, identityFields[0][0], identityFields[0][1], identity.x, y, identity.w, 30, 2);
+  y += h1 + 4;
   for (let i = 1; i < identityFields.length; i += 2) {
     const left = identityFields[i];
     const right = identityFields[i + 1];
-    const lh = left ? pdfDynamicBox(p, left[0], left[1], identity.x, y, colW, 38, 2) : 0;
-    const rh = right ? pdfDynamicBox(p, right[0], right[1], identity.x + colW + gap, y, colW, 38, 2) : 0;
-    y += Math.max(lh, rh) + 6;
+    const lh = left ? pdfDynamicBox(p, left[0], left[1], identity.x, y, colW, 30, 2) : 0;
+    const rh = right ? pdfDynamicBox(p, right[0], right[1], identity.x + colW + gap, y, colW, 30, 2) : 0;
+    y += Math.max(lh, rh) + 4;
   }
 
-  const main = pdfSectionFrame(p, 'Main Skills and Resources', 18, 204, 805, 178);
+  const main = pdfSectionFrame(p, 'Main Skills and Resources', 18, 196, 805, 132);
   const chipGap = 4;
   const chipW = (main.w - chipGap * 6) / 7;
   mainSkills.forEach((skill, index) => {
     const x = main.x + index * (chipW + chipGap);
-    pdfDynamicBox(p, skill, String(skillRatingParts(skill).total), x, main.top, chipW, 46, 1);
+    pdfDynamicBox(p, skill, String(skillRatingParts(skill).total), x, main.top, chipW, 32, 1);
   });
 
   const tracks = [
@@ -12617,19 +12679,19 @@ function pdfCorePage(page, total) {
   ];
   const trackGap = 5;
   const trackW = (main.w - trackGap * 3) / 4;
-  let trackY = main.top + 64;
+  let trackY = main.top + 42;
   tracks.forEach((track, index) => {
     const row = Math.floor(index / 4);
     const col = index % 4;
-    pdfDynamicBox(p, track[0], track[1] || '-', main.x + col * (trackW + trackGap), trackY + row * 52, trackW, 44, 1);
+    pdfDynamicBox(p, track[0], track[1] || '-', main.x + col * (trackW + trackGap), trackY + row * 36, trackW, 30, 1);
   });
 
-  const notes = pdfSectionFrame(p, 'Export Notes', 18, 398, 805, 132);
+  const notes = pdfSectionFrame(p, 'Export Notes', 18, 342, 805, 54);
   const noteLines = [
-    'This large-print PDF uses Arial 12pt minimum. The editable browser sheet may show more detail, but exported values are simplified for table use.',
+    'Large-print PDF: 12pt text, clean skill totals, and compact adaptive boxes.',
     'Skills are printed on the next pages with Skill, Total, Focus and Source only.'
   ];
-  noteLines.forEach((line, index) => p.text(notes.x, notes.top + index * 18, line, MOBILE_PDF_FONT, false, '#172033'));
+  noteLines.forEach((line, index) => p.text(notes.x, notes.top + index * 15, line, MOBILE_PDF_FONT, false, '#172033'));
   return p.commands.join('\n');
 }
 
@@ -12637,7 +12699,7 @@ function pdfSkillsLargePage(page, total, title, skills) {
   const p = pdfHeaderLarge(page, total, title);
   const x = 18, top = 76, w = 805;
   const headerH = 26;
-  const rowH = 30;
+  const rowH = 26;
   const h = headerH + skills.length * rowH + 10;
   const cols = [0.27, 0.12, 0.12, 0.49];
   const xs = [x + 6];
@@ -12660,7 +12722,7 @@ function pdfSkillsLargePage(page, total, title, skills) {
       const colWidth = xs[index + 1] - xs[index] - 6;
       const maxLines = index === 3 ? 2 : 1;
       const lines = pdfWords(value, pdfLineCapacity(colWidth, 6.2), maxLines);
-      lines.forEach((line, n) => p.text(xs[index] + 3, y + 6 + n * 13, line, MOBILE_PDF_FONT, index === 1, '#172033'));
+      lines.forEach((line, n) => p.text(xs[index] + 3, y + 5 + n * 12, line, MOBILE_PDF_FONT, index === 1, '#172033'));
     });
   });
   return p.commands.join('\n');
@@ -12695,21 +12757,21 @@ function pdfOptionsPage(page, total, title, items, kind) {
 }
 
 function pdfGearBlockLarge(p, title, items, x, top, w, kind) {
-  const rowCount = Math.max(items.length, kind === 'weapon' ? 2 : 5);
-  const headerH = 28;
-  const rowH = kind === 'weapon' ? 36 : 34;
-  const h = headerH + 28 + rowCount * rowH + 14;
+  const rowCount = Math.max(items.length, 1);
+  const headerH = 24;
+  const rowH = 28;
+  const h = headerH + 22 + rowCount * rowH + 10;
   const cols = [0.05, 0.22, 0.13, 0.10, 0.50];
   const innerX = x + 6;
   const innerW = w - 12;
   const xs = [innerX];
   cols.forEach(col => xs.push(xs[xs.length - 1] + innerW * col));
   p.rect(x, top, w, h, [1,1,1], '#9aa7b1');
-  p.rect(x, top, w, 28, [0.12,0.31,0.48], null);
-  p.text(x + 8, top + 7, title.toUpperCase(), MOBILE_PDF_FONT, true, '#ffffff');
-  const tableTop = top + 36;
+  p.rect(x, top, w, 24, [0.12,0.31,0.48], null);
+  p.text(x + 8, top + 5, title.toUpperCase(), MOBILE_PDF_FONT, true, '#ffffff');
+  const tableTop = top + 30;
   p.rect(innerX, tableTop, innerW, headerH, [0.12,0.31,0.48], null);
-  ['#', 'Item', kind === 'weapon' ? 'Skill' : 'Type', 'Wt', 'Rules / Notes'].forEach((label, index) => p.text(xs[index] + 3, tableTop + 7, label, MOBILE_PDF_FONT, true, '#ffffff'));
+  ['#', 'Item', kind === 'weapon' ? 'Skill' : 'Type', 'Wt', 'Rules / Notes'].forEach((label, index) => p.text(xs[index] + 3, tableTop + 5, label, MOBILE_PDF_FONT, true, '#ffffff'));
   for (let row = 0; row < rowCount; row += 1) {
     const y = tableTop + headerH + row * rowH;
     p.line(innerX, y + rowH, innerX + innerW, y + rowH, '#c8d0d8', .3);
@@ -12723,7 +12785,7 @@ function pdfGearBlockLarge(p, title, items, x, top, w, kind) {
       const colWidth = xs[index + 1] - xs[index] - 6;
       const maxLines = index === 4 ? 2 : 1;
       const lines = pdfWords(value, pdfLineCapacity(colWidth, 6.2), maxLines);
-      lines.forEach((line, n) => p.text(xs[index] + 3, y + 7 + n * 14, line, MOBILE_PDF_FONT, false, '#172033'));
+      lines.forEach((line, n) => p.text(xs[index] + 3, y + 5 + n * 12, line, MOBILE_PDF_FONT, false, '#172033'));
     });
   }
   return h;
@@ -12757,7 +12819,7 @@ function buildMobilePortfolioPdfPages() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v39-pdf12-flow-mobile-stable";
+  document.documentElement.dataset.infinityBuild = "v40-pdf-font-box-stability";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
