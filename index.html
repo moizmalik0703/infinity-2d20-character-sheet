@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v40-pdf-font-box-stability">
-  <!-- DEPLOYMENT CHECK: v40-pdf-font-box-stability | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt browser print styling, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, and Wounds is a 0-3 dropdown. -->
+  <meta name="infinity-build" content="v41-pdf-alignment-stable">
+  <!-- DEPLOYMENT CHECK: v41-pdf-alignment-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, and Wounds is a 0-3 dropdown. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2246,9 +2246,21 @@ body.print-window .print-locked-gear-rules { max-height: none !important; overfl
   #printPortfolio .print-locked-full-gear-block[data-locked-full-gear-block]{display:block!important;margin-bottom:1mm!important;}
   #printPortfolio .print-locked-gear-rules{max-height:none!important;overflow:visible!important;}
 }
+
+/* v41 alignment repair: keep print sections in document flow, avoid clipping, and compact empty space. */
+@media print{
+  #printPortfolio .print-section{display:block!important;position:relative!important;clear:both!important;overflow:visible!important;height:auto!important;min-height:0!important;max-height:none!important;break-inside:auto!important;page-break-inside:auto!important;}
+  #printPortfolio .print-section-body{display:block!important;overflow:visible!important;height:auto!important;min-height:0!important;max-height:none!important;}
+  #printPortfolio .print-fields{align-items:start!important;}
+  #printPortfolio .print-field,#printPortfolio .print-track{align-self:start!important;overflow:visible!important;height:auto!important;min-height:0!important;max-height:none!important;}
+  #printPortfolio .print-core-grid,#printPortfolio .print-tracks,#printPortfolio .print-main-skills{align-items:start!important;}
+}
+body.print-window #printPortfolio .print-section{display:block!important;position:relative!important;clear:both!important;overflow:visible!important;height:auto!important;min-height:0!important;max-height:none!important;}
+body.print-window #printPortfolio .print-section-body{display:block!important;overflow:visible!important;height:auto!important;min-height:0!important;max-height:none!important;}
+body.print-window #printPortfolio .print-fields,body.print-window #printPortfolio .print-core-grid,body.print-window #printPortfolio .print-tracks,body.print-window #printPortfolio .print-main-skills{align-items:start!important;}
 </style>
 </head>
-<body data-build="v40-pdf-font-box-stability">
+<body data-build="v41-pdf-alignment-stable">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
@@ -10254,7 +10266,7 @@ window.INFINITY_DATA.homeworldsByFaction = {
   "NA2 / Mercenaries": ["Various worlds", "stations", "warzones", "caravanserai", "ships"],
   "O-12 / Nomads": ["Circulars", "stations", "orbital habitats", "Nomad and O-12 shipboard deployments"]
 };
-window.INFINITY_BUILD = "v40-pdf-font-box-stability";
+window.INFINITY_BUILD = "v41-pdf-alignment-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -12641,10 +12653,38 @@ function pdfHeaderLarge(page, total, subtitle = '') {
   return p;
 }
 
+
+function pdfMeasureBoxValue(value, w, minH = 30, maxLines = 2) {
+  const textWidth = Math.max(12, w - 10);
+  const lines = pdfWords(value || '-', pdfLineCapacity(textWidth, 6.2), maxLines);
+  return { lines, h: Math.max(minH, 20 + lines.length * 13) };
+}
+
+function pdfDrawMeasuredBox(p, label, measure, x, top, w) {
+  const safe = measure || { lines: ['-'], h: 30 };
+  p.rect(x, top, w, safe.h, [1,1,1], '#c8d0d8');
+  p.text(x + 5, top + 3, String(label || '').toUpperCase(), MOBILE_PDF_FONT, true, '#536173');
+  (safe.lines || ['-']).forEach((line, index) => p.text(x + 5, top + 17 + index * 13, line, MOBILE_PDF_FONT, false, '#172033'));
+  return safe.h;
+}
+
+function pdfDrawSectionFrame(p, title, x, top, w, h) {
+  p.rect(x, top, w, h, [1,1,1], '#9aa7b1');
+  p.rect(x, top, w, 23, [0.12,0.31,0.48], null);
+  p.text(x + 8, top + 5, String(title || '').toUpperCase(), MOBILE_PDF_FONT, true, '#ffffff');
+  return { x: x + 6, top: top + 29, w: w - 12, h: h - 35 };
+}
+
 function pdfCorePage(page, total) {
   const p = pdfHeaderLarge(page, total, 'Identity, main skills and resources');
+  const pageX = 18;
+  const pageW = 805;
+  const sectionGap = 8;
+  const boxGap = 5;
+  let sectionTop = 72;
 
-  const identity = pdfSectionFrame(p, 'Character Identity', 18, 72, 805, 112);
+  // Character Identity: calculate the required height first, then draw the frame.
+  // This prevents the Main Skills header from overlapping Homeworld/Career on mobile PDFs.
   const identityFields = [
     ['Character Name', printValue('characterName') || 'Unnamed Character'],
     ['Player', printValue('player')],
@@ -12652,46 +12692,74 @@ function pdfCorePage(page, total) {
     ['Homeworld / Habitat', printValue('homeworld')],
     ['Career', printValue('career')]
   ];
-  const gap = 7;
-  const colW = (identity.w - gap) / 2;
+  const identityInnerW = pageW - 12;
+  const identityColW = (identityInnerW - boxGap) / 2;
+  const nameM = pdfMeasureBoxValue(identityFields[0][1], identityInnerW, 30, 2);
+  const playerM = pdfMeasureBoxValue(identityFields[1][1], identityColW, 30, 2);
+  const factionM = pdfMeasureBoxValue(identityFields[2][1], identityColW, 30, 2);
+  const homeworldM = pdfMeasureBoxValue(identityFields[3][1], identityColW, 30, 2);
+  const careerM = pdfMeasureBoxValue(identityFields[4][1], identityColW, 30, 2);
+  const identityRow1H = Math.max(playerM.h, factionM.h);
+  const identityRow2H = Math.max(homeworldM.h, careerM.h);
+  const identityBodyH = nameM.h + boxGap + identityRow1H + boxGap + identityRow2H;
+  const identitySectionH = 29 + identityBodyH + 6;
+  const identity = pdfDrawSectionFrame(p, 'Character Identity', pageX, sectionTop, pageW, identitySectionH);
   let y = identity.top;
-  let h1 = pdfDynamicBox(p, identityFields[0][0], identityFields[0][1], identity.x, y, identity.w, 30, 2);
-  y += h1 + 4;
-  for (let i = 1; i < identityFields.length; i += 2) {
-    const left = identityFields[i];
-    const right = identityFields[i + 1];
-    const lh = left ? pdfDynamicBox(p, left[0], left[1], identity.x, y, colW, 30, 2) : 0;
-    const rh = right ? pdfDynamicBox(p, right[0], right[1], identity.x + colW + gap, y, colW, 30, 2) : 0;
-    y += Math.max(lh, rh) + 4;
-  }
+  pdfDrawMeasuredBox(p, identityFields[0][0], nameM, identity.x, y, identity.w);
+  y += nameM.h + boxGap;
+  pdfDrawMeasuredBox(p, identityFields[1][0], playerM, identity.x, y, identityColW);
+  pdfDrawMeasuredBox(p, identityFields[2][0], factionM, identity.x + identityColW + boxGap, y, identityColW);
+  y += identityRow1H + boxGap;
+  pdfDrawMeasuredBox(p, identityFields[3][0], homeworldM, identity.x, y, identityColW);
+  pdfDrawMeasuredBox(p, identityFields[4][0], careerM, identity.x + identityColW + boxGap, y, identityColW);
+  sectionTop += identitySectionH + sectionGap;
 
-  const main = pdfSectionFrame(p, 'Main Skills and Resources', 18, 196, 805, 132);
-  const chipGap = 4;
-  const chipW = (main.w - chipGap * 6) / 7;
-  mainSkills.forEach((skill, index) => {
-    const x = main.x + index * (chipW + chipGap);
-    pdfDynamicBox(p, skill, String(skillRatingParts(skill).total), x, main.top, chipW, 32, 1);
-  });
-
+  // Main skills and resources: dynamic frame based on box rows, not fixed top values.
+  const mainInnerW = pageW - 12;
+  const skillGap = 4;
+  const skillBoxH = 34;
+  const chipW = (mainInnerW - skillGap * 6) / 7;
   const tracks = [
-    ['HP / Vigor', printValue('hp')], ['Firewall', printValue('firewall')], ['Armour', printValue('armour')], ['Mental Stress', printValue('mentalStress')],
-    ['Infinity Points', printValue('infinityPoints')], ['Credits', printValue('credits')], ['Momentum', printValue('momentum')], ['Wounds', printValue('wounds')]
+    ['HP / Vigor', printValue('hp')],
+    ['Firewall', printValue('firewall')],
+    ['Armour', printValue('armour')],
+    ['Mental Stress', printValue('mentalStress')],
+    ['Infinity Points', printValue('infinityPoints')],
+    ['Credits', printValue('credits')],
+    ['Momentum', printValue('momentum')],
+    ['Wounds', printValue('wounds')]
   ];
   const trackGap = 5;
-  const trackW = (main.w - trackGap * 3) / 4;
-  let trackY = main.top + 42;
+  const trackW = (mainInnerW - trackGap * 3) / 4;
+  const trackMeasures = tracks.map(track => pdfMeasureBoxValue(track[1] || '-', trackW, 30, 1));
+  const trackRow1H = Math.max(...trackMeasures.slice(0, 4).map(m => m.h));
+  const trackRow2H = Math.max(...trackMeasures.slice(4).map(m => m.h));
+  const mainBodyH = skillBoxH + 8 + trackRow1H + boxGap + trackRow2H;
+  const mainSectionH = 29 + mainBodyH + 6;
+  const main = pdfDrawSectionFrame(p, 'Main Skills and Resources', pageX, sectionTop, pageW, mainSectionH);
+  mainSkills.forEach((skill, index) => {
+    const x = main.x + index * (chipW + skillGap);
+    const measure = { lines: [String(skillRatingParts(skill).total)], h: skillBoxH };
+    pdfDrawMeasuredBox(p, skill, measure, x, main.top, chipW);
+  });
+  const trackY1 = main.top + skillBoxH + 8;
+  const trackY2 = trackY1 + trackRow1H + boxGap;
   tracks.forEach((track, index) => {
     const row = Math.floor(index / 4);
     const col = index % 4;
-    pdfDynamicBox(p, track[0], track[1] || '-', main.x + col * (trackW + trackGap), trackY + row * 36, trackW, 30, 1);
+    const top = row === 0 ? trackY1 : trackY2;
+    const measure = trackMeasures[index];
+    pdfDrawMeasuredBox(p, track[0], measure, main.x + col * (trackW + trackGap), top, trackW);
   });
+  sectionTop += mainSectionH + sectionGap;
 
-  const notes = pdfSectionFrame(p, 'Export Notes', 18, 342, 805, 54);
-  const noteLines = [
-    'Large-print PDF: 12pt text, clean skill totals, and compact adaptive boxes.',
-    'Skills are printed on the next pages with Skill, Total, Focus and Source only.'
-  ];
-  noteLines.forEach((line, index) => p.text(notes.x, notes.top + index * 15, line, MOBILE_PDF_FONT, false, '#172033'));
+  // A small optional note replaces the older oversized Export Notes box.
+  const noteText = 'Large-print PDF: Arial-equivalent 12pt text, clean skill totals, and non-overlapping adaptive boxes.';
+  const noteM = pdfMeasureBoxValue(noteText, pageW - 12, 26, 2);
+  const noteH = 29 + noteM.h + 6;
+  const notes = pdfDrawSectionFrame(p, 'Export Notes', pageX, sectionTop, pageW, noteH);
+  pdfDrawMeasuredBox(p, 'Notes', noteM, notes.x, notes.top, notes.w);
+
   return p.commands.join('\n');
 }
 
@@ -12819,7 +12887,7 @@ function buildMobilePortfolioPdfPages() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v40-pdf-font-box-stability";
+  document.documentElement.dataset.infinityBuild = "v41-pdf-alignment-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
