@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v42-supplemental-data-mobile-pdf-stable">
-  <!-- DEPLOYMENT CHECK: v42-supplemental-data-mobile-pdf-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, and Wounds is a 0-3 dropdown. -->
+  <meta name="infinity-build" content="v43-glossary-reference-stable">
+  <!-- DEPLOYMENT CHECK: v43-glossary-reference-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, and a read-only searchable Glossary / Player Reference is available. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2258,9 +2258,139 @@ body.print-window .print-locked-gear-rules { max-height: none !important; overfl
 body.print-window #printPortfolio .print-section{display:block!important;position:relative!important;clear:both!important;overflow:visible!important;height:auto!important;min-height:0!important;max-height:none!important;}
 body.print-window #printPortfolio .print-section-body{display:block!important;overflow:visible!important;height:auto!important;min-height:0!important;max-height:none!important;}
 body.print-window #printPortfolio .print-fields,body.print-window #printPortfolio .print-core-grid,body.print-window #printPortfolio .print-tracks,body.print-window #printPortfolio .print-main-skills{align-items:start!important;}
+
+
+/* v43 glossary/reference page: read-only player aid. */
+.glossary-page {
+  width: min(100%, 1180px);
+  margin: 1rem auto 2rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  padding: .75rem;
+}
+.glossary-page[hidden] { display: none !important; }
+.glossary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: .75rem;
+  margin-bottom: .65rem;
+}
+.glossary-header p {
+  margin: .25rem 0 0;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.35;
+}
+.glossary-toolbar {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(10rem, 16rem);
+  gap: .55rem;
+  margin-bottom: .65rem;
+  align-items: end;
+}
+.glossary-toolbar label {
+  font-size: .78rem;
+}
+.glossary-summary {
+  margin: .25rem 0 .55rem;
+  color: var(--muted);
+  font-size: .82rem;
+}
+.glossary-list {
+  display: grid;
+  gap: .45rem;
+}
+.glossary-card {
+  border: 1px solid var(--line);
+  background: #ffffff;
+  border-radius: .35rem;
+  overflow: hidden;
+}
+.glossary-card summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .5rem;
+  align-items: center;
+  padding: .55rem .65rem;
+  cursor: pointer;
+  background: #f8fbfd;
+}
+.glossary-card summary::-webkit-details-marker { display: none; }
+.glossary-card summary::marker { content: ""; }
+.glossary-title {
+  min-width: 0;
+  font-weight: 700;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.glossary-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border: 1px solid var(--soft-line);
+  border-radius: 999px;
+  padding: .18rem .48rem;
+  background: #eaf3f8;
+  color: var(--blue);
+  font-size: .72rem;
+  font-weight: 700;
+}
+.glossary-body {
+  padding: .65rem;
+  display: grid;
+  gap: .45rem;
+  border-top: 1px solid var(--soft-line);
+}
+.glossary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .28rem;
+}
+.glossary-pill {
+  border: 1px solid var(--soft-line);
+  border-radius: .28rem;
+  padding: .18rem .34rem;
+  background: #f4f6f8;
+  color: #384657;
+  font-size: .72rem;
+  line-height: 1.2;
+}
+.glossary-text {
+  margin: 0;
+  font-size: .86rem;
+  line-height: 1.4;
+  color: var(--ink);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.glossary-empty {
+  border: 1px dashed var(--line);
+  padding: .8rem;
+  color: var(--muted);
+  background: #fff;
+  text-align: center;
+}
+body.glossary-mode #sheet { display: none !important; }
+body.glossary-mode #glossaryPage { display: block !important; }
+body.glossary-mode #glossaryBtn { background: #d9eaf7; }
+@media (max-width: 760px) {
+  .glossary-page { margin: .5rem auto 1rem; padding: .55rem; }
+  .glossary-header { display: grid; }
+  .glossary-toolbar { grid-template-columns: 1fr; }
+  .glossary-card summary { grid-template-columns: 1fr; gap: .25rem; }
+  .glossary-tag { justify-self: start; }
+  .glossary-text { font-size: .92rem; }
+}
+@media print {
+  #glossaryPage { display: none !important; }
+}
+
 </style>
 </head>
-<body data-build="v42-supplemental-data-mobile-pdf-stable">
+<body data-build="v43-glossary-reference-stable">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
@@ -2269,6 +2399,7 @@ body.print-window #printPortfolio .print-fields,body.print-window #printPortfoli
       <button id="newSheetBtn">New</button>
       <button id="randomCharacterBtn">Random Character</button>
       <button id="randomBeginnerCharacterBtn">Random Beginner Character</button>
+      <button id="glossaryBtn" type="button">Glossary / Reference</button>
       <select id="characterSlotSelect" title="Saved characters"></select>
       <button id="saveBtn">Save character</button>
       <button id="loadBtn">Load selected</button>
@@ -2363,6 +2494,26 @@ body.print-window #printPortfolio .print-fields,body.print-window #printPortfoli
       </label>
     </section>
   </main>
+
+  <section id="glossaryPage" class="glossary-page no-print" hidden aria-label="Glossary and reference">
+    <div class="glossary-header">
+      <div>
+        <h2>Glossary / Player Reference</h2>
+        <p>Search terms, rules reminders, traits, talents, careers, factions, homeworlds, weapons, and equipment. This page is read-only and will not change the current character sheet.</p>
+      </div>
+      <button id="backToSheetBtn" type="button">Back to Character Sheet</button>
+    </div>
+    <div class="glossary-toolbar">
+      <label>Search Glossary
+        <input id="glossarySearch" type="search" autocomplete="off" placeholder="Search talents, traits, factions, gear, rules terms...">
+      </label>
+      <label>Category
+        <select id="glossaryCategory"></select>
+      </label>
+    </div>
+    <p id="glossarySummary" class="glossary-summary"></p>
+    <div id="glossaryList" class="glossary-list"></div>
+  </section>
 
   <section id="printPortfolio" aria-hidden="true"></section>
   <div id="exportStatus" class="export-status" role="status" aria-live="polite" hidden>
@@ -11643,7 +11794,7 @@ body.print-window #printPortfolio .print-fields,body.print-window #printPortfoli
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v42-supplemental-data-mobile-pdf-stable";
+window.INFINITY_BUILD = "v43-glossary-reference-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -14287,8 +14438,207 @@ function buildMobilePortfolioPdfPages() {
   return builders.map((build, index) => build(index + 1, total));
 }
 
+
+const GLOSSARY_CATEGORIES = [
+  "All",
+  "Rules Terms",
+  "Traits",
+  "Talents",
+  "Careers",
+  "Factions",
+  "Homeworlds / Habitats",
+  "Weapons",
+  "Equipment"
+];
+let glossaryEntriesCache = null;
+let glossaryRenderPending = false;
+
+function glossaryEscape(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function glossarySort(list) {
+  return [...list].sort((a, b) => String(a.name || "").localeCompare(String(b.name || ""), undefined, { sensitivity: "base" }));
+}
+
+function glossaryMetaLine(parts) {
+  return parts.filter(Boolean).map(v => String(v).trim()).filter(Boolean);
+}
+
+function glossaryEntry(category, name, tag, meta, text, searchText = "") {
+  return {
+    category,
+    name: String(name || "").trim(),
+    tag: tag || category,
+    meta: Array.isArray(meta) ? meta : [],
+    text: String(text || "").trim(),
+    search: [category, name, tag, ...(Array.isArray(meta) ? meta : []), text, searchText].join(" ").toLowerCase()
+  };
+}
+
+function buildGlossaryEntries() {
+  if (glossaryEntriesCache) return glossaryEntriesCache;
+
+  const entries = [];
+  const ruleTerms = [
+    ["Main Skills", "Rule", ["Agility", "Awareness", "Brawn", "Coordination", "Intelligence", "Personality", "Willpower"], "Main skills set the base value for their linked sub-skills. In this custom sheet, main skills cannot use Focus."],
+    ["Sub-skills", "Rule", ["Skill tests", "Focus allowed"], "Sub-skills inherit the relevant main skill rating, then add starting allocation and applicable Trait/Talent modifiers. Focus may be assigned only to sub-skills."],
+    ["Focus", "Rule", ["Sub-skills only"], "Focus represents specialist training. Main skills cannot use Focus; assign Focus to specific sub-skills such as Ballistics, Hacking, Medicine, Persuade, or Survival."],
+    ["Career", "Character option", ["Eligibility", "Traits", "Talents"], "Career is the single field used for eligibility filtering. Choosing a Career filters Trait and Talent options while keeping general/unrestricted options available."],
+    ["Faction / Homeworld relationship", "Character option", ["Validation"], "Homeworld / Habitat choices are filtered by the selected Faction. Changing Faction clears an invalid Homeworld / Habitat selection."],
+    ["Armour", "Resource", ["Light 5", "Medium 10", "Heavy 15"], "Armour replaces Temporary HP in this custom sheet. Armour can be selected directly or inferred from selected armour equipment."],
+    ["HP / Vigor", "Resource", ["0–20"], "The character's physical endurance track."],
+    ["Firewall", "Resource", ["0–20"], "The character's defensive quantronic or infowar resilience track."],
+    ["Mental Stress", "Resource", ["0–20"], "The character's psychological resilience track."],
+    ["Momentum", "Resource", ["Party resource"], "A shared or session-facing resource used to support player actions where the GM allows it."],
+    ["Infinity Points", "Resource", ["Heroic resource"], "A player-facing resource used for important heroic or cinematic moments."],
+    ["Wounds", "Resource", ["0–3"], "Wounds are tracked separately from HP / Vigor. This sheet restricts Wounds to values 0 through 3."],
+    ["Rarity", "Gear / option", ["Common", "Uncommon", "Rare", "Very Rare"], "Rarity helps determine availability and cost. Beginner/random generation currently prefers Common gear unless otherwise specified."],
+    ["Prerequisite", "Talent rule", ["Talent chains"], "A Talent prerequisite lists what a character should normally have before selecting that Talent."],
+    ["Condition", "Status", ["Temporary effect"], "Conditions represent temporary battlefield, physical, mental, environmental, or equipment-related effects tracked during play."]
+  ];
+  ruleTerms.forEach(([name, tag, meta, text]) => entries.push(glossaryEntry("Rules Terms", name, tag, meta, text)));
+
+  glossarySort(DATA.traits || []).forEach(t => {
+    entries.push(glossaryEntry(
+      "Traits",
+      t.name,
+      t.category ? `Trait · ${t.category}` : "Trait",
+      glossaryMetaLine([t.restriction || "No Restrictions", t.rarity, t.cost ? `Cost ${t.cost}` : "", t.primary && t.secondary ? `${t.primary} / ${t.secondary}` : ""]),
+      [t.brief, t.effect ? `Effect: ${t.effect}` : ""].filter(Boolean).join("\n\n"),
+      [t.primary, t.secondary, t.restriction, t.category].join(" ")
+    ));
+  });
+
+  glossarySort(DATA.talents || []).forEach(t => {
+    entries.push(glossaryEntry(
+      "Talents",
+      t.name,
+      t.level ? `Talent · Level ${t.level}` : "Talent",
+      glossaryMetaLine([t.category, t.career ? `Career: ${t.career}` : "", t.doctrine ? `Doctrine: ${t.doctrine}` : "", t.faction ? `Faction: ${t.faction}` : "", t.restriction, t.prerequisite ? `Prereq: ${t.prerequisite}` : "", t.rarity, t.cost ? `Cost ${t.cost}` : ""]),
+      [t.description, t.effect ? `Effect: ${t.effect}` : ""].filter(Boolean).join("\n\n"),
+      [t.primary, t.secondary, t.career, t.doctrine, t.faction, t.restriction, t.category].join(" ")
+    ));
+  });
+
+  const careerSet = new Set(DATA.lists?.careerRoles || []);
+  (DATA.talents || []).forEach(t => { if (t.career) careerSet.add(t.career); });
+  glossarySort([...careerSet].map(name => ({ name }))).forEach(c => {
+    const talents = (DATA.talents || []).filter(t => t.career === c.name).map(t => t.name).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+    const factions = [...new Set((DATA.talents || []).filter(t => t.career === c.name && t.faction).map(t => t.faction))].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+    const text = talents.length
+      ? `Career used for eligibility filtering. Related Talents include: ${talents.slice(0, 18).join(", ")}${talents.length > 18 ? `, and ${talents.length - 18} more.` : "."}`
+      : "Career used for eligibility filtering and character identity.";
+    entries.push(glossaryEntry("Careers", c.name, "Career", glossaryMetaLine([factions.length ? `Linked factions: ${factions.join(", ")}` : "General / Unrestricted", talents.length ? `${talents.length} related talents` : ""]), text, [factions.join(" "), talents.join(" ")].join(" ")));
+  });
+
+  glossarySort((DATA.lists?.factions || []).map(name => ({ name }))).forEach(f => {
+    const worlds = DATA.homeworldsByFaction?.[f.name] || [];
+    const talents = (DATA.talents || []).filter(t => t.faction === f.name).map(t => t.name).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+    const textParts = [];
+    if (worlds.length) textParts.push(`Related Homeworlds / Habitats: ${worlds.join(", ")}.`);
+    if (talents.length) textParts.push(`Related Talents: ${talents.slice(0, 16).join(", ")}${talents.length > 16 ? `, and ${talents.length - 16} more` : ""}.`);
+    entries.push(glossaryEntry("Factions", f.name, "Faction", glossaryMetaLine([worlds.length ? `${worlds.length} related homeworlds` : "No specific homeworld mapping", talents.length ? `${talents.length} related talents` : ""]), textParts.join("\n\n") || "Faction option used for character identity and Homeworld / Habitat filtering.", [worlds.join(" "), talents.join(" ")].join(" ")));
+  });
+
+  const homeworldToFactions = new Map();
+  Object.entries(DATA.homeworldsByFaction || {}).forEach(([faction, worlds]) => {
+    (worlds || []).forEach(world => {
+      if (!homeworldToFactions.has(world)) homeworldToFactions.set(world, []);
+      homeworldToFactions.get(world).push(faction);
+    });
+  });
+  const homeworldSet = new Set(DATA.lists?.homeworlds || []);
+  homeworldToFactions.forEach((_, world) => homeworldSet.add(world));
+  glossarySort([...homeworldSet].map(name => ({ name }))).forEach(w => {
+    const factions = [...new Set(homeworldToFactions.get(w.name) || [])].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+    entries.push(glossaryEntry("Homeworlds / Habitats", w.name, "Homeworld / Habitat", glossaryMetaLine([factions.length ? `Faction choices: ${factions.join(", ")}` : "General or unmapped option"]), factions.length ? `This option appears when one of these Factions is selected: ${factions.join(", ")}.` : "Homeworld / Habitat option available in the full reference list but not tied to a specific faction mapping yet.", factions.join(" ")));
+  });
+
+  glossarySort((DATA.equipment || []).filter(item => String(item.type || "").toLowerCase() === "weapon")).forEach(item => {
+    entries.push(glossaryEntry("Weapons", item.name, item.type || "Weapon", glossaryMetaLine([item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]), [item.brief, item.mechanic ? `Rules: ${item.mechanic}` : ""].filter(Boolean).join("\n\n"), [item.rarity, item.weight, item.mechanic].join(" ")));
+  });
+
+  glossarySort((DATA.equipment || []).filter(item => String(item.type || "").toLowerCase() !== "weapon")).forEach(item => {
+    entries.push(glossaryEntry("Equipment", item.name, item.type || "Equipment", glossaryMetaLine([item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]), [item.brief, item.mechanic ? `Rules: ${item.mechanic}` : ""].filter(Boolean).join("\n\n"), [item.type, item.rarity, item.weight, item.mechanic].join(" ")));
+  });
+
+  glossaryEntriesCache = entries.filter(e => e.name).sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+  return glossaryEntriesCache;
+}
+
+function buildGlossary() {
+  const categorySelect = document.getElementById("glossaryCategory");
+  if (!categorySelect) return;
+  makeOptions(categorySelect, GLOSSARY_CATEGORIES, "");
+  categorySelect.value = "All";
+  const search = document.getElementById("glossarySearch");
+  const schedule = () => {
+    if (glossaryRenderPending) return;
+    glossaryRenderPending = true;
+    window.requestAnimationFrame(() => {
+      glossaryRenderPending = false;
+      renderGlossary();
+    });
+  };
+  categorySelect.addEventListener("change", schedule);
+  if (search) search.addEventListener("input", schedule);
+  renderGlossary();
+}
+
+function renderGlossary() {
+  const list = document.getElementById("glossaryList");
+  const summary = document.getElementById("glossarySummary");
+  const category = document.getElementById("glossaryCategory")?.value || "All";
+  const query = (document.getElementById("glossarySearch")?.value || "").trim().toLowerCase();
+  if (!list) return;
+  const entries = buildGlossaryEntries().filter(entry => {
+    const categoryMatch = category === "All" || entry.category === category;
+    const queryMatch = !query || entry.search.includes(query);
+    return categoryMatch && queryMatch;
+  });
+  if (summary) {
+    const total = buildGlossaryEntries().length;
+    summary.textContent = `Showing ${entries.length} of ${total} entries${category !== "All" ? ` in ${category}` : ""}${query ? ` matching “${query}”` : ""}.`;
+  }
+  if (!entries.length) {
+    list.innerHTML = '<div class="glossary-empty">No glossary entries match the current search.</div>';
+    return;
+  }
+  list.innerHTML = entries.map(entry => {
+    const meta = entry.meta.length ? `<div class="glossary-meta">${entry.meta.map(v => `<span class="glossary-pill">${glossaryEscape(v)}</span>`).join("")}</div>` : "";
+    return `<details class="glossary-card">
+      <summary><span class="glossary-title">${glossaryEscape(entry.name)}</span><span class="glossary-tag">${glossaryEscape(entry.tag)}</span></summary>
+      <div class="glossary-body">${meta}<p class="glossary-text">${glossaryEscape(entry.text || "No description available yet.")}</p></div>
+    </details>`;
+  }).join("");
+}
+
+function showGlossary() {
+  document.body.classList.add("glossary-mode");
+  const page = document.getElementById("glossaryPage");
+  if (page) page.hidden = false;
+  buildGlossary();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  const search = document.getElementById("glossarySearch");
+  if (search && window.matchMedia("(min-width: 761px)").matches) search.focus({ preventScroll: true });
+}
+
+function hideGlossary() {
+  document.body.classList.remove("glossary-mode");
+  const page = document.getElementById("glossaryPage");
+  if (page) page.hidden = true;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v42-supplemental-data-mobile-pdf-stable";
+  document.documentElement.dataset.infinityBuild = "v43-glossary-reference-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -14307,6 +14657,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sanitizeSkillRatingDisplays();
   applyArmourFromEquipment();
   refreshSaveSlots();
+  buildGlossary();
   // Do not attach a MutationObserver to the skill Rating cells. Earlier builds
   // rewrote those cells from inside the observer callback, which could retrigger
   // itself and freeze the page after Career changes. updateSkillRatings() and
@@ -14314,6 +14665,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("randomCharacterBtn").addEventListener("click", randomCharacter);
   document.getElementById("randomBeginnerCharacterBtn").addEventListener("click", randomBeginnerCharacter);
+  document.getElementById("glossaryBtn").addEventListener("click", showGlossary);
+  document.getElementById("backToSheetBtn").addEventListener("click", hideGlossary);
   document.getElementById("saveBtn").addEventListener("click", saveCharacterToBrowser);
   document.getElementById("loadBtn").addEventListener("click", loadCharacterFromBrowser);
   document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);
