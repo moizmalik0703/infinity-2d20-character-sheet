@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v46-visible-glossary-descriptions-stable">
-  <!-- DEPLOYMENT CHECK: v46-visible-glossary-descriptions-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, and a read-only searchable Glossary / Player Reference is available. -->
+  <meta name="infinity-build" content="v47-lore-glossary-mobile-stable">
+  <!-- DEPLOYMENT CHECK: v47-lore-glossary-mobile-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, and a read-only searchable Glossary / Player Reference is available. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2453,7 +2453,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 </style>
 </head>
-<body data-build="v46-visible-glossary-descriptions-stable">
+<body data-build="v47-lore-glossary-mobile-stable">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
@@ -11866,7 +11866,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v46-visible-glossary-descriptions-stable";
+window.INFINITY_BUILD = "v47-lore-glossary-mobile-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -14586,37 +14586,115 @@ function worldMatchesRecord(world, record) {
 function sourceGuidedFallback(kind, name, extra = "") {
   const label = String(name || kind || "entry").trim();
   const detail = String(extra || "").trim();
-  if (kind === "Career") return `${label} is a career or role option used for character identity and eligibility filtering. It helps determine which themed Traits and Talents are most appropriate for the character.${detail ? ` ${detail}` : ""}`;
-  if (kind === "Faction") return `${label} is a faction or subfaction choice used to guide character background, available homeworlds, and related Talents or Traits.${detail ? ` ${detail}` : ""}`;
-  if (kind === "Homeworld / Habitat") return `${label} is a homeworld, habitat, shipboard, or deployment origin option. It helps locate the character within the Human Sphere or adjacent conflict zones and is filtered by Faction where a clear relationship is known.${detail ? ` ${detail}` : ""}`;
-  if (kind === "Weapon") return `${label} is a weapon option available in the character sheet equipment list. Use its rarity, weight, cost, and rules notes to decide whether it fits the character concept.${detail ? ` ${detail}` : ""}`;
-  if (kind === "Equipment") return `${label} is an equipment option available in the character sheet. Use its rarity, weight, cost, and rules notes to guide selection during character creation or mission preparation.${detail ? ` ${detail}` : ""}`;
-  if (kind === "Condition") return `${label} is a tracked status effect. Apply its description during play and use the listed removal attribute or skill guidance when resolving it.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Career") return `${label} is a life-path and social role in the Human Sphere. It says where a character learned their craft, who might recognise their methods, and which institutions, crews, armies, labs, clans, or street networks shaped them.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Faction") return `${label} is a political, military, cultural, or corporate allegiance that places a character inside the rival powers and frontier tensions of the Human Sphere.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Homeworld / Habitat") return `${label} is a place of origin, residence, or formative deployment. It can represent a birth world, shipboard childhood, orbital station, contested colony, Maya-connected enclave, frontier outpost, or alien-controlled theatre.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Weapon") return `${label} is part of the violent material culture of the Human Sphere, shaped by the needs of soldiers, security teams, mercenaries, rebels, explorers, and covert operatives.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Equipment") return `${label} is practical mission gear that hints at how characters survive the Human Sphere: expeditions, black operations, urban infiltration, void travel, battlefield triage, or specialist tradecraft.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Condition") return `${label} is a status effect used to describe the immediate fiction of a scene: shock, injury, fear, environmental pressure, hacking disruption, or battlefield loss of control.${detail ? ` ${detail}` : ""}`;
   return `${label} is a reference entry used by this character sheet.${detail ? ` ${detail}` : ""}`;
 }
 
+function humanJoin(values, fallback = "") {
+  const cleaned = [...new Set((values || []).map(v => String(v || "").trim()).filter(Boolean))];
+  if (!cleaned.length) return fallback;
+  if (cleaned.length === 1) return cleaned[0];
+  if (cleaned.length === 2) return `${cleaned[0]} and ${cleaned[1]}`;
+  return `${cleaned.slice(0, -1).join(", ")}, and ${cleaned[cleaned.length - 1]}`;
+}
+
+function loreForCategory(category) {
+  const key = normalizeGlossaryKey(category);
+  if (!key) return "a broad Human Sphere archetype that can be expressed through culture, training, reputation, and personal history";
+  if (/combat|weapon|attack|fireteam|marksman|close/.test(key)) return "the violent edge of the Human Sphere, where military doctrine, duelling cultures, security contracts, and survival instincts are tested under fire";
+  if (/hack|infowar|geist|maya|network|quantronic|cyber/.test(key)) return "Maya, quantronic intrusion, Geist support, hidden data wars, and the invisible battles that decide conflicts before a shot is fired";
+  if (/medical|bio|lhost|doctor|science|research|cube/.test(key)) return "the Human Sphere's biotech, silk medicine, resurrection economy, battlefield triage, and ethical grey zones around bodies and identity";
+  if (/social|command|diplomacy|politic|persuade|lifestyle|criminal|submondo/.test(key)) return "the social web of influence, reputation, patronage, blackmail, ideology, criminal networks, and public-facing authority";
+  if (/explor|survival|frontier|void|space|ship|pilot|terrain|survey/.test(key)) return "frontier worlds, hostile habitats, orbital spaces, wilderness routes, and the people who survive where normal infrastructure ends";
+  if (/engineering|tech|drone|tag|mechanic|repair/.test(key)) return "the practical culture of engineers, drone handlers, TAG crews, armourers, ship technicians, and improvisers who keep impossible technology working";
+  if (/aleph|posthuman|proxy|ai/.test(key)) return "ALEPH-adjacent identity, predictive action, optimized bodies, and the uneasy line between human agency and machine guidance";
+  if (/combined|shasvastii|morat|tohaa|voodoo|alien/.test(key)) return "the alien pressure of the Combined Army, VoodooTech, infiltration, conquest, and contact with minds outside ordinary human assumptions";
+  return `${category} traditions, institutions, and specialist communities within the Human Sphere`;
+}
+
+function loreForSkills(primary, secondary) {
+  const skills = [primary, secondary].filter(Boolean);
+  const key = normalizeGlossaryKey(skills.join(" "));
+  const phrases = [];
+  if (/ballistics|close combat|athletics|resistance|discipline/.test(key)) phrases.push("battlefield pressure, weapons discipline, drilled reactions, and the scars of real violence");
+  if (/stealth|thievery|observation|survival/.test(key)) phrases.push("scouting, infiltration, concealed movement, dirty routes, and lessons learned outside official maps");
+  if (/hacking|tech|analysis|science|education/.test(key)) phrases.push("technical education, data culture, careful diagnosis, and the hidden systems behind visible power");
+  if (/medicine|psychology|animal handling/.test(key)) phrases.push("bodies, minds, living creatures, trauma, empathy, and the practical ethics of keeping people functioning");
+  if (/command|persuade|lifestyle/.test(key)) phrases.push("rank, charisma, social pressure, favours, reputation, and the ability to move people as well as machines");
+  if (/pilot|spacecraft|extraplanetary/.test(key)) phrases.push("void travel, emergency procedures, orbital habitats, hard vacuum, and the strange confidence of people at home beyond a planet's surface");
+  return humanJoin(phrases, skills.length ? `the culture of ${humanJoin(skills)} specialists` : "the character's training history");
+}
+
+function loreForFactionName(faction) {
+  const record = findFactionRecord(faction);
+  if (record?.subfaction && record?.theme) return `${record.subfaction} Its table theme is ${record.theme}.`;
+  if (record?.subfaction) return record.subfaction;
+  const key = normalizeGlossaryKey(faction);
+  if (/aleph/.test(key)) return "ALEPH-linked characters often carry the aura of predictive support, posthuman possibility, Maya authority, and questions about how much of a choice was truly theirs.";
+  if (/nomad/.test(key)) return "Nomad-linked characters usually come from mobile nations, shipboard cultures, hacker communities, radical autonomy, black-market expertise, and a distrust of centralised control.";
+  if (/ariadna/.test(key)) return "Ariadnan characters are shaped by Dawn's frontier hardship, low-tech ingenuity, clan loyalties, antipode dangers, and hard-won independence.";
+  if (/haqqislam/.test(key)) return "Haqqislamite characters often reflect Bourak's humanist scholarship, Silk medicine, trade routes, desert cultures, and the tension between learning and survival.";
+  if (/panoc|panoceania/.test(key)) return "PanOceanian characters may carry the polish of hyperpower institutions, corporate patronage, high technology, religious orders, and professional military doctrine.";
+  if (/yu jing|yujing/.test(key)) return "Yu Jing characters often move through imperial service, state security, disciplined social expectations, industrial power, and competing visions of loyalty.";
+  if (/combined|shasvastii|morat|ei/.test(key)) return "Combined Army-linked entries carry the threat of alien empire, infiltration organisms, Morat militarism, EI strategy, and technology that feels wrong to human senses.";
+  if (/o 12|o-12/.test(key)) return "O-12-linked characters stand near diplomacy, law, inter-faction pressure, emergency mandates, and the uneasy politics of being the official neutral party.";
+  return "Its lore should be read through the faction, subfaction, homeworld, and career choices attached to the character.";
+}
+
+function loreForCareerName(career) {
+  const key = normalizeGlossaryKey(career);
+  if (/hacker|wardriver|interventor|infowar|cyber/.test(key)) return "This career lives in the invisible war: identity theft, intrusion duels, compromised comlogs, Maya reputations, and the constant risk that the network is watching back.";
+  if (/doctor|medic|bio|surgeon|akbar/.test(key)) return "This career carries the Human Sphere's uneasy promise that death, flesh, trauma, and identity can be negotiated by people with enough training and access.";
+  if (/engineer|technician|mechanic|drone|tag/.test(key)) return "This career is built around keeping advanced systems alive under stress, from patched field gear to drones, TAGs, ships, and failing habitats.";
+  if (/pilot|void|space|ship|crew|circular/.test(key)) return "This career belongs to people who trust instruments, routines, and instinct while moving through stations, orbital routes, emergency locks, and hard vacuum.";
+  if (/soldier|infantry|ranger|guard|military|trooper|security|mercenary|fireteam/.test(key)) return "This career is shaped by hierarchy, drilled reactions, unit identity, contracts, campaign scars, and the difference between official orders and survival.";
+  if (/spy|agent|undercover|scout|infiltrat|assassin|skirmisher/.test(key)) return "This career is lived behind masks, false papers, dead drops, hidden weapons, and the constant need to read a room before the room reads you.";
+  if (/diplomat|liaison|envoy|bureau|judge|o 12|o-12/.test(key)) return "This career turns law, language, procedure, and social pressure into weapons, especially where every faction believes it is the reasonable one.";
+  if (/scientist|research|academic|survey|explorer|analyst/.test(key)) return "This career pursues knowledge in places where discovery is political, dangerous, expensive, or already claimed by someone with guns.";
+  if (/criminal|smuggler|submondo|druze|fixer/.test(key)) return "This career is rooted in the Human Sphere's shadow economy: favours, debts, reputation, contraband, deniable work, and survival outside clean institutions.";
+  if (/posthuman|proxy|aleph/.test(key)) return "This career explores what identity means when a mind can operate through optimised bodies, predictive support, and institutions that may understand the future too well.";
+  return "This career is a social identity as much as a job: it tells the table who trained the character, who trusts them, who fears them, and what kind of trouble follows them.";
+}
+
+function restrictionLoreText(restriction) {
+  const text = String(restriction || "").trim();
+  if (!text || text === "No Restrictions") return "It is broadly available, but the GM can still frame it through the character's culture, faction, mentor, or formative mission.";
+  return `Its restriction points to a specific social or institutional origin: ${text}. That makes it a good hook for mentors, rivals, old obligations, and faction expectations.`;
+}
+
 function traitGlossaryText(t) {
-  const details = [];
-  if (t.brief) details.push(t.brief);
-  else details.push(`This Trait represents training or aptitude connected to ${[t.primary, t.secondary].filter(Boolean).join(" and ") || "the listed skills"}.`);
-  if (t.effect) details.push(`Effect: ${t.effect}`);
-  details.push(`Use this entry when the Trait clearly applies to the character's action or background. ${t.restriction && t.restriction !== "No Restrictions" ? `Eligibility: ${t.restriction}.` : "It is generally available unless the GM applies a stricter campaign limit."}`);
-  return details.filter(Boolean).join("\n\n");
+  const skills = [t.primary, t.secondary].filter(Boolean);
+  const lore = `${t.name} is more than a rules tag: it describes a reputation, habit, cultural imprint, or hard-earned survival pattern. In the fiction, it draws on ${loreForCategory(t.category)} and is usually expressed through ${loreForSkills(t.primary, t.secondary)}.`;
+  const identity = skills.length
+    ? `A character with this Trait might be recognised for how they approach ${humanJoin(skills)} situations: the way they move, speak, prepare, improvise, or recover under pressure.`
+    : "A character with this Trait should feel visibly different at the table: their choices, contacts, instincts, and personal history should explain why the Trait matters.";
+  const original = t.brief ? `Sheet description: ${t.brief}` : "Sheet description: This Trait represents specialist aptitude connected to the listed skills.";
+  const effect = t.effect ? `Effect: ${t.effect}` : "";
+  const eligibility = restrictionLoreText(t.restriction);
+  return [lore, identity, original, effect, eligibility].filter(Boolean).join("\n\n");
 }
 
 function talentGlossaryText(t) {
-  const details = [];
-  if (t.description) details.push(t.description);
-  else details.push(`This Talent supports a character concept linked to ${[t.career, t.faction, t.primary, t.secondary].filter(Boolean).join(", ") || "the listed role or skills"}.`);
-  if (t.effect) details.push(`Effect: ${t.effect}`);
+  const careerLore = t.career ? loreForCareerName(t.career) : "This Talent gives the character a recognisable edge, special method, institutional technique, or personal trick that marks them as more than a generic operative.";
+  const factionLore = t.faction ? loreForFactionName(t.faction) : "It can be framed through the character's own faction, mentor, crew, academy, cell, or lived experience.";
+  const doctrine = t.doctrine ? `Doctrine / path: ${t.doctrine} suggests a training pipeline, unit culture, school of practice, or specialist tradition behind the Talent.` : "";
+  const skills = [t.primary, t.secondary].filter(Boolean);
+  const skillLine = skills.length ? `At the table, it tends to colour scenes involving ${humanJoin(skills)}, not only by improving a roll but by explaining what the character notices, values, or risks.` : "";
+  const original = t.description ? `Sheet description: ${t.description}` : "Sheet description: This Talent supports the listed character concept, Career, Faction, or skill link.";
+  const effect = t.effect ? `Effect: ${t.effect}` : "";
   const limits = glossaryMetaLine([
     t.career ? `Career link: ${t.career}` : "",
     t.faction ? `Faction link: ${t.faction}` : "",
     t.prerequisite ? `Prerequisite: ${t.prerequisite}` : "",
     t.restriction && t.restriction !== "No Restrictions" ? `Restriction: ${t.restriction}` : ""
   ]);
-  if (limits.length) details.push(limits.join(". ") + ".");
-  return details.filter(Boolean).join("\n\n");
+  const rules = limits.length ? limits.join(". ") + "." : "";
+  return [careerLore, factionLore, doctrine, skillLine, original, effect, rules].filter(Boolean).join("\n\n");
 }
 
 function careerGlossaryText(name, relatedTalents, relatedFactions) {
@@ -14632,11 +14710,12 @@ function careerGlossaryText(name, relatedTalents, relatedFactions) {
   const factionNames = compactList(relatedFactions, 10);
   const focus = compactList([...skillHints, ...themes], 12);
   const lines = [];
-  lines.push(`${name} is a Career option used as the sheet's single eligibility field. Selecting it filters Traits and Talents while keeping general/unrestricted options available.`);
-  if (focus) lines.push(`Common focus areas: ${focus}.`);
-  if (factionNames) lines.push(`Often appears with these linked Factions or subfactions: ${factionNames}.`);
-  if (talentNames) lines.push(`Related Talents include: ${talentNames}.`);
-  if (!talentNames && !factionNames) lines.push("This is a broad character role suitable for general or unrestricted character concepts.");
+  lines.push(`${name} is a Career option and a story signal. It describes how the character fits into the Human Sphere before the mission starts: their training, credentials, reputation, contacts, enemies, debts, and the kind of problems they are expected to solve.`);
+  lines.push(loreForCareerName(name));
+  if (focus) lines.push(`Common tone and focus areas: ${focus}. These are useful prompts for roleplay, mission hooks, downtime contacts, and how the character explains their competence.`);
+  if (factionNames) lines.push(`Linked Factions or subfactions: ${factionNames}. These links can turn the Career into a political identity, not just a job title.`);
+  if (talentNames) lines.push(`Related Talents include: ${talentNames}. Use them as examples of the training styles, schools, unit doctrines, or personal specialisations that grow out of this Career.`);
+  if (!talentNames && !factionNames) lines.push("This is a broad career option suitable for general or unrestricted character concepts; connect it to a homeworld, mentor, company, unit, tribe, crew, academy, or faction obligation to make it feel rooted in the setting.");
   return lines.join("\n\n");
 }
 
@@ -14885,7 +14964,7 @@ function renderGlossary() {
   });
   if (summary) {
     const total = allEntries.length;
-    summary.textContent = `Showing ${entries.length} of ${total} entries${category !== "All" ? ` in ${category}` : ""}${query ? ` matching “${query}”` : ""}. Every listed glossary entry now includes a visible description preview and an expanded full description.`;
+    summary.textContent = `Showing ${entries.length} of ${total} entries${category !== "All" ? ` in ${category}` : ""}${query ? ` matching “${query}”` : ""}. Every listed glossary entry now includes a visible lore-first description preview and an expanded full description.`;
   }
   if (!entries.length) {
     list.innerHTML = '<div class="glossary-empty">No glossary entries match the current search.</div>';
@@ -14920,7 +14999,7 @@ function hideGlossary() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v46-visible-glossary-descriptions-stable";
+  document.documentElement.dataset.infinityBuild = "v47-lore-glossary-mobile-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
