@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v44-visible-glossary-mobile-stable">
-  <!-- DEPLOYMENT CHECK: v44-visible-glossary-mobile-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, and a read-only searchable Glossary / Player Reference is available. -->
+  <meta name="infinity-build" content="v45-glossary-descriptions-mobile-stable">
+  <!-- DEPLOYMENT CHECK: v45-glossary-descriptions-mobile-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, and a read-only searchable Glossary / Player Reference is available. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2439,7 +2439,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 </style>
 </head>
-<body data-build="v44-visible-glossary-mobile-stable">
+<body data-build="v45-glossary-descriptions-mobile-stable">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
@@ -11852,7 +11852,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v44-visible-glossary-mobile-stable";
+window.INFINITY_BUILD = "v45-glossary-descriptions-mobile-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -14506,10 +14506,12 @@ const GLOSSARY_CATEGORIES = [
   "Factions",
   "Homeworlds / Habitats",
   "Weapons",
-  "Equipment"
+  "Equipment",
+  "Conditions"
 ];
 let glossaryEntriesCache = null;
 let glossaryRenderPending = false;
+let glossaryInitialized = false;
 
 function glossaryEscape(value) {
   return String(value ?? "")
@@ -14528,14 +14530,153 @@ function glossaryMetaLine(parts) {
   return parts.filter(Boolean).map(v => String(v).trim()).filter(Boolean);
 }
 
+function compactList(values, limit = 10) {
+  const cleaned = [...new Set((values || []).map(v => String(v || "").trim()).filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+  if (!cleaned.length) return "";
+  return cleaned.length > limit
+    ? `${cleaned.slice(0, limit).join(", ")}, and ${cleaned.length - limit} more`
+    : cleaned.join(", ");
+}
+
+function splitTerms(value) {
+  return String(value || "")
+    .split(/[,;/]|\band\b/gi)
+    .map(v => v.trim())
+    .filter(Boolean);
+}
+
+function normalizeGlossaryKey(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function findFactionRecord(name) {
+  const key = normalizeGlossaryKey(name);
+  if (!key) return null;
+  return (DATA.factions || []).find(record => normalizeGlossaryKey(record.faction) === key)
+    || (DATA.factions || []).find(record => normalizeGlossaryKey(record.faction).includes(key) || key.includes(normalizeGlossaryKey(record.faction)))
+    || null;
+}
+
+function worldMatchesRecord(world, record) {
+  const worldKey = normalizeGlossaryKey(world);
+  const homeworldKey = normalizeGlossaryKey(record?.homeworld || "");
+  if (!worldKey || !homeworldKey) return false;
+  return homeworldKey.includes(worldKey) || worldKey.includes(homeworldKey);
+}
+
+function sourceGuidedFallback(kind, name, extra = "") {
+  const label = String(name || kind || "entry").trim();
+  const detail = String(extra || "").trim();
+  if (kind === "Career") return `${label} is a career or role option used for character identity and eligibility filtering. It helps determine which themed Traits and Talents are most appropriate for the character.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Faction") return `${label} is a faction or subfaction choice used to guide character background, available homeworlds, and related Talents or Traits.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Homeworld / Habitat") return `${label} is a homeworld, habitat, shipboard, or deployment origin option. It helps locate the character within the Human Sphere or adjacent conflict zones and is filtered by Faction where a clear relationship is known.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Weapon") return `${label} is a weapon option available in the character sheet equipment list. Use its rarity, weight, cost, and rules notes to decide whether it fits the character concept.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Equipment") return `${label} is an equipment option available in the character sheet. Use its rarity, weight, cost, and rules notes to guide selection during character creation or mission preparation.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Condition") return `${label} is a tracked status effect. Apply its description during play and use the listed removal attribute or skill guidance when resolving it.${detail ? ` ${detail}` : ""}`;
+  return `${label} is a reference entry used by this character sheet.${detail ? ` ${detail}` : ""}`;
+}
+
+function traitGlossaryText(t) {
+  const details = [];
+  if (t.brief) details.push(t.brief);
+  else details.push(`This Trait represents training or aptitude connected to ${[t.primary, t.secondary].filter(Boolean).join(" and ") || "the listed skills"}.`);
+  if (t.effect) details.push(`Effect: ${t.effect}`);
+  details.push(`Use this entry when the Trait clearly applies to the character's action or background. ${t.restriction && t.restriction !== "No Restrictions" ? `Eligibility: ${t.restriction}.` : "It is generally available unless the GM applies a stricter campaign limit."}`);
+  return details.filter(Boolean).join("\n\n");
+}
+
+function talentGlossaryText(t) {
+  const details = [];
+  if (t.description) details.push(t.description);
+  else details.push(`This Talent supports a character concept linked to ${[t.career, t.faction, t.primary, t.secondary].filter(Boolean).join(", ") || "the listed role or skills"}.`);
+  if (t.effect) details.push(`Effect: ${t.effect}`);
+  const limits = glossaryMetaLine([
+    t.career ? `Career link: ${t.career}` : "",
+    t.faction ? `Faction link: ${t.faction}` : "",
+    t.prerequisite ? `Prerequisite: ${t.prerequisite}` : "",
+    t.restriction && t.restriction !== "No Restrictions" ? `Restriction: ${t.restriction}` : ""
+  ]);
+  if (limits.length) details.push(limits.join(". ") + ".");
+  return details.filter(Boolean).join("\n\n");
+}
+
+function careerGlossaryText(name, relatedTalents, relatedFactions) {
+  const skillHints = [];
+  relatedTalents.forEach(t => {
+    if (t.primary) skillHints.push(t.primary);
+    if (t.secondary) skillHints.push(t.secondary);
+    if (t.category) skillHints.push(t.category);
+  });
+  const factionRecords = relatedFactions.map(findFactionRecord).filter(Boolean);
+  const themes = factionRecords.flatMap(record => splitTerms(record.theme));
+  const talentNames = compactList(relatedTalents.map(t => t.name), 18);
+  const factionNames = compactList(relatedFactions, 10);
+  const focus = compactList([...skillHints, ...themes], 12);
+  const lines = [];
+  lines.push(`${name} is a Career option used as the sheet's single eligibility field. Selecting it filters Traits and Talents while keeping general/unrestricted options available.`);
+  if (focus) lines.push(`Common focus areas: ${focus}.`);
+  if (factionNames) lines.push(`Often appears with these linked Factions or subfactions: ${factionNames}.`);
+  if (talentNames) lines.push(`Related Talents include: ${talentNames}.`);
+  if (!talentNames && !factionNames) lines.push("This is a broad character role suitable for general or unrestricted character concepts.");
+  return lines.join("\n\n");
+}
+
+function factionGlossaryText(name, worlds, relatedTalents) {
+  const record = findFactionRecord(name);
+  const lines = [];
+  if (record?.subfaction) lines.push(record.subfaction);
+  else lines.push(sourceGuidedFallback("Faction", name));
+  if (record?.theme) lines.push(`Theme: ${record.theme}.`);
+  const homeworldText = record?.homeworld || compactList(worlds, 20);
+  if (homeworldText) lines.push(`Homeworlds / Habitats: ${homeworldText}.`);
+  if (record?.suggested_traits) lines.push(`Suggested Traits: ${record.suggested_traits}.`);
+  if (record?.suggested_talents) lines.push(`Suggested Talents: ${record.suggested_talents}.`);
+  const talentNames = compactList(relatedTalents.map(t => t.name), 16);
+  if (talentNames) lines.push(`Character-sheet Talents linked to this Faction include: ${talentNames}.`);
+  return lines.join("\n\n");
+}
+
+function homeworldGlossaryText(name, factions) {
+  const factionRecords = (DATA.factions || []).filter(record => worldMatchesRecord(name, record) || factions.includes(record.faction));
+  const themes = compactList(factionRecords.flatMap(record => splitTerms(record.theme)), 14);
+  const descriptions = factionRecords.map(record => record.subfaction).filter(Boolean).slice(0, 3);
+  const linkedFactions = compactList(factions.length ? factions : factionRecords.map(record => record.faction), 18);
+  const lines = [];
+  lines.push(`${name} is a Homeworld / Habitat origin used to place a character within a faction, colony, ship, station, frontier, warfront, or specialist deployment.`);
+  if (linkedFactions) lines.push(`Available through these Factions or subfactions: ${linkedFactions}.`);
+  if (themes) lines.push(`Associated themes: ${themes}.`);
+  if (descriptions.length) lines.push(`Source guidance: ${descriptions.join(" ")}`);
+  if (!linkedFactions) lines.push("It is kept in the full glossary for player reference even if no strict Faction relationship is currently assigned.");
+  return lines.join("\n\n");
+}
+
+function gearGlossaryText(item, kind) {
+  const lines = [];
+  if (item.brief) lines.push(item.brief);
+  else lines.push(sourceGuidedFallback(kind, item.name));
+  if (item.mechanic) lines.push(`Rules: ${item.mechanic}`);
+  const traits = glossaryMetaLine([item.type, item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]);
+  if (traits.length) lines.push(`Selection notes: ${traits.join("; ")}.`);
+  return lines.join("\n\n");
+}
+
 function glossaryEntry(category, name, tag, meta, text, searchText = "") {
+  const safeName = String(name || "").trim();
+  const safeTag = tag || category;
+  const safeMeta = Array.isArray(meta) ? meta : [];
+  const safeText = String(text || "").trim() || sourceGuidedFallback(safeTag, safeName);
   return {
     category,
-    name: String(name || "").trim(),
-    tag: tag || category,
-    meta: Array.isArray(meta) ? meta : [],
-    text: String(text || "").trim(),
-    search: [category, name, tag, ...(Array.isArray(meta) ? meta : []), text, searchText].join(" ").toLowerCase()
+    name: safeName,
+    tag: safeTag,
+    meta: safeMeta,
+    text: safeText,
+    search: [category, safeName, safeTag, ...safeMeta, safeText, searchText].join(" ").toLowerCase()
   };
 }
 
@@ -14544,15 +14685,15 @@ function buildGlossaryEntries() {
 
   const entries = [];
   const ruleTerms = [
-    ["Main Skills", "Rule", ["Agility", "Awareness", "Brawn", "Coordination", "Intelligence", "Personality", "Willpower"], "Main skills set the base value for their linked sub-skills. In this custom sheet, main skills cannot use Focus."],
+    ["Main Skills", "Rule", ["Agility", "Awareness", "Brawn", "Coordination", "Intelligence", "Personality", "Willpower"], "Main skills set the base value for their linked sub-skills. In this custom sheet, main skills cannot use Focus. Increasing a main skill increases all sub-skills beneath it."],
     ["Sub-skills", "Rule", ["Skill tests", "Focus allowed"], "Sub-skills inherit the relevant main skill rating, then add starting allocation and applicable Trait/Talent modifiers. Focus may be assigned only to sub-skills."],
     ["Focus", "Rule", ["Sub-skills only"], "Focus represents specialist training. Main skills cannot use Focus; assign Focus to specific sub-skills such as Ballistics, Hacking, Medicine, Persuade, or Survival."],
     ["Career", "Character option", ["Eligibility", "Traits", "Talents"], "Career is the single field used for eligibility filtering. Choosing a Career filters Trait and Talent options while keeping general/unrestricted options available."],
-    ["Faction / Homeworld relationship", "Character option", ["Validation"], "Homeworld / Habitat choices are filtered by the selected Faction. Changing Faction clears an invalid Homeworld / Habitat selection."],
+    ["Faction / Homeworld relationship", "Character option", ["Validation"], "Homeworld / Habitat choices are filtered by the selected Faction. Changing Faction clears an invalid Homeworld / Habitat selection so saved characters keep a valid relationship."],
     ["Armour", "Resource", ["Light 5", "Medium 10", "Heavy 15"], "Armour replaces Temporary HP in this custom sheet. Armour can be selected directly or inferred from selected armour equipment."],
-    ["HP / Vigor", "Resource", ["0–20"], "The character's physical endurance track."],
-    ["Firewall", "Resource", ["0–20"], "The character's defensive quantronic or infowar resilience track."],
-    ["Mental Stress", "Resource", ["0–20"], "The character's psychological resilience track."],
+    ["HP / Vigor", "Resource", ["0–20"], "The character's physical endurance track. Damage and recovery should be handled according to the GM's current 2D20 scene rules."],
+    ["Firewall", "Resource", ["0–20"], "The character's defensive quantronic or infowar resilience track, useful when facing hacking, intrusion, Geist, or network threats."],
+    ["Mental Stress", "Resource", ["0–20"], "The character's psychological resilience track for fear, pressure, interrogation, trauma, and other mental strain."],
     ["Momentum", "Resource", ["Party resource"], "A shared or session-facing resource used to support player actions where the GM allows it."],
     ["Infinity Points", "Resource", ["Heroic resource"], "A player-facing resource used for important heroic or cinematic moments."],
     ["Wounds", "Resource", ["0–3"], "Wounds are tracked separately from HP / Vigor. This sheet restricts Wounds to values 0 through 3."],
@@ -14568,8 +14709,8 @@ function buildGlossaryEntries() {
       t.name,
       t.category ? `Trait · ${t.category}` : "Trait",
       glossaryMetaLine([t.restriction || "No Restrictions", t.rarity, t.cost ? `Cost ${t.cost}` : "", t.primary && t.secondary ? `${t.primary} / ${t.secondary}` : ""]),
-      [t.brief, t.effect ? `Effect: ${t.effect}` : ""].filter(Boolean).join("\n\n"),
-      [t.primary, t.secondary, t.restriction, t.category].join(" ")
+      traitGlossaryText(t),
+      [t.primary, t.secondary, t.restriction, t.category, t.brief, t.effect].join(" ")
     ));
   });
 
@@ -14579,29 +14720,38 @@ function buildGlossaryEntries() {
       t.name,
       t.level ? `Talent · Level ${t.level}` : "Talent",
       glossaryMetaLine([t.category, t.career ? `Career: ${t.career}` : "", t.doctrine ? `Doctrine: ${t.doctrine}` : "", t.faction ? `Faction: ${t.faction}` : "", t.restriction, t.prerequisite ? `Prereq: ${t.prerequisite}` : "", t.rarity, t.cost ? `Cost ${t.cost}` : ""]),
-      [t.description, t.effect ? `Effect: ${t.effect}` : ""].filter(Boolean).join("\n\n"),
-      [t.primary, t.secondary, t.career, t.doctrine, t.faction, t.restriction, t.category].join(" ")
+      talentGlossaryText(t),
+      [t.primary, t.secondary, t.career, t.doctrine, t.faction, t.restriction, t.category, t.description, t.effect].join(" ")
     ));
   });
 
   const careerSet = new Set(DATA.lists?.careerRoles || []);
   (DATA.talents || []).forEach(t => { if (t.career) careerSet.add(t.career); });
   glossarySort([...careerSet].map(name => ({ name }))).forEach(c => {
-    const talents = (DATA.talents || []).filter(t => t.career === c.name).map(t => t.name).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
-    const factions = [...new Set((DATA.talents || []).filter(t => t.career === c.name && t.faction).map(t => t.faction))].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
-    const text = talents.length
-      ? `Career used for eligibility filtering. Related Talents include: ${talents.slice(0, 18).join(", ")}${talents.length > 18 ? `, and ${talents.length - 18} more.` : "."}`
-      : "Career used for eligibility filtering and character identity.";
-    entries.push(glossaryEntry("Careers", c.name, "Career", glossaryMetaLine([factions.length ? `Linked factions: ${factions.join(", ")}` : "General / Unrestricted", talents.length ? `${talents.length} related talents` : ""]), text, [factions.join(" "), talents.join(" ")].join(" ")));
+    const relatedTalents = (DATA.talents || []).filter(t => t.career === c.name).sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+    const factions = [...new Set(relatedTalents.map(t => t.faction).filter(Boolean))].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+    entries.push(glossaryEntry(
+      "Careers",
+      c.name,
+      "Career",
+      glossaryMetaLine([factions.length ? `Linked factions: ${factions.join(", ")}` : "General / Unrestricted", relatedTalents.length ? `${relatedTalents.length} related talents` : "Broad career option"]),
+      careerGlossaryText(c.name, relatedTalents, factions),
+      [factions.join(" "), relatedTalents.map(t => t.name).join(" "), relatedTalents.map(t => t.description).join(" ")].join(" ")
+    ));
   });
 
   glossarySort((DATA.lists?.factions || []).map(name => ({ name }))).forEach(f => {
     const worlds = DATA.homeworldsByFaction?.[f.name] || [];
-    const talents = (DATA.talents || []).filter(t => t.faction === f.name).map(t => t.name).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
-    const textParts = [];
-    if (worlds.length) textParts.push(`Related Homeworlds / Habitats: ${worlds.join(", ")}.`);
-    if (talents.length) textParts.push(`Related Talents: ${talents.slice(0, 16).join(", ")}${talents.length > 16 ? `, and ${talents.length - 16} more` : ""}.`);
-    entries.push(glossaryEntry("Factions", f.name, "Faction", glossaryMetaLine([worlds.length ? `${worlds.length} related homeworlds` : "No specific homeworld mapping", talents.length ? `${talents.length} related talents` : ""]), textParts.join("\n\n") || "Faction option used for character identity and Homeworld / Habitat filtering.", [worlds.join(" "), talents.join(" ")].join(" ")));
+    const relatedTalents = (DATA.talents || []).filter(t => t.faction === f.name).sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+    const record = findFactionRecord(f.name);
+    entries.push(glossaryEntry(
+      "Factions",
+      f.name,
+      "Faction",
+      glossaryMetaLine([worlds.length ? `${worlds.length} related homeworlds` : "No specific homeworld mapping", relatedTalents.length ? `${relatedTalents.length} related talents` : "", record?.theme ? `Theme: ${record.theme}` : ""]),
+      factionGlossaryText(f.name, worlds, relatedTalents),
+      [worlds.join(" "), relatedTalents.map(t => t.name).join(" "), record?.subfaction, record?.theme, record?.homeworld, record?.suggested_traits, record?.suggested_talents].join(" ")
+    ));
   });
 
   const homeworldToFactions = new Map();
@@ -14615,38 +14765,84 @@ function buildGlossaryEntries() {
   homeworldToFactions.forEach((_, world) => homeworldSet.add(world));
   glossarySort([...homeworldSet].map(name => ({ name }))).forEach(w => {
     const factions = [...new Set(homeworldToFactions.get(w.name) || [])].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
-    entries.push(glossaryEntry("Homeworlds / Habitats", w.name, "Homeworld / Habitat", glossaryMetaLine([factions.length ? `Faction choices: ${factions.join(", ")}` : "General or unmapped option"]), factions.length ? `This option appears when one of these Factions is selected: ${factions.join(", ")}.` : "Homeworld / Habitat option available in the full reference list but not tied to a specific faction mapping yet.", factions.join(" ")));
+    const records = (DATA.factions || []).filter(record => worldMatchesRecord(w.name, record) || factions.includes(record.faction));
+    entries.push(glossaryEntry(
+      "Homeworlds / Habitats",
+      w.name,
+      "Homeworld / Habitat",
+      glossaryMetaLine([factions.length ? `Faction choices: ${factions.join(", ")}` : "General or unmapped option", records.length ? `${records.length} source links` : ""]),
+      homeworldGlossaryText(w.name, factions),
+      [factions.join(" "), records.map(record => [record.faction, record.subfaction, record.theme, record.homeworld].join(" ")).join(" ")].join(" ")
+    ));
   });
 
   glossarySort((DATA.equipment || []).filter(item => String(item.type || "").toLowerCase() === "weapon")).forEach(item => {
-    entries.push(glossaryEntry("Weapons", item.name, item.type || "Weapon", glossaryMetaLine([item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]), [item.brief, item.mechanic ? `Rules: ${item.mechanic}` : ""].filter(Boolean).join("\n\n"), [item.rarity, item.weight, item.mechanic].join(" ")));
+    entries.push(glossaryEntry(
+      "Weapons",
+      item.name,
+      item.type || "Weapon",
+      glossaryMetaLine([item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]),
+      gearGlossaryText(item, "Weapon"),
+      [item.type, item.rarity, item.weight, item.mechanic, item.brief].join(" ")
+    ));
   });
 
   glossarySort((DATA.equipment || []).filter(item => String(item.type || "").toLowerCase() !== "weapon")).forEach(item => {
-    entries.push(glossaryEntry("Equipment", item.name, item.type || "Equipment", glossaryMetaLine([item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]), [item.brief, item.mechanic ? `Rules: ${item.mechanic}` : ""].filter(Boolean).join("\n\n"), [item.type, item.rarity, item.weight, item.mechanic].join(" ")));
+    entries.push(glossaryEntry(
+      "Equipment",
+      item.name,
+      item.type || "Equipment",
+      glossaryMetaLine([item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]),
+      gearGlossaryText(item, "Equipment"),
+      [item.type, item.rarity, item.weight, item.mechanic, item.brief].join(" ")
+    ));
   });
 
-  glossaryEntriesCache = entries.filter(e => e.name).sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+  glossarySort((DATA.conditions || []).map(item => ({ ...item, name: item.name }))).forEach(condition => {
+    entries.push(glossaryEntry(
+      "Conditions",
+      condition.name,
+      "Condition",
+      glossaryMetaLine([condition.removal ? `Removal: ${condition.removal}` : "Status effect"]),
+      [condition.description || sourceGuidedFallback("Condition", condition.name), condition.removal ? `Removal guidance: ${condition.removal}.` : ""].filter(Boolean).join("\n\n"),
+      [condition.description, condition.removal].join(" ")
+    ));
+  });
+
+  glossaryEntriesCache = entries
+    .filter(e => e.name)
+    .map(e => ({ ...e, text: e.text || sourceGuidedFallback(e.tag, e.name) }))
+    .sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
   return glossaryEntriesCache;
 }
 
 function buildGlossary() {
   const categorySelect = document.getElementById("glossaryCategory");
   if (!categorySelect) return;
-  makeOptions(categorySelect, GLOSSARY_CATEGORIES, "");
-  categorySelect.value = "All";
-  const search = document.getElementById("glossarySearch");
-  const schedule = () => {
-    if (glossaryRenderPending) return;
-    glossaryRenderPending = true;
-    window.requestAnimationFrame(() => {
-      glossaryRenderPending = false;
-      renderGlossary();
-    });
-  };
-  categorySelect.addEventListener("change", schedule);
-  if (search) search.addEventListener("input", schedule);
-  renderGlossary();
+
+  if (!glossaryInitialized) {
+    makeOptions(categorySelect, GLOSSARY_CATEGORIES, "");
+    categorySelect.value = "All";
+    const search = document.getElementById("glossarySearch");
+    const schedule = () => {
+      if (glossaryRenderPending) return;
+      glossaryRenderPending = true;
+      window.requestAnimationFrame(() => {
+        glossaryRenderPending = false;
+        renderGlossary();
+      });
+    };
+    categorySelect.addEventListener("change", schedule, { passive: true });
+    if (search) search.addEventListener("input", schedule, { passive: true });
+    glossaryInitialized = true;
+  }
+
+  // Mobile stability: initialise controls on page load, but do not build hundreds
+  // of glossary cards until the player actually opens the glossary panel.
+  const page = document.getElementById("glossaryPage");
+  if (document.body.classList.contains("glossary-mode") || (page && !page.hidden)) {
+    renderGlossary();
+  }
 }
 
 function renderGlossary() {
@@ -14655,14 +14851,15 @@ function renderGlossary() {
   const category = document.getElementById("glossaryCategory")?.value || "All";
   const query = (document.getElementById("glossarySearch")?.value || "").trim().toLowerCase();
   if (!list) return;
-  const entries = buildGlossaryEntries().filter(entry => {
+  const allEntries = buildGlossaryEntries();
+  const entries = allEntries.filter(entry => {
     const categoryMatch = category === "All" || entry.category === category;
     const queryMatch = !query || entry.search.includes(query);
     return categoryMatch && queryMatch;
   });
   if (summary) {
-    const total = buildGlossaryEntries().length;
-    summary.textContent = `Showing ${entries.length} of ${total} entries${category !== "All" ? ` in ${category}` : ""}${query ? ` matching “${query}”` : ""}.`;
+    const total = allEntries.length;
+    summary.textContent = `Showing ${entries.length} of ${total} entries${category !== "All" ? ` in ${category}` : ""}${query ? ` matching “${query}”` : ""}. Every listed glossary entry now includes a description.`;
   }
   if (!entries.length) {
     list.innerHTML = '<div class="glossary-empty">No glossary entries match the current search.</div>';
@@ -14672,7 +14869,7 @@ function renderGlossary() {
     const meta = entry.meta.length ? `<div class="glossary-meta">${entry.meta.map(v => `<span class="glossary-pill">${glossaryEscape(v)}</span>`).join("")}</div>` : "";
     return `<details class="glossary-card">
       <summary><span class="glossary-title">${glossaryEscape(entry.name)}</span><span class="glossary-tag">${glossaryEscape(entry.tag)}</span></summary>
-      <div class="glossary-body">${meta}<p class="glossary-text">${glossaryEscape(entry.text || "No description available yet.")}</p></div>
+      <div class="glossary-body">${meta}<p class="glossary-text">${glossaryEscape(entry.text)}</p></div>
     </details>`;
   }).join("");
 }
@@ -14696,7 +14893,7 @@ function hideGlossary() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v44-visible-glossary-mobile-stable";
+  document.documentElement.dataset.infinityBuild = "v45-glossary-descriptions-mobile-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
