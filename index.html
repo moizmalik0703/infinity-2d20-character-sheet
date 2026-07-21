@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v43-glossary-reference-stable">
-  <!-- DEPLOYMENT CHECK: v43-glossary-reference-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, and a read-only searchable Glossary / Player Reference is available. -->
+  <meta name="infinity-build" content="v44-visible-glossary-mobile-stable">
+  <!-- DEPLOYMENT CHECK: v44-visible-glossary-mobile-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, and a read-only searchable Glossary / Player Reference is available. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2388,18 +2388,67 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
   #glossaryPage { display: none !important; }
 }
 
+
+/* v44: Always-visible player reference access bar. This keeps Glossary visible on
+   mobile even when the header action buttons wrap or are hard to notice. */
+.quick-reference-bar {
+  width: min(100%, 1180px);
+  margin: .65rem auto 0;
+  padding: .55rem .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  border: 1px solid var(--line);
+  border-radius: .55rem;
+  background: #ffffff;
+  box-shadow: 0 1px 6px rgba(0,0,0,.06);
+}
+.quick-reference-bar strong {
+  display: block;
+  font-size: .95rem;
+  color: var(--ink);
+}
+.quick-reference-bar span {
+  display: block;
+  margin-top: .1rem;
+  font-size: .78rem;
+  color: var(--muted);
+}
+.quick-reference-bar button {
+  flex: 0 0 auto;
+  background: var(--blue);
+  color: #ffffff;
+  min-width: 13rem;
+}
+@media (max-width: 760px) {
+  .quick-reference-bar {
+    width: calc(100% - 1rem);
+    margin: .5rem .5rem 0;
+    padding: .6rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .quick-reference-bar button {
+    width: 100%;
+    min-width: 0;
+    min-height: 2.75rem;
+    font-size: 1rem;
+  }
+}
+
 </style>
 </head>
-<body data-build="v43-glossary-reference-stable">
+<body data-build="v44-visible-glossary-mobile-stable">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
     </div>
     <div class="actions">
       <button id="newSheetBtn">New</button>
+      <button id="glossaryBtn" type="button" title="Open player glossary and reference">Glossary / Reference</button>
       <button id="randomCharacterBtn">Random Character</button>
       <button id="randomBeginnerCharacterBtn">Random Beginner Character</button>
-      <button id="glossaryBtn" type="button">Glossary / Reference</button>
       <select id="characterSlotSelect" title="Saved characters"></select>
       <button id="saveBtn">Save character</button>
       <button id="loadBtn">Load selected</button>
@@ -2407,6 +2456,15 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       <button id="printBtn" type="button" title="On mobile, creates a true A4 landscape PDF. Open or download that PDF, then print it from your PDF viewer.">Export / Print Current Character Portfolio</button>
     </div>
   </header>
+
+  <div class="quick-reference-bar no-print" role="navigation" aria-label="Player reference shortcut">
+    <div>
+      <strong>Player Glossary / Reference</strong>
+      <span>Search Traits, Talents, Careers, Factions, Homeworlds, Weapons, Equipment, and rules terms.</span>
+    </div>
+    <button id="glossaryShortcutBtn" type="button">Open Glossary / Reference</button>
+  </div>
+
 
   <main id="sheet" class="sheet">
     <section class="page page-1">
@@ -11794,7 +11852,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v43-glossary-reference-stable";
+window.INFINITY_BUILD = "v44-visible-glossary-mobile-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -14638,7 +14696,7 @@ function hideGlossary() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v43-glossary-reference-stable";
+  document.documentElement.dataset.infinityBuild = "v44-visible-glossary-mobile-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -14665,8 +14723,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("randomCharacterBtn").addEventListener("click", randomCharacter);
   document.getElementById("randomBeginnerCharacterBtn").addEventListener("click", randomBeginnerCharacter);
-  document.getElementById("glossaryBtn").addEventListener("click", showGlossary);
-  document.getElementById("backToSheetBtn").addEventListener("click", hideGlossary);
+  ["glossaryBtn", "glossaryShortcutBtn"].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.addEventListener("click", showGlossary);
+  });
+  const backToSheetBtn = document.getElementById("backToSheetBtn");
+  if (backToSheetBtn) backToSheetBtn.addEventListener("click", hideGlossary);
   document.getElementById("saveBtn").addEventListener("click", saveCharacterToBrowser);
   document.getElementById("loadBtn").addEventListener("click", loadCharacterFromBrowser);
   document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);
