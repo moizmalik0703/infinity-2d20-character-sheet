@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v45-glossary-descriptions-mobile-stable">
-  <!-- DEPLOYMENT CHECK: v45-glossary-descriptions-mobile-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, and a read-only searchable Glossary / Player Reference is available. -->
+  <meta name="infinity-build" content="v46-visible-glossary-descriptions-stable">
+  <!-- DEPLOYMENT CHECK: v46-visible-glossary-descriptions-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, and a read-only searchable Glossary / Player Reference is available. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2319,10 +2319,23 @@ body.print-window #printPortfolio .print-fields,body.print-window #printPortfoli
 }
 .glossary-card summary::-webkit-details-marker { display: none; }
 .glossary-card summary::marker { content: ""; }
+.glossary-title-wrap {
+  min-width: 0;
+  display: grid;
+  gap: .18rem;
+}
 .glossary-title {
   min-width: 0;
   font-weight: 700;
   color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.glossary-preview {
+  margin: 0;
+  color: #384657;
+  font-size: .86rem;
+  line-height: 1.35;
+  font-weight: 400;
   overflow-wrap: anywhere;
 }
 .glossary-tag {
@@ -2382,7 +2395,8 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
   .glossary-toolbar { grid-template-columns: 1fr; }
   .glossary-card summary { grid-template-columns: 1fr; gap: .25rem; }
   .glossary-tag { justify-self: start; }
-  .glossary-text { font-size: .92rem; }
+  .glossary-preview { font-size: .95rem; }
+  .glossary-text { font-size: .95rem; }
 }
 @media print {
   #glossaryPage { display: none !important; }
@@ -2439,7 +2453,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 </style>
 </head>
-<body data-build="v45-glossary-descriptions-mobile-stable">
+<body data-build="v46-visible-glossary-descriptions-stable">
   <header class="app-header no-print">
     <div>
       <h1>Infinity 2D20 Campaign Character Sheet</h1>
@@ -11852,7 +11866,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v45-glossary-descriptions-mobile-stable";
+window.INFINITY_BUILD = "v46-visible-glossary-descriptions-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -14669,7 +14683,8 @@ function glossaryEntry(category, name, tag, meta, text, searchText = "") {
   const safeName = String(name || "").trim();
   const safeTag = tag || category;
   const safeMeta = Array.isArray(meta) ? meta : [];
-  const safeText = String(text || "").trim() || sourceGuidedFallback(safeTag, safeName);
+  const fallbackKind = category === "Homeworlds / Habitats" ? "Homeworld / Habitat" : category.replace(/s$/, "");
+  const safeText = String(text || "").trim() || sourceGuidedFallback(fallbackKind, safeName);
   return {
     category,
     name: safeName,
@@ -14678,6 +14693,17 @@ function glossaryEntry(category, name, tag, meta, text, searchText = "") {
     text: safeText,
     search: [category, safeName, safeTag, ...safeMeta, safeText, searchText].join(" ").toLowerCase()
   };
+}
+
+function glossaryPreviewText(text) {
+  const cleaned = String(text || "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!cleaned) return "Description available in the expanded glossary entry.";
+  if (cleaned.length <= 220) return cleaned;
+  const sentenceEnd = cleaned.slice(0, 220).search(/[.!?](\s|$)(?!.*[.!?](\s|$))/);
+  if (sentenceEnd > 80) return cleaned.slice(0, sentenceEnd + 1);
+  return cleaned.slice(0, 217).replace(/\s+\S*$/, "") + "...";
 }
 
 function buildGlossaryEntries() {
@@ -14859,7 +14885,7 @@ function renderGlossary() {
   });
   if (summary) {
     const total = allEntries.length;
-    summary.textContent = `Showing ${entries.length} of ${total} entries${category !== "All" ? ` in ${category}` : ""}${query ? ` matching “${query}”` : ""}. Every listed glossary entry now includes a description.`;
+    summary.textContent = `Showing ${entries.length} of ${total} entries${category !== "All" ? ` in ${category}` : ""}${query ? ` matching “${query}”` : ""}. Every listed glossary entry now includes a visible description preview and an expanded full description.`;
   }
   if (!entries.length) {
     list.innerHTML = '<div class="glossary-empty">No glossary entries match the current search.</div>';
@@ -14867,8 +14893,9 @@ function renderGlossary() {
   }
   list.innerHTML = entries.map(entry => {
     const meta = entry.meta.length ? `<div class="glossary-meta">${entry.meta.map(v => `<span class="glossary-pill">${glossaryEscape(v)}</span>`).join("")}</div>` : "";
+    const preview = glossaryPreviewText(entry.text);
     return `<details class="glossary-card">
-      <summary><span class="glossary-title">${glossaryEscape(entry.name)}</span><span class="glossary-tag">${glossaryEscape(entry.tag)}</span></summary>
+      <summary><span class="glossary-title-wrap"><span class="glossary-title">${glossaryEscape(entry.name)}</span><span class="glossary-preview">${glossaryEscape(preview)}</span></span><span class="glossary-tag">${glossaryEscape(entry.tag)}</span></summary>
       <div class="glossary-body">${meta}<p class="glossary-text">${glossaryEscape(entry.text)}</p></div>
     </details>`;
   }).join("");
@@ -14893,7 +14920,7 @@ function hideGlossary() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v45-glossary-descriptions-mobile-stable";
+  document.documentElement.dataset.infinityBuild = "v46-visible-glossary-descriptions-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
