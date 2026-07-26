@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v50-autosave-glossary-load-stable">
-  <!-- DEPLOYMENT CHECK: v50-autosave-glossary-load-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, a read-only searchable Glossary / Player Reference is available, and top-of-page partner logos are embedded without affecting print/PDF output. -->
+  <meta name="infinity-build" content="v51-xml-import-export-mobile-stable">
+  <!-- DEPLOYMENT CHECK: v51-xml-import-export-mobile-stable | Adds XML import/export for current character sheets, keeps autosave and glossary-load stability, PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, a read-only searchable Glossary / Player Reference is available, and top-of-page partner logos are embedded without affecting print/PDF output. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2523,7 +2523,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 </style>
 </head>
-<body data-build="v50-autosave-glossary-load-stable">
+<body data-build="v51-xml-import-export-mobile-stable">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -2544,6 +2544,9 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       <span id="autosaveStatus" class="autosave-status" data-state="ready" aria-live="polite">Autosave ready</span>
       <button id="loadBtn">Load selected</button>
       <button id="deleteSaveBtn">Delete selected</button>
+      <button id="exportXmlBtn" type="button" title="Export the current character portfolio as an XML file">Export XML</button>
+      <button id="importXmlBtn" type="button" title="Import a character portfolio from an XML file">Import XML</button>
+      <input id="importXmlFile" type="file" accept=".xml,application/xml,text/xml" hidden>
       <button id="printBtn" type="button" title="On mobile, creates a true A4 landscape PDF. Open or download that PDF, then print it from your PDF viewer.">Export / Print Current Character Portfolio</button>
     </div>
   </header>
@@ -11943,7 +11946,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v50-autosave-glossary-load-stable";
+window.INFINITY_BUILD = "v51-xml-import-export-mobile-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -13467,6 +13470,147 @@ function importJSONFile(file) {
     // Single character file.
     applyState(parsed);
     if (confirm("Import loaded. Save this character into browser slots now?")) {
+      saveCharacterToBrowser();
+    }
+  };
+  reader.readAsText(file);
+}
+
+
+/* -------------------------------------------------------------------------
+   XML import/export for single character portfolios.
+   The XML format mirrors collectState() and deliberately stores user-entered
+   values only, not the full rules database. This keeps files small, readable,
+   and safe to import on desktop or mobile browsers.
+   ------------------------------------------------------------------------- */
+function xmlSafeText(value) {
+  return String(value ?? "")
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\uFFFE\uFFFF]/g, "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+function stateValueToXml(name, value, indent = "  ") {
+  const safeName = xmlSafeText(name);
+  if (Array.isArray(value)) {
+    const items = value.map((item, index) => `${indent}  <item index="${index}">${xmlSafeText(item)}</item>`).join("\n");
+    return `${indent}<array name="${safeName}">\n${items}\n${indent}</array>`;
+  }
+  if (value && typeof value === "object") {
+    const fields = Object.entries(value)
+      .map(([key, innerValue]) => stateValueToXml(key, innerValue, indent + "  "))
+      .join("\n");
+    return `${indent}<object name="${safeName}">\n${fields}\n${indent}</object>`;
+  }
+  return `${indent}<field name="${safeName}">${xmlSafeText(value)}</field>`;
+}
+
+function characterStateToXml(state) {
+  const exportState = {
+    ...state,
+    xmlFormat: "Infinity2D20CharacterSheetXML-v1",
+    exportedAt: new Date().toISOString(),
+    exportedWithBuild: window.INFINITY_BUILD || document.documentElement.dataset.infinityBuild || "unknown"
+  };
+  const body = Object.entries(exportState)
+    .map(([key, value]) => stateValueToXml(key, value, "    "))
+    .join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v51-xml-import-export-mobile-stable")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+}
+
+function exportCharacterXml() {
+  flushPendingAutosave();
+  const state = collectState();
+  state.characterName = state.characterName || currentCharacterName();
+  const name = safeFileName(state.characterName || "infinity-character");
+  const xml = characterStateToXml(state);
+  const blob = new Blob([xml], { type: "application/xml;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${name}.xml`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+  setAutosaveStatus(`Exported XML ${formatAutosaveTime()}`, "saved");
+}
+
+function xmlChildToValue(node) {
+  const tag = String(node.tagName || "").toLowerCase();
+  if (tag === "array") {
+    const result = [];
+    [...node.children].forEach(child => {
+      if (String(child.tagName || "").toLowerCase() !== "item") return;
+      const index = Number(child.getAttribute("index"));
+      if (Number.isInteger(index) && index >= 0) result[index] = child.textContent || "";
+      else result.push(child.textContent || "");
+    });
+    return result.map(value => value ?? "");
+  }
+  if (tag === "object") {
+    const result = {};
+    [...node.children].forEach(child => {
+      const key = child.getAttribute("name");
+      if (key) result[key] = xmlChildToValue(child);
+    });
+    return result;
+  }
+  return node.textContent || "";
+}
+
+function characterXmlToState(xmlText) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(String(xmlText || ""), "application/xml");
+  const parseError = doc.querySelector("parsererror");
+  if (parseError) throw new Error("The selected XML file could not be read. It may be damaged or not valid XML.");
+  const stateNode = doc.querySelector("infinity2d20CharacterSheet > state") || doc.querySelector("state");
+  if (!stateNode) throw new Error("This XML file does not contain an Infinity 2D20 character state.");
+  const state = {};
+  [...stateNode.children].forEach(child => {
+    const key = child.getAttribute("name");
+    if (!key) return;
+    state[key] = xmlChildToValue(child);
+  });
+  delete state.xmlFormat;
+  delete state.exportedAt;
+  delete state.exportedWithBuild;
+  return state;
+}
+
+function importCharacterXmlFile(file) {
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onerror = () => alert("The XML file could not be opened. Please try again.");
+  reader.onload = () => {
+    let parsed;
+    try {
+      parsed = characterXmlToState(reader.result);
+    } catch (error) {
+      alert(error.message || "The selected XML file is not a valid Infinity 2D20 character XML file.");
+      return;
+    }
+
+    autosaveSuppressed = true;
+    try {
+      if (autosaveTimer) {
+        clearTimeout(autosaveTimer);
+        autosaveTimer = null;
+      }
+      applyState(parsed);
+      activeSaveId = "";
+      autosaveDirty = false;
+      hideGlossary({ silent: true });
+      refreshSaveSlots("");
+      setAutosaveStatus("Imported XML - save or edit to autosave", "ready");
+    } finally {
+      autosaveSuppressed = false;
+    }
+
+    if (confirm("XML import loaded. Save this character into browser slots now?")) {
       saveCharacterToBrowser();
     }
   };
@@ -15217,7 +15361,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v50-autosave-glossary-load-stable";
+  document.documentElement.dataset.infinityBuild = "v51-xml-import-export-mobile-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -15254,6 +15398,18 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("saveBtn").addEventListener("click", saveCharacterToBrowser);
   document.getElementById("loadBtn").addEventListener("click", loadCharacterFromBrowser);
   document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);
+  const exportXmlBtn = document.getElementById("exportXmlBtn");
+  if (exportXmlBtn) exportXmlBtn.addEventListener("click", exportCharacterXml);
+  const importXmlBtn = document.getElementById("importXmlBtn");
+  const importXmlFile = document.getElementById("importXmlFile");
+  if (importXmlBtn && importXmlFile) {
+    importXmlBtn.addEventListener("click", () => importXmlFile.click());
+    importXmlFile.addEventListener("change", event => {
+      const file = event.target.files && event.target.files[0];
+      importCharacterXmlFile(file);
+      event.target.value = "";
+    });
+  }
   document.getElementById("newSheetBtn").addEventListener("click", newCharacterSheet);
   document.getElementById("printBtn").addEventListener("click", printCharacterSheet);
 });
