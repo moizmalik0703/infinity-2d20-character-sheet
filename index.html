@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v48-branded-header-mobile-stable">
-  <!-- DEPLOYMENT CHECK: v48-branded-header-mobile-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, a read-only searchable Glossary / Player Reference is available, and top-of-page partner logos are embedded without affecting print/PDF output. -->
+  <meta name="infinity-build" content="v49-autosave-mobile-stable">
+  <!-- DEPLOYMENT CHECK: v49-autosave-mobile-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, a read-only searchable Glossary / Player Reference is available, and top-of-page partner logos are embedded without affecting print/PDF output. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -856,6 +856,26 @@ td[data-rating].auto-bonus {
   color: #d8e5f2;
 }
 
+.autosave-status {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.35rem;
+  padding: .38rem .55rem;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: .35rem;
+  background: rgba(255,255,255,.12);
+  color: #eaf3f8;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+.autosave-status[data-state="saving"] { color: #fff2cc; }
+.autosave-status[data-state="saved"] { color: #d9f99d; }
+.autosave-status[data-state="error"] { color: #fecaca; }
+
 
 /* Conditions table: prioritise readable descriptions in browser view. */
 #conditionTable {
@@ -1004,6 +1024,12 @@ textarea {
   }
   .actions > * {
     width: 100%;
+  }
+
+  .autosave-status {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 2.2rem;
   }
   .button-file {
     display: inline-flex;
@@ -2497,7 +2523,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 </style>
 </head>
-<body data-build="v48-branded-header-mobile-stable">
+<body data-build="v49-autosave-mobile-stable">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -2515,6 +2541,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       <button id="randomBeginnerCharacterBtn">Random Beginner Character</button>
       <select id="characterSlotSelect" title="Saved characters"></select>
       <button id="saveBtn">Save character</button>
+      <span id="autosaveStatus" class="autosave-status" data-state="ready" aria-live="polite">Autosave ready</span>
       <button id="loadBtn">Load selected</button>
       <button id="deleteSaveBtn">Delete selected</button>
       <button id="printBtn" type="button" title="On mobile, creates a true A4 landscape PDF. Open or download that PDF, then print it from your PDF viewer.">Export / Print Current Character Portfolio</button>
@@ -11916,7 +11943,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v48-branded-header-mobile-stable";
+window.INFINITY_BUILD = "v49-autosave-mobile-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -12642,6 +12669,9 @@ function collectState() {
   state.weapons = [...document.querySelectorAll("select[data-weapon-select]")].map(el => el.value);
   state.equipment = [...document.querySelectorAll("select[data-equipment-select]")].map(el => el.value);
   state.conditions = [...document.querySelectorAll("select[data-condition-select]")].map(el => el.value);
+  state.weaponNotes = [...document.querySelectorAll("input[data-weapon-note]")].map(el => el.value);
+  state.equipmentNotes = [...document.querySelectorAll("input[data-equipment-note]")].map(el => el.value);
+  state.conditionNotes = [...document.querySelectorAll("input[data-condition-note]")].map(el => el.value);
   // Career is the sole persisted field. Older saved records are migrated in applyState().
   state.careerEligibility = activeRestrictions().filter(value => value !== "No Restrictions");
   state.startBonuses = { ...startingSkillBonuses };
@@ -12709,6 +12739,18 @@ function applyState(rawState) {
   (state.conditions || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-condition-select="${i}"]`);
     if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+  });
+  (state.weaponNotes || []).forEach((v, i) => {
+    const el = document.querySelector(`input[data-weapon-note="${i}"]`);
+    if (el) el.value = v;
+  });
+  (state.equipmentNotes || []).forEach((v, i) => {
+    const el = document.querySelector(`input[data-equipment-note="${i}"]`);
+    if (el) el.value = v;
+  });
+  (state.conditionNotes || []).forEach((v, i) => {
+    const el = document.querySelector(`input[data-condition-note="${i}"]`);
+    if (el) el.value = v;
   });
   applyArmourFromEquipment();
   updateSkillRatings();
@@ -13137,7 +13179,9 @@ function randomCharacter() {
 
   assignTenRandomFocusPoints(preferredSkillsFor(chosenTraits, chosenTalents));
   updateSkillRatings();
-  alert("Random Character created with 10 starting Focus points. Vigor, Mental Stress, and Firewall are 20. Armour is set from the generated armour item.");
+  activeSaveId = "";
+  scheduleAutosave();
+  alert("Random Character created with 10 starting Focus points. Vigor, Mental Stress, and Firewall are 20. Armour is set from the generated armour item. Autosave will store it in this browser.");
 }
 
 function randomBeginnerCharacter() {
@@ -13166,12 +13210,91 @@ function randomBeginnerCharacter() {
 
   assignFiveBeginnerFocusPoints(preferredSkillsFor([trait], [talent]));
   updateSkillRatings();
+  activeSaveId = "";
+  scheduleAutosave();
 
-  alert(`Random Beginner Character created from the ${template.name} starter portfolio pattern. It has 2 weapons, 5 non-weapon equipment items, 1 Trait, 1 Level 1 Talent, and 5 starting Focus points.`);
+  alert(`Random Beginner Character created from the ${template.name} starter portfolio pattern. It has 2 weapons, 5 non-weapon equipment items, 1 Trait, 1 Level 1 Talent, and 5 starting Focus points. Autosave will store it in this browser.`);
 }
 
 const SAVE_INDEX_KEY = "infinity2d20-character-index";
 const SAVE_PREFIX = "infinity2d20-character-save:";
+const AUTOSAVE_DELAY_MS = 800;
+let activeSaveId = "";
+let autosaveTimer = null;
+let autosaveDirty = false;
+let autosaveSuppressed = false;
+
+function setAutosaveStatus(message, state = "ready") {
+  const status = document.getElementById("autosaveStatus");
+  if (!status) return;
+  status.textContent = message;
+  status.dataset.state = state;
+}
+
+function formatAutosaveTime(date = new Date()) {
+  try {
+    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  } catch {
+    return "now";
+  }
+}
+
+function upsertSaveIndexItem(id, name, updatedAt, autoSaved = false) {
+  const cleanName = name || "Unnamed Character";
+  let index = getSaveIndex().filter(item => item.id !== id);
+  index.push({ id, name: cleanName, updatedAt, autoSaved });
+  index.sort((a, b) => String(a.name || "").localeCompare(String(b.name || "")));
+  setSaveIndex(index);
+}
+
+function autosaveCurrentCharacterNow() {
+  if (autosaveSuppressed) return;
+  autosaveDirty = false;
+  try {
+    const state = collectState();
+    state.characterName = state.characterName || currentCharacterName();
+    state.savedAt = new Date().toISOString();
+    state.autoSaved = true;
+    const name = state.characterName || "Unnamed Character";
+    if (!activeSaveId) activeSaveId = saveIdFromName(name);
+    localStorage.setItem(SAVE_PREFIX + activeSaveId, JSON.stringify(state));
+    upsertSaveIndexItem(activeSaveId, name, state.savedAt, true);
+    refreshSaveSlots(activeSaveId);
+    setAutosaveStatus(`Autosaved ${formatAutosaveTime()}`, "saved");
+  } catch (error) {
+    console.error("Autosave failed", error);
+    setAutosaveStatus("Autosave paused - storage unavailable", "error");
+  }
+}
+
+function scheduleAutosave() {
+  if (autosaveSuppressed) return;
+  autosaveDirty = true;
+  if (autosaveTimer) clearTimeout(autosaveTimer);
+  setAutosaveStatus("Autosaving...", "saving");
+  autosaveTimer = setTimeout(() => {
+    autosaveTimer = null;
+    autosaveCurrentCharacterNow();
+  }, AUTOSAVE_DELAY_MS);
+}
+
+function installAutosave() {
+  const sheet = document.getElementById("sheet");
+  if (!sheet) return;
+  const shouldAutosave = target => !!(target && target.matches && target.matches("input, textarea, select"));
+  ["input", "change"].forEach(eventName => {
+    sheet.addEventListener(eventName, event => {
+      if (shouldAutosave(event.target)) scheduleAutosave();
+    });
+  });
+  window.addEventListener("beforeunload", () => {
+    if (autosaveDirty) {
+      if (autosaveTimer) clearTimeout(autosaveTimer);
+      autosaveCurrentCharacterNow();
+    }
+  });
+  setAutosaveStatus("Autosave ready", "ready");
+}
 
 function safeFileName(name) {
   return (name || "infinity-character").replace(/[^\w\-]+/g, "_");
@@ -13213,11 +13336,11 @@ function saveCharacterToBrowser() {
   const id = saveIdFromName(name);
   localStorage.setItem(SAVE_PREFIX + id, JSON.stringify(state));
 
-  let index = getSaveIndex().filter(item => item.id !== id);
-  index.push({ id, name, updatedAt: state.savedAt });
-  index.sort((a, b) => a.name.localeCompare(b.name));
-  setSaveIndex(index);
+  upsertSaveIndexItem(id, name, state.savedAt, false);
+  activeSaveId = id;
+  autosaveDirty = false;
   refreshSaveSlots(id);
+  setAutosaveStatus(`Saved ${formatAutosaveTime()}`, "saved");
   alert(`Saved "${name}" to this browser.`);
 }
 
@@ -13234,8 +13357,16 @@ function loadCharacterFromBrowser() {
     refreshSaveSlots();
     return;
   }
-  applyState(JSON.parse(raw));
-  alert("Loaded selected character.");
+  autosaveSuppressed = true;
+  try {
+    applyState(JSON.parse(raw));
+    activeSaveId = id;
+    autosaveDirty = false;
+    setAutosaveStatus(`Loaded - autosave ready`, "ready");
+  } finally {
+    autosaveSuppressed = false;
+  }
+  alert("Loaded selected character. Autosave is now active for this portfolio.");
 }
 
 function deleteSelectedSave() {
@@ -13250,6 +13381,9 @@ function deleteSelectedSave() {
   if (!confirm(`Delete saved character "${item?.name || id}" from this browser?`)) return;
   localStorage.removeItem(SAVE_PREFIX + id);
   setSaveIndex(index.filter(x => x.id !== id));
+  if (activeSaveId === id) activeSaveId = "";
+  autosaveDirty = false;
+  setAutosaveStatus("Save deleted - autosave ready", "ready");
   refreshSaveSlots();
 }
 
@@ -13318,32 +13452,39 @@ function importJSONFile(file) {
 }
 
 function newCharacterSheet() {
-  if (!confirm("Start a new character sheet? Unsaved changes will be lost.")) return;
+  if (!confirm("Start a new character sheet? Your current character has been autosaved in this browser.")) return;
 
-  document.querySelectorAll("input[data-field], textarea[data-field]").forEach(element => {
-    element.value = "";
-  });
-  document.querySelectorAll("select[data-field]").forEach(element => {
-    element.value = "";
-  });
+  autosaveSuppressed = true;
+  try {
+      document.querySelectorAll("input[data-field], textarea[data-field]").forEach(element => {
+        element.value = "";
+      });
+      document.querySelectorAll("select[data-field]").forEach(element => {
+        element.value = "";
+      });
 
-  setCareerChoice(GENERAL_CAREER, "No Restrictions");
-  refreshHomeworldChoices({ preserve: false });
-  refreshRestrictionChoices();
-  clearTraitAndTalentSlots();
+      setCareerChoice(GENERAL_CAREER, "No Restrictions");
+      refreshHomeworldChoices({ preserve: false });
+      refreshRestrictionChoices();
+      clearTraitAndTalentSlots();
 
-  // Clear all gear first, then deliberately set Armour to 0.
-  document.querySelectorAll("select[data-weapon-select], select[data-equipment-select], select[data-condition-select]").forEach(element => {
-    element.value = "";
-    element.dispatchEvent(new Event("change"));
-  });
+      // Clear all gear first, then deliberately set Armour to 0.
+      document.querySelectorAll("select[data-weapon-select], select[data-equipment-select], select[data-condition-select]").forEach(element => {
+        element.value = "";
+        element.dispatchEvent(new Event("change"));
+      });
 
-  clearFocusAllocations();
-  setMainSkillsToStartingBaseline();
-  resetStartingBonuses();
-  setDefaultTracks();
-  applyArmourFromEquipment();
-  updateSkillRatings();
+      clearFocusAllocations();
+      setMainSkillsToStartingBaseline();
+      resetStartingBonuses();
+      setDefaultTracks();
+      applyArmourFromEquipment();
+      updateSkillRatings();  } finally {
+    autosaveSuppressed = false;
+  }
+  activeSaveId = "";
+  autosaveDirty = false;
+  setAutosaveStatus("New sheet - autosave ready", "ready");
 }
 
 
@@ -15049,7 +15190,7 @@ function hideGlossary() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v48-branded-header-mobile-stable";
+  document.documentElement.dataset.infinityBuild = "v49-autosave-mobile-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -15068,6 +15209,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sanitizeSkillRatingDisplays();
   applyArmourFromEquipment();
   refreshSaveSlots();
+  installAutosave();
   buildGlossary();
   // Do not attach a MutationObserver to the skill Rating cells. Earlier builds
   // rewrote those cells from inside the observer callback, which could retrigger
