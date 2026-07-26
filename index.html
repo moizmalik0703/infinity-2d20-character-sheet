@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v49-autosave-mobile-stable">
-  <!-- DEPLOYMENT CHECK: v49-autosave-mobile-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, a read-only searchable Glossary / Player Reference is available, and top-of-page partner logos are embedded without affecting print/PDF output. -->
+  <meta name="infinity-build" content="v50-autosave-glossary-load-stable">
+  <!-- DEPLOYMENT CHECK: v50-autosave-glossary-load-stable | PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, a read-only searchable Glossary / Player Reference is available, and top-of-page partner logos are embedded without affecting print/PDF output. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2523,7 +2523,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 </style>
 </head>
-<body data-build="v49-autosave-mobile-stable">
+<body data-build="v50-autosave-glossary-load-stable">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -11943,7 +11943,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v49-autosave-mobile-stable";
+window.INFINITY_BUILD = "v50-autosave-glossary-load-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -13259,12 +13259,24 @@ function autosaveCurrentCharacterNow() {
     if (!activeSaveId) activeSaveId = saveIdFromName(name);
     localStorage.setItem(SAVE_PREFIX + activeSaveId, JSON.stringify(state));
     upsertSaveIndexItem(activeSaveId, name, state.savedAt, true);
-    refreshSaveSlots(activeSaveId);
+    const slotSelect = document.getElementById("characterSlotSelect");
+    const selectedBeforeRefresh = slotSelect?.value || "";
+    const selectedAfterRefresh = selectedBeforeRefresh && selectedBeforeRefresh !== activeSaveId ? selectedBeforeRefresh : activeSaveId;
+    refreshSaveSlots(selectedAfterRefresh);
     setAutosaveStatus(`Autosaved ${formatAutosaveTime()}`, "saved");
   } catch (error) {
     console.error("Autosave failed", error);
     setAutosaveStatus("Autosave paused - storage unavailable", "error");
   }
+}
+
+function flushPendingAutosave() {
+  if (autosaveSuppressed) return;
+  if (autosaveTimer) {
+    clearTimeout(autosaveTimer);
+    autosaveTimer = null;
+  }
+  if (autosaveDirty) autosaveCurrentCharacterNow();
 }
 
 function scheduleAutosave() {
@@ -13288,10 +13300,7 @@ function installAutosave() {
     });
   });
   window.addEventListener("beforeunload", () => {
-    if (autosaveDirty) {
-      if (autosaveTimer) clearTimeout(autosaveTimer);
-      autosaveCurrentCharacterNow();
-    }
+    flushPendingAutosave();
   });
   setAutosaveStatus("Autosave ready", "ready");
 }
@@ -13354,14 +13363,23 @@ function loadCharacterFromBrowser() {
   const raw = localStorage.getItem(SAVE_PREFIX + id);
   if (!raw) {
     alert("Saved character not found in this browser.");
-    refreshSaveSlots();
+    refreshSaveSlots(id);
     return;
   }
+  // Loading a selected portfolio should work from either the character sheet
+  // or the glossary view. Pause autosave while the saved state is applied so
+  // change events from dropdown rebuilding do not overwrite the selected slot.
   autosaveSuppressed = true;
   try {
+    if (autosaveTimer) {
+      clearTimeout(autosaveTimer);
+      autosaveTimer = null;
+    }
     applyState(JSON.parse(raw));
     activeSaveId = id;
     autosaveDirty = false;
+    refreshSaveSlots(id);
+    hideGlossary({ silent: true });
     setAutosaveStatus(`Loaded - autosave ready`, "ready");
   } finally {
     autosaveSuppressed = false;
@@ -13387,9 +13405,11 @@ function deleteSelectedSave() {
   refreshSaveSlots();
 }
 
-function refreshSaveSlots(selectedId = "") {
+function refreshSaveSlots(selectedId = undefined) {
   const select = document.getElementById("characterSlotSelect");
   if (!select) return;
+  const previousSelection = select.value || "";
+  const requestedSelection = selectedId === undefined ? previousSelection : selectedId;
   const index = getSaveIndex();
   select.innerHTML = "";
   const blank = document.createElement("option");
@@ -13403,7 +13423,9 @@ function refreshSaveSlots(selectedId = "") {
     opt.textContent = date ? `${item.name} (${date})` : item.name;
     select.appendChild(opt);
   });
-  if (selectedId) select.value = selectedId;
+  if (requestedSelection && [...select.options].some(option => option.value === requestedSelection)) {
+    select.value = requestedSelection;
+  }
 }
 
 function downloadJSON() {
@@ -15172,6 +15194,10 @@ function renderGlossary() {
 }
 
 function showGlossary() {
+  // Save any recent edits before leaving the visible sheet. This prevents a
+  // pending autosave timer from later rebuilding the save selector and wiping
+  // out the player's selected load slot while they are in the glossary.
+  flushPendingAutosave();
   document.body.classList.add("glossary-mode");
   const page = document.getElementById("glossaryPage");
   if (page) page.hidden = false;
@@ -15181,16 +15207,17 @@ function showGlossary() {
   if (search && window.matchMedia("(min-width: 761px)").matches) search.focus({ preventScroll: true });
 }
 
-function hideGlossary() {
+function hideGlossary(options = {}) {
   document.body.classList.remove("glossary-mode");
   const page = document.getElementById("glossaryPage");
   if (page) page.hidden = true;
+  if (!options.silent) flushPendingAutosave();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v49-autosave-mobile-stable";
+  document.documentElement.dataset.infinityBuild = "v50-autosave-glossary-load-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
