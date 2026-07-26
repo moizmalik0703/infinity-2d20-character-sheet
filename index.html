@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v51-xml-import-export-mobile-stable">
-  <!-- DEPLOYMENT CHECK: v51-xml-import-export-mobile-stable | Adds XML import/export for current character sheets, keeps autosave and glossary-load stability, PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, a read-only searchable Glossary / Player Reference is available, and top-of-page partner logos are embedded without affecting print/PDF output. -->
+  <meta name="infinity-build" content="v52-visible-xml-buttons-stable">
+  <!-- DEPLOYMENT CHECK: v52-visible-xml-buttons-stable | Adds highly visible XML import/export buttons in both the header and a mobile shortcut bar for current character sheets, keeps autosave and glossary-load stability, PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, a read-only searchable Glossary / Player Reference is available, and top-of-page partner logos are embedded without affecting print/PDF output. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2521,9 +2521,70 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
   }
 }
 
+
+/* v52: Always-visible XML transfer access bar. This makes Import / Export
+   visible on mobile even when the compact header button row wraps off-screen. */
+.quick-transfer-bar {
+  width: min(100%, 1180px);
+  margin: .45rem auto 0;
+  padding: .55rem .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  border: 1px solid var(--line);
+  border-radius: .55rem;
+  background: #f7fafc;
+  box-shadow: 0 1px 6px rgba(0,0,0,.05);
+}
+.quick-transfer-bar strong {
+  display: block;
+  font-size: .95rem;
+  color: var(--ink);
+}
+.quick-transfer-bar span {
+  display: block;
+  margin-top: .1rem;
+  font-size: .78rem;
+  color: var(--muted);
+}
+.quick-transfer-actions {
+  display: flex;
+  gap: .45rem;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.quick-transfer-actions button {
+  background: var(--blue2);
+  color: #ffffff;
+  min-width: 8.5rem;
+}
+@media (max-width: 760px) {
+  .quick-transfer-bar {
+    width: calc(100% - 1rem);
+    margin: .45rem .5rem 0;
+    padding: .6rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .quick-transfer-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .45rem;
+    width: 100%;
+  }
+  .quick-transfer-actions button {
+    width: 100%;
+    min-width: 0;
+    min-height: 2.75rem;
+    font-size: 1rem;
+  }
+}
+
 </style>
 </head>
-<body data-build="v51-xml-import-export-mobile-stable">
+<body data-build="v52-visible-xml-buttons-stable">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -2557,6 +2618,17 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       <span>Search Traits, Talents, Careers, Factions, Homeworlds, Weapons, Equipment, and rules terms.</span>
     </div>
     <button id="glossaryShortcutBtn" type="button">Open Glossary / Reference</button>
+  </div>
+
+  <div class="quick-transfer-bar no-print" role="navigation" aria-label="Character XML import and export shortcut">
+    <div>
+      <strong>Character XML Transfer</strong>
+      <span>Export the current portfolio to XML, or import an XML character file into this sheet.</span>
+    </div>
+    <div class="quick-transfer-actions">
+      <button id="exportXmlShortcutBtn" type="button">Export XML</button>
+      <button id="importXmlShortcutBtn" type="button">Import XML</button>
+    </div>
   </div>
 
 
@@ -11946,7 +12018,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v51-xml-import-export-mobile-stable";
+window.INFINITY_BUILD = "v52-visible-xml-buttons-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -13518,7 +13590,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v51-xml-import-export-mobile-stable")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v52-visible-xml-buttons-stable")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -15361,7 +15433,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v51-xml-import-export-mobile-stable";
+  document.documentElement.dataset.infinityBuild = "v52-visible-xml-buttons-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -15398,12 +15470,16 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("saveBtn").addEventListener("click", saveCharacterToBrowser);
   document.getElementById("loadBtn").addEventListener("click", loadCharacterFromBrowser);
   document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);
-  const exportXmlBtn = document.getElementById("exportXmlBtn");
-  if (exportXmlBtn) exportXmlBtn.addEventListener("click", exportCharacterXml);
-  const importXmlBtn = document.getElementById("importXmlBtn");
+  ["exportXmlBtn", "exportXmlShortcutBtn"].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.addEventListener("click", exportCharacterXml);
+  });
   const importXmlFile = document.getElementById("importXmlFile");
-  if (importXmlBtn && importXmlFile) {
-    importXmlBtn.addEventListener("click", () => importXmlFile.click());
+  ["importXmlBtn", "importXmlShortcutBtn"].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn && importXmlFile) btn.addEventListener("click", () => importXmlFile.click());
+  });
+  if (importXmlFile) {
     importXmlFile.addEventListener("change", event => {
       const file = event.target.files && event.target.files[0];
       importCharacterXmlFile(file);
