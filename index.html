@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v52-visible-xml-buttons-stable">
-  <!-- DEPLOYMENT CHECK: v52-visible-xml-buttons-stable | Adds highly visible XML import/export buttons in both the header and a mobile shortcut bar for current character sheets, keeps autosave and glossary-load stability, PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, a read-only searchable Glossary / Player Reference is available, and top-of-page partner logos are embedded without affecting print/PDF output. -->
+  <meta name="infinity-build" content="v53-auto-load-saved-mobile-stable">
+  <!-- DEPLOYMENT CHECK: v53-auto-load-saved-mobile-stable | Adds highly visible XML import/export buttons in both the header and a mobile shortcut bar for current character sheets, keeps autosave and glossary-load stability, PDF export uses Acrobat-safe standard PDF fonts, Arial 12pt styling, corrected non-overlapping section flow, compact adaptive box heights, stable mobile direct-PDF pages, non-reentrant mobile Career filtering, clean skill totals, PDF skill tables hide Base and Rating columns, Traits and Talents dropdowns are alphabetized, XP and Heat removed, Wounds is a 0-3 dropdown, a read-only searchable Glossary / Player Reference is available, and top-of-page partner logos are embedded without affecting print/PDF output. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -875,6 +875,9 @@ td[data-rating].auto-bonus {
 .autosave-status[data-state="saving"] { color: #fff2cc; }
 .autosave-status[data-state="saved"] { color: #d9f99d; }
 .autosave-status[data-state="error"] { color: #fecaca; }
+/* v53: Saved characters auto-load when selected, so the manual Load button is hidden. */
+#loadBtn { display: none !important; }
+#characterSlotSelect { min-width: 13.5rem; }
 
 
 /* Conditions table: prioritise readable descriptions in browser view. */
@@ -2584,7 +2587,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 </style>
 </head>
-<body data-build="v52-visible-xml-buttons-stable">
+<body data-build="v53-auto-load-saved-mobile-stable">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -2600,10 +2603,10 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       <button id="glossaryBtn" type="button" title="Open player glossary and reference">Glossary / Reference</button>
       <button id="randomCharacterBtn">Random Character</button>
       <button id="randomBeginnerCharacterBtn">Random Beginner Character</button>
-      <select id="characterSlotSelect" title="Saved characters"></select>
+      <select id="characterSlotSelect" title="Saved characters - choose one to auto-load"></select>
       <button id="saveBtn">Save character</button>
       <span id="autosaveStatus" class="autosave-status" data-state="ready" aria-live="polite">Autosave ready</span>
-      <button id="loadBtn">Load selected</button>
+      <button id="loadBtn" hidden aria-hidden="true">Load selected</button>
       <button id="deleteSaveBtn">Delete selected</button>
       <button id="exportXmlBtn" type="button" title="Export the current character portfolio as an XML file">Export XML</button>
       <button id="importXmlBtn" type="button" title="Import a character portfolio from an XML file">Import XML</button>
@@ -12018,7 +12021,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v52-visible-xml-buttons-stable";
+window.INFINITY_BUILD = "v53-auto-load-saved-mobile-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -13293,6 +13296,7 @@ function randomBeginnerCharacter() {
 
 const SAVE_INDEX_KEY = "infinity2d20-character-index";
 const SAVE_PREFIX = "infinity2d20-character-save:";
+const LAST_ACTIVE_SAVE_KEY = "infinity2d20-character-last-active";
 const AUTOSAVE_DELAY_MS = 800;
 let activeSaveId = "";
 let autosaveTimer = null;
@@ -13333,6 +13337,7 @@ function autosaveCurrentCharacterNow() {
     const name = state.characterName || "Unnamed Character";
     if (!activeSaveId) activeSaveId = saveIdFromName(name);
     localStorage.setItem(SAVE_PREFIX + activeSaveId, JSON.stringify(state));
+    localStorage.setItem(LAST_ACTIVE_SAVE_KEY, activeSaveId);
     upsertSaveIndexItem(activeSaveId, name, state.savedAt, true);
     const slotSelect = document.getElementById("characterSlotSelect");
     const selectedBeforeRefresh = slotSelect?.value || "";
@@ -13419,6 +13424,7 @@ function saveCharacterToBrowser() {
   const name = state.characterName || "Unnamed Character";
   const id = saveIdFromName(name);
   localStorage.setItem(SAVE_PREFIX + id, JSON.stringify(state));
+  localStorage.setItem(LAST_ACTIVE_SAVE_KEY, id);
 
   upsertSaveIndexItem(id, name, state.savedAt, false);
   activeSaveId = id;
@@ -13428,22 +13434,28 @@ function saveCharacterToBrowser() {
   alert(`Saved "${name}" to this browser.`);
 }
 
-function loadCharacterFromBrowser() {
-  const select = document.getElementById("characterSlotSelect");
-  const id = select?.value;
+function loadCharacterById(id, options = {}) {
+  const notify = !!options.notify;
+  const auto = !!options.auto;
+  const initial = !!options.initial;
+
   if (!id) {
-    alert("Choose a saved character first.");
-    return;
+    if (notify) alert("Choose a saved character first.");
+    return false;
   }
+
+  // Save pending edits to the current active portfolio before switching to
+  // another saved portfolio. This keeps autosave safe while making the Load
+  // button unnecessary.
+  if (!initial && !autosaveSuppressed) flushPendingAutosave();
+
   const raw = localStorage.getItem(SAVE_PREFIX + id);
   if (!raw) {
-    alert("Saved character not found in this browser.");
+    if (notify || !auto) alert("Saved character not found in this browser.");
     refreshSaveSlots(id);
-    return;
+    return false;
   }
-  // Loading a selected portfolio should work from either the character sheet
-  // or the glossary view. Pause autosave while the saved state is applied so
-  // change events from dropdown rebuilding do not overwrite the selected slot.
+
   autosaveSuppressed = true;
   try {
     if (autosaveTimer) {
@@ -13452,14 +13464,50 @@ function loadCharacterFromBrowser() {
     }
     applyState(JSON.parse(raw));
     activeSaveId = id;
+    localStorage.setItem(LAST_ACTIVE_SAVE_KEY, id);
     autosaveDirty = false;
     refreshSaveSlots(id);
     hideGlossary({ silent: true });
-    setAutosaveStatus(`Loaded - autosave ready`, "ready");
+    const indexItem = getSaveIndex().find(item => item.id === id);
+    setAutosaveStatus(`${initial ? "Auto-loaded" : "Loaded"}${indexItem?.name ? `: ${indexItem.name}` : ""} - autosave ready`, "ready");
+  } catch (error) {
+    console.error("Load failed", error);
+    if (notify || !auto) alert("Saved character could not be loaded. The save data may be damaged.");
+    return false;
   } finally {
     autosaveSuppressed = false;
   }
-  alert("Loaded selected character. Autosave is now active for this portfolio.");
+
+  if (notify) alert("Loaded selected character. Autosave is now active for this portfolio.");
+  return true;
+}
+
+function loadCharacterFromBrowser() {
+  const select = document.getElementById("characterSlotSelect");
+  return loadCharacterById(select?.value || "", { notify: true });
+}
+
+function autoLoadLastSavedCharacter() {
+  const index = getSaveIndex();
+  if (!index.length) return false;
+
+  const exists = id => !!id && index.some(item => item.id === id) && !!localStorage.getItem(SAVE_PREFIX + id);
+  let id = localStorage.getItem(LAST_ACTIVE_SAVE_KEY) || "";
+
+  if (!exists(id)) {
+    const newest = [...index]
+      .filter(item => exists(item.id))
+      .sort((a, b) => new Date(b.updatedAt || 0) - new Date(a.updatedAt || 0))[0];
+    id = newest?.id || "";
+  }
+
+  if (!exists(id)) {
+    localStorage.removeItem(LAST_ACTIVE_SAVE_KEY);
+    refreshSaveSlots();
+    return false;
+  }
+
+  return loadCharacterById(id, { auto: true, initial: true });
 }
 
 function deleteSelectedSave() {
@@ -13475,6 +13523,7 @@ function deleteSelectedSave() {
   localStorage.removeItem(SAVE_PREFIX + id);
   setSaveIndex(index.filter(x => x.id !== id));
   if (activeSaveId === id) activeSaveId = "";
+  if (localStorage.getItem(LAST_ACTIVE_SAVE_KEY) === id) localStorage.removeItem(LAST_ACTIVE_SAVE_KEY);
   autosaveDirty = false;
   setAutosaveStatus("Save deleted - autosave ready", "ready");
   refreshSaveSlots();
@@ -13489,7 +13538,7 @@ function refreshSaveSlots(selectedId = undefined) {
   select.innerHTML = "";
   const blank = document.createElement("option");
   blank.value = "";
-  blank.textContent = index.length ? "Saved characters..." : "No saved characters";
+  blank.textContent = index.length ? "Choose saved character to auto-load..." : "No saved characters";
   select.appendChild(blank);
   index.forEach(item => {
     const opt = document.createElement("option");
@@ -13590,7 +13639,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v52-visible-xml-buttons-stable")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v53-auto-load-saved-mobile-stable")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -15433,7 +15482,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v52-visible-xml-buttons-stable";
+  document.documentElement.dataset.infinityBuild = "v53-auto-load-saved-mobile-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -15453,6 +15502,7 @@ document.addEventListener("DOMContentLoaded", () => {
   applyArmourFromEquipment();
   refreshSaveSlots();
   installAutosave();
+  autoLoadLastSavedCharacter();
   buildGlossary();
   // Do not attach a MutationObserver to the skill Rating cells. Earlier builds
   // rewrote those cells from inside the observer callback, which could retrigger
@@ -15468,7 +15518,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const backToSheetBtn = document.getElementById("backToSheetBtn");
   if (backToSheetBtn) backToSheetBtn.addEventListener("click", hideGlossary);
   document.getElementById("saveBtn").addEventListener("click", saveCharacterToBrowser);
-  document.getElementById("loadBtn").addEventListener("click", loadCharacterFromBrowser);
+  const characterSlotSelect = document.getElementById("characterSlotSelect");
+  if (characterSlotSelect) {
+    characterSlotSelect.addEventListener("change", event => {
+      const selectedId = event.target.value;
+      if (selectedId) loadCharacterById(selectedId, { auto: true });
+    });
+  }
+  const loadButton = document.getElementById("loadBtn");
+  if (loadButton) loadButton.addEventListener("click", loadCharacterFromBrowser);
   document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);
   ["exportXmlBtn", "exportXmlShortcutBtn"].forEach(id => {
     const btn = document.getElementById(id);
