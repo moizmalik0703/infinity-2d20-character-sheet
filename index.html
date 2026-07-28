@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v55-lore-clean-glossary-stable">
-  <!-- DEPLOYMENT CHECK: v55-lore-clean-glossary-stable | Replaces repetitive Trait/Talent glossary boilerplate with shorter lore-first, source-guided descriptions; keeps autoload without Load button, autosave, XML import/export, visible glossary, embedded logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
+  <meta name="infinity-build" content="v56-clean-top-shortcuts-stable">
+  <!-- DEPLOYMENT CHECK: v56-clean-top-shortcuts-stable | Removes duplicate quick shortcut bars while keeping header Glossary and XML buttons, lore-clean glossary, autoload without Load button, autosave, XML import/export, embedded logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2478,116 +2478,9 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 /* v44: Always-visible player reference access bar. This keeps Glossary visible on
    mobile even when the header action buttons wrap or are hard to notice. */
-.quick-reference-bar {
-  width: min(100%, 1180px);
-  margin: .65rem auto 0;
-  padding: .55rem .75rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: .75rem;
-  border: 1px solid var(--line);
-  border-radius: .55rem;
-  background: #ffffff;
-  box-shadow: 0 1px 6px rgba(0,0,0,.06);
-}
-.quick-reference-bar strong {
-  display: block;
-  font-size: .95rem;
-  color: var(--ink);
-}
-.quick-reference-bar span {
-  display: block;
-  margin-top: .1rem;
-  font-size: .78rem;
-  color: var(--muted);
-}
-.quick-reference-bar button {
-  flex: 0 0 auto;
-  background: var(--blue);
-  color: #ffffff;
-  min-width: 13rem;
-}
-@media (max-width: 760px) {
-  .quick-reference-bar {
-    width: calc(100% - 1rem);
-    margin: .5rem .5rem 0;
-    padding: .6rem;
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .quick-reference-bar button {
-    width: 100%;
-    min-width: 0;
-    min-height: 2.75rem;
-    font-size: 1rem;
-  }
-}
-
-
-/* v52: Always-visible XML transfer access bar. This makes Import / Export
-   visible on mobile even when the compact header button row wraps off-screen. */
-.quick-transfer-bar {
-  width: min(100%, 1180px);
-  margin: .45rem auto 0;
-  padding: .55rem .75rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: .75rem;
-  border: 1px solid var(--line);
-  border-radius: .55rem;
-  background: #f7fafc;
-  box-shadow: 0 1px 6px rgba(0,0,0,.05);
-}
-.quick-transfer-bar strong {
-  display: block;
-  font-size: .95rem;
-  color: var(--ink);
-}
-.quick-transfer-bar span {
-  display: block;
-  margin-top: .1rem;
-  font-size: .78rem;
-  color: var(--muted);
-}
-.quick-transfer-actions {
-  display: flex;
-  gap: .45rem;
-  flex: 0 0 auto;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-.quick-transfer-actions button {
-  background: var(--blue2);
-  color: #ffffff;
-  min-width: 8.5rem;
-}
-@media (max-width: 760px) {
-  .quick-transfer-bar {
-    width: calc(100% - 1rem);
-    margin: .45rem .5rem 0;
-    padding: .6rem;
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .quick-transfer-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: .45rem;
-    width: 100%;
-  }
-  .quick-transfer-actions button {
-    width: 100%;
-    min-width: 0;
-    min-height: 2.75rem;
-    font-size: 1rem;
-  }
-}
-
 </style>
 </head>
-<body data-build="v54-autoload-no-load-button-stable">
+<body data-build="v56-clean-top-shortcuts-stable">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -2613,26 +2506,6 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       <button id="printBtn" type="button" title="On mobile, creates a true A4 landscape PDF. Open or download that PDF, then print it from your PDF viewer.">Export / Print Current Character Portfolio</button>
     </div>
   </header>
-
-  <div class="quick-reference-bar no-print" role="navigation" aria-label="Player reference shortcut">
-    <div>
-      <strong>Player Glossary / Reference</strong>
-      <span>Search Traits, Talents, Careers, Factions, Homeworlds, Weapons, Equipment, and rules terms.</span>
-    </div>
-    <button id="glossaryShortcutBtn" type="button">Open Glossary / Reference</button>
-  </div>
-
-  <div class="quick-transfer-bar no-print" role="navigation" aria-label="Character XML import and export shortcut">
-    <div>
-      <strong>Character XML Transfer</strong>
-      <span>Export the current portfolio to XML, or import an XML character file into this sheet.</span>
-    </div>
-    <div class="quick-transfer-actions">
-      <button id="exportXmlShortcutBtn" type="button">Export XML</button>
-      <button id="importXmlShortcutBtn" type="button">Import XML</button>
-    </div>
-  </div>
-
 
   <main id="sheet" class="sheet">
     <section class="page page-1">
