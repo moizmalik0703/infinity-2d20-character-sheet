@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v56-clean-top-shortcuts-stable">
-  <!-- DEPLOYMENT CHECK: v56-clean-top-shortcuts-stable | Removes duplicate quick shortcut bars while keeping header Glossary and XML buttons, lore-clean glossary, autoload without Load button, autosave, XML import/export, embedded logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
+  <meta name="infinity-build" content="v57-shortcut-clean-confirmed">
+  <!-- DEPLOYMENT CHECK: v57-shortcut-clean-confirmed | Removes duplicate quick shortcut bars while keeping header Glossary and XML buttons, lore-clean glossary, autoload without Load button, autosave, XML import/export, embedded logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2478,9 +2478,25 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 /* v44: Always-visible player reference access bar. This keeps Glossary visible on
    mobile even when the header action buttons wrap or are hard to notice. */
+
+
+/* v57 shortcut cleanup: do not show old duplicate shortcut bars. */
+.shortcut-card,
+.quick-shortcut,
+.glossary-shortcut-card,
+.xml-transfer-card,
+[data-shortcut="glossary"],
+[data-shortcut="xml-transfer"],
+#glossaryShortcut,
+#xmlTransferShortcut,
+#playerGlossaryShortcut,
+#characterXmlTransfer {
+  display: none !important;
+}
+
 </style>
 </head>
-<body data-build="v56-clean-top-shortcuts-stable">
+<body data-build="v57-shortcut-clean-confirmed">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -15529,5 +15545,30 @@ window.addEventListener("load", () => {
   window.setTimeout(runInitialAutoLoadSavedCharacter, 50);
 });
 </script>
+
+<script>
+// v57 defensive cleanup for older cached/merged shortcut bars.
+(function removeOldShortcutBars(){
+  function run(){
+    const banned = ["Player " + "Glossary / Reference", "Character " + "XML Transfer", "Open " + "Glossary / Reference"];
+    document.querySelectorAll("section, div, aside, article").forEach(el => {
+      if (el.closest("#glossaryPage")) return;
+      const txt = (el.textContent || "").replace(/\s+/g, " ").trim();
+      if (!txt) return;
+      if (banned.some(label => txt.includes(label))) {
+        const rect = el.getBoundingClientRect ? el.getBoundingClientRect() : {height: 999};
+        if (rect.height < 180 || el.id === "glossaryShortcut" || el.id === "xmlTransferShortcut") el.remove();
+      }
+    });
+    document.querySelectorAll("button").forEach(btn => {
+      if ((btn.textContent || "").replace(/\s+/g, " ").trim() === ("Load" + " selected")) btn.remove();
+    });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run, {once:true});
+  else run();
+  window.addEventListener("load", run, {once:true});
+})();
+</script>
+
 </body>
 </html>
