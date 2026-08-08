@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v57-shortcut-clean-confirmed">
-  <!-- DEPLOYMENT CHECK: v57-shortcut-clean-confirmed | Removes duplicate quick shortcut bars while keeping header Glossary and XML buttons, lore-clean glossary, autoload without Load button, autosave, XML import/export, embedded logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
+  <meta name="infinity-build" content="v59-persistent-autosave-stable">
+  <!-- DEPLOYMENT CHECK: v59-persistent-autosave-stable | Adds persistent autosave snapshots with localStorage + IndexedDB fallback, pagehide/visibility flush, and recovery auto-load while keeping no Load button, Glossary and XML buttons, lore-clean glossary, XML import/export, logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2496,7 +2496,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 </style>
 </head>
-<body data-build="v57-shortcut-clean-confirmed">
+<body data-build="v59-persistent-autosave-stable">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -11909,7 +11909,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v54-autoload-no-load-button-stable";
+window.INFINITY_BUILD = "v59-persistent-autosave-stable";
 </script>
   <script>const DATA = window.INFINITY_DATA || window.DATA;
 
@@ -13146,8 +13146,8 @@ function randomCharacter() {
   assignTenRandomFocusPoints(preferredSkillsFor(chosenTraits, chosenTalents));
   updateSkillRatings();
   activeSaveId = "";
-  scheduleAutosave();
-  alert("Random Character created with 10 starting Focus points. Vigor, Mental Stress, and Firewall are 20. Armour is set from the generated armour item. Autosave will store it in this browser.");
+  autosaveCurrentCharacterNow();
+  alert("Random Character created with 10 starting Focus points. Vigor, Mental Stress, and Firewall are 20. Armour is set from the generated armour item. It has been autosaved in this browser.");
 }
 
 function randomBeginnerCharacter() {
@@ -13177,19 +13177,142 @@ function randomBeginnerCharacter() {
   assignFiveBeginnerFocusPoints(preferredSkillsFor([trait], [talent]));
   updateSkillRatings();
   activeSaveId = "";
-  scheduleAutosave();
+  autosaveCurrentCharacterNow();
 
-  alert(`Random Beginner Character created from the ${template.name} starter portfolio pattern. It has 2 weapons, 5 non-weapon equipment items, 1 Trait, 1 Level 1 Talent, and 5 starting Focus points. Autosave will store it in this browser.`);
+  alert(`Random Beginner Character created from the ${template.name} starter portfolio pattern. It has 2 weapons, 5 non-weapon equipment items, 1 Trait, 1 Level 1 Talent, and 5 starting Focus points. It has been autosaved in this browser.`);
 }
 
 const SAVE_INDEX_KEY = "infinity2d20-character-index";
 const SAVE_PREFIX = "infinity2d20-character-save:";
 const LAST_ACTIVE_SAVE_KEY = "infinity2d20-character-last-active";
-const AUTOSAVE_DELAY_MS = 800;
+const CURRENT_SNAPSHOT_KEY = "infinity2d20-character-current-snapshot";
+const IDB_DB_NAME = "infinity2d20-character-vault";
+const IDB_STORE_NAME = "keyValue";
+const AUTOSAVE_DELAY_MS = 500;
 let activeSaveId = "";
 let autosaveTimer = null;
 let autosaveDirty = false;
 let autosaveSuppressed = false;
+let indexedDbAutoLoadAttempted = false;
+
+function hasIndexedDb() {
+  return typeof indexedDB !== "undefined";
+}
+
+function openCharacterVaultDb() {
+  return new Promise(resolve => {
+    if (!hasIndexedDb()) {
+      resolve(null);
+      return;
+    }
+    try {
+      const request = indexedDB.open(IDB_DB_NAME, 1);
+      request.onupgradeneeded = () => {
+        const db = request.result;
+        if (!db.objectStoreNames.contains(IDB_STORE_NAME)) db.createObjectStore(IDB_STORE_NAME);
+      };
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => resolve(null);
+      request.onblocked = () => resolve(null);
+    } catch {
+      resolve(null);
+    }
+  });
+}
+
+async function vaultSet(key, value) {
+  const db = await openCharacterVaultDb();
+  if (!db) return false;
+  return new Promise(resolve => {
+    try {
+      const tx = db.transaction(IDB_STORE_NAME, "readwrite");
+      tx.objectStore(IDB_STORE_NAME).put(value, key);
+      tx.oncomplete = () => { db.close(); resolve(true); };
+      tx.onerror = () => { db.close(); resolve(false); };
+      tx.onabort = () => { db.close(); resolve(false); };
+    } catch {
+      try { db.close(); } catch {}
+      resolve(false);
+    }
+  });
+}
+
+async function vaultGet(key) {
+  const db = await openCharacterVaultDb();
+  if (!db) return null;
+  return new Promise(resolve => {
+    try {
+      const tx = db.transaction(IDB_STORE_NAME, "readonly");
+      const request = tx.objectStore(IDB_STORE_NAME).get(key);
+      request.onsuccess = () => resolve(request.result || null);
+      request.onerror = () => resolve(null);
+      tx.oncomplete = () => { try { db.close(); } catch {} };
+      tx.onerror = () => { try { db.close(); } catch {} };
+    } catch {
+      try { db.close(); } catch {}
+      resolve(null);
+    }
+  });
+}
+
+function buildCharacterSnapshot(id, state) {
+  return {
+    build: "v59-persistent-autosave-stable",
+    id: id || saveIdFromName(state?.characterName || currentCharacterName()),
+    name: state?.characterName || currentCharacterName(),
+    savedAt: state?.savedAt || new Date().toISOString(),
+    state
+  };
+}
+
+function writeSnapshotMirrors(id, state) {
+  if (!state) return;
+  const snapshot = buildCharacterSnapshot(id, state);
+  try {
+    localStorage.setItem(CURRENT_SNAPSHOT_KEY, JSON.stringify(snapshot));
+  } catch {}
+  // IndexedDB is more durable on many mobile browsers than a single localStorage
+  // index entry. It is asynchronous, so it mirrors autosaves without blocking play.
+  vaultSet(CURRENT_SNAPSHOT_KEY, snapshot).catch(() => {});
+}
+
+function readLocalSnapshot() {
+  try {
+    const raw = localStorage.getItem(CURRENT_SNAPSHOT_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+function recoverSnapshotToLocalSave(snapshot) {
+  if (!snapshot || !snapshot.state) return "";
+  const state = snapshot.state;
+  const id = snapshot.id || saveIdFromName(state.characterName || currentCharacterName());
+  const name = state.characterName || snapshot.name || "Recovered Character";
+  const savedAt = state.savedAt || snapshot.savedAt || new Date().toISOString();
+  try {
+    localStorage.setItem(SAVE_PREFIX + id, JSON.stringify(state));
+    localStorage.setItem(LAST_ACTIVE_SAVE_KEY, id);
+    upsertSaveIndexItem(id, name, savedAt, Boolean(state.autoSaved));
+    return id;
+  } catch {
+    return "";
+  }
+}
+
+function requestIndexedDbAutoLoadFallback() {
+  if (indexedDbAutoLoadAttempted) return;
+  indexedDbAutoLoadAttempted = true;
+  vaultGet(CURRENT_SNAPSHOT_KEY).then(snapshot => {
+    if (!snapshot || !snapshot.state) return;
+    // Do not overwrite a character the player has already started editing while
+    // the asynchronous mobile-storage fallback was opening.
+    if (activeSaveId || autosaveDirty) return;
+    const recoveredId = recoverSnapshotToLocalSave(snapshot);
+    if (recoveredId) loadCharacterById(recoveredId, { auto: true, initial: true });
+  }).catch(() => {});
+}
 
 function setAutosaveStatus(message, state = "ready") {
   const status = document.getElementById("autosaveStatus");
@@ -13214,11 +13337,29 @@ function upsertSaveIndexItem(id, name, updatedAt, autoSaved = false) {
   setSaveIndex(index);
 }
 
+function stateHasAutosaveContent(state) {
+  if (!state) return false;
+  const textFields = ["characterName", "player", "faction", "homeworld", "career", "concept", "campaignNotes"];
+  if (textFields.some(field => String(state[field] || "").trim())) return true;
+  if ((state.traits || []).some(Boolean) || (state.talents || []).some(Boolean)) return true;
+  if ((state.weapons || []).some(Boolean) || (state.equipment || []).some(Boolean) || (state.conditions || []).some(Boolean)) return true;
+  if ((state.weaponNotes || []).some(Boolean) || (state.equipmentNotes || []).some(Boolean) || (state.conditionNotes || []).some(Boolean)) return true;
+  if (Object.values(state.skillNotes || {}).some(Boolean)) return true;
+  if (Object.values(state.focus || {}).some(Boolean)) return true;
+  if (Object.values(state.mainSkills || {}).some(value => String(value) && String(value) !== "7")) return true;
+  return false;
+}
+
 function autosaveCurrentCharacterNow() {
   if (autosaveSuppressed) return;
   autosaveDirty = false;
+  let state = null;
   try {
-    const state = collectState();
+    state = collectState();
+    if (!activeSaveId && !stateHasAutosaveContent(state)) {
+      setAutosaveStatus("Autosave ready", "ready");
+      return;
+    }
     state.characterName = state.characterName || currentCharacterName();
     state.savedAt = new Date().toISOString();
     state.autoSaved = true;
@@ -13227,6 +13368,7 @@ function autosaveCurrentCharacterNow() {
     localStorage.setItem(SAVE_PREFIX + activeSaveId, JSON.stringify(state));
     localStorage.setItem(LAST_ACTIVE_SAVE_KEY, activeSaveId);
     upsertSaveIndexItem(activeSaveId, name, state.savedAt, true);
+    writeSnapshotMirrors(activeSaveId, state);
     const slotSelect = document.getElementById("characterSlotSelect");
     const selectedBeforeRefresh = slotSelect?.value || "";
     const selectedAfterRefresh = selectedBeforeRefresh && selectedBeforeRefresh !== activeSaveId ? selectedBeforeRefresh : activeSaveId;
@@ -13234,6 +13376,7 @@ function autosaveCurrentCharacterNow() {
     setAutosaveStatus(`Autosaved ${formatAutosaveTime()}`, "saved");
   } catch (error) {
     console.error("Autosave failed", error);
+    if (state) writeSnapshotMirrors(activeSaveId || saveIdFromName(state.characterName || currentCharacterName()), state);
     setAutosaveStatus("Autosave paused - storage unavailable", "error");
   }
 }
@@ -13267,8 +13410,16 @@ function installAutosave() {
       if (shouldAutosave(event.target)) scheduleAutosave();
     });
   });
-  window.addEventListener("beforeunload", () => {
+  const flushForCloseOrBackground = () => {
+    // Mobile browsers may suspend a tab without firing beforeunload. Save now
+    // when the page is hidden, frozen, or about to be unloaded.
     flushPendingAutosave();
+    autosaveCurrentCharacterNow();
+  };
+  window.addEventListener("beforeunload", flushForCloseOrBackground);
+  window.addEventListener("pagehide", flushForCloseOrBackground);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") flushForCloseOrBackground();
   });
   setAutosaveStatus("Autosave ready", "ready");
 }
@@ -13367,6 +13518,7 @@ function saveCharacterToBrowser() {
   localStorage.setItem(LAST_ACTIVE_SAVE_KEY, id);
 
   upsertSaveIndexItem(id, name, state.savedAt, false);
+  writeSnapshotMirrors(id, state);
   activeSaveId = id;
   autosaveDirty = false;
   refreshSaveSlots(id);
@@ -13391,10 +13543,18 @@ function loadCharacterById(id, options = {}) {
   // button unnecessary.
   if (!initial && !autosaveSuppressed) flushPendingAutosave();
 
-  const state = readSavedCharacterState(id);
+  let state = readSavedCharacterState(id);
+  if (!state) {
+    const snapshot = readLocalSnapshot();
+    if (snapshot && snapshot.id === id && snapshot.state) {
+      recoverSnapshotToLocalSave(snapshot);
+      state = snapshot.state;
+    }
+  }
   if (!state) {
     if (notify || !auto) alert("Saved character not found in this browser.");
     refreshSaveSlots(id);
+    requestIndexedDbAutoLoadFallback();
     return false;
   }
 
@@ -13408,6 +13568,7 @@ function loadCharacterById(id, options = {}) {
     applyState(state);
     activeSaveId = id;
     localStorage.setItem(LAST_ACTIVE_SAVE_KEY, id);
+    writeSnapshotMirrors(id, state);
     autosaveDirty = false;
     refreshSaveSlots(id);
     const indexItem = getSaveIndex().find(item => item.id === id);
@@ -13425,15 +13586,31 @@ function loadCharacterById(id, options = {}) {
 }
 
 function autoLoadLastSavedCharacter() {
-  const index = getSaveIndex();
+  const localSnapshot = readLocalSnapshot();
+  let index = getSaveIndex();
+
+  if (!index.length && localSnapshot?.state) {
+    const recoveredId = recoverSnapshotToLocalSave(localSnapshot);
+    if (recoveredId) index = getSaveIndex();
+  }
+
   if (!index.length) {
     refreshSaveSlots();
     setAutosaveStatus("Autosave ready - no saved character found", "ready");
+    requestIndexedDbAutoLoadFallback();
     return false;
   }
 
   const exists = id => !!id && index.some(item => item.id === id) && !!localStorage.getItem(SAVE_PREFIX + id);
   let id = localStorage.getItem(LAST_ACTIVE_SAVE_KEY) || "";
+
+  if (!exists(id) && localSnapshot?.state) {
+    const recoveredId = recoverSnapshotToLocalSave(localSnapshot);
+    if (recoveredId) {
+      index = getSaveIndex();
+      id = recoveredId;
+    }
+  }
 
   if (!exists(id)) {
     const newest = [...index]
@@ -13446,10 +13623,13 @@ function autoLoadLastSavedCharacter() {
     localStorage.removeItem(LAST_ACTIVE_SAVE_KEY);
     refreshSaveSlots();
     setAutosaveStatus("Autosave ready - no saved character found", "ready");
+    requestIndexedDbAutoLoadFallback();
     return false;
   }
 
-  return loadCharacterById(id, { auto: true, initial: true });
+  const loaded = loadCharacterById(id, { auto: true, initial: true });
+  if (!loaded) requestIndexedDbAutoLoadFallback();
+  return loaded;
 }
 
 function runInitialAutoLoadSavedCharacter() {
@@ -13594,7 +13774,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v54-autoload-no-load-button-stable")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v59-persistent-autosave-stable")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -15475,7 +15655,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v54-autoload-no-load-button-stable";
+  document.documentElement.dataset.infinityBuild = "v59-persistent-autosave-stable";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
