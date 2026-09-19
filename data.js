@@ -5833,67 +5833,95 @@ window.INFINITY_DATA = {
   ],
   "equipment": [
     {
-      "type": "Equipment",
+      "type": "Visor",
       "name": "360* Visor",
       "brief": "A panoramic tactical visor that warns the wearer of threats from every direction.",
       "mechanic": "Cannot be surprised from the rear or blind side. Ignore flanking penalties based only on facing.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Other Item",
+      "subtype": "Visor",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Tool",
       "name": "Abseil Rope (100ft)",
       "brief": "A strong climbing rope used for rappelling, ascents, rescues, and vertical movement.",
       "mechanic": "Supports vertical movement up to 100 ft. Reduce Difficulty by 1 on Athletics checks for climbing, rappelling, or rescue lines.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "100"
+      "cost": "100",
+      "category": "Tool",
+      "subtype": "Climbing Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Drug",
       "name": "Adrenaline shots (in syringe)",
       "brief": "Emergency stimulant syringes used to keep a wounded operative moving.",
       "mechanic": "Single use. Restore 1d6 HP as an action. Does not remove Wounds or Conditions.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Contagion",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Software",
+      "type": "Suite",
       "name": "Agora Suite",
       "brief": "ALEPH social and Maya-facing coordination tools for managing public information flows.",
       "mechanic": "When used for social analysis or official network work, reduce Difficulty by 1 once per scene.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Tool",
+      "subtype": "Suite",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Countermeasure",
       "name": "Albedo",
       "brief": "A counter-surveillance field generator that disrupts advanced optics and targeting sensors.",
       "mechanic": "Sensor countermeasure. Enemies using multispectral visors or automated targeting increase attack Difficulty by 1 against the wearer until the wearer attacks.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "6000"
+      "cost": "6000",
+      "category": "Other Item",
+      "subtype": "Countermeasure",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Hacking Program",
       "name": "Anti Virus Programme (USB)",
       "brief": "A portable security program for clearing hostile code from personal firewall systems.",
       "mechanic": "5 uses. Make a Hacking or Tech test to remove a Firewall-related Condition or hostile program from one target.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Hacking Device",
+      "subtype": "Program",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Clothing",
+      "type": "Armour",
       "name": "Aoidoi Apparel",
       "brief": "High-status ALEPH-designed clothing that frames a wearer as elegant, cultured, and memorable.",
       "mechanic": "Gain +1d20 to one Lifestyle or Persuade test involving formal presentation once per session.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "2500"
+      "cost": "2500",
+      "category": "Armour",
+      "subtype": "Armoured Clothing Variant",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -5902,16 +5930,24 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 2d6; two-handed. Armour-Piercing: on an Effect, halve target armor for this attack.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "1500"
+      "cost": "1500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Software",
+      "type": "Data Storage",
       "name": "Arachne Blackbox",
       "brief": "A Nomad data-lock and dead-drop tool for work outside official channels.",
       "mechanic": "Gain +1d20 to a Hacking or Thievery test involving hidden data storage or off-grid exchange.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5500"
+      "cost": "5500",
+      "category": "Other Item",
+      "subtype": "Data Storage",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -5920,7 +5956,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 5. Damage is applied to Armour first; once depleted, the armour breaks for the scene.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -5929,7 +5969,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 5. Damage is applied to Armour first; once depleted, the vest breaks for the scene.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "500"
+      "cost": "500",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -5938,7 +5982,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 15. Damage is applied to Armour first; once depleted, the armour breaks for the scene.",
       "rarity": "Uncommon",
       "weight": "Heavy",
-      "cost": "4000"
+      "cost": "4000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -5947,7 +5995,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 5. Damage is applied to Armour first; once depleted, the armour breaks for the scene.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -5956,7 +6008,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 10. Damage is applied to Armour first; once depleted, the armour breaks for the scene.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "4000"
+      "cost": "4000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -5965,7 +6021,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 15. Reduce Difficulty by 1 on Brawn checks involving lifting, bracing, or powered movement while worn.",
       "rarity": "Rare",
       "weight": "Heavy",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -5974,7 +6034,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 10. Regenerate 1d6 Armour each round. A successful close-combat hit by the wearer adds +2d6 viral/poison damage.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -5983,7 +6047,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 15. Reduce Difficulty by 1 on Brawn or Resistance checks involving heavy combat movement while powered.",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -5992,7 +6060,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 15. Regenerate 1d6 Armour at the start of each combat round while the graft is active.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "100000"
+      "cost": "100000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6001,7 +6073,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 2d6; two-handed. EMT: on an Effect, target checks Tech or Psychology or suffers Stunned/Immobilized.",
       "rarity": "Common",
       "weight": "Medium",
-      "cost": "300"
+      "cost": "300",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6010,7 +6086,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 2d6; two-handed.",
       "rarity": "Common",
       "weight": "Medium",
-      "cost": "300"
+      "cost": "300",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6019,7 +6099,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 2d6; two-handed. Shock: damaged targets cannot take Reactions until their next turn.",
       "rarity": "Common",
       "weight": "",
-      "cost": ""
+      "cost": "",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6028,16 +6112,24 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 2d6; two-handed; Viral/Poison. On an Effect, target checks Resistance or suffers Poisoned.",
       "rarity": "Common",
       "weight": "Medium",
-      "cost": "300"
+      "cost": "300",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Container",
       "name": "Backpack",
       "brief": "A field pack built to carry supplies, ammunition, and survival gear.",
       "mechanic": "Carry up to 100 lb of extra gear without additional encumbrance penalties, subject to GM approval.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "100"
+      "cost": "100",
+      "category": "Other Item",
+      "subtype": "Container",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Credential",
@@ -6046,34 +6138,50 @@ window.INFINITY_DATA = {
       "mechanic": "Gain +1d20 to one Lifestyle or Persuade test in Nomad or Submondo settings.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "2500"
+      "cost": "2500",
+      "category": "Other Item",
+      "subtype": "Credential / Reputation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Area Control",
       "name": "Ball Bearings",
       "brief": "Small metal bearings scattered to trip, distract, or slow pursuers.",
       "mechanic": "Deploy in a small area. First creature crossing must pass D1 Acrobatics or fall Prone and end movement.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Other Item",
+      "subtype": "Area Control",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Tool",
       "name": "Binoculars",
       "brief": "Optical lenses used for long-distance observation and target spotting.",
       "mechanic": "Double visual spotting range in open terrain. Gain +1d20 to Observation checks for distant targets.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Tool",
+      "subtype": "Observation Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Visor",
       "name": "Biometric Visor",
       "brief": "A scanner visor tuned to body signatures, false identities, and impersonation tells.",
       "mechanic": "+1d20 to Observation checks to detect impersonation, disguised biometrics, or false identities within Close range.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Other Item",
+      "subtype": "Visor",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6082,16 +6190,24 @@ window.INFINITY_DATA = {
       "mechanic": "Range 15 / 45; Damage 4d6; two-handed. Scatter: on an Effect, one additional target in the same zone takes 1d6 damage.",
       "rarity": "Common",
       "weight": "Medium",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
+      "type": "Grenade",
       "name": "Bocce Grenade (BS)",
       "brief": "An ALEPH smart grenade profile intended for precise disruption in dense terrain.",
       "mechanic": "Thrown explosive. Damage 4d6; may bounce around cover with GM approval; +1d20 to hit a target in a cramped zone once per scene.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1500"
+      "cost": "1500",
+      "category": "Explosive Device",
+      "subtype": "Grenade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6100,7 +6216,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 4d6; two-handed; good against objects and cover; gains Piercing 1 on an Effect.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "1200"
+      "cost": "1200",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6109,52 +6229,76 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 2d6; two-handed. Breaker: applies damage to Firewall/BTS-style protection instead of normal armor when relevant.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "2500"
+      "cost": "2500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
-      "name": "Caffiene Tablets",
+      "type": "Drug",
+      "name": "Caffeine Tablets",
       "brief": "Fast-acting caffeine tablets used to maintain alertness during exhausting operations.",
       "mechanic": "10 doses. For 10 minutes, increase movement by one range band or double travel pace. After use, GM may call for a Resistance check against fatigue.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "200"
+      "cost": "200",
+      "category": "Contagion",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Area Control",
       "name": "Caltrops",
       "brief": "Sharp metal spikes scattered across the ground to deny movement and punish pursuit.",
       "mechanic": "Deploy in a small area. Crossing creatures take 1d6 damage and must pass D1 Acrobatics or stop moving.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Other Item",
+      "subtype": "Area Control",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Augmentation",
+      "type": "Modification",
       "name": "Casemod",
       "brief": "A small customisation suite for Lhosts, prosthetics, or visible gear casing.",
       "mechanic": "Use Tech to alter cosmetic profile; can support disguises or reduce suspicion in matching environments.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "800"
+      "cost": "800",
+      "category": "Other Item",
+      "subtype": "Modification",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
-      "name": "Chain Rifle(BS)",
+      "name": "Chain Rifle (BS)",
       "brief": "A battlefield firearm designed for trained Ballistics users; this variant is the Chain Rifle.",
       "mechanic": "Range 30 / 90; Damage 3d6; two-handed. Template attack; targets in the line/zone must defend or take damage.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Armour",
+      "type": "Tool",
       "name": "Chameleon Suit",
       "brief": "A camouflage suit that bends colour and texture to match nearby surroundings.",
       "mechanic": "While not sprinting or attacking, reduce Difficulty by 1 on Stealth checks to blend into surroundings.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Tool",
+      "subtype": "Camouflage Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Environment Suit",
@@ -6163,25 +6307,37 @@ window.INFINITY_DATA = {
       "mechanic": "Protects against vacuum exposure for short scenes; gain +1d20 to Extraplanetary emergency tasks.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "3500"
+      "cost": "3500",
+      "category": "Other Item",
+      "subtype": "Environment Suit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Hacking Program",
       "name": "CLAW-3 Sparrowfall",
       "brief": "An ALEPH tactical support package for high-mobility strike teams.",
       "mechanic": "Once per scene, assist an Athletics, Ballistics, or Observation test with +1d20 if linked to sensors.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "4500"
+      "cost": "4500",
+      "category": "Hacking Device",
+      "subtype": "Program — CLAW",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Climbing gear",
       "brief": "A climbing kit with spikes, pitons, belay devices, runners, and carabiners.",
       "mechanic": "Covers climbs up to 200 ft. Reduce Difficulty by 1 on Athletics checks for climbing or rigging.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "300"
+      "cost": "300",
+      "category": "Tool",
+      "subtype": "Climbing Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6190,7 +6346,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 120; Damage 3d6; two-handed; Silent; Minor Action to reload.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6199,7 +6359,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 120; Damage 3d6; Silent; Minor Action to reload. Double Action: on an Effect, double rolled damage.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6208,34 +6372,50 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 120; Damage 3d6; Silent; Minor Action to reload; Viral/Poison on an Effect.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "7000"
+      "cost": "7000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Kit",
       "name": "Cooking Equipment",
       "brief": "Compact field cookware for preparing meals and stretching rations during travel.",
       "mechanic": "During a rest, create 1d6 meal rations if ingredients are available.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "100"
+      "cost": "100",
+      "category": "Tool",
+      "subtype": "Field Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Training Gear",
+      "type": "Tool",
       "name": "Corregidor G-Time Harness",
       "brief": "Heavy-gravity conditioning and EVA support gear.",
       "mechanic": "Gain +1d20 to Athletics or Resistance tests involving zero-g, high-g, or cramped shipboard exertion.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Tool",
+      "subtype": "Training / Environment Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
+      "type": "Mine",
       "name": "CrazyKoala Mine (BS)",
       "brief": "A compact aggressive mine-drone used for area denial and close security traps.",
       "mechanic": "Deployable explosive. Damage 5d6; Disposable; Indiscriminate within Close range; obvious once active.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Explosive Device",
+      "subtype": "Mine",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6244,7 +6424,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 60; Damage 3d6; two-handed; Silent; Minor Action to reload.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6253,25 +6437,37 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 60; Damage 3d6; Silent; Minor Action to reload. Double Action: on an Effect, double rolled damage.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "4000"
+      "cost": "4000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Tool",
       "name": "Crowbar",
       "brief": "A simple prying tool for opening crates, panels, hatches, and stubborn doors.",
       "mechanic": "+1d20 to Brawn or Tech checks to pry open doors, crates, panels, or stuck mechanisms.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Tool",
+      "subtype": "Hand Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
+      "type": "Charge",
       "name": "D-Charge Unit",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the D-Charge Unit.",
       "mechanic": "Placed explosive. Range: touch/placed; Template: circle; Damage 6d6; Anti-Material.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Explosive Device",
+      "subtype": "Charge",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6280,79 +6476,115 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 2d6; one-handed; easily concealed.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "100"
+      "cost": "100",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
-      "name": "Dazer unit",
+      "type": "Area Control",
+      "name": "Dazer Unit",
       "brief": "A portable area-control device that floods nearby targets with disorienting pulses.",
       "mechanic": "Small template. Targets in the area must pass a Resistance or Discipline check or suffer Stunned until the end of their next turn.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Other Item",
+      "subtype": "Area Control Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Deactivator Kit",
       "brief": "A specialist toolkit for disabling traps, mines, and automated defences.",
       "mechanic": "Required for safe disarming of traps, mines, or automated weapons. Gain +1d20 to Tech or Hacking deactivation checks.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Tool",
+      "subtype": "Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Defence System",
       "name": "Deflector Shield",
       "brief": "A compact projected shield that absorbs incoming damage until overloaded.",
       "mechanic": "Shield Pool: 10. Incoming damage is applied to the shield first; the shield breaks when depleted.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Other Item",
+      "subtype": "Defence System",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
+      "type": "Mine",
       "name": "E/Mauler Deployable",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the E/Mauler Deployable.",
       "mechanic": "Deployable mine. Template: circle; Damage 3d6. E/M effect disables active shields or electronics on an Effect.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "4500"
+      "cost": "4500",
+      "category": "Explosive Device",
+      "subtype": "Mine",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Alien Tech",
+      "type": "Credential",
       "name": "EI Transponder",
       "brief": "A signal device tied to Combined Army command networks.",
       "mechanic": "Narrative credential. Grants access to EI-aligned channels but increases risk of detection by hostile Infowar actors.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "12000"
+      "cost": "12000",
+      "category": "Other Item",
+      "subtype": "Transponder / Credential",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Augmentation",
       "name": "Enhancement - Cube",
       "brief": "A Cube implant that preserves identity data and improves compatibility with advanced medical care.",
       "mechanic": "Implanted target reduces Medicine Difficulty by 1 for stabilisation, treatment, resurrection preparation, or Cube-related procedures.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "100000"
+      "cost": "100000",
+      "category": "Augmentation",
+      "subtype": "Cube",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Augmentation",
       "name": "Enhancement - Meta Chemistry",
       "brief": "A biological enhancement suite that temporarily unlocks unusual physical or mental traits.",
       "mechanic": "Once per long rest, choose one Trait from the Traits tab. Gain that Trait until the next long rest; the choice cannot be changed during the same rest cycle.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "100000"
+      "cost": "100000",
+      "category": "Augmentation",
+      "subtype": "Biotech Enhancement",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Hacking Program",
       "name": "Firewall Programme (USB)",
       "brief": "A portable firewall recovery program used to repair quantronic damage.",
       "mechanic": "5 uses. Restore 3d6 Firewall to one target with a successful Hacking or Tech test.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Hacking Device",
+      "subtype": "Program",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6361,52 +6593,78 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 5d6; Disposable; Incendiary; Anti-Materiel 1 on an Effect.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "6000"
+      "cost": "6000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Signal Gear",
       "name": "Flares",
       "brief": "Bright signal lights used for marking positions, calling attention, or illuminating darkness.",
       "mechanic": "Thrown or placed. Illuminates a small area, marks a location, or signals allies until burned out.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Other Item",
+      "subtype": "Signal Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
-      "name": "flying drone",
+      "type": "Remote",
+      "name": "Flying Drone",
       "brief": "A small aerial drone used for scouting, surveillance, and remote observation.",
       "mechanic": "Remote scout. Observation range 30–150 ft. Can relay visuals and work with repeaters or operators.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Remote",
+      "subtype": "Drone",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
-      "type": "Equipment",
+      "type": "Transport",
       "name": "Foldable bicycle",
       "brief": "A compact personal transport that folds down for easy carrying.",
       "mechanic": "Doubles overland or road movement pace when terrain allows. Cannot be used in tight combat spaces unless GM permits.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "300"
+      "cost": "300",
+      "category": "Other Item",
+      "subtype": "Personal Transport",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Forgery Tool",
       "brief": "A kit for creating or altering physical and electronic documents.",
       "mechanic": "+1d20 to Thievery, Tech, or Lifestyle checks to create or alter documents and credentials.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Tool",
+      "subtype": "Forgery Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
-      "name": "Fuebach (Gattling Gun) (BS)",
+      "name": "Feuerbach (BS)",
       "brief": "A battlefield firearm designed for trained Ballistics users; this variant is the Feuerbach.",
       "mechanic": "Range 20 / 80; Damage 6d6; two-handed; heavy weapon.",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Remote",
@@ -6415,7 +6673,12 @@ window.INFINITY_DATA = {
       "mechanic": "May perform simple unattended tasks; provides +1d20 to one Tech or Observation support test per scene.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "2500"
+      "cost": "2500",
+      "category": "Remote",
+      "subtype": "Personal Remote",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
       "type": "Geist",
@@ -6424,61 +6687,90 @@ window.INFINITY_DATA = {
       "mechanic": "Reduce Difficulty by 1 for one Education, Lifestyle, or Persuade information-management test per session.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Geist",
+      "subtype": "Geist",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
-      "type": "Explosive",
+      "type": "Grenade",
       "name": "Grenade - Eclipse",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the Grenade - Eclipse.",
       "mechanic": "Range 30 ft. Creates an Eclipse smoke zone that blocks normal vision and most advanced visual sensors.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "100/mag"
+      "cost": "100/mag",
+      "category": "Explosive Device",
+      "subtype": "Grenade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
+      "type": "Grenade",
       "name": "Grenade - Electric",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the Grenade - Electric.",
       "mechanic": "Range 30 ft; Damage 4d6. Affects Firewall/electronics. On an Effect, target must pass Brawn or Tech or suffer Stunned.",
       "rarity": "Rare",
       "weight": "Na",
-      "cost": "500/mag"
+      "cost": "500/mag",
+      "category": "Explosive Device",
+      "subtype": "Grenade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
+      "type": "Grenade",
       "name": "Grenade - Frag",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the Grenade - Frag.",
       "mechanic": "Range 30 ft; Damage 4d6; circular template. On an Effect, target must pass Brawn or be knocked Prone.",
       "rarity": "Uncommon",
       "weight": "Na",
-      "cost": "100/mag"
+      "cost": "100/mag",
+      "category": "Explosive Device",
+      "subtype": "Grenade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
+      "type": "Grenade",
       "name": "Grenade - Malware",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the Grenade - Malware.",
       "mechanic": "Range 30 ft; Damage 4d6 to Firewall. On an Effect, target suffers a hostile program or impaired systems at GM discretion.",
       "rarity": "Uncommon",
       "weight": "Na",
-      "cost": "100/mag"
+      "cost": "100/mag",
+      "category": "Explosive Device",
+      "subtype": "Grenade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
+      "type": "Grenade",
       "name": "Grenade - Smoke",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the Grenade - Smoke.",
       "mechanic": "Range 30 ft. Creates a circular zero-visibility smoke zone until dispersed.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "100/Mag"
+      "cost": "100/Mag",
+      "category": "Explosive Device",
+      "subtype": "Grenade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Tool",
       "name": "Grappling Hook",
       "brief": "A thrown or launched hook used for climbing, retrieval, and improvised anchoring.",
       "mechanic": "Range 30 ft when thrown or launched. Gain +1d20 to climbing, retrieval, or anchoring checks.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Tool",
+      "subtype": "Climbing Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6487,34 +6779,50 @@ window.INFINITY_DATA = {
       "mechanic": "Range 60 / 120; Damage 6d6; two-handed; Anti-Material on an Effect.",
       "rarity": "Uncommon",
       "weight": "Heavy",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Hacking Device",
       "name": "Hacking Device - Assault",
       "brief": "A heavy offensive hacking suite built for aggressive quantronic attacks.",
       "mechanic": "Range 50 ft; Damage 6d6 to Firewall. Requires Hacker talents. On an Effect, inflict a hostile program or system breach.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Hacking Device",
+      "subtype": "Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Hacking Device",
       "name": "Hacking Device - Killer",
       "brief": "A lethal hacking suite optimised to hunt hackers and destroy hostile programs.",
       "mechanic": "Range 50 ft; Damage 6d6 to Firewall. Requires Hacker talents. On an Effect, enemy hackers or active programs suffer shutdown or lockout.",
       "rarity": "Very Rare",
       "weight": "Medium",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Hacking Device",
+      "subtype": "Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Health Kit",
       "brief": "A compact medical kit for restoring vigor and treating battlefield injuries.",
       "mechanic": "5 uses. Restore 3d6 HP/Vigor with a Medicine test. Requires Medic, Doctor, or GM-approved medical training.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Tool",
+      "subtype": "Medical Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6523,7 +6831,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 3d6; two-handed.",
       "rarity": "Common",
       "weight": "Heavy",
-      "cost": "300"
+      "cost": "300",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6532,7 +6844,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range: large template; Damage 4d6; Fire; Anti-Material. Target checks Agility or suffers Burning.",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6541,34 +6857,50 @@ window.INFINITY_DATA = {
       "mechanic": "Range 50 / 250; Damage 4d6; two-handed. Burst Fire: gain +1d20 on attacks when braced or suppressing.",
       "rarity": "Rare",
       "weight": "Heavy",
-      "cost": "8500"
+      "cost": "8500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
-      "name": "Holo-Mask",
+      "type": "Tool",
+      "name": "Holomask",
       "brief": "A face-and-voice disguise mask used for false identities and infiltration.",
       "mechanic": "Reduce Difficulty by 1 on Persuade, Stealth, or Thievery checks involving disguise or impersonation.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Tool",
+      "subtype": "Disguise Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Holographic Device",
       "name": "Holo-Projector Level 1",
       "brief": "A basic holographic decoy system that creates false visual targets.",
       "mechanic": "Create two visual duplicates. Gain +1d20 to Stealth or impersonation checks until the illusion is exposed.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Other Item",
+      "subtype": "Holographic Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Holographic Device",
       "name": "Holo-Projector Level 2",
       "brief": "An advanced holographic decoy system that supports stronger misdirection.",
       "mechanic": "Create two convincing duplicates. Gain +2d20 to Stealth or impersonation checks until the illusion is exposed.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Other Item",
+      "subtype": "Holographic Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Remote",
@@ -6577,16 +6909,25 @@ window.INFINITY_DATA = {
       "mechanic": "May attempt a Tech repair as an assistant; grants +1d20 when maintaining armour, remotes, or heavy gear.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "6000"
+      "cost": "6000",
+      "category": "Remote",
+      "subtype": "Combat Remote",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
-      "type": "Software",
+      "type": "Kit",
       "name": "Li-Turing Kit",
       "brief": "A compact AI-analysis kit for detecting machine behaviour and simulated personalities.",
       "mechanic": "Gain +1d20 to Analysis or Psychology tests involving AIs, recreations, or quantronic identity questions.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "4000"
+      "cost": "4000",
+      "category": "Tool",
+      "subtype": "Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6595,7 +6936,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range: small template; Damage 4d6; Fire. Target checks Agility or suffers Burning.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6604,61 +6949,90 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 3d6; one-handed; Subtle; Piercing 1 on an Effect.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "900"
+      "cost": "900",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Beacon",
       "name": "Location Beacon",
       "brief": "A small tracker used to mark people, vehicles, equipment, or cargo.",
       "mechanic": "Attach to a person, object, or vehicle. The owner can track it within mission range unless blocked by jamming or shielding.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Other Item",
+      "subtype": "Beacon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
-      "name": "lockpick set",
+      "type": "Kit",
+      "name": "Lockpick Set",
       "brief": "A compact set of tools for bypassing mechanical and electronic locks.",
       "mechanic": "+1d20 to Thievery checks to open analog or electronic locks when time and access are available.",
       "rarity": "Comon",
       "weight": "Light",
-      "cost": "200"
+      "cost": "200",
+      "category": "Tool",
+      "subtype": "B&E Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Mechanic Tools",
       "brief": "A practical toolkit for repairing small machines, devices, and field equipment.",
       "mechanic": "+1d20 to Tech checks to repair, maintain, or jury-rig small to medium machinery.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "300"
+      "cost": "300",
+      "category": "Tool",
+      "subtype": "Repair Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
-      "name": "Medikit",
+      "type": "Kit",
+      "name": "MediKit",
       "brief": "A medical kit used to remove physical conditions and stabilise injured allies.",
       "mechanic": "5 uses. Required to remove physical Conditions affecting HP/Vigor. Requires Medicine training or a Doctor/Medic talent.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Tool",
+      "subtype": "Medical Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Software",
+      "type": "Resource",
       "name": "Meme-Virii (M-V)",
       "brief": "A controlled memetic package for information warfare and social manipulation plots.",
       "mechanic": "Use only with GM approval. On a successful Hacking or Persuade test, create a temporary rumour, distraction, or social vector.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Resource",
+      "subtype": "Meme-Virii",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
-      "type": "Equipment",
+      "type": "Consumable",
       "name": "Military Rations",
       "brief": "Nutrient-dense field meals designed to sustain soldiers during operations.",
       "mechanic": "One ration counts as one meal. A character normally needs two meals per day to avoid hunger or Exhaustion checks.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "10"
+      "cost": "10",
+      "category": "Other Item",
+      "subtype": "Survival Consumable",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6667,7 +7041,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 6d6; ignores armor. Requires Martial Arts talent. Target must pass Resistance or suffer a severe Wound.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "15000"
+      "cost": "15000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -6676,16 +7054,24 @@ window.INFINITY_DATA = {
       "mechanic": "Armour 10. Gain +1d20 to one Resistance test to keep fighting after being wounded per mission.",
       "rarity": "Rare",
       "weight": "Heavy",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Armour",
+      "subtype": "Combat Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Scanner",
       "name": "Morpho Scanner",
       "brief": "A rare scanner that studies a target and mimics part of their capability profile.",
       "mechanic": "Scan one target in the same zone. Temporarily copy one visible skill value or profile detail at GM discretion for the scene.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Other Item",
+      "subtype": "Scanner",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Credential",
@@ -6694,43 +7080,63 @@ window.INFINITY_DATA = {
       "mechanic": "May justify access to restricted ALEPH medical, Lhost, or proxy infrastructure during downtime.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "12000"
+      "cost": "12000",
+      "category": "Other Item",
+      "subtype": "Credential",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Visor",
       "name": "Multispectral Visor Level 1",
       "brief": "A visor that reveals hidden heat, optical, or camouflage signatures at short range.",
       "mechanic": "Ignore Invisible, camouflage, or low-light penalties within 30 ft.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Other Item",
+      "subtype": "Visor",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Visor",
       "name": "Multispectral Visor Level 2",
       "brief": "An upgraded visor that defeats stronger visual concealment at medium range.",
       "mechanic": "Ignore Invisible, camouflage, smoke, or low-light penalties within 60 ft.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Other Item",
+      "subtype": "Visor",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Visor",
       "name": "Multispectral Visor Level 3",
       "brief": "A military-grade visor that pierces advanced concealment at long range.",
       "mechanic": "Ignore Invisible, camouflage, smoke, optical disruption, or low-light penalties within 100 ft.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Other Item",
+      "subtype": "Visor",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Medical",
+      "type": "Augmentation",
       "name": "Nannie-Pump",
       "brief": "A support device for Lhost care, artificial biology, and extended recovery.",
       "mechanic": "When assisting Medicine on Lhosts or synthetic bodies, reduce Difficulty by 1 once per recovery scene.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "5500"
+      "cost": "5500",
+      "category": "Augmentation",
+      "subtype": "Implant",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Defence System",
@@ -6739,7 +7145,11 @@ window.INFINITY_DATA = {
       "mechanic": "Shield Pool: 4d6. Incoming damage is applied to the shield first. If damage exceeds the pool, the shield collapses and excess damage carries over.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Other Item",
+      "subtype": "Defence System",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6748,25 +7158,37 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 3d6; worn on hands; Vicious 1; may damage delicate gear on a Complication.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Tool",
       "name": "Net",
       "brief": "A weighted net used to restrain people, animals, or loose objects.",
       "mechanic": "Thrown to Close range. Target must pass Acrobatics or Brawn or become Restrained until freed.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Tool",
+      "subtype": "Restraint Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Visor",
       "name": "Night Vision Goggles",
       "brief": "Low-light goggles for movement, scouting, and combat in darkness.",
       "mechanic": "See in darkness up to 60 ft. Does not pierce smoke, camouflage, or magical/advanced optical disruption.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Other Item",
+      "subtype": "Visor",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6775,16 +7197,24 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 4d6; two-handed; Extended Reach; Vicious 1 on an Effect.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "1800"
+      "cost": "1800",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Mobility Gear",
       "name": "Parachute",
       "brief": "A controlled-descent pack for jumps from aircraft, rooftops, or orbital insertion craft.",
       "mechanic": "Allows safe descent from aircraft or high structures. Requires appropriate Athletics, Acrobatics, Pilot, or Combat Jump check in dangerous conditions.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Other Item",
+      "subtype": "Mobility Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Lhost",
@@ -6793,7 +7223,12 @@ window.INFINITY_DATA = {
       "mechanic": "Narrative body option. When selected as gear, choose one physical sub-skill to gain +1 starting allocation, max +2 total starting allocation.",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "18000"
+      "cost": "18000",
+      "category": "Lhost",
+      "subtype": "Lhost",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
     },
     {
       "type": "Weapon",
@@ -6802,7 +7237,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 10 / 30; Damage 1d6 ranged or 3d6 in close-quarters use; one-handed.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "200"
+      "cost": "200",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6811,7 +7250,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 4d6; two-handed; Plasma: on an Effect, apply +1 damage to Armour and Firewall-like protection.",
       "rarity": "Very Rare",
       "weight": "Medium",
-      "cost": "11000"
+      "cost": "11000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6820,25 +7263,37 @@ window.INFINITY_DATA = {
       "mechanic": "Range 40 / 120; Damage 4d6; two-handed. Dual-Phase: target must resist both physical and Firewall/BTS effects when relevant.",
       "rarity": "Elite",
       "weight": "Medium",
-      "cost": "14000"
+      "cost": "14000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Poison",
       "name": "Poison Vial",
       "brief": "A small vial of toxin used to coat blades, darts, or other delivery tools.",
       "mechanic": "Single use. Coat one weapon or delivery tool. Next successful hit forces a Resistance check or inflicts Poisoned.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "500"
+      "cost": "500",
+      "category": "Contagion",
+      "subtype": "Poison",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Augmentation Kit",
+      "type": "Kit",
       "name": "Praxis Bodymod Kit",
       "brief": "A radical body-mod support kit for experimental procedures and cosmetic redesign.",
       "mechanic": "With Medicine or Tech, supports body modification scenes; complications may create unusual side effects.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "7000"
+      "cost": "7000",
+      "category": "Tool",
+      "subtype": "Augmentation Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Lhost",
@@ -6847,7 +7302,12 @@ window.INFINITY_DATA = {
       "mechanic": "Narrative body option. Supports multi-body or remote-presence concepts with GM permission.",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "18000"
+      "cost": "18000",
+      "category": "Lhost",
+      "subtype": "i-Lhost",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
     },
     {
       "type": "Weapon",
@@ -6856,7 +7316,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat Damage 6d6, or Range 5 / 15 with Damage 1d6; two-handed.",
       "rarity": "Common",
       "weight": "Medium",
-      "cost": "350"
+      "cost": "350",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Clothing",
@@ -6865,25 +7329,38 @@ window.INFINITY_DATA = {
       "mechanic": "Gain +1d20 to one Lifestyle or Psychology test when maintaining a specific persona.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Other Item",
+      "subtype": "Clothing",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Remote",
       "name": "Remote drone",
       "brief": "A ground or compact remote drone used for scouting, relay work, and support.",
       "mechanic": "Remote scout/support. Observation range 30–150 ft. Can carry small tools, relay visuals, or extend operator reach.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Remote",
+      "subtype": "Drone",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
-      "type": "Gear",
+      "type": "Repeater",
       "name": "Repeater Device",
       "brief": "A signal relay that extends hacking range for friendly programs.",
       "mechanic": "Extends friendly hacking program range by 50 ft while active and connected.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Other Item",
+      "subtype": "Repeater",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6892,7 +7369,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 15 / 60; Damage 3d6; two-handed. Breaker: reduces Firewall/BTS-style protection when relevant.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "4000"
+      "cost": "4000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6901,34 +7382,51 @@ window.INFINITY_DATA = {
       "mechanic": "Range 15 / 60; Damage 3d6; two-handed. EMT: on an Effect, target checks Psychology or Tech or suffers Stunned/Immobilized.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
-      "name": "rifles - Sniper (BS)",
+      "name": "Sniper Rifle (BS)",
       "brief": "A long-range precision rifle used by marksmen to eliminate targets from extreme distance.",
       "mechanic": "Range 60 / 200: Damage 3d6. Range 200 / 400: Damage 6d6. Two-handed precision weapon.",
       "rarity": "Common",
       "weight": "Medium",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Mobility Gear",
       "name": "Rocket pack",
       "brief": "A compact jump pack for powered descents, short aerial bursts, and combat insertion.",
       "mechanic": "Requires Combat Jumper, Airborne, Pilot, or GM approval. Allows controlled aerial movement or combat insertion; failed checks may cause falling damage.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "7000"
+      "cost": "7000",
+      "category": "Other Item",
+      "subtype": "Mobility Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
-      "type": "Armour",
+      "type": "Drug",
       "name": "Second Skin",
       "brief": "A concealed protective layer integrated into clothing or synthetic tissue.",
       "mechanic": "Armour 5. Counts as light armour and can be concealed under normal clothing.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "7000"
+      "cost": "7000",
+      "category": "Contagion",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6937,43 +7435,64 @@ window.INFINITY_DATA = {
       "mechanic": "Range Close / 30; Damage 2d6; one-handed; on an Effect, the target also tests Discipline or suffers narrative control pressure.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "15000"
+      "cost": "15000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Bio-Tech",
+      "type": "Kit",
       "name": "Shasvastii Seed-Embryo Kit",
       "brief": "A narrative survival and infiltration kit for Shasvastii-style operations.",
       "mechanic": "GM approval required. Supports Survival or Stealth recovery after escape, concealment, or deep-cover scenes.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "13000"
+      "cost": "13000",
+      "category": "Tool",
+      "subtype": "Bio-Tech Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
-      "type": "Defence System",
+      "type": "Hacking Program",
       "name": "SHIELD-2 Khonsu",
       "brief": "A compact defensive suite for high-risk ALEPH operatives.",
       "mechanic": "Once per scene, reduce incoming damage by 2 after Armour is applied.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "6500"
+      "cost": "6500",
+      "category": "Hacking Device",
+      "subtype": "Program — SHIELD",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Defence System",
+      "type": "Hacking Program",
       "name": "SHIELD-3 AECM",
       "brief": "An advanced electronic countermeasure suite for battlefield survivability.",
       "mechanic": "Reduce Difficulty by 1 for one Resistance, Hacking defence, or anti-sensor test per scene.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "9500"
+      "cost": "9500",
+      "category": "Hacking Device",
+      "subtype": "Program — SHIELD",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Tool",
+      "type": "Kit",
       "name": "Shipboard Repair Kit",
       "brief": "A compact repair kit for hatches, life support, consoles, and small craft systems.",
       "mechanic": "Gain +1d20 to Tech repairs performed aboard ships or stations.",
       "rarity": "Common",
       "weight": "Medium",
-      "cost": "1200"
+      "cost": "1200",
+      "category": "Tool",
+      "subtype": "Repair Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6982,7 +7501,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 3d6; Shock. Target damaged by this weapon cannot take Reactions until its next turn.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -6991,25 +7514,37 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 2d6; two-handed. Shock: damaged targets must pass Resistance or lose Reactions until next turn.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Tool",
       "name": "Shovel",
       "brief": "A sturdy digging tool for fieldwork, trenches, and improvised survival tasks.",
       "mechanic": "+1d20 to Survival or Athletics checks involving digging, trenching, excavation, or field fortification.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Tool",
+      "subtype": "Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
+      "type": "Charge",
       "name": "Slammer Charge (CC)",
       "brief": "A disposable impact charge for sudden strikes, sabotage, and dirty fighting.",
       "mechanic": "Close Combat or thrown explosive. Damage 4d6; Disposable; Improvised; Unforgiving 1.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "700"
+      "cost": "700",
+      "category": "Explosive Device",
+      "subtype": "Charge",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7018,7 +7553,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 4d6; two-handed; may avoid one ally in the target zone when sensors are active.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "5500"
+      "cost": "5500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7027,7 +7566,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range Close / 30; Damage 3d6; one-handed; choose AP, Shock, or Stun profile before attacking.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "3500"
+      "cost": "3500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7036,25 +7579,37 @@ window.INFINITY_DATA = {
       "mechanic": "Range 50 / 180; Damage 5d6; two-handed; choose AP or Stun profile before attacking; Accurate at long range.",
       "rarity": "Very Rare",
       "weight": "Medium",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
-      "name": "smoke bomb (BS)",
+      "type": "Grenade",
+      "name": "Smoke Bomb (BS)",
       "brief": "Creates an area of cloud cover (circle template). Obscure vision with the exception of using Multi-spectral visor.",
       "mechanic": "Thrown to 30 ft. Creates a circular smoke zone that blocks normal vision until dispersed.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Explosive Device",
+      "subtype": "Grenade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Soldering Kit",
       "brief": "A compact kit for joining or repairing small metallic and electronic parts.",
       "mechanic": "+1d20 to Tech checks to repair or modify small metallic or electronic items.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Tool",
+      "subtype": "Repair Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7063,7 +7618,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour 10. Also grants +1d20 to one Medicine or Tech stabilisation test per mission.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Armour",
+      "subtype": "Specialist Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7072,7 +7631,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 3d6; two-handed; Reach advantage at GM discretion.",
       "rarity": "Common",
       "weight": "Medium",
-      "cost": "200"
+      "cost": "200",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7081,7 +7644,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 100; Damage 3d6; two-handed. High Rate of Fire: each Effect grants +1 Momentum on a successful attack.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "6500"
+      "cost": "6500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7090,7 +7657,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range: 15 ft template; Damage 6d6; two-handed. Target checks Acrobatics on an Effect or falls Prone.",
       "rarity": "Rare",
       "weight": "Heavy",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7099,25 +7670,37 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 1d6. Target must pass Brawn/Resistance or suffer Stunned.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "500"
+      "cost": "500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
-      "name": "sub-machine guns (BS)",
+      "name": "Submachine Gun (BS)",
       "brief": "A compact automatic weapon suited to close-range firefights and urban assaults.",
       "mechanic": "Range 15 / 30; Damage 3d6; two-handed. Suitable for close-range automatic fire.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Suture Kit",
       "brief": "A medical stitching kit used to close wounds and prevent further harm.",
       "mechanic": "Remove or heal 1d6 HP/Vigor damage with a Medicine test. Does not restore Firewall.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "100"
+      "cost": "100",
+      "category": "Tool",
+      "subtype": "Medical Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7126,34 +7709,50 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 2d6 one-handed or 4d6 two-handed. Requires Martial Arts talent for advanced use.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Bio-Tech",
+      "type": "Augmentation",
       "name": "Sygmaa Masking Bio-Graft",
       "brief": "A biological disguise aid suited to alien diplomacy and infiltration.",
       "mechanic": "Gain +1d20 to one Persuade or Stealth test involving impersonation or concealed identity.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "11000"
+      "cost": "11000",
+      "category": "Augmentation",
+      "subtype": "Biograft",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Explosive",
+      "type": "Grenade",
       "name": "Tattletale Grenade (BS)",
       "brief": "A sensor grenade that tags movement and exposes hidden targets.",
       "mechanic": "Thrown sensor device. Damage 2d6; on an Effect, mark one target or zone and reduce hidden-target penalties by 1 until scene end.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1200"
+      "cost": "1200",
+      "category": "Explosive Device",
+      "subtype": "Grenade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Visor",
       "name": "Thermo-Tactical Visor (MSV L2)",
       "brief": "An advanced sensor visor that reads heat signatures through smoke and camouflage.",
       "mechanic": "Functions as MSV Level 2. Ignore smoke, optical camouflage, and low-light penalties within 60 ft.",
       "rarity": "Elite",
       "weight": "Light",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Other Item",
+      "subtype": "Visor",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7162,25 +7761,38 @@ window.INFINITY_DATA = {
       "mechanic": "Thrown or melee weapon. Range 30 ft; Damage 2d6; one-handed.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "100"
+      "cost": "100",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Remote",
       "name": "TinBot (X)",
       "brief": "A small support bot configured to assist one chosen technical or tactical skill.",
       "mechanic": "Choose one skill when configured. Gain +1d20 to that skill when the TinBot can assist and is not disabled.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Remote",
+      "subtype": "Support Remote",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
-      "type": "Gear",
+      "type": "Utility",
       "name": "Torch Light",
       "brief": "A portable light source for darkness, search work, and emergency signalling.",
       "mechanic": "Illuminates a small area. Removes darkness penalties within the lighted zone.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Other Item",
+      "subtype": "Light",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Credential",
@@ -7189,34 +7801,50 @@ window.INFINITY_DATA = {
       "mechanic": "Gain +1d20 to Hacking or Lifestyle tests involving protected contracts or black-market records.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Other Item",
+      "subtype": "Credential",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Upgrade",
+      "type": "Hacking Upgrade",
       "name": "UPGRADE Flashsocket",
       "brief": "A Geist or comlog upgrade for rapid signal handling.",
       "mechanic": "Gain +1d20 to one Hacking initiative or quick-response test per scene.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Hacking Device",
+      "subtype": "Upgrade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Upgrade",
+      "type": "Hacking Upgrade",
       "name": "UPGRADE Idaho",
       "brief": "A hardened identity and credential-protection upgrade.",
       "mechanic": "Reduce Difficulty by 1 when resisting identity spoofing or tracking once per session.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "4000"
+      "cost": "4000",
+      "category": "Hacking Device",
+      "subtype": "Upgrade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Upgrade",
+      "type": "Hacking Upgrade",
       "name": "UPGRADE Null",
       "brief": "A stealth-focused upgrade that suppresses routine digital signatures.",
       "mechanic": "Increase Difficulty by 1 for casual attempts to track your comlog or Geist.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "4500"
+      "cost": "4500",
+      "category": "Hacking Device",
+      "subtype": "Upgrade",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Reference",
@@ -7225,7 +7853,11 @@ window.INFINITY_DATA = {
       "mechanic": "Gain +1d20 to one Education or Science test after at least 10 minutes of consultation.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1500"
+      "cost": "1500",
+      "category": "Other Item",
+      "subtype": "Reference",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7234,7 +7866,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 6d6; Viral/Poison. Requires Martial Arts talent; target checks Resistance or suffers Poisoned.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7243,7 +7879,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 2d6; two-handed; Viral/Poison. Target checks Resistance on an Effect or suffers Poisoned.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "3500"
+      "cost": "3500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7252,16 +7892,25 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 5d6; Concealed 1; Extended Reach; Viral or Poison on an Effect.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "6000"
+      "cost": "6000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Alien Tech",
+      "type": "Hacking Device",
       "name": "VoodooTech Relay",
       "brief": "A restricted alien-interface relay for Combined Army or EI-linked plots.",
       "mechanic": "Use only with GM approval. May substitute Hacking for Psychology or Discipline in alien-interface scenes.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "14000"
+      "cost": "14000",
+      "category": "Hacking Device",
+      "subtype": "Alien Relay",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
       "type": "Weapon",
@@ -7270,7 +7919,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 120; Damage 4d6; two-handed; on an Effect, add a Hacking or Discipline complication if appropriate.",
       "rarity": "Very Rare",
       "weight": "Medium",
-      "cost": "12000"
+      "cost": "12000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7279,7 +7932,11 @@ window.INFINITY_DATA = {
       "mechanic": "Provides no Armour. Once per scene, ignore one critical hit or armour-bypassing effect that would affect the wearer.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "150000"
+      "cost": "150000",
+      "category": "Armour",
+      "subtype": "Exotic Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7288,16 +7945,24 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 6d6; two-handed. Requires Martial Arts talent. Ignores mundane armor on an Effect.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "150000"
+      "cost": "150000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Visor",
       "name": "X Visor",
       "brief": "A range-finding visor that helps shooters compensate for awkward distances.",
       "mechanic": "Ignore short-range and long-range penalties for ranged attacks when the target is visible.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Other Item",
+      "subtype": "Visor",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Tool",
@@ -7306,16 +7971,24 @@ window.INFINITY_DATA = {
       "mechanic": "Reduce Difficulty by 1 on one Extraplanetary or Tech test in zero-g each scene.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "900"
+      "cost": "900",
+      "category": "Tool",
+      "subtype": "EVA Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Remote",
+      "type": "Tool",
       "name": "Zond Remote Kit",
       "brief": "A modular controller package for Nomad remote and drone operations.",
       "mechanic": "Gain +1d20 when using Tech, Observation, or Hacking to command a remote asset.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "6500"
+      "cost": "6500",
+      "category": "Tool",
+      "subtype": "Remote Controller",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7324,7 +7997,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 2d6; one-handed; concealed. If used from Hidden and the attack succeeds, the target must pass Brawn/Resistance or become Restrained.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "500"
+      "cost": "500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7333,7 +8010,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 3d6; one-handed; concealed. Breaker: applies against Firewall/BTS-style protection when relevant. On an Effect, target checks Resistance or suffers Poisoned.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7342,7 +8023,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 3d6; implanted and concealed. On an Effect, target checks Resistance or suffers Poisoned. Cannot be disarmed without disabling the implant.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "6000"
+      "cost": "6000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7351,7 +8036,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 2d6; one-handed; concealed. E/M: on an Effect, electronics or active shields are disabled until repaired; living targets check Resistance or suffer Stunned.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "7000"
+      "cost": "7000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7360,7 +8049,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 4d6; two-handed. Vicious: on an Effect, add +1d6 damage. Combined Army / Morat weapon.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "4500"
+      "cost": "4500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7369,7 +8062,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 3d6; two-handed. Improvised: complications may damage or break the weapon at GM discretion.",
       "rarity": "Common",
       "weight": "Medium",
-      "cost": "50"
+      "cost": "50",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7378,7 +8075,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 3d6; one-handed; concealed. Armour-Piercing: on an Effect, halve target Armour for this attack.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "700"
+      "cost": "700",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7387,7 +8088,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 4d6; two-handed. Armour-Piercing: on an Effect, ignore target Armour for this attack.",
       "rarity": "Very Rare",
       "weight": "Medium",
-      "cost": "7000"
+      "cost": "7000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7396,7 +8101,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 2d6; one-handed; concealed. Defensive: gain +1d20 on Close Combat checks made to defend or parry while equipped.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1200"
+      "cost": "1200",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7405,7 +8114,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 3d6; one-handed; concealed. On an Effect, target checks Resistance or suffers Poisoned.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "3500"
+      "cost": "3500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7414,7 +8127,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 1d6; two-handed; nonlethal. On a successful hit, target must pass Brawn/Resistance or become Restrained. Vehicles or large targets may require multiple hits at GM discretion.",
       "rarity": "Rare",
       "weight": "Heavy",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7423,7 +8140,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 15 / 45; Damage 2d6; one-handed. Burst Fire: gain +1d20 on attacks made within 15 ft.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1200"
+      "cost": "1200",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7432,7 +8153,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 3d6; two-handed. Expert fire-control: once per round, gain +1d20 on a Ballistics attack after Aiming or taking cover.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "4500"
+      "cost": "4500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7441,7 +8166,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 1d6 to Resolve; nonlethal. On an Effect, target checks Resistance or suffers Stunned; against visual sensors the target may also be treated as Blinded until its next turn.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7450,7 +8179,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 10 / 30; Damage 3d6; one-handed. On an Effect, add +1d6 damage.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "2500"
+      "cost": "2500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7459,7 +8192,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 60 / 300; Damage 6d6; heavy weapon. Burst Fire: gain +1d20 when braced or suppressing. AP/Shock mode halves Armour on an Effect; DA mode doubles rolled damage on an Effect.",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "12000"
+      "cost": "12000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7468,7 +8205,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 15 / 45; Damage 3d6; two-handed. Scatter: on an Effect, one additional target in the same zone takes 1d6 damage.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "1800"
+      "cost": "1800",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7477,7 +8218,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 60 / 240; Damage 6d6; two-handed; heavy weapon. Anti-Material: on an Effect, ignore target Armour. Explosive attacks affect a small area at GM discretion.",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7486,7 +8231,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 50 / 250; Damage 5d6; two-handed; heavy weapon. Burst Fire: gain +1d20 when braced or suppressing. Choose Normal, AP, or DA mode when firing; AP halves Armour on an Effect, DA doubles rolled damage on an Effect.",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "11000"
+      "cost": "11000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7495,7 +8244,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 30 / 90; Damage 3d6; two-handed. Choose Normal, AP, or DA mode when firing; AP halves Armour on an Effect, DA doubles rolled damage on an Effect.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "6500"
+      "cost": "6500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7504,7 +8257,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 60 / 200: Damage 4d6. Range 200 / 400: Damage 6d6. Two-handed precision weapon. Choose Normal, AP, DA, Needle, or SaboT mode; AP halves Armour on an Effect, DA doubles rolled damage on an Effect, SaboT ignores Armour on an Effect.",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7513,7 +8270,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range: 15 ft template; Damage 3d6; one-handed. Nanotech: ignore normal Armour and resolve the attack against Resistance / BTS-style protection. On an Effect, target suffers Poisoned or another biotech Condition at GM discretion.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "6500"
+      "cost": "6500",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7522,7 +8283,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 60 / 180; Damage 6d6; two-handed; 2 shots. Anti-Material: on an Effect, ignore target Armour.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7531,7 +8296,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 60 / 200: Damage 5d6. Range 200 / 400: Damage 7d6. Two-handed precision weapon. Dual-Phase: target must resist both physical and Firewall/BTS effects when relevant. Combined Army weapon.",
       "rarity": "Legendary",
       "weight": "Heavy",
-      "cost": "18000"
+      "cost": "18000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7540,7 +8309,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range: 15 ft template; Damage 3d6 to Resolve/Firewall. On an Effect, target checks Willpower or Hacking; on failure it suffers Controlled (Hack) until the Condition is removed. Combined Army / EI only.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "20000"
+      "cost": "20000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -7549,7 +8322,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 15 / 45; Damage 4d6; two-handed. Fire mode: on an Effect, target suffers Burned. AP mode: on an Effect, halve target Armour.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7558,7 +8335,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 5. Once per scene, reduce falling, collision, or crash damage by 2d6.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7567,7 +8348,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 10. Gain +1d20 on Brawn checks involving lifting, carrying, bracing, or powered industrial movement.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "6000"
+      "cost": "6000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7576,7 +8361,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 5. Against falling debris, impact, or head-injury hazards, reduce Difficulty by 1 on Resistance checks.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "100"
+      "cost": "100",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7585,7 +8374,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 5. Gain +1d20 to Stealth or Thievery checks made to conceal carried equipment beneath the coat.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "3500"
+      "cost": "3500",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7594,7 +8387,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 5. Gain +1d20 to Stealth or Thievery checks made to conceal a one-handed item.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7603,7 +8400,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 5. Reduce Difficulty by 1 on Resistance checks against environmental, chemical, or workplace hazards.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7612,7 +8413,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 15. Gain +1d20 on Brawn or Resistance checks involving heavy combat movement. Non-networked systems cannot be directly Hacked unless modified.",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7621,7 +8426,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 5. Once per scene, reduce impact, fall, or collision damage by 1d6.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "300"
+      "cost": "300",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7630,7 +8439,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 15. Tohaa only. At the end of a scene, restore this Armour to full unless it was destroyed by fire or a major biotech effect. Gain +1d20 on Resistance checks while bonded.",
       "rarity": "Legendary",
       "weight": "Heavy",
-      "cost": "15000"
+      "cost": "15000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7639,7 +8452,11 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 5. Tohaa only. At the end of a scene, restore this Armour to full unless it was destroyed by fire or a major biotech effect.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -7648,358 +8465,521 @@ window.INFINITY_DATA = {
       "mechanic": "Armour: 10. Tohaa only. At the end of a scene, restore this Armour to full unless it was destroyed by fire or a major biotech effect. Gain +1d20 on Resistance checks against fear, pain, or fatigue.",
       "rarity": "Legendary",
       "weight": "Medium",
-      "cost": "12000"
+      "cost": "12000",
+      "category": "Armour",
+      "subtype": "Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Aletheia Kit",
       "brief": "A discreet interrogation and behavioural-analysis kit that learns a subject's tells and inconsistencies.",
       "mechanic": "Gain +1d20 to Psychology checks used to detect lies, evasions, or emotional inconsistencies after at least a few minutes of interaction.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Tool",
+      "subtype": "Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Suite",
       "name": "Analysis Suite",
       "brief": "A dedicated software-and-display suite for correlating sensor feeds, records, and investigative data.",
       "mechanic": "Gain +1d20 to Analysis or Observation when reviewing recorded or live sensor data. For a stationary, fully equipped workspace, also reduce Difficulty by 1.",
       "rarity": "Uncommon",
       "weight": "Heavy",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Tool",
+      "subtype": "Suite",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Analytical Kit",
       "brief": "A portable field laboratory for scientific sampling, testing, and evidence analysis.",
       "mechanic": "Gain +1d20 to Science checks involving samples, experiments, or field analysis. Includes 3 uses of reagents.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1500"
+      "cost": "1500",
+      "category": "Tool",
+      "subtype": "Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "AutoMediKit",
       "brief": "An automated medical device able to stabilise and treat its wearer without constant assistance.",
       "mechanic": "Once per scene, make a Medicine check as an action to restore 2d6 HP/Vigor to the wearer or remove one physical Condition the kit can reasonably treat.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Tool",
+      "subtype": "Medical Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Cosmetics Kit",
       "brief": "A professional set of cosmetics, smart materials, and appearance tools for disguise or social presentation.",
       "mechanic": "Gain +1d20 to Persuade, Lifestyle, or Stealth checks where appearance, disguise, or presentation is directly relevant.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "500"
+      "cost": "500",
+      "category": "Tool",
+      "subtype": "Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Waldo",
       "name": "Engineering Waldo X",
       "brief": "A remotely controlled engineering manipulator used for precision repairs in dangerous or inaccessible spaces.",
       "mechanic": "Choose rating X from 1-3 when acquired. Gain +Xd20 to Tech checks for remote repair, fabrication, or manipulation. The bonus cannot exceed +3d20.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "7000"
+      "cost": "7000",
+      "category": "Tool",
+      "subtype": "Waldo",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Forensics Kit X",
       "brief": "A configurable forensic toolkit for crime-scene work, trace evidence, and technical reconstruction.",
       "mechanic": "Choose rating X from 1-3 when acquired. Gain +Xd20 to Analysis, Observation, or Science checks involving forensic evidence. The bonus cannot exceed +3d20.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "4500"
+      "cost": "4500",
+      "category": "Tool",
+      "subtype": "Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Handler's Kit",
       "brief": "A practical set of restraints, lures, signals, and care tools for trained animal handlers.",
       "mechanic": "Gain +1d20 to Animal Handling checks involving training, calming, restraining, or directing animals.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1000"
+      "cost": "1000",
+      "category": "Tool",
+      "subtype": "Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Facility",
       "name": "Laboratory (Corporate Lease)",
       "brief": "Access to a fully equipped corporate laboratory for advanced research and controlled technical work.",
       "mechanic": "Stationary facility. Reduce Difficulty by 1 on Science or Tech checks performed in the laboratory and gain +1d20 when sufficient time and resources are available.",
       "rarity": "Rare",
       "weight": "N/A",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Tool",
+      "subtype": "Facility",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
     },
     {
-      "type": "Gear",
+      "type": "Suite",
       "name": "Nav Suite (Region)",
       "brief": "A regional navigation suite combining maps, local route data, hazards, and predictive guidance.",
       "mechanic": "Choose one region when acquired. Gain +1d20 to Pilot or Survival checks for navigation, route planning, or travel within that region.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "500"
+      "cost": "500",
+      "category": "Tool",
+      "subtype": "Suite",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Suite",
       "name": "Negotiator's Suite",
       "brief": "A specialist social-analysis package for contracts, bargaining, and high-stakes negotiation.",
       "mechanic": "Gain +1d20 to Persuade or Lifestyle checks involving bargaining, contracts, formal negotiation, or social leverage.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Tool",
+      "subtype": "Suite",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Tool",
       "name": "Pheromone Dispenser",
       "brief": "A controlled chemical dispenser used to influence animals and compatible biological targets.",
       "mechanic": "Gain +1d20 to Animal Handling checks where scent or pheromones can affect the target. Against compatible sapient targets, the GM may allow the bonus on Persuade.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "2500"
+      "cost": "2500",
+      "category": "Tool",
+      "subtype": "Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Tool",
       "name": "Powered Multitool",
       "brief": "A compact powered toolset with interchangeable cutting, fastening, diagnostic, and repair heads.",
       "mechanic": "Gain +1d20 to Tech checks for routine field repairs, assembly, cutting, or mechanical adjustment.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "800"
+      "cost": "800",
+      "category": "Tool",
+      "subtype": "Hand Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Suite",
       "name": "Psychoanalysis Suite",
       "brief": "A diagnostic suite for identifying and treating trauma, behavioural conditions, and psychological stress.",
       "mechanic": "Gain +1d20 to Psychology checks for diagnosis, counselling, or treatment. When used during a rest, one successful check may remove one appropriate mental Condition.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "4500"
+      "cost": "4500",
+      "category": "Tool",
+      "subtype": "Suite",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Suite",
       "name": "Sensor Suite (Type)",
       "brief": "A configurable sensor package specialised for a chosen spectrum or target type.",
       "mechanic": "Choose a sensor type when acquired, such as thermal, chemical, motion, radiation, or electromagnetic. Gain +1d20 to Observation or Analysis checks using that sensor type.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1800"
+      "cost": "1800",
+      "category": "Tool",
+      "subtype": "Suite",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Facility",
       "name": "Surgical Bay",
       "brief": "A full medical facility equipped for invasive surgery, trauma care, and advanced procedures.",
       "mechanic": "Stationary facility. Reduce Difficulty by 1 on Medicine checks for surgery or serious treatment. Successful treatment restores +1d6 additional HP/Vigor.",
       "rarity": "Very Rare",
       "weight": "N/A",
-      "cost": "15000"
+      "cost": "15000",
+      "category": "Tool",
+      "subtype": "Facility",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
     },
     {
-      "type": "Gear",
+      "type": "Waldo",
       "name": "Surgical Waldo X",
       "brief": "A remotely controlled surgical manipulator for precision operations and hazardous medical work.",
       "mechanic": "Choose rating X from 1-3 when acquired. Gain +Xd20 to Medicine checks for surgery or remote treatment. The bonus cannot exceed +3d20.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "7000"
+      "cost": "7000",
+      "category": "Tool",
+      "subtype": "Waldo",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Kit",
       "name": "Survival Kit (Environment)",
       "brief": "A specialised kit tailored to a particular hazardous environment such as arctic, desert, jungle, aquatic, or vacuum-adjacent operations.",
       "mechanic": "Choose one environment when acquired. Gain +1d20 to Survival checks for navigation, shelter, food, water, or hazard management in that environment.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1200"
+      "cost": "1200",
+      "category": "Tool",
+      "subtype": "Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Habitat",
       "name": "Animal Habitat",
       "brief": "A portable or fixed enclosure designed to safely house, transport, and care for an animal.",
       "mechanic": "While an animal is housed here, gain +1d20 to Animal Handling checks to calm, care for, or manage it during downtime. Size and portability depend on the animal.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "1500"
+      "cost": "1500",
+      "category": "Other Item",
+      "subtype": "Habitat",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Sensor",
       "name": "Bioscanner",
       "brief": "A compact biological scanner for identifying injuries, toxins, disease, and living signatures.",
       "mechanic": "Gain +1d20 to Medicine or Science checks used to diagnose biological conditions, identify life signs, or analyse a living target at Close range.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "500"
+      "cost": "500",
+      "category": "Other Item",
+      "subtype": "Sensor",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Consumable",
       "name": "Bottled Water",
       "brief": "Clean sealed drinking water for field operations and emergency survival.",
       "mechanic": "One bottle supplies one character with safe drinking water for part of a day. May remove a dehydration-related penalty at GM discretion.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "10"
+      "cost": "10",
+      "category": "Other Item",
+      "subtype": "Consumable",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Mobility Gear",
       "name": "Climbing Plus",
       "brief": "Advanced climbing assistance using adhesive, magnetic, or powered systems.",
       "mechanic": "Reduce Difficulty by 1 on Athletics checks for climbing. In ordinary conditions, the user may climb surfaces that would normally require specialist equipment.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Other Item",
+      "subtype": "Mobility Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Comlog",
       "name": "Comlog",
       "brief": "A standard personal communications and data device used throughout the Human Sphere.",
       "mechanic": "Provides secure voice/data communication, identity credentials, Maya access, and basic local network functions when a connection is available.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "200"
+      "cost": "200",
+      "category": "Other Item",
+      "subtype": "Comlog",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Comlog",
       "name": "Neural Comlog",
       "brief": "A neural-linked comlog that responds directly to thought and sensory input.",
       "mechanic": "Functions as a Comlog. Gain +1d20 to Hacking or Analysis checks where the neural interface materially improves speed or control. Neural attacks can directly affect the user.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Other Item",
+      "subtype": "Comlog",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Countermeasure",
       "name": "ECM X",
       "brief": "Electronic countermeasures that interfere with guided weapons, remote control, sensors, and hostile targeting.",
       "mechanic": "Choose rating X from 1-3 when acquired. Hostile guided, remote, or sensor-assisted attacks against the protected user increase Difficulty by X, to a maximum increase of 3.",
       "rarity": "Very Rare",
       "weight": "Medium",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Other Item",
+      "subtype": "Countermeasure",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Credential",
       "name": "Fake ID X",
       "brief": "A fabricated identity package with supporting credentials, records, and digital history.",
       "mechanic": "Choose rating X from 1-3 when acquired. Gain +Xd20 to Lifestyle, Persuade, or Thievery checks where the false identity is being verified. The bonus cannot exceed +3d20.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Other Item",
+      "subtype": "Credential",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Utility",
       "name": "Lantern",
       "brief": "A bright portable area light for camps, tunnels, emergency work, and search operations.",
       "mechanic": "Illuminates a medium area around the user and removes ordinary darkness penalties within that area.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Other Item",
+      "subtype": "Light",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Utility",
       "name": "Micro-Torch",
       "brief": "A tiny directional light built into weapons, tools, clothing, or handheld devices.",
       "mechanic": "Illuminates one nearby target or a narrow area out to 30 ft, removing ordinary darkness penalties for tasks focused on that area.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "50"
+      "cost": "50",
+      "category": "Other Item",
+      "subtype": "Light",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Countermeasure",
       "name": "Nullifier",
       "brief": "A Tohaa anti-quantronic device that suppresses nearby network activity and hostile infowar.",
       "mechanic": "Tohaa only. While active, Hacking checks made within 15 ft increase Difficulty by 1 and repeaters cannot extend Hacking range through the affected area.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "12000"
+      "cost": "12000",
+      "category": "Other Item",
+      "subtype": "Countermeasure",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Camouflage",
       "name": "Optical Disruption Device",
       "brief": "A personal field generator that distorts the user's outline and confuses visual targeting.",
       "mechanic": "Ranged attacks against the wearer increase Difficulty by 1 while the device is active. The benefit ends until the wearer's next turn after they make an attack.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Other Item",
+      "subtype": "Camouflage",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Recorder",
       "name": "Recorder",
       "brief": "A compact audio, video, and holographic recorder with motion and sound detection.",
       "mechanic": "Can automatically record nearby movement or sound. Gain +1d20 to Analysis or Observation checks when reviewing footage captured by the Recorder.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "800"
+      "cost": "800",
+      "category": "Other Item",
+      "subtype": "Recorder",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Respirator",
       "name": "Respirator X",
       "brief": "A filter mask designed to protect against smoke, dust, toxic aerosols, and contaminated atmospheres.",
       "mechanic": "Choose rating X from 1-3 when acquired. Reduce Difficulty by X on Resistance checks against airborne toxins, smoke, gas, or contaminated air.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "500"
+      "cost": "500",
+      "category": "Other Item",
+      "subtype": "Respirator",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Restraint",
       "name": "SecurCuffs",
       "brief": "Networked restraint cuffs used by police, military, and private security.",
       "mechanic": "A restrained target cannot freely use both hands. Escaping requires a successful Brawn or Thievery check; the GM sets Difficulty based on circumstances. Authenticated users can track the cuffs locally.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "600"
+      "cost": "600",
+      "category": "Other Item",
+      "subtype": "Restraint",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Repeater",
       "name": "Stealth Repeater",
       "brief": "A concealed repeater that extends hacking reach without advertising its location.",
       "mechanic": "Extends friendly Hacking program range by 50 ft while active. Observation or Hacking checks to detect the repeater increase Difficulty by 2.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "4000"
+      "cost": "4000",
+      "category": "Other Item",
+      "subtype": "Repeater",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Survival Gear",
       "name": "Survival Pod",
       "brief": "A compact emergency shelter for hostile climates, stranded crews, and wilderness survival.",
       "mechanic": "Provides one character with protected shelter, basic life support, and a safe place to rest in most environmental hazards for one scene or rest period.",
       "rarity": "Uncommon",
       "weight": "Medium",
-      "cost": "3500"
+      "cost": "3500",
+      "category": "Other Item",
+      "subtype": "Survival Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Tohaa Support",
       "name": "SymbioMate",
       "brief": "A disposable Tohaa symbiotic organism bred to absorb a sudden burst of harm for its bonded user.",
       "mechanic": "Tohaa only. Once per mission, when the wearer would take damage or gain a physical Condition, destroy the SymbioMate to negate that damage or Condition.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Other Item",
+      "subtype": "Tohaa Support",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
-      "type": "Equipment",
+      "type": "Camouflage",
       "name": "Thermo-Optical Camouflage",
       "brief": "An advanced camouflage system that bends visible and thermal signatures around the wearer.",
       "mechanic": "While the wearer is not sprinting or attacking, reduce Difficulty by 2 on Stealth checks to avoid visual or thermal detection. The bonus ends until the wearer's next turn after attacking.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Other Item",
+      "subtype": "Camouflage",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Environment Suit",
       "name": "Vac Suit",
       "brief": "A sealed life-support suit for vacuum, zero-pressure environments, and other hostile atmospheres.",
       "mechanic": "Protects the wearer from vacuum exposure and ordinary atmospheric hazards. Carries 3 Oxygen Loads and emergency sealant. Gain +1d20 to Resistance checks against cold, pressure, or decompression hazards.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "7000"
+      "cost": "7000",
+      "category": "Other Item",
+      "subtype": "Environment Suit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Equipment",
+      "type": "Environmental Aid",
       "name": "Varuna Lungs",
       "brief": "A nanobot aerosol that temporarily coats the lungs and enables underwater respiration.",
       "mechanic": "Four applications. One application allows the user to breathe underwater for one scene and grants +1d20 on Resistance checks against inhaled toxins or gases during that scene.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "1200"
+      "cost": "1200",
+      "category": "Other Item",
+      "subtype": "Environmental Aid",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8008,7 +8988,11 @@ window.INFINITY_DATA = {
       "mechanic": "Ariadna. When linked to a compatible Antipode Control Cranial Implant, gain +2d20 to Animal Handling checks made to command or restrain the linked Antipode.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "7000"
+      "cost": "7000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8017,7 +9001,11 @@ window.INFINITY_DATA = {
       "mechanic": "Ariadna / Antipode only. Allows the implanted Antipode to receive commands from an Antipode Control Device. The handler may assist the creature's Discipline checks when connected.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8026,7 +9014,11 @@ window.INFINITY_DATA = {
       "mechanic": "Gain +1d20 to Observation checks involving visual detail, reading augmented overlays, or recording what the user sees.",
       "rarity": "Common",
       "weight": "Light",
-      "cost": "2500"
+      "cost": "2500",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8035,7 +9027,11 @@ window.INFINITY_DATA = {
       "mechanic": "Choose one Attribute when installed. Increase that Attribute by +1, up to the sheet maximum. The augmentation is biological and cannot be switched without surgery.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8044,7 +9040,11 @@ window.INFINITY_DATA = {
       "mechanic": "Choose one Attribute when installed. Increase that Attribute by +1, up to the sheet maximum. Cybernetic systems may be affected by E/M or Hacking where appropriate.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8053,7 +9053,11 @@ window.INFINITY_DATA = {
       "mechanic": "Choose one Attribute when installed. Increase that Attribute by +1, up to the sheet maximum. The augmentation is difficult to detect without medical examination.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "12000"
+      "cost": "12000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8062,7 +9066,11 @@ window.INFINITY_DATA = {
       "mechanic": "Restores full normal use of one missing or damaged limb. Gain +1d20 to Medicine checks made to treat or maintain the replacement.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "4500"
+      "cost": "4500",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8071,7 +9079,11 @@ window.INFINITY_DATA = {
       "mechanic": "Restores full normal use of one missing or damaged limb. Gain +1d20 on Brawn checks where the replacement's mechanical strength is directly relevant.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "4000"
+      "cost": "4000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8080,7 +9092,11 @@ window.INFINITY_DATA = {
       "mechanic": "Restores full normal use of one missing or damaged limb. Reduce Difficulty by 1 on Medicine checks made to treat the limb or diagnose complications involving it.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8089,7 +9105,11 @@ window.INFINITY_DATA = {
       "mechanic": "Reduce Difficulty by 1 on Resistance checks against disease, poison, toxins, and biological contamination.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8098,7 +9118,11 @@ window.INFINITY_DATA = {
       "mechanic": "Choose rating X from 1-3 when installed. Gain +Xd20 to Persuade, Lifestyle, or Stealth checks involving appearance, disguise, or social presentation. The bonus cannot exceed +3d20.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "2000"
+      "cost": "2000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8107,7 +9131,11 @@ window.INFINITY_DATA = {
       "mechanic": "Preserves identity data as a standard Cube. Reduce Difficulty by 1 on Medicine or Tech checks involving Cube recovery, transfer, resurrection preparation, or identity verification, and gain +1d20 on the same check.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "150000"
+      "cost": "150000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8116,7 +9144,11 @@ window.INFINITY_DATA = {
       "mechanic": "Gain +1d20 to Hacking or Tech checks involving direct data transfer, backup, upload, or download. Routine transfers take a fraction of the normal time.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "3500"
+      "cost": "3500",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8125,7 +9157,11 @@ window.INFINITY_DATA = {
       "mechanic": "Reduce Difficulty by 1 on Athletics checks for climbing. The user may climb many sheer surfaces without ordinary climbing gear.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8134,7 +9170,11 @@ window.INFINITY_DATA = {
       "mechanic": "Gain +1d20 to Tech or Hacking checks when physically touching the device being operated, repaired, or accessed.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "4500"
+      "cost": "4500",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8143,7 +9183,11 @@ window.INFINITY_DATA = {
       "mechanic": "Choose rating X from 1-3 when installed. The pocket can hide one small item; checks to discover it increase Difficulty by X.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "3000"
+      "cost": "3000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8152,7 +9196,11 @@ window.INFINITY_DATA = {
       "mechanic": "Allows a compatible limb or attachment to be swapped during downtime without full surgery. Gain +1d20 to Tech checks made to fit, calibrate, or repair attached limbs.",
       "rarity": "Uncommon",
       "weight": "Light",
-      "cost": "3500"
+      "cost": "3500",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8161,7 +9209,11 @@ window.INFINITY_DATA = {
       "mechanic": "Gain +1d20 to Hacking checks made through a connected device. Neural attacks and hostile programs can directly affect the user's Resolve as well as Firewall when appropriate.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8170,7 +9222,11 @@ window.INFINITY_DATA = {
       "mechanic": "Once per scene, reroll one failed Resistance, Discipline, or Hacking check made to resist Stunned, Controlled (Hack), or another neural-disruption effect.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5500"
+      "cost": "5500",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8179,7 +9235,11 @@ window.INFINITY_DATA = {
       "mechanic": "Reduce Difficulty by 1 on Resistance checks against pain, injury shock, or physical stress. Once per scene, ignore the penalties from one physical Condition until the end of the turn.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8188,7 +9248,11 @@ window.INFINITY_DATA = {
       "mechanic": "Once per scene as a Minor Action, restore 1d6 HP/Vigor. On a maximum roll, also remove one appropriate minor physical Condition. This augmentation is incompatible with most other full-body augmentations at GM discretion.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8197,7 +9261,11 @@ window.INFINITY_DATA = {
       "mechanic": "Gain +1d20 to Pilot or Hacking checks when controlling a remote or vehicle through VR. Ignore ordinary penalties caused only by remote operation.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "8000"
+      "cost": "8000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8206,7 +9274,11 @@ window.INFINITY_DATA = {
       "mechanic": "Gain +1d20 to Observation checks against ambush, Hidden enemies, or immediate danger. The user cannot be Surprised from an ordinary unseen approach unless incapacitated or sensor-blinded.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8215,7 +9287,11 @@ window.INFINITY_DATA = {
       "mechanic": "Reduce Difficulty by 1 on Athletics checks for jumping. Double normal jump distance and height when sufficient space is available.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "6000"
+      "cost": "6000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8224,7 +9300,11 @@ window.INFINITY_DATA = {
       "mechanic": "Choose one compatible Equipment or Gear item when installed. It is concealed, cannot be casually disarmed, and may be operated hands-free when appropriate. The implanted item's normal rules still apply.",
       "rarity": "Rare",
       "weight": "Light",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -8233,61 +9313,89 @@ window.INFINITY_DATA = {
       "mechanic": "Choose one compatible one-handed Weapon when installed. It is concealed, cannot be casually disarmed, and may be drawn as part of the attack. The implanted weapon uses its normal damage and rules.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "9000"
+      "cost": "9000",
+      "category": "Augmentation",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Hacking Device",
       "name": "Hacking Device - Defensive",
       "brief": "A defensive hacking suite built to protect users, allies, and nearby networks from hostile intrusion.",
       "mechanic": "Hostile Hacking attacks against the user increase Difficulty by 1. Once per round, gain +1d20 on a Hacking check made to defend, purge a hostile program, or remove a Firewall-related Condition.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "5000"
+      "cost": "5000",
+      "category": "Hacking Device",
+      "subtype": "Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Hacking Device",
       "name": "Hacking Device - Standard",
       "brief": "A general-purpose hacking suite balancing offensive control, defensive tools, and support programs.",
       "mechanic": "Range 50 ft; Damage 4d6 to Firewall. Requires Hacking training. On an Effect, inflict a suitable system breach, Targetted (Hack), or other program effect at GM discretion.",
       "rarity": "Rare",
       "weight": "Medium",
-      "cost": "4500"
+      "cost": "4500",
+      "category": "Hacking Device",
+      "subtype": "Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Hacking Device",
       "name": "Hacking Device - Plus",
       "brief": "An advanced high-bandwidth hacking suite with expanded offensive, defensive, and support capability.",
       "mechanic": "Range 75 ft; Damage 5d6 to Firewall. Gain +1d20 on Hacking checks using the device. On an Effect, inflict a hostile program, Targetted (Hack), or other system breach.",
       "rarity": "Very Rare",
       "weight": "Medium",
-      "cost": "12000"
+      "cost": "12000",
+      "category": "Hacking Device",
+      "subtype": "Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Hacking Device",
       "name": "Hacking Device - White",
       "brief": "A high-end guardian hacking suite specialised for anti-hacker defence and counter-intrusion.",
       "mechanic": "Hostile Hacking attacks against the user and one protected ally within 15 ft increase Difficulty by 1. Gain +1d20 on Hacking checks to defend, counter-hack, or remove hostile programs.",
       "rarity": "Very Rare",
       "weight": "Medium",
-      "cost": "10000"
+      "cost": "10000",
+      "category": "Hacking Device",
+      "subtype": "Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Hacking Device",
       "name": "Hacking Device - Assault (EI)",
       "brief": "An EI-built assault hacking device using Combined Army architecture and aggressive control programs.",
       "mechanic": "Range 75 ft; Damage 7d6 to Firewall. On an Effect, inflict Controlled (Hack), Immobilized, or another severe system breach at GM discretion. Combined Army / EI only.",
       "rarity": "Legendary",
       "weight": "Medium",
-      "cost": "18000"
+      "cost": "18000",
+      "category": "Hacking Device",
+      "subtype": "Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
-      "type": "Gear",
+      "type": "Hacking Device",
       "name": "Hacking Device - EI",
       "brief": "A sophisticated Evolved Intelligence hacking suite with balanced access to offensive, defensive, and utility programs.",
       "mechanic": "Range 75 ft; Damage 6d6 to Firewall. Gain +1d20 on Hacking checks using the device. On an Effect, choose a hostile program, system breach, or support effect appropriate to the action. Combined Army / EI only.",
       "rarity": "Legendary",
       "weight": "Medium",
-      "cost": "20000"
+      "cost": "20000",
+      "category": "Hacking Device",
+      "subtype": "Device",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -8296,7 +9404,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 5d6; Armour-Piercing; Parry. On an Effect, ignore Armour for this attack and add +1d6 damage.",
       "rarity": "Legendary",
       "weight": "Medium",
-      "cost": "Special"
+      "cost": "Special",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -8305,7 +9417,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 5 / 20; Damage 5d6; two-handed. Choose Fire Shells or T2 Shells when firing. Fire Shells inflict Burning on an Effect; T2 Shells are Armour-Piercing and Anti-Material on an Effect.",
       "rarity": "Legendary",
       "weight": "Medium",
-      "cost": "Special"
+      "cost": "Special",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -8314,7 +9430,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 6d6; two-handed; Non-Hackable. Armour-Piercing: on an Effect, ignore Armour for this attack. Vicious: add +1d6 damage on an Effect.",
       "rarity": "Legendary",
       "weight": "Heavy",
-      "cost": "Special"
+      "cost": "Special",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -8323,7 +9443,11 @@ window.INFINITY_DATA = {
       "mechanic": "Range 10 / 30; Damage 3d6; one-handed; Silent. Stun Mode: Damage 1d6; target checks Resistance or suffers Stunned; this mode is Nonlethal.",
       "rarity": "Very Rare",
       "weight": "Light",
-      "cost": "Special"
+      "cost": "Special",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -8332,7 +9456,11 @@ window.INFINITY_DATA = {
       "mechanic": "Close Combat weapon. Damage 4d6; one-handed; concealed; may be thrown to 10 ft. Armour-Piercing: on an Effect, ignore Armour for this attack. Gain +1d6 damage when striking from Hidden.",
       "rarity": "Legendary",
       "weight": "Light",
-      "cost": "Special"
+      "cost": "Special",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     }
   ],
   "conditions": [
@@ -9805,7 +10933,7 @@ window.INFINITY_DATA = {
       "Boarding Shotgun (BS)",
       "Breaker Bar (CC)",
       "Breaker Rifle (BS)",
-      "Chain Rifle(BS)",
+      "Chain Rifle (BS)",
       "Combi Rifle (BS)",
       "Compound Bow (BS)",
       "Compound Bow - Double Action (BS)",
@@ -9814,9 +10942,9 @@ window.INFINITY_DATA = {
       "Crossbow - Double Action (BS)",
       "Custom Shotgun \"Readiness\" (BS)",
       "Dagger (CC)",
+      "Feuerbach (BS)",
       "Flammenspeer (BS)",
       "Flash Pulse (BS)",
-      "Fuebach (Gattling Gun) (BS)",
       "Garrotte (CC)",
       "Grazeblade (CC)",
       "Grenade Launcher (BS)",
@@ -9848,7 +10976,6 @@ window.INFINITY_DATA = {
       "Pump Action Shotgun (CC / BS)",
       "Rifle - Breaker (BS)",
       "Rifle - EMT (BS)",
-      "rifles - Sniper (BS)",
       "Sepsitor (BS)",
       "Sepsitor Pistol (BS)",
       "Shock CC Weapon (CC)",
@@ -9857,12 +10984,13 @@ window.INFINITY_DATA = {
       "Smart Grenade Launcher (BS)",
       "Smart MULTI Pistol (BS)",
       "Smart MULTI Sniper Rifle (BS)",
+      "Sniper Rifle (BS)",
       "Spear (CC)",
       "Spiked Knuckles (CC)",
       "Spitfire (BS)",
       "Spitfire Rifle (BS)",
       "Stun Baton (CC)",
-      "sub-machine guns (BS)",
+      "Submachine Gun (BS)",
       "Sword (CC)",
       "Teseum Chopper (CC)",
       "Teseum Claymore (CC)",
@@ -9929,7 +11057,7 @@ window.INFINITY_DATA = {
       "Bioscanner",
       "Bocce Grenade (BS)",
       "Bottled Water",
-      "Caffiene Tablets",
+      "Caffeine Tablets",
       "Caltrops",
       "Casemod",
       "Chameleon Suit",
@@ -9946,7 +11074,7 @@ window.INFINITY_DATA = {
       "Crowbar",
       "Cube 2.0",
       "D-Charge Unit",
-      "Dazer unit",
+      "Dazer Unit",
       "Deactivator Kit",
       "Deflector Shield",
       "E/Mauler Deployable",
@@ -9959,7 +11087,7 @@ window.INFINITY_DATA = {
       "Fast Download Port",
       "Firewall Programme (USB)",
       "Flares",
-      "flying drone",
+      "Flying Drone",
       "Foldable bicycle",
       "Forensics Kit X",
       "Forgery Tool",
@@ -9982,22 +11110,21 @@ window.INFINITY_DATA = {
       "Hacking Device - White",
       "Handler's Kit",
       "Health Kit",
-      "Holo-Mask",
       "Holo-Projector Level 1",
       "Holo-Projector Level 2",
+      "Holomask",
       "Implanted Equipment",
       "Implanted Weapon",
       "Inlaid Palm Circuitry",
       "Internal Pocket X",
       "Karkata Remote",
-      "Laboratory (Corporate Lease)",
       "Lantern",
       "Li-Turing Kit",
       "Limb Socket",
       "Location Beacon",
-      "lockpick set",
+      "Lockpick Set",
       "Mechanic Tools",
-      "Medikit",
+      "MediKit",
       "Meme-Virii (M-V)",
       "Micro-Torch",
       "Military Rations",
@@ -10020,12 +11147,10 @@ window.INFINITY_DATA = {
       "Optical Disruption Device",
       "Pain Filters",
       "Parachute",
-      "Paragon Lhost",
       "Pheromone Dispenser",
       "Poison Vial",
       "Powered Multitool",
       "Praxis Bodymod Kit",
-      "Proxy Mk.0-5 i-Lhost",
       "Psychoanalysis Suite",
       "Recorder",
       "Recreation Garb",
@@ -10045,12 +11170,11 @@ window.INFINITY_DATA = {
       "Shovel",
       "Sixth Sense",
       "Slammer Charge (CC)",
-      "smoke bomb (BS)",
+      "Smoke Bomb (BS)",
       "Soldering Kit",
       "Sophotect Armour",
       "Stealth Repeater",
       "Super-Jump",
-      "Surgical Bay",
       "Surgical Waldo X",
       "Survival Kit (Environment)",
       "Survival Pod",
@@ -10264,9 +11388,27 @@ window.INFINITY_DATA = {
       "Nomad and O-12 shipboard deployments",
       "Human Edge"
     ]
+  },
+  "equipmentTaxonomy": {
+    "version": "v62-semantic-equipment-audit",
+    "categories": [
+      "Weapon",
+      "Armour",
+      "Augmentation",
+      "Contagion",
+      "Explosive Device",
+      "Geist",
+      "Hacking Device",
+      "Lhost",
+      "Remote",
+      "Resource",
+      "Tool",
+      "Other Item"
+    ],
+    "rule": "type is the player-facing display type; category is the source-aligned broad category; subtype gives the specific form; loadoutEligible controls normal Equipment-slot availability."
   }
 };
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v61-category-cleanup-stable";
+window.INFINITY_BUILD = "v62-semantic-equipment-fix";
