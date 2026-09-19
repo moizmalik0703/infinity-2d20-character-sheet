@@ -232,17 +232,6 @@ window.INFINITY_DATA = {
       "restriction": "Haqqislam or academic background"
     },
     {
-      "category": "Combat",
-      "name": "Breacher",
-      "primary": "Close Combat",
-      "secondary": "Thievery",
-      "brief": "Extensive training in Close Combat and Thievery, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to bypass security, manipulate locks, plant devices, and handle covert intrusion work. This trait represents the character's broad aptitude as a Breacher.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Common",
-      "cost": "5",
-      "restriction": "No Restrictions"
-    },
-    {
       "category": "General",
       "name": "Brutal Critical",
       "primary": "Close Combat",
@@ -408,17 +397,6 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
-      "category": "Exploration",
-      "name": "Climbing Plus",
-      "primary": "Survival",
-      "secondary": "Observation",
-      "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Climbing Plus.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Rare",
-      "cost": "10",
-      "restriction": "No Restrictions"
-    },
-    {
       "category": "Technical",
       "name": "Code Savant",
       "primary": "Hacking",
@@ -563,17 +541,6 @@ window.INFINITY_DATA = {
     },
     {
       "category": "General",
-      "name": "Counter-Intel",
-      "primary": "Analysis",
-      "secondary": "Discipline",
-      "brief": "Extensive training in Analysis and Discipline, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Counter-Intel.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Rare",
-      "cost": "10",
-      "restriction": "No Restrictions"
-    },
-    {
-      "category": "General",
       "name": "Courageous",
       "primary": "Discipline",
       "secondary": "Resistance",
@@ -670,17 +637,6 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Ariadna or frontier survival background"
-    },
-    {
-      "category": "Stealth",
-      "name": "Deep Cover",
-      "primary": "Stealth",
-      "secondary": "Lifestyle",
-      "brief": "Focused training in Stealth and Lifestyle, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Deep Cover.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Common",
-      "cost": "5",
-      "restriction": "No Restrictions"
     },
     {
       "category": "Combat",
@@ -920,17 +876,6 @@ window.INFINITY_DATA = {
       "secondary": "Observation",
       "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Expedition Leader.",
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Common",
-      "cost": "5",
-      "restriction": "No Restrictions"
-    },
-    {
-      "category": "Stealth",
-      "name": "False Identity",
-      "primary": "Thievery",
-      "secondary": "Persuade",
-      "brief": "Extensive training in Thievery and Persuade, allowing the character to bypass security, manipulate locks, plant devices, and handle covert intrusion work while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's broad aptitude as a False Identity.",
-      "effect": "Reduce Difficulty by 1 when using Thievery or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
@@ -1651,17 +1596,6 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
-      "category": "Social",
-      "name": "Negotiator",
-      "primary": "Persuade",
-      "secondary": "Lifestyle",
-      "brief": "Focused training in Persuade and Lifestyle, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Negotiator.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Common",
-      "cost": "5",
-      "restriction": "No Restrictions"
-    },
-    {
       "category": "Technical",
       "name": "Network Architect",
       "primary": "Hacking",
@@ -1948,17 +1882,6 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
-      "category": "Stealth",
-      "name": "Recon Specialist",
-      "primary": "Observation",
-      "secondary": "Stealth",
-      "brief": "Extensive training in Observation and Stealth, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to avoid detection, infiltrate secure areas, and conceal movement. This trait represents the character's broad aptitude as a Recon Specialist.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Common",
-      "cost": "5",
-      "restriction": "No Restrictions"
-    },
-    {
       "category": "Social",
       "name": "Recruiter",
       "primary": "Persuade",
@@ -2113,17 +2036,6 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
-      "category": "Faction",
-      "name": "Search for Knowledge",
-      "primary": "Education",
-      "secondary": "Analysis",
-      "brief": "Extensive training in Education and Analysis, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Search for Knowledge.",
-      "effect": "Reduce Difficulty by 1 when using Education or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Common",
-      "cost": "5",
-      "restriction": "Haqqislam or academic background"
-    },
-    {
       "category": "Technical",
       "name": "Sensor Array",
       "primary": "Analysis",
@@ -2256,28 +2168,6 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
-      "category": "Social",
-      "name": "Silver Tongue",
-      "primary": "Persuade",
-      "secondary": "Lifestyle",
-      "brief": "Focused training in Persuade and Lifestyle, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Silver Tongue.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Common",
-      "cost": "5",
-      "restriction": "No Restrictions"
-    },
-    {
-      "category": "Combat",
-      "name": "sixth sense",
-      "primary": "Close Combat",
-      "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a sixth sense.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Rare",
-      "cost": "10",
-      "restriction": "No Restrictions"
-    },
-    {
       "category": "Stealth",
       "name": "Smuggler",
       "primary": "Thievery",
@@ -2353,17 +2243,6 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
-    },
-    {
-      "category": "Faction",
-      "name": "State Discipline",
-      "primary": "Discipline",
-      "secondary": "Education",
-      "brief": "Extensive training in Discipline and Education, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's broad aptitude as a State Discipline.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Common",
-      "cost": "5",
-      "restriction": "Yu Jing or state-security background"
     },
     {
       "category": "Physical",
@@ -2474,17 +2353,6 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Mercenary, criminal, or trade-route background"
-    },
-    {
-      "category": "General",
-      "name": "Super Jump",
-      "primary": "Athletics",
-      "secondary": "Resistance",
-      "brief": "Focused training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Super Jump.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Rare",
-      "cost": "10",
-      "restriction": "No Restrictions"
     },
     {
       "category": "Combat",
@@ -6046,7 +5914,7 @@ window.INFINITY_DATA = {
       "cost": "5500"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Armoured Clothing",
       "brief": "Civilian clothing reinforced with hidden protective layers for low-profile personal defence.",
       "mechanic": "Armour: 5. Damage is applied to Armour first; once depleted, the armour breaks for the scene.",
@@ -6055,7 +5923,7 @@ window.INFINITY_DATA = {
       "cost": "1000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Ballistic Vest",
       "brief": "A lightweight protective vest designed to shield vital organs from small arms fire.",
       "mechanic": "Armour: 5. Damage is applied to Armour first; once depleted, the vest breaks for the scene.",
@@ -6064,7 +5932,7 @@ window.INFINITY_DATA = {
       "cost": "500"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Combat Heavy",
       "brief": "Heavy combat armor built for frontline soldiers expecting sustained fire.",
       "mechanic": "Armour: 15. Damage is applied to Armour first; once depleted, the armour breaks for the scene.",
@@ -6073,7 +5941,7 @@ window.INFINITY_DATA = {
       "cost": "4000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Combat Light",
       "brief": "Light battlefield armor that balances protection with mobility.",
       "mechanic": "Armour: 5. Damage is applied to Armour first; once depleted, the armour breaks for the scene.",
@@ -6082,7 +5950,7 @@ window.INFINITY_DATA = {
       "cost": "2000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Combat Medium",
       "brief": "Standard combat armor offering reliable protection without fully sacrificing movement.",
       "mechanic": "Armour: 10. Damage is applied to Armour first; once depleted, the armour breaks for the scene.",
@@ -6091,7 +5959,7 @@ window.INFINITY_DATA = {
       "cost": "4000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - EXO Suit",
       "brief": "A reinforced exosuit that protects the wearer and supports heavy battlefield movement.",
       "mechanic": "Armour: 15. Reduce Difficulty by 1 on Brawn checks involving lifting, bracing, or powered movement while worn.",
@@ -6100,7 +5968,7 @@ window.INFINITY_DATA = {
       "cost": "10000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Hedgehog",
       "brief": "Alien or exotic armor fitted with venomous defensive spines to punish close attackers.",
       "mechanic": "Armour: 10. Regenerate 1d6 Armour each round. A successful close-combat hit by the wearer adds +2d6 viral/poison damage.",
@@ -6109,7 +5977,7 @@ window.INFINITY_DATA = {
       "cost": "10000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Powered Combat",
       "brief": "Powered armor designed for elite assault troops and dangerous combat environments.",
       "mechanic": "Armour: 15. Reduce Difficulty by 1 on Brawn or Resistance checks involving heavy combat movement while powered.",
@@ -6118,7 +5986,7 @@ window.INFINITY_DATA = {
       "cost": "10000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Subdermal Graft",
       "brief": "Protective armor grafted beneath the skin for discreet biological resilience.",
       "mechanic": "Armour: 15. Regenerate 1d6 Armour at the start of each combat round while the graft is active.",
@@ -6217,7 +6085,7 @@ window.INFINITY_DATA = {
       "cost": "3000"
     },
     {
-      "type": "Weapon",
+      "type": "Explosive",
       "name": "Bocce Grenade (BS)",
       "brief": "An ALEPH smart grenade profile intended for precise disruption in dense terrain.",
       "mechanic": "Thrown explosive. Damage 4d6; may bounce around cover with GM approval; +1d20 to hit a target in a cramped zone once per scene.",
@@ -6280,7 +6148,7 @@ window.INFINITY_DATA = {
       "cost": "3000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Chameleon Suit",
       "brief": "A camouflage suit that bends colour and texture to match nearby surroundings.",
       "mechanic": "While not sprinting or attacking, reduce Difficulty by 1 on Stealth checks to blend into surroundings.",
@@ -6361,7 +6229,7 @@ window.INFINITY_DATA = {
       "cost": "3000"
     },
     {
-      "type": "Weapon",
+      "type": "Explosive",
       "name": "CrazyKoala Mine (BS)",
       "brief": "A compact aggressive mine-drone used for area denial and close security traps.",
       "mechanic": "Deployable explosive. Damage 5d6; Disposable; Indiscriminate within Close range; obvious once active.",
@@ -6560,7 +6428,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Explosive",
-      "name": "Granade - Eclipse",
+      "name": "Grenade - Eclipse",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the Grenade - Eclipse.",
       "mechanic": "Range 30 ft. Creates an Eclipse smoke zone that blocks normal vision and most advanced visual sensors.",
       "rarity": "Rare",
@@ -6569,7 +6437,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Explosive",
-      "name": "Granade - Electric",
+      "name": "Grenade - Electric",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the Grenade - Electric.",
       "mechanic": "Range 30 ft; Damage 4d6. Affects Firewall/electronics. On an Effect, target must pass Brawn or Tech or suffer Stunned.",
       "rarity": "Rare",
@@ -6578,7 +6446,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Explosive",
-      "name": "Granade - Frag",
+      "name": "Grenade - Frag",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the Grenade - Frag.",
       "mechanic": "Range 30 ft; Damage 4d6; circular template. On an Effect, target must pass Brawn or be knocked Prone.",
       "rarity": "Uncommon",
@@ -6587,7 +6455,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Explosive",
-      "name": "Granade - Malware",
+      "name": "Grenade - Malware",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the Grenade - Malware.",
       "mechanic": "Range 30 ft; Damage 4d6 to Firewall. On an Effect, target suffers a hostile program or impaired systems at GM discretion.",
       "rarity": "Uncommon",
@@ -6596,7 +6464,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Explosive",
-      "name": "Granade - Smoke",
+      "name": "Grenade - Smoke",
       "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the Grenade - Smoke.",
       "mechanic": "Range 30 ft. Creates a circular zero-visibility smoke zone until dispersed.",
       "rarity": "Uncommon",
@@ -6614,7 +6482,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Weapon",
-      "name": "Grenade launcher (BS)",
+      "name": "Grenade Launcher (BS)",
       "brief": "A heavy launcher used to deliver explosive payloads across zones or into cover.",
       "mechanic": "Range 60 / 120; Damage 6d6; two-handed; Anti-Material on an Effect.",
       "rarity": "Uncommon",
@@ -6659,7 +6527,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Weapon",
-      "name": "Heavy Flame thrower (BS)",
+      "name": "Heavy Flamethrower (BS)",
       "brief": "A piece of field equipment used by operatives during missions; this item is the Heavy Flame thrower.",
       "mechanic": "Range: large template; Damage 4d6; Fire; Anti-Material. Target checks Agility or suffers Burning.",
       "rarity": "Very Rare",
@@ -6722,7 +6590,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Weapon",
-      "name": "Light flame thrower (BS)",
+      "name": "Light Flamethrower (BS)",
       "brief": "A piece of field equipment used by operatives during missions; this item is the Light flame thrower.",
       "mechanic": "Range: small template; Damage 4d6; Fire. Target checks Agility or suffers Burning.",
       "rarity": "Uncommon",
@@ -6785,7 +6653,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Equipment",
-      "name": "Military rations",
+      "name": "Military Rations",
       "brief": "Nutrient-dense field meals designed to sustain soldiers during operations.",
       "mechanic": "One ration counts as one meal. A character normally needs two meals per day to avoid hunger or Exhaustion checks.",
       "rarity": "Common",
@@ -6794,7 +6662,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Weapon",
-      "name": "Monofilment Weapon (CC)",
+      "name": "Monofilament Weapon (CC)",
       "brief": "2 handed. Wielder does CC (Agility) Roll.",
       "mechanic": "Close Combat weapon. Damage 6d6; ignores armor. Requires Martial Arts talent. Target must pass Resistance or suffer a severe Wound.",
       "rarity": "Legendary",
@@ -6865,7 +6733,7 @@ window.INFINITY_DATA = {
       "cost": "5500"
     },
     {
-      "type": "Ammo",
+      "type": "Defence System",
       "name": "Nano Shield",
       "brief": "A cloud of defensive nanobots that forms a shimmering protective barrier around the user.",
       "mechanic": "Shield Pool: 4d6. Incoming damage is applied to the shield first. If damage exceeds the pool, the shield collapses and excess damage carries over.",
@@ -7135,7 +7003,7 @@ window.INFINITY_DATA = {
       "cost": "50"
     },
     {
-      "type": "Weapon",
+      "type": "Explosive",
       "name": "Slammer Charge (CC)",
       "brief": "A disposable impact charge for sudden strikes, sabotage, and dirty fighting.",
       "mechanic": "Close Combat or thrown explosive. Damage 4d6; Disposable; Improvised; Unforgiving 1.",
@@ -7171,7 +7039,7 @@ window.INFINITY_DATA = {
       "cost": "9000"
     },
     {
-      "type": "Weapon",
+      "type": "Explosive",
       "name": "smoke bomb (BS)",
       "brief": "Creates an area of cloud cover (circle template). Obscure vision with the exception of using Multi-spectral visor.",
       "mechanic": "Thrown to 30 ft. Creates a circular smoke zone that blocks normal vision until dispersed.",
@@ -7270,7 +7138,7 @@ window.INFINITY_DATA = {
       "cost": "11000"
     },
     {
-      "type": "Weapon",
+      "type": "Explosive",
       "name": "Tattletale Grenade (BS)",
       "brief": "A sensor grenade that tags movement and exposes hidden targets.",
       "mechanic": "Thrown sensor device. Damage 2d6; on an Effect, mark one target or zone and reduce hidden-target penalties by 1 until scene end.",
@@ -7298,7 +7166,7 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Equipment",
-      "name": "Tin bot (X)",
+      "name": "TinBot (X)",
       "brief": "A small support bot configured to assist one chosen technical or tactical skill.",
       "mechanic": "Choose one skill when configured. Gain +1d20 to that skill when the TinBot can assist and is not disabled.",
       "rarity": "Uncommon",
@@ -7405,7 +7273,7 @@ window.INFINITY_DATA = {
       "cost": "12000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Vorpal Armour",
       "brief": "A rare force-field armor system that disrupts lethal strikes before they fully connect.",
       "mechanic": "Provides no Armour. Once per scene, ignore one critical hit or armour-bypassing effect that would affect the wearer.",
@@ -7684,7 +7552,7 @@ window.INFINITY_DATA = {
       "cost": "5000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Crashsuit",
       "brief": "A disposable crash-protection suit designed for vehicle crews, emergency landings, and violent impacts.",
       "mechanic": "Armour: 5. Once per scene, reduce falling, collision, or crash damage by 2d6.",
@@ -7693,7 +7561,7 @@ window.INFINITY_DATA = {
       "cost": "1000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Gruntsuit",
       "brief": "A reinforced industrial exosuit used for construction, hazardous work, and improvised combat protection.",
       "mechanic": "Armour: 10. Gain +1d20 on Brawn checks involving lifting, carrying, bracing, or powered industrial movement.",
@@ -7702,7 +7570,7 @@ window.INFINITY_DATA = {
       "cost": "6000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Hard Hat",
       "brief": "A basic protective helmet for industrial, engineering, and construction environments.",
       "mechanic": "Armour: 5. Against falling debris, impact, or head-injury hazards, reduce Difficulty by 1 on Resistance checks.",
@@ -7711,7 +7579,7 @@ window.INFINITY_DATA = {
       "cost": "100"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - ModCoat, Long",
       "brief": "A long smart-material coat with concealed protection and room for integrated field equipment.",
       "mechanic": "Armour: 5. Gain +1d20 to Stealth or Thievery checks made to conceal carried equipment beneath the coat.",
@@ -7720,7 +7588,7 @@ window.INFINITY_DATA = {
       "cost": "3500"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - ModCoat, Short",
       "brief": "A short smart-material coat combining discreet protection with easy access to concealed gear.",
       "mechanic": "Armour: 5. Gain +1d20 to Stealth or Thievery checks made to conceal a one-handed item.",
@@ -7729,7 +7597,7 @@ window.INFINITY_DATA = {
       "cost": "3000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Personal Protective Equipment",
       "brief": "Protective clothing for hazardous workplaces, contamination zones, and emergency response.",
       "mechanic": "Armour: 5. Reduce Difficulty by 1 on Resistance checks against environmental, chemical, or workplace hazards.",
@@ -7738,7 +7606,7 @@ window.INFINITY_DATA = {
       "cost": "1000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Powered Combat (Ariadna)",
       "brief": "A rugged Ariadnan powered armour design that sacrifices sophisticated networking for reliability and brute strength.",
       "mechanic": "Armour: 15. Gain +1d20 on Brawn or Resistance checks involving heavy combat movement. Non-networked systems cannot be directly Hacked unless modified.",
@@ -7747,7 +7615,7 @@ window.INFINITY_DATA = {
       "cost": "9000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Sports Padding",
       "brief": "Flexible protective padding used in dangerous sports, training, and low-risk physical activity.",
       "mechanic": "Armour: 5. Once per scene, reduce impact, fall, or collision damage by 1d6.",
@@ -7756,7 +7624,7 @@ window.INFINITY_DATA = {
       "cost": "300"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Ectros Symbiont",
       "brief": "A powerful Tohaa living armour that protects its host and rapidly repairs biological damage.",
       "mechanic": "Armour: 15. Tohaa only. At the end of a scene, restore this Armour to full unless it was destroyed by fire or a major biotech effect. Gain +1d20 on Resistance checks while bonded.",
@@ -7765,7 +7633,7 @@ window.INFINITY_DATA = {
       "cost": "15000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Nu-El Symbiont",
       "brief": "A light Tohaa living armour designed to preserve mobility while providing self-repairing protection.",
       "mechanic": "Armour: 5. Tohaa only. At the end of a scene, restore this Armour to full unless it was destroyed by fire or a major biotech effect.",
@@ -7774,7 +7642,7 @@ window.INFINITY_DATA = {
       "cost": "9000"
     },
     {
-      "type": "Armor",
+      "type": "Armour",
       "name": "Armour - Sakiel Symbiont",
       "brief": "A hardened Tohaa living armour bred for experienced warriors operating under extreme pressure.",
       "mechanic": "Armour: 10. Tohaa only. At the end of a scene, restore this Armour to full unless it was destroyed by fire or a major biotech effect. Gain +1d20 on Resistance checks against fear, pain, or fatigue.",
@@ -9935,7 +9803,6 @@ window.INFINITY_DATA = {
       "Assault Rifle - Viral (BS)",
       "Blade of St. Catherine (CC)",
       "Boarding Shotgun (BS)",
-      "Bocce Grenade (BS)",
       "Breaker Bar (CC)",
       "Breaker Rifle (BS)",
       "Chain Rifle(BS)",
@@ -9943,36 +9810,28 @@ window.INFINITY_DATA = {
       "Compound Bow (BS)",
       "Compound Bow - Double Action (BS)",
       "Compound Bow - Viral (BS)",
-      "CrazyKoala Mine (BS)",
       "Crossbow (BS)",
       "Crossbow - Double Action (BS)",
       "Custom Shotgun \"Readiness\" (BS)",
-      "D-Charge Unit",
       "Dagger (CC)",
-      "E/Mauler Deployable",
       "Flammenspeer (BS)",
       "Flash Pulse (BS)",
       "Fuebach (Gattling Gun) (BS)",
       "Garrotte (CC)",
-      "Granade - Eclipse",
-      "Granade - Electric",
-      "Granade - Frag",
-      "Granade - Malware",
-      "Granade - Smoke",
       "Grazeblade (CC)",
-      "Grenade launcher (BS)",
+      "Grenade Launcher (BS)",
       "Heavy Axe (CC)",
-      "Heavy Flame thrower (BS)",
+      "Heavy Flamethrower (BS)",
       "Heavy Machine Gun / HMG (BS)",
       "Heavy Pistol (BS)",
       "Hedgehog Implant (CC)",
       "Hyper-Rapid Magnetic Cannon / HMC (BS)",
-      "Light flame thrower (BS)",
+      "Light Flamethrower (BS)",
       "Light Shotgun (BS)",
       "Linkspike (CC)",
       "Missile Launcher (BS)",
       "Modhand (CC)",
-      "Monofilment Weapon (CC)",
+      "Monofilament Weapon (CC)",
       "Morat Scimitar (CC)",
       "MULTI Heavy Machine Gun (BS)",
       "MULTI Rifle (BS)",
@@ -9995,11 +9854,9 @@ window.INFINITY_DATA = {
       "Shock CC Weapon (CC)",
       "Shock Rifle (BS)",
       "Silenced Light MULTI Assault Pistol (BS)",
-      "Slammer Charge (CC)",
       "Smart Grenade Launcher (BS)",
       "Smart MULTI Pistol (BS)",
       "Smart MULTI Sniper Rifle (BS)",
-      "smoke bomb (BS)",
       "Spear (CC)",
       "Spiked Knuckles (CC)",
       "Spitfire (BS)",
@@ -10007,7 +9864,6 @@ window.INFINITY_DATA = {
       "Stun Baton (CC)",
       "sub-machine guns (BS)",
       "Sword (CC)",
-      "Tattletale Grenade (BS)",
       "Teseum Chopper (CC)",
       "Teseum Claymore (CC)",
       "Teseum-Edged Knife (CC)",
@@ -10071,6 +9927,7 @@ window.INFINITY_DATA = {
       "Bioimmunity Organ",
       "Biometric Visor",
       "Bioscanner",
+      "Bocce Grenade (BS)",
       "Bottled Water",
       "Caffiene Tablets",
       "Caltrops",
@@ -10085,11 +9942,14 @@ window.INFINITY_DATA = {
       "Corregidor G-Time Harness",
       "Cosmetic Augmentation X",
       "Cosmetics Kit",
+      "CrazyKoala Mine (BS)",
       "Crowbar",
       "Cube 2.0",
+      "D-Charge Unit",
       "Dazer unit",
       "Deactivator Kit",
       "Deflector Shield",
+      "E/Mauler Deployable",
       "ECM X",
       "EI Transponder",
       "Engineering Waldo X",
@@ -10107,6 +9967,11 @@ window.INFINITY_DATA = {
       "GeePal Remote",
       "GemmaGeist",
       "Grappling Hook",
+      "Grenade - Eclipse",
+      "Grenade - Electric",
+      "Grenade - Frag",
+      "Grenade - Malware",
+      "Grenade - Smoke",
       "Hacking Device - Assault",
       "Hacking Device - Assault (EI)",
       "Hacking Device - Defensive",
@@ -10135,7 +10000,7 @@ window.INFINITY_DATA = {
       "Medikit",
       "Meme-Virii (M-V)",
       "Micro-Torch",
-      "Military rations",
+      "Military Rations",
       "Morat War Harness",
       "Morpho Scanner",
       "Mother-Forge Access Token",
@@ -10179,6 +10044,8 @@ window.INFINITY_DATA = {
       "Shipboard Repair Kit",
       "Shovel",
       "Sixth Sense",
+      "Slammer Charge (CC)",
+      "smoke bomb (BS)",
       "Soldering Kit",
       "Sophotect Armour",
       "Stealth Repeater",
@@ -10190,9 +10057,10 @@ window.INFINITY_DATA = {
       "Suture Kit",
       "Sygmaa Masking Bio-Graft",
       "SymbioMate",
+      "Tattletale Grenade (BS)",
       "Thermo-Optical Camouflage",
       "Thermo-Tactical Visor (MSV L2)",
-      "Tin bot (X)",
+      "TinBot (X)",
       "Torch Light",
       "Tunguska Data Vault Key",
       "UPGRADE Flashsocket",
@@ -10401,4 +10269,4 @@ window.INFINITY_DATA = {
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v60-gear-database-alignment-stable";
+window.INFINITY_BUILD = "v61-category-cleanup-stable";
