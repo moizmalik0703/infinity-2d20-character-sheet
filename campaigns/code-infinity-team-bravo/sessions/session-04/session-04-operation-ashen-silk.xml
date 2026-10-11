@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dossiers>
+  <dossier id="BN-ASHEN-SILK-AAR-04" campaignSlug="code-infinity-team-bravo">
+    <meta>
+      <title>Operation Ashen Silk — Silk and Ash</title>
+      <classification>O-12 RESTRICTED</classification>
+      <distribution>OPERATIONAL PERSONNEL</distribution>
+      <sessionLabel>4</sessionLabel>
+      <location>SHIFA Biomedical Research Complex, Dawn</location>
+    </meta>
+    <overview>Following Operation Dead Thread, Team Bravo split its personnel. Karrion Voss, Buzkill, Gypsy and Sister Mary D’Vorce remained at Gates of Dawn for O-12 clean-up, evidence containment and public-relations work. Rabbit, Dr Nadir Qasim “Q” and PalOFemi deployed to the SHIFA Biomedical Research Complex, with Rabbit serving as Temporary Section Leader while Gypsy retained provisional Team Leader status pending assessment.
+
+At SHIFA, Team Bravo found Haqqislamite Daylami security under Captain Yasmin Darzi facing Ariadnian forces led by Major Aleksandr Volkov. Q and Rabbit initially contained the confrontation, but a sniper attack reignited hostilities. One missing Ariadnian and one missing Haqqislamite were later identified as the attackers. Their bodies degraded abnormally quickly and displayed engineered tissue anomalies resembling classified SHIFA regenerative research.
+
+Inside the complex, Medical Director Dr Leila Murtaza showed that the Ariadnian patients were voluntary participants in advanced regenerative treatment. Subject 14, Mila Voronina, confirmed that SHIFA had regenerated catastrophic spinal injuries and both lost arms after a mining accident. Rabbit requested authority to inspect SHIFA for internal PALE penetration.
+
+Q learned that his former assistant Dr Arslan Daud had inherited his office and research duties, while Dr Kareem Vale had received a highly classified grant apparently commissioned through Alamut. When Team Bravo confronted Arslan, PalOFemi recovered deleted communications linking Arslan, Kareem, MIRRORGLASS and the SHIFA Compatibility Matrix. PALE counterattacked Pal’s systems and Arslan fled.
+
+An emergency led the team to Sector 47, where Captain Yasmin was found unconscious and Mila was missing. PALE briefly appeared through PalOFemi’s compromised systems and declared: “It’s too late. You cannot stop what is in motion.” Medical and security remotes then attacked the team. Rabbit fought a hacked Feuerbach-equipped exosuit while Q reached Kareem’s laboratory.
+
+Inside, Q found Arslan shot dead, six biological vats with five human subjects, and Mila being prepared for a procedure. Kareem activated five armed security personnel. Team Bravo neutralised the hostile force and killed Kareem. Q also rendered lifesaving medical aid to Captain Yasmin Darzi.
+
+Recovered data confirmed that Kareem was using the SHIFA Compatibility Matrix to make MIRRORGLASS predictable. Instead of starting with a random host and hoping it survived a target profile, PALE could begin with a chosen human identity and search for the biological host most likely to survive becoming that person. MIRRORGLASS was no longer merely experimental; it was becoming scalable.
+
+The Matrix contained 18,411 unauthorised simulations involving Mara Vukovic, Farid Qasim, Mikhail Rudenko, Jonas Kell, Mila Voronina and Nadir Qasim. Q’s own record read TEMPLATE Q-17, SOURCE NOT ACQUIRED, KNOWLEDGE EXTRACTION REQUIRED and CLINICAL INTERPRETATION LAYER INCOMPLETE.
+
+A hidden file revealed OPERATION JADE KNIFE, THEATRE: YU JING, EXECUTION WINDOW: 72 HOURS. Two identities were attached: a senior Yu Jing official and a Haqqislamite diplomatic security operative with MIRRORGLASS compatibility of 94.1%. Q recognised the term FIDAY and realised that PALE intended to replace the assassin, not the victim. A MIRRORGLASS-created Hassassin Bahram Fiday would murder the Yu Jing target and leave biological evidence proving Haqqislamite responsibility.
+
+Team Bravo completed every objective from the Operation Ashen Silk mission brief except one: identifying who or what PALE actually is. The team now knows PALE’s methods, local assets, MIRRORGLASS purpose and next target, but PALE’s true identity, nature, controller and origin remain unknown.</overview>
+    <quickFacts>
+      <fact label="MISSION STATUS" value="Operational success — all objectives complete except identification of PALE" />
+      <fact label="FIELD TEAM" value="Rabbit, Dr Nadir Qasim 'Q', PalOFemi" />
+      <fact label="ACTING COMMAND" value="Rabbit — Temporary Section Leader" />
+      <fact label="GATES OF DAWN TEAM" value="Karrion Voss, Buzkill, Gypsy, Sister Mary D’Vorce" />
+      <fact label="FALSE FLAG" value="Missing Ariadnian and Haqqislamite used together as snipers" />
+      <fact label="SHIFA PATIENTS" value="Ariadnian patients confirmed voluntary" />
+      <fact label="MILA VORONINA" value="Subject 14 rescued alive" />
+      <fact label="KAREEM VALE" value="PALE-linked MIRRORGLASS researcher; killed" />
+      <fact label="ARSLAN DAUD" value="Complicit researcher; killed by Kareem" />
+      <fact label="UNAUTHORISED SIMULATIONS" value="18,411" />
+      <fact label="Q STATUS" value="TEMPLATE Q-17 / SOURCE NOT ACQUIRED" />
+      <fact label="NEXT OPERATION" value="JADE KNIFE" />
+      <fact label="THEATRE" value="YU JING" />
+      <fact label="WINDOW" value="72 HOURS" />
+      <fact label="SOLE UNRESOLVED OBJECTIVE" value="Identify who or what PALE actually is" />
+      <fact label="ALAMUT" value="Kareem project apparently commissioned through Alamut; authorising source unknown" />
+    </quickFacts>
+    <locationFacts>
+      <fact label="WORLD" value="Dawn" />
+      <fact label="PRIMARY SITE" value="SHIFA Biomedical Research Complex" />
+      <fact label="GATE" value="Haqqislam–Ariadna standoff and sniper false flag" />
+      <fact label="WARD" value="Ariadnian regenerative patients / Subject 14" />
+      <fact label="OFFICE" value="Dr Arslan Daud / deleted communications" />
+      <fact label="SECTOR 47" value="Compromised remotes and Captain Yasmin casualty" />
+      <fact label="FINAL SITE" value="Dr Kareem Vale MIRRORGLASS laboratory" />
+      <fact label="FOLLOW-UP" value="Yu Jing — Operation Jade Knife" />
+    </locationFacts>
+    <statTiles>
+      <tile value="18,411" label="Unauthorised Matrix Simulations" />
+      <tile value="6" label="Biological Vats" />
+      <tile value="5" label="Occupied Test-Subject Vats" />
+      <tile value="5" label="Kareem Security Personnel Neutralised" />
+      <tile value="3" label="SHIFA Field Operatives" />
+      <tile value="72" label="Hours to Jade Knife" />
+    </statTiles>
+    <threatAssessment>
+      <meter label="MIRRORGLASS scalability" level="very-high" />
+      <meter label="PALE identity unresolved" level="very-high" />
+      <meter label="Jade Knife factional escalation" level="very-high" />
+      <meter label="Alamut authorisation chain" level="high" />
+      <meter label="Q remains a PALE target" level="very-high" />
+    </threatAssessment>
+    <objectives>
+      <objective priority="primary" status="done">
+        <title>Prevent Haqqislam–Ariadna hostilities</title>
+        <description>ACHIEVED — The SHIFA gate crisis was contained and the sniper false flag exposed.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Secure the SHIFA facility</title>
+        <description>ACHIEVED — Sector 47 and Kareem Vale’s laboratory were secured.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Locate and protect Ariadnian subjects</title>
+        <description>ACHIEVED — Patients were confirmed voluntary; Mila Voronina was rescued alive.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Secure the SHIFA Compatibility Matrix</title>
+        <description>ACHIEVED — Critical Matrix data and MIRRORGLASS research were recovered.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Protect Dr Nadir Qasim 'Q'</title>
+        <description>ACHIEVED — Q survived the attacks and remains with Team Bravo.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Determine how MIRRORGLASS uses SHIFA research</title>
+        <description>ACHIEVED — The Matrix enables target-first host selection and scalable transformation.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Identify the local PALE infiltration inside SHIFA</title>
+        <description>ACHIEVED — Kareem Vale, Arslan Daud’s involvement, compromised remotes and the local cell were uncovered.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Identify the next PALE operation</title>
+        <description>ACHIEVED — Operation Jade Knife, Yu Jing, 72-hour execution window.</description>
+      </objective>
+      <objective priority="tertiary" status="open">
+        <title>Identify who or what PALE actually is</title>
+        <description>UNRESOLVED — PALE’s true identity, nature, controller and origin remain unknown.</description>
+      </objective>
+    </objectives>
+    <media>
+    </media>
+    <log>
+      <entry ts="Secretariat Log — Team Disposition">Following Operation Dead Thread, Team Bravo was divided. Karrion Voss, Buzkill, Team Leader Gypsy and Sister Mary D’Vorce remained at Gates of Dawn under O-12 direction to assist with clean-up, evidence containment and public-relations work. Gypsy retained provisional Team Leader status pending further assessment. Rabbit, Dr Nadir Qasim “Q” and PalOFemi deployed to the SHIFA Biomedical Research Complex. Rabbit served as Temporary Section Leader for the SHIFA field element.</entry>
+      <entry ts="Scene 1 — Arrival at SHIFA">The reduced Team Bravo field element arrived at SHIFA to find Haqqislamite Daylami security forces led by Captain Yasmin Darzi confronting Ariadnian troops under Major Aleksandr Volkov. The Ariadnians demanded access to investigate reports that their people were being held and experimented upon. Q and Rabbit initially kept tensions manageable.</entry>
+      <entry ts="Scene 1 — False-Flag Sniper Attack">The standoff was shattered by coordinated sniper fire. Both factions initially blamed the other and a firefight began. PalOFemi and Q were wounded and temporarily incapacitated, but not before the team identified two concealed sniper positions. Ariadnian forces neutralised both attackers.</entry>
+      <entry ts="Scene 1 — Sniper Forensics">Investigation of the bodies showed that one attacker had been a missing Ariadnian and the other a missing Haqqislamite. Both had acted in concert. Akbar Doctors also reported that the bodies were degrading far faster than normal and displayed engineered tissue anomalies resembling classified SHIFA regenerative research. The most likely conclusion was a deliberate false-flag operation intended to provoke Haqqislam and Ariadna into open conflict.</entry>
+      <entry ts="Field Observation — Q Returns to SHIFA">Dr Nadir Qasim had previously worked at SHIFA and contributed to the Compatibility Matrix. His return as an O-12 operative caused visible unease among staff. Some former colleagues remained friendly, while others were openly wary. Captain Yasmin Darzi’s hostility toward Q was particularly obvious.</entry>
+      <entry ts="Scene 2 — Audience with Dr Leila Murtaza">Rabbit, Q, PalOFemi and Major Volkov descended into SHIFA’s underground medical facility and met Medical Director Dr Leila Murtaza. Murtaza showed them Ariadnian patients receiving advanced regenerative treatment and confirmed that SHIFA was primarily a hospital and research institution specialising in Silk-based regenerative medicine.</entry>
+      <entry ts="Scene 2 — Ariadnian Patients">The Ariadnian patients had largely come from nearby mining settlements, including the Cinder Station and New Kentucky mining regions. Many had suffered catastrophic industrial injuries and had entered SHIFA voluntarily in exchange for participation in experimental regenerative treatment. SHIFA used patient-derived tissue, Silk and nanotechnology to grow compatible synthetic tissue for damaged bodies.</entry>
+      <entry ts="Scene 2 — The Compatibility Matrix">The SHIFA Compatibility Matrix had been developed to calculate the probability that a patient could accept regenerative treatment without catastrophic rejection. Q had previously led major parts of this research. Some patients were compatible and could be rebuilt. Others were not and later died from their original injuries because treatment could not safely proceed.</entry>
+      <entry ts="Scene 2 — Subject 14: Mila Voronina">Dr Murtaza introduced Mila Voronina, designated Subject 14. Mila had suffered severe spinal trauma and lost both arms in a mining accident. SHIFA successfully regenerated her injuries within weeks. Mila confirmed that she had entered SHIFA voluntarily, was safe, and had been given a new lease on life. She also confirmed that some less-compatible patients had died because their bodies could not accept the treatment.</entry>
+      <entry ts="Scene 2 — Rabbit’s Security Request">Rabbit assessed that PALE might already have a mole inside SHIFA and formally requested O-12 authority to review internal security, personnel access and research systems. Dr Murtaza agreed to the investigation but required that Team Bravo be escorted by Captain Yasmin Darzi.</entry>
+      <entry ts="Personnel Observation — Q and Yasmin">Rabbit observed that Q’s relationship with SHIFA personnel was mixed. Dr Murtaza remained dismissive and Captain Yasmin was openly hostile. Further observation confirmed that Q and Yasmin had previously been romantically involved. Q’s abrupt reassignment roughly eighteen months earlier, and his failure to handle that departure properly, had severely strained both their personal and professional relationship.</entry>
+      <entry ts="Scene 3 — SHIFA Mess Hall">During a short lunch break, Q reconnected with former colleagues. The sniper attack and autopsy anomalies had become the main subject of conversation inside SHIFA because the bodies resembled supposedly secret regenerative work. The facility moved to heightened alert.</entry>
+      <entry ts="Scene 3 — Dr Arslan Daud">Q learned that his former laboratory assistant, Dr Arslan Daud, had been promoted after Q’s departure. Arslan had inherited Q’s duties, research portfolio and office. Q reacted poorly to discovering how completely Arslan had replaced him inside the institution.</entry>
+      <entry ts="Scene 3 — Dr Kareem Vale">Q also learned that Dr Kareem Vale had received a substantial grant for an exclusive classified research project apparently commissioned through Alamut. The project was so secretive that even Dr Murtaza did not possess full access to its details. The Alamut connection immediately raised the political and intelligence sensitivity of the case.</entry>
+      <entry ts="Scene 4 — Arslan’s Secret Messages">Team Bravo visited Dr Arslan Daud in Q’s former office. During the conversation, the team noticed Arslan covertly transmitting coded messages through his mnemonic keyboard and visor. The relevant data appeared to have been recently erased.</entry>
+      <entry ts="Scene 4 — PALE Counter-Intrusion">PalOFemi attempted to recover the deleted material. PALE responded by attacking Pal’s systems with its familiar signature, temporarily incapacitating him. During the confusion, Arslan fled the office. Captain Yasmin immediately initiated a facility lockdown, ordered authorised personnel to evacuate vulnerable areas and began the search for Arslan.</entry>
+      <entry ts="Scene 4 — Recovered Arslan–Kareem Traffic">After recovering, PalOFemi successfully restored fragments of the deleted communications. The files contained transcripts between Arslan and Kareem Vale and repeatedly linked MIRRORGLASS with the SHIFA Compatibility Matrix. The recovered research showed that Kareem was using tissue from Ariadnian subjects to move beyond ordinary replacement tissue and toward synthesising complete human bodies.</entry>
+      <entry ts="Scene 4 — Subject 14 Flagged">The recovered files contained a list of experimental subjects. Subject 14, Mila Voronina, appeared on the list. Moments later SHIFA’s intercom reported that Captain Yasmin Darzi required medical assistance in Sector 47 and that Mila Voronina had been reported missing nearby. Team Bravo immediately moved to Sector 47.</entry>
+      <entry ts="Scene 5 — Sector 47">Team Bravo reached Sector 47 and found Captain Yasmin unconscious. Two medical remotes were moving toward her. Rabbit began sweeping the sector while PalOFemi attempted to access local surveillance and security feeds.</entry>
+      <entry ts="Scene 5 — PALE Appears Again">PalOFemi’s systems were compromised again. PALE briefly manifested through the interface and told the team: “It’s too late. You cannot stop what is in motion.” Immediately afterward, the medical remotes stopped trying to assist Yasmin and attacked Q instead.</entry>
+      <entry ts="Scene 5 — Sector Lockdown">A security bot entered the sector, sealed the doors and attacked PalOFemi. Rabbit came under fire from a compromised combat exosuit armed with a Feuerbach. The engagement split the three-person field element across multiple simultaneous threats.</entry>
+      <entry ts="Sector 47 — Q Saves Yasmin">During the battle, Q rendered emergency medical treatment to Captain Yasmin Darzi and prevented her from dying. This action was later specifically cited by SHIFA Medical Director Dr Leila Murtaza when recommending Q for a Haqqislam Medal of Friendship.</entry>
+      <entry ts="Kareem Vale’s Laboratory">Q reached the laboratory at the end of Sector 47 and found Dr Arslan Daud shot dead at Kareem Vale’s feet. Kareem stated that Arslan knew too much and lacked the resolve necessary for the cause they were advancing within the Human Sphere.</entry>
+      <entry ts="Kareem Vale’s Laboratory — Test Subjects">The laboratory contained six biological vats, five of them occupied by human test subjects. Mila Voronina was on an operating table being prepared for a procedure. Kareem activated five armed security personnel to eliminate Team Bravo.</entry>
+      <entry ts="Final Battle — Silk and Ash">The reduced three-operative field element fought through Kareem’s guards, compromised remotes, a sealed research sector and the hacked Feuerbach-equipped exosuit. Using unconventional tactics, Team Bravo neutralised the attackers and killed Dr Kareem Vale. Mila survived, Captain Yasmin survived, and SHIFA security forces subsequently regained control of the complex.</entry>
+      <entry ts="Post-Operation — Consciousness Research">Dr Murtaza joined Team Bravo for review of Kareem’s secured laboratory. The recovered data showed that Kareem had been creating complete replacement bodies using biologically compatible subjects. Human consciousness patterns appeared to have been extracted and combined with a second consciousness signature that did not match any known Human Sphere reading. By conventional medical expectations the two consciousness patterns should not have been compatible, yet MIRRORGLASS was forcing them together.</entry>
+      <entry ts="MIRRORGLASS — Previous Method">Before SHIFA, MIRRORGLASS functioned through trial and error: obtain a biological subject, attempt transformation, apply the desired human identity and hope the subject survived the target profile. Cinder Station and Gates of Dawn had shown that the process could work, but it remained unreliable.</entry>
+      <entry ts="MIRRORGLASS — SHIFA Breakthrough">The SHIFA Compatibility Matrix changed the process. PALE could now begin with a desired human target and search available biological hosts to identify which one had the highest probability of successfully becoming that person. Example: TARGET MAJOR X; HOST 447; SUCCESS PROBABILITY 97.1 percent. MIRRORGLASS was becoming predictable, and predictable meant scalable.</entry>
+      <entry ts="The Matrix Database">Kareem’s system displayed SHIFA COMPATIBILITY MATRIX — UNAUTHORISED SIMULATIONS: 18,411. Familiar records included Mara Vukovic, Farid Qasim, Mikhail Rudenko, Jonas Kell and Mila Voronina. A separate record identified Nadir Qasim.</entry>
+      <entry ts="Q — Template Q-17">Q’s record read: TEMPLATE Q-17. SOURCE NOT ACQUIRED. KNOWLEDGE EXTRACTION REQUIRED. CLINICAL INTERPRETATION LAYER INCOMPLETE. This confirmed that PALE wanted Q both for his specialist knowledge and potentially as an identity template for MIRRORGLASS.</entry>
+      <entry ts="Alamut Connection">Kareem’s classified research project appeared to have been commissioned through Alamut. Bureau Noir could not determine whether the authorisation was genuine, forged, hijacked or issued through a compromised official. There was insufficient evidence to accuse the Imam of Alamut or Hassassin leadership. The Alamut connection remained a major unresolved intelligence issue.</entry>
+      <entry ts="Operation Jade Knife">A hidden folder in Kareem’s files contained OPERATION: JADE KNIFE. THEATRE: YU JING. EXECUTION WINDOW: 72 HOURS. Two identity files were attached: a senior Yu Jing official and a Haqqislamite diplomatic security operative. The Haqqislamite profile showed MIRRORGLASS COMPATIBILITY: 94.1 percent.</entry>
+      <entry ts="Operation Jade Knife — FIDAY">At first the evidence suggested that the Yu Jing official was the intended replacement target. Q then noticed the operational term FIDAY, as in Hassassin Fiday. He realised that PALE did not intend to replace the victim. It intended to replace the assassin.</entry>
+      <entry ts="Operation Jade Knife — Strategic Intent">PALE intended to create an apparently authentic Hassassin Bahram operative and use that identity to publicly murder a senior Yu Jing official. DNA, biometrics, tissue analysis and other biological evidence would identify the killer as Haqqislamite. The assassination would therefore appear to be genuine Haqqislamite responsibility rather than an ordinary false flag, creating a credible trigger for major inter-faction war.</entry>
+      <entry ts="Bureau Noir Response">After reviewing the recovered Jade Knife package, the Bureau Noir handler assessed the remaining response window at seventy-two hours and warned: “If they pull this off, nobody will care what happened at Baraka or SHIFA.”</entry>
+      <entry ts="Mission Objective Review">Team Bravo completed every actionable objective from the Operation Ashen Silk mission brief except one. The Haqqislam–Ariadna crisis was contained. SHIFA was secured. Ariadnian patients were located and verified. Mila Voronina and Q survived. The Compatibility Matrix was secured. The function of MIRRORGLASS was uncovered. The local PALE cell was identified and neutralised. Operation Jade Knife was discovered. The sole unresolved mission objective was to identify who or what PALE actually is.</entry>
+      <entry ts="Secretariat Personnel Addendum — Q">At the request of SHIFA Medical Director Dr Leila Murtaza, Bureau Noir recorded a formal recommendation that Dr Nadir Qasim “Q” receive a Haqqislam Medal of Friendship for distinguished service during the SHIFA crisis. The recommendation specifically cited his treatment of the wounded under hostile conditions and his lifesaving intervention that saved Captain Yasmin Darzi.</entry>
+      <entry ts="Secretariat Personnel Addendum — PalOFemi">Review of previous operations and Operation Ashen Silk confirmed a sustained pattern of distinguished technical service by PalOFemi. His record included reconstruction of falsified evidence at Baraka, technical work during Cinder Trace, survival of repeated PALE counter-intrusions, recovery of Terminal 47 evidence, restoration of the deleted Arslan–Kareem communications and identification of the MIRRORGLASS / Compatibility Matrix relationship. PalOFemi was awarded the O-12 Good Service Medal.</entry>
+      <entry ts="Secretariat Personnel Addendum — Rabbit">Rabbit’s field command during Operation Ashen Silk was observed by senior Haqqislamite and Ariadnian leadership. He maintained inter-faction communication during the gate crisis, identified the likelihood of an internal PALE asset, commanded a reduced three-operative element, continued the mission after Q and PalOFemi were wounded and coordinated the Sector 47 response. Bureau Noir promoted Rabbit to Sergeant Major.</entry>
+      <entry ts="Confirmed Intelligence">SHIFA — Legitimate Haqqislamite hospital and regenerative research facility whose work was exploited by PALE. ARIADNIAN PATIENTS — Voluntary experimental-treatment patients, not prisoners. FALSE-FLAG SNIPERS — Missing Ariadnian and Haqqislamite personnel used together to provoke factional violence. KAREEM VALE — PALE-linked MIRRORGLASS researcher; killed. ARSLAN DAUD — Involved in Kareem’s project; killed by Kareem after becoming a liability. MILA VORONINA — Subject 14; rescued alive. MIRRORGLASS — Compatibility Matrix now permits target-first selection of biologically suitable hosts. Q — TEMPLATE Q-17; PALE still requires his knowledge. UNAUTHORISED SIMULATIONS — 18,411. NEXT OPERATION — JADE KNIFE. THEATRE — YU JING. EXECUTION WINDOW — 72 HOURS.</entry>
+      <entry ts="Outstanding Questions">Who or what is PALE? Who controls the network and where is it directed from? Who inside Alamut authorised Kareem Vale’s project? Was the Alamut commission genuine, forged or issued through a compromised official? How much does the Imam of Alamut know? Has PALE penetrated Hassassin Bahram? What is the non-human consciousness being merged into MIRRORGLASS subjects? How many transformed agents currently exist? How much SHIFA research escaped before Sector 47 was secured? Who is the Yu Jing target of Operation Jade Knife? Which Fiday identity is intended for MIRRORGLASS replication? Is the intended assassin already in Yu Jing territory?</entry>
+      <entry ts="Follow-Up Tasking">NEXT OPERATION: JADE KNIFE. THEATRE: YU JING. EXECUTION WINDOW: 72 HOURS. PRIMARY TASK: PREVENT THE ASSASSINATION. SECONDARY TASK: IDENTIFY THE MIRRORGLASS FIDAY. CONTINUING CAMPAIGN OBJECTIVE: IDENTIFY WHO OR WHAT PALE ACTUALLY IS.</entry>
+      <entry ts="Mission Conclusion">Operation Ashen Silk began as an investigation into alleged mistreatment of Ariadnian patients and ended with proof that PALE had weaponised legitimate Haqqislamite regenerative science. Team Bravo now knows what PALE is doing, how it is doing it and where it intends to strike next. They still do not know who PALE is.</entry>
+    </log>
+  </dossier>
+</dossiers>
