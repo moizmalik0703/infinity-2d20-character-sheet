@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dossiers>
+  <dossier id="BN-JADE-KNIFE-AAR-05" campaignSlug="code-infinity-team-bravo">
+    <meta>
+      <title>Operation Jade Knife — The Avalon Conference Incident</title>
+      <classification>O-12 RESTRICTED</classification>
+      <distribution>OPERATIONAL PERSONNEL</distribution>
+      <sessionLabel>5</sessionLabel>
+      <location>Avalon, Dawn</location>
+    </meta>
+    <overview>Operation Jade Knife brought Team Bravo from SHIFA to Avalon, an Ariadnan city hosting a major Yu Jing–Haqqislam biomedical cooperation conference. Sister Mary D’Vorce remained on administrative duties pending retraining, while Buzzkill and Karrion rejoined the team. The mission was to protect Deputy Minister Shen Bao, identify and stop a MIRRORGLASS Fiday using the identity of Fariz al-Hakim, determine whether Alamut had genuinely authorised Kareem Vale’s research, and test the tandem command arrangement between Gypsy and Rabbit. Yu Jing Imperial Service under Inspector Li Jian had already detained a man matching Fariz. Team Bravo confirmed that the prisoner was the real Fariz al-Hakim, contradicting Haqqislam intelligence that he had died three years earlier. A command dispute during interrogation escalated into a fracas and allowed Fariz to escape. Buzzkill later discovered Fariz had deliberately doctored his transponder to make himself easy to find. Q followed a whispered message from Fariz into Avalon’s old quarter and instead encountered the MIRRORGLASS duplicate, triggering a kill-squad ambush. The real Fariz later aided the team. A coded message led Team Bravo to Farzan Layla Rahimi of the Hassassin Society, who confirmed that Alamut had genuinely authorised Kareem’s original research into anomalous biological compatibility, but denied that the Old Man of the Mountain had sanctioned MIRRORGLASS or Operation Jade Knife. At the conference, Yu Jing ISS attempted to exclude O-12, but Team Bravo entered with covert Hassassin assistance. Buzzkill encountered PALE in the surveillance network while the false Fariz and a MIRRORGLASS kill team attacked Shen Bao, civilians and Yu Jing security. The real Fariz confronted his duplicate. Shen Bao survived, but casualties occurred and Gypsy was shot and fell approximately three storeys. Rabbit again assumed field command. Buzzkill defeated PALE’s immediate intrusion and discovered that the Infowar encounter had been a diversion while PALE completed a transmission marked PALE/JADE/03 with higher authority marker BLACK LOTUS. Post-mission analysis identified the false Fariz as the first clear post-SHIFA-generation MIRRORGLASS infiltrator, proving Compatibility Matrix research escaped SHIFA. The recovered assassination authority also carried a genuine Hassassin authentication signature. In the aftermath, PalOFemi sent open letters to senior Yu Jing ISS management and O-12 superiors accusing Inspector Li Jian of incompetence and praising Team Bravo. Yu Jing ISS opened a formal complaint against PalOFemi, while O-12 suspended his pending commendation and remuneration and restricted his open-channel communications concerning Yu Jing. The operation succeeded tactically but caused serious command, disciplinary, diplomatic and counter-intelligence fallout.</overview>
+    <quickFacts>
+      <fact label="MISSION STATUS" value="Shen Bao protected // MIRRORGLASS Fiday stopped // Political outcome mixed" />
+      <fact label="FIELD LEADERSHIP" value="Gypsy by appointment // Rabbit by rank and field authority" />
+      <fact label="PRIMARY VIP" value="Deputy Minister Shen Bao" />
+      <fact label="REAL FIDAY" value="Fariz al-Hakim — officially KIA 3 years earlier; body never recovered" />
+      <fact label="FALSE FIDAY" value="First confirmed post-SHIFA-generation MIRRORGLASS infiltrator" />
+      <fact label="ALAMUT FINDING" value="Original Kareem Vale research authorisation genuine; MIRRORGLASS not sanctioned" />
+      <fact label="HASSASSIN CONTACT" value="Farzan Layla Rahimi" />
+      <fact label="PALE ROUTING" value="PALE/JADE/03" />
+      <fact label="HIGHER AUTHORITY" value="BLACK LOTUS" />
+      <fact label="PALE IDENTITY" value="Unknown" />
+      <fact label="GYPSY STATUS" value="Shot and fell approximately 3 storeys; resurrection/status judgement deferred" />
+      <fact label="PALOFEMI STATUS" value="Under investigative review following open letters criticising Yu Jing ISS" />
+      <fact label="YU JING RELATIONS" value="Complicated by security failures, casualties and formal complaint" />
+    </quickFacts>
+    <locationFacts>
+      <fact label="WORLD" value="Dawn" />
+      <fact label="CITY" value="Avalon" />
+      <fact label="START POINT" value="SHIFA Biomedical Research Complex" />
+      <fact label="YU JING FACILITY" value="Covert Imperial Service / Dragon’s Claws cell hidden in telecom data centre" />
+      <fact label="OLD QUARTER" value="Q ambush and MIRRORGLASS kill-squad engagement" />
+      <fact label="HASSASSIN CONTACT SITE" value="The Common Ground restaurant" />
+      <fact label="FINAL SITE" value="Yu Jing–Haqqislam Biomedical Cooperation Conference" />
+      <fact label="FOLLOW-UP CLUE" value="PALE/JADE/03 → BLACK LOTUS" />
+    </locationFacts>
+    <statTiles>
+      <tile value="1" label="Deputy Minister Protected" />
+      <tile value="1" label="MIRRORGLASS Fiday Stopped" />
+      <tile value="4" label="Yu Jing Personnel Killed Protecting Shen Bao" />
+      <tile value="2" label="Major Command Transfers to Rabbit" />
+      <tile value="1" label="Genuine Hassassin Signature Compromised" />
+      <tile value="1" label="BLACK LOTUS Marker Recovered" />
+    </statTiles>
+    <threatAssessment>
+      <meter label="PALE Identity — still unknown" level="very-high" />
+      <meter label="BLACK LOTUS — unknown higher authority or routing layer" level="very-high" />
+      <meter label="Hassassin Authentication Compromise — genuine signature used" level="very-high" />
+      <meter label="Yu Jing–O-12 Relations — formal complaint and operational distrust" level="high" />
+      <meter label="Team Bravo Command Cohesion — tandem command result mixed" level="high" />
+      <meter label="Post-SHIFA MIRRORGLASS — improved infiltrator confirmed" level="very-high" />
+    </threatAssessment>
+    <objectives>
+      <objective priority="primary" status="done">
+        <title>Protect Deputy Minister Shen Bao</title>
+        <description>ACHIEVED — Team Bravo and Yu Jing security successfully extracted and protected Shen Bao during the conference attack.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Identify and stop the MIRRORGLASS Fiday</title>
+        <description>ACHIEVED — The false Fariz al-Hakim was exposed as a post-SHIFA-generation MIRRORGLASS infiltrator and stopped.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Prevent Haqqislam–Yu Jing escalation</title>
+        <description>MIXED — The assassination was prevented, but casualties, security failures and the aftermath significantly damaged relations.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Determine whether Alamut genuinely authorised Kareem Vale</title>
+        <description>ACHIEVED — Layla Rahimi confirmed that Alamut authorised Kareem’s original anomalous-compatibility research but did not sanction MIRRORGLASS or Jade Knife.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Demonstrate viable tandem command between Gypsy and Rabbit</title>
+        <description>MIXED — Command authority broke down during interrogation and combat, but Rabbit successfully assumed command when Gypsy left an engagement and later became critically wounded.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Protect civilians at the conference</title>
+        <description>PARTIAL — Team Bravo evacuated and protected civilians, but casualties still occurred.</description>
+      </objective>
+      <objective priority="tertiary" status="open">
+        <title>Identify PALE</title>
+        <description>UNRESOLVED — PALE/JADE/03 and BLACK LOTUS were recovered, but PALE’s identity, controller and origin remain unknown.</description>
+      </objective>
+    </objectives>
+    <media />
+    <log>
+      <entry ts="Secretariat Log — Pre-Mission Disposition">Buzzkill was ordered to rendezvous with the three operatives returning from SHIFA. Karrion rejoined Team Bravo after completing cleanup duties at Cinder Station. Sister Mary D’Vorce remained on administrative duties pending retraining for her role in previous O-12 missions.</entry>
+      <entry ts="Scene 1 — Team Bravo Reunites at SHIFA">Team Bravo regrouped at SHIFA before departing for Avalon. The team acknowledged that two leadership authorities now existed: Gypsy remained Section Leader by O-12 appointment, while Rabbit held field authority through rank and promotion following Bureau Noir recommendations.</entry>
+      <entry ts="Scene 1 — Mission Target: Fariz al-Hakim">The mission briefing identified Fariz al-Hakim, a Hassassin Fiday officially listed as killed in action three years earlier. His body had never been recovered. Intelligence indicated that a MIRRORGLASS version of Fariz was active and preparing to assassinate Deputy Minister Shen Bao.</entry>
+      <entry ts="Scene 1 — PalOFemi and Shen Bao">PalOFemi disclosed that Shen Bao had once been his commanding officer when Pal served as an intelligence officer in the Dāoyīng Operative Control Unit. Pal described Shen Bao as intelligent, shrewd, charismatic and forward-thinking. Shen Bao had driven the difficult Yu Jing–Haqqislam biomedical cooperation initiative, making his assassination an ideal destabilisation target.</entry>
+      <entry ts="Scene 2 — Journey to Avalon">Team Bravo resupplied and travelled approximately twenty-four hours to Avalon. An O-12 liaison met them on arrival and escorted them to a Yu Jing facility officially registered as a telecommunications data centre.</entry>
+      <entry ts="Scene 2 — Dragon’s Claws">The telecom building concealed a top-secret Yu Jing Imperial Service cell associated with the Dragon’s Claws. Team Bravo met Inspector Li Jian, a member of the security detail.</entry>
+      <entry ts="Scene 2 — Inspector Li Jian">Li Jian informed Team Bravo that Yu Jing had already captured Fariz al-Hakim under the O-12 BOLO. He expected Team Bravo only to verify the identity before Yu Jing took custody. Li Jian wanted minimal O-12 interference in the symposium.</entry>
+      <entry ts="Personal Observation — Li Jian and PalOFemi">PalOFemi assessed Li Jian as eager to demonstrate Yu Jing intelligence superiority. Li Jian also appeared openly disgusted that PalOFemi, a Yu Jing operative, was serving beside Buzzkill, who was linked to the Japanese Secession Army.</entry>
+      <entry ts="Scene 3 — The Captured Fiday">Team Bravo observed a detainee matching Fariz al-Hakim’s profile. MIRRORGLASS database comparison showed that the detainee retained mostly original bioform. The prisoner was therefore the real Fariz al-Hakim, contradicting the official report that he had died three years earlier.</entry>
+      <entry ts="Q’s Observation — Why Was Fariz Captured?">Q found the capture suspicious. His training suggested that Hassassin Fidays remain effectively invisible until they are ready to strike. The ease with which Fariz had been captured suggested that he may have intended to be found.</entry>
+      <entry ts="Scene 3 — Interrogation">Gypsy, Rabbit and Karrion entered the interrogation room despite Inspector Li Jian’s objections. They attempted to pressure Fariz into revealing information, but he refused to break.</entry>
+      <entry ts="Scene 3 — Command Fracas">During the interrogation, Gypsy and Rabbit disagreed over leadership authority. The argument escalated into a physical fracas involving Karrion. The breakdown in discipline created the opportunity Fariz needed to act.</entry>
+      <entry ts="Scene 3 — Fariz Escapes">Fariz freed himself from the restraints, seized a smoke grenade and thermal grenade, detonated them and temporarily incapacitated those present. He escaped the facility and injured approximately three trained Yu Jing personnel.</entry>
+      <entry ts="Scene 3 — Li Jian’s Complaint">Inspector Li Jian reacted furiously to what he considered Team Bravo’s lack of professionalism and stated he would file a formal complaint with O-12. Tense exchanges between Li Jian and PalOFemi were recorded.</entry>
+      <entry ts="Buzzkill’s Evidence — Fariz Wanted to Be Found">Buzzkill discovered that Fariz’s location transponder had been deliberately doctored to make his whereabouts easy to identify, strongly suggesting he wanted Yu Jing or O-12 to find him.</entry>
+      <entry ts="Buzzkill’s Evidence — The Jade Knife">Among Fariz’s belongings, Buzzkill discovered a curved jade knife identified as a symbol of Fiday identity and authority.</entry>
+      <entry ts="Scene 4 — Q Leaves Alone">After Team Bravo left the Yu Jing compound, the team realised Q was missing. A Yu Jing guard reported seeing him running toward Avalon’s western old quarter.</entry>
+      <entry ts="Q’s Account — Fariz’s Whisper">While incapacitated during the interrogation escape, Q heard Fariz whisper that he intended to stop MIRRORGLASS and that Team Bravo should help. Fariz told Q to meet him in the old quarter. Q acted without first informing the team.</entry>
+      <entry ts="Scene 4 — The False Fariz">Q located a figure he believed to be Fariz in the old quarter. The man was actually the MIRRORGLASS duplicate, who shot Q before Team Bravo arrived.</entry>
+      <entry ts="Scene 4 — MIRRORGLASS Kill-Squad Ambush">When Team Bravo caught up with Q, the group was ambushed by a MIRRORGLASS kill squad and came under heavy suppressive fire.</entry>
+      <entry ts="Command Observation — Gypsy Leaves the Engagement">During the old-quarter firefight, Gypsy was observed leaving the battle without clear instructions or a stated tactical purpose. Rabbit assumed command while the team remained under fire.</entry>
+      <entry ts="Scene 4 — Real Fariz Intervenes">Buzzkill and Karrion observed the real Fariz al-Hakim aiding Team Bravo. His intervention materially contributed to the team’s survival.</entry>
+      <entry ts="Scene 4 — Gypsy Returns">Gypsy later returned with a modified armoured vehicle driven by an elderly man in a white tunic. The critical phase of the fight had largely passed. The elderly driver provided first aid and offered the vehicle to Team Bravo.</entry>
+      <entry ts="The Old Man’s Message">The elderly man gave Q a cryptic old Haqqislam code and instructed him to inspect the glove compartment. Inside was a letter addressed to Q bearing the same code and a logo.</entry>
+      <entry ts="Scene 5 — The Common Ground">Rabbit recognised the logo as belonging to The Common Ground, a restaurant in Avalon. Team Bravo travelled there and found a table already prepared.</entry>
+      <entry ts="Scene 5 — Farzan Layla Rahimi">At The Common Ground, Team Bravo met Farzan Layla Rahimi, a Hassassin intelligence operative. Layla was calm, educated and dryly polite.</entry>
+      <entry ts="Layla’s Objectives">Layla wanted the real Fariz protected, the false Fiday captured or destroyed, MIRRORGLASS data recovered, and the existence of a manufactured Hassassin kept out of public media. She feared a Human Sphere-wide purge if biological authenticity tests could no longer be trusted.</entry>
+      <entry ts="Layla’s Admission — Kareem Vale">Layla admitted that Alamut genuinely authorised Kareem Vale to investigate anomalous cross-biological compatibility, including impossible tissue compatibility, abnormal regenerated bodies and possible Combined Army biotechnology.</entry>
+      <entry ts="Layla’s Admission — Kareem’s Drift">Layla explained that Kareem’s reporting later became incomplete, his cipher habits changed, dead drops were bypassed, requests for human subjects increased, and MIRRORGLASS began appearing in his work. Alamut had begun an internal investigation before SHIFA collapsed.</entry>
+      <entry ts="Layla’s Denial — Jade Knife">Layla denied that the Old Man of the Mountain authorised MIRRORGLASS, denied that Operation Jade Knife was a sanctioned Hassassin assassination, and denied that the Society ordered Shen Bao’s murder.</entry>
+      <entry ts="Scene 5 — Hassassin Cooperation">Layla stated that Hassassin Bahram would assist. The real Fariz would confront the false Fiday, Hassassin operatives would secure the external perimeter, and Team Bravo would enter to protect Shen Bao and civilians.</entry>
+      <entry ts="Scene 6 — ISS Blocks O-12">At the conference complex, Yu Jing Imperial Service blocked O-12 jurisdiction and attempted to deny Team Bravo access. The team nevertheless entered with what appeared to be covert Hassassin assistance.</entry>
+      <entry ts="Scene 6 — Security Gaps">Inside the complex, Team Bravo discovered unguarded service routes and judged the security gaps unusually serious for a high-profile Yu Jing event. The team suspected hostile infiltration among Yu Jing personnel or contractors.</entry>
+      <entry ts="Scene 6 — Buzzkill Takes Surveillance">Buzzkill located the surveillance room and provided visual and systems support while the rest of Team Bravo searched for Deputy Minister Shen Bao.</entry>
+      <entry ts="Scene 6 — False Facial Match">With the symposium underway and Shen Bao preparing to speak, Buzzkill’s facial-recognition system appeared to identify Fariz. Field operatives visually confirmed that the person on-site was not the real Fariz.</entry>
+      <entry ts="Scene 6 — Buzzkill Encounters PALE">Buzzkill encountered PALE inside the surveillance network and entered the nanosphere to fight the hostile intelligence directly.</entry>
+      <entry ts="Scene 6 — Jade Knife Strikes">The MIRRORGLASS Fariz revealed himself and moved to assassinate Deputy Minister Shen Bao. The real Fariz intervened to stop his duplicate.</entry>
+      <entry ts="Scene 6 — Kill Team in the Crowd">A MIRRORGLASS kill team concealed among attendees attacked civilians and Yu Jing forces. Team Bravo intervened, evacuated civilians and held the attackers long enough for Imperial Service to extract Shen Bao.</entry>
+      <entry ts="Final Battle — Gypsy Falls">During the conference battle, Gypsy was shot and fell approximately three storeys. He was initially believed killed in action. Rabbit again assumed field command.</entry>
+      <entry ts="Final Battle — Buzzkill versus PALE">Buzzkill overcame PALE’s immediate presence in the node, but PALE disconnected both itself and Buzzkill. Buzzkill realised the Infowar battle had been a diversion while PALE completed another objective.</entry>
+      <entry ts="Recovered Transmission">Buzzkill discovered that an active transmission had completed during the fight. The routing marker was PALE/JADE/03. A higher-level marker identified ORIGIN AUTHORITY — BLACK LOTUS.</entry>
+      <entry ts="Post-Mission — Post-SHIFA MIRRORGLASS">Q identified the false Fariz as the first clear post-SHIFA-generation MIRRORGLASS infiltrator. This confirmed that enough SHIFA Compatibility Matrix research had escaped for PALE to improve the process.</entry>
+      <entry ts="Post-Mission — Hassassin Authentication Problem">The recovered assassination authority carried a genuine Hassassin authentication signature. Layla Rahimi had no immediate explanation. Possible explanations include stolen credentials, a replaced Hassassin, a willing insider or an unknown capability.</entry>
+      <entry ts="Post-Mission — BLACK LOTUS">Nobody recognised BLACK LOTUS. It was the first recovered marker that appeared to sit above PALE/JADE/03 in the routing structure.</entry>
+      <entry ts="Objective Review">Protect Shen Bao — ACHIEVED. Identify and stop MIRRORGLASS Fiday — ACHIEVED. Prevent Haqqislam–Yu Jing escalation — MIXED. Determine whether Alamut authorisation behind Kareem was genuine — ACHIEVED. Demonstrate viable tandem command — MIXED. Identify PALE — NOT YET ACHIEVED.</entry>
+      <entry ts="Secretariat Review — Gypsy">Gypsy was recovered after the battle and initially classified as killed in action with status deferred. Bureau Noir cited serious leadership concerns: the interrogation-room fracas occurred under his command; he removed himself from the old-quarter battle without clear instructions or intent; and indecisive combat strategy contributed to his severe injury. O-12 deferred judgement on whether to revive Gypsy. If revived, a formal reprimand was recommended and his mission pay was docked.</entry>
+      <entry ts="Secretariat Review — Rabbit">Rabbit was criticised for an outburst in the Yu Jing facility that contributed to the interrogation fracas and Fariz’s escape. Bureau Noir recommended written advice rather than formal reprimand, considering that it was Rabbit’s first field deployment with authority, Karrion provoked the confrontation, and Rabbit successfully assumed command twice when Gypsy ceased functioning effectively as field commander.</entry>
+      <entry ts="Secretariat Review — Karrion">Bureau Noir assessed that Karrion instigated the fracas that contributed to Fariz’s escape and damaged Yu Jing–O-12 relations. A formal reprimand was recommended, his mission pay was docked and further observation was ordered.</entry>
+      <entry ts="Secretariat Review — Buzzkill">Buzzkill was credited with crucial investigation, valuable intelligence recovery, strong battlefield support and helping prevent further PALE incursion. Bureau Noir recommended that the Japanese Secession Army award him a commendation medal for services rendered.</entry>
+      <entry ts="Secretariat Review — Q">Q was criticised for following Fariz’s whispered instructions without informing teammates, creating an avoidable encounter in which he and others were injured. Written advice was recommended. Mitigating factors included noble intent and a written request from the Bahram Society in Alamut; the Imam personally requested leniency for Q.</entry>
+      <entry ts="PalOFemi — First Open Letter">After the mission, PalOFemi sent an open email to senior Yu Jing Imperial Service management and O-12 superiors formally complaining about Inspector Li Jian. Pal accused Li Jian of selfishness, poor judgement, bias, temperamental behaviour, rudeness and serious failures in the protection of Deputy Minister Shen Bao.</entry>
+      <entry ts="PalOFemi — Security Allegations">PalOFemi alleged inadequate guards around Fariz’s interrogation room, inferior restraints that allowed escape, dangerous weapons allowed into the interrogation environment, poor identification of dangerous Yu Jing personnel, inadequate visitor screening at the conference, inadequate protection of international civilians and arrogant refusal of O-12 assistance.</entry>
+      <entry ts="PalOFemi — Personnel Death Allegation">PalOFemi further alleged that Li Jian’s incompetence in personnel checks contributed to the deaths of four Yu Jing personnel protecting Shen Bao. Pal described Li Jian as a 'DISGRACE to Yu Jing troops.'</entry>
+      <entry ts="PalOFemi — Second Open Letter">PalOFemi sent a second email commending Team Bravo for surviving repeated assassination attempts, neutralising terrorists at the conference, attempting to cooperate with Li Jian despite hostility, and attempting to help track the escaped Fariz despite Li Jian refusing O-12 assistance.</entry>
+      <entry ts="PalOFemi — Clearance and Awards Request">PalOFemi requested recommendations and citations for Team Bravo and restoration of his Yu Jing Class 4 clearance, which conference security had stated was revoked.</entry>
+      <entry ts="Yu Jing ISS Complaint Against PalOFemi">Yu Jing Imperial Service opened a formal complaint against PalOFemi for alleged violations of inter-faction and O-12 communications protocols and for allegedly spreading statements counter to faction interests. O-12 delayed PalOFemi’s pending commendation and remuneration until the review concluded.</entry>
+      <entry ts="PalOFemi — Investigative Restrictions">Because PalOFemi entered investigative review, Bureau Noir ordered him not to engage in open-channel communications concerning Yu Jing until the review was complete. Award recommendations and related remuneration were suspended.</entry>
+      <entry ts="Campaign Consequence — Yu Jing Relations">Operation Jade Knife ended with Shen Bao alive, but relations between O-12 and Yu Jing became significantly more complicated. The conference attack, Imperial Service security failures, Yu Jing casualties, Team Bravo discipline issues and PalOFemi’s open letters created an institutional dispute likely to affect future cooperation.</entry>
+      <entry ts="Follow-Up Intelligence">The continuing campaign trail now reads PALE/JADE/03 → BLACK LOTUS. Team Bravo still does not know who or what PALE is, but for the first time possesses a marker suggesting a higher authority, destination or control layer above a local PALE node.</entry>
+      <entry ts="Mission Conclusion">Operation Jade Knife prevented the assassination and exposed a more advanced generation of MIRRORGLASS, but the victory came with severe political and command consequences. Shen Bao survived. The false Fiday was stopped. Alamut’s original research authorisation was clarified. PALE escaped identification, Hassassin authentication was shown to be compromised, BLACK LOTUS emerged as a new unknown, and Yu Jing–O-12 relations entered formal dispute.</entry>
+    </log>
+  </dossier>
+</dossiers>
