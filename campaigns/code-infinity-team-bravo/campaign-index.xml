@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<campaignArchive slug="code-infinity-team-bravo">
+  <title>Code Infinity — Team Bravo</title>
+  <canonicalThroughSession>7</canonicalThroughSession>
+  <currentLead>DAYBREAK GATE</currentLead>
+  <sessions>
+    <session number="1" operation="FAULTLINE" file="sessions/session-01/session-01-operation-faultline.xml"/>
+    <session number="2" operation="CINDER TRACE" file="sessions/session-02/session-02-operation-cinder-trace.xml"/>
+    <session number="3" operation="DEAD THREAD" file="sessions/session-03/session-03-operation-dead-thread.xml"/>
+    <session number="4" operation="ASHEN SILK" file="sessions/session-04/session-04-operation-ashen-silk.xml"/>
+    <session number="5" operation="JADE KNIFE" file="sessions/session-05/session-05-operation-jade-knife.xml"/>
+    <session number="6" operation="WATCHGLASS" file="sessions/session-06/session-06-operation-watchglass.xml"/>
+    <session number="7" operation="KNIFE EDGE" file="sessions/session-07/session-07-operation-knife-edge.xml"/>
+  </sessions>
+  <canon>
+    <state file="canon/campaign-state.xml"/>
+    <timeline file="canon/timeline.md"/>
+    <unresolvedThreads file="canon/unresolved-threads.md"/>
+  </canon>
+</campaignArchive>
