@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<campaignState campaignSlug="code-infinity-team-bravo" updatedAfterSession="7">
+  <campaign>Code Infinity — Team Bravo</campaign>
+  <currentSession>7</currentSession>
+  <nextLead>DAYBREAK GATE</nextLead>
+  <team>
+    <operative name="Sergeant Major Rabbit" callsign="Rabbit" status="Active" currentRole="Team Leader">
+      <honour>Ariadnan Cross of Valour — Awarded</honour>
+    </operative>
+    <operative name="Gypsy" status="Active" leadershipEligibility="Restored">
+      <note>Returned from SHIFA. Bureau Noir leadership review closed after Operation KNIFE EDGE.</note>
+      <honour>Ariadnan Medal of Allied Friendship — Awarded</honour>
+    </operative>
+    <operative name="Buzzkill" status="Active">
+      <honour>Ariadnan Medal of Allied Friendship — Awarded</honour>
+    </operative>
+    <operative name="Anya" status="Active">
+      <honour>Ariadnan Medal of Allied Friendship — Awarded</honour>
+    </operative>
+    <operative name="Dr Farid Qassim" callsign="Q" status="Active" role="Haqqislam Akbar Doctor">
+      <honour>Ariadnan Medal of Allied Friendship — Awarded</honour>
+    </operative>
+    <operative name="Tom Hendry" callsign="Jobe" status="Active" role="Ariadnan assassin">
+      <honour status="PendingReview">Ariadnan Cross of Valour — Recommended</honour>
+      <administrativeNote>Confirmation pending satisfactory personal conduct review; Alcohol and Substance Use Management Workshop referral recommended.</administrativeNote>
+    </operative>
+    <operative name="Karrion Voss" status="Alive" deploymentStatus="Not deployed in Session 7"/>
+    <operative name="PalOFemi" status="Administrative leave / review"/>
+    <operative name="Mary D'Vorce" status="Administrative leave / retraining"/>
+  </team>
+  <threats>
+    <threat id="PALE-07" status="At large">
+      <note>True identity, origin and controller remain unknown.</note>
+    </threat>
+    <threat id="MIRRORGLASS" status="Active">
+      <note>PALE can now begin masking MIRRORGLASS signatures using data stolen from Bureau Toth, reducing reliability of compatibility scans.</note>
+    </threat>
+  </threats>
+  <session7Outcome>
+    <item>All eight genuine Council of Knives principals survived.</item>
+    <item>Active MIRRORGLASS security and principal copies were destroyed.</item>
+    <item>Genuine Simon Blumfeld, Charlton Branson and Margaret Fuhler were recovered alive from suspended animation beneath Concilium.</item>
+    <item>PALE contacted Tom Hendry and Q directly and stated: "I have what I need. I'll perhaps see you at Daybreak."</item>
+    <item>Three biological seed consignments were traced through DAYBREAK GATE.</item>
+    <item>Bureau Noir confirmed Daybreak Gate had resumed communications and was transmitting.</item>
+  </session7Outcome>
+</campaignState>
