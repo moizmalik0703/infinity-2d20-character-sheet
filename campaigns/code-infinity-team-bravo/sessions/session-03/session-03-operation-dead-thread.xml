@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dossiers>
+  <dossier id="BN-DEAD-THREAD-AAR-03" campaignSlug="code-infinity-team-bravo">
+    <meta>
+      <title>Operation Dead Thread — The Gates of Dawn Incident</title>
+      <classification>O-12 RESTRICTED</classification>
+      <distribution>OPERATIONAL PERSONNEL</distribution>
+      <sessionLabel>3</sessionLabel>
+      <location>Gates of Dawn Caravanserai, Dawn System</location>
+    </meta>
+    <overview>Operation Dead Thread was an intelligence success achieved at significant operational cost. Team Bravo entered Gates of Dawn to locate Sable, trace the PALE-linked Arachne route recovered at Cinder Station, and determine the purpose of Project MIRRORGLASS. The team made contact with Dr Nadir Qasim ('Q'), survived an attack on the Medical Annex, obtained Sable's location through Casablanca Sam's, and later confronted Sable at Dock 6. Sister Mary D'Vorce disclosed the team's O-12 affiliation, causing Sable to panic, activate automated gatling defences, wound the team and escape. Before fleeing, Sable used Terminal 47 to initiate a Dock 7 launch sequence. Buzkill and PalOFemi entered the compromised Arachne node, encountered Pale, confirmed a PALE handshake and recovered an order to CAPTURE Q. At Dock 7, Team Bravo fought Jonas Kell and his force in zero gravity, exposed Kell as a transformed non-human infiltrator, stopped the transfer and secured a MIRRORGLASS pod and data. Post-operation analysis established that MIRRORGLASS does not clone humans from scratch; it transforms an existing biological being into a specific human identity. Q's SHIFA background and work on the Compatibility Matrix were identified as the reason PALE wanted him alive. Sable remains at large and is assessed as an unwitting smuggling intermediary rather than a knowingly aligned Combined Army asset. Bureau Noir also recorded significant procedural failures, including compromised cover, avoidable collateral damage, command concerns involving Gypsy, and protocol breaches by Sister Mary D'Vorce.</overview>
+    <quickFacts>
+      <fact label="MISSION STATUS" value="PALE node exposed // MIRRORGLASS process identified // Sable at large" />
+      <fact label="THREAT DESIGNATION" value="PALE Network // Project MIRRORGLASS" />
+      <fact label="SOURCES" value="Operative testimony, Terminal 47 logs, medical records, Dock 7 data packs and O-12 forensics" />
+      <fact label="SABLE" value="Male Nomad smuggler; wanted by O-12; no evidence he knowingly served the Combined Army" />
+      <fact label="TERMINAL 47" value="Compromised Arachne node used by Pale" />
+      <fact label="PALE HANDSHAKE" value="Confirmed" />
+      <fact label="RECOVERED COMMAND" value="CAPTURE Q" />
+      <fact label="JONAS KELL" value="Transformed non-human infiltrator using the identity of a Gates of Dawn foreman" />
+      <fact label="MIRRORGLASS" value="Biological conversion process; transforms an existing being into a specific human identity" />
+      <fact label="Q" value="Akbar Doctor; genetics and cellular replication specialist; former SHIFA researcher" />
+      <fact label="SHIFA" value="Q helped develop the SHIFA Compatibility Matrix" />
+      <fact label="PALE OBJECTIVE" value="Use Q and the SHIFA Compatibility Matrix to stabilise and industrialise MIRRORGLASS" />
+      <fact label="PUBLIC COVER" value="Combined Army involvement concealed by O-12 to prevent panic and factional accusations" />
+      <fact label="SABLE STATUS" value="Escaped Gates of Dawn; location unknown" />
+      <fact label="UNIDENTIFIED FORCE" value="Force approaching Casablanca Sam’s remains unidentified" />
+    </quickFacts>
+    <locationFacts>
+      <fact label="WORLD" value="Dawn" />
+      <fact label="PRIMARY SITE" value="Gates of Dawn Caravanserai" />
+      <fact label="SCENE 1" value="Underground arms market" />
+      <fact label="SCENE 2" value="Gates of Dawn Medical Annex" />
+      <fact label="SCENE 3" value="Casablanca Sam’s" />
+      <fact label="SCENE 4" value="Dock 6" />
+      <fact label="SCENE 5" value="Terminal 47 / Arachne node" />
+      <fact label="SCENE 6" value="Dock 7" />
+      <fact label="FOLLOW-UP LEAD" value="SHIFA Compatibility Matrix" />
+    </locationFacts>
+    <statTiles>
+      <tile value="1" label="PALE Handshake Confirmed" />
+      <tile value="1" label="MIRRORGLASS Pod Secured" />
+      <tile value="1" label="Transformed Infiltrator Neutralised" />
+      <tile value="1" label="Known Smuggler Escaped" />
+      <tile value="2" label="Technical Citations Recommended" />
+      <tile value="1" label="Field Doctor Assigned" />
+    </statTiles>
+    <threatAssessment>
+      <meter label="MIRRORGLASS Scale — repeatable conversion and industrialisation effort" level="very-high" />
+      <meter label="Personnel Replacement — Qasim and Kell demonstrate embedded transformed infiltrators" level="very-high" />
+      <meter label="Q Security — explicit capture order and strategic value to PALE" level="very-high" />
+      <meter label="Arachne Compromise — PALE can exploit local infrastructure without the operator knowing" level="high" />
+      <meter label="Public Panic — exposure of replacement technology could trigger purges and political escalation" level="high" />
+    </threatAssessment>
+    <objectives>
+      <objective priority="primary" status="done">
+        <title>Rendezvous with local medical contact Q</title>
+        <description>ACHIEVED — Q survived the Medical Annex attack, treated Team Bravo, shared anomalous patient records and joined the investigation.</description>
+      </objective>
+      <objective priority="primary" status="open">
+        <title>Locate and identify Sable</title>
+        <description>PARTIAL — Sable was identified at Dock 6, but escaped after the team’s O-12 affiliation was disclosed.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Trace the PALE-linked Arachne route</title>
+        <description>ACHIEVED — Buzkill and PalOFemi confirmed that Pale initiated the concealed handshake through Terminal 47.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Determine Project MIRRORGLASS purpose</title>
+        <description>ACHIEVED — Recovered data established that MIRRORGLASS transforms an existing biological being into a specific human identity.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Stop hostile transfer at Dock 7</title>
+        <description>ACHIEVED — Jonas Kell and his force were neutralised; launch was stopped and the pod/data secured.</description>
+      </objective>
+      <objective priority="secondary" status="open">
+        <title>Maintain covert O-12 posture</title>
+        <description>FAILED — Sister Mary D’Vorce disclosed the team’s O-12 affiliation to Sable, triggering his armed escape response.</description>
+      </objective>
+      <objective priority="secondary" status="open">
+        <title>Minimise collateral damage</title>
+        <description>PARTIAL — The mission was contained, but the Medical Annex was damaged and O-12 later compensated Gates of Dawn.</description>
+      </objective>
+      <objective priority="tertiary" status="open">
+        <title>Identify the force approaching Casablanca Sam’s</title>
+        <description>UNRESOLVED — Team Bravo escaped before the approaching force could be identified.</description>
+      </objective>
+    </objectives>
+    <media>
+    </media>
+    <log>
+      <entry ts="Executive Assessment">Team Lead Gypsy assessed Operation Dead Thread as an intelligence success achieved at significant operational cost. The mission objectives were to locate Sable, trace the PALE-linked Arachne route recovered at Cinder Station, and determine the purpose of Project MIRRORGLASS. The core intelligence objectives were achieved, but the mission escalated repeatedly and Team Bravo's covert O-12 posture was ultimately compromised.</entry>
+      <entry ts="Immediate Operational Effects">O-12 secured Dock 7, Terminal 47, the biological pod and recoverable MIRRORGLASS data packs. Combined Army involvement was concealed from the public to prevent panic and inter-faction accusations. Sable remained at large but was assessed as an unwitting smuggling intermediary rather than a Combined Army infiltrator. Dr Nadir Qasim was confirmed as a priority PALE abduction target and placed under Bureau Noir protection.</entry>
+      <entry ts="Phase I — Underground Procurement">Shortly after arriving at Gates of Dawn, Team Bravo entered an underground arms market to acquire additional weapons. Two men began watching the cell closely enough that several operatives noticed the surveillance. Their affiliation was unknown, so the team did not confront them and continued toward the rendezvous with Q. Both men were later identified among Jonas Kell's force at Dock 7.</entry>
+      <entry ts="Phase II — Medical Annex">Team Bravo met Dr Nadir Qasim, callsign Q, at the Gates of Dawn Medical Annex. Q is an Akbar Doctor with specialist experience in genetics and cellular replication. Before he could complete his briefing, the two men from the arms market attacked the annex with explosives. The blast caused severe damage and left several operatives unable to continue without immediate treatment. Q stabilised the wounded and restored enough of the team to mission capability.</entry>
+      <entry ts="Medical Lead">After the attack, Q showed Team Bravo medical reports containing unexplained inconsistencies among Nomad workers moving through the port. Several names were already familiar to the investigation: Mara Vukovic, Farid Qasim and Mikhail Rudenko. Q could not reconcile the readings with normal treatment history or administrative error. Q had previously specialised in genetics, cell replication and reconstructive medicine, had worked at SHIFA, and had helped develop the SHIFA Compatibility Matrix. At this stage the team did not yet know that PALE had ordered Q captured alive.</entry>
+      <entry ts="Phase III — Casablanca Sam's">Q led Team Bravo to Casablanca Sam's, an established lounge used by smugglers, fixers, mercenaries and clients who preferred transactions outside official scrutiny. Samina, the matron, received the team while several disguised Odalisque operatives monitored the room. Team Bravo spent considerable time exchanging intelligence and bargaining for access to Sable's network before obtaining his whereabouts.</entry>
+      <entry ts="Casablanca Sam's — Apprehension Threat">During the exchange, Team Bravo realised it was being deliberately held while an unidentified force moved to apprehend the cell. The force was never identified. Rather than begin a fight inside Samina's establishment or wait to be trapped, Q surrendered his personal pharmaceutical stock in exchange for a protected exit route. Team Bravo left without direct contact with the incoming force.</entry>
+      <entry ts="Casablanca Sam's — Assessment">Samina is not currently assessed as a PALE asset; her priority appears to be preservation of the lounge and its clientele. The Odalisque presence indicates that Casablanca Sam's has a deeper security structure than an ordinary criminal lounge. The unidentified apprehension force remains an intelligence gap and may have represented station security, criminal interests, faction intelligence or another third party reacting to Team Bravo's growing visibility.</entry>
+      <entry ts="Phase IV — Dock 6 / Sable">At Dock 6, Team Bravo found its earlier craft moved from the expected berth. A lone man was inside searching through Bureau Noir equipment. From his questions and the recovered Cinder Station transfer records, the team identified him as Sable, the named receiver. Sable demanded to know why the team was in what he understood to be his assigned craft and where the manifested cargo had gone.</entry>
+      <entry ts="Phase IV — Sable's Escape">The Dock 6 encounter remained recoverable until Sister Mary D'Vorce revealed that Team Bravo was O-12. Sable was already wanted by O-12 and panicked immediately. He triggered emergency defence protocols, activated automated gatling systems and inflicted severe injuries on the team while escaping. Before leaving, he used Terminal 47, a concealed Arachne node, to initiate a launch sequence at Dock 7.</entry>
+      <entry ts="Sable — Immediate Assessment">Sable acted like a wanted smuggler expecting arrest rather than an infiltrator protecting a Combined Army operation. His interest centred on the missing cargo from the Cinder Station manifest. His use of Terminal 47 connected his smuggling infrastructure to the compromised Arachne route, but he escaped before Bureau Noir could establish the full extent of his knowledge.</entry>
+      <entry ts="Phase V — Terminal 47 / Into the Arachne Node">While Q treated the wounded, Buzkill and PalOFemi accessed Terminal 47. Gypsy authorised them to reconstruct previous commands and trace the route through the compromised Arachne node while the rest of Team Bravo prepared to move on Dock 7. Both operators were pulled into a hostile network environment and encountered Pale directly.</entry>
+      <entry ts="Terminal 47 — Recovered Traffic">Buzkill and PalOFemi fought Pale through their hacking protocols. Pale eventually severed the link, but only after the pair recovered two critical pieces of evidence: PALE HANDSHAKE — CONFIRMED; ORIGIN — COMPROMISED ARACHNE NODE; RECOVERED COMMAND — CAPTURE Q. The handshake proved that PALE had directly initiated activity through the Arachne node, and the capture order established that the Medical Annex attack was not simply an attempt to kill Team Bravo. Q was a designated acquisition target.</entry>
+      <entry ts="Terminal 47 — Operational Significance">The recovered traffic demonstrated that PALE can exploit Nomad Arachne infrastructure without requiring Sable to understand the true client. PALE had identified Q as strategically valuable before Team Bravo arrived at Gates of Dawn. Pale is also demonstrably aware of specific Team Bravo operatives and can issue targeted operational orders through compromised local assets.</entry>
+      <entry ts="Phase VI — Dock 7 Engagement">Team Bravo moved to Dock 7 and found space-equipped personnel loading an unmanned shuttle. Among the cargo was a human-sized pod filled with biological liquid comparable to the material encountered at Cinder Station. Two loaders were the same men who had attacked the Medical Annex.</entry>
+      <entry ts="Jonas Kell">The hostile commander was Jonas Kell, a Gates of Dawn foreman personally known to Q. Kell was one of the anomalous cases Q had highlighted and was believed to have disappeared approximately six weeks earlier. Kell ordered his personnel to capture Q and kill the rest of Team Bravo, then activated zero-gravity protocols to disrupt the operatives and favour his space-equipped troops.</entry>
+      <entry ts="Dock 7 — Combat Result">The engagement was severe. Q injured Kell and exposed non-human tissue beneath the human exterior. Team Bravo killed Kell and the remaining hostile personnel, stopped the launch sequence, restored atmosphere and gravity, and requested O-12 containment support. The MIRRORGLASS pod, Terminal 47 records and recoverable data packs were secured.</entry>
+      <entry ts="Jonas Kell — Forensic Result">Kell's external identity was human-readable and sufficiently consistent to pass routine social and employment scrutiny. The body beneath the damaged human exterior was not human. His disappearance roughly six weeks earlier is now treated as the probable replacement window. His orders prioritised Q's capture over general mission survival, confirming Q's special value to PALE.</entry>
+      <entry ts="Sable — Revised Assessment">Post-operation analysis assessed Sable as a male Nomad smuggler and information broker wanted by O-12. There is no evidence that he knowingly served the Combined Army. He believed he was moving stolen Haqqislamite medical technology to private enterprises and understood MIRRORGLASS as human-body replication or reconstructive technology. No evidence shows that Sable knew Jonas Kell or Kell's force were non-human infiltrators. Current status: escaped Gates of Dawn; location unknown.</entry>
+      <entry ts="Project MIRRORGLASS — Confirmed Function">Recovered Dock 7 data established the critical finding that MIRRORGLASS does not clone a human from scratch. The pod transforms an existing biological being into a specific human identity. The process appears capable of altering external appearance, internal anatomy, genetic markers, cellular structure and other biological identifiers sufficiently to create a human-readable identity. Captain Farid Qasim and Jonas Kell are now treated as confirmed or near-confirmed examples of the process.</entry>
+      <entry ts="Why PALE Wanted Q">Q is an Akbar Doctor specialising in genetics, cellular replication, regenerative and reconstructive medicine. He previously worked at SHIFA and helped develop the SHIFA Compatibility Matrix. Bureau Noir assesses that PALE intended to abduct Q alive, exploit or extract his specialist knowledge, gain access to SHIFA methodologies, and use the Compatibility Matrix to stabilise and industrialise MIRRORGLASS conversion at larger scale. The intended production scale, target population, deployment rate and final strategic purpose remained unknown.</entry>
+      <entry ts="SHIFA Connection">References to the SHIFA COMPATIBILITY MATRIX were recovered from the Arachne node and PALE-linked transmissions. Q confirmed that he helped build and research the Matrix for legitimate advanced medical compatibility work. PALE appears to have identified a secondary use: determining which biological subjects can survive conversion and which human identities can be reproduced reliably.</entry>
+      <entry ts="Secretariat Investigative Addendum">Bureau Noir filed a supplemental internal review separate from Gypsy's operational narrative. It incorporated Terminal 47 recovery, Dock 7 forensics, Gates of Dawn compensation records, Operator Rabbit's internal memorandum and post-mission interviews. The purpose was to distinguish enemy action from avoidable procedural failure and assign personnel actions before the next deployment.</entry>
+      <entry ts="Additional Investigative Findings">ANNEX ATTACK — The two attackers were tasked to abduct Q, and Team Bravo reached him before the capture team could complete the operation. Q AS TARGET — PALE required Q because of his SHIFA experience and direct knowledge of the Compatibility Matrix. ARACHNE ROUTE — Evidence supports hijack or exploitation of local Arachne infrastructure rather than deliberate Nomad cooperation. SABLE — Sable was an unwitting intermediary whose criminal logistics were exploited by PALE. KELL — Jonas Kell was a transformed infiltrator occupying the identity of a foreman who disappeared six weeks earlier. PUBLIC EXPOSURE — O-12 conducted a full evidence sweep and concealed Combined Army involvement to prevent panic and factional accusations. COMPENSATION — O-12 accepted financial responsibility for damage to the Gates of Dawn Medical Annex.</entry>
+      <entry ts="Command and Protocol Review">Operator Rabbit's memorandum identified two recurring command failures that materially affected mission execution: inconsistent tasking by Section Leader Gypsy and cavalier disregard for operational protocol by Sister Mary D'Vorce. Secretariat review found the observations credible and consistent with the recorded sequence at Casablanca Sam's and Dock 6. A formal reprimand was recommended for Gypsy for inconsistent orders and inadequate operational control. A formal reprimand was recommended for Mary D'Vorce for protocol breaches, including disclosure of O-12 affiliation to Sable. Docking Team Bravo's stipend was recommended because of avoidable collateral costs and emergency O-12 remediation.</entry>
+      <entry ts="Commendations and Assignments">BUZKILL — Recommended for an O-12 Citation for entering the compromised Arachne node, surviving direct contact with Pale, and helping recover the handshake and CAPTURE Q order. PALOFEMI — Recommended for an O-12 Citation for the Terminal 47 intrusion and for helping establish the nature of MIRRORGLASS and Combined Army penetration. DR NADIR QASIM 'Q' — Assigned to Team Bravo as Field Doctor and recommended for an O-12 bravery citation for preserving multiple operatives under attack, continuing treatment under combat conditions and exposing Jonas Kell's non-human nature. RABBIT — Officer Module download authorised; placed on a command-development track for eventual promotion to Officer rank, subject to performance review.</entry>
+      <entry ts="Current Threat Assessment">MIRRORGLASS SCALE — SEVERE: evidence supports a repeatable conversion process and an effort to industrialise it. PERSONNEL REPLACEMENT — SEVERE: Qasim and Kell show that PALE can embed transformed infiltrators inside ordinary organisations. Q SECURITY — CRITICAL: PALE has issued an explicit capture order and has a direct strategic reason to obtain Q's expertise. ARACHNE COMPROMISE — HIGH: PALE can route commands through criminal or Nomad systems without the local operator understanding the real client. PUBLIC PANIC — HIGH: open confirmation of Combined Army replacements on Dawn could trigger factional purges, vigilantism and political escalation.</entry>
+      <entry ts="Outstanding Questions">What biological species or substrate is being transformed by MIRRORGLASS? How many successful replacements are already active in the Human Sphere? How much of the SHIFA Compatibility Matrix has PALE already obtained? Why does PALE still require Q personally if fragments of SHIFA data are already present in its network? Can MIRRORGLASS reproduce memories and behavioural identity as reliably as physical identity? What production scale is PALE attempting to achieve, and who are the intended replacement targets? Who was the unidentified force approaching Casablanca Sam's? Where has Sable gone, and what other private clients did he service?</entry>
+      <entry ts="Follow-Up Tasking">BUREAU NOIR IMMEDIATE DIRECTIVE — NEXT OPERATION: SILK AND ASH. PRIMARY LEAD: SHIFA COMPATIBILITY MATRIX. PROTECTIVE PRIORITY: DR NADIR QASIM 'Q'. INVESTIGATIVE PRIORITY: DETERMINE WHETHER SHIFA HAS BEEN PENETRATED. STRATEGIC QUESTION: HOW LARGE DOES PALE INTEND MIRRORGLASS TO BECOME?</entry>
+      <entry ts="Mission Conclusion">Gypsy concluded that Cinder Station had shown Team Bravo that PALE was moving something, while Gates of Dawn revealed what MIRRORGLASS could do. PALE wanted Q because he helped build the SHIFA Compatibility Matrix. If SHIFA was the missing piece, the next operation would be about stopping MIRRORGLASS from becoming a production line.</entry>
+    </log>
+  </dossier>
+</dossiers>
