@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dossiers>
+  <dossier id="BN-DAWN-07-AAR-02" campaignSlug="code-infinity-team-bravo">
+    <meta>
+      <title>Operation Cinder Trace — The Cinder Station Interception</title>
+      <classification>O-12 RESTRICTED</classification>
+      <distribution>OPERATIONAL PERSONNEL</distribution>
+      <sessionLabel>2</sessionLabel>
+      <location>Baraka Deep-7 — Grey Cairn — Cinder Station, Dawn</location>
+    </meta>
+    <overview>Operation Cinder Trace followed the stolen biological material removed from Baraka Deep-7. Team Bravo traced a false freight manifest authorised through Captain Qasim’s credentials and pursued the convoy west across the Caledonian frontier toward Cinder Station.
+
+At Grey Cairn Checkpoint, Captain Ewan MacLeod blocked the team’s armoured crawler while verifying their authority. Because Bureau Noir orders prohibited disclosure of the probable alien infiltration, the cell resolved the standoff through limited O-12 authority, Sister Mary D’Vorce’s appeal to preserve the ceasefire, Rabbit’s local credibility, technical proof of compromised Ariadnian credentials, and Karrion Voss’s trace of the convoy’s unauthorised passage. The team secured passage without reigniting Haqqislam–Ariadna hostilities.
+
+The pursuit continued across abandoned mining and industrial routes. Every operative contributed through driving, route selection, weapons, technical countermeasures, command, or threat response. Team Bravo reached Cinder Station before the transfer could be completed, stopped the courier pod, preserved the convoy’s navigation and communications records, protected civilian freight workers, and recovered the stolen biological material.
+
+At the station, Mara Vukovic’s systems attempted to eliminate the civilian witnesses once the site was compromised. The team prevented the witness purge, but Mara escaped during the collapse of the engagement. Her neural graft was confirmed as related to the implant previously recovered from Mikhail Rudenko, marking her as a knowingly compromised or directly controlled PALE asset.
+
+PalOFemi and Buzkill entered the station’s Arachne-compatible server environment to preserve the route data. They encountered the hostile intelligence construct designated the Pale Ghost in a virtual environment resembling a black railway crossing an endless white desert. Karrion Voss accessed the relay from the control tower, extracted the two operatives from immediate danger, and neutralised the Pale Ghost before the relay was destroyed.
+
+Recovered data confirmed that Qasim authorised the false manifest; the convoy was linked to the same external network associated with Rudenko; Mara carried a related neural graft; the cargo possessed biological and technological properties inconsistent with human science; the convoy received instructions through PALE/DAWN/07; and the signal was routed through an Arachne-compatible system.
+
+The recovered route identified the next node: Gates of Dawn, Docking Bay 6, receiver SABLE, local contact Casablanca Sam’s, a thirteen-hour window, and Project MIRRORGLASS. A final relay fragment was addressed directly to Team Bravo: “YOU SAVED BARAKA DEEP-7. HOW MANY MORE CAN YOU SAVE?” The operation therefore ended as a successful interdiction, but with Mara at large and PALE now demonstrably aware of the Bureau Noir cell.</overview>
+    <quickFacts>
+      <fact label="MISSION STATUS" value="Primary objectives achieved // Mara Vukovic at large" />
+      <fact label="THREAT DESIGNATION" value="PALE/DAWN/07 // Project MIRRORGLASS" />
+      <fact label="SOURCES" value="Operative testimony, vehicle telemetry, Arachne logs, navigation records and witness statements" />
+      <fact label="CONVOY" value="Intercepted before transfer was completed" />
+      <fact label="BIOLOGICAL MATERIAL" value="Recovered and retained in Bureau Noir custody" />
+      <fact label="COURIER POD" value="Launch prevented" />
+      <fact label="WITNESSES" value="Civilian freight workers protected and retained" />
+      <fact label="MARA VUKOVIC" value="Escaped // active compromised PALE asset" />
+      <fact label="ARACHNE RELAY" value="Destroyed or rendered unusable after route recovery" />
+      <fact label="PALE GHOST" value="Neutralised by Karrion Voss after PalOFemi and Buzkill entered the hostile server environment" />
+      <fact label="NEXT NODE" value="Gates of Dawn — Docking Bay 6" />
+      <fact label="RECEIVER" value="SABLE" />
+      <fact label="LOCAL CONTACT" value="Casablanca Sam’s" />
+      <fact label="TRANSFER WINDOW" value="13 hours" />
+      <fact label="PROJECT" value="MIRRORGLASS" />
+      <fact label="FINAL PALE MESSAGE" value="YOU SAVED BARAKA DEEP-7. HOW MANY MORE CAN YOU SAVE?" />
+    </quickFacts>
+    <locationFacts>
+      <fact label="WORLD" value="Dawn" />
+      <fact label="REGION" value="Caledonian Frontier / Industrial Belt" />
+      <fact label="START" value="Baraka Deep-7" />
+      <fact label="CHECKPOINT" value="Grey Cairn" />
+      <fact label="DESTINATION" value="Cinder Station" />
+      <fact label="RELAY TYPE" value="Arachne-compatible communications relay" />
+      <fact label="FOLLOW-UP LOCATION" value="Gates of Dawn — Docking Bay 6" />
+    </locationFacts>
+    <statTiles>
+      <tile value="1" label="Convoy Intercepted" />
+      <tile value="1" label="Courier Pod Stopped" />
+      <tile value="1" label="Biological Sample Recovered" />
+      <tile value="1" label="Pale Ghost Neutralised" />
+      <tile value="1" label="Known PALE Asset Escaped" />
+      <tile value="13" label="Hours in Recovered Transfer Window" />
+    </statTiles>
+    <threatAssessment>
+      <meter label="Personnel Infiltration — Qasim, Rudenko and Mara pattern" level="very-high" />
+      <meter label="Biological Programme — replication/regeneration link probable" level="very-high" />
+      <meter label="Quantronic Compromise — PALE use of Arachne-compatible systems" level="high" />
+      <meter label="Factional Escalation — Grey Cairn resolved but still politically fragile" level="medium" />
+      <meter label="Mara Vukovic — compromised asset at large" level="high" />
+    </threatAssessment>
+    <objectives>
+      <objective priority="primary" status="done">
+        <title>Intercept the convoy before transfer</title>
+        <description>ACHIEVED — Team-wide pursuit and interdiction caught the convoy before the final transfer was completed.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Recover the stolen biological material</title>
+        <description>ACHIEVED — The cargo was secured; its properties remain inconsistent with known human science.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Determine the destination</title>
+        <description>ACHIEVED — Gates of Dawn identified; Docking Bay 6; Casablanca Sam’s; receiver SABLE; Project MIRRORGLASS.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Preserve navigation and communications records</title>
+        <description>ACHIEVED — Route, relay activity and transfer instructions were retained for Bureau Noir review.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Identify the next PALE node</title>
+        <description>ACHIEVED — The signal chain leads through an Arachne-compatible system to Gates of Dawn.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Prevent factional escalation</title>
+        <description>ACHIEVED — Grey Cairn passage was negotiated without disclosure of the full alien threat or renewed Haqqislam–Ariadna violence.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Stop the courier pod</title>
+        <description>ACHIEVED — Launch was prevented before departure.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Protect freight witnesses</title>
+        <description>ACHIEVED — Mara’s remote kill-order failed and surviving witness testimony was preserved.</description>
+      </objective>
+      <objective priority="tertiary" status="open">
+        <title>Capture Mara Vukovic</title>
+        <description>FAILED DURING SESSION 2 / FOLLOW-UP ACTIVE — Mara escaped as the relay action and station engagement collapsed. Her location is unknown.</description>
+      </objective>
+    </objectives>
+    <media>
+    </media>
+    <log>
+      <entry ts="Executive Assessment">Operation Cinder Trace was a successful interdiction with one significant unresolved failure: Mara Vukovic escaped. Team Bravo traced the false manifest authorised through Qasim’s credentials, intercepted the convoy before its transfer could be completed, stopped the courier pod, recovered the stolen biological material, and preserved the navigation and communications records needed to identify the network’s next node. The operation confirmed that Baraka Deep-7 was not an isolated penetration and that PALE/DAWN/07 is operating through a broader external structure.</entry>
+      <entry ts="Immediate Operational Effects">The Cinder Station courier pod was stopped and the stolen sample retained in Bureau Noir custody. Protected freight workers survived the station compromise and remain useful witnesses. The Cinder Station Arachne relay was destroyed or rendered unusable during the final Infowar action, but a final data fragment was recovered. The hostile entity designated the Pale Ghost was neutralised by Karrion Voss after PalOFemi and Buzkill entered the server environment. Mara Vukovic remains at large and must be treated as an active PALE asset.</entry>
+      <entry ts="Phase I — Baraka Deep-7 Departure">Cinder Trace began with the audit of outbound freight from Baraka Deep-7. The decisive record was a false manifest authorised through Captain Qasim’s credentials. Because Qasim was already confirmed as part of PALE/DAWN/07, any shipment he touched after the infiltration window had to be treated as hostile until proven otherwise. The cargo trail pointed west. The convoy’s routing, communications activity and undeclared biological load were consistent with urgent extraction rather than legitimate commerce. Team Bravo moved before the paper trail could be scrubbed further, with every operative contributing through route reconstruction, systems work, vehicle operation, threat response or command coordination.</entry>
+      <entry ts="Phase I — Grey Cairn Checkpoint">Captain Ewan MacLeod blocked the crawler with barricades, rifles and an old anti-vehicle weapon. His position was understandable: armed personnel linked to Baraka were crossing Ariadnian ground immediately after a near-war, while Bureau Noir orders prohibited disclosure of the probable alien infiltration. Sister Mary D’Vorce argued that allowing the trail to go cold would endanger the ceasefire itself. Rabbit invoked local custom and guaranteed the team’s conduct. Gypsy presented only the O-12 authority necessary to keep the exchange legitimate. PalOFemi and Hex supported the technical case that the convoy was moving under forged or compromised Ariadnian credentials, while Voss traced its unauthorised passage through MacLeod’s systems. Team Bravo committed to returning verified findings to both faction leaderships and secured passage without violence.</entry>
+      <entry ts="Phase II — Contact with the Convoy">Once clear of Grey Cairn, the mission became a pursuit across the Caledonian industrial belt. The convoy had distance, prepared escorts and a route chosen to exploit abandoned mining roads. Team Bravo’s advantage was knowing that the convoy had to reach a transfer point. Route selection, vehicle control, weapons fire, technical countermeasures and command decisions overlapped throughout the chase. The convoy’s behaviour reinforced the assessment that civilian and mercenary elements were disposable: dangerous industrial routes were used and non-essential personnel were placed between the team and the protected cargo.</entry>
+      <entry ts="Assessment of Convoy Personnel">The external network appears to compartmentalise information and use innocent or partially informed personnel as cover. Protected freight workers did not display knowledge consistent with full PALE membership. Mara’s behaviour, neural graft and later remote kill-order distinguish her from ordinary convoy personnel and support the assessment that she was knowingly compromised or directly controlled.</entry>
+      <entry ts="Phase III — Industrial Bridge Contact">The decisive pursuit phase occurred in the derelict industrial approaches to Cinder Station. The route narrowed, infrastructure degraded and the escorts became increasingly aggressive. Every damaged span, abandoned gantry and blind turn threatened to delay the team long enough for the cargo to transfer. Team Bravo maintained pressure through the bridge contact and reached Cinder Station before the transfer could be completed. This preserved the biological material, intact communication chain and courier system long enough for interdiction.</entry>
+      <entry ts="Interception Result">The convoy was intercepted before completing its transfer. The courier pod remained on-site and was subsequently stopped. Navigation and communications records were preserved before the relay was lost. The biological sample was recovered intact enough for containment and later technical analysis. Gypsy’s field assessment was that nobody won the chase alone: Team Bravo reached Cinder because the team kept solving the next problem before it became the only problem.</entry>
+      <entry ts="Phase IV — Cinder Station Engagement">Cinder Station was already in transfer posture when Team Bravo arrived. The courier pod was the immediate priority, but Mara’s systems also had a second task queued: eliminate the civilian freight workers if the station was compromised. The encounter therefore opened with multiple simultaneous objectives — stop the pod, secure the sample, protect witnesses and prevent the relay from erasing the route. Team Bravo stopped the pod and prevented the witness purge. Command, movement, medical response and direct combat kept the freight workers alive while other operatives pushed toward the relay and launch controls. Their testimony corroborated that the shipment had been associated with a woman using the name Sable.</entry>
+      <entry ts="Mara Vukovic">Mara did not remain to defend the station to the death. Once the pod was stopped and the relay began to fail, she used the collapse of the engagement to escape. Team Bravo did not capture her. Her neural graft is related to the implant recovered from Mikhail Rudenko. Her remotes were programmed to kill civilian freight workers once station compromise was detected. Her behaviour is consistent with a knowingly compromised or directly controlled PALE asset. Current status: escaped; location unknown.</entry>
+      <entry ts="Phase V — Arachne Server Intrusion">PalOFemi and Buzkill entered the station’s Arachne-compatible server environment to preserve the route and identify the next PALE node. The network did not present as a normal freight relay. They encountered an active hostile intelligence construct designated the Pale Ghost. The station disappeared around them and was replaced by a black railway crossing an endless white desert. Freight containers moved without engines, wheels or drivers. A faceless figure in a white surveyor’s coat waited beside a signal post and said: “Node Seven has failed. Let us see whether you fail with it.”</entry>
+      <entry ts="Phase V — Pale Ghost Neutralised">Karrion Voss accessed the relay from the control tower while PalOFemi and Buzkill were still exposed inside the hostile environment. Voss extracted both operatives from immediate danger and neutralised the Pale Ghost before the relay was destroyed. Enough of the route survived to identify the destination and receiver.</entry>
+      <entry ts="Final Relay Fragment">The final recovered PALE fragment was addressed directly to the Bureau Noir cell rather than to Sable: “YOU SAVED BARAKA DEEP-7. HOW MANY MORE CAN YOU SAVE?” Gypsy assessed that PALE/DAWN/07 was now aware of Team Bravo as a coherent threat and willing to communicate directly. Whether the message was intimidation, bait or both remained unresolved.</entry>
+      <entry ts="Recovered Route">TRANSFER ACCEPTED. RECEIVER: SABLE. LOCATION: GATES OF DAWN. DOCKING BAY: 6. LOCAL CONTACT: CASABLANCA SAM’S. WINDOW: 13 HOURS. PROJECT: MIRRORGLASS.</entry>
+      <entry ts="Confirmed Intelligence">QASIM MANIFEST — Qasim authorised the false manifest used to move the convoy and biological material. NETWORK LINK — The convoy was operating for the same external network associated with Rudenko. MARA GRAFT — Mara carries a neural graft related to Rudenko’s implant. NON-HUMAN CARGO — Recovered material has biological and technological properties inconsistent with human science. PALE TASKING — The convoy received instructions through PALE/DAWN/07. ARACHNE ROUTE — The command signal was routed through an Arachne-compatible system. NEXT NODE — Gates of Dawn, Docking Bay 6, receiver SABLE, local contact Casablanca Sam’s, Project MIRRORGLASS.</entry>
+      <entry ts="Probable Intelligence">DISPOSABLE ASSETS — The network is using innocent smugglers and mercenaries as disposable or partially informed assets. BIOLOGICAL PURPOSE — The stolen sample is connected to biological replication or regeneration. FURTHER PENETRATION — Additional compromised personnel are operating on Dawn. NOMAD ROUTE — The Nomad communication route may have been hijacked rather than willingly provided.</entry>
+      <entry ts="Notable Operative Contributions">TEAM LEAD GYPSY — Presented limited O-12 authority at Grey Cairn, coordinated the pursuit and balanced sample, witness, data and capture priorities at Cinder Station. SISTER MARY D’VORCE — Appealed to preservation of the ceasefire and helped prevent the Grey Cairn standoff from becoming a renewed factional incident. RABBIT — Used Ariadnian custom and local credibility to guarantee the cell’s conduct and lower militia resistance. PALOFEMI — Supported the technical case against the convoy credentials, contributed to the pursuit and entered the Arachne server with Buzkill to preserve the PALE route. HEX — Supported credential and convoy evidence analysis and contributed to station objectives. KARRION VOSS — Traced the convoy’s unauthorised passage through MacLeod’s systems, accessed the Cinder relay from the control tower, recovered Pal and Buzkill and neutralised the Pale Ghost. BUZKILL — Entered the Cinder Station Arachne environment with PalOFemi and survived direct contact with the Pale Ghost while preserving the route data.</entry>
+      <entry ts="Current Threat Assessment">PERSONNEL INFILTRATION — SEVERE: Qasim, Rudenko and Mara establish a continuing pattern of replacement, alteration or neural compromise. BIOLOGICAL PROGRAMME — SEVERE: recovered sample is probably linked to replication or regeneration; Project MIRRORGLASS remains undefined. QUANTRONIC COMPROMISE — HIGH: PALE can route tasking through Arachne-compatible systems and field active hostile constructs. FACTIONAL ESCALATION — MODERATE: Grey Cairn was resolved without incident, but disclosure or forged evidence could reactivate Haqqislam–Ariadna tensions. MARA VUKOVIC — HIGH: known compromised asset remains at large with knowledge of the cell and PALE procedures.</entry>
+      <entry ts="Outstanding Questions">Who is Sable, and is the name a person, role or disposable identity? What is Project MIRRORGLASS, and how does it relate to the sample’s probable replication or regeneration function? How many additional compromised personnel are active on Dawn? Was the Arachne-compatible route deliberately provided, or was Nomad infrastructure hijacked? Where did Mara go after escaping Cinder Station, and is she moving toward Gates of Dawn? Why did PALE/DAWN/07 send a message directly to the Bureau Noir cell?</entry>
+      <entry ts="Follow-Up Tasking">PROCEED TO: GATES OF DAWN. PRIORITY LOCATION: DOCKING BAY 6. LOCAL CONTACT: CASABLANCA SAM’S. RECEIVER: SABLE. WINDOW: 13 HOURS. PROJECT: MIRRORGLASS. ASSUME FURTHER INFILTRATION.</entry>
+      <entry ts="Mission Conclusion">Gypsy: “At Baraka, PALE tried to make two factions kill each other. At Cinder, it tried to move the evidence before we understood what it was. We stopped the transfer. Now it knows our names well enough to leave us messages. Gates of Dawn is not a lead anymore. It is an appointment.”</entry>
+    </log>
+  </dossier>
+</dossiers>
