@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dossiers>
+  <dossier id="BN-DAWN-07-AAR-01" campaignSlug="code-infinity-team-bravo">
+    <meta><title>Operation Faultline — The Baraka Deep-7 Incident</title><classification>O-12 RESTRICTED</classification><distribution>OPERATIONAL PERSONNEL</distribution><sessionLabel>1</sessionLabel><location>Baraka Deep-7 Mining Concession, Dawn</location></meta>
+    <overview>Team Bravo entered Baraka Deep-7 during an active engagement between Haqqislamite Daylami security and the Ariadnian Red Cairn Union. The team’s transport was caught in the expanding firefight, forcing a dispersed parachute insertion. Despite uneven landings and immediate exposure to hostile fire, all operatives reached the facility and re-established contact.
+
+A provisional ceasefire was secured after difficult negotiations. Sister Mary D’Vorce’s early mediation was nearly compromised when Red Cairn personnel repeated one of her statements as an endorsement of their territorial claim. Rabbit’s Ariadnian background helped lower tensions, while Karrion Voss reinforced the consequences of continued fire.
+
+Both factions then supplied recordings apparently proving the other had initiated the violence. PalOFemi, Hex and Voss established that every recording had been altered: timecodes conflicted, frames were removed or synthesised, and concealed malware attacked the forensic systems. Before the findings could be presented, hundreds of grenade remotes breached the mediation chamber through the ventilation system and attempted to assassinate Dr Layla Hakim and Anya Volkov.
+
+Captain Farid Qasim and Mikhail Rudenko disappeared during the attack. Both had shown abrupt behavioural changes roughly six weeks earlier. The team pursued them to Level 37, where they were found with assault remotes defending an energy drill that produced no ore. The drill was a sonic lure and echolocation beacon intended to draw a colossal subterranean predator beneath the peace delegation.
+
+The team neutralised Qasim’s replacement and Rudenko, destroyed the sonic lure, and survived the emergence of al-Dūd al-Kabīr, locally called the Stone-Eater. Unable to penetrate its armoured hide, the operatives deliberately collapsed the cavern roof, killing the creature before it could reach populated levels.
+
+During withdrawal, the team returned to an anomalous sealed survey chamber and found the real Captain Farid Qasim’s weeks-old body. Rudenko’s altered Cube/neural implant contained the same non-human command architecture associated with Qasim’s replacement. Both had received tasking through PALE/DAWN/07. The deepest sample vault had also been breached and a small quantity of non-human biological material removed.
+
+The immediate Haqqislam–Ariadna conflict was stopped. Dr Hakim and Anya Volkov agreed to a formal ceasefire and reconciliation process. However, the stolen biological material remained missing and the wider PALE network remained active. Baraka Deep-7 was the first exposed node of a network already operating inside the Human Sphere.</overview>
+    <quickFacts>
+      <fact label="MISSION STATUS" value="Primary objectives achieved // Follow-up active" />
+      <fact label="THREAT DESIGNATION" value="PALE/DAWN/07 — Probable non-human infiltration" />
+      <fact label="SOURCES" value="Operative testimony, bodycam, UAV, CCTV and recovered system logs" />
+      <fact label="POLITICAL RESULT" value="Provisional Haqqislam–Ariadna ceasefire and reconciliation process secured" />
+      <fact label="FALSE FLAG" value="Both factions were manipulated with doctored evidence and coordinated assassination attempts" />
+      <fact label="REPLACEMENT CONFIRMED" value="The Captain Farid Qasim encountered by the team was not the original officer" />
+      <fact label="COORDINATION" value="Qasim and Rudenko operated under a common external command structure" />
+      <fact label="ALIEN ARCHITECTURE" value="Recovered systems contained non-human command logic inconsistent with local technology" />
+      <fact label="BIOLOGICAL THREAT" value="Unknown — non-human sample removed; composition, destination and intended use unresolved" />
+      <fact label="FOLLOW-UP" value="Trace PALE/DAWN/07; identify the destination of the stolen sample; assume further infiltration" />
+    </quickFacts>
+    <locationFacts>
+      <fact label="WORLD" value="Dawn" />
+      <fact label="REGION" value="Caledonian Wilderness" />
+      <fact label="SITE" value="Baraka Deep-7 Haqqislamite mining concession" />
+      <fact label="SUBTERRANEAN LEVEL" value="Level 37 — approximately 90 metres / 300 feet below surface" />
+      <fact label="KEY LOCATIONS" value="Mining perimeter; mediation chamber; Level 37 cavern; sealed survey chamber; deepest sample vault" />
+      <fact label="LOCAL FACTIONS" value="Haqqislamite Daylami security and Ariadnian Red Cairn Union" />
+    </locationFacts>
+    <statTiles>
+      <tile value="0" label="Bureau Noir Fatalities" />
+      <tile value="0" label="Mediation Chamber Casualties" />
+      <tile value="2" label="Faction Leaders Protected" />
+      <tile value="2" label="Hostile Infiltrators Neutralised" />
+      <tile value="37" label="Levels Descended" />
+      <tile value="1" label="Stone-Eater Neutralised" />
+    </statTiles>
+    <threatAssessment>
+      <meter label="Factional Escalation — ceasefire local and fragile" level="high" />
+      <meter label="Personnel Infiltration — confirmed replacement and altered operative" level="very-high" />
+      <meter label="Quantronic Compromise — weaponised evidence and malware" level="high" />
+    </threatAssessment>
+    <objectives>
+      <objective priority="primary" status="done"><title>Stop the Haqqislam–Ariadna firefight</title><description>ACHIEVED — Ceasefire secured. Both faction leaders survived and entered reconciliation talks.</description></objective>
+      <objective priority="primary" status="done"><title>Protect civilian and political leadership</title><description>ACHIEVED — No mediation-chamber casualties. Grenade remote attack repelled; evacuation and lockdown enacted.</description></objective>
+      <objective priority="secondary" status="done"><title>Determine the cause of the violence</title><description>ACHIEVED — False-flag operation confirmed. Submitted video evidence was doctored, synthesised and weaponised with malware.</description></objective>
+      <objective priority="secondary" status="done"><title>Neutralise the instigators</title><description>ACHIEVED — Qasim replacement and Mikhail Rudenko killed while defending the sonic lure.</description></objective>
+      <objective priority="tertiary" status="done"><title>Preserve the mining complex</title><description>PARTIAL — A controlled cave-in destroyed one cavern and killed the Stone-Eater; structural inspection required.</description></objective>
+      <objective priority="tertiary" status="open"><title>Recover the missing biological material</title><description>FAILED DURING SESSION 1 / FOLLOW-UP ACTIVE — The non-human sample had already been removed. Destination and intended use remain unknown.</description></objective>
+    </objectives>
+    <media>
+    </media>
+    <log>
+      <entry ts="Phase I — Insertion">The team’s transport entered an expanding firefight above Baraka Deep-7 and the cell elected to parachute into the complex. The insertion scattered the operatives but caused no team fatalities. Daylami security and Red Cairn fighters were already in sustained contact, with each side claiming the other had violated parley. Sister Mary D’Vorce opened negotiations; her remarks were briefly misquoted as support for the Red Cairn territorial claim. Rabbit’s Ariadnian credibility, Voss’s deterrence and continued mediation helped both sides lower their weapons long enough to hear the opposing account. Field assessment: the first operational success was convincing both forces that further fire served an unidentified third party.</entry>
+      <entry ts="Phase II — Conflicting Evidence">Dr Layla Hakim and Captain Farid Qasim presented Baraka CCTV apparently showing Red Cairn sabotage and attacks. Anya Volkov and Mikhail Rudenko countered with bodycam footage apparently showing Daylami ambushing Ariadnian delegates under parley. PalOFemi and Hex reconstructed the timeline while Team Lead Gypsy moved both delegations to a secure underground conference area and Karrion Voss linked into the facility AI. Initial anomalies included insufficient and misaligned surveillance, a cordoned survey room outside expected geological workflow, a painful high-frequency tone reported by D’Vorce and Gypsy, and behaviour by Qasim and Rudenko that Rabbit judged inconsistent with normal operations.</entry>
+      <entry ts="Phase III — Level 37">The delegations descended thirty-seven levels, approximately ninety metres below the surface. In the secure chamber, D’Vorce continued mediation while the technical team established that the submitted evidence could not be genuine: timecodes conflicted, event order had been rearranged, and key frames were scrubbed or synthesised. Voss discovered concealed malware embedded in the evidence. The malware activated against his forensic system, but he severed the connection before lasting harm occurred, confirming the files were designed both to deceive investigators and attack anyone who examined them too closely.</entry>
+      <entry ts="Phase III — Grenade Remote Ambush">An explosion ruptured an air duct, lighting failed, smoke flooded the chamber and hundreds of armed grenade remotes deployed through the ventilation system. Their attack pattern prioritised Dr Hakim and Anya Volkov, indicating a deliberate decapitation strike against both factions. Team Bravo repelled the remotes and disrupted their control frequency. No casualties occurred inside the chamber. During the confusion, Qasim and Rudenko disappeared and became the primary suspects. Hakim ordered immediate lockdown and a BOLO throughout the complex.</entry>
+      <entry ts="Behavioural Timeline">Farid Qasim: abrupt paranoia beginning roughly six weeks earlier; fortified selected installations, authorised pre-emptive strikes and intensified anti-Ariadnian rhetoric. Mikhail Rudenko: abrupt political radicalisation over the same period; promoted territorial reclamation, helped organise Red Cairn mobilisation and controlled its communications narrative.</entry>
+      <entry ts="Phase IV — The Sonic Lure">Fresh weapons fire led the team to a lower cavern where multiple Daylami and Red Cairn personnel were already dead. Qasim, Rudenko and assault remotes defended a large energy drill. The hostiles prioritised protecting the drill rather than escaping. The team destroyed the remotes, killed both infiltrators and disabled the machine. Inspection showed it extracted no ore; it repeatedly struck bedrock to generate tremors and a high-frequency signal. The device was a sonic lure and echolocation beacon. The drill stopped, but the tremors grew stronger.</entry>
+      <entry ts="Phase V — al-Dūd al-Kabīr / Stone-Eater">PalOFemi recovered Qasim’s tablet, which displayed an echolocation plot showing a rapidly approaching subterranean mass. A colossal segmented organism erupted through the cavern floor. Dr Hakim identified it as al-Dūd al-Kabīr; Anya Volkov called it the Stone-Eater. Direct attacks were largely ineffective against its armoured hide. The team used concentrated fire and demolition effects to collapse weakened sections of the cavern roof, burying and killing the creature. The action sacrificed part of the mine but prevented the organism from reaching populated levels. Tactical assessment: the Stone-Eater was a weaponised environmental hazard, not the architect of the attack; the sonic lure was intended to bring it beneath the peace delegation and support the appearance of mutual factional sabotage.</entry>
+      <entry ts="Phase VI — The Survey Chamber">During withdrawal, the team returned to the anomalous sealed survey room. Inside they found the real Captain Farid Qasim’s body. Forensic indicators placed his death several weeks earlier, matching the onset of the replacement’s behavioural changes. Rudenko’s altered Cube or neural implant contained the same non-human command architecture associated with Qasim’s replacement. Both infiltrators had received tasking through PALE/DAWN/07.</entry>
+      <entry ts="Phase VI — Breached Sample Vault">The deepest sample vault had been opened and a small quantity of non-human biological material removed. No destination, buyer or declared research purpose was found. The evidence confirmed coordinated infiltration of both factions but did not yet explain why the sample was required.</entry>
+      <entry ts="Confirmed Intelligence">REPLACEMENT — The Farid Qasim encountered by the team was not the original officer.
+COORDINATION — Qasim and Rudenko operated under a common external command structure.
+FALSE FLAG — The plan was designed to kill both leadership groups and leave each faction appearing responsible.
+ALIEN ARCHITECTURE — Recovered systems contain non-human command logic inconsistent with local technology.
+SIGNAL — The only recovered network designation is PALE/DAWN/07.
+MISSING MATERIAL — A non-human biological sample was removed before the operation was exposed.</entry>
+      <entry ts="Diplomatic Disposition">Dr Layla Hakim and Anya Volkov accepted that both sides had been manipulated. A formal ceasefire was agreed together with a process for reviewing water access, mining boundaries, security conduct and Red Cairn grievances. Dr Hakim pledged equipment, transport and access to Baraka logistical resources for Bureau Noir follow-up operations. This support is operationally useful but remains a declared factional contribution rather than evidence of neutrality.</entry>
+      <entry ts="Operative Contributions">Sister Mary D’Vorce — Recovered from the early diplomatic misquotation and maintained negotiation long enough for technical evidence to emerge.
+Rabbit — Identified the anomalous survey chamber that ultimately confirmed Captain Qasim’s replacement.
+Karrion Voss — Supported the ceasefire through direct deterrence; identified and survived the malware attack on the facility mainframe.
+PalOFemi and Hex — Reconstructed the false timeline, identified manipulated footage and recognised the drill’s non-extractive function.
+Team Lead Gypsy — Moved the delegations below ground, coordinated the pursuit and maintained command through the cavern engagement.</entry>
+      <entry ts="Casualty and Damage Summary">Bureau Noir cell: no confirmed fatalities.
+Mediation chamber: no casualties despite the grenade remote assault.
+Local forces: multiple Daylami and Red Cairn personnel found dead near the sonic drill before the team arrived.
+Hostile infiltrators: Qasim replacement and Mikhail Rudenko killed in action.
+Environmental: one giant Stone-Eater killed; one mining cavern deliberately collapsed; structural inspection required.</entry>
+      <entry ts="Outstanding Questions">1. Who or what controls PALE/DAWN/07?
+2. How was Qasim replaced without detection, and was Rudenko replaced, altered or coerced?
+3. What was contained in the missing non-human biological sample?
+4. Where was the sample sent, and are additional cells operating elsewhere on Dawn?
+5. Was Baraka Deep-7 selected only to provoke factional war, or was the mine itself the primary target?</entry>
+      <entry ts="Recommended Immediate Actions">Quarantine the recovered implant, tablet and all media files inside an air-gapped Bureau Noir facility.
+Audit personnel transfers, disappearances and sudden behavioural changes across Dawn during the previous eight weeks.
+Trace every cargo movement connected to the deepest sample vault, including informal and falsified manifests.
+Cross-reference PALE/DAWN/07 against Arachne, Maya and known Combined Army signal structures without exposing the case publicly.
+Maintain covert observation of both Baraka Deep-7 and Red Cairn leadership while supporting their reconciliation process.</entry>
+      <entry ts="Follow-Up Tasking">TRACE PALE/DAWN/07. IDENTIFY THE DESTINATION OF THE STOLEN SAMPLE. ASSUME FURTHER INFILTRATION. The cell is authorised to proceed deeper into Dawn using Baraka transport and resources. Bureau Noir command will provide additional intelligence when available.</entry>
+      <entry ts="Mission Conclusion">Baraka Deep-7 was not the end of an operation. It was the first exposed node of a network already inside the Human Sphere.</entry>
+    </log>
+  </dossier>
+</dossiers>
