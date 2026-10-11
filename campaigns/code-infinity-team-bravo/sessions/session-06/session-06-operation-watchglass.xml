@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dossiers>
+  <dossier id="BN-WATCHGLASS-AAR-06" campaignSlug="code-infinity-team-bravo">
+    <meta>
+      <title>Operation Watchglass — The ORIZON-4 Incident</title>
+      <classification>O-12 RESTRICTED</classification>
+      <distribution>OPERATIONAL PERSONNEL</distribution>
+      <sessionLabel>6</sessionLabel>
+      <location>ORIZON-4, Dawn Orbit</location>
+    </meta>
+    <overview>Following Operation Jade Knife, Bureau Toth requested Team Bravo’s assistance aboard ORIZON-4, a Bureau Toth watchtower in Dawn orbit, after BLACK LOTUS detected anomalous activity associated with PALE/07. Sergeant Major Rabbit was designated Team Leader. Buzzkill, Q, Karrion Voss and Anya were assigned, while Mary D’Vorce remained on administrative leave, Gypsy remained hospitalised at SHIFA after revival and SILK treatment, and PalOFemi remained on administrative leave pending internal review. At ORIZON-4, Director Amara Venn and ALEPH counterpart NYSA briefed Team Bravo that BLACK LOTUS was an ALEPH-built O-12 safety programme designed to monitor dangerous AI evolution and anomalous digital threats. In Sector D, Vault 3, Buzzkill and Anya discovered an authorised maintenance session at physical Terminal 3B using valid Bureau Toth Systems Auditor credentials belonging to Miriam Solano. Concurrently, Rabbit, Karrion and Q entered the offline Human Room and recovered a PALE/07 research chain involving biological identity reconstruction, Hassassin authentication architecture, SHIFA compatibility research, Combined Army biological forensics and ALEPH Transferred Identity Code validation architecture with target identity class ASPECT. While Buzzkill attempted to secure BLACK LOTUS, PALE/07 seized the node and ORIZON-4 declared NYSA a hostile AI and Team Bravo a compromised support element. A purge sequence followed, using chlorine gas, automated gatling guns, TAGs and ALEPH neo-human assets. Karrion Voss was killed during the pursuit. In the main control room, Team Bravo discovered that PALE had taken control of NYSA, extracted vital information and initiated a sequence to de-orbit ORIZON-4 into Dawn. Team Bravo forced PALE out of NYSA and Anya barely stabilised the watchtower and restored it toward safe orbit. Miriam Solano was later found and confirmed as a human collaborator manipulated through BLACK MIRROR, a PALE contact channel. BLACK LOTUS had functioned as intended by detecting the anomalous intrusion and alerting Bureau Toth. With NYSA’s help, Team Bravo recovered a PALE/07 forecast identifying Concilium, a closed summit involving eight participating authorities, eight identity packages in preparation and the surviving header KNIVES. Rabbit recognised this as the Ariadnan Council of KNIVES. Bureau Noir immediately issued the directive: Pack for Concilium.</overview>
+    <quickFacts>
+      <fact label="MISSION STATUS" value="ORIZON-4 saved // PALE expelled from NYSA // Data extraction occurred" />
+      <fact label="CAMPAIGN" value="Code Infinity — Team Bravo" />
+      <fact label="LOCATION" value="ORIZON-4, Dawn Orbit" />
+      <fact label="TEMPORARY ASSIGNMENT" value="Bureau Toth" />
+      <fact label="MISSION AUTHORITY" value="Director Amara Venn" />
+      <fact label="TEAM LEADER" value="Sergeant Major Rabbit" />
+      <fact label="ALEPH COUNTERPART" value="NYSA" />
+      <fact label="BLACK LOTUS" value="ALEPH-built O-12 safety programme monitoring dangerous AI/anomalous digital threats" />
+      <fact label="BLACK MIRROR" value="PALE contact channel used to manipulate Miriam Solano" />
+      <fact label="TERMINAL 3B" value="Valid authorised maintenance access; operator Miriam Solano" />
+      <fact label="KARRION VOSS" value="Killed during pursuit through ORIZON-4" />
+      <fact label="PALE/07" value="Compromised NYSA, extracted data and attempted to de-orbit ORIZON-4" />
+      <fact label="NEXT LEAD" value="CONCILIUM // COUNCIL OF KNIVES" />
+      <fact label="PALE IDENTITY" value="Still unknown" />
+    </quickFacts>
+    <locationFacts>
+      <fact label="INSTALLATION" value="ORIZON-4 Bureau Toth Watchtower" />
+      <fact label="ORBIT" value="Dawn Orbit" />
+      <fact label="HUMAN STAFF" value="8" />
+      <fact label="ALEPH NEO-HUMANS" value="200+" />
+      <fact label="SECTOR D" value="Vault 3 / BLACK LOTUS monitoring infrastructure" />
+      <fact label="TERMINAL" value="Physical Terminal 3B" />
+      <fact label="HUMAN ROOM" value="Offline human-only above-top-secret intelligence archive" />
+      <fact label="SECTOR G" value="Pursuit route; TAG and neo-human ambushes" />
+      <fact label="FINAL LOCATION" value="Main Control Room" />
+      <fact label="NEXT DESTINATION" value="Concilium" />
+    </locationFacts>
+    <statTiles>
+      <tile value="1" label="Watchtower Saved" />
+      <tile value="1" label="PALE Expelled From NYSA" />
+      <tile value="1" label="Human Collaborator Identified" />
+      <tile value="1" label="Karrion Voss Killed" />
+      <tile value="8" label="Council of KNIVES Identity Packages" />
+      <tile value="200+" label="ALEPH Neo-Humans Aboard ORIZON-4" />
+    </statTiles>
+    <threatAssessment>
+      <meter label="PALE/07 — capable of compromising ALEPH-linked systems" level="very-high" />
+      <meter label="Digital identity compromise — ALEPH TIC validation targeted" level="very-high" />
+      <meter label="Human manipulation — BLACK MIRROR social-engineering route" level="high" />
+      <meter label="ORIZON-4 systems compromise — station assets weaponised" level="very-high" />
+      <meter label="MIRRORGLASS / identity-replication progression" level="very-high" />
+      <meter label="Council of KNIVES — possible eight-leader replacement operation" level="very-high" />
+    </threatAssessment>
+    <objectives>
+      <objective priority="primary" status="done">
+        <title>Assist Bureau Toth investigation at ORIZON-4</title>
+        <description>ACHIEVED — Team Bravo identified the Terminal 3B access, Miriam Solano’s role and PALE’s route into Bureau Toth infrastructure.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Determine why BLACK LOTUS triggered</title>
+        <description>ACHIEVED — BLACK LOTUS detected anomalous PALE-linked activity caused by the backdoor created through Miriam Solano’s authorised maintenance access.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Contain the ORIZON-4 breach</title>
+        <description>ACHIEVED — PALE was forced out of NYSA and the watchtower was prevented from crashing into Dawn.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Protect ORIZON-4</title>
+        <description>ACHIEVED — Anya stabilised the station and restored it toward safe orbit.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Identify the human collaborator</title>
+        <description>ACHIEVED — Miriam Solano was located, interrogated and identified as a manipulated human collaborator rather than a MIRRORGLASS infiltrator.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Determine PALE’s target inside Bureau Toth</title>
+        <description>ACHIEVED — PALE was researching ALEPH Transferred Identity Code validation architecture and target identity class ASPECT.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Recover PALE’s next operational lead</title>
+        <description>ACHIEVED — Team Bravo recovered CONCILIUM / KNIVES and eight identity packages in preparation.</description>
+      </objective>
+      <objective priority="tertiary" status="open">
+        <title>Identify PALE</title>
+        <description>UNRESOLVED — PALE/07 remains unidentified despite direct contact and repeated operations.</description>
+      </objective>
+    </objectives>
+    <media />
+    <log>
+      <entry ts="Pre-Mission Personnel Disposition">Mary D’Vorce remained on administrative leave. Team Leader Gypsy remained on hospitalisation leave following his death during Operation Jade Knife. He had been revived by Haqqislam doctors and transferred to SHIFA for SILK treatment under O-12 direction; his future operational status remained undetermined. PalOFemi remained on administrative leave pending internal review for breach of SOP. Buzzkill, Q, Sergeant Major Rabbit and Karrion Voss were assigned to the mission. Rabbit was designated Team Leader. Anya, who had supported Operation Jade Knife as part of Team Hades, was also assigned.</entry>
+      <entry ts="Mission Setup — Bureau Toth Request">Following Operation Jade Knife, Bureau Noir received a request from Bureau Toth for Team Bravo to assist with an investigation aboard ORIZON-4 in Dawn orbit. Bureau Toth specifically requested the team because they had encountered PALE/07 and recovered the BLACK LOTUS callsign.</entry>
+      <entry ts="Mission Assignment — Director Amara Venn">Team Bravo was briefed and immediately sent to ORIZON-4. For the duration of Operation Watchglass, the team was temporarily assigned to Bureau Toth Director Amara Venn.</entry>
+      <entry ts="Scene 1 — Arrival at ORIZON-4">Team Bravo arrived aboard ORIZON-4 and met Director Amara Venn and ALEPH counterpart NYSA. The team received a formal briefing on Bureau Toth, its function within O-12 and its oversight responsibilities concerning ALEPH and anomalous digital threats.</entry>
+      <entry ts="Scene 1 — Bureau Toth Intelligence Role">Director Venn explained that Bureau Toth had been closely monitoring events on Dawn and had supplied intelligence to Bureau Noir Secretariat for dissemination to Team Bravo. BLACK LOTUS had been detected in anomalous digital chatter connected to the ongoing PALE investigation.</entry>
+      <entry ts="Scene 1 — BLACK LOTUS Defined">Director Venn clarified that BLACK LOTUS was not a person. BLACK LOTUS was an ALEPH-built safety programme created for O-12 to monitor dangerous AI evolution and other anomalies in the digital realm. The programme had been developed alongside ORIZON-4 as a safeguard intended to detect AI or digital entities that might evolve into threats to the Human Sphere.</entry>
+      <entry ts="Scene 1 — ALEPH Position">NYSA confirmed BLACK LOTUS’s purpose and stated that ALEPH accepted and supported O-12 oversight through Bureau Toth. The programme was therefore not evidence of hostility toward ALEPH but part of the established safety architecture between ALEPH and O-12.</entry>
+      <entry ts="Anya Observation — ORIZON-4 Staffing">Anya observed that ORIZON-4 was comparable in scale to Gates of Dawn yet appeared almost devoid of human personnel. Director Venn confirmed that the watchtower contained only eight human staff but more than two hundred ALEPH neo-humans.</entry>
+      <entry ts="Anya Observation — Physical Restrictions">Anya observed that NYSA and the other neo-humans were subject to physical movement restrictions and were prohibited from entering specific sectors. ORIZON-4 therefore functioned as a black site operated largely by ALEPH assets while also containing deeper black sites inaccessible to those same assets.</entry>
+      <entry ts="Scene 2 — Sector D / Vault 3">Team Bravo was led into Sector D, Vault 3, a restricted Bureau Toth intelligence site containing sensitive material stored and categorised before dissemination to other O-12 bureaux. BLACK LOTUS resided within this monitoring infrastructure.</entry>
+      <entry ts="Scene 2 — Unscheduled BLACK LOTUS Update">Buzzkill and Anya, working with NYSA, discovered that BLACK LOTUS had registered an unscheduled update associated with a hardware service conducted nine months earlier.</entry>
+      <entry ts="Scene 2 — Terminal 3B Access">Investigation of Vault 3 revealed that physical Terminal 3B had been accessed during an authorised maintenance session. The system recorded: MAINTENANCE ACCESS — AUTHORISED. VAULT 3 / PHYSICAL TERMINAL 3B. CREDENTIAL: BUREAU TOTH SYSTEMS AUDITOR. STATUS: VALID. ACCESS WINDOW: 04:12–04:19.</entry>
+      <entry ts="Scene 2 — Miriam Solano Credential">The maintenance session identified the operator as Miriam Solano. Credential status was valid and no security flags were recorded. One storage drawer was slightly newer than surrounding units, but tamper seals were intact, nothing appeared physically forced, no obvious malware residue was found and the system considered the access legitimate.</entry>
+      <entry ts="Scene 2 — The Human Room">Concurrently, Karrion Voss, Rabbit and Q entered the Human Room. NYSA was physically unable to enter by design. The Human Room was an offline, above-top-secret archive containing intelligence deliberately kept outside normal online storage and ALEPH access.</entry>
+      <entry ts="Scene 2 — Function of the Human Room">The Human Room stored and assessed highly sensitive material before Bureau Toth disseminated selected intelligence to relevant O-12 parties. Its existence reflected Bureau Toth’s requirement for human-controlled oversight independent of normal digital systems.</entry>
+      <entry ts="Scene 2 — PALE/07 Research Chain">Inside the Human Room, Team Bravo recovered a captured PALE/07 research chain containing: BIOLOGICAL IDENTITY RECONSTRUCTION; HASSASSIN AUTHENTICATION ARCHITECTURE; SHIFA COMPATIBILITY RESEARCH; COMBINED ARMY BIOLOGICAL FORENSICS.</entry>
+      <entry ts="Scene 2 — ALEPH Identity Target">The research chain continued with ALEPH TRANSFERRED IDENTITY CODE; VALIDATION ARCHITECTURE; TARGET IDENTITY CLASS: ASPECT. Team Bravo concluded that PALE/07 was studying how to make a false identity pass as a legitimate ALEPH Aspect.</entry>
+      <entry ts="Buzzkill Observation — Node Opened">While Buzzkill accessed the Terminal 3B mainframe in an attempt to secure BLACK LOTUS, the monitors went dark and PALE/07 took control. Buzzkill heard PALE thank him for opening the node, leading Buzzkill to fear that his access had inadvertently allowed PALE into one of O-12’s most secure facilities.</entry>
+      <entry ts="Scene 2 — Compromise Alarm">Emergency alarms activated throughout the Human Room and Vault 3. Red emergency indicators declared: NYSA — HOSTILE AI. TEAM BRAVO — COMPROMISED SUPPORT ELEMENT.</entry>
+      <entry ts="Rabbit Observation — Accused">Rabbit recorded that Director Venn reacted with anger and initially accused Team Bravo of bringing the hostile entity into ORIZON-4. The team was forced to consider whether its own actions had enabled the breach.</entry>
+      <entry ts="Scene 3 — Purge Sequence">A new station command sounded over the intercom: HOSTILE HUMANS, BEGIN PURGE SEQUENCE. Green chlorine gas began filling the Human Room and Cold Vault.</entry>
+      <entry ts="Scene 3 — Evacuation">Team Bravo secured Director Venn and evacuated toward the main Vault while attempting to survive the gas attack and maintain access to the station.</entry>
+      <entry ts="Scene 3 — Vault 3 Kill Box">At the main Vault, Team Bravo observed NYSA apparently engaging purge protocols. Automated security gatling guns activated, turning Vault 3 into a kill box.</entry>
+      <entry ts="Scene 3 — NYSA Escapes">NYSA withdrew from the Vault while Team Bravo fought through or bypassed the security obstacles. Tracking data showed her moving toward the main control room.</entry>
+      <entry ts="Scene 4 — Pursuit Begins">Team Bravo pursued NYSA through ORIZON-4 toward Sector G and the main control room. During the pursuit, hostile station systems interfered with Karrion Voss’s power armour.</entry>
+      <entry ts="Karrion Observation — Power Armour Compromised">Karrion reported that ALEPH-controlled systems disrupted his power armour as the team attempted to pursue NYSA through the station.</entry>
+      <entry ts="Scene 4 — TAG Ambush">NYSA activated TAGs against Team Bravo during the pursuit. The resulting engagement caused heavy casualties.</entry>
+      <entry ts="Scene 4 — Karrion Voss Killed">Karrion Voss was killed during the TAG engagement. His future Resurrection status remained unresolved at the conclusion of the mission.</entry>
+      <entry ts="Scene 4 — Sector G Trap">Team Bravo continued into Sector G despite the casualties. NYSA triggered another trap involving approximately twenty ALEPH neo-human combatants, described by Karrion in his final field observation as 'neo-human space ninjas.'</entry>
+      <entry ts="Scene 4 — Station Assets Weaponised">The pursuit confirmed that PALE was using ORIZON-4’s legitimate ALEPH assets and security architecture against Team Bravo rather than relying only on external infiltrators.</entry>
+      <entry ts="Scene 5 — Main Control Room">Team Bravo finally reached NYSA in the main control room.</entry>
+      <entry ts="Scene 5 — PALE Controls NYSA">Team Bravo discovered that PALE had taken control of NYSA and had used her access to extract vital information from the ORIZON-4 mainframe.</entry>
+      <entry ts="Scene 5 — De-Orbit Sequence">Before Team Bravo fully understood PALE’s objective, PALE/NYSA initiated a sequence intended to drive ORIZON-4 out of stable orbit and crash the watchtower into Dawn.</entry>
+      <entry ts="Scene 5 — Final Engagement">Team Bravo fought to stop PALE/NYSA while the station continued to lose orbital stability. The team ultimately succeeded in forcing PALE out of NYSA.</entry>
+      <entry ts="Scene 5 — Anya Stabilises ORIZON-4">With PALE expelled, Anya took control of the station’s orbital systems. She barely succeeded in stabilising ORIZON-4 and began the slow process of restoring the watchtower toward a safe orbit.</entry>
+      <entry ts="Post-Mortem 1 — Miriam Solano Located">Following the crisis, Team Bravo located Miriam Solano and subjected her to interrogation.</entry>
+      <entry ts="Post-Mortem 1 — Miriam’s Belief">Miriam stated that she believed ALEPH was losing control and that Bureau Toth was withholding dangerous information from the Human Sphere. She specifically believed NYSA was orchestrating the attacks on Dawn.</entry>
+      <entry ts="Post-Mortem 1 — BLACK MIRROR">Miriam revealed that she had been contacted through an entity or channel she knew as BLACK MIRROR. This contact was identified as PALE. PALE manipulated her fears and persuaded her to provide a backdoor into Bureau Toth’s network.</entry>
+      <entry ts="Post-Mortem 1 — Human Collaborator">Miriam was confirmed to be human rather than a MIRRORGLASS infiltrator. Her actions were driven by fear, conviction and manipulation rather than biological replacement.</entry>
+      <entry ts="Post-Mortem 1 — BLACK LOTUS Functioned">Miriam nearly completed PALE’s access plan, but BLACK LOTUS detected the dangerous anomaly and alerted Bureau Toth first. The safety programme therefore functioned as intended and was not the source of the attack.</entry>
+      <entry ts="Post-Mortem 2 — PALE Message Recovered">With NYSA’s assistance, Team Bravo traced and recovered the outgoing message sent by PALE/07.</entry>
+      <entry ts="Post-Mortem 2 — Operational Forecast">The recovered message read: BLACK LOTUS // OPERATIONAL FORECAST. LOCATION: CONCILIUM. EVENT CLASS: CLOSED DIPLOMATIC SUMMIT. PARTICIPATING AUTHORITIES: 8. IDENTITY PACKAGES: IN PREPARATION. SYNCHRONISATION WINDOW: PENDING.</entry>
+      <entry ts="Post-Mortem 2 — KNIVES">One final header survived beneath eight encrypted identity packages: KNIVES.</entry>
+      <entry ts="Rabbit Recognition — Council of KNIVES">Rabbit recognised Concilium as an Ariadnan site where the eight leaders of Ariadna converge for their annual summit. The summit’s codename is the Council of KNIVES.</entry>
+      <entry ts="Strategic Assessment — Possible Leader Replacement">Team Bravo concluded that PALE might be preparing to target, replicate or replace the eight Ariadnan leaders attending the Council of KNIVES.</entry>
+      <entry ts="Mission Outcome — ORIZON-4">Operation Watchglass succeeded in preventing ORIZON-4 from impacting Dawn. PALE was forced out of NYSA, Miriam Solano was identified as the manipulated human access point, and BLACK LOTUS was confirmed to have functioned correctly as an O-12/ALEPH safeguard.</entry>
+      <entry ts="Mission Outcome — Intelligence Loss">Despite the successful containment, PALE extracted vital information from ORIZON-4 before being expelled. The precise extent of the data loss remained uncertain.</entry>
+      <entry ts="Continuing Threat — Institutional Identity">Recovered Human Room records confirmed that PALE’s research had progressed beyond biological impersonation toward institutional and digital identity validation, including the architecture used to recognise ALEPH Aspects.</entry>
+      <entry ts="Continuing Objective — Identify PALE">PALE/07 remained unidentified at the end of Operation Watchglass. Its origin, controller, true nature and broader strategic objective remained unresolved.</entry>
+      <entry ts="Follow-Up Directive">Bureau Noir Secretariat was informed of the Concilium / Council of KNIVES threat. The response was immediate: PACK FOR CONCILIUM.</entry>
+      <entry ts="Mission Conclusion">Operation Watchglass demonstrated that PALE could compromise digital entities, manipulate genuine humans, weaponise O-12 infrastructure and research systems designed to authenticate identity itself. ORIZON-4 survived, but the next target may be the eight leaders of Ariadna at the Council of KNIVES.</entry>
+    </log>
+  </dossier>
+</dossiers>
