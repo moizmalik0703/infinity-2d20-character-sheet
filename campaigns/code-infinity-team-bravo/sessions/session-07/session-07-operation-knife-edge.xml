@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dossiers>
+  <dossier id="BN-KNIFE-EDGE-AAR-07" campaignSlug="code-infinity-team-bravo">
+    <meta>
+      <title>Operation Knife Edge — The Council of Knives</title>
+      <classification>O-12 RESTRICTED</classification>
+      <distribution>OPERATIONAL PERSONNEL</distribution>
+      <sessionLabel>7</sessionLabel>
+      <location>Concilium, Dawn</location>
+    </meta>
+    <overview>Following the ORIZON-4 incident, Bureau Noir Secretariat directed Team Bravo to Concilium on Dawn to support security for the Council of Knives. Gypsy returned from SHIFA and deployed while still under leadership review. Buzzkill, Anya, Dr Farid Qassim 'Q', Sergeant Major Rabbit and Ariadnan assassin Tom Hendry ('Jobe') were also present. En route, the team rested, received medical care and repaired armour before arriving at Concilium. Captain Yelena Voronina of Stavka / Special Operations Command received the team and escorted them to Colonel Darya Moroz, commanding officer of Concilium. After a heated exchange, Moroz allowed Team Bravo to present its case to the secret eight-person Council of Knives and authorised Q to conduct MIRRORGLASS compatibility scans. The highest compatibility results were Simon Blumfeld at 95%, Charlton Branson at 89% and Margaret Fuhler at 85%. During the scans, an EMT grenade disabled the heavy infantry guard detail. Ten unaffected guards were revealed as MIRRORGLASS copies and attempted to abduct several principals. Four copies escaped by base jump with apparent captives Nadya Orlova, Simon Blumfeld, Charlton Branson and Margaret Fuhler. Rabbit, Gypsy, Buzzkill and Anya pursued down the mountain while Q and Tom remained at Concilium. The real Nadya Orlova then arrived after flight delays, proving the Orlova previously present at the summit was already a MIRRORGLASS copy. During the mountain chase, the apparent abductees turned on Team Bravo, confirming that multiple principals in the fleeing group were also copies. Team Bravo ultimately destroyed all escaping MIRRORGLASS security copies and imposter principals. Meanwhile, Q and Tom traced the homing signatures of the genuine Simon Blumfeld, Charlton Branson and Margaret Fuhler into an underground bunker beneath Concilium. The three real principals were found alive in MIRRORGLASS chambers in suspended animation, indicating they had been abducted and copied before the summit. Q stabilised them while Tom accessed a communications node and made direct contact with PALE/07. PALE expressed disappointment that Buzzkill was not present, then stated that it had what it needed and suggested they might meet again at Daybreak. Post-operation analysis confirmed that all eight genuine principals survived, the active copies were destroyed, and data stolen from Bureau Toth has enabled PALE to begin masking MIRRORGLASS signatures, making future scans less reliable. A recovered bunker transfer order and physical freight ledger identified DAYBREAK GATE as the next destination and showed three biological seed consignments routed through the officially mothballed installation. Bureau Noir confirmed Daybreak Gate had resumed communications and had been transmitting for approximately one hour. Following the operation, Ariadnan authorities approved the Ariadnan Cross of Valour for Sergeant Major Rabbit and recommended the same honour for Tom Hendry, with Hendry's confirmation held pending a satisfactory personal conduct review and a recommended Operational Wellness and Readiness Workshop referral. Gypsy, Dr Farid Qassim 'Operator Q', Buzzkill and Anya were awarded the Ariadnan Medal of Allied Friendship. Bureau Noir also closed Gypsy's outstanding leadership review and restored his line-leadership eligibility without displacing Rabbit's current appointment as Team Leader.</overview>
+    <quickFacts>
+      <fact label="MISSION STATUS" value="Council secured // All eight genuine principals saved // Active impostors destroyed" />
+      <fact label="CAMPAIGN" value="Code Infinity — Team Bravo" />
+      <fact label="LOCATION" value="Concilium, Dawn" />
+      <fact label="OPERATION" value="KNIFE EDGE" />
+      <fact label="TEAM LEADER" value="Sergeant Major Rabbit" />
+      <fact label="ACTIVE TEAM" value="Gypsy; Buzzkill; Anya; Dr Farid Qassim 'Q'; Rabbit; Tom Hendry ('Jobe')" />
+      <fact label="CONCILIUM SECURITY" value="Captain Yelena Voronina // Colonel Darya Moroz" />
+      <fact label="COUNCIL" value="Eight concealed Ariadnan principals" />
+      <fact label="HIGHEST MIRRORGLASS COMPATIBILITY" value="Simon Blumfeld 95% // Charlton Branson 89% // Margaret Fuhler 85%" />
+      <fact label="CONFIRMED PRIOR REPLACEMENT" value="Nadya Orlova" />
+      <fact label="GENUINE PRINCIPALS RECOVERED BELOW" value="Simon Blumfeld // Charlton Branson // Margaret Fuhler" />
+      <fact label="PALE CONTACT" value="Direct contact with Tom Hendry and Q in underground bunker" />
+      <fact label="NEW CAPABILITY" value="PALE can mask MIRRORGLASS signatures using Bureau Toth-derived data" />
+      <fact label="NEXT LEAD" value="DAYBREAK GATE" />
+      <fact label="PALE IDENTITY" value="Still unknown" />
+      <fact label="RABBIT HONOUR" value="Ariadnan Cross of Valour — AWARDED" />
+      <fact label="TOM HENDRY HONOUR" value="Ariadnan Cross of Valour — RECOMMENDED / PENDING CONDUCT REVIEW" />
+      <fact label="GYPSY HONOUR" value="Ariadnan Medal of Allied Friendship — AWARDED" />
+      <fact label="GYPSY LEADERSHIP REVIEW" value="CLOSED // Line-leadership eligibility RESTORED" />
+      <fact label="Q HONOUR" value="Ariadnan Medal of Allied Friendship — AWARDED" />
+      <fact label="BUZZKILL HONOUR" value="Ariadnan Medal of Allied Friendship — AWARDED" />
+      <fact label="ANYA HONOUR" value="Ariadnan Medal of Allied Friendship — AWARDED" />
+    </quickFacts>
+    <locationFacts>
+      <fact label="PRIMARY SITE" value="Concilium" />
+      <fact label="THEATRE" value="Dawn" />
+      <fact label="SUMMIT" value="Council of Knives" />
+      <fact label="SUMMIT SECURITY" value="Approx. 40 security personnel in chamber before attack" />
+      <fact label="PURSUIT ROUTE" value="Mountain ridge below Concilium" />
+      <fact label="ESCAPE ASSETS" value="Four armoured Ariadnan jeeps" />
+      <fact label="HIDDEN SITE" value="Underground bunker / MIRRORGLASS chamber complex beneath Concilium" />
+      <fact label="NEXT DESTINATION" value="Daybreak Gate" />
+    </locationFacts>
+    <statTiles>
+      <tile value="8" label="Genuine Principals Saved" />
+      <tile value="4" label="Apparent Principals Taken In Initial Escape" />
+      <tile value="3" label="Genuine Principals Recovered In Suspended Animation" />
+      <tile value="95%" label="Highest MIRRORGLASS Compatibility" />
+      <tile value="3" label="Biological Seed Consignments Via Daybreak Gate" />
+      <tile value="1 hr" label="Approximate Daybreak Gate Transmission Window" />
+      <tile value="1" label="Ariadnan Cross of Valour Awarded" />
+      <tile value="1" label="Ariadnan Cross of Valour Pending Review" />
+      <tile value="4" label="Ariadnan Medals of Allied Friendship Awarded" />
+    </statTiles>
+    <threatAssessment>
+      <meter label="MIRRORGLASS leadership replacement — demonstrated at Council level" level="very-high" />
+      <meter label="MIRRORGLASS signature masking — scanning reliability degraded" level="very-high" />
+      <meter label="PALE/07 — direct operational control remains active" level="very-high" />
+      <meter label="Compromised security identities — authentic-looking guard copies" level="high" />
+      <meter label="Pre-summit abduction capability — genuine principals taken before event" level="very-high" />
+      <meter label="DAYBREAK GATE — reactivated mothballed installation transmitting again" level="very-high" />
+    </threatAssessment>
+    <objectives>
+      <objective priority="primary" status="done">
+        <title>Protect the Council of Knives</title>
+        <description>ACHIEVED — All eight genuine Ariadnan principals survived the operation.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Identify active MIRRORGLASS replacements</title>
+        <description>ACHIEVED — Team Bravo exposed and destroyed the active security and principal copies involved in the Concilium operation.</description>
+      </objective>
+      <objective priority="primary" status="done">
+        <title>Prevent political replacement or wider discord</title>
+        <description>ACHIEVED — No active imposter principal escaped Concilium to assume recognised authority elsewhere in Ariadna.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Recover abducted genuine principals</title>
+        <description>ACHIEVED — Simon Blumfeld, Charlton Branson and Margaret Fuhler were found alive in suspended animation and stabilised by Q.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Determine PALE’s next operational lead</title>
+        <description>ACHIEVED — Recovered transfer orders and freight records identified DAYBREAK GATE.</description>
+      </objective>
+      <objective priority="secondary" status="done">
+        <title>Assess MIRRORGLASS detection reliability</title>
+        <description>ACHIEVED — SHIFA analysis confirmed PALE is using stolen Bureau Toth data to mask MIRRORGLASS signatures.</description>
+      </objective>
+      <objective priority="tertiary" status="open">
+        <title>Identify PALE</title>
+        <description>UNRESOLVED — PALE/07 remains unidentified and escaped after direct contact in the bunker.</description>
+      </objective>
+    </objectives>
+    <media>
+      <!--Citation PNGs to attach manually after import: Session7_Citation_Rabbit_Ariadnan_Cross_of_Valour.png; Session7_Citation_Tom_Hendry_Ariadnan_Cross_of_Valour_PENDING.png; Session7_Citation_Gypsy_Allied_Friendship.png; Session7_Citation_Q_Allied_Friendship.png; Session7_Citation_Buzzkill_Allied_Friendship.png; Session7_Citation_Anya_Allied_Friendship.png-->
+    </media>
+    <log>
+      <entry ts="Pre-Mission Personnel — Present">Team Bravo personnel present for Operation Knife Edge were Gypsy, Buzzkill, Anya, Dr Farid Qassim 'Q', Sergeant Major Rabbit and Tom Hendry ('Jobe'). Rabbit remained Team Leader. Gypsy had returned from SHIFA but remained under leadership review.</entry>
+      <entry ts="Mission Order — Concilium">Bureau Noir Secretariat directed Team Bravo to Concilium on Dawn to support security for the Council of Knives event.</entry>
+      <entry ts="Reinforcement — Gypsy and Tom Hendry">Bureau Noir sent Gypsy and Ariadnan assassin Tom Hendry from Dawn to support the Concilium mission.</entry>
+      <entry ts="Transit — Recovery">En route to Concilium, Team Bravo rested, received medical treatment and repaired or mended damaged armour before arrival.</entry>
+      <entry ts="Scene 1 — Arrival at Concilium">Upon arrival, Team Bravo was received by Captain Yelena Voronina of Stavka / Special Operations Command, Captain of Concilium security.</entry>
+      <entry ts="Scene 1 — Voronina Recognises Hendry">Captain Voronina recognised Tom Hendry and exchanged curt remarks with him.</entry>
+      <entry ts="Rabbit Observation — Voronina’s Test">Rabbit judged that Voronina’s guarded exchange with Hendry was deliberate tradecraft: she was using interrogation and behavioural cues to satisfy herself that Tom was not an impostor.</entry>
+      <entry ts="Scene 1 — Colonel Darya Moroz">Voronina brought Team Bravo before Colonel Darya Moroz, commanding officer of Concilium. Moroz oversaw daily Concilium operations and was responsible for summit security whenever the Council of Knives convened.</entry>
+      <entry ts="Scene 1 — O-12 Request">Moroz confirmed that he had received an official O-12 request authorising Team Bravo to support the summit and directing that Q scan the principals as a safety measure.</entry>
+      <entry ts="Scene 1 — Moroz Distrust">Colonel Moroz was unconvinced by Team Bravo’s intentions and challenged the need for O-12 involvement.</entry>
+      <entry ts="Scene 1 — Heated Exchange">Q and Rabbit engaged in a heated exchange with Colonel Moroz concerning the scan requirement and Team Bravo’s role.</entry>
+      <entry ts="Scene 1 — Audience Granted">Despite his reservations, Moroz ultimately granted Team Bravo an audience with the Council of Knives.</entry>
+      <entry ts="Buzzkill Observation — Ariadnan Technology">Buzzkill observed that Ariadna used far less visible advanced technology than he was accustomed to. He was unsettled by how little he understood about Ariadnan countermeasures and what systems he could rely upon if security failed.</entry>
+      <entry ts="Scene 2 — Council Chamber">Team Bravo entered the Council chamber and saw the eight secret principals of the Council of Knives.</entry>
+      <entry ts="Rabbit Observation — Council Secrecy">Rabbit regarded the meeting as an honour. Ariadna deliberately concealed the identities of the Council of Knives for leadership security. Rabbit recognised some members as war heroes, while others appeared to have maintained civilian or low-profile lives.</entry>
+      <entry ts="Scene 2 — Scan Vote">Rabbit and Q persuaded the Council to vote on whether the principals would submit to MIRRORGLASS compatibility scans.</entry>
+      <entry ts="Scan 1 — Nadya Orlova">Nadya Orlova consented but filed a formal protest over irregular protocols. MIRRORGLASS Compatibility Matrix result: 18%.</entry>
+      <entry ts="Scan 2 — Simon Blumfeld">Simon Blumfeld consented. MIRRORGLASS Compatibility Matrix result: 95%.</entry>
+      <entry ts="Scan 3 — Vladimir Tarkov">Vladimir Tarkov consented but filed a formal protest over irregular protocols. MIRRORGLASS Compatibility Matrix result: 76%.</entry>
+      <entry ts="Scan 4 — Devan Sanders">Devan Sanders, Head Councilman, consented. MIRRORGLASS Compatibility Matrix result: 59%.</entry>
+      <entry ts="Scan 5 — Ayra Spelling">Ayra Spelling consented. MIRRORGLASS Compatibility Matrix result: 45%.</entry>
+      <entry ts="Scan 6 — Natalya Smirnova">Natalya Smirnova consented. MIRRORGLASS Compatibility Matrix result: 34%.</entry>
+      <entry ts="Scan 7 — Charlton Branson">Charlton Branson consented. MIRRORGLASS Compatibility Matrix result: 89%.</entry>
+      <entry ts="Scan 8 — Margaret Fuhler">Margaret Fuhler consented. MIRRORGLASS Compatibility Matrix result: 85%.</entry>
+      <entry ts="Q Observation — Priority Targets">Based on compatibility scores, Q identified Simon Blumfeld, Charlton Branson and Margaret Fuhler as the most likely high-value MIRRORGLASS targets.</entry>
+      <entry ts="Gypsy Observation — SHIFA Body">Gypsy continued adjusting to his SHIFA-modified body after his prior KIA. The unfamiliar enhancements left him distracted and still relearning his physical limits.</entry>
+      <entry ts="Anya Observation — Security Irregularities">Anya studied roughly forty security personnel in the chamber and noticed at least seven guards with mismatched uniform details and/or behaviour inconsistent with the surrounding security detail.</entry>
+      <entry ts="Scene 3 — EMT Grenade">While Q and Rabbit conducted the scans, an EMT grenade detonated inside the Council chamber and disabled the heavy infantry guards.</entry>
+      <entry ts="Scene 3 — Ten Guards Remain">Approximately ten security personnel remained unaffected by the EMT effect.</entry>
+      <entry ts="Scene 3 — MIRRORGLASS Security Revealed">The ten unaffected guards were revealed as MIRRORGLASS copies and immediately turned on the summit.</entry>
+      <entry ts="Scene 3 — Kidnapping Attempt">The MIRRORGLASS security copies attempted to abduct Council principals while fighting Team Bravo.</entry>
+      <entry ts="Scene 3 — Four Copies Escape">Four MIRRORGLASS copies escaped the chamber by base-jumping from the castle/ridge toward four armoured Ariadnan jeeps waiting below.</entry>
+      <entry ts="Scene 3 — Apparent Captives">The apparent abducted principals were Nadya Orlova, Simon Blumfeld, Charlton Branson and Margaret Fuhler.</entry>
+      <entry ts="Scene 3 — Pursuit Team">Rabbit, Gypsy, Buzzkill and Anya acquired manual parachutes and pursued the escaping force by base jump.</entry>
+      <entry ts="Scene 3 — Castle Team">Q and Tom Hendry remained at Concilium to provide medical and security support.</entry>
+      <entry ts="Scene 3 — Tom Overwatch">Tom Hendry took point with his sniper rifle while Q rendered medical treatment to casualties.</entry>
+      <entry ts="Scene 3 — Voronina and Moroz Response">Captain Voronina and Colonel Moroz took charge of the surviving Concilium security response.</entry>
+      <entry ts="Scene 3 — Real Nadya Orlova Arrives">Nadya Orlova entered the chamber after arriving late due to flight delays. Her earlier transmissions had not penetrated the secure summit channels.</entry>
+      <entry ts="Scene 3 — Identity Reversal">The late arrival proved that the Nadya Orlova previously scanned and now apparently being abducted had already been a MIRRORGLASS copy.</entry>
+      <entry ts="Q Observation — Wrong Orlova">Q immediately recognised the implication: the team had not witnessed Orlova being replaced during the attack. The replacement had been inside the Council before Team Bravo arrived.</entry>
+      <entry ts="Gypsy Observation — Copy Attacks">After a successful base jump, Gypsy moved to free the apparent Nadya Orlova. The copy turned on him and shot him with a pistol, nearly killing him.</entry>
+      <entry ts="Scene 4 — Mountain Ridge Battle">The mountain ridge erupted into a running battle as Gypsy, Buzzkill, Anya and Rabbit were pinned down by MIRRORGLASS security copies and the apparent principals travelling with them.</entry>
+      <entry ts="Scene 4 — Q Radios Confirmation">Q radioed the pursuit team from Concilium and confirmed that the real Nadya Orlova was at the castle. He warned that the fleeing principals could themselves be MIRRORGLASS copies.</entry>
+      <entry ts="Scene 4 — Rescue Becomes Containment">The pursuit team changed its operational assumption from rescuing abducted principals to stopping possible leadership copies from escaping.</entry>
+      <entry ts="Scene 4 — Mountain Vehicle Chase">The engagement escalated into a high-speed chase across the mountain routes around Concilium, with both sides taking severe risks.</entry>
+      <entry ts="Scene 4 — Escape Force Destroyed">Team Bravo ultimately killed all MIRRORGLASS security copies involved in the escape and destroyed the imposter principal copies.</entry>
+      <entry ts="Scene 4 — No Impostor Escapes">No known MIRRORGLASS principal escaped Concilium to assume legitimate authority elsewhere in Ariadna.</entry>
+      <entry ts="Scene 5 — Homing Signatures Remain">Q and Tom Hendry were informed that the homing signatures associated with the three other apparently captured principals were still transmitting from somewhere inside Concilium.</entry>
+      <entry ts="Scene 5 — Moroz Requests Assistance">Colonel Moroz asked Q and Tom to assist in locating the signals.</entry>
+      <entry ts="Scene 5 — Underground Bunker">The signals led Q and Tom into an underground bunker deep within the mountain caverns beneath Concilium.</entry>
+      <entry ts="Scene 5 — MIRRORGLASS Chambers">Inside the bunker they found the genuine Simon Blumfeld, Charlton Branson and Margaret Fuhler already placed in MIRRORGLASS chambers and held in suspended animation.</entry>
+      <entry ts="Scene 5 — Prior Abductions">The evidence indicated that Blumfeld, Branson and Fuhler had likely been abducted and copied before the summit began.</entry>
+      <entry ts="Scene 5 — Bunker Defenders">Tom Hendry and Q encountered and neutralised eight guards and scientific personnel protecting the bunker operation.</entry>
+      <entry ts="Scene 5 — Q Stabilises Principals">Q stabilised the genuine principals and preserved them for recovery.</entry>
+      <entry ts="Scene 5 — Communications Node">Tom Hendry located a communications node inside the bunker and accessed the system.</entry>
+      <entry ts="Scene 5 — PALE Appears">PALE/07 manifested through the communications node and reacted with disappointment that Buzzkill was not the operative before it.</entry>
+      <entry ts="PALE Exchange — Tom">PALE said: 'You are not Buzzkill.' Tom Hendry replied: 'No, I’m new.'</entry>
+      <entry ts="PALE Exchange — Q">Q told PALE: 'You failed again!'</entry>
+      <entry ts="PALE Exchange — Daybreak">PALE replied: 'On the contrary. I have what I need. I’ll perhaps see you at Daybreak.' PALE then terminated the contact.</entry>
+      <entry ts="Post-Investigation — All Principals Saved">Team Bravo confirmed that all eight genuine Council of Knives principals had survived.</entry>
+      <entry ts="Post-Investigation — Copies Identified">Team Bravo determined which principals had been copied and prevented the active impostors from causing further political discord.</entry>
+      <entry ts="Post-Investigation — Signature Masking">SHIFA analysis of recovered information confirmed that data stolen from Bureau Toth had enabled PALE to begin masking MIRRORGLASS signatures, making future copies more difficult to identify through scanning alone.</entry>
+      <entry ts="Post-Operation Honours — Ariadnan Commendations">Following Operation KNIFE EDGE, Stavka and the Council of Knives submitted formal commendations for Team Bravo personnel whose actions directly prevented the replacement, abduction and political exploitation of senior Ariadnan leadership.</entry>
+      <entry ts="Citation — Sergeant Major Rabbit">AWARDED: ARIADNAN CROSS OF VALOUR. For exceptional courage, leadership and steadfast service during Operation KNIFE EDGE. Sergeant Major Rabbit led Team Bravo during the attack upon the Council of Knives, personally participated in the pursuit of the escaping MIRRORGLASS force and maintained operational cohesion during a rapidly changing identity-compromise crisis. His decisions directly contributed to the rescue of the Council principals, the destruction of active MIRRORGLASS leadership copies and the prevention of a hostile operation intended to destabilise Ariadnan command and political continuity. For conspicuous service to Ariadna in defence of its leadership and sovereignty, Sergeant Major Rabbit was awarded the Ariadnan Cross of Valour.</entry>
+      <entry ts="Citation — Tom Hendry">RECOMMENDED: ARIADNAN CROSS OF VALOUR. For exceptional courage and operational initiative during the attack on the Council of Knives at Concilium. Operative Tom Hendry remained at the summit during the initial crisis, assisted in securing the facility, supported the search for the missing Council principals, penetrated the concealed MIRRORGLASS installation beneath Concilium, neutralised hostile personnel and directly contributed to the recovery of three abducted Council members. His actions further contributed to exposing a coordinated attempt to compromise Ariadnan leadership and destabilise the established political order of Dawn.</entry>
+      <entry ts="Administrative Note — Tom Hendry">Confirmation of Tom Hendry's Ariadnan Cross of Valour is pending satisfactory completion of a post-operation personal conduct review. The reviewing authority further recommends referral to an Operational Wellness and Readiness Workshop as a supportive professional-development measure addressing operational readiness, judgement and long-term service sustainability. The referral is not presently disciplinary action and does not invalidate the gallantry recommendation.</entry>
+      <entry ts="Citation — O-12 Operative Gypsy">AWARDED: ARIADNAN MEDAL OF ALLIED FRIENDSHIP. For courage and selfless action in defence of the Council of Knives during Operation KNIFE EDGE. Despite having only recently returned to active duty following extensive SHIFA medical reconstruction, Operative Gypsy pursued the escaping MIRRORGLASS force and placed himself in direct danger while attempting to recover what was believed to be an abducted Council principal. He sustained severe injuries during the engagement but continued to contribute to the operation. His willingness to risk his life in defence of Ariadnan leadership was recognised with the Ariadnan Medal of Allied Friendship.</entry>
+      <entry ts="Bureau Noir Personnel Action — Gypsy">Following review of Gypsy's conduct during Operation KNIFE EDGE, the Bureau Noir Secretariat formally CLOSED his outstanding leadership review. The review found that Gypsy demonstrated appropriate judgement, commitment to mission objectives and willingness to operate within the revised Team Bravo command structure. Effective immediately, Gypsy's line-leadership eligibility was RESTORED. This does not supersede Sergeant Major Rabbit's current appointment as Team Leader; Gypsy may again be considered for formal section or mission leadership assignments at Bureau Noir discretion.</entry>
+      <entry ts="Citation — Dr Farid Qassim 'Operator Q'">AWARDED: ARIADNAN MEDAL OF ALLIED FRIENDSHIP. For distinguished medical and operational service during the defence of the Council of Knives. Dr Farid Qassim provided emergency medical treatment during the Concilium attack, assisted in maintaining summit stability after the initial security collapse, located the concealed MIRRORGLASS facility beneath the fortress and stabilised three genuine Council principals recovered from suspended animation. His actions preserved the lives of senior Ariadnan leaders and provided critical evidence concerning PALE's continuing development of MIRRORGLASS technology. For service rendered at substantial personal risk in defence of Ariadnan lives and institutions, Dr Qassim was awarded the Ariadnan Medal of Allied Friendship.</entry>
+      <entry ts="Citation — O-12 Operative Buzzkill">AWARDED: ARIADNAN MEDAL OF ALLIED FRIENDSHIP. For courage and operational service during the attack upon the Council of Knives. Operative Buzzkill joined the immediate pursuit of the escaping MIRRORGLASS force despite operating in an unfamiliar and technologically austere Ariadnan security environment. His actions contributed directly to preventing hostile leadership copies from escaping Concilium and subsequently presenting themselves elsewhere as legitimate members of the Ariadnan command structure. For placing himself at risk in defence of the Council and the political security of Dawn, Operative Buzzkill was awarded the Ariadnan Medal of Allied Friendship.</entry>
+      <entry ts="Citation — O-12 Operative Anya">AWARDED: ARIADNAN MEDAL OF ALLIED FRIENDSHIP. For exceptional vigilance and courage during Operation KNIFE EDGE. Prior to the attack, Operative Anya identified behavioural and uniform inconsistencies among personnel assigned to the Council chamber, providing one of Team Bravo's earliest indications that summit security had been compromised. Following the MIRRORGLASS attack, she participated in the hazardous pursuit across the Concilium mountain approaches and directly contributed to preventing the hostile copies from escaping. For risking her life in defence of the Council of Knives and contributing materially to the preservation of Ariadnan leadership, Operative Anya was awarded the Ariadnan Medal of Allied Friendship.</entry>
+      <entry ts="Personnel / Honours Summary — Operation KNIFE EDGE">Rabbit: Ariadnan Cross of Valour — AWARDED. Tom Hendry: Ariadnan Cross of Valour — RECOMMENDED; confirmation pending conduct review. Gypsy: Ariadnan Medal of Allied Friendship — AWARDED; Bureau Noir leadership review CLOSED; line-leadership eligibility RESTORED. Q: Ariadnan Medal of Allied Friendship — AWARDED. Buzzkill: Ariadnan Medal of Allied Friendship — AWARDED. Anya: Ariadnan Medal of Allied Friendship — AWARDED.</entry>
+      <entry ts="Secretariat Assessment — Honours">Team Bravo's intervention at Concilium prevented a coordinated compromise of Ariadnan strategic leadership and exposed a further evolution in PALE's MIRRORGLASS capability. Individual commendations were entered into the respective O-12 and Ariadnan service records.</entry>
+      <entry ts="Post-Investigation — Immediate Deployment Order">The bunker contained a data transfer reading: IMMEDIATE DEPLOYMENT AUTHORISED. DESTINATION: DAYBREAK GATE.</entry>
+      <entry ts="Post-Investigation — Freight Ledger">A physical freight ledger showed three biological seed consignments routed through DAYBREAK GATE, an installation that had officially been mothballed years earlier.</entry>
+      <entry ts="Post-Investigation — Daybreak Gate Reactivated">Bureau Noir confirmed that Daybreak Gate had resumed communications and had been transmitting for approximately the past hour.</entry>
+      <entry ts="Strategic Question — Daybreak">The next investigation must determine who or what restarted Daybreak Gate, why it is active now, what may be leaving the installation and what may be arriving.</entry>
+      <entry ts="Continuing Threat — PALE">PALE/07 remained unidentified and at large after Operation Knife Edge.</entry>
+      <entry ts="Mission Conclusion">Operation Knife Edge saved the entire Council of Knives and prevented active MIRRORGLASS leadership copies from escaping. The operation also proved that PALE is adapting its MIRRORGLASS technology using stolen Bureau Toth identity data and established Daybreak Gate as the next critical lead.</entry>
+    </log>
+  </dossier>
+</dossiers>
