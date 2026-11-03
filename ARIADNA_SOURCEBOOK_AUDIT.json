@@ -1,0 +1,59 @@
+{
+  "build": "v63-ariadna-sourcebook-update",
+  "dataSyntax": "PASS",
+  "inlineScriptSyntax": [
+    {
+      "script": 0,
+      "status": "PASS"
+    },
+    {
+      "script": 1,
+      "status": "PASS"
+    },
+    {
+      "script": 2,
+      "status": "PASS"
+    }
+  ],
+  "embeddedDataMatchesDataJs": true,
+  "counts": {
+    "traits": 290,
+    "talents": 194,
+    "equipment": 342,
+    "factions": 63,
+    "homeworlds": 174,
+    "careers": 74,
+    "weaponsSelector": 103,
+    "equipmentSelector": 228
+  },
+  "duplicates": {
+    "traits": [],
+    "talents": [],
+    "equipment": [],
+    "factions": []
+  },
+  "factionChoicesMissingHomeworlds": [],
+  "selectorNamesWithoutRecords": [],
+  "missingSourceCareers": [],
+  "missingSourceFactions": [],
+  "missingSourceTraits": [],
+  "sourcebookGearRecordCount": 69,
+  "careerFilterHookPresent": true,
+  "careerGlossaryHookPresent": true,
+  "homeworldGlossaryHookPresent": true,
+  "factionSkillGlossaryHookPresent": true,
+  "gearGlossaryHookPresent": true,
+  "exclusions": [
+    "Chapter 7 adversary/NPC stat blocks were not added because the character sheet has no adversary database.",
+    "Merchant-trade procedures and general setting history were not added as character options.",
+    "Full random Lifepath event tables were not reproduced; named Traits, host rules, homelands and career tables relevant to player creation were incorporated.",
+    "Where the supplement referenced core items/talents rather than defining them, only directly needed missing entries were cross-checked against the Core/Collector's Edition."
+  ],
+  "normalisations": [
+    "Source typos in skill names were normalised to the sheet's canonical skill names (e.g. Ballisctis → Ballistics, Resitance → Resistance, Atheletics → Athletics).",
+    "Source § combat profiles are retained in rules notes rather than silently converted to the sheet's simplified d6 weapon system.",
+    "Source armour profiles are retained in notes while the sheet continues to use its Light 5 / Medium 10 / Heavy 15 Armour convention.",
+    "Ariadna nations and Dog-Blooded/Antipode heritage groupings are represented as Faction subchoices for UI compatibility, not as a claim that they are separate political factions."
+  ],
+  "status": "PASS"
+}
