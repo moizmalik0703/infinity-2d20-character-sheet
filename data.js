@@ -56,6 +56,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Amateur Archaeologist",
+      "category": "Ariadna Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "You stumbled onto intriguing ruins while hiking.",
+      "effect": "Narrative trait representing informal archaeological curiosity.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 68
+    },
+    {
       "category": "Combat",
       "name": "Ambusher",
       "primary": "Stealth",
@@ -76,6 +89,19 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Antipode",
+      "category": "Host / Heritage",
+      "primary": "",
+      "secondary": "",
+      "brief": "Playable member of Dawn's native species whose sapience is distributed across a trinary.",
+      "effect": "AGI +2, AWA +1, BRW +2, COO −1, INT −2, PER −2; scent +2d20; +2 Vigour soak; Monstrous; Super-Jump; Primal Technology; Pack Mentality; Trinary Mind; no Firewall/geist/cybernetic augments.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Antipode career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 79
     },
     {
       "category": "Infowar",
@@ -100,6 +126,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Ariadnan Grit",
+      "category": "Ariadna Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "When everything collapsed, stubborn endurance kept you functioning.",
+      "effect": "Narrative trait representing Ariadnan perseverance.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 68
+    },
+    {
       "category": "Willpower",
       "name": "Aspect Discipline",
       "primary": "Discipline",
@@ -109,6 +148,19 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH access or Posthuman background"
+    },
+    {
+      "name": "Astrophobia",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Time in the Helios orbitals left you uncomfortable off-world.",
+      "effect": "Extraplanetary tests have +1 complication range.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
     },
     {
       "category": "Physical",
@@ -230,6 +282,19 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Haqqislam or academic background"
+    },
+    {
+      "name": "Brand Loyalist",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "An early Ariadnan weapon became your personal standard.",
+      "effect": "Acquire Americolt Eagle, Ojotnik or Teseum Hatchet; other-weapon tests have +1 complication range.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
     },
     {
       "category": "General",
@@ -573,6 +638,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Cybered-Up",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "A local clinic fitted an improvised cybernetic limb.",
+      "effect": "Begin with Basic Limb Replacement; Maintenance +1; successful tests using it gain 1 bonus Momentum.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
+    },
+    {
       "category": "Medical",
       "name": "Cybernetic Surgeon",
       "primary": "Medicine",
@@ -683,6 +761,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Disabled",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "A serious accident left a lasting disability and hardened resolve.",
+      "effect": "Movement-related tests +1 Difficulty; Discipline tests −1 Difficulty, minimum D1.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
+    },
+    {
       "category": "Stealth",
       "name": "Disguise Expert",
       "primary": "Stealth",
@@ -692,6 +783,19 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Dogface",
+      "category": "Host / Heritage",
+      "primary": "",
+      "secondary": "",
+      "brief": "Dog-Blooded Ariadnan who transforms into a Dog-Warrior under injury.",
+      "effect": "Scent +2d20. On Wound: Discipline D1 or transform (may voluntarily fail): +2 Brawn, +2 Agility, +1 Vigour soak, recover all Vigour, Monstrous/Snarling Beast/Super-Jump; armour can be damaged; Fatigued when form ends.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Dog-Blooded career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 80
     },
     {
       "category": "Combat",
@@ -835,6 +939,19 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "ALEPH access or Posthuman background"
+    },
+    {
+      "name": "Entirely Misunderstood",
+      "category": "Antipode Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "You accidentally saved a tourist and the event was Mayacast.",
+      "effect": "Narrative trait representing unwanted public recognition.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Antipode career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 87
     },
     {
       "category": "Exploration",
@@ -1090,6 +1207,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Grizzled",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Survived a month stranded on the frontier.",
+      "effect": "Gain 1 rank in Survival; +1 complication range on Resistance tests against poison.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
+    },
+    {
       "category": "Combat",
       "name": "Gunslinger",
       "primary": "Ballistics",
@@ -1123,6 +1253,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Harried",
+      "category": "Ariadna Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "An Antipode attack destroyed your place of business.",
+      "effect": "Narrative trait; the source event also limits repeating/extending that career unless Earnings are lost.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 68
+    },
+    {
       "category": "Combat",
       "name": "Heavy Gunner",
       "primary": "Ballistics",
@@ -1132,6 +1275,19 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Heirloom Weapon",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "You inherited a weapon with a long personal history.",
+      "effect": "With the heirloom weapon, roll +1§ damage; tests with it have +1 complication range.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
     },
     {
       "category": "Faction",
@@ -1255,6 +1411,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Infamous Lineage",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Your family carries a reputation for betrayal.",
+      "effect": "Social skill tests with fellow Ariadnans have +2 complication range.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
+    },
+    {
       "category": "Stealth",
       "name": "Infiltrator",
       "primary": "Stealth",
@@ -1319,6 +1488,19 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "It Takes One to Know One",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "An early brush with crime taught you how offenders think.",
+      "effect": "Source event offers jail time, or an Asset debt plus 1 rank of Thievery.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
     },
     {
       "category": "Exploration",
@@ -1389,13 +1571,28 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Lucky",
-      "primary": "Lifestyle",
-      "secondary": "Discipline",
-      "brief": "Focused training in Lifestyle and Discipline, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's specialised aptitude as a Lucky.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "",
+      "secondary": "",
+      "brief": "You should have died, but luck remained on your side.",
+      "effect": "Increase Infinity Point refresh by 1, maximum 4.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
+    },
+    {
+      "name": "Luddite",
+      "category": "Ariadna Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "A disastrous off-world technological solution left you suspicious of advanced technology.",
+      "effect": "Narrative trait; apply when distrust/unfamiliarity with advanced technology matters.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 68
     },
     {
       "category": "Physical",
@@ -1684,6 +1881,45 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Old Wound",
+      "category": "Antipode Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "A hunting accident left a gunshot wound that never healed properly.",
+      "effect": "Narrative trait; apply complications when the old injury matters.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Antipode career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 87
+    },
+    {
+      "name": "On the Watchlist",
+      "category": "Ariadna Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Bureau Toth questioned you and released you under conditions.",
+      "effect": "Narrative trait representing official surveillance or obligations.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 68
+    },
+    {
+      "name": "Overconfident",
+      "category": "Antipode Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Surviving disaster convinced you that you are harder to kill than you really are.",
+      "effect": "Narrative trait; complications should reflect reckless confidence.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Antipode career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 87
+    },
+    {
       "category": "Physical",
       "name": "Pain Tolerant",
       "primary": "Resistance",
@@ -1704,6 +1940,19 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Military or security background"
+    },
+    {
+      "name": "Paranoid",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Displacement or betrayal left you expecting hidden danger.",
+      "effect": "Narrative trait; the source event can also trigger faction defection.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
     },
     {
       "category": "Physical",
@@ -1739,6 +1988,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Patriot",
+      "category": "Ariadna Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "You foiled galactic sabotage and became associated with Ariadna's defence.",
+      "effect": "Source event also grants +1 Earnings.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 68
+    },
+    {
       "category": "Technical",
       "name": "Pattern Recognition",
       "primary": "Analysis",
@@ -1770,6 +2032,19 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Pioneer Spirit",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Adventure and the frontier became part of your identity.",
+      "effect": "Add +1 Resolve.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
     },
     {
       "category": "Exploration",
@@ -1827,6 +2102,19 @@ window.INFINITY_DATA = {
       "restriction": "ALEPH access or Posthuman background"
     },
     {
+      "name": "Priority Target",
+      "category": "Antipode Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "A group has singled you out as a problem that needs solving.",
+      "effect": "Narrative trait representing active enemies or hunters.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Antipode career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 87
+    },
+    {
       "category": "Social",
       "name": "Professional",
       "primary": "Command",
@@ -1880,6 +2168,32 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Raised in a Barn",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Extended isolation in the wilderness shaped your manners and instincts.",
+      "effect": "Gain 1 rank in Animal Handling or Survival; +1 complication range on Personality-based tests.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
+    },
+    {
+      "name": "Rebel",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "You fought against the system.",
+      "effect": "Gain +1 Morale Soak against authority figures.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
     },
     {
       "category": "Social",
@@ -2003,6 +2317,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Rockstar",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "A Hiraeth music career brought fame and its complications.",
+      "effect": "Begin at a chosen drug's addiction threshold with starting doses; Lifestyle tests −1 Difficulty, minimum D0.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
+    },
+    {
       "category": "Stealth",
       "name": "Saboteur",
       "primary": "Thievery",
@@ -2023,6 +2350,32 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Sardonic",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Being burned once left you disciplined but cynical.",
+      "effect": "Gain 1 rank in Discipline; positive/pleasant social interactions have +3 complication range.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
+    },
+    {
+      "name": "Scarred",
+      "category": "Antipode Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "A violent Caledonian strike left lasting scars.",
+      "effect": "Narrative source trait.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Antipode career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 87
     },
     {
       "category": "Stealth",
@@ -2168,6 +2521,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Sleepy",
+      "category": "Antipode Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Experimental tranquillisers left lasting drowsiness.",
+      "effect": "Increase Difficulty of Surprise tests by 1.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Antipode career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 87
+    },
+    {
       "category": "Stealth",
       "name": "Smuggler",
       "primary": "Thievery",
@@ -2190,6 +2556,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Sole Survivor",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "You were the only one left alive after disaster.",
+      "effect": "Gain 1 rank in Survival; reduce Earnings by 1, minimum 0.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
+    },
+    {
       "category": "Technical",
       "name": "Specialist",
       "primary": "Science",
@@ -2210,6 +2589,19 @@ window.INFINITY_DATA = {
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Spirit of the 112",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "A 112 rescue inspired you toward emergency service.",
+      "effect": "Gain 1 rank in Medicine and may choose 112 Emergency Responder first.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
     },
     {
       "category": "Physical",
@@ -2276,6 +2668,19 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Street Fighter",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Early experience in underground fight clubs.",
+      "effect": "Gain 1 rank in Close Combat and a 1 Asset debt.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
     },
     {
       "category": "Social",
@@ -2408,6 +2813,19 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Survivor",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Survived an early Antipode attack and fought back.",
+      "effect": "Gain 1 rank in either Ballistics or Close Combat.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
     },
     {
       "category": "Physical",
@@ -2586,6 +3004,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "True Grit",
+      "category": "Ariadna Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "You endured disaster through sheer determination.",
+      "effect": "Source event grants 1 Life Point during Lifepath creation.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 68
+    },
+    {
       "category": "Social",
       "name": "Tunguska Data Broker",
       "primary": "Lifestyle",
@@ -2606,6 +3037,19 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Unlikely Hero",
+      "category": "Dog-Blooded Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "You saved a tourist without realising the rescue was being Mayacast.",
+      "effect": "Narrative trait representing unexpected public heroism.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Dog-Blooded career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 88
     },
     {
       "category": "Exploration",
@@ -2639,6 +3083,19 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Vengeful Progeny",
+      "category": "Antipode Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "A Dogface encountered in battle felt impossibly familiar.",
+      "effect": "Narrative trait tying the character to Dog-Blooded ancestry and vengeance.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Antipode career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 87
     },
     {
       "category": "Combat",
@@ -2696,6 +3153,19 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions"
     },
     {
+      "name": "Weight of the World",
+      "category": "Ariadna Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "A dying soldier entrusted you with unfinished business.",
+      "effect": "Gain 1 rank in Discipline.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 67
+    },
+    {
       "category": "General",
       "name": "Wild Card",
       "primary": "Persuade",
@@ -2738,6 +3208,32 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions"
+    },
+    {
+      "name": "Wolfsbane",
+      "category": "Ariadna Career Event",
+      "primary": "",
+      "secondary": "",
+      "brief": "Your role in a Dog Nation protest gave you a reputation.",
+      "effect": "Source event grants 1 additional Momentum on Leadership tests.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna sourcebook career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 68
+    },
+    {
+      "name": "Wulver",
+      "category": "Host / Heritage",
+      "primary": "",
+      "secondary": "",
+      "brief": "Stable Dog-Blooded phenotype: powerful, keen-scented and permanently adapted.",
+      "effect": "AGI +1, AWA +1, BRW +1, COO −1, PER −1, WIL −1; scent +2d20; +2 Vigour; Monstrous; Furious; Super-Jump; worn gear needs tailoring.",
+      "rarity": "",
+      "cost": "",
+      "restriction": "Ariadna Dog-Blooded career",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 80
     },
     {
       "category": "Medical",
@@ -3029,6 +3525,24 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5"
+    },
+    {
+      "name": "Catfall",
+      "category": "Core Skill Talent",
+      "career": "",
+      "doctrine": "Acrobatics",
+      "faction": "",
+      "restriction": "No Restrictions",
+      "level": "1",
+      "primary": "Acrobatics",
+      "secondary": "",
+      "description": "Training in using wind resistance and landing surfaces to survive long falls.",
+      "effect": "For each rank, treat the distance fallen as one zone shorter when calculating falling damage.",
+      "prerequisite": "Long Jumper; Acrobatics Expertise 2",
+      "rarity": "",
+      "cost": "",
+      "source": "Infinity Corebook / Collector's Edition",
+      "sourcePage": 75
     },
     {
       "category": "Supplemental",
@@ -4743,6 +5257,24 @@ window.INFINITY_DATA = {
       "cost": "5"
     },
     {
+      "name": "Pattern Recognition",
+      "category": "Core Skill Talent",
+      "career": "",
+      "doctrine": "Analysis",
+      "faction": "",
+      "restriction": "No Restrictions",
+      "level": "1",
+      "primary": "Analysis",
+      "secondary": "",
+      "description": "Recognise recurring structures and relationships in complex information.",
+      "effect": "When making an Analysis test, reroll one d20 but accept the new result.",
+      "prerequisite": "Analysis Expertise 1",
+      "rarity": "",
+      "cost": "",
+      "source": "Infinity Corebook / Collector's Edition",
+      "sourcePage": 76
+    },
+    {
       "category": "Combat",
       "career": "Infiltrator",
       "doctrine": "Hassassin Fiday Impersonator",
@@ -5495,6 +6027,24 @@ window.INFINITY_DATA = {
       "cost": "10"
     },
     {
+      "name": "Sturdy",
+      "category": "Core Skill Talent",
+      "career": "",
+      "doctrine": "Resistance",
+      "faction": "",
+      "restriction": "No Restrictions",
+      "level": "1",
+      "primary": "Resistance",
+      "secondary": "",
+      "description": "Physical conditioning that improves reliability on Resistance tests.",
+      "effect": "When making a Resistance test, reroll dice that failed to generate a success on the initial roll, but accept the new results.",
+      "prerequisite": "Resistance Expertise 1",
+      "rarity": "",
+      "cost": "",
+      "source": "Infinity Corebook / Collector's Edition",
+      "sourcePage": 91
+    },
+    {
       "category": "Combat",
       "career": "Heavy Infantry",
       "doctrine": "Mobile Brigada Heavy Weapons",
@@ -5872,6 +6422,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Ammunition",
+      "name": "Adhesive Shells",
+      "brief": "Loup-Garou shotgun shells that spray fast-setting restraint foam.",
+      "mechanic": "Adds Area (Close), Immobilising, Improvised 1, Nonlethal and Unsubtle.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "3+2§",
+      "category": "Other Item",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "1"
+    },
+    {
       "type": "Drug",
       "name": "Adrenaline shots (in syringe)",
       "brief": "Emergency stimulant syringes used to keep a wounded operative moving.",
@@ -5948,6 +6514,22 @@ window.INFINITY_DATA = {
       "subtype": "Kit",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Americolt Eagle (BS)",
+      "brief": "Massive USAriadnan hand-cannon built for Dogfaces and exceptionally strong shooters.",
+      "mechanic": "Source profile: Range R/C; 2+5§ damage; Burst 1; Unbalanced; Piercing 1; Non-Hackable; Knockdown; Vicious 1. Brawn 12 or lower: Backlash 1 and +2 complication range.",
+      "rarity": "Common",
+      "weight": "Medium",
+      "cost": "5+3§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "1"
     },
     {
       "type": "Suite",
@@ -6054,6 +6636,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Ammunition",
+      "name": "Apex Ammunition",
+      "brief": "Rodinan heavy anti-materiel ammunition with a Teseum-coated core.",
+      "mechanic": "Adds Piercing 2, Salvo 2 (Anti-Materiel 2), Unsubtle 2 and Vicious 2.",
+      "rarity": "Rare",
+      "weight": "Light",
+      "cost": "4+3§",
+      "category": "Other Item",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "3"
+    },
+    {
       "type": "Augmentation",
       "name": "AR Eye Implants",
       "brief": "Augmented eyes with integrated display, recording, and visual enhancement systems.",
@@ -6080,6 +6678,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Weapon",
+      "name": "Ariadnan HMG (BS)",
+      "brief": "Ariadnan heavy machine gun commonly loaded with T2 ammunition.",
+      "mechanic": "Source profile: Range L; 2+6§ damage; Burst 3; Unwieldy; T2 ammunition; Spread 1; Unsubtle.",
+      "rarity": "Rare",
+      "weight": "Heavy",
+      "cost": "9+4§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Vehicle",
+      "name": "Ariadnan Utility Vehicle (AUV)",
+      "brief": "Ariadnan vehicle reference from the supplement.",
+      "mechanic": "Scale 2; Speed 2; Brawn 14 (+2); Structure 24; Armour 4; Firewall 4; up to 6 passengers.",
+      "rarity": "Common",
+      "weight": "Heavy",
+      "cost": "10+1§",
+      "category": "Other Item",
+      "subtype": "Vehicle",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 52,
+      "sourceRestriction": "1"
+    },
+    {
       "type": "Armour",
       "name": "Armour - Armoured Clothing",
       "brief": "Civilian clothing reinforced with hidden protective layers for low-profile personal defence.",
@@ -6104,6 +6734,38 @@ window.INFINITY_DATA = {
       "subtype": "Armour",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Armour",
+      "name": "Armour - Buffalo Powered",
+      "brief": "USAriadnan heavy powered armour used by the Blackjack programme; rugged enough to remain functional after severe damage.",
+      "mechanic": "Custom Armour: 15. Source qualities: Exoskeleton 3, Heavy Armour, Non-Hackable, Self-Repairing. Source loadout includes Chest Mines ×2, Heavy Pistol, Teseum Chopper and heavy-weapon options.",
+      "rarity": "Legendary",
+      "weight": "Heavy",
+      "cost": "12+23§",
+      "category": "Armour",
+      "subtype": "Ariadna Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "5"
+    },
+    {
+      "type": "Armour",
+      "name": "Armour - Cherkesska",
+      "brief": "Rodinan Teseum-heavy combat uniform with integrated bandolier and Teseum knife.",
+      "mechanic": "Custom Armour: 15. Source armour H2/T4/A3/L3; BTS 1; Bandolier; Teseum Knife; Non-Hackable; +1 Difficulty to Tech tests to alter it.",
+      "rarity": "Rare",
+      "weight": "Heavy",
+      "cost": "13+3§",
+      "category": "Armour",
+      "subtype": "Ariadna Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "3"
     },
     {
       "type": "Armour",
@@ -6156,6 +6818,22 @@ window.INFINITY_DATA = {
       "subtype": "Armour",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Armour",
+      "name": "Armour - Dog-Bowl",
+      "brief": "Teseum-reinforced sports protection made for the violence of Dog-Bowl.",
+      "mechanic": "Custom Armour: 5. Source armour H2/T2/A1/L1; BTS 0; Non-Hackable.",
+      "rarity": "Uncommon",
+      "weight": "Light",
+      "cost": "8+3§",
+      "category": "Armour",
+      "subtype": "Ariadna Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "2"
     },
     {
       "type": "Armour",
@@ -6224,6 +6902,22 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Armour",
+      "name": "Armour - Métros",
+      "brief": "Discreet Merovingian protective clothing designed as hidden armour.",
+      "mechanic": "Custom Armour: 5. Source armour H0/T2/A1/L1; BTS 0; Hidden Armour 1.",
+      "rarity": "Uncommon",
+      "weight": "Light",
+      "cost": "7+1§",
+      "category": "Armour",
+      "subtype": "Ariadna Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "2"
+    },
+    {
+      "type": "Armour",
       "name": "Armour - ModCoat, Long",
       "brief": "A long smart-material coat with concealed protection and room for integrated field equipment.",
       "mechanic": "Armour: 5. Gain +1d20 to Stealth or Thievery checks made to conceal carried equipment beneath the coat.",
@@ -6247,6 +6941,22 @@ window.INFINITY_DATA = {
       "subtype": "Armour",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Armour",
+      "name": "Armour - Mormaer",
+      "brief": "Heavy Caledonian Teseum armour associated with elite clan warriors.",
+      "mechanic": "Custom Armour: 15. Source armour H3/T4/A3/L3; BTS 1; Non-Hackable; source grants +2 Morale in Caledonia.",
+      "rarity": "Very Rare",
+      "weight": "Heavy",
+      "cost": "14+4§",
+      "category": "Armour",
+      "subtype": "Ariadna Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "4"
     },
     {
       "type": "Armour",
@@ -6338,6 +7048,38 @@ window.INFINITY_DATA = {
       "subtype": "Armour",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Armour",
+      "name": "Armour - USARF Fighting Uniform",
+      "brief": "USAriadnan field uniform designed for practical protection and stealth.",
+      "mechanic": "Custom Armour: 5. Source armour H1/T2/A1/L1; BTS 0; Non-Hackable; enhances Stealth.",
+      "rarity": "Uncommon",
+      "weight": "Light",
+      "cost": "7+2§",
+      "category": "Armour",
+      "subtype": "Ariadna Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "2"
+    },
+    {
+      "type": "Vehicle",
+      "name": "Arroaz Skimmer",
+      "brief": "Ariadnan vehicle reference from the supplement.",
+      "mechanic": "Scale 2; Speed 4; Brawn 14 (+3); Structure 18; Armour 3; BTS 1; up to 4 passengers; enclosed hover watercraft.",
+      "rarity": "Rare",
+      "weight": "Heavy",
+      "cost": "12+4§",
+      "category": "Other Item",
+      "subtype": "Vehicle",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 52,
+      "sourceRestriction": "3"
     },
     {
       "type": "Weapon",
@@ -6457,6 +7199,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Drug",
+      "name": "Baba",
+      "brief": "Long-lasting fever-inducing Ariadnan euphoric used to endure cold exposure.",
+      "mechanic": "For 12 hours gain +1d20 to Resistance and Discipline tests against cold; for 4 hours afterward take double damage from extreme heat/cold. Source also defines addiction/withdrawal.",
+      "rarity": "Uncommon",
+      "weight": "Light",
+      "cost": "4+4§",
+      "category": "Contagion",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "2"
+    },
+    {
+      "type": "Drug",
+      "name": "Baba/Yaga",
+      "brief": "Blend of baba and yaga that induces a long fevered, immobilising vision-state.",
+      "mechanic": "Source effect: 1d20-hour trip; hourly Intelligence D0 can generate recovery benefits through Momentum; early waking inflicts nonlethal Terrifying damage. Source also defines addiction/withdrawal.",
+      "rarity": "Rare",
+      "weight": "Light",
+      "cost": "9+3§",
+      "category": "Contagion",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "3"
+    },
+    {
       "type": "Container",
       "name": "Backpack",
       "brief": "A field pack built to carry supplies, ammunition, and survival gear.",
@@ -6468,6 +7242,22 @@ window.INFINITY_DATA = {
       "subtype": "Container",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Vehicle",
+      "name": "Backwoods ATV",
+      "brief": "Ariadnan vehicle reference from the supplement.",
+      "mechanic": "Scale 1; Speed 2; Brawn 10 (+1); Structure 14; Armour 2; up to 2 passengers; rugged all-terrain vehicle.",
+      "rarity": "Uncommon",
+      "weight": "Heavy",
+      "cost": "11+3§",
+      "category": "Other Item",
+      "subtype": "Vehicle",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 52,
+      "sourceRestriction": "2"
     },
     {
       "type": "Tool",
@@ -6509,6 +7299,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Tool",
+      "name": "Bandolier",
+      "brief": "Sliding ammunition band with quick-access pouches developed during the Commercial Conflicts.",
+      "mechanic": "Once per round, swap between ammunition types as a Free Action.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "4+1§",
+      "category": "Tool",
+      "subtype": "Load-Bearing Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "0"
+    },
+    {
       "type": "Augmentation",
       "name": "Basic Limb Replacement (Biografted)",
       "brief": "A biological replacement limb grown to restore normal function and integrate naturally with the user's body.",
@@ -6548,17 +7354,35 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Medical Kit",
+      "name": "Basic Medical Supplies",
+      "brief": "Basic field medical supplies with Serum-infused bandages, antivenins, burn treatment and sample storage.",
+      "mechanic": "Contains 3 loads of Serum and counts as a kit for Medicine tests.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "Core gear",
+      "category": "Tool",
+      "subtype": "Medical Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 363,
+      "sourceRestriction": "1"
+    },
+    {
       "type": "Tool",
       "name": "Binoculars",
-      "brief": "Optical lenses used for long-distance observation and target spotting.",
-      "mechanic": "Double visual spotting range in open terrain. Gain +1d20 to Observation checks for distant targets.",
+      "brief": "Rugged optical binoculars common throughout Ariadna.",
+      "mechanic": "Remove range penalties when observing targets at Long range; +1 Difficulty to notice things in the same zone while using the narrowed view.",
       "rarity": "Common",
       "weight": "Light",
       "cost": "50",
       "category": "Tool",
       "subtype": "Observation Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 53
     },
     {
       "type": "Augmentation",
@@ -6678,6 +7502,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Tool",
+      "name": "Breaking & Entering Kit",
+      "brief": "Kit for defeating physical locks, barriers and non-networked security.",
+      "mechanic": "Contains three Picks and grants 1 bonus Momentum on Thievery or Tech tests to bypass physical security.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "Core gear",
+      "category": "Tool",
+      "subtype": "Intrusion Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 364,
+      "sourceRestriction": "1"
+    },
+    {
       "type": "Drug",
       "name": "Caffeine Tablets",
       "brief": "Fast-acting caffeine tablets used to maintain alertness during exhausting operations.",
@@ -6754,6 +7594,22 @@ window.INFINITY_DATA = {
       "subtype": "Camouflage Tool",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Chest Mine (BS)",
+      "brief": "Directional anti-personnel mine mounted on vehicles, TAGs or heavy armour.",
+      "mechanic": "Source profile: Range R/C; 2+5§; Mounted; Disposable; Grievous; Area (Close); Piercing 1; Vicious 1; Unsubtle.",
+      "rarity": "Rare",
+      "weight": "Medium",
+      "cost": "6+3§ per 3",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
     },
     {
       "type": "Tool",
@@ -6845,6 +7701,54 @@ window.INFINITY_DATA = {
       "subtype": "Mobility Gear",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Cobra Baton (CC)",
+      "brief": "Collapsible security baton favoured by discreet agencies and private security.",
+      "mechanic": "Source profile: Melee; 1+4§; 1H; Knockdown; Stun; Subtle 2; Vicious 1.",
+      "rarity": "Uncommon",
+      "weight": "Light",
+      "cost": "5+2§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "2"
+    },
+    {
+      "type": "Drug",
+      "name": "Cod",
+      "brief": "Protein-rich bodybuilding supplement common in Ariadna fitness culture.",
+      "mechanic": "With a month of daily use plus intense exercise, it improves the effective difficulty of increasing Brawn as described by the source; an Effect can cause a harmful reaction and a Wound.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "4+4§ per month",
+      "category": "Contagion",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
+    },
+    {
+      "type": "Mobility Gear",
+      "name": "Combat Jump Pack",
+      "brief": "Airborne deployment device using advanced airbrakes to deliver troops from atmospheric aircraft or orbit.",
+      "mechanic": "Counts as an airborne deployment device under the core rules.",
+      "rarity": "Rare",
+      "weight": "Medium",
+      "cost": "Core gear",
+      "category": "Other Item",
+      "subtype": "Mobility Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 365,
+      "sourceRestriction": "3"
     },
     {
       "type": "Weapon",
@@ -7082,6 +7986,22 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Weapon",
+      "name": "D.E.P. (BS)",
+      "brief": "Cheap disposable anti-armour launcher widely used by Ariadnan irregulars.",
+      "mechanic": "Source profile: Range L; 2+5§; Burst 1; 2H; Munition; Needle; Unsubtle. One Reload; reloading after firing requires disassembly and a Tech D1 Standard Action.",
+      "rarity": "Uncommon",
+      "weight": "Medium",
+      "cost": "5+1§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "2"
+    },
+    {
+      "type": "Weapon",
       "name": "Dagger (CC)",
       "brief": "A close-combat weapon designed for melee specialists; this variant is the Dagger.",
       "mechanic": "Close Combat weapon. Damage 2d6; one-handed; easily concealed.",
@@ -7133,17 +8053,100 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
-      "type": "Mine",
+      "type": "Camouflage",
+      "name": "Digicloak (Environment)",
+      "brief": "Digital-ink camouflage cloak tuned to a particular environment.",
+      "mechanic": "Counts as a kit for face-to-face Stealth tests at Medium range or farther while prone, granting 1 bonus Momentum; if not revealed, grants +2§ Cover Soak against ranged attacks.",
+      "rarity": "Rare",
+      "weight": "Light",
+      "cost": "6+3§",
+      "category": "Other Item",
+      "subtype": "Camouflage",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Clothing",
+      "name": "Dog-Bowl Jersey X",
+      "brief": "Team jersey worn over Dog-Bowl armour; quality/authenticity is rated X.",
+      "mechanic": "Source tool entry: Non-Hackable and Armoured 2 X; rating X determines source cost/tariff.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "3X + X§",
+      "category": "Other Item",
+      "subtype": "Clothing",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
+    },
+    {
+      "type": "Weapon",
+      "name": "Dueling Bracers (CC)",
+      "brief": "Caledonian reinforced bracers used to enhance unarmed duelling.",
+      "mechanic": "Source profile: add 1+1§, Parry 1 and Vicious 1 to unarmed damage; source armour table also gives local arm protection.",
+      "rarity": "Rare",
+      "weight": "Light",
+      "cost": "8+2§ per pair",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Weapon",
       "name": "E/Mauler Deployable",
-      "brief": "A deployable explosive or grenade used for demolition, area denial, or battlefield control; this variant is the E/Mauler Deployable.",
-      "mechanic": "Deployable mine. Template: circle; Damage 3d6. E/M effect disables active shields or electronics on an Effect.",
+      "brief": "Hackable Ariadnan E/M mine used against electronics and powered systems.",
+      "mechanic": "Source profile: 2+5§; 1H; Breaker; Comms; Disposable; E/M; Indiscriminate (Close); Piercing 2; Unsubtle 2.",
       "rarity": "Rare",
       "weight": "Light",
       "cost": "4500",
-      "category": "Explosive Device",
-      "subtype": "Mine",
+      "category": "Weapon",
+      "subtype": "Explosive Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "2 (Ariadna 1)"
+    },
+    {
+      "type": "Weapon",
+      "name": "E/Mauler, Non-Hackable (BS)",
+      "brief": "Simplified non-networked Ariadnan E/M mine resistant to hacking.",
+      "mechanic": "Source profile: 2+5§; 1H; Breaker; Disposable; E/M; Indiscriminate (Close); Piercing 2; Non-Hackable; Unsubtle 3.",
+      "rarity": "Uncommon",
+      "weight": "Light",
+      "cost": "5+3§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "2"
+    },
+    {
+      "type": "Ammunition",
+      "name": "Eagle Ammunition",
+      "brief": "Special high-penetration ammunition for the Americolt Eagle.",
+      "mechanic": "Source profile: Piercing 3 and Unsubtle.",
+      "rarity": "Rare",
+      "weight": "Light",
+      "cost": "4+1§",
+      "category": "Other Item",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "3"
     },
     {
       "type": "Countermeasure",
@@ -7408,6 +8411,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Signal Gear",
+      "name": "Fusebox",
+      "brief": "Ariadnan communications/signal tool used in the field.",
+      "mechanic": "Source table quality: Comms.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "4+1§",
+      "category": "Tool",
+      "subtype": "Signal Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
+    },
+    {
       "type": "Program",
       "name": "GADGET-3 Zhang Xun",
       "brief": "Long-range Supportware that uses telemetry to improve the fire of allies wearing Exoskeleton armour.",
@@ -7590,6 +8609,38 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Ammunition",
+      "name": "H-12 Ammo",
+      "brief": "Special ammunition used by H-12 weapons.",
+      "mechanic": "Source profile includes Backlash and Grievous; exact Backlash depends on weapon/mode.",
+      "rarity": "Uncommon",
+      "weight": "Light",
+      "cost": "4+1§",
+      "category": "Other Item",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "2"
+    },
+    {
+      "type": "Weapon",
+      "name": "H-12 Pistol (BS)",
+      "brief": "Heavy pistol using specialised H-12 ammunition.",
+      "mechanic": "Source profile: Range C/M; 2+5§; Burst 1; 2H; H-12 ammunition; Salvo (Knockdown).",
+      "rarity": "Very Rare",
+      "weight": "Medium",
+      "cost": "6+3§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "4"
     },
     {
       "type": "Hacking Device",
@@ -7775,6 +8826,22 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Weapon",
+      "name": "Heavy Shotgun (BS)",
+      "brief": "Powerful close-range shotgun firing normal shells or AP slugs.",
+      "mechanic": "Source profile: Range C; 2+6§; Burst 1; 2H/Mounted; Normal Shells or AP Slugs; Knockdown.",
+      "rarity": "Rare",
+      "weight": "Heavy",
+      "cost": "9+1§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Weapon",
       "name": "Hedgehog Implant (CC)",
       "brief": "An implanted close-combat weapon that deploys venomous spines directly from the user's body.",
       "mechanic": "Close Combat weapon. Damage 3d6; implanted and concealed. On an Effect, target checks Resistance or suffers Poisoned. Cannot be disarmed without disabling the implant.",
@@ -7824,6 +8891,22 @@ window.INFINITY_DATA = {
       "subtype": "Disguise Tool",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Ammunition",
+      "name": "Hopak Ammunition",
+      "brief": "Special ammunition mode for the Uragan MRL.",
+      "mechanic": "Retained as a specialised Uragan reload from the sourcebook; consult the source profile for its full mode effect.",
+      "rarity": "Rare",
+      "weight": "Light",
+      "cost": "Special",
+      "category": "Other Item",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
     },
     {
       "type": "Armour",
@@ -7981,6 +9064,22 @@ window.INFINITY_DATA = {
       "loadoutEligible": true,
       "loadoutConditional": true,
       "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+    },
+    {
+      "type": "Ammunition",
+      "name": "Katyusha Ammunition",
+      "brief": "Special ammunition mode for the Uragan MRL.",
+      "mechanic": "Retained as a specialised Uragan reload from the sourcebook; consult the source profile for its full mode effect.",
+      "rarity": "Rare",
+      "weight": "Light",
+      "cost": "Special",
+      "category": "Other Item",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
     },
     {
       "type": "Clothing",
@@ -8179,6 +9278,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Clothing",
+      "name": "Long Jehans",
+      "brief": "Long Ariadnan garment with concealed protective construction.",
+      "mechanic": "Source tool entry: Hidden Armour 1.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "4+2§",
+      "category": "Other Item",
+      "subtype": "Hidden Armour Clothing",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
+    },
+    {
       "type": "Recorder",
       "name": "Loudcast Box X",
       "brief": "A dissident recording device that sends an old-tech high-power radio livestream across several kilometres.",
@@ -8324,6 +9439,22 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Weapon",
+      "name": "Mk12 Rifle (BS)",
+      "brief": "Ariadnan rifle capable of using H-12 ammunition.",
+      "mechanic": "Source profile: Range M; 2+5§; Burst 3; 2H; H-12 ammunition; Salvo (Knockdown).",
+      "rarity": "Rare",
+      "weight": "Medium",
+      "cost": "7+3§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Weapon",
       "name": "Modhand (CC)",
       "brief": "A concealed Nomad shock weapon disguised as jewellery, nailware, or another harmless accessory.",
       "mechanic": "Close Combat weapon. Damage 2d6; one-handed; concealed. E/M: on an Effect, electronics or active shields are disabled until repaired; living targets check Resistance or suffer Stunned.",
@@ -8334,6 +9465,22 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Molotok (BS)",
+      "brief": "Mid-range AP automatic weapon with a high rate of fire.",
+      "mechanic": "Source profile: Range M; 1+5§; Burst 3; 2H; AP; Spread 2; Unsubtle.",
+      "rarity": "Uncommon",
+      "weight": "Medium",
+      "cost": "7+2§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "2"
     },
     {
       "type": "Weapon",
@@ -8700,6 +9847,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Vehicle",
+      "name": "Official Vehicle",
+      "brief": "Ariadnan vehicle reference from the supplement.",
+      "mechanic": "Scale 1; Speed 3; Brawn/Strength 13 (+1); Armour 4; BTS 4; high-restriction Rodinan official vehicle.",
+      "rarity": "Legendary",
+      "weight": "Heavy",
+      "cost": "2+3§",
+      "category": "Other Item",
+      "subtype": "Vehicle",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "5"
+    },
+    {
+      "type": "Weapon",
+      "name": "Ojotnik (BS)",
+      "brief": "Powerful Rodinan hunting and marksman rifle.",
+      "mechanic": "Source profile: Range M; 1+6§; Burst 2; Unwieldy; AP; Unforgiving 3.",
+      "rarity": "Legendary",
+      "weight": "Heavy",
+      "cost": "10+3§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "5"
+    },
+    {
       "type": "Camouflage",
       "name": "Optical Disruption Device",
       "brief": "A personal field generator that distorts the user's outline and confuses visual targeting.",
@@ -8711,6 +9890,22 @@ window.INFINITY_DATA = {
       "subtype": "Camouflage",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Vehicle",
+      "name": "Ore Hauler",
+      "brief": "Ariadnan vehicle reference from the supplement.",
+      "mechanic": "Scale 3; Speed 3; Brawn/Strength 16 (+3); Armour 4; BTS 1; heavy industrial transport.",
+      "rarity": "Uncommon",
+      "weight": "Heavy",
+      "cost": "14+4§",
+      "category": "Other Item",
+      "subtype": "Vehicle",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "2"
     },
     {
       "type": "Augmentation",
@@ -8779,6 +9974,22 @@ window.INFINITY_DATA = {
       "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
     },
     {
+      "type": "Companion",
+      "name": "Pet X (tiny/small/large)",
+      "brief": "Ariadnan companion animal, rated by size and rarity.",
+      "mechanic": "Source item supports tiny, small and large pets with rating-based cost and Maintenance; animal statistics are handled by the GM.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "Rating-based",
+      "category": "Other Item",
+      "subtype": "Companion",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
+    },
+    {
       "type": "Tool",
       "name": "Pheromone Dispenser",
       "brief": "A controlled chemical dispenser used to influence animals and compatible biological targets.",
@@ -8803,6 +10014,22 @@ window.INFINITY_DATA = {
       "subtype": "Hacking Program Upgrade",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Camouflage",
+      "name": "Photoreactive Coating",
+      "brief": "DARPS-developed adaptive coating popular with off-world mercenaries.",
+      "mechanic": "Source camouflage upgrade; bulk purchases are easier than normal. Treat as an equipment modification rather than body armour.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "5+4§",
+      "category": "Other Item",
+      "subtype": "Camouflage Upgrade",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
     },
     {
       "type": "Weapon",
@@ -8881,6 +10108,38 @@ window.INFINITY_DATA = {
       "subtype": "Poison",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Portable Autocannon (BS)",
+      "brief": "Rodinan man-portable heavy weapon designed for Apex ammunition.",
+      "mechanic": "Source profile: Range L; 1+6§; Burst 2; Unwieldy; Apex ammunition; Non-Hackable.",
+      "rarity": "Rare",
+      "weight": "Heavy",
+      "cost": "9+4§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Tool",
+      "name": "Portable Rescue Supply Kit",
+      "brief": "Field rescue cache for emergency and disaster response.",
+      "mechanic": "Use as an appropriate kit for rescue operations at GM discretion.",
+      "rarity": "Uncommon",
+      "weight": "Medium",
+      "cost": "5+5§",
+      "category": "Tool",
+      "subtype": "Rescue Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "2"
     },
     {
       "type": "Tool",
@@ -8973,6 +10232,22 @@ window.INFINITY_DATA = {
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Respirator",
+      "name": "Rebreather",
+      "brief": "Compact breathing support for hazardous or low-quality atmospheres.",
+      "mechanic": "Respiratory support for smoke, contaminated air and related breathing hazards.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "5+2§",
+      "category": "Tool",
+      "subtype": "Respirator",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
     },
     {
       "type": "Drug",
@@ -9120,6 +10395,22 @@ window.INFINITY_DATA = {
       "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
+      "type": "Container",
+      "name": "Rucksack X",
+      "brief": "Rugged Ariadnan pack with upgraded communications/location features at higher ratings.",
+      "mechanic": "Source table: Comms; rating 2–3 includes a Locational Beacon. Cost 6+X§.",
+      "rarity": "Common",
+      "weight": "Medium",
+      "cost": "6 + X§",
+      "category": "Other Item",
+      "subtype": "Container",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
+    },
+    {
       "type": "Remote",
       "name": "Rui Shi Remote",
       "brief": "A fast Yu Jing hunter-killer remote with advanced optics, repeater support, and integrated Spitfire.",
@@ -9131,6 +10422,22 @@ window.INFINITY_DATA = {
       "subtype": "Combat Remote",
       "loadoutEligible": false,
       "loadoutConditional": false
+    },
+    {
+      "type": "Utility",
+      "name": "Samovar",
+      "brief": "Durable Ariadnan tea/boiling appliance reflecting low-tech domestic culture.",
+      "mechanic": "Non-Hackable; Maintenance 0. Primarily a roleplay/downtime utility item.",
+      "rarity": "Common",
+      "weight": "Medium",
+      "cost": "4+1§",
+      "category": "Other Item",
+      "subtype": "Utility",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "0"
     },
     {
       "type": "Drug",
@@ -9209,6 +10516,22 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Sgian Dubh (CC)",
+      "brief": "Compact Caledonian Teseum blade worn as a discreet fighting knife.",
+      "mechanic": "Source profile: Melee; 1+3§; 1H; Concealed 2; Non-Hackable; Subtle 2; Unforgiving 1.",
+      "rarity": "Uncommon",
+      "weight": "Light",
+      "cost": "3+1§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "2"
     },
     {
       "type": "Kit",
@@ -9329,6 +10652,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Ammunition",
+      "name": "Silver Bullets",
+      "brief": "Special anti-Dog-Blooded ammunition used by Loup-Garou units.",
+      "mechanic": "Biotech, Grievous, Knockdown and Toxic 3 against Antipodes, Dogfaces and Wulvers.",
+      "rarity": "Rare",
+      "weight": "Light",
+      "cost": "3+3§",
+      "category": "Other Item",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "3"
+    },
+    {
       "type": "Augmentation",
       "name": "Sixth Sense",
       "brief": "A Silk-based sensory augmentation that warns the user of danger before conscious perception catches up.",
@@ -9418,6 +10757,22 @@ window.INFINITY_DATA = {
       "subtype": "Grenade",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Smoke Grenade (BS)",
+      "brief": "Thrown smoke grenade used to obscure sight lines and movement.",
+      "mechanic": "Core profile: 1H; Disposable; Indiscriminate (Close); Nonlethal; Speculative Fire; Smoke 2; Thrown.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "Core gear",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 380,
+      "sourceRestriction": "1"
     },
     {
       "type": "Weapon",
@@ -9708,6 +11063,70 @@ window.INFINITY_DATA = {
       "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
+      "type": "Weapon",
+      "name": "T2 Boarding Shotgun (BS)",
+      "brief": "Ariadnan boarding shotgun using normal shells or T2 slugs.",
+      "mechanic": "Source profile: Range C; 1+5§; Burst 1; 2H; Normal Shells/T2 Slugs; Knockdown; Medium MULTI.",
+      "rarity": "Rare",
+      "weight": "Medium",
+      "cost": "8+1§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Ammunition",
+      "name": "T2 Slugs",
+      "brief": "Teseum fragmentation shotgun slugs designed for extreme anti-materiel effect.",
+      "mechanic": "Adds Anti-Materiel 2, Piercing 3 and Vicious 2.",
+      "rarity": "Very Rare",
+      "weight": "Light",
+      "cost": "4+4§",
+      "category": "Other Item",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 61,
+      "sourceRestriction": "4"
+    },
+    {
+      "type": "Weapon",
+      "name": "Tactical Bow (BS)",
+      "brief": "Modern silent combat bow useful where firearms are too loud or conspicuous.",
+      "mechanic": "Core profile: Range C; 1+3§; Burst 1; 2H; Subtle 2; Vicious 2. Adds the higher of melee or ranged damage bonus.",
+      "rarity": "Uncommon",
+      "weight": "Medium",
+      "cost": "Core gear",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 383,
+      "sourceRestriction": "2"
+    },
+    {
+      "type": "Load-Bearing Gear",
+      "name": "Tactical Webbing",
+      "brief": "Non-networked military webbing for ammunition and field equipment.",
+      "mechanic": "Source table quality: Non-Hackable.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "5+1§",
+      "category": "Tool",
+      "subtype": "Load-Bearing Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
+    },
+    {
       "type": "Grenade",
       "name": "Tattletale Grenade (BS)",
       "brief": "A sensor grenade that tags movement and exposes hidden targets.",
@@ -9731,7 +11150,26 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity Corebook and Ariadna Supplement",
+      "sourcePage": 61,
+      "sourceProfile": "Buffalo standard weapon; Teseum chopper is a high-penetration melee weapon."
+    },
+    {
+      "type": "Weapon",
+      "name": "Teseum Claws (CC)",
+      "brief": "Teseum fighting claws used by Antipodes.",
+      "mechanic": "Source profile: Melee; 1+3§; 1H; Piercing 2; Subtle 1; Vicious 2. Antipodes only.",
+      "rarity": "Legendary",
+      "weight": "Light",
+      "cost": "Special",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "5"
     },
     {
       "type": "Weapon",
@@ -9744,7 +11182,26 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceProfile": "Melee; 2+5§; 2H; Grievous; Non-Hackable; Parry 2; Piercing 2; Vicious 2; restriction 4 (Caledonia 2, Ariadna 3)."
+    },
+    {
+      "type": "Weapon",
+      "name": "Teseum Hatchet (CC)",
+      "brief": "Compact Teseum axe that combines armour penetration with a throwable profile.",
+      "mechanic": "Source profile: Melee; 1+3§; 1H; Grievous; Non-Hackable; Piercing 2; Subtle 1; Thrown; Vicious 1.",
+      "rarity": "Rare",
+      "weight": "Light",
+      "cost": "4+2§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
     },
     {
       "type": "Weapon",
@@ -9757,7 +11214,10 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceProfile": "Teseum Knife: Melee; 1+4§; 1H; Concealed 1; Non-Hackable; Piercing 2; Subtle 2; Thrown; Unforgiving 2; restriction 2 (Ariadna 1)."
     },
     {
       "type": "Armour",
@@ -9852,6 +11312,70 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Sensor",
+      "name": "Tracking Collar",
+      "brief": "Field collar used to monitor or track animals/creatures.",
+      "mechanic": "Source table quality: Comms.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "4+1§",
+      "category": "Tool",
+      "subtype": "Tracking Gear",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
+    },
+    {
+      "type": "Vehicle",
+      "name": "Trail Bike",
+      "brief": "Ariadnan vehicle reference from the supplement.",
+      "mechanic": "Scale 0; Speed 3; Brawn/Strength 8; Armour 1; light frontier bike.",
+      "rarity": "Common",
+      "weight": "Heavy",
+      "cost": "7+2§",
+      "category": "Other Item",
+      "subtype": "Vehicle",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
+    },
+    {
+      "type": "Remote",
+      "name": "Traktor Mul",
+      "brief": "Rugged Ariadnan utility/combat remote controlled through dedicated equipment.",
+      "mechanic": "Source remote entry; restriction 3 (Ariadna 2), cost 8+3§, Maintenance 1.",
+      "rarity": "Rare",
+      "weight": "Medium",
+      "cost": "8+3§",
+      "category": "Remote",
+      "subtype": "Remote",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Remote Control",
+      "name": "Traktor Mul Control Device",
+      "brief": "Control interface for a Traktor Mul remote.",
+      "mechanic": "Source table quality: Comms.",
+      "rarity": "Common",
+      "weight": "Light",
+      "cost": "4+2§",
+      "category": "Remote",
+      "subtype": "Remote Control",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
+    },
+    {
       "type": "AutoMediKit",
       "name": "Trauma Analysis and Neutralisation Kit (TANK)",
       "brief": "A backpack AutoMediKit that uses tailored serum, pain suppression, and stimulants to keep wounded soldiers fighting.",
@@ -9928,6 +11452,38 @@ window.INFINITY_DATA = {
       "subtype": "Upgrade",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Uragan MRL (BS)",
+      "brief": "Rodinan multiple-rocket launcher supporting normal, Hopak and Katyusha ammunition.",
+      "mechanic": "Source profile: Range M; 1+5§; Burst 3; Mounted; Normal/Hopak/Katyusha ammunition; Non-Hackable; Unsubtle.",
+      "rarity": "Rare",
+      "weight": "Heavy",
+      "cost": "9+3§",
+      "category": "Weapon",
+      "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 62,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Tool",
+      "name": "USAriadnan Entrenching Tool, Custom X",
+      "brief": "Customised USAriadnan entrenching tool upgraded with exotic materials.",
+      "mechanic": "Rating X adds Armoured X and Piercing X and reduces improvised-weapon complication range by X; source also permits cancelling the first X complications for X Heat each.",
+      "rarity": "Common",
+      "weight": "Medium",
+      "cost": "(2+X) + (2+X)§",
+      "category": "Tool",
+      "subtype": "Entrenching Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "1"
     },
     {
       "type": "Environment Suit",
@@ -10113,6 +11669,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Poison",
+      "name": "Wolfshot",
+      "brief": "Rare organic compound used on River Tribe Antipode blades and arrows.",
+      "mechanic": "Core profile: Injury; Instant 2; 1+6§ physical damage. Wound Effect causes Bleeding. Dogfaces and their mothers are immune.",
+      "rarity": "Very Rare",
+      "weight": "Light",
+      "cost": "Core gear",
+      "category": "Contagion",
+      "subtype": "Poison",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 386,
+      "sourceRestriction": "4"
+    },
+    {
       "type": "Clothing",
       "name": "Wushu Tracksuit",
       "brief": "A flexible training outfit with integrated biometrics, motion sensors, and a locational beacon.",
@@ -10137,6 +11709,22 @@ window.INFINITY_DATA = {
       "subtype": "Visor",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Drug",
+      "name": "Yaga",
+      "brief": "Antipode entheogenic fungus used in Blood Tree rituals.",
+      "mechanic": "Source effect: 1d20 hours of hallucination/relaxation followed by equal deep sleep; heals Resolve over time and can heal Metanoia. Source also defines addiction/withdrawal.",
+      "rarity": "Uncommon",
+      "weight": "Light",
+      "cost": "5+5§",
+      "category": "Contagion",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "sourcePage": 63,
+      "sourceRestriction": "2"
     },
     {
       "type": "Armour",
@@ -10400,11 +11988,27 @@ window.INFINITY_DATA = {
     },
     {
       "faction": "Ariadna",
-      "subfaction": "Descendants of a lost colony on Dawn, rugged and lower-tech but resilient, practical, and dangerous.",
-      "homeworld": "Dawn",
-      "theme": "Frontier grit, survival, scouts, werewolves, low-tech ingenuity",
+      "subfaction": "Ariadna is the federation of human nations on Dawn. The Ariadna supplement expands Caledonia, Merovingia, Rodina/Tartary, USAriadna, the outlands, and Dog-Blooded/Antipode options.",
+      "homeworld": "Antipodean Wilds, Ariadna Exclusion Zone, Auron, Cailleach, Calonack, Castropol (Tartary), Coille Laith, Dál Riada, Dalnîy (Tartary), Dauphin, Dawn, Dynamo, Gök-Burgo, Inverloch, Jackson, Jefferson, Kennedy, Lafayette, Le Douar, Lincoln, Mariannebourg, Mat’, Mount Zion / The Wall, Novocherkassk, Ovsyanka (Tartary), Poictesme, Roosevelt, Scone, Skara Brae, Stanitsas, Tartary Outlands, The South Mirror, Tsitadel (Tartary), Tuathcruithne, Washington",
+      "theme": "Dawn frontier grit, four Ariadnan nations, survival, low-tech ingenuity, Teseum, Dog-Blooded and Antipode contact",
       "suggested_traits": "Frontier Born; Dawn Survivor; Low-Tech Ingenuity",
-      "suggested_talents": "Ariadnan Ranger"
+      "suggested_talents": "Ariadnan Ranger",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
+    },
+    {
+      "faction": "Ariadna - Antipode",
+      "subfaction": "UI grouping for playable Antipodes, Dawn's native trinary species; not a human political faction.",
+      "homeworld": "Bitter Leaves, Bringers-of-Peace, Gentle Embrace of the Sagacious Progenitors, Ice Fangs, River Tribe, White Knives, 3-Winged Moth Tribe, Broken Plains Tribe, Death Claws, Long Talons",
+      "theme": "Antipode tribes, trinary mind, primal technology, pack culture",
+      "suggested_traits": "Antipode; Priority Target; Entirely Misunderstood",
+      "suggested_talents": "Catfall; Pattern Recognition",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Ariadna - Antipode Handlers",
@@ -10412,7 +12016,47 @@ window.INFINITY_DATA = {
       "homeworld": "Dawn, Ariadnan wilderness, Antipode territories",
       "theme": "Animal handling, pack tactics, frontier warfare, dangerous companions",
       "suggested_traits": "Antipode Handler; Pack Ranger; Beastmaster",
-      "suggested_talents": "Antipode Handler Doctrine"
+      "suggested_talents": "Antipode Handler Doctrine",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
+    },
+    {
+      "faction": "Ariadna - Caledonia",
+      "subfaction": "Caledonian nation/culture within Ariadna: clan-centred Highland society on Dawn with strong martial, duelling and Teseum traditions.",
+      "homeworld": "Cailleach, Calonack, Coille Laith, Dál Riada, Inverloch, Scone, Skara Brae, Tuathcruithne",
+      "theme": "Caledonian clans, honour, duelling, Teseum, frontier warfare",
+      "suggested_traits": "Ariadnan Grit; Heirloom Weapon; Pioneer Spirit",
+      "suggested_talents": "Catfall; Sturdy",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
+    },
+    {
+      "faction": "Ariadna - Dog-Blooded",
+      "subfaction": "UI grouping for Ariadnan Dogfaces and Wulvers; a host/heritage grouping rather than a separate political faction.",
+      "homeworld": "Antipodean Wilds, Ariadna Exclusion Zone, Auron, Cailleach, Calonack, Castropol (Tartary), Coille Laith, Dál Riada, Dalnîy (Tartary), Dauphin, Dynamo, Gök-Burgo, Inverloch, Jackson, Jefferson, Kennedy, Lafayette, Le Douar, Lincoln, Mariannebourg, Mat’, Mount Zion / The Wall, Novocherkassk, Ovsyanka (Tartary), Poictesme, Roosevelt, Scone, Skara Brae, Stanitsas, Tartary Outlands, The South Mirror, Tsitadel (Tartary), Tuathcruithne, Washington",
+      "theme": "Dogface, Wulver, Dog Nation, Dog-Bowl, irregular regiments",
+      "suggested_traits": "Dogface; Wulver; Unlikely Hero; Overconfident",
+      "suggested_talents": "Catfall; Sturdy",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
+    },
+    {
+      "faction": "Ariadna - Merovingia",
+      "subfaction": "Merovingian nation/culture within Ariadna: commercially connected, trade-focused and outward-facing.",
+      "homeworld": "Auron, Le Douar, Mariannebourg, Poictesme, Lafayette, Dauphin",
+      "theme": "Trade, commercial agents, 112 responders, Loup-Garou, diplomacy",
+      "suggested_traits": "Spirit of the 112; Patriot; Sardonic",
+      "suggested_talents": "Pattern Recognition; Sturdy",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Ariadna - Ranger Corps",
@@ -10420,7 +12064,35 @@ window.INFINITY_DATA = {
       "homeworld": "Dawn, Ariadnan frontier settlements, wilderness theatres",
       "theme": "Survival, scouting, low-tech warfare, ambush, frontier resilience",
       "suggested_traits": "Frontier Survivor; Dawn Survivor; Antipode Hunter",
-      "suggested_talents": "Ariadna Ranger Corps"
+      "suggested_talents": "Ariadna Ranger Corps",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
+    },
+    {
+      "faction": "Ariadna - Rodina / Tartary",
+      "subfaction": "Rodinan and Tartarian nation/culture within Ariadna: Cossack-rooted military service, hard industry and frontier expansion.",
+      "homeworld": "Dynamo, Gök-Burgo, Mat’, Novocherkassk, Stanitsas, Castropol (Tartary), Dalnîy (Tartary), Ovsyanka (Tartary), Tsitadel (Tartary)",
+      "theme": "Cossacks, Stavka, Spetsnaz, industry, frontier settlements",
+      "suggested_traits": "Ariadnan Grit; Grizzled; Brand Loyalist",
+      "suggested_talents": "Sturdy; Pattern Recognition",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
+    },
+    {
+      "faction": "Ariadna - USAriadna",
+      "subfaction": "USAriadnan nation/culture within Ariadna: frontier communities, local militias, southern territories and strong self-reliance.",
+      "homeworld": "Mount Zion / The Wall, Jackson, Jefferson, Lincoln, Kennedy, Roosevelt, Washington",
+      "theme": "Frontier justice, militia, hardcases, rangers, rugged vehicles",
+      "suggested_traits": "Pioneer Spirit; Heirloom Weapon; Survivor",
+      "suggested_talents": "Sturdy; Catfall",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Combined Army",
@@ -10847,8 +12519,14 @@ window.INFINITY_DATA = {
       "ALEPH - Special Situations Section",
       "ALEPH - Steel Phalanx",
       "Ariadna",
+      "Ariadna - Antipode",
       "Ariadna - Antipode Handlers",
+      "Ariadna - Caledonia",
+      "Ariadna - Dog-Blooded",
+      "Ariadna - Merovingia",
       "Ariadna - Ranger Corps",
+      "Ariadna - Rodina / Tartary",
+      "Ariadna - USAriadna",
       "Combined Army",
       "Combined Army - EI Aspects",
       "Combined Army - Morat Supremacy",
@@ -10903,30 +12581,41 @@ window.INFINITY_DATA = {
       "Yu Jing - Yănjīng Intelligence"
     ],
     "homeworlds": [
+      "3-Winged Moth Tribe",
       "Acontecimento",
       "Alamut",
       "ALEPH facilities",
       "ALEPH military facilities",
       "alpine bases",
       "Antipode territories",
+      "Antipodean Wilds",
       "Any major city",
       "arctic cities",
+      "Ariadna Exclusion Zone",
       "Ariadnan frontier settlements",
       "Ariadnan wilderness",
+      "Auron",
       "Bakunin",
       "Bayram caravanserai",
       "bimaristans",
+      "Bitter Leaves",
       "black markets",
       "black operations theatres",
       "black sites",
       "Bourak",
       "Bourak universities",
+      "Bringers-of-Peace",
+      "Broken Plains Tribe",
+      "Cailleach",
+      "Calonack",
       "caravanserai",
       "caravanserai across the Human Sphere",
       "caravanserai garrisons",
+      "Castropol (Tartary)",
       "Circulars",
       "classified Maya spaces",
       "coastal theatres",
+      "Coille Laith",
       "combat deployments",
       "Combined Army deployments",
       "Combined Civilisation space",
@@ -10936,9 +12625,14 @@ window.INFINITY_DATA = {
       "Corregidor",
       "covert mission sites",
       "covert offices",
+      "Dál Riada",
+      "Dalnîy (Tartary)",
+      "Dauphin",
       "Dawn",
+      "Death Claws",
       "diplomatic fronts",
       "Distributed across the Human Sphere",
+      "Dynamo",
       "Earth",
       "EI nodes",
       "EI-controlled territories",
@@ -10949,6 +12643,8 @@ window.INFINITY_DATA = {
       "fleet support facilities",
       "frontier worlds",
       "frontier zones",
+      "Gentle Embrace of the Sagacious Progenitors",
+      "Gök-Burgo",
       "Haqqislamite hospitals",
       "Hassassin safehouses",
       "Human Edge",
@@ -10956,17 +12652,29 @@ window.INFINITY_DATA = {
       "Human Sphere covert networks",
       "Human Sphere liaison missions",
       "human-system warfronts",
+      "Ice Fangs",
       "inter-faction missions",
+      "Inverloch",
+      "Jackson",
       "Japanese communities",
       "Japanese-held territories",
+      "Jefferson",
+      "Kennedy",
+      "Lafayette",
+      "Le Douar",
       "Lhost clinics",
+      "Lincoln",
+      "Long Talons",
       "major presence in Maya and advanced infrastructure",
+      "Mariannebourg",
+      "Mat’",
       "Maya",
       "Maya operations",
       "mercenary contracts",
       "mercenary theatres",
       "Military Order fortresses",
       "Morat Supremacy territories",
+      "Mount Zion / The Wall",
       "naval facilities",
       "Neoterra",
       "Nomad and O-12 shipboard deployments",
@@ -10974,6 +12682,7 @@ window.INFINITY_DATA = {
       "Nomad mothership habitats",
       "Nomad mothership infrastructure",
       "Nomad motherships",
+      "Novocherkassk",
       "O-12 facilities",
       "ocean habitats",
       "or black-market hub",
@@ -10981,6 +12690,7 @@ window.INFINITY_DATA = {
       "orbital habitats",
       "orbital staging points",
       "orbital stations",
+      "Ovsyanka (Tartary)",
       "PanOceanian bases",
       "PanOceanian black operations",
       "PanOceanian church holdings",
@@ -10993,10 +12703,14 @@ window.INFINITY_DATA = {
       "Paradiso warfront and conquered alien systems",
       "Paradiso warfronts",
       "peacekeeping deployments",
+      "Poictesme",
       "Praxis labs",
       "proxy bodies across the Human Sphere",
       "remote bays",
       "research centres",
+      "River Tribe",
+      "Roosevelt",
+      "Scone",
       "secure data markets",
       "seed-embryo caches",
       "Shasvastii Continuum assets",
@@ -11004,8 +12718,10 @@ window.INFINITY_DATA = {
       "shipboard habitats",
       "ships",
       "shipyards",
+      "Skara Brae",
       "Sol (Chung Kuo)",
       "special situations deployment zones",
+      "Stanitsas",
       "state-security facilities",
       "station",
       "stations",
@@ -11020,14 +12736,20 @@ window.INFINITY_DATA = {
       "Sygmaa Trihedron enclaves",
       "TAG facilities",
       "TAG hangars",
+      "Tartary Outlands",
+      "The South Mirror",
       "Tohaa territories",
       "Tohaa worlds and scattered operations",
       "trade routes",
       "Trident operations",
+      "Tsitadel (Tartary)",
+      "Tuathcruithne",
       "Tunguska",
       "Various worlds",
       "Varuna",
       "warzones",
+      "Washington",
+      "White Knives",
       "wilderness theatres",
       "workshops",
       "Yu Jing embassies",
@@ -11036,31 +12758,47 @@ window.INFINITY_DATA = {
       "zero-g work modules"
     ],
     "careerRoles": [
+      "112 Emergency Responder",
       "Advanced Infowar Analyst",
       "AI Aspect",
       "Airborne",
       "ALEPH Prestige",
+      "Antipode Warlord",
       "Arachne Broker",
       "Artisan",
       "Assassin",
+      "Assault Pack Controller",
+      "Assault Pack Leader",
+      "Assault Pack Member",
       "Bakunin Social Operator",
       "Beastmaster",
       "Bōsōzoku",
+      "Bratva Gangster",
+      "Caledonian Noble",
       "Celestial Guard",
+      "Claymore Duellist",
       "Combat Pilot",
       "Combined Army Operative",
       "Corregidor Crew",
       "Diplomat",
       "Doctor",
+      "Dog Nation Activist",
+      "Dog-Blooded Irregular",
+      "Dog-Bowl Player",
       "EI Handler",
       "Engineer",
       "Explorer",
       "Faction Prestige",
       "Fleet Officer",
+      "Forest Ranger",
+      "Free Miner",
+      "Frontier Doctor",
       "Frontier Scout",
+      "Frontiersman",
       "Geist Handler",
       "Hacker",
       "Haqqislam Scholar",
+      "Hardcase",
       "Hassassin Bahram",
       "Heavy Infantry",
       "Imperial Agent",
@@ -11069,10 +12807,14 @@ window.INFINITY_DATA = {
       "Infowar Specialist",
       "Intelligence Operative",
       "Internal Affairs Agent",
+      "Irmandinhos Smuggler",
       "Jopok",
       "Kuge Aristocrat",
       "Lhost Specialist",
       "Line Infantry",
+      "Loup-Garou",
+      "Merovingian Commercial Agent",
+      "Militia Member",
       "Morat Warrior",
       "Mothership Crew",
       "NeoBushi",
@@ -11080,14 +12822,19 @@ window.INFINITY_DATA = {
       "O-12 Bureaucrat",
       "Officer",
       "Oniwaban",
+      "Paratrooper",
       "Praxis Bodymodder",
+      "Raider",
       "Recon",
       "Remote Controller",
+      "Scavenger",
       "Shasvastii Infiltrator",
       "Ship Crew",
       "Skirmisher",
       "Smuggler",
       "Special Forces",
+      "Spetsnaz",
+      "Sports Personality",
       "Steel Phalanx Operative",
       "Subversive",
       "Sygmaa Diplomat",
@@ -11096,7 +12843,9 @@ window.INFINITY_DATA = {
       "Tunguska Data Broker",
       "Voidfarer",
       "Voidship Engineer",
+      "Volk",
       "Wú Míng Assault Corps",
+      "Wulver Shock Troop",
       "Yănjīng Agent",
       "Zhanshi Gōngchéng Mech-Engineers"
     ],
@@ -11167,8 +12916,11 @@ window.INFINITY_DATA = {
       "ALEPH, Geist, or Hacking background",
       "ALEPH, Lhost, or medical-technical background",
       "ALEPH, O-12, Nomad, or advanced Hacking background",
+      "Ariadna Antipode career",
+      "Ariadna Dog-Blooded career",
       "Ariadna or frontier survival background",
       "Ariadna or GM approval",
+      "Ariadna sourcebook career",
       "Assault infantry background",
       "Close combat or Hassassin background",
       "Cold-weather or mountain operations background",
@@ -11281,11 +13033,15 @@ window.INFINITY_DATA = {
       "Agile",
       "AI Specialist",
       "All Terrain Expert",
+      "Amateur Archaeologist",
       "Ambusher",
       "Anti Virus",
+      "Antipode",
       "Arachne Native",
       "Arctic Survivor",
+      "Ariadnan Grit",
       "Aspect Discipline",
+      "Astrophobia",
       "Athletic",
       "Automatic Response Order (ARO)",
       "Bakunin Social Energy",
@@ -11297,7 +13053,7 @@ window.INFINITY_DATA = {
       "Biotech Specialist",
       "Blending In",
       "Bourak Survivor",
-      "Breacher",
+      "Brand Loyalist",
       "Brutal Critical",
       "Brutality",
       "Bureaucrat",
@@ -11313,7 +13069,6 @@ window.INFINITY_DATA = {
       "Charismatic",
       "Circular Born",
       "Climber",
-      "Climbing Plus",
       "Code Savant",
       "Combat Analysis",
       "Combat Healer",
@@ -11327,22 +13082,23 @@ window.INFINITY_DATA = {
       "Counsellor",
       "Counter Sniper",
       "Counter Surveillance",
-      "Counter-Intel",
       "Courageous",
       "CQB Specialist",
       "Cultural Expert",
+      "Cybered-Up",
       "Cybernetic Surgeon",
       "Cyberneticist",
       "Cybersecurity Expert",
       "Data Anarchist",
       "Data Miner",
       "Dawn Survivor",
-      "Deep Cover",
       "Defender",
       "Defensive Play",
       "Desert Walker",
       "Diplomatic",
+      "Disabled",
       "Disguise Expert",
+      "Dogface",
       "Dogged",
       "Drone Operator",
       "Duelist",
@@ -11356,11 +13112,11 @@ window.INFINITY_DATA = {
       "Engineer",
       "Enhanced (Meta Humans only)",
       "Enhanced Cognition",
+      "Entirely Misunderstood",
       "Environmental Expert",
       "Escape Artist",
       "Executioner",
       "Expedition Leader",
-      "False Identity",
       "Fanatic (Hassassin Bahram Affiliate)",
       "Fast Healer",
       "Fatality",
@@ -11380,10 +13136,13 @@ window.INFINITY_DATA = {
       "Ghost",
       "Graceful",
       "Grenadier",
+      "Grizzled",
       "Gunslinger",
       "Hacker",
       "Hard to Kill",
+      "Harried",
       "Heavy Gunner",
+      "Heirloom Weapon",
       "Helot Heritage",
       "Hidden Blade",
       "High-G Adapted",
@@ -11395,12 +13154,14 @@ window.INFINITY_DATA = {
       "Impetuous",
       "Imposing Figure",
       "Industrial Technician",
+      "Infamous Lineage",
       "Infiltrator",
       "Influencer",
       "Inspiring",
       "Interrogator",
       "Invincible Doctrine",
       "Iron Constitution",
+      "It Takes One to Know One",
       "Jungle Veteran",
       "Knightly Discipline",
       "Lhost Customisation",
@@ -11408,6 +13169,7 @@ window.INFINITY_DATA = {
       "Linked with the EI (Note: Free for ALF or any Combined army factions)",
       "Low-Tech Ingenuity",
       "Lucky",
+      "Luddite",
       "Marathon Runner",
       "Maya Native",
       "Mechanic",
@@ -11426,7 +13188,6 @@ window.INFINITY_DATA = {
       "Natural Born Warrior",
       "Natural Survivor",
       "Navigator",
-      "Negotiator",
       "Network Architect",
       "Networker",
       "Neurologist",
@@ -11435,25 +13196,33 @@ window.INFINITY_DATA = {
       "Non-Hackable",
       "Observation Expert",
       "Ocean Explorer",
+      "Old Wound",
+      "On the Watchlist",
+      "Overconfident",
       "Pain Tolerant",
       "Paradiso Veteran",
+      "Paranoid",
       "Parkour Expert",
       "Pathfinder",
       "Pathologist",
+      "Patriot",
       "Pattern Recognition",
       "Pedal to the Metal",
       "Pharmacologist",
+      "Pioneer Spirit",
       "Planetary Explorer",
       "Political Operator",
       "Posthuman Conditioning",
       "Praxis Modified",
       "Predictive Thinking",
+      "Priority Target",
       "Professional",
       "Programmer",
       "Public Figure",
       "Quick Draw",
       "Quick Reactions",
-      "Recon Specialist",
+      "Raised in a Barn",
+      "Rebel",
       "Recruiter",
       "Regeneration (NOTE: for AI, Neo Humans and ALF only)",
       "Rehabilitation Expert",
@@ -11465,10 +13234,12 @@ window.INFINITY_DATA = {
       "Resuscitation Expert",
       "Rigorous Training",
       "Risk Taker",
+      "Rockstar",
       "Saboteur",
       "Safecracker",
+      "Sardonic",
+      "Scarred",
       "Scout",
-      "Search for Knowledge",
       "Sensor Array",
       "Sensor Evader",
       "Sensor Expert",
@@ -11481,19 +13252,20 @@ window.INFINITY_DATA = {
       "Silent Step",
       "Silk Adept",
       "Silk Researcher",
-      "Silver Tongue",
-      "sixth sense",
+      "Sleepy",
       "Smuggler",
       "Sniper",
+      "Sole Survivor",
       "Specialist",
       "Speed Typing",
+      "Spirit of the 112",
       "Sprinter",
       "Stalker",
       "Starship Navigator",
-      "State Discipline",
       "Steady Hands",
       "Steel Phalanx Drill",
       "Strategist",
+      "Street Fighter",
       "Street Operator",
       "Strong Back",
       "Strong Grip",
@@ -11501,12 +13273,12 @@ window.INFINITY_DATA = {
       "Stunning Presence",
       "Sturdy",
       "Submondo Ties",
-      "Super Jump",
       "Superior Doctrine",
       "Suppressive Shooter",
       "Sure-Footed",
       "Surgeon",
       "Surveyor",
+      "Survivor",
       "Swimmer",
       "Sygmaa Envoy",
       "Systems Analyst",
@@ -11523,20 +13295,26 @@ window.INFINITY_DATA = {
       "Trailblazer",
       "Trauma Expert",
       "Trigger Happy",
+      "True Grit",
       "Tunguska Data Broker",
       "Undercover Agent",
+      "Unlikely Hero",
       "Urban Explorer",
       "Urban Fighter",
       "Vanguard (Infiltration)",
+      "Vengeful Progeny",
       "Veteran",
       "Void Traveller",
       "Voidship Damage Control",
       "Wasteland Survivor",
       "Weapon Master",
+      "Weight of the World",
       "Wild Card",
       "Wild Empathy",
       "Wild Guess",
       "Wilderness Scout",
+      "Wolfsbane",
+      "Wulver",
       "Xenobiologist",
       "Zero-G Adapted",
       "Zero-Gravity"
@@ -11558,6 +13336,7 @@ window.INFINITY_DATA = {
       "Breacher",
       "Bridge Officer",
       "Bureau Authority",
+      "Catfall",
       "Circular Trade Agent",
       "Climbing Expert",
       "Codebreaker",
@@ -11665,6 +13444,7 @@ window.INFINITY_DATA = {
       "Paratrooper",
       "Patch Job",
       "Patient Aim",
+      "Pattern Recognition",
       "Perfect Cover",
       "Phantom Recon",
       "Pilot - Remote 1",
@@ -11712,6 +13492,7 @@ window.INFINITY_DATA = {
       "State Discipline",
       "Steady Scalpel",
       "Steel Phalanx Assault",
+      "Sturdy",
       "Suppression Expert",
       "Swarm Synchrony",
       "Sygmaa Mask Protocol",
@@ -11737,7 +13518,9 @@ window.INFINITY_DATA = {
     "weapons": [
       "Adhesive Launcher (BS)",
       "Akrylat-Kanone (BS)",
+      "Americolt Eagle (BS)",
       "AP Rifle (BS)",
+      "Ariadnan HMG (BS)",
       "Assault Pistol (BS)",
       "Assault Rifle - EMT (BS)",
       "Assault Rifle - Normal (BS)",
@@ -11749,7 +13532,9 @@ window.INFINITY_DATA = {
       "Breaker Rifle (BS)",
       "Chain Rifle (BS)",
       "Chain-Colt (BS)",
+      "Chest Mine (BS)",
       "Cìhuái Rifle (BS)",
+      "Cobra Baton (CC)",
       "Combi Rifle (BS)",
       "Compound Bow - Double Action (BS)",
       "Compound Bow - Viral (BS)",
@@ -11757,7 +13542,11 @@ window.INFINITY_DATA = {
       "Crossbow - Double Action (BS)",
       "Crossbow (BS)",
       "Custom Shotgun \"Readiness\" (BS)",
+      "D.E.P. (BS)",
       "Dagger (CC)",
+      "Dueling Bracers (CC)",
+      "E/Mauler Deployable",
+      "E/Mauler, Non-Hackable (BS)",
       "Feuerbach (BS)",
       "Fireflies Grenade (BS)",
       "Flammenspeer (BS)",
@@ -11765,10 +13554,12 @@ window.INFINITY_DATA = {
       "Garrotte (CC)",
       "Grazeblade (CC)",
       "Grenade Launcher (BS)",
+      "H-12 Pistol (BS)",
       "Heavy Axe (CC)",
       "Heavy Flamethrower (BS)",
       "Heavy Machine Gun / HMG (BS)",
       "Heavy Pistol (BS)",
+      "Heavy Shotgun (BS)",
       "Hedgehog Implant (CC)",
       "Hyper-Rapid Magnetic Cannon / HMC (BS)",
       "Ki-rin Rifle (BS)",
@@ -11777,7 +13568,9 @@ window.INFINITY_DATA = {
       "Light Shotgun (BS)",
       "Linkspike (CC)",
       "Missile Launcher (BS)",
+      "Mk12 Rifle (BS)",
       "Modhand (CC)",
+      "Molotok (BS)",
       "Monofilament Weapon (CC)",
       "Morat Scimitar (CC)",
       "MULTI Heavy Machine Gun (BS)",
@@ -11789,6 +13582,7 @@ window.INFINITY_DATA = {
       "Nokogiri Benkei (CC)",
       "Nomad Spear (CC)",
       "Numbfish (CC)",
+      "Ojotnik (BS)",
       "Palad Khik (BS)",
       "Panzerfaust (BS)",
       "Pistol (Normal)",
@@ -11796,6 +13590,7 @@ window.INFINITY_DATA = {
       "Plasma Rifle (BS)",
       "Plasma Sniper Rifle (BS)",
       "Plasteel Pipe (CC)",
+      "Portable Autocannon (BS)",
       "Pump Action Shotgun (CC / BS)",
       "Qiang (CC)",
       "Qiang, Heavy (CC)",
@@ -11804,6 +13599,7 @@ window.INFINITY_DATA = {
       "Sensei Wraps (CC)",
       "Sepsitor (BS)",
       "Sepsitor Pistol (BS)",
+      "Sgian Dubh (CC)",
       "Shinobigatana (CC)",
       "Shock CC Weapon (CC)",
       "Shock Rifle (BS)",
@@ -11811,6 +13607,7 @@ window.INFINITY_DATA = {
       "Smart Grenade Launcher (BS)",
       "Smart MULTI Pistol (BS)",
       "Smart MULTI Sniper Rifle (BS)",
+      "Smoke Grenade (BS)",
       "Sniper Rifle (BS)",
       "Spear (CC)",
       "Spiked Knuckles (CC)",
@@ -11820,11 +13617,16 @@ window.INFINITY_DATA = {
       "Submachine Gun (BS)",
       "Sword (CC)",
       "Sword of Office (CC)",
+      "T2 Boarding Shotgun (BS)",
+      "Tactical Bow (BS)",
       "Teseum Chopper (CC)",
+      "Teseum Claws (CC)",
       "Teseum Claymore (CC)",
+      "Teseum Hatchet (CC)",
       "Teseum-Edged Knife (CC)",
       "Throwing Axe (BS)",
       "Tonfa Bangles (CC)",
+      "Uragan MRL (BS)",
       "Vigour Poison Charge X (BS)",
       "Viral CC Weapon",
       "Viral Rifle (BS)",
@@ -11838,6 +13640,7 @@ window.INFINITY_DATA = {
     "equipment": [
       "360* Visor",
       "Abseil Rope (100ft)",
+      "Adhesive Shells",
       "Adrenaline shots (in syringe)",
       "Agora Suite",
       "AiQ Upgrade",
@@ -11850,21 +13653,28 @@ window.INFINITY_DATA = {
       "Antipode Control Cranial Implant",
       "Antipode Control Device",
       "Aoidoi Apparel",
+      "Apex Ammunition",
       "AR Eye Implants",
       "Arachne Blackbox",
+      "Ariadnan Utility Vehicle (AUV)",
       "Armour - Armoured Clothing",
       "Armour - Ballistic Vest",
+      "Armour - Buffalo Powered",
+      "Armour - Cherkesska",
       "Armour - Combat Heavy",
       "Armour - Combat Light",
       "Armour - Combat Medium",
       "Armour - Crashsuit",
+      "Armour - Dog-Bowl",
       "Armour - Ectros Symbiont",
       "Armour - EXO Suit",
       "Armour - Gruntsuit",
       "Armour - Hard Hat",
       "Armour - Hedgehog",
+      "Armour - Métros",
       "Armour - ModCoat, Long",
       "Armour - ModCoat, Short",
+      "Armour - Mormaer",
       "Armour - Nu-El Symbiont",
       "Armour - Personal Protective Equipment",
       "Armour - Powered Combat",
@@ -11872,23 +13682,31 @@ window.INFINITY_DATA = {
       "Armour - Sakiel Symbiont",
       "Armour - Sports Padding",
       "Armour - Subdermal Graft",
+      "Armour - USARF Fighting Uniform",
+      "Arroaz Skimmer",
       "Attribute Augmentation (Silk)",
       "Attribute Augmentation X (Biografted)",
       "Attribute Augmentation X (Cyber)",
       "AutoMediKit",
+      "Baba",
+      "Baba/Yaga",
       "Backpack",
+      "Backwoods ATV",
       "Baekdusan",
       "Bakunin Social Energy Ledger",
       "Ball Bearings",
+      "Bandolier",
       "Basic Limb Replacement (Biografted)",
       "Basic Limb Replacement (Cyber)",
       "Basic Limb Replacement (Silk)",
+      "Basic Medical Supplies",
       "Binoculars",
       "Bioimmunity Organ",
       "Biometric Visor",
       "Bioscanner",
       "Bocce Grenade (BS)",
       "Bottled Water",
+      "Breaking & Entering Kit",
       "Caffeine Tablets",
       "Caltrops",
       "Casemod",
@@ -11899,6 +13717,8 @@ window.INFINITY_DATA = {
       "CLAW-3 Sparrowfall",
       "Climbing gear",
       "Climbing Plus",
+      "Cod",
+      "Combat Jump Pack",
       "Comlog",
       "Cooking Equipment",
       "Corregidor G-Time Harness",
@@ -11913,7 +13733,9 @@ window.INFINITY_DATA = {
       "Dazer Unit",
       "Deactivator Kit",
       "Deflector Shield",
-      "E/Mauler Deployable",
+      "Digicloak (Environment)",
+      "Dog-Bowl Jersey X",
+      "Eagle Ammunition",
       "ECM X",
       "EI Transponder",
       "Engineering Waldo X",
@@ -11930,6 +13752,7 @@ window.INFINITY_DATA = {
       "Forgery Tool",
       "Fúcánglóng Arm",
       "Fúcánglóng Arms",
+      "Fusebox",
       "GADGET-3 Zhang Xun",
       "Gecko Pads",
       "GeePal Remote",
@@ -11941,6 +13764,7 @@ window.INFINITY_DATA = {
       "Grenade - Frag",
       "Grenade - Malware",
       "Grenade - Smoke",
+      "H-12 Ammo",
       "Hacking Device - Assault",
       "Hacking Device - Assault (EI)",
       "Hacking Device - Defensive",
@@ -11954,6 +13778,7 @@ window.INFINITY_DATA = {
       "Holo-Projector Level 1",
       "Holo-Projector Level 2",
       "Holomask",
+      "Hopak Ammunition",
       "Hsien Emissary Armour",
       "Huǒxīng Special XO Suit",
       "Hykaate Dome Kit",
@@ -11965,6 +13790,7 @@ window.INFINITY_DATA = {
       "Iron Turtle Suit",
       "Kanrèn Gatecrasher Armour",
       "Karkata Remote",
+      "Katyusha Ammunition",
       "Khmoc Outfit",
       "Ki-rin Ammo X",
       "Kumoropu Bicycle",
@@ -11975,6 +13801,7 @@ window.INFINITY_DATA = {
       "Limb Socket",
       "Location Beacon",
       "Lockpick Set",
+      "Long Jehans",
       "Loudcast Box X",
       "Lunar Dragon Head",
       "Lunar Dragon Module X",
@@ -12002,17 +13829,23 @@ window.INFINITY_DATA = {
       "Ngam Drops",
       "Night Vision Goggles",
       "Nullifier",
+      "Official Vehicle",
       "Optical Disruption Device",
+      "Ore Hauler",
       "Pain Filters",
       "Parachute",
       "Paragon Lhost",
+      "Pet X (tiny/small/large)",
       "Pheromone Dispenser",
       "Phoenixware Upgrade",
+      "Photoreactive Coating",
       "Poison Vial",
+      "Portable Rescue Supply Kit",
       "Powered Multitool",
       "Praxis Bodymod Kit",
       "Proxy Mk.0-5 i-Lhost",
       "Psychoanalysis Suite",
+      "Rebreather",
       "Recall",
       "Recorder",
       "Recreation Garb",
@@ -12022,7 +13855,9 @@ window.INFINITY_DATA = {
       "Repeater Device",
       "Respirator X",
       "Rocket pack",
+      "Rucksack X",
       "Rui Shi Remote",
+      "Samovar",
       "Second Skin",
       "SecurCuffs",
       "Sensor Suite (Type)",
@@ -12031,6 +13866,7 @@ window.INFINITY_DATA = {
       "SHIELD-3 AECM",
       "Shipboard Repair Kit",
       "Shovel",
+      "Silver Bullets",
       "Sixth Sense",
       "Skeletal Reinforcement X",
       "Slammer Charge (CC)",
@@ -12048,26 +13884,35 @@ window.INFINITY_DATA = {
       "SWORD-1 Horrorshow X",
       "Sygmaa Masking Bio-Graft",
       "SymbioMate",
+      "T2 Slugs",
+      "Tactical Webbing",
       "Tattletale Grenade (BS)",
       "TF Coat",
       "Thermo-Optical Camouflage",
       "Thermo-Tactical Visor (MSV L2)",
       "TinBot (X)",
       "Torch Light",
+      "Tracking Collar",
+      "Trail Bike",
+      "Traktor Mul",
+      "Traktor Mul Control Device",
       "Trauma Analysis and Neutralisation Kit (TANK)",
       "Tunguska Data Vault Key",
       "TZ Tsurugi Motorcycle",
       "UPGRADE Flashsocket",
       "UPGRADE Idaho",
       "UPGRADE Null",
+      "USAriadnan Entrenching Tool, Custom X",
       "Vac Suit",
       "Varuna Lungs",
       "Vertexpert Journal",
       "Vigour Poison X",
       "VoodooTech Relay",
       "Vorpal Armour",
+      "Wolfshot",
       "Wushu Tracksuit",
       "X Visor",
+      "Yaga",
       "Yan Huo Invincibles Armour",
       "Yangwater",
       "Yáozao Remote",
@@ -12311,10 +14156,187 @@ window.INFINITY_DATA = {
       "Paradiso",
       "Svalarheima",
       "Human Edge"
+    ],
+    "Ariadna": [
+      "Antipodean Wilds",
+      "Ariadna Exclusion Zone",
+      "Auron",
+      "Cailleach",
+      "Calonack",
+      "Castropol (Tartary)",
+      "Coille Laith",
+      "Dál Riada",
+      "Dalnîy (Tartary)",
+      "Dauphin",
+      "Dawn",
+      "Dynamo",
+      "Gök-Burgo",
+      "Inverloch",
+      "Jackson",
+      "Jefferson",
+      "Kennedy",
+      "Lafayette",
+      "Le Douar",
+      "Lincoln",
+      "Mariannebourg",
+      "Mat’",
+      "Mount Zion / The Wall",
+      "Novocherkassk",
+      "Ovsyanka (Tartary)",
+      "Poictesme",
+      "Roosevelt",
+      "Scone",
+      "Skara Brae",
+      "Stanitsas",
+      "Tartary Outlands",
+      "The South Mirror",
+      "Tsitadel (Tartary)",
+      "Tuathcruithne",
+      "Washington"
+    ],
+    "Ariadna - Caledonia": [
+      "Cailleach",
+      "Calonack",
+      "Coille Laith",
+      "Dál Riada",
+      "Inverloch",
+      "Scone",
+      "Skara Brae",
+      "Tuathcruithne"
+    ],
+    "Ariadna - Merovingia": [
+      "Auron",
+      "Le Douar",
+      "Mariannebourg",
+      "Poictesme",
+      "Lafayette",
+      "Dauphin"
+    ],
+    "Ariadna - Rodina / Tartary": [
+      "Dynamo",
+      "Gök-Burgo",
+      "Mat’",
+      "Novocherkassk",
+      "Stanitsas",
+      "Castropol (Tartary)",
+      "Dalnîy (Tartary)",
+      "Ovsyanka (Tartary)",
+      "Tsitadel (Tartary)"
+    ],
+    "Ariadna - USAriadna": [
+      "Mount Zion / The Wall",
+      "Jackson",
+      "Jefferson",
+      "Lincoln",
+      "Kennedy",
+      "Roosevelt",
+      "Washington"
+    ],
+    "Ariadna - Dog-Blooded": [
+      "Antipodean Wilds",
+      "Ariadna Exclusion Zone",
+      "Auron",
+      "Cailleach",
+      "Calonack",
+      "Castropol (Tartary)",
+      "Coille Laith",
+      "Dál Riada",
+      "Dalnîy (Tartary)",
+      "Dauphin",
+      "Dynamo",
+      "Gök-Burgo",
+      "Inverloch",
+      "Jackson",
+      "Jefferson",
+      "Kennedy",
+      "Lafayette",
+      "Le Douar",
+      "Lincoln",
+      "Mariannebourg",
+      "Mat’",
+      "Mount Zion / The Wall",
+      "Novocherkassk",
+      "Ovsyanka (Tartary)",
+      "Poictesme",
+      "Roosevelt",
+      "Scone",
+      "Skara Brae",
+      "Stanitsas",
+      "Tartary Outlands",
+      "The South Mirror",
+      "Tsitadel (Tartary)",
+      "Tuathcruithne",
+      "Washington"
+    ],
+    "Ariadna - Antipode": [
+      "Bitter Leaves",
+      "Bringers-of-Peace",
+      "Gentle Embrace of the Sagacious Progenitors",
+      "Ice Fangs",
+      "River Tribe",
+      "White Knives",
+      "3-Winged Moth Tribe",
+      "Broken Plains Tribe",
+      "Death Claws",
+      "Long Talons"
+    ],
+    "Ariadna - Antipode Handlers": [
+      "3-Winged Moth Tribe",
+      "Antipodean Wilds",
+      "Ariadna Exclusion Zone",
+      "Bitter Leaves",
+      "Bringers-of-Peace",
+      "Broken Plains Tribe",
+      "Dawn",
+      "Death Claws",
+      "Gentle Embrace of the Sagacious Progenitors",
+      "Ice Fangs",
+      "Long Talons",
+      "River Tribe",
+      "Tartary Outlands",
+      "The South Mirror",
+      "White Knives"
+    ],
+    "Ariadna - Ranger Corps": [
+      "Antipodean Wilds",
+      "Ariadna Exclusion Zone",
+      "Auron",
+      "Cailleach",
+      "Calonack",
+      "Castropol (Tartary)",
+      "Coille Laith",
+      "Dál Riada",
+      "Dalnîy (Tartary)",
+      "Dauphin",
+      "Dawn",
+      "Dynamo",
+      "Gök-Burgo",
+      "Inverloch",
+      "Jackson",
+      "Jefferson",
+      "Kennedy",
+      "Lafayette",
+      "Le Douar",
+      "Lincoln",
+      "Mariannebourg",
+      "Mat’",
+      "Mount Zion / The Wall",
+      "Novocherkassk",
+      "Ovsyanka (Tartary)",
+      "Poictesme",
+      "Roosevelt",
+      "Scone",
+      "Skara Brae",
+      "Stanitsas",
+      "Tartary Outlands",
+      "The South Mirror",
+      "Tsitadel (Tartary)",
+      "Tuathcruithne",
+      "Washington"
     ]
   },
   "equipmentTaxonomy": {
-    "version": "v62-semantic-equipment-audit",
+    "version": "v64-ariadna-yu-jing",
     "categories": [
       "Weapon",
       "Armour",
@@ -12490,9 +14512,1269 @@ window.INFINITY_DATA = {
         "Oniwaban"
       ]
     }
+  },
+  "ariadnaReference": {
+    "source": "Infinity RPG — Ariadna Supplement (Updated)",
+    "sourceFile": "MUH050223 Infinity RPG - Ariadna Supplement (Updated).pdf",
+    "scope": "Character-sheet material from Chapters 4–6; explicit core Talent references cross-checked against the Collector's Edition/Core rules.",
+    "notes": [
+      "The supplement's Ariadnan character-creation entries supersede their corebook counterparts when its variant rules are used.",
+      "Ariadnan characters are normally cubeless unless a specific option grants a Cube.",
+      "Nation/heritage labels are represented as Faction subchoices only to fit this sheet's Faction → Homeworld interface."
+    ],
+    "homelands": {
+      "Cailleach": {
+        "nation": "Caledonia",
+        "languages": [
+          "English (Scots)",
+          "Russian (Kazak) or Antipode Creole (Snarl)"
+        ],
+        "page": 64
+      },
+      "Calonack": {
+        "nation": "Caledonia",
+        "languages": [
+          "English (Scots)"
+        ],
+        "page": 64
+      },
+      "Coille Laith": {
+        "nation": "Caledonia",
+        "languages": [
+          "English (Scots)"
+        ],
+        "page": 64
+      },
+      "Dál Riada": {
+        "nation": "Caledonia",
+        "languages": [
+          "English (Scots)"
+        ],
+        "page": 64
+      },
+      "Inverloch": {
+        "nation": "Caledonia",
+        "languages": [
+          "English (Scots)"
+        ],
+        "page": 64
+      },
+      "Scone": {
+        "nation": "Caledonia",
+        "languages": [
+          "English (Scots)",
+          "Russian (Kazak) or French"
+        ],
+        "page": 64
+      },
+      "Skara Brae": {
+        "nation": "Caledonia",
+        "languages": [
+          "English (Scots)",
+          "Russian (Kazak)"
+        ],
+        "page": 64
+      },
+      "Tuathcruithne": {
+        "nation": "Caledonia",
+        "languages": [
+          "English (Scots)",
+          "Antipode Creole (Snarl)"
+        ],
+        "page": 64
+      },
+      "Auron": {
+        "nation": "Merovingia",
+        "languages": [
+          "French",
+          "English (American) or Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Le Douar": {
+        "nation": "Merovingia",
+        "languages": [
+          "French",
+          "English (American) or Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Mariannebourg": {
+        "nation": "Merovingia",
+        "languages": [
+          "French"
+        ],
+        "page": 65
+      },
+      "Poictesme": {
+        "nation": "Merovingia",
+        "languages": [
+          "French",
+          "English (Scots)"
+        ],
+        "page": 65
+      },
+      "Lafayette": {
+        "nation": "Merovingia",
+        "languages": [
+          "French",
+          "English"
+        ],
+        "page": 65
+      },
+      "Dauphin": {
+        "nation": "Merovingia",
+        "languages": [
+          "French"
+        ],
+        "page": 65
+      },
+      "Dynamo": {
+        "nation": "Rodina / Tartary",
+        "languages": [
+          "Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Gök-Burgo": {
+        "nation": "Rodina / Tartary",
+        "languages": [
+          "Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Mat’": {
+        "nation": "Rodina / Tartary",
+        "languages": [
+          "Russian (Kazak)",
+          "English or French"
+        ],
+        "page": 65
+      },
+      "Novocherkassk": {
+        "nation": "Rodina / Tartary",
+        "languages": [
+          "Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Stanitsas": {
+        "nation": "Rodina / Tartary",
+        "languages": [
+          "Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Castropol (Tartary)": {
+        "nation": "Rodina / Tartary",
+        "languages": [
+          "Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Dalnîy (Tartary)": {
+        "nation": "Rodina / Tartary",
+        "languages": [
+          "Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Ovsyanka (Tartary)": {
+        "nation": "Rodina / Tartary",
+        "languages": [
+          "Russian (Kazak)",
+          "English, French, or Yujingyu"
+        ],
+        "page": 65
+      },
+      "Tsitadel (Tartary)": {
+        "nation": "Rodina / Tartary",
+        "languages": [
+          "Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Mount Zion / The Wall": {
+        "nation": "USAriadna",
+        "languages": [
+          "English (American)"
+        ],
+        "page": 65
+      },
+      "Jackson": {
+        "nation": "USAriadna",
+        "languages": [
+          "English (American)"
+        ],
+        "page": 65
+      },
+      "Jefferson": {
+        "nation": "USAriadna",
+        "languages": [
+          "English (American)",
+          "Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Lincoln": {
+        "nation": "USAriadna",
+        "languages": [
+          "English (American)",
+          "French"
+        ],
+        "page": 65
+      },
+      "Kennedy": {
+        "nation": "USAriadna",
+        "languages": [
+          "English (American)"
+        ],
+        "page": 65
+      },
+      "Roosevelt": {
+        "nation": "USAriadna",
+        "languages": [
+          "English (American)"
+        ],
+        "page": 65
+      },
+      "Washington": {
+        "nation": "USAriadna",
+        "languages": [
+          "English (American)"
+        ],
+        "page": 65
+      },
+      "Ariadna Exclusion Zone": {
+        "nation": "Antipodean Wilds / Outlands",
+        "languages": [
+          "English, French, or Russian"
+        ],
+        "page": 65
+      },
+      "The South Mirror": {
+        "nation": "Antipodean Wilds / Outlands",
+        "languages": [
+          "English, French, or Russian"
+        ],
+        "page": 65
+      },
+      "Tartary Outlands": {
+        "nation": "Antipodean Wilds / Outlands",
+        "languages": [
+          "Russian (Kazak)"
+        ],
+        "page": 65
+      },
+      "Antipodean Wilds": {
+        "nation": "Antipodean Wilds / Outlands",
+        "languages": [
+          "English, Russian, or French",
+          "Antipode tribal language may apply"
+        ],
+        "page": 65
+      },
+      "Bitter Leaves": {
+        "nation": "Antipode Tribe",
+        "languages": [
+          "Snarl"
+        ],
+        "page": 81
+      },
+      "Bringers-of-Peace": {
+        "nation": "Antipode Tribe",
+        "languages": [
+          "Snarl",
+          "Antipode Creole"
+        ],
+        "page": 81
+      },
+      "Gentle Embrace of the Sagacious Progenitors": {
+        "nation": "Antipode Tribe",
+        "languages": [
+          "Snarl"
+        ],
+        "page": 81
+      },
+      "Ice Fangs": {
+        "nation": "Antipode Tribe",
+        "languages": [
+          "Snarl"
+        ],
+        "page": 81
+      },
+      "River Tribe": {
+        "nation": "Antipode Tribe",
+        "languages": [
+          "Snarl"
+        ],
+        "page": 81
+      },
+      "White Knives": {
+        "nation": "Antipode Tribe",
+        "languages": [
+          "Snarl"
+        ],
+        "page": 81
+      },
+      "3-Winged Moth Tribe": {
+        "nation": "Antipode Tribe",
+        "languages": [
+          "Snarl"
+        ],
+        "page": 81
+      },
+      "Broken Plains Tribe": {
+        "nation": "Antipode Tribe",
+        "languages": [
+          "Snarl",
+          "Antipode Creole"
+        ],
+        "page": 81
+      },
+      "Death Claws": {
+        "nation": "Antipode Tribe",
+        "languages": [
+          "Snarl"
+        ],
+        "page": 81
+      },
+      "Long Talons": {
+        "nation": "Antipode Tribe",
+        "languages": [
+          "Snarl"
+        ],
+        "page": 81
+      }
+    },
+    "factionSkills": [
+      "Survival",
+      "Medicine"
+    ],
+    "hostTable": [
+      {
+        "range": "1–12",
+        "host": "Dogface"
+      },
+      {
+        "range": "13–17",
+        "host": "Wulver"
+      },
+      {
+        "range": "18–20",
+        "host": "Antipode"
+      }
+    ],
+    "hostProfiles": {
+      "Dogface": {
+        "page": 80,
+        "lifePointCost": 3,
+        "rules": "Scent +2d20 when relevant. On suffering a Wound, Discipline D1 or transform (may voluntarily fail). Dog-Warrior form: +2 Brawn, +2 Agility, +1 Vigour soak, recover all Vigour, Monstrous, Snarling Beast, Super-Jump/Catfall; human-sized armour can be damaged; Fatigued when the form ends."
+      },
+      "Wulver": {
+        "page": 80,
+        "lifePointCost": 3,
+        "rules": "AGI +1, AWA +1, BRW +1, COO −1, PER −1, WIL −1; Scent +2d20; +2 Vigour; Monstrous; Furious; Super-Jump/Catfall; worn gear needs tailoring or suffers penalties."
+      },
+      "Antipode": {
+        "page": 79,
+        "lifePointCost": 2,
+        "rules": "AGI +2, AWA +1, BRW +2, COO −1, INT −2, PER −2; Scent +2d20; +2 Vigour soak; Monstrous; Super-Jump/Catfall; Primal Technology; Pack Mentality; Trinary Mind; no Firewall, geist or cybernetic augmentation."
+      }
+    },
+    "careerTables": {
+      "Ariadna Faction Career Table": [
+        {
+          "range": "1",
+          "career": "Special Forces"
+        },
+        {
+          "range": "2",
+          "career": "Intelligence Operative"
+        },
+        {
+          "range": "3",
+          "career": "Frontiersman"
+        },
+        {
+          "range": "4",
+          "career": "Assault Pack Controller"
+        },
+        {
+          "range": "5",
+          "career": "Sports Personality"
+        },
+        {
+          "range": "6",
+          "career": "Paratrooper"
+        },
+        {
+          "range": "7",
+          "career": "112 Emergency Responder"
+        },
+        {
+          "range": "8",
+          "career": "Bratva Gangster"
+        },
+        {
+          "range": "9",
+          "career": "Caledonian Noble"
+        },
+        {
+          "range": "10",
+          "career": "Claymore Duellist"
+        },
+        {
+          "range": "11",
+          "career": "Free Miner"
+        },
+        {
+          "range": "12",
+          "career": "Frontier Doctor"
+        },
+        {
+          "range": "13",
+          "career": "Hardcase"
+        },
+        {
+          "range": "14",
+          "career": "Irmandinhos Smuggler"
+        },
+        {
+          "range": "15",
+          "career": "Loup-Garou"
+        },
+        {
+          "range": "16",
+          "career": "Merovingian Commercial Agent"
+        },
+        {
+          "range": "17",
+          "career": "Militia Member"
+        },
+        {
+          "range": "18",
+          "career": "Spetsnaz"
+        },
+        {
+          "range": "19–20",
+          "career": "Roll on general Faction Career Table"
+        }
+      ],
+      "Antipode Career Table": [
+        {
+          "range": "1–3",
+          "career": "Scavenger"
+        },
+        {
+          "range": "4–8",
+          "career": "Antipode Warlord"
+        },
+        {
+          "range": "9–12",
+          "career": "Assault Pack Member"
+        },
+        {
+          "range": "13–16",
+          "career": "Forest Ranger"
+        },
+        {
+          "range": "17–20",
+          "career": "Raider"
+        }
+      ],
+      "Dogface/Wulver Career Table": [
+        {
+          "range": "1–3",
+          "career": "Scavenger"
+        },
+        {
+          "range": "4–5",
+          "career": "Assault Pack Leader"
+        },
+        {
+          "range": "6–7",
+          "career": "Dog-Bowl Player"
+        },
+        {
+          "range": "8–9",
+          "career": "Dog Nation Activist"
+        },
+        {
+          "range": "10–11",
+          "career": "Forest Ranger"
+        },
+        {
+          "range": "12–14",
+          "career": "Dog-Blooded Irregular"
+        },
+        {
+          "range": "15–16",
+          "career": "Raider"
+        },
+        {
+          "range": "17–18",
+          "career": "Volk"
+        },
+        {
+          "range": "19–20",
+          "career": "Wulver Shock Troop"
+        }
+      ]
+    }
+  },
+  "careerFilters": {
+    "Special Forces": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Intelligence Operative": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Frontiersman": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Assault Pack Controller": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Sports Personality": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Paratrooper": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "112 Emergency Responder": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Bratva Gangster": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Caledonian Noble": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Claymore Duellist": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Free Miner": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Frontier Doctor": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Hardcase": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Irmandinhos Smuggler": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Loup-Garou": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Merovingian Commercial Agent": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Militia Member": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Spetsnaz": [
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Scavenger": [
+      "Ariadna Dog-Blooded career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Assault Pack Leader": [
+      "Ariadna Dog-Blooded career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Dog-Bowl Player": [
+      "Ariadna Dog-Blooded career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Dog Nation Activist": [
+      "Ariadna Dog-Blooded career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Forest Ranger": [
+      "Ariadna Dog-Blooded career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Dog-Blooded Irregular": [
+      "Ariadna Dog-Blooded career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Raider": [
+      "Ariadna Dog-Blooded career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Volk": [
+      "Ariadna Dog-Blooded career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Wulver Shock Troop": [
+      "Ariadna Dog-Blooded career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Antipode Warlord": [
+      "Ariadna Antipode career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ],
+    "Assault Pack Member": [
+      "Ariadna Antipode career",
+      "Ariadna sourcebook career",
+      "Ariadna or frontier survival background",
+      "Ariadna or GM approval"
+    ]
+  },
+  "careerProfiles": {
+    "112 Emergency Responder": {
+      "sourcePage": 69,
+      "mandatorySkills": [
+        "Discipline",
+        "Medicine",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Close Combat",
+        "Psychology",
+        "Survival"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "MediKit (5 Serum)",
+        "Powered Multitool",
+        "Merovingian Survival Gear",
+        "Survival Rations ×4",
+        "Teseum Hatchet"
+      ],
+      "brief": "Frontier emergency responder combining medicine, rescue work, engineering and combat readiness."
+    },
+    "Caledonian Noble": {
+      "sourcePage": 69,
+      "mandatorySkills": [
+        "Command",
+        "Lifestyle",
+        "Persuade"
+      ],
+      "electiveSkills": [
+        "Analysis",
+        "Animal Handling",
+        "Close Combat"
+      ],
+      "earnings": "2+4§",
+      "gear": [
+        "Armoured Clothing (Kilt or Arisaid)",
+        "Sgian Dubh"
+      ],
+      "special": "Requires a Caledonian homeland.",
+      "brief": "Clan noble serving as administrator, advocate, judge and war leader."
+    },
+    "Assault Pack Controller": {
+      "sourcePage": 69,
+      "mandatorySkills": [
+        "Athletics",
+        "Animal Handling",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Close Combat",
+        "Survival",
+        "Ballistics"
+      ],
+      "earnings": "2+1§",
+      "gear": [
+        "Antipode Control Device",
+        "Teseum Chopper",
+        "Pheromone Dispenser"
+      ],
+      "special": "Ariadna faction prerequisite.",
+      "brief": "Military handler trained to control and deploy conditioned Antipodes."
+    },
+    "Bratva Gangster": {
+      "sourcePage": 70,
+      "mandatorySkills": [
+        "Close Combat",
+        "Resistance",
+        "Thievery"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Persuade",
+        "Survival"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Armoured Clothing",
+        "Fake ID 1",
+        "Heavy Pistol +2 reloads",
+        "Wurari ×2"
+      ],
+      "special": "Requires Rodina or Tartary.",
+      "brief": "Rodinan criminal operative blending legitimate fronts with organised crime."
+    },
+    "Claymore Duellist": {
+      "sourcePage": 70,
+      "mandatorySkills": [
+        "Acrobatics",
+        "Close Combat",
+        "Discipline"
+      ],
+      "electiveSkills": [
+        "Athletics",
+        "Close Combat",
+        "Observation"
+      ],
+      "earnings": "0+4§",
+      "gear": [
+        "Light Combat Armour",
+        "Teseum Claymore"
+      ],
+      "brief": "Professional Caledonian duellist and bodyguard."
+    },
+    "Free Miner": {
+      "sourcePage": 70,
+      "mandatorySkills": [
+        "Resistance",
+        "Survival",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Athletics",
+        "Pilot",
+        "Spacecraft"
+      ],
+      "earnings": "0+6§",
+      "gear": [
+        "Bottled Water",
+        "D-Charges ×2",
+        "USAriadnan Entrenching Tool, Custom 1",
+        "XO Suit"
+      ],
+      "brief": "Independent Teseum prospector built around frontier self-reliance."
+    },
+    "Frontier Doctor": {
+      "sourcePage": 70,
+      "mandatorySkills": [
+        "Analysis",
+        "Animal Handling",
+        "Medicine"
+      ],
+      "electiveSkills": [
+        "Education",
+        "Medicine",
+        "Survival"
+      ],
+      "earnings": "2+1§",
+      "gear": [
+        "Ballistic Vest",
+        "Basic Medical Supplies",
+        "MediKit",
+        "USAriadnan Entrenching Tool"
+      ],
+      "brief": "Remote-community doctor treating people and animals far from major hospitals."
+    },
+    "Intelligence Operative": {
+      "sourcePage": 71,
+      "mandatorySkills": [
+        "Observation",
+        "Stealth",
+        "Analysis"
+      ],
+      "electiveSkills": [
+        "Hacking",
+        "Education",
+        "Thievery"
+      ],
+      "earnings": "3+1§",
+      "gear": [
+        "Fake ID 2",
+        "AP Pistol +4 reloads",
+        "Breaking & Entering Kit",
+        "Recorder"
+      ],
+      "brief": "Covert operative trained for espionage, sabotage and strategic intelligence."
+    },
+    "Hardcase": {
+      "sourcePage": 71,
+      "mandatorySkills": [
+        "Ballistics",
+        "Observation",
+        "Survival"
+      ],
+      "electiveSkills": [
+        "Analysis",
+        "Animal Handling",
+        "Pilot"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Americolt Eagle",
+        "Bandolier",
+        "Binoculars",
+        "Long Modcoat"
+      ],
+      "special": "Requires USAriadna; most are southern frontiersmen.",
+      "brief": "Rough frontier troubleshooter who fills the gap where formal law is distant."
+    },
+    "Frontiersman": {
+      "sourcePage": 71,
+      "mandatorySkills": [
+        "Survival",
+        "Animal Handling",
+        "Resistance"
+      ],
+      "electiveSkills": [
+        "Discipline",
+        "Athletics",
+        "Thievery"
+      ],
+      "earnings": "1+1§",
+      "gear": [
+        "Survival Rations ×6",
+        "Survival Kit",
+        "Axe or Powered Multitool"
+      ],
+      "brief": "Explorer, hunter, prospector or bounty seeker beyond settled infrastructure."
+    },
+    "Loup-Garou": {
+      "sourcePage": 72,
+      "mandatorySkills": [
+        "Analysis",
+        "Close Combat",
+        "Athletics"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Observation",
+        "Psychology"
+      ],
+      "earnings": "1+4§",
+      "gear": [
+        "Boarding Shotgun",
+        "Adhesive Shells ×3",
+        "Silver Bullet Reload ×1",
+        "Medium Combat Armour",
+        "Tactical Webbing"
+      ],
+      "brief": "Merovingian specialist trained to contain Dogface, Wulver and Antipode threats."
+    },
+    "Merovingian Commercial Agent": {
+      "sourcePage": 72,
+      "mandatorySkills": [
+        "Education",
+        "Lifestyle",
+        "Persuade"
+      ],
+      "electiveSkills": [
+        "Hacking",
+        "Lifestyle",
+        "Stealth"
+      ],
+      "earnings": "2+2§",
+      "gear": [
+        "Fusebox",
+        "Negotiator's Suite",
+        "Pistol",
+        "Rucksack"
+      ],
+      "special": "Requires Merovingia.",
+      "brief": "Explorer-merchant and commercial intermediary."
+    },
+    "Militia Member": {
+      "sourcePage": 72,
+      "mandatorySkills": [
+        "Ballistics",
+        "Close Combat",
+        "Observation"
+      ],
+      "electiveSkills": [
+        "Medicine",
+        "Pilot",
+        "Stealth"
+      ],
+      "earnings": "0+2§",
+      "gear": [
+        "Armoured Clothing",
+        "Painkillers ×1",
+        "Rifle",
+        "USAriadnan Entrenching Tool, Custom 1"
+      ],
+      "brief": "Citizen-soldier capable of local defence, scouting and support."
+    },
+    "Irmandinhos Smuggler": {
+      "sourcePage": 72,
+      "mandatorySkills": [
+        "Close Combat",
+        "Pilot",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Observation",
+        "Stealth",
+        "Thievery"
+      ],
+      "earnings": "1+4§",
+      "gear": [
+        "Binoculars",
+        "Chain Rifle +4 reloads",
+        "Knife",
+        "Light Shotgun +1 T2 reload OR Americolt Eagle",
+        "Smoke Grenades ×2"
+      ],
+      "special": "Gains Galician.",
+      "brief": "Castropol-linked waterborne smuggler and shock-force operator."
+    },
+    "Spetsnaz": {
+      "sourcePage": 73,
+      "mandatorySkills": [
+        "Ballistics",
+        "Close Combat",
+        "Resistance"
+      ],
+      "electiveSkills": [
+        "Discipline",
+        "Stealth",
+        "Thievery"
+      ],
+      "earnings": "0+4§",
+      "gear": [
+        "Boarding Shotgun",
+        "Combat Jump Pack",
+        "Heavy Combat Armour",
+        "Tactical Webbing"
+      ],
+      "special": "Requires Rodina.",
+      "brief": "Elite Rodinan special forces shaped by severe Cossack discipline."
+    },
+    "Sports Personality": {
+      "sourcePage": 73,
+      "mandatorySkills": [
+        "Athletics",
+        "Persuade",
+        "Close Combat"
+      ],
+      "electiveSkills": [
+        "Acrobatics",
+        "Athletics",
+        "Ballistics"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Biografted Attribute Augmentation 2 OR Super-Jump",
+        "Uniform"
+      ],
+      "brief": "Professional athlete or combat-sport celebrity."
+    },
+    "Special Forces": {
+      "sourcePage": 73,
+      "mandatorySkills": [
+        "Survival",
+        "Resistance",
+        "Ballistics"
+      ],
+      "electiveSkills": [
+        "Close Combat",
+        "Hacking",
+        "Discipline"
+      ],
+      "earnings": "2+1§",
+      "gear": [
+        "Medium Combat Armour",
+        "Combi Rifle or AP Rifle +5 reloads",
+        "Climbing Plus or Combat Jump Pack",
+        "Garrotte"
+      ],
+      "brief": "Elite covert military operator."
+    },
+    "Paratrooper": {
+      "sourcePage": 73,
+      "mandatorySkills": [
+        "Survival",
+        "Athletics",
+        "Ballistics"
+      ],
+      "electiveSkills": [
+        "Close Combat",
+        "Pilot",
+        "Discipline"
+      ],
+      "earnings": "2+1§",
+      "gear": [
+        "Combat Jump Pack",
+        "Medium Combat Armour",
+        "Combi Rifle +4 reloads"
+      ],
+      "brief": "Airborne soldier deployed into hostile or inaccessible terrain."
+    },
+    "Scavenger": {
+      "sourcePage": 89,
+      "mandatorySkills": [
+        "Close Combat",
+        "Survival"
+      ],
+      "electiveSkills": [
+        "Any 1 Other",
+        "Any 1 Other"
+      ],
+      "earnings": "0+2§ (max 0)",
+      "gear": [],
+      "brief": "Marginal survival career for Dog-Blooded or Antipodes."
+    },
+    "Antipode Warlord": {
+      "sourcePage": 89,
+      "mandatorySkills": [
+        "Close Combat",
+        "Command",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Acrobatics",
+        "Animal Handling",
+        "Survival"
+      ],
+      "earnings": "0+2§",
+      "gear": [
+        "Knife",
+        "Tactical Bow +2 AP arrows",
+        "Wolfshot ×3"
+      ],
+      "special": "Antipode only.",
+      "brief": "Antipode battle leader chosen for prowess and command."
+    },
+    "Assault Pack Member": {
+      "sourcePage": 89,
+      "mandatorySkills": [
+        "Acrobatics",
+        "Close Combat",
+        "Observation"
+      ],
+      "electiveSkills": [
+        "Animal Handling",
+        "Stealth",
+        "Survival"
+      ],
+      "earnings": "0+4§ (max 0)",
+      "gear": [
+        "Antipode Control Cranial Implant",
+        "Teseum Claws"
+      ],
+      "special": "Antipode only.",
+      "brief": "Conditioned Antipode military assault-pack member."
+    },
+    "Dog-Blooded Irregular": {
+      "sourcePage": 89,
+      "mandatorySkills": [
+        "Ballistics",
+        "Close Combat",
+        "Resistance"
+      ],
+      "electiveSkills": [
+        "Acrobatics",
+        "Athletics",
+        "Stealth"
+      ],
+      "earnings": "1+1§",
+      "gear": [
+        "Chain Rifle ×2",
+        "Smoke Grenades ×2"
+      ],
+      "special": "Not available to Antipodes; regiment variants exist.",
+      "brief": "Dogface/Wulver military irregular."
+    },
+    "Dog-Bowl Player": {
+      "sourcePage": 90,
+      "mandatorySkills": [
+        "Acrobatics",
+        "Athletics",
+        "Close Combat"
+      ],
+      "electiveSkills": [
+        "Acrobatics",
+        "Animal Handling",
+        "Survival"
+      ],
+      "earnings": "1+5§",
+      "gear": [
+        "Cod ×3",
+        "Dog-Bowl Armour",
+        "Recorder"
+      ],
+      "special": "Not available to Antipodes.",
+      "brief": "Professional Dog-Bowl athlete."
+    },
+    "Dog Nation Activist": {
+      "sourcePage": 90,
+      "mandatorySkills": [
+        "Education",
+        "Persuade",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Hacking",
+        "Stealth",
+        "Thievery"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Digicloak (Urban)",
+        "Fusebox",
+        "Rebreather",
+        "Recorder ×2"
+      ],
+      "special": "Not available to Antipodes.",
+      "brief": "Dog-Blooded civil-rights organiser and activist."
+    },
+    "Forest Ranger": {
+      "sourcePage": 90,
+      "mandatorySkills": [
+        "Medicine",
+        "Stealth",
+        "Survival"
+      ],
+      "electiveSkills": [
+        "Animal Handling",
+        "Athletics",
+        "Survival"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Knife",
+        "Nav Suite (Forest)",
+        "Survival Kit (Forest)",
+        "Tracking Collar",
+        "USAriadnan Entrenching Tool, Custom 1"
+      ],
+      "special": "Antipodes omit Nav Suite, Survival Kit and Tracking Collar.",
+      "brief": "Wide-ranging Dawn wilderness ranger."
+    },
+    "Volk": {
+      "sourcePage": 91,
+      "mandatorySkills": [
+        "Athletics",
+        "Close Combat",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Animal Handling",
+        "Close Combat",
+        "Thievery"
+      ],
+      "earnings": "3+1§",
+      "gear": [
+        "Cod ×2",
+        "D.E.P.",
+        "Nitrocaine ×1",
+        "Painkillers ×2",
+        "Sports Padding (Chest)"
+      ],
+      "special": "Criminal; not available to Antipodes.",
+      "brief": "Dogface/Wulver muscle in Ariadna's criminal underworld."
+    },
+    "Wulver Shock Troop": {
+      "sourcePage": 91,
+      "mandatorySkills": [
+        "Athletics",
+        "Ballistics",
+        "Close Combat"
+      ],
+      "electiveSkills": [
+        "Acrobatics",
+        "Command",
+        "Medicine"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Explosive Grenade",
+        "Shock Grenade",
+        "Smoke Grenade",
+        "Light Combat Armour",
+        "T2 Boarding Shotgun"
+      ],
+      "special": "Wulver only; not Antipode or Dogface.",
+      "brief": "Fast, hard-hitting Wulver assault soldier."
+    },
+    "Raider": {
+      "sourcePage": 91,
+      "mandatorySkills": [
+        "Ballistics",
+        "Close Combat",
+        "Thievery"
+      ],
+      "electiveSkills": [
+        "Pilot",
+        "Survival",
+        "Stealth"
+      ],
+      "earnings": "0+4§",
+      "gear": [
+        "Surge ×1",
+        "Teseum Chopper"
+      ],
+      "special": "Criminal.",
+      "brief": "Frontier raider living outside ordinary law."
+    },
+    "Assault Pack Leader": {
+      "sourcePage": 86,
+      "brief": "Core career referenced by the supplement's Dogface/Wulver career table."
+    }
   }
 };
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v63-yu-jing-faction-book";
+window.INFINITY_BUILD = "v64-ariadna-yu-jing";
