@@ -18808,6 +18808,8 @@ function refreshHostStateChoices({ value, preserve = true } = {}) {
   const fallback = config.defaultForm || forms[0] || "";
   select.value = preserve && forms.includes(requested) ? requested : fallback;
   select.disabled = forms.length <= 1;
+  const label = document.getElementById("hostStateLabel");
+  if (label) label.hidden = forms.length <= 1;
   select.dataset.lastValue = select.value;
 }
 
@@ -18850,6 +18852,11 @@ function maximumVigorTrackValue() {
 function updateHostHeritageStatus() {
   const status = document.getElementById("hostHeritageStatus");
   if (!status) return;
+  const faction = inputField("faction")?.value || "";
+  if (!isAriadnaFaction(faction)) {
+    status.textContent = "Host / Heritage: not used for this faction in the current sheet. Ariadna characters can choose Human, Dogface, Wulver, or Antipode.";
+    return;
+  }
   const host = selectedHostHeritage();
   const config = hostHeritageConfig(host);
   const state = selectedHostState();
@@ -20984,18 +20991,19 @@ function printSkillTable(skills) {
   </div>`;
 }
 function buildPrintCorePage(page, total) {
+  const factionValue = printValue("faction");
+  const showHost = isAriadnaFaction(factionValue);
   const fields = [
     ["Character Name", printValue("characterName") || "Unnamed Character", true],
     ["Player", printValue("player")],
-    ["Faction", printValue("faction")],
+    ["Faction", factionValue],
     ["Homeworld / Habitat", printValue("homeworld")],
-    ["Host / Heritage", printValue("hostHeritage") || DEFAULT_HOST_HERITAGE],
-    ["Current Form", printValue("hostState")],
+    ...(showHost ? [["Host / Heritage", printValue("hostHeritage") || DEFAULT_HOST_HERITAGE], ["Current Form", printValue("hostState")]] : []),
     ["Career", printValue("career")]
   ].filter(([, value]) => value);
 
   const hostConfig = hostHeritageConfig();
-  const hostRules = selectedHostHeritage() === DEFAULT_HOST_HERITAGE ? "" : `<div class="print-rule-reminder"><b>Host / Heritage:</b> ${printText(hostConfig.rules, "")}</div>`;
+  const hostRules = showHost && selectedHostHeritage() !== DEFAULT_HOST_HERITAGE ? `<div class="print-rule-reminder"><b>Host / Heritage:</b> ${printText(hostConfig.rules, "")}</div>` : "";
   const identity = printSection("Character Identity", `<div class="print-fields">${fields.map(field => printField(...field)).join("")}</div>${hostRules}`);
 
   const mainSkillChips = mainSkills.map(printMainSkillCard).join("");
