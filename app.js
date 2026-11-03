@@ -112,6 +112,229 @@ function normalizeWounds(value) {
 // careerRole and restriction values. They are migrated into the single visible Career
 // control without discarding the old eligibility information.
 const GENERAL_CAREER = "General / Unrestricted";
+const DEFAULT_HOST_HERITAGE = DATA.hostHeritage?.default || "Standard / Human";
+const HOST_HERITAGE_TRAITS = new Set(DATA.hostHeritage?.hostTraits || ["Dogface", "Wulver", "Antipode"]);
+
+function isAriadnaFaction(faction) {
+  const value = String(faction || "").trim();
+  return value === "Ariadna" || value.startsWith("Ariadna -");
+}
+
+function selectedHostHeritage() {
+  return inputField("hostHeritage")?.value || DEFAULT_HOST_HERITAGE;
+}
+
+function selectedHostState() {
+  const config = hostHeritageConfig();
+  return inputField("hostState")?.value || config.defaultForm || config.forms?.[0] || "";
+}
+
+function hostHeritageConfig(host = selectedHostHeritage()) {
+  return DATA.hostHeritage?.options?.[host] || DATA.hostHeritage?.options?.[DEFAULT_HOST_HERITAGE] || {
+    label: DEFAULT_HOST_HERITAGE,
+    forms: ["Standard Form"],
+    defaultForm: "Standard Form",
+    mainSkillModifiers: {},
+    vigorBonus: 0,
+    vigorSoakBonus: 0,
+    rules: ""
+  };
+}
+
+function hostOptionsForFaction(faction) {
+  const configured = DATA.lists?.hostHeritage || [DEFAULT_HOST_HERITAGE];
+  if (!isAriadnaFaction(faction)) return [DEFAULT_HOST_HERITAGE];
+
+  // Antipodes use the broad Ariadna faction rather than a human national/service
+  // subfaction. Dogface and Wulver can retain their Ariadnan national identity.
+  if (String(faction || "") === "Ariadna") return configured.slice();
+  return configured.filter(value => value !== "Antipode");
+}
+
+function hostHomeworldsForFaction(faction, host = selectedHostHeritage()) {
+  const base = homeworldsForFaction(faction);
+  if (!isAriadnaFaction(faction)) return base;
+
+  if (host === "Antipode") {
+    return [...(DATA.homeworldsByFaction?.["Ariadna - Antipode"] || base)];
+  }
+
+  if (host === "Dogface" || host === "Wulver") {
+    const dogBlooded = DATA.homeworldsByFaction?.["Ariadna - Dog-Blooded"] || [];
+    if (String(faction || "") === "Ariadna") return [...dogBlooded];
+    const intersected = base.filter(world => dogBlooded.includes(world));
+    return intersected.length ? intersected : base;
+  }
+  return base;
+}
+
+function hostCareerOptions() {
+  const all = sortNames(DATA.lists.careerRoles || []).filter(value => value !== GENERAL_CAREER);
+  const faction = inputField("faction")?.value || "";
+  const host = selectedHostHeritage();
+  const config = hostHeritageConfig(host);
+
+  if (!isAriadnaFaction(faction)) return [GENERAL_CAREER, ...all];
+
+  if (host !== DEFAULT_HOST_HERITAGE && Array.isArray(config.allowedCareers)) {
+    return sortNames(config.allowedCareers.filter(career => all.includes(career)));
+  }
+
+  const excluded = new Set(config.excludedCareers || []);
+  return [GENERAL_CAREER, ...all.filter(career => !excluded.has(career))];
+}
+
+function isCareerCompatibleWithHost(career, host = selectedHostHeritage()) {
+  const value = String(career || "").trim();
+  if (!value || value === GENERAL_CAREER) return host === DEFAULT_HOST_HERITAGE;
+  const faction = inputField("faction")?.value || "";
+  if (!isAriadnaFaction(faction)) return true;
+  const config = hostHeritageConfig(host);
+  if (host !== DEFAULT_HOST_HERITAGE && Array.isArray(config.allowedCareers)) {
+    return config.allowedCareers.includes(value);
+  }
+  return !(config.excludedCareers || []).includes(value);
+}
+
+function refreshCareerChoices({ value, preserve = true, allowLegacy = false } = {}) {
+  const select = inputField("career");
+  if (!select) return;
+  const requested = value !== undefined ? String(value || "").trim() : String(select.value || "").trim();
+  const choices = hostCareerOptions();
+  makeOptions(select, choices, "Choose...");
+  if (requested && choices.includes(requested)) {
+    select.value = requested;
+  } else if (requested && allowLegacy) {
+    ensureSelectValue(select, requested);
+    select.value = requested;
+  } else {
+    select.value = choices.includes(GENERAL_CAREER) ? GENERAL_CAREER : "";
+  }
+}
+
+function refreshHostStateChoices({ value, preserve = true } = {}) {
+  const select = inputField("hostState");
+  if (!select) return;
+  const config = hostHeritageConfig();
+  const forms = Array.isArray(config.forms) && config.forms.length ? config.forms : [config.defaultForm || "Standard Form"];
+  const requested = value !== undefined ? String(value || "").trim() : String(select.value || "").trim();
+  makeOptions(select, forms, "");
+  const fallback = config.defaultForm || forms[0] || "";
+  select.value = preserve && forms.includes(requested) ? requested : fallback;
+  select.disabled = forms.length <= 1;
+  select.dataset.lastValue = select.value;
+}
+
+function refreshHostHeritageChoices({ value, preserve = true } = {}) {
+  const faction = inputField("faction")?.value || "";
+  const select = inputField("hostHeritage");
+  if (!select) return;
+  const choices = hostOptionsForFaction(faction);
+  const requested = value !== undefined ? String(value || "").trim() : String(select.value || "").trim();
+  makeOptions(select, choices, "");
+  const fallback = choices.includes(DEFAULT_HOST_HERITAGE) ? DEFAULT_HOST_HERITAGE : (choices[0] || DEFAULT_HOST_HERITAGE);
+  select.value = preserve && choices.includes(requested) ? requested : fallback;
+  select.disabled = !isAriadnaFaction(faction);
+  refreshHostStateChoices({ preserve: false });
+}
+
+function hostMainSkillModifier(mainSkill) {
+  const config = hostHeritageConfig();
+  const state = selectedHostState();
+  const base = Number(config.mainSkillModifiers?.[mainSkill] || 0);
+  const form = Number(config.formMainSkillModifiers?.[state]?.[mainSkill] || 0);
+  return base + form;
+}
+
+function hostVigorSoakBonus() {
+  const config = hostHeritageConfig();
+  const state = selectedHostState();
+  return Number(config.vigorSoakBonus || 0) + Number(config.formVigorSoakBonus?.[state] || 0);
+}
+
+function hostVigorBonus() {
+  return Number(hostHeritageConfig().vigorBonus || 0);
+}
+
+function maximumVigorTrackValue() {
+  const values = (DATA.lists?.track20 || []).map(Number).filter(Number.isFinite);
+  return values.length ? Math.max(...values) : 20;
+}
+
+function updateHostHeritageStatus() {
+  const status = document.getElementById("hostHeritageStatus");
+  if (!status) return;
+  const host = selectedHostHeritage();
+  const config = hostHeritageConfig(host);
+  const state = selectedHostState();
+  const mods = mainSkills
+    .map(skill => [skill, hostMainSkillModifier(skill)])
+    .filter(([, value]) => value !== 0)
+    .map(([skill, value]) => `${skill} ${value > 0 ? "+" : ""}${value}`);
+  const extras = [];
+  if (hostVigorBonus()) extras.push(`Vigour ${hostVigorBonus() > 0 ? "+" : ""}${hostVigorBonus()}`);
+  if (hostVigorSoakBonus()) extras.push(`Vigour soak +${hostVigorSoakBonus()}`);
+  if (config.firewallDisabled) extras.push("Firewall unavailable");
+  const summary = [...mods, ...extras].join("; ");
+  status.textContent = `Host / Heritage: ${host}${state ? ` — ${state}` : ""}.${summary ? ` Effective modifiers: ${summary}.` : ""} ${config.rules || ""}`;
+}
+
+function applyHostHeritageEffects({ recoverVigor = false } = {}) {
+  const host = selectedHostHeritage();
+  const config = hostHeritageConfig(host);
+  const state = selectedHostState();
+  const firewall = inputField("firewall");
+
+  if (firewall) {
+    if (config.firewallDisabled) {
+      if (!firewall.dataset.hostLocked) firewall.dataset.preHostValue = firewall.value || "20";
+      firewall.value = "0";
+      firewall.disabled = true;
+      firewall.dataset.hostLocked = "1";
+    } else if (firewall.dataset.hostLocked) {
+      firewall.disabled = false;
+      firewall.value = firewall.dataset.preHostValue || "20";
+      delete firewall.dataset.preHostValue;
+      delete firewall.dataset.hostLocked;
+    } else {
+      firewall.disabled = false;
+    }
+  }
+
+  if (recoverVigor && config.recoverVigorOnEnter && state === config.recoverVigorOnEnter) {
+    const hp = inputField("hp");
+    if (hp) hp.value = String(maximumVigorTrackValue());
+  }
+
+  updateHostHeritageStatus();
+  updateSkillRatings();
+}
+
+function handleHostStateChange() {
+  const select = inputField("hostState");
+  const previous = select?.dataset.lastValue || "";
+  const current = select?.value || "";
+  applyHostHeritageEffects({ recoverVigor: Boolean(current && current !== previous) });
+  if (select) select.dataset.lastValue = current;
+}
+
+function migrateLegacyHostState(state) {
+  const copy = { ...(state || {}) };
+  const legacyTraits = Array.isArray(copy.traits) ? copy.traits.map(resolveLegacyTraitTalentName) : [];
+  if (!copy.hostHeritage) {
+    if (legacyTraits.includes("Wulver")) copy.hostHeritage = "Wulver";
+    else if (legacyTraits.includes("Dogface")) copy.hostHeritage = "Dogface";
+    else if (legacyTraits.includes("Antipode")) copy.hostHeritage = "Antipode";
+    else if (copy.faction === "Ariadna - Antipode") copy.hostHeritage = "Antipode";
+    else if (copy.faction === "Ariadna - Dog-Blooded") copy.hostHeritage = "Dogface";
+    else copy.hostHeritage = DEFAULT_HOST_HERITAGE;
+  }
+  if (copy.faction === "Ariadna - Antipode" || copy.faction === "Ariadna - Dog-Blooded") copy.faction = "Ariadna";
+  const hostConfig = DATA.hostHeritage?.options?.[copy.hostHeritage] || {};
+  if (!copy.hostState) copy.hostState = hostConfig.defaultForm || hostConfig.forms?.[0] || "";
+  copy.traits = legacyTraits.filter(name => !HOST_HERITAGE_TRAITS.has(name));
+  return copy;
+}
 const CAREER_FILTERS = {
   "ALEPH Prestige": "ALEPH access or Posthuman background",
   "Airborne": "Yu Jing or airborne operations background",
@@ -162,8 +385,7 @@ const CAREER_FILTERS = {
 };
 
 function careerOptions() {
-  const careers = sortNames(DATA.lists.careerRoles || []).filter(value => value !== GENERAL_CAREER);
-  return [GENERAL_CAREER, ...careers];
+  return hostCareerOptions();
 }
 
 function selectedCareer() {
@@ -258,7 +480,7 @@ function refreshHomeworldChoices({ value, preserve = true } = {}) {
   if (!select) return;
 
   const requested = value !== undefined ? String(value || "").trim() : String(select.value || "").trim();
-  const worlds = homeworldsForFaction(faction);
+  const worlds = hostHomeworldsForFaction(faction);
   makeOptions(select, worlds, faction ? "Choose..." : "Choose Faction first...");
   select.disabled = !faction;
   select.title = faction
@@ -315,18 +537,39 @@ function initLists() {
     makeOptions(select, DATA.lists[listName] || [], "Choose...");
   });
 
+  const faction = inputField("faction");
+  const host = inputField("hostHeritage");
+  const hostState = inputField("hostState");
   const career = inputField("career");
-  if (career) {
-    makeOptions(career, careerOptions(), "Choose...");
-    career.value = GENERAL_CAREER;
-    career.addEventListener("change", refreshRestrictionChoices);
+
+  refreshHostHeritageChoices({ value: DEFAULT_HOST_HERITAGE, preserve: false });
+  refreshCareerChoices({ value: GENERAL_CAREER, preserve: false });
+  refreshHomeworldChoices({ preserve: false });
+
+  if (career) career.addEventListener("change", refreshRestrictionChoices);
+
+  if (faction) {
+    faction.addEventListener("change", () => {
+      refreshHostHeritageChoices({ value: DEFAULT_HOST_HERITAGE, preserve: false });
+      refreshCareerChoices({ preserve: false });
+      refreshHomeworldChoices({ preserve: false });
+      refreshRestrictionChoices();
+      applyHostHeritageEffects({ recoverVigor: false });
+    });
   }
 
-  const faction = inputField("faction");
-  if (faction) {
-    faction.addEventListener("change", () => refreshHomeworldChoices({ preserve: false }));
+  if (host) {
+    host.addEventListener("change", () => {
+      refreshHostStateChoices({ preserve: false });
+      refreshCareerChoices({ preserve: false });
+      refreshHomeworldChoices({ preserve: true });
+      refreshRestrictionChoices();
+      applyHostHeritageEffects({ recoverVigor: false });
+    });
   }
-  refreshHomeworldChoices({ preserve: false });
+
+  if (hostState) hostState.addEventListener("change", handleHostStateChange);
+  applyHostHeritageEffects({ recoverVigor: false });
 }
 
 function buildMainSkills() {
@@ -353,11 +596,9 @@ function normalizeSkillName(skill) {
 }
 
 function baseRating(skill) {
-  if (mainSkills.includes(skill)) {
-    return Number(document.querySelector(`[data-main-skill="${skill}"]`)?.value || "7");
-  }
-  const parent = parentOf[skill];
-  return Number(document.querySelector(`[data-main-skill="${parent}"]`)?.value || "7");
+  const main = mainSkills.includes(skill) ? skill : parentOf[skill];
+  const raw = Number(document.querySelector(`[data-main-skill="${main}"]`)?.value || "7");
+  return raw + hostMainSkillModifier(main);
 }
 
 function selectedTraitObjects() {
@@ -405,15 +646,19 @@ function calculateSkillBonuses() {
 
 function skillRatingParts(skill) {
   const bonuses = calculateSkillBonuses();
+  const main = mainSkills.includes(skill) ? skill : parentOf[skill];
+  const hostModifier = hostMainSkillModifier(main);
   const base = baseRating(skill);
   const startBonus = mainSkills.includes(skill) ? 0 : Number(startingSkillBonuses[skill] || 0);
   const traitTalentBonus = mainSkills.includes(skill) ? 0 : (bonuses.direct[skill] || 0);
   const bonus = startBonus + traitTalentBonus;
   const sources = [];
+  if (hostModifier !== 0) sources.push(`Host: ${selectedHostHeritage()} ${main} ${hostModifier > 0 ? "+" : ""}${hostModifier}`);
   if (startBonus > 0) sources.push(`Starting allocation +${startBonus}`);
   sources.push(...(mainSkills.includes(skill) ? [] : (bonuses.details[skill] || [])));
   return {
     base,
+    hostModifier,
     startBonus,
     traitTalentBonus,
     bonus,
@@ -473,6 +718,7 @@ function updateSkillRatings() {
     if (ruleCell) {
       const baseRule = mainSkills.includes(skill) ? "Main skill - no automatic Rating bonus" : "Sub-skill";
       const modifiers = [];
+      if (parts.hostModifier !== 0) modifiers.push(`Host ${parts.hostModifier > 0 ? "+" : ""}${parts.hostModifier}`);
       if (parts.startBonus > 0) modifiers.push(`Start +${parts.startBonus}`);
       if (parts.traitTalentBonus > 0) modifiers.push(`Trait/Talent +${parts.traitTalentBonus}`);
       ruleCell.textContent = modifiers.length ? `${baseRule}; ${modifiers.join("; ")}` : baseRule;
@@ -499,7 +745,7 @@ function isEligibleForRestriction(item) {
 }
 
 function eligibleTraits() {
-  return sortByName(DATA.traits.filter(isEligibleForRestriction));
+  return sortByName(DATA.traits.filter(isEligibleForRestriction).filter(trait => !trait.hostHeritageOnly && !HOST_HERITAGE_TRAITS.has(trait.name)));
 }
 
 function eligibleTalents() {
@@ -632,9 +878,15 @@ function refreshRestrictionChoices() {
       const career = selectedCareer();
       const selectedFilters = activeRestrictions();
       const eligibility = selectedFilters.filter(value => value !== "No Restrictions");
-      status.textContent = !eligibility.length
-        ? `Career: ${career} — all ${DATA.traits.length} Traits and ${DATA.talents.length} Talents are available.`
-        : `Career: ${career} — eligibility: ${eligibility.join("; ")}. ${traits.length} Traits (including general options) and ${talents.length} Talents are available.`;
+      const host = selectedHostHeritage();
+      const compatible = isCareerCompatibleWithHost(career, host);
+      if (!compatible) {
+        status.textContent = `Career: ${career} — not valid for Host / Heritage: ${host}. Choose a compatible Career.`;
+      } else {
+        status.textContent = !eligibility.length
+          ? `Career: ${career} — ${traits.length} selectable Traits and ${talents.length} Talents are available. Host / Heritage is handled separately.`
+          : `Career: ${career} — eligibility: ${eligibility.join("; ")}. ${traits.length} selectable Traits and ${talents.length} Talents are available. Host / Heritage is handled separately.`;
+      }
     }
   } finally {
     suppressSkillRatingUpdates = false;
@@ -738,7 +990,7 @@ function collectState() {
 }
 function applyState(rawState) {
   if (!rawState) return;
-  const state = { ...(rawState || {}) };
+  const state = migrateLegacyHostState(rawState);
   if (!state.career && state.careerRole) state.career = state.careerRole;
   const legacyRestriction = state.careerEligibility || state.careerRestrictions || state.careerRestriction || state.restriction || "";
   delete state.careerRole;
@@ -748,17 +1000,24 @@ function applyState(rawState) {
 
   startingSkillBonuses = { ...(state.startBonuses || {}) };
 
+  // Identity dependencies are restored in order so Faction -> Host -> Homeworld /
+  // Career filtering is valid before the rest of the saved sheet is applied.
+  const specialFields = new Set(["faction", "hostHeritage", "hostState", "homeworld", "career"]);
   document.querySelectorAll("input[data-field], textarea[data-field], select[data-field]").forEach(el => {
-    if (state[el.dataset.field] !== undefined) el.value = state[el.dataset.field];
+    if (!specialFields.has(el.dataset.field) && state[el.dataset.field] !== undefined) el.value = state[el.dataset.field];
   });
+
+  const factionField = inputField("faction");
+  if (factionField) factionField.value = state.faction || "";
+  refreshHostHeritageChoices({ value: state.hostHeritage || DEFAULT_HOST_HERITAGE, preserve: true });
+  refreshHostStateChoices({ value: state.hostState || "", preserve: true });
+  refreshHomeworldChoices({ value: state.homeworld || "", preserve: true });
+  refreshCareerChoices({ value: state.career || GENERAL_CAREER, preserve: true, allowLegacy: true });
+  setCareerChoice(state.career || GENERAL_CAREER, legacyRestriction);
+  refreshRestrictionChoices();
 
   const woundsField = inputField("wounds");
   if (woundsField) woundsField.value = normalizeWounds(state.wounds);
-
-  const legacyCareer = state.career || GENERAL_CAREER;
-  setCareerChoice(legacyCareer, legacyRestriction);
-  refreshHomeworldChoices({ value: state.homeworld || "", preserve: true });
-  refreshRestrictionChoices();
 
   Object.entries(state.mainSkills || {}).forEach(([k, v]) => {
     const el = document.querySelector(`select[data-main-skill="${k}"]`);
@@ -811,6 +1070,10 @@ function applyState(rawState) {
     const el = document.querySelector(`input[data-condition-note="${i}"]`);
     if (el) el.value = v;
   });
+
+  const hostState = inputField("hostState");
+  if (hostState) hostState.dataset.lastValue = hostState.value || "";
+  applyHostHeritageEffects({ recoverVigor: false });
   applyArmourFromEquipment();
   updateSkillRatings();
 }
@@ -1978,9 +2241,13 @@ function newCharacterSheet() {
         element.value = "";
       });
 
+      refreshHostHeritageChoices({ value: DEFAULT_HOST_HERITAGE, preserve: false });
+      refreshHostStateChoices({ preserve: false });
+      refreshCareerChoices({ value: GENERAL_CAREER, preserve: false });
       setCareerChoice(GENERAL_CAREER, "No Restrictions");
       refreshHomeworldChoices({ preserve: false });
       refreshRestrictionChoices();
+      applyHostHeritageEffects({ recoverVigor: false });
       clearTraitAndTalentSlots();
 
       // Clear all gear first, then deliberately set Armour to 0.
@@ -2136,10 +2403,14 @@ function buildPrintCorePage(page, total) {
     ["Player", printValue("player")],
     ["Faction", printValue("faction")],
     ["Homeworld / Habitat", printValue("homeworld")],
+    ["Host / Heritage", printValue("hostHeritage") || DEFAULT_HOST_HERITAGE],
+    ["Current Form", printValue("hostState")],
     ["Career", printValue("career")]
   ].filter(([, value]) => value);
 
-  const identity = printSection("Character Identity", `<div class="print-fields">${fields.map(field => printField(...field)).join("")}</div>`);
+  const hostConfig = hostHeritageConfig();
+  const hostRules = selectedHostHeritage() === DEFAULT_HOST_HERITAGE ? "" : `<div class="print-rule-reminder"><b>Host / Heritage:</b> ${printText(hostConfig.rules, "")}</div>`;
+  const identity = printSection("Character Identity", `<div class="print-fields">${fields.map(field => printField(...field)).join("")}</div>${hostRules}`);
 
   const mainSkillChips = mainSkills.map(printMainSkillCard).join("");
   const tracks = [
@@ -3560,6 +3831,7 @@ function buildGlossaryEntries() {
     ["Sub-skills", "Rule", ["Skill tests", "Focus allowed"], "Sub-skills inherit the relevant main skill rating, then add starting allocation and applicable Trait/Talent modifiers. Focus may be assigned only to sub-skills."],
     ["Focus", "Rule", ["Sub-skills only"], "Focus represents specialist training. Main skills cannot use Focus; assign Focus to specific sub-skills such as Ballistics, Hacking, Medicine, Persuade, or Survival."],
     ["Career", "Character option", ["Eligibility", "Traits", "Talents"], "Career is the single field used for eligibility filtering. Choosing a Career filters Trait and Talent options while keeping general/unrestricted options available."],
+    ["Host / Heritage", "Character option", ["Ariadna", "Dogface", "Wulver", "Antipode"], "Host / Heritage is separate from Career. For Ariadna, Dogface, Wulver and Antipode apply their source attribute modifiers and constrain compatible Careers; the host itself does not consume one of the three ordinary Trait slots."],
     ["Faction / Homeworld relationship", "Character option", ["Validation"], "Homeworld / Habitat choices are filtered by the selected Faction. Changing Faction clears an invalid Homeworld / Habitat selection so saved characters keep a valid relationship."],
     ["Armour", "Resource", ["Light 5", "Medium 10", "Heavy 15"], "Armour replaces Temporary HP in this custom sheet. Armour can be selected directly or inferred from selected armour equipment."],
     ["HP / Vigor", "Resource", ["0–20"], "The character's physical endurance track. Damage and recovery should be handled according to the GM's current 2D20 scene rules."],
