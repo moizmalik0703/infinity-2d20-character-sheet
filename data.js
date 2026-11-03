@@ -101,7 +101,8 @@ window.INFINITY_DATA = {
       "cost": "",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 79
+      "sourcePage": 79,
+      "hostHeritageOnly": true
     },
     {
       "category": "Infowar",
@@ -795,7 +796,8 @@ window.INFINITY_DATA = {
       "cost": "",
       "restriction": "Ariadna Dog-Blooded career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 80
+      "sourcePage": 80,
+      "hostHeritageOnly": true
     },
     {
       "category": "Combat",
@@ -3233,7 +3235,8 @@ window.INFINITY_DATA = {
       "cost": "",
       "restriction": "Ariadna Dog-Blooded career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 80
+      "sourcePage": 80,
+      "hostHeritageOnly": true
     },
     {
       "category": "Medical",
@@ -12519,10 +12522,8 @@ window.INFINITY_DATA = {
       "ALEPH - Special Situations Section",
       "ALEPH - Steel Phalanx",
       "Ariadna",
-      "Ariadna - Antipode",
       "Ariadna - Antipode Handlers",
       "Ariadna - Caledonia",
-      "Ariadna - Dog-Blooded",
       "Ariadna - Merovingia",
       "Ariadna - Ranger Corps",
       "Ariadna - Rodina / Tartary",
@@ -14012,6 +14013,12 @@ window.INFINITY_DATA = {
       "38",
       "39",
       "40"
+    ],
+    "hostHeritage": [
+      "Standard / Human",
+      "Dogface",
+      "Wulver",
+      "Antipode"
     ]
   },
   "homeworldsByFaction": {
@@ -15772,9 +15779,144 @@ window.INFINITY_DATA = {
       "sourcePage": 86,
       "brief": "Core career referenced by the supplement's Dogface/Wulver career table."
     }
+  },
+  "hostHeritage": {
+    "source": "Infinity RPG — Ariadna Supplement (Updated)",
+    "default": "Standard / Human",
+    "hostTraits": [
+      "Dogface",
+      "Wulver",
+      "Antipode"
+    ],
+    "notes": [
+      "Host / Heritage is separate from Career. Dogface, Wulver and Antipode are no longer selected as ordinary Trait slots.",
+      "The former Ariadna - Dog-Blooded and Ariadna - Antipode faction choices are retained as source records for migration/reference but hidden from the selectable Faction list.",
+      "Dogface transformation modifiers are applied to effective Main Skill totals without overwriting the player's underlying ratings."
+    ],
+    "options": {
+      "Standard / Human": {
+        "label": "Standard / Human",
+        "sourcePage": null,
+        "traitName": null,
+        "forms": [
+          "Standard Form"
+        ],
+        "defaultForm": "Standard Form",
+        "mainSkillModifiers": {},
+        "vigorBonus": 0,
+        "vigorSoakBonus": 0,
+        "excludedCareers": [
+          "Antipode Warlord",
+          "Assault Pack Member",
+          "Assault Pack Leader",
+          "Dog-Bowl Player",
+          "Dog Nation Activist",
+          "Dog-Blooded Irregular",
+          "Volk",
+          "Wulver Shock Troop"
+        ],
+        "rules": "No Ariadna Dog-Blooded or Antipode host modifiers."
+      },
+      "Dogface": {
+        "label": "Dogface",
+        "sourcePage": 80,
+        "traitName": "Dogface",
+        "factionScope": "Ariadna",
+        "forms": [
+          "Human Form",
+          "Dog-Warrior Form"
+        ],
+        "defaultForm": "Human Form",
+        "allowedCareers": [
+          "Scavenger",
+          "Assault Pack Leader",
+          "Dog-Bowl Player",
+          "Dog Nation Activist",
+          "Forest Ranger",
+          "Dog-Blooded Irregular",
+          "Raider",
+          "Volk"
+        ],
+        "mainSkillModifiers": {},
+        "formMainSkillModifiers": {
+          "Dog-Warrior Form": {
+            "Agility": 2,
+            "Brawn": 2
+          }
+        },
+        "vigorBonus": 0,
+        "vigorSoakBonus": 0,
+        "formVigorSoakBonus": {
+          "Dog-Warrior Form": 1
+        },
+        "recoverVigorOnEnter": "Dog-Warrior Form",
+        "rules": "Scent +2d20. On Wound: Discipline D1 or transform (may voluntarily fail). Dog-Warrior form: +2 Brawn, +2 Agility, +1 Vigour soak, recover all Vigour, Monstrous, Snarling Beast and Super-Jump. Armour can be damaged. Fatigued when the form ends."
+      },
+      "Wulver": {
+        "label": "Wulver",
+        "sourcePage": 80,
+        "traitName": "Wulver",
+        "factionScope": "Ariadna",
+        "forms": [
+          "Stable Wulver Form"
+        ],
+        "defaultForm": "Stable Wulver Form",
+        "allowedCareers": [
+          "Scavenger",
+          "Assault Pack Leader",
+          "Dog-Bowl Player",
+          "Dog Nation Activist",
+          "Forest Ranger",
+          "Dog-Blooded Irregular",
+          "Raider",
+          "Volk",
+          "Wulver Shock Troop"
+        ],
+        "mainSkillModifiers": {
+          "Agility": 1,
+          "Awareness": 1,
+          "Brawn": 1,
+          "Coordination": -1,
+          "Personality": -1,
+          "Willpower": -1
+        },
+        "vigorBonus": 2,
+        "vigorSoakBonus": 0,
+        "rules": "AGI +1, AWA +1, BRW +1, COO −1, PER −1, WIL −1; scent +2d20; +2 Vigour; Monstrous; Furious; Super-Jump; worn gear needs tailoring."
+      },
+      "Antipode": {
+        "label": "Antipode",
+        "sourcePage": 79,
+        "traitName": "Antipode",
+        "factionScope": "Ariadna",
+        "forms": [
+          "Antipode"
+        ],
+        "defaultForm": "Antipode",
+        "allowedCareers": [
+          "Scavenger",
+          "Antipode Warlord",
+          "Assault Pack Member",
+          "Forest Ranger",
+          "Raider"
+        ],
+        "mainSkillModifiers": {
+          "Agility": 2,
+          "Awareness": 1,
+          "Brawn": 2,
+          "Coordination": -1,
+          "Intelligence": -2,
+          "Personality": -2
+        },
+        "vigorBonus": 0,
+        "vigorSoakBonus": 2,
+        "firewallDisabled": true,
+        "rules": "AGI +2, AWA +1, BRW +2, COO −1, INT −2, PER −2; scent +2d20; +2 Vigour soak; Monstrous; Super-Jump; Primal Technology; Pack Mentality; Trinary Mind; no Firewall, geist, or cybernetic augments."
+      }
+    }
   }
 };
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v64-ariadna-yu-jing";
+window.INFINITY_BUILD = "v65-host-heritage";
