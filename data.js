@@ -9884,7 +9884,7 @@ window.INFINITY_DATA = {
       "mechanic": "Scale 0, Speed 4, Strength 12(+1), Armour 1, BTS 4, Impact 2+6§. Can boost to Speed 5 with Pilot D2 at +2 Complication Range, vault small obstacles, and reduces Hasty/Flat Out penalties for skilled riders. Restriction 4 (Japan 3, JSA 2, Yu Jing 3).",
       "rarity": "Very Rare",
       "weight": "Heavy",
-      "cost": "Source-listed vehicle; T?",
+      "cost": "13+2§; T2",
       "category": "Other Item",
       "subtype": "Vehicle",
       "loadoutEligible": false,
