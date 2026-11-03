@@ -72,165 +72,213 @@ function byName(list, name) {
   const resolved = resolveLegacyTraitTalentName(name);
   return list.find(x => x.name === resolved) || {};
 }
+
+function alphaCompare(a, b) {
+  return String(a || "").trim().localeCompare(String(b || "").trim(), undefined, { numeric: true, sensitivity: "base" });
+}
+
+function sortByName(list) {
+  return [...list].sort((a, b) => alphaCompare(a?.name || "", b?.name || ""));
+}
+
+function sortNames(values) {
+  return [...new Set((values || []).filter(Boolean))].sort(alphaCompare);
+}
+
+// Keep the source lists alphabetised too, so any future dropdown that reads DATA.lists
+// directly will inherit the same order. The random-character logic still chooses from
+// the object data, not this display order.
+if (DATA?.lists) {
+  if (Array.isArray(DATA.lists.traits)) DATA.lists.traits = sortNames(DATA.lists.traits);
+  if (Array.isArray(DATA.lists.talents)) DATA.lists.talents = sortNames(DATA.lists.talents);
+}
 function setText(el, value) {
+  if (!el) return;
   const text = value || "";
-  el.textContent = text;
+  if (el.textContent !== text) el.textContent = text;
   // Preserve the complete value on hover when a narrow browser layout wraps it.
-  el.title = text;
+  if (el.title !== text) el.title = text;
 }
 function inputField(field) {
   return document.querySelector(`[data-field="${field}"]`);
 }
 
-// Career and Faction/Homeworld relationship rules.
-// `careerRole` and `restriction` only appear below for one-time migration of older saved characters.
+function normalizeWounds(value) {
+  const parsed = Number.parseInt(String(value ?? "0"), 10);
+  return Number.isInteger(parsed) && parsed >= 0 && parsed <= 3 ? String(parsed) : "0";
+}
+
+// v24 career and faction/homeworld refinement. Older saves may retain the former
+// careerRole and restriction values. They are migrated into the single visible Career
+// control without discarding the old eligibility information.
 const GENERAL_CAREER = "General / Unrestricted";
-const legacyCareerEligibility = new Map();
+const CAREER_FILTERS = {
+  "ALEPH Prestige": "ALEPH access or Posthuman background",
+  "Airborne": "Yu Jing or airborne operations background",
+  "Assassin": "Close combat or Hassassin background",
+  "Beastmaster": "Ariadna or frontier survival background",
+  "Diplomat": "Diplomatic, legal, or political background",
+  "Doctor": ["Medicine background", "Medicine or Haqqislamite military background", "Haqqislam or advanced Medicine background"],
+  "Engineer": ["Engineer or military support background", "Nomad, engineer, or remote-support background", "JSA, engineer, or battlefield support background"],
+  "Explorer": "O-12, scientific, or exploration background",
+  "Faction Prestige": "No Restrictions",
+  "Frontier Scout": "Ariadna or frontier survival background",
+  "Hacker": ["Nomad or advanced Hacking background", "O-12, Bureau Noir, or advanced Hacking background"],
+  "Haqqislam Scholar": "Haqqislam or academic background",
+  "Hassassin Bahram": "Haqqislam, Hassassin Bahram, or covert-ops background",
+  "Heavy Infantry": "Heavy infantry or military background",
+  "Imperial Service": "Yu Jing or state-security background",
+  "Infiltrator": "PanOceania or stealth recon background",
+  "Infowar Specialist": "O-12, Bureau Noir, or advanced Hacking background",
+  "Line Infantry": "Military or security background",
+  "O-12 Bureaucrat": "O-12, legal, diplomatic, or command background",
+  "Officer": "Military command or Yu Jing background",
+  "Recon": "Recon or sniper background",
+  "Remote Controller": "Nomad, engineer, or remote-support background",
+  "Skirmisher": "PanOceania or stealth recon background",
+  "Smuggler": "Mercenary, criminal, or trade-route background",
+  "TAG Pilot": "TAG, heavy infantry, or advanced Tech background",
+  "Voidfarer": "Extraplanetary or shipboard operations background",
 
-function uniqueText(values) {
-  return [...new Set((values || []).map(value => String(value || "").trim()).filter(Boolean))];
-}
-
-function normalizeEligibilityValues(value) {
-  return uniqueText(Array.isArray(value) ? value : [value]);
-}
+  "AI Aspect": "ALEPH access or Posthuman background",
+  "Advanced Infowar Analyst": "ALEPH, O-12, Nomad, or advanced Hacking background",
+  "Arachne Broker": "Nomad or advanced Hacking background",
+  "Bakunin Social Operator": "Nomad, Bakunin, or Submondo background",
+  "Combined Army Operative": "Combined Army or alien technology background",
+  "Corregidor Crew": "Nomad or shipboard operations background",
+  "EI Handler": "Combined Army or alien technology background",
+  "Fleet Officer": "Extraplanetary or shipboard operations background",
+  "Geist Handler": "ALEPH, Geist, or Hacking background",
+  "Lhost Specialist": "ALEPH, Lhost, or medical-technical background",
+  "Morat Warrior": "Combined Army or Morat background",
+  "Mothership Crew": "Nomad or shipboard operations background",
+  "Praxis Bodymodder": "Nomad, Praxis, or body-modification background",
+  "Shasvastii Infiltrator": "Combined Army or Shasvastii background",
+  "Ship Crew": "Extraplanetary or shipboard operations background",
+  "Steel Phalanx Operative": "ALEPH or military elite background",
+  "Sygmaa Diplomat": "Tohaa, Sygmaa, or alien diplomacy background",
+  "Tunguska Data Broker": "Nomad or advanced Hacking background",
+  "Voidship Engineer": "Extraplanetary or shipboard operations background"
+};
 
 function careerOptions() {
-  const listed = DATA.lists.careers || DATA.lists.careerRoles || [];
-  const fromTalents = (DATA.talents || []).map(talent => talent.career);
-  return uniqueText([GENERAL_CAREER, ...listed, ...fromTalents]);
+  const careers = sortNames(DATA.lists.careerRoles || []).filter(value => value !== GENERAL_CAREER);
+  return [GENERAL_CAREER, ...careers];
 }
 
 function selectedCareer() {
   return inputField("career")?.value || GENERAL_CAREER;
 }
 
-function careerRestrictionsFor(career) {
-  if (!career || career === GENERAL_CAREER) return ["No Restrictions"];
-  const fromTalents = (DATA.talents || [])
-    .filter(talent => talent.career === career)
+function careerFiltersFor(career) {
+  const selected = String(career || GENERAL_CAREER).trim();
+  if (!selected || selected === GENERAL_CAREER) return ["No Restrictions"];
+
+  const mapped = DATA.careerFilters?.[selected] || CAREER_FILTERS[selected] || [];
+  const fromTalentData = (DATA.talents || [])
+    .filter(talent => talent.career === selected)
     .map(talent => talent.restriction || "No Restrictions");
-  const migrated = legacyCareerEligibility.get(career) || [];
-  const restrictions = uniqueText([...fromTalents, ...migrated]);
-  return restrictions.length ? restrictions : ["No Restrictions"];
+
+  const filters = [...new Set([...(Array.isArray(mapped) ? mapped : [mapped]), ...fromTalentData]
+    .map(value => String(value || "").trim())
+    .filter(value => value && value !== "No Restrictions"))];
+  return filters.length ? filters : ["No Restrictions"];
 }
 
+function careerFilterFor(career) {
+  return careerFiltersFor(career).join(" | ") || "No Restrictions";
+}
 
-function setCareerChoice(career, savedEligibility = []) {
+function setCareerChoice(career, legacyRestriction = "") {
   const select = inputField("career");
   if (!select) return;
-  const value = String(career || GENERAL_CAREER).trim() || GENERAL_CAREER;
-  const eligibility = normalizeEligibilityValues(savedEligibility).filter(value => value !== "No Restrictions");
-  if (eligibility.length) legacyCareerEligibility.set(value, eligibility);
-  else legacyCareerEligibility.delete(value);
+  const value = career || GENERAL_CAREER;
+  const carried = (Array.isArray(legacyRestriction) ? legacyRestriction : [legacyRestriction])
+    .filter(entry => entry && entry !== "No Restrictions");
+  const existing = careerFiltersFor(value).filter(entry => entry !== "No Restrictions");
+  const combined = [...new Set([...existing, ...carried])];
+  // Saved/custom careers may not be in the current profile list. Preserve all
+  // matching legacy eligibility values so their Trait and Talent filtering works.
+  if (combined.length) CAREER_FILTERS[value] = combined;
+  else if (!Object.prototype.hasOwnProperty.call(CAREER_FILTERS, value)) CAREER_FILTERS[value] = "No Restrictions";
   ensureSelectValue(select, value);
   if (!select.value) select.value = GENERAL_CAREER;
 }
 
-function migrateCharacterState(rawState) {
-  const state = { ...(rawState || {}) };
-  if (!state.career && state.careerRole) state.career = state.careerRole;
-
-  const legacyEligibility = normalizeEligibilityValues(
-    state.careerEligibility ||
-    state.careerRestrictions ||
-    state.careerRestriction ||
-    state.restriction ||
-    []
-  );
-  if (legacyEligibility.length) state.careerEligibility = legacyEligibility;
-
-  delete state.careerRole;
-  delete state.careerRestrictions;
-  delete state.careerRestriction;
-  delete state.restriction;
-  return state;
-}
-
 function factionRecord(faction) {
   const selected = String(faction || "");
-  return (DATA.factions || []).find(entry => entry.faction === selected) ||
-    (DATA.factions || []).find(entry => selected && entry.faction.startsWith(selected + " -")) ||
-    (DATA.factions || []).find(entry => selected && selected.startsWith(entry.faction + " -")) ||
-    null;
+  return DATA.factions.find(entry => entry.faction === selected) ||
+    DATA.factions.find(entry => selected && entry.faction.startsWith(selected + " -")) ||
+    DATA.factions.find(entry => selected && selected.startsWith(entry.faction + " -")) || null;
 }
 
 function homeworldsForFaction(faction) {
-  const selected = String(faction || "");
-  const explicit = DATA.homeworldsByFaction?.[selected];
-  if (Array.isArray(explicit) && explicit.length) return uniqueText(explicit);
+  const selected = String(faction || "").trim();
+  const configured = DATA.homeworldsByFaction?.[selected];
+  if (Array.isArray(configured) && configured.length) {
+    return [...new Set(configured.map(value => String(value || "").trim()).filter(Boolean))];
+  }
 
   const record = factionRecord(selected);
   if (!record?.homeworld) return [];
-  return uniqueText(String(record.homeworld).split(/[,;]/));
+  return [...new Set(String(record.homeworld)
+    .split(/[,;]/)
+    .map(value => value.trim())
+    .filter(Boolean))];
 }
 
 function isValidFactionHomeworld(faction, homeworld) {
-  return Boolean(faction && homeworld && homeworldsForFaction(faction).includes(homeworld));
+  const selectedFaction = String(faction || "").trim();
+  const selectedHomeworld = String(homeworld || "").trim();
+  if (!selectedFaction && !selectedHomeworld) return true;
+  return Boolean(selectedFaction && selectedHomeworld && homeworldsForFaction(selectedFaction).includes(selectedHomeworld));
 }
 
 function closestFactionHomeworld(faction, preferred = "") {
-  const choices = homeworldsForFaction(faction);
+  const options = homeworldsForFaction(faction);
   const requested = String(preferred || "").trim();
-  if (!requested) return choices[0] || "";
-  if (choices.includes(requested)) return requested;
-
+  if (!requested) return "";
+  if (options.includes(requested)) return requested;
   const normalized = requested.toLowerCase();
-  const partial = choices.find(choice => {
-    const candidate = choice.toLowerCase();
-    return candidate.includes(normalized) || normalized.includes(candidate);
+  const exactish = options.find(option => {
+    const candidate = option.toLowerCase();
+    return normalized.includes(candidate) || candidate.includes(normalized);
   });
-  if (partial) return partial;
-
-  const tokenMatch = choices.find(choice => choice.toLowerCase().split(/\s+/)
-    .some(token => token.length > 3 && normalized.includes(token)));
+  if (exactish) return exactish;
+  const tokenMatch = options.find(option => {
+    const candidate = option.toLowerCase();
+    return candidate.split(/\s+/).some(token => token.length > 3 && normalized.includes(token));
+  });
   return tokenMatch || "";
 }
 
-function refreshHomeworldChoices({ value, allowClosestMatch = false } = {}) {
+function refreshHomeworldChoices({ value, preserve = true } = {}) {
   const faction = inputField("faction")?.value || "";
   const select = inputField("homeworld");
   if (!select) return;
 
-  const requested = value !== undefined ? String(value || "").trim() : select.value;
-  const choices = homeworldsForFaction(faction);
-  makeOptions(select, choices, faction ? "Choose..." : "Choose Faction first...");
+  const requested = value !== undefined ? String(value || "").trim() : String(select.value || "").trim();
+  const worlds = homeworldsForFaction(faction);
+  makeOptions(select, worlds, faction ? "Choose..." : "Choose Faction first...");
   select.disabled = !faction;
   select.title = faction
     ? `Homeworld / Habitat choices linked to ${faction}.`
     : "Choose a Faction first to filter Homeworld / Habitat choices.";
 
   const hint = document.getElementById("homeworldRelationshipHint");
-  if (hint) {
-    hint.textContent = faction
-      ? `Homeworld / Habitat choices are linked to ${faction}.`
-      : "Choose a Faction to see its related homeworlds and habitats.";
-  }
+  if (hint) hint.textContent = faction
+    ? `Choose a Homeworld / Habitat linked to ${faction}.`
+    : "Choose a Faction to see its related homeworlds and habitats.";
 
+  // A Faction change never carries an invalid world across. The player must select
+  // one of the new faction's listed worlds before the character can be saved.
   if (!faction) {
     select.value = "";
     return;
   }
-  if (choices.includes(requested)) select.value = requested;
-  else if (allowClosestMatch) select.value = closestFactionHomeworld(faction, requested);
-  else select.value = "";
-}
 
-function setHomeworldValue(value, { allowClosestMatch = false } = {}) {
-  refreshHomeworldChoices({ value, allowClosestMatch });
-  inputField("homeworld")?.dispatchEvent(new Event("change"));
-}
-
-function validateFactionHomeworld({ showMessage = false } = {}) {
-  const faction = inputField("faction")?.value || "";
-  const homeworld = inputField("homeworld")?.value || "";
-  if (!faction && !homeworld) return true;
-
-  const valid = isValidFactionHomeworld(faction, homeworld);
-  if (!valid && showMessage) {
-    alert("Choose a Homeworld / Habitat from the options linked to the selected Faction before saving.");
-  }
-  return valid;
+  const selected = preserve ? closestFactionHomeworld(faction, requested) : "";
+  select.value = worlds.includes(selected) ? selected : "";
 }
 
 function pruneLegacyProfileFields() {
@@ -276,14 +324,11 @@ function initLists() {
 
   const faction = inputField("faction");
   if (faction) {
-    faction.addEventListener("change", () => {
-      // Changing Faction clears a Homeworld / Habitat that does not belong to it.
-      refreshHomeworldChoices({ allowClosestMatch: false });
-    });
+    faction.addEventListener("change", () => refreshHomeworldChoices({ preserve: false }));
   }
-
-  refreshHomeworldChoices({ allowClosestMatch: false });
+  refreshHomeworldChoices({ preserve: false });
 }
+
 function buildMainSkills() {
   const wrap = document.getElementById("mainSkills");
   wrap.innerHTML = "";
@@ -379,7 +424,19 @@ function skillRatingParts(skill) {
 
 function skillRating(skill) {
   const parts = skillRatingParts(skill);
-  return parts.bonus > 0 ? `${parts.total} (+${parts.bonus})` : String(parts.total);
+  return String(parts.total);
+}
+
+function stripSkillBonusSuffix(value) {
+  return String(value || "").replace(/\s*\(\+\d+\)\s*$/g, "").trim();
+}
+
+function sanitizeSkillRatingDisplays() {
+  document.querySelectorAll("[data-rating]").forEach(cell => {
+    const skill = cell.dataset.rating;
+    const cleanText = skill ? String(skillRatingParts(skill).total) : stripSkillBonusSuffix(cell.textContent);
+    if (cell.textContent !== cleanText) cell.textContent = cleanText;
+  });
 }
 
 function buildSkillTable(tableId, skills) {
@@ -394,7 +451,7 @@ function buildSkillTable(tableId, skills) {
       : `<td><select data-focus="${skill}"></select></td>`;
     tr.innerHTML = `
       <td>${skill}</td>
-      <td data-rating="${skill}">${skillRating(skill)}</td>
+      <td data-rating="${skill}">${stripSkillBonusSuffix(skillRating(skill))}</td>
       ${focus}
       <td><input data-skill-note="${skill}"></td>
       <td data-skill-rule="${skill}">${mainSkills.includes(skill) ? "Main skill" : "Sub-skill"}</td>`;
@@ -408,7 +465,7 @@ function updateSkillRatings() {
   document.querySelectorAll("[data-rating]").forEach(cell => {
     const skill = cell.dataset.rating;
     const parts = skillRatingParts(skill);
-    cell.textContent = parts.bonus > 0 ? `${parts.total} (+${parts.bonus})` : String(parts.total);
+    cell.textContent = String(parts.total);
     cell.title = parts.sources.length ? `Rating modifiers: ${parts.sources.join("; ")}` : "";
     cell.classList.toggle("auto-bonus", parts.bonus > 0);
 
@@ -423,10 +480,11 @@ function updateSkillRatings() {
       ruleCell.classList.toggle("auto-bonus", parts.bonus > 0);
     }
   });
+  sanitizeSkillRatingDisplays();
 }
 
 function activeRestrictions() {
-  return careerRestrictionsFor(selectedCareer());
+  return careerFiltersFor(selectedCareer());
 }
 
 function activeRestriction() {
@@ -434,26 +492,22 @@ function activeRestriction() {
 }
 
 function isEligibleForRestriction(item) {
-  const career = selectedCareer();
-  const restrictions = activeRestrictions();
+  const selected = activeRestrictions();
+  if (!selected.length || selected.includes("No Restrictions")) return true;
   const itemRestriction = item.restriction || "No Restrictions";
-
-  // Talents with a defined Career only appear under that Career.
-  if (item.career && career !== GENERAL_CAREER && item.career !== career) return false;
-  if (item.career && career === GENERAL_CAREER) return false;
-
-  // General entries remain available to every Career.
-  if (itemRestriction === "No Restrictions") return true;
-  return restrictions.includes(itemRestriction);
+  return itemRestriction === "No Restrictions" || selected.includes(itemRestriction);
 }
 
 function eligibleTraits() {
-  return DATA.traits.filter(isEligibleForRestriction);
+  return sortByName(DATA.traits.filter(isEligibleForRestriction));
 }
 
 function eligibleTalents() {
-  return DATA.talents.filter(isEligibleForRestriction);
+  return sortByName(DATA.talents.filter(isEligibleForRestriction));
 }
+
+let suppressSkillRatingUpdates = false;
+let restrictionRefreshInProgress = false;
 
 function setTraitCard(index, traitName) {
   const t = byName(DATA.traits, traitName);
@@ -464,7 +518,7 @@ function setTraitCard(index, traitName) {
   setText(document.querySelector(`[data-trait-cost="${index}"]`), t.cost);
   setText(document.querySelector(`[data-trait-brief="${index}"]`), t.brief);
   setText(document.querySelector(`[data-trait-effect="${index}"]`), t.effect);
-  updateSkillRatings();
+  if (!suppressSkillRatingUpdates) updateSkillRatings();
 }
 
 function setTalentCard(index, talentName) {
@@ -474,7 +528,7 @@ function setTalentCard(index, talentName) {
     const output = document.querySelector(`[data-talent-${k}="${index}"]`);
     if (output) setText(output, t[dataKey]);
   });
-  updateSkillRatings();
+  if (!suppressSkillRatingUpdates) updateSkillRatings();
 }
 
 function buildTraits() {
@@ -539,34 +593,53 @@ function buildTalents() {
 }
 
 function refreshRestrictionChoices() {
-  const selected = activeRestriction();
-  const traits = eligibleTraits();
-  const talents = eligibleTalents();
+  if (restrictionRefreshInProgress) return;
+  restrictionRefreshInProgress = true;
+  suppressSkillRatingUpdates = true;
 
-  document.querySelectorAll("select[data-trait-select]").forEach((sel, i) => {
-    const current = sel.value;
-    makeOptions(sel, traits.map(t => t.name), "Choose trait...");
-    if (traits.some(t => t.name === current)) sel.value = current;
-    else sel.value = "";
-    setTraitCard(i, sel.value);
-  });
+  try {
+    const careerSelect = inputField("career");
+    const selectedCareerValue = careerSelect?.value || GENERAL_CAREER;
+    const traits = eligibleTraits();
+    const talents = eligibleTalents();
+    const traitNames = sortNames(traits.map(t => t.name));
+    const talentNames = sortNames(talents.map(t => t.name));
+    const traitNameSet = new Set(traitNames);
+    const talentNameSet = new Set(talentNames);
 
-  document.querySelectorAll("select[data-talent-select]").forEach((sel, i) => {
-    const current = sel.value;
-    makeOptions(sel, talents.map(t => t.name), "Choose talent...");
-    if (talents.some(t => t.name === current)) sel.value = current;
-    else sel.value = "";
-    setTalentCard(i, sel.value);
-  });
+    document.querySelectorAll("select[data-trait-select]").forEach((sel, i) => {
+      const current = sel.value;
+      makeOptions(sel, traitNames, "Choose trait...");
+      sel.value = traitNameSet.has(current) ? current : "";
+      setTraitCard(i, sel.value);
+    });
 
-  const status = document.getElementById("restrictionStatus");
-  if (status) {
-    const career = selectedCareer();
-    const selectedFilters = activeRestrictions();
-    const eligibility = selectedFilters.filter(value => value !== "No Restrictions");
-    status.textContent = !eligibility.length
-      ? `Career: ${career} — all ${DATA.traits.length} Traits and ${DATA.talents.length} Talents are available.`
-      : `Career: ${career} — eligibility: ${eligibility.join("; ")}. ${traits.length} Traits (including general options) and ${talents.length} Talents are available.`;
+    document.querySelectorAll("select[data-talent-select]").forEach((sel, i) => {
+      const current = sel.value;
+      makeOptions(sel, talentNames, "Choose talent...");
+      sel.value = talentNameSet.has(current) ? current : "";
+      setTalentCard(i, sel.value);
+    });
+
+    // Keep the Career dropdown stable. Trait/Talent filtering must never rewrite
+    // the selected Career back to General / Unrestricted.
+    if (careerSelect && careerSelect.value !== selectedCareerValue) {
+      ensureSelectValue(careerSelect, selectedCareerValue);
+    }
+
+    const status = document.getElementById("restrictionStatus");
+    if (status) {
+      const career = selectedCareer();
+      const selectedFilters = activeRestrictions();
+      const eligibility = selectedFilters.filter(value => value !== "No Restrictions");
+      status.textContent = !eligibility.length
+        ? `Career: ${career} — all ${DATA.traits.length} Traits and ${DATA.talents.length} Talents are available.`
+        : `Career: ${career} — eligibility: ${eligibility.join("; ")}. ${traits.length} Traits (including general options) and ${talents.length} Talents are available.`;
+    }
+  } finally {
+    suppressSkillRatingUpdates = false;
+    restrictionRefreshInProgress = false;
+    updateSkillRatings();
   }
 }
 
@@ -589,7 +662,13 @@ function buildItemTable(id, rows, type) {
   }
   table.appendChild(body);
   table.querySelectorAll(`select[data-${type}-select]`).forEach(sel => {
-    makeOptions(sel, isWeapon ? DATA.lists.weapons : DATA.lists.equipment, "Choose...");
+    const slotNames = isWeapon
+      ? DATA.lists.weapons
+      : DATA.lists.equipment.filter(name => {
+          const item = byName(DATA.equipment, name);
+          return item && item.loadoutEligible !== false;
+        });
+    makeOptions(sel, slotNames, "Choose...");
     sel.addEventListener("change", () => {
       const i = sel.dataset[`${type}Select`];
       const e = byName(DATA.equipment, sel.value);
@@ -649,23 +728,36 @@ function collectState() {
   state.weapons = [...document.querySelectorAll("select[data-weapon-select]")].map(el => el.value);
   state.equipment = [...document.querySelectorAll("select[data-equipment-select]")].map(el => el.value);
   state.conditions = [...document.querySelectorAll("select[data-condition-select]")].map(el => el.value);
-
-  // Career is the sole user-facing eligibility control.
+  state.weaponNotes = [...document.querySelectorAll("input[data-weapon-note]")].map(el => el.value);
+  state.equipmentNotes = [...document.querySelectorAll("input[data-equipment-note]")].map(el => el.value);
+  state.conditionNotes = [...document.querySelectorAll("input[data-condition-note]")].map(el => el.value);
+  // Career is the sole persisted field. Older saved records are migrated in applyState().
   state.careerEligibility = activeRestrictions().filter(value => value !== "No Restrictions");
   state.startBonuses = { ...startingSkillBonuses };
   return state;
 }
 function applyState(rawState) {
-  const state = migrateCharacterState(rawState);
-  if (!state) return;
+  if (!rawState) return;
+  const state = { ...(rawState || {}) };
+  if (!state.career && state.careerRole) state.career = state.careerRole;
+  const legacyRestriction = state.careerEligibility || state.careerRestrictions || state.careerRestriction || state.restriction || "";
+  delete state.careerRole;
+  delete state.careerRestrictions;
+  delete state.careerRestriction;
+  delete state.restriction;
+
   startingSkillBonuses = { ...(state.startBonuses || {}) };
 
   document.querySelectorAll("input[data-field], textarea[data-field], select[data-field]").forEach(el => {
     if (state[el.dataset.field] !== undefined) el.value = state[el.dataset.field];
   });
 
-  setCareerChoice(state.career || GENERAL_CAREER, state.careerEligibility || []);
-  refreshHomeworldChoices({ value: state.homeworld || "", allowClosestMatch: true });
+  const woundsField = inputField("wounds");
+  if (woundsField) woundsField.value = normalizeWounds(state.wounds);
+
+  const legacyCareer = state.career || GENERAL_CAREER;
+  setCareerChoice(legacyCareer, legacyRestriction);
+  refreshHomeworldChoices({ value: state.homeworld || "", preserve: true });
   refreshRestrictionChoices();
 
   Object.entries(state.mainSkills || {}).forEach(([k, v]) => {
@@ -706,6 +798,18 @@ function applyState(rawState) {
   (state.conditions || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-condition-select="${i}"]`);
     if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+  });
+  (state.weaponNotes || []).forEach((v, i) => {
+    const el = document.querySelector(`input[data-weapon-note="${i}"]`);
+    if (el) el.value = v;
+  });
+  (state.equipmentNotes || []).forEach((v, i) => {
+    const el = document.querySelector(`input[data-equipment-note="${i}"]`);
+    if (el) el.value = v;
+  });
+  (state.conditionNotes || []).forEach((v, i) => {
+    const el = document.querySelector(`input[data-condition-note="${i}"]`);
+    if (el) el.value = v;
   });
   applyArmourFromEquipment();
   updateSkillRatings();
@@ -833,11 +937,6 @@ function ensureSelectValue(select, value) {
 }
 
 function setFieldValue(field, value) {
-  if (field === "homeworld") {
-    setHomeworldValue(value, { allowClosestMatch: false });
-    return;
-  }
-
   const element = inputField(field);
   if (!element) return;
   if (element.tagName === "SELECT") ensureSelectValue(element, value);
@@ -1012,6 +1111,7 @@ function setDefaultTracks() {
   setFieldValue("hp", "20");
   setFieldValue("mentalStress", "20");
   setFieldValue("firewall", "20");
+  setFieldValue("wounds", "0");
   setArmourValue(0);
   updateArmourStatus(0);
 }
@@ -1098,7 +1198,11 @@ function factionForTalentFaction(talentFaction) {
     "O-12 / Nomads": "O-12 / Nomads - Circular Crew",
     "PanOceania": "PanOceania",
     "PanOceania / Yu Jing": "PanOceania",
-    "Yu Jing": "Yu Jing"
+    "Yu Jing": "Yu Jing",
+
+    "Combined Army": "Combined Army",
+    "Tohaa": "Tohaa",
+    "Ships": "Ships - Circular Crew"
   };
   return map[talentFaction] || randomChoice(DATA.lists.factions);
 }
@@ -1112,8 +1216,7 @@ function randomCharacter() {
   setFieldValue("player", "");
   setFieldValue("faction", faction);
   refreshHomeworldChoices({ preserve: false });
-  setHomeworldValue(randomChoice(homeworldsForFaction(faction)) || "");
-  setFieldValue("xp", "0");
+  setFieldValue("homeworld", randomChoice(homeworldsForFaction(faction)) || "");
   setFieldValue("campaignNotes", "Generated random character - review before play.");
   setCareerChoice(anchorTalent.career || GENERAL_CAREER, anchorTalent.restriction || "No Restrictions");
   refreshRestrictionChoices();
@@ -1135,7 +1238,9 @@ function randomCharacter() {
 
   assignTenRandomFocusPoints(preferredSkillsFor(chosenTraits, chosenTalents));
   updateSkillRatings();
-  alert("Random Character created with 10 starting Focus points. Vigor, Mental Stress, and Firewall are 20. Armour is set from the generated armour item.");
+  activeSaveId = "";
+  autosaveCurrentCharacterNow();
+  alert("Random Character created with 10 starting Focus points. Vigor, Mental Stress, and Firewall are 20. Armour is set from the generated armour item. It has been autosaved in this browser.");
 }
 
 function randomBeginnerCharacter() {
@@ -1143,12 +1248,12 @@ function randomBeginnerCharacter() {
   const trait = byName(DATA.traits, template.trait);
   const talent = byName(DATA.talents, template.talent);
 
-  const starterFaction = factionForTalentFaction(template.talentFaction || template.faction);
   setFieldValue("characterName", template.name);
   setFieldValue("player", "Starting Character");
-  setFieldValue("faction", starterFaction);
-  setHomeworldValue(closestFactionHomeworld(starterFaction, template.homeworld), { allowClosestMatch: true });
-  setFieldValue("xp", "Starting character");
+  setFieldValue("faction", template.faction);
+  refreshHomeworldChoices({ preserve: false });
+  setFieldValue("homeworld", closestFactionHomeworld(template.faction, template.homeworld));
+  setFieldValue("concept", template.concept);
   setCareerChoice(template.career || GENERAL_CAREER, template.restriction || "No Restrictions");
   setFieldValue("campaignNotes", "Portfolio-based beginner character - review and personalise before play.");
 
@@ -1164,12 +1269,253 @@ function randomBeginnerCharacter() {
 
   assignFiveBeginnerFocusPoints(preferredSkillsFor([trait], [talent]));
   updateSkillRatings();
+  activeSaveId = "";
+  autosaveCurrentCharacterNow();
 
-  alert(`Random Beginner Character created from the ${template.name} starter portfolio pattern. It has 2 weapons, 5 non-weapon equipment items, 1 Trait, 1 Level 1 Talent, and 5 starting Focus points.`);
+  alert(`Random Beginner Character created from the ${template.name} starter portfolio pattern. It has 2 weapons, 5 non-weapon equipment items, 1 Trait, 1 Level 1 Talent, and 5 starting Focus points. It has been autosaved in this browser.`);
 }
 
 const SAVE_INDEX_KEY = "infinity2d20-character-index";
 const SAVE_PREFIX = "infinity2d20-character-save:";
+const LAST_ACTIVE_SAVE_KEY = "infinity2d20-character-last-active";
+const CURRENT_SNAPSHOT_KEY = "infinity2d20-character-current-snapshot";
+const IDB_DB_NAME = "infinity2d20-character-vault";
+const IDB_STORE_NAME = "keyValue";
+const AUTOSAVE_DELAY_MS = 500;
+let activeSaveId = "";
+let autosaveTimer = null;
+let autosaveDirty = false;
+let autosaveSuppressed = false;
+let indexedDbAutoLoadAttempted = false;
+
+function hasIndexedDb() {
+  return typeof indexedDB !== "undefined";
+}
+
+function openCharacterVaultDb() {
+  return new Promise(resolve => {
+    if (!hasIndexedDb()) {
+      resolve(null);
+      return;
+    }
+    try {
+      const request = indexedDB.open(IDB_DB_NAME, 1);
+      request.onupgradeneeded = () => {
+        const db = request.result;
+        if (!db.objectStoreNames.contains(IDB_STORE_NAME)) db.createObjectStore(IDB_STORE_NAME);
+      };
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => resolve(null);
+      request.onblocked = () => resolve(null);
+    } catch {
+      resolve(null);
+    }
+  });
+}
+
+async function vaultSet(key, value) {
+  const db = await openCharacterVaultDb();
+  if (!db) return false;
+  return new Promise(resolve => {
+    try {
+      const tx = db.transaction(IDB_STORE_NAME, "readwrite");
+      tx.objectStore(IDB_STORE_NAME).put(value, key);
+      tx.oncomplete = () => { db.close(); resolve(true); };
+      tx.onerror = () => { db.close(); resolve(false); };
+      tx.onabort = () => { db.close(); resolve(false); };
+    } catch {
+      try { db.close(); } catch {}
+      resolve(false);
+    }
+  });
+}
+
+async function vaultGet(key) {
+  const db = await openCharacterVaultDb();
+  if (!db) return null;
+  return new Promise(resolve => {
+    try {
+      const tx = db.transaction(IDB_STORE_NAME, "readonly");
+      const request = tx.objectStore(IDB_STORE_NAME).get(key);
+      request.onsuccess = () => resolve(request.result || null);
+      request.onerror = () => resolve(null);
+      tx.oncomplete = () => { try { db.close(); } catch {} };
+      tx.onerror = () => { try { db.close(); } catch {} };
+    } catch {
+      try { db.close(); } catch {}
+      resolve(null);
+    }
+  });
+}
+
+function buildCharacterSnapshot(id, state) {
+  return {
+    build: "v64-ariadna-yu-jing",
+    id: id || saveIdFromName(state?.characterName || currentCharacterName()),
+    name: state?.characterName || currentCharacterName(),
+    savedAt: state?.savedAt || new Date().toISOString(),
+    state
+  };
+}
+
+function writeSnapshotMirrors(id, state) {
+  if (!state) return;
+  const snapshot = buildCharacterSnapshot(id, state);
+  try {
+    localStorage.setItem(CURRENT_SNAPSHOT_KEY, JSON.stringify(snapshot));
+  } catch {}
+  // IndexedDB is more durable on many mobile browsers than a single localStorage
+  // index entry. It is asynchronous, so it mirrors autosaves without blocking play.
+  vaultSet(CURRENT_SNAPSHOT_KEY, snapshot).catch(() => {});
+}
+
+function readLocalSnapshot() {
+  try {
+    const raw = localStorage.getItem(CURRENT_SNAPSHOT_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+function recoverSnapshotToLocalSave(snapshot) {
+  if (!snapshot || !snapshot.state) return "";
+  const state = snapshot.state;
+  const id = snapshot.id || saveIdFromName(state.characterName || currentCharacterName());
+  const name = state.characterName || snapshot.name || "Recovered Character";
+  const savedAt = state.savedAt || snapshot.savedAt || new Date().toISOString();
+  try {
+    localStorage.setItem(SAVE_PREFIX + id, JSON.stringify(state));
+    localStorage.setItem(LAST_ACTIVE_SAVE_KEY, id);
+    upsertSaveIndexItem(id, name, savedAt, Boolean(state.autoSaved));
+    return id;
+  } catch {
+    return "";
+  }
+}
+
+function requestIndexedDbAutoLoadFallback() {
+  if (indexedDbAutoLoadAttempted) return;
+  indexedDbAutoLoadAttempted = true;
+  vaultGet(CURRENT_SNAPSHOT_KEY).then(snapshot => {
+    if (!snapshot || !snapshot.state) return;
+    // Do not overwrite a character the player has already started editing while
+    // the asynchronous mobile-storage fallback was opening.
+    if (activeSaveId || autosaveDirty) return;
+    const recoveredId = recoverSnapshotToLocalSave(snapshot);
+    if (recoveredId) loadCharacterById(recoveredId, { auto: true, initial: true });
+  }).catch(() => {});
+}
+
+function setAutosaveStatus(message, state = "ready") {
+  const status = document.getElementById("autosaveStatus");
+  if (!status) return;
+  status.textContent = message;
+  status.dataset.state = state;
+}
+
+function formatAutosaveTime(date = new Date()) {
+  try {
+    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  } catch {
+    return "now";
+  }
+}
+
+function upsertSaveIndexItem(id, name, updatedAt, autoSaved = false) {
+  const cleanName = name || "Unnamed Character";
+  let index = getSaveIndex().filter(item => item.id !== id);
+  index.push({ id, name: cleanName, updatedAt, autoSaved });
+  index.sort((a, b) => String(a.name || "").localeCompare(String(b.name || "")));
+  setSaveIndex(index);
+}
+
+function stateHasAutosaveContent(state) {
+  if (!state) return false;
+  const textFields = ["characterName", "player", "faction", "homeworld", "career", "concept", "campaignNotes"];
+  if (textFields.some(field => String(state[field] || "").trim())) return true;
+  if ((state.traits || []).some(Boolean) || (state.talents || []).some(Boolean)) return true;
+  if ((state.weapons || []).some(Boolean) || (state.equipment || []).some(Boolean) || (state.conditions || []).some(Boolean)) return true;
+  if ((state.weaponNotes || []).some(Boolean) || (state.equipmentNotes || []).some(Boolean) || (state.conditionNotes || []).some(Boolean)) return true;
+  if (Object.values(state.skillNotes || {}).some(Boolean)) return true;
+  if (Object.values(state.focus || {}).some(Boolean)) return true;
+  if (Object.values(state.mainSkills || {}).some(value => String(value) && String(value) !== "7")) return true;
+  return false;
+}
+
+function autosaveCurrentCharacterNow() {
+  if (autosaveSuppressed) return;
+  autosaveDirty = false;
+  let state = null;
+  try {
+    state = collectState();
+    if (!activeSaveId && !stateHasAutosaveContent(state)) {
+      setAutosaveStatus("Autosave ready", "ready");
+      return;
+    }
+    state.characterName = state.characterName || currentCharacterName();
+    state.savedAt = new Date().toISOString();
+    state.autoSaved = true;
+    const name = state.characterName || "Unnamed Character";
+    if (!activeSaveId) activeSaveId = saveIdFromName(name);
+    localStorage.setItem(SAVE_PREFIX + activeSaveId, JSON.stringify(state));
+    localStorage.setItem(LAST_ACTIVE_SAVE_KEY, activeSaveId);
+    upsertSaveIndexItem(activeSaveId, name, state.savedAt, true);
+    writeSnapshotMirrors(activeSaveId, state);
+    const slotSelect = document.getElementById("characterSlotSelect");
+    const selectedBeforeRefresh = slotSelect?.value || "";
+    const selectedAfterRefresh = selectedBeforeRefresh && selectedBeforeRefresh !== activeSaveId ? selectedBeforeRefresh : activeSaveId;
+    refreshSaveSlots(selectedAfterRefresh);
+    setAutosaveStatus(`Autosaved ${formatAutosaveTime()}`, "saved");
+  } catch (error) {
+    console.error("Autosave failed", error);
+    if (state) writeSnapshotMirrors(activeSaveId || saveIdFromName(state.characterName || currentCharacterName()), state);
+    setAutosaveStatus("Autosave paused - storage unavailable", "error");
+  }
+}
+
+function flushPendingAutosave() {
+  if (autosaveSuppressed) return;
+  if (autosaveTimer) {
+    clearTimeout(autosaveTimer);
+    autosaveTimer = null;
+  }
+  if (autosaveDirty) autosaveCurrentCharacterNow();
+}
+
+function scheduleAutosave() {
+  if (autosaveSuppressed) return;
+  autosaveDirty = true;
+  if (autosaveTimer) clearTimeout(autosaveTimer);
+  setAutosaveStatus("Autosaving...", "saving");
+  autosaveTimer = setTimeout(() => {
+    autosaveTimer = null;
+    autosaveCurrentCharacterNow();
+  }, AUTOSAVE_DELAY_MS);
+}
+
+function installAutosave() {
+  const sheet = document.getElementById("sheet");
+  if (!sheet) return;
+  const shouldAutosave = target => !!(target && target.matches && target.matches("input, textarea, select"));
+  ["input", "change"].forEach(eventName => {
+    sheet.addEventListener(eventName, event => {
+      if (shouldAutosave(event.target)) scheduleAutosave();
+    });
+  });
+  const flushForCloseOrBackground = () => {
+    // Mobile browsers may suspend a tab without firing beforeunload. Save now
+    // when the page is hidden, frozen, or about to be unloaded.
+    flushPendingAutosave();
+    autosaveCurrentCharacterNow();
+  };
+  window.addEventListener("beforeunload", flushForCloseOrBackground);
+  window.addEventListener("pagehide", flushForCloseOrBackground);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") flushForCloseOrBackground();
+  });
+  setAutosaveStatus("Autosave ready", "ready");
+}
 
 function safeFileName(name) {
   return (name || "infinity-character").replace(/[^\w\-]+/g, "_");
@@ -1183,20 +1529,78 @@ function saveIdFromName(name) {
   return name.trim().toLowerCase().replace(/[^\w\-]+/g, "_") || "unnamed_character";
 }
 
-function getSaveIndex() {
+function normalizeSaveIndexItem(item) {
+  if (!item || !item.id) return null;
+  return {
+    id: String(item.id),
+    name: item.name || "Unnamed Character",
+    updatedAt: item.updatedAt || item.savedAt || "",
+    autoSaved: Boolean(item.autoSaved)
+  };
+}
+
+function readSavedCharacterState(id) {
+  if (!id) return null;
   try {
-    return JSON.parse(localStorage.getItem(SAVE_INDEX_KEY) || "[]");
+    const raw = localStorage.getItem(SAVE_PREFIX + id);
+    return raw ? JSON.parse(raw) : null;
   } catch {
-    return [];
+    return null;
   }
 }
 
+function getSaveIndex() {
+  const byId = {};
+
+  try {
+    const stored = JSON.parse(localStorage.getItem(SAVE_INDEX_KEY) || "[]");
+    if (Array.isArray(stored)) {
+      stored.map(normalizeSaveIndexItem).filter(Boolean).forEach(item => {
+        byId[item.id] = item;
+      });
+    }
+  } catch {
+    // Rebuild below from actual save records.
+  }
+
+  // v54: repair older or partially migrated browsers by scanning actual saved
+  // character records. This makes auto-load work even if the visible index was
+  // not refreshed by an earlier build, mobile browser, or XML import path.
+  try {
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i);
+      if (!key || !key.startsWith(SAVE_PREFIX)) continue;
+      const id = key.slice(SAVE_PREFIX.length);
+      const state = readSavedCharacterState(id);
+      if (!state) continue;
+      byId[id] = {
+        id,
+        name: state.characterName || byId[id]?.name || id.replace(/_/g, " ") || "Unnamed Character",
+        updatedAt: state.savedAt || byId[id]?.updatedAt || "",
+        autoSaved: Boolean(state.autoSaved || byId[id]?.autoSaved)
+      };
+    }
+  } catch {
+    // If localStorage iteration is blocked, keep any index entries already read.
+  }
+
+  return Object.values(byId)
+    .filter(item => !!localStorage.getItem(SAVE_PREFIX + item.id))
+    .sort((a, b) => String(a.name || "").localeCompare(String(b.name || "")));
+}
+
 function setSaveIndex(index) {
-  localStorage.setItem(SAVE_INDEX_KEY, JSON.stringify(index));
+  localStorage.setItem(SAVE_INDEX_KEY, JSON.stringify(index.map(normalizeSaveIndexItem).filter(Boolean)));
 }
 
 function saveCharacterToBrowser() {
-  if (!validateFactionHomeworld({ showMessage: true })) return;
+  const faction = inputField("faction")?.value || "";
+  const homeworld = inputField("homeworld")?.value || "";
+  if (!isValidFactionHomeworld(faction, homeworld)) {
+    alert("Select a Homeworld / Habitat from the options linked to the chosen Faction before saving.");
+    return;
+  }
+
   const state = collectState();
   state.characterName = state.characterName || currentCharacterName();
   state.savedAt = new Date().toISOString();
@@ -1204,30 +1608,134 @@ function saveCharacterToBrowser() {
   const name = state.characterName || "Unnamed Character";
   const id = saveIdFromName(name);
   localStorage.setItem(SAVE_PREFIX + id, JSON.stringify(state));
+  localStorage.setItem(LAST_ACTIVE_SAVE_KEY, id);
 
-  let index = getSaveIndex().filter(item => item.id !== id);
-  index.push({ id, name, updatedAt: state.savedAt });
-  index.sort((a, b) => a.name.localeCompare(b.name));
-  setSaveIndex(index);
+  upsertSaveIndexItem(id, name, state.savedAt, false);
+  writeSnapshotMirrors(id, state);
+  activeSaveId = id;
+  autosaveDirty = false;
   refreshSaveSlots(id);
+  setAutosaveStatus(`Saved ${formatAutosaveTime()}`, "saved");
   alert(`Saved "${name}" to this browser.`);
 }
 
+let initialAutoLoadDone = false;
+
+function loadCharacterById(id, options = {}) {
+  const notify = !!options.notify;
+  const auto = !!options.auto;
+  const initial = !!options.initial;
+
+  if (!id) {
+    if (notify) alert("Choose a saved character first.");
+    return false;
+  }
+
+  // Save pending edits to the current active portfolio before switching to
+  // another saved portfolio. This keeps autosave safe while making the Load
+  // button unnecessary.
+  if (!initial && !autosaveSuppressed) flushPendingAutosave();
+
+  let state = readSavedCharacterState(id);
+  if (!state) {
+    const snapshot = readLocalSnapshot();
+    if (snapshot && snapshot.id === id && snapshot.state) {
+      recoverSnapshotToLocalSave(snapshot);
+      state = snapshot.state;
+    }
+  }
+  if (!state) {
+    if (notify || !auto) alert("Saved character not found in this browser.");
+    refreshSaveSlots(id);
+    requestIndexedDbAutoLoadFallback();
+    return false;
+  }
+
+  autosaveSuppressed = true;
+  try {
+    if (autosaveTimer) {
+      clearTimeout(autosaveTimer);
+      autosaveTimer = null;
+    }
+    hideGlossary({ silent: true, noScroll: true });
+    applyState(state);
+    activeSaveId = id;
+    localStorage.setItem(LAST_ACTIVE_SAVE_KEY, id);
+    writeSnapshotMirrors(id, state);
+    autosaveDirty = false;
+    refreshSaveSlots(id);
+    const indexItem = getSaveIndex().find(item => item.id === id);
+    setAutosaveStatus(`${initial ? "Auto-loaded" : "Loaded"}${indexItem?.name ? `: ${indexItem.name}` : ""} - autosave ready`, "ready");
+  } catch (error) {
+    console.error("Load failed", error);
+    if (notify || !auto) alert("Saved character could not be loaded. The save data may be damaged.");
+    return false;
+  } finally {
+    autosaveSuppressed = false;
+  }
+
+  if (notify) alert("Loaded selected character. Autosave is now active for this portfolio.");
+  return true;
+}
+
+function autoLoadLastSavedCharacter() {
+  const localSnapshot = readLocalSnapshot();
+  let index = getSaveIndex();
+
+  if (!index.length && localSnapshot?.state) {
+    const recoveredId = recoverSnapshotToLocalSave(localSnapshot);
+    if (recoveredId) index = getSaveIndex();
+  }
+
+  if (!index.length) {
+    refreshSaveSlots();
+    setAutosaveStatus("Autosave ready - no saved character found", "ready");
+    requestIndexedDbAutoLoadFallback();
+    return false;
+  }
+
+  const exists = id => !!id && index.some(item => item.id === id) && !!localStorage.getItem(SAVE_PREFIX + id);
+  let id = localStorage.getItem(LAST_ACTIVE_SAVE_KEY) || "";
+
+  if (!exists(id) && localSnapshot?.state) {
+    const recoveredId = recoverSnapshotToLocalSave(localSnapshot);
+    if (recoveredId) {
+      index = getSaveIndex();
+      id = recoveredId;
+    }
+  }
+
+  if (!exists(id)) {
+    const newest = [...index]
+      .filter(item => exists(item.id))
+      .sort((a, b) => new Date(b.updatedAt || 0) - new Date(a.updatedAt || 0))[0];
+    id = newest?.id || "";
+  }
+
+  if (!exists(id)) {
+    localStorage.removeItem(LAST_ACTIVE_SAVE_KEY);
+    refreshSaveSlots();
+    setAutosaveStatus("Autosave ready - no saved character found", "ready");
+    requestIndexedDbAutoLoadFallback();
+    return false;
+  }
+
+  const loaded = loadCharacterById(id, { auto: true, initial: true });
+  if (!loaded) requestIndexedDbAutoLoadFallback();
+  return loaded;
+}
+
+function runInitialAutoLoadSavedCharacter() {
+  if (initialAutoLoadDone) return;
+  initialAutoLoadDone = true;
+  autoLoadLastSavedCharacter();
+}
+
+// Kept as a compatibility wrapper for older event hooks, but the visible Load
+// button has been removed in v54. Selecting a saved character now loads it.
 function loadCharacterFromBrowser() {
   const select = document.getElementById("characterSlotSelect");
-  const id = select?.value;
-  if (!id) {
-    alert("Choose a saved character first.");
-    return;
-  }
-  const raw = localStorage.getItem(SAVE_PREFIX + id);
-  if (!raw) {
-    alert("Saved character not found in this browser.");
-    refreshSaveSlots();
-    return;
-  }
-  applyState(JSON.parse(raw));
-  alert("Loaded selected character.");
+  return loadCharacterById(select?.value || "", { notify: true });
 }
 
 function deleteSelectedSave() {
@@ -1242,17 +1750,23 @@ function deleteSelectedSave() {
   if (!confirm(`Delete saved character "${item?.name || id}" from this browser?`)) return;
   localStorage.removeItem(SAVE_PREFIX + id);
   setSaveIndex(index.filter(x => x.id !== id));
+  if (activeSaveId === id) activeSaveId = "";
+  if (localStorage.getItem(LAST_ACTIVE_SAVE_KEY) === id) localStorage.removeItem(LAST_ACTIVE_SAVE_KEY);
+  autosaveDirty = false;
+  setAutosaveStatus("Save deleted - autosave ready", "ready");
   refreshSaveSlots();
 }
 
-function refreshSaveSlots(selectedId = "") {
+function refreshSaveSlots(selectedId = undefined) {
   const select = document.getElementById("characterSlotSelect");
   if (!select) return;
+  const previousSelection = select.value || "";
+  const requestedSelection = selectedId === undefined ? previousSelection : selectedId;
   const index = getSaveIndex();
   select.innerHTML = "";
   const blank = document.createElement("option");
   blank.value = "";
-  blank.textContent = index.length ? "Saved characters..." : "No saved characters";
+  blank.textContent = index.length ? "Choose saved character to auto-load..." : "No saved characters";
   select.appendChild(blank);
   index.forEach(item => {
     const opt = document.createElement("option");
@@ -1261,7 +1775,9 @@ function refreshSaveSlots(selectedId = "") {
     opt.textContent = date ? `${item.name} (${date})` : item.name;
     select.appendChild(opt);
   });
-  if (selectedId) select.value = selectedId;
+  if (requestedSelection && [...select.options].some(option => option.value === requestedSelection)) {
+    select.value = requestedSelection;
+  }
 }
 
 function downloadJSON() {
@@ -1290,7 +1806,7 @@ function importJSONFile(file) {
       existing.forEach(item => byId[item.id] = item);
       parsed.index.forEach(item => {
         if (parsed.saves[item.id]) {
-          localStorage.setItem(SAVE_PREFIX + item.id, JSON.stringify(migrateCharacterState(parsed.saves[item.id])));
+          localStorage.setItem(SAVE_PREFIX + item.id, JSON.stringify(parsed.saves[item.id]));
           byId[item.id] = item;
         }
       });
@@ -1309,33 +1825,181 @@ function importJSONFile(file) {
   reader.readAsText(file);
 }
 
+
+/* -------------------------------------------------------------------------
+   XML import/export for single character portfolios.
+   The XML format mirrors collectState() and deliberately stores user-entered
+   values only, not the full rules database. This keeps files small, readable,
+   and safe to import on desktop or mobile browsers.
+   ------------------------------------------------------------------------- */
+function xmlSafeText(value) {
+  return String(value ?? "")
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\uFFFE\uFFFF]/g, "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+function stateValueToXml(name, value, indent = "  ") {
+  const safeName = xmlSafeText(name);
+  if (Array.isArray(value)) {
+    const items = value.map((item, index) => `${indent}  <item index="${index}">${xmlSafeText(item)}</item>`).join("\n");
+    return `${indent}<array name="${safeName}">\n${items}\n${indent}</array>`;
+  }
+  if (value && typeof value === "object") {
+    const fields = Object.entries(value)
+      .map(([key, innerValue]) => stateValueToXml(key, innerValue, indent + "  "))
+      .join("\n");
+    return `${indent}<object name="${safeName}">\n${fields}\n${indent}</object>`;
+  }
+  return `${indent}<field name="${safeName}">${xmlSafeText(value)}</field>`;
+}
+
+function characterStateToXml(state) {
+  const exportState = {
+    ...state,
+    xmlFormat: "Infinity2D20CharacterSheetXML-v1",
+    exportedAt: new Date().toISOString(),
+    exportedWithBuild: window.INFINITY_BUILD || document.documentElement.dataset.infinityBuild || "unknown"
+  };
+  const body = Object.entries(exportState)
+    .map(([key, value]) => stateValueToXml(key, value, "    "))
+    .join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v64-ariadna-yu-jing")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+}
+
+function exportCharacterXml() {
+  flushPendingAutosave();
+  const state = collectState();
+  state.characterName = state.characterName || currentCharacterName();
+  const name = safeFileName(state.characterName || "infinity-character");
+  const xml = characterStateToXml(state);
+  const blob = new Blob([xml], { type: "application/xml;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${name}.xml`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+  setAutosaveStatus(`Exported XML ${formatAutosaveTime()}`, "saved");
+}
+
+function xmlChildToValue(node) {
+  const tag = String(node.tagName || "").toLowerCase();
+  if (tag === "array") {
+    const result = [];
+    [...node.children].forEach(child => {
+      if (String(child.tagName || "").toLowerCase() !== "item") return;
+      const index = Number(child.getAttribute("index"));
+      if (Number.isInteger(index) && index >= 0) result[index] = child.textContent || "";
+      else result.push(child.textContent || "");
+    });
+    return result.map(value => value ?? "");
+  }
+  if (tag === "object") {
+    const result = {};
+    [...node.children].forEach(child => {
+      const key = child.getAttribute("name");
+      if (key) result[key] = xmlChildToValue(child);
+    });
+    return result;
+  }
+  return node.textContent || "";
+}
+
+function characterXmlToState(xmlText) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(String(xmlText || ""), "application/xml");
+  const parseError = doc.querySelector("parsererror");
+  if (parseError) throw new Error("The selected XML file could not be read. It may be damaged or not valid XML.");
+  const stateNode = doc.querySelector("infinity2d20CharacterSheet > state") || doc.querySelector("state");
+  if (!stateNode) throw new Error("This XML file does not contain an Infinity 2D20 character state.");
+  const state = {};
+  [...stateNode.children].forEach(child => {
+    const key = child.getAttribute("name");
+    if (!key) return;
+    state[key] = xmlChildToValue(child);
+  });
+  delete state.xmlFormat;
+  delete state.exportedAt;
+  delete state.exportedWithBuild;
+  return state;
+}
+
+function importCharacterXmlFile(file) {
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onerror = () => alert("The XML file could not be opened. Please try again.");
+  reader.onload = () => {
+    let parsed;
+    try {
+      parsed = characterXmlToState(reader.result);
+    } catch (error) {
+      alert(error.message || "The selected XML file is not a valid Infinity 2D20 character XML file.");
+      return;
+    }
+
+    autosaveSuppressed = true;
+    try {
+      if (autosaveTimer) {
+        clearTimeout(autosaveTimer);
+        autosaveTimer = null;
+      }
+      applyState(parsed);
+      activeSaveId = "";
+      autosaveDirty = false;
+      hideGlossary({ silent: true });
+      refreshSaveSlots("");
+      setAutosaveStatus("Imported XML - save or edit to autosave", "ready");
+    } finally {
+      autosaveSuppressed = false;
+    }
+
+    if (confirm("XML import loaded. Save this character into browser slots now?")) {
+      saveCharacterToBrowser();
+    }
+  };
+  reader.readAsText(file);
+}
+
 function newCharacterSheet() {
-  if (!confirm("Start a new character sheet? Unsaved changes will be lost.")) return;
+  if (!confirm("Start a new character sheet? Your current character has been autosaved in this browser.")) return;
 
-  document.querySelectorAll("input[data-field], textarea[data-field]").forEach(element => {
-    element.value = "";
-  });
-  document.querySelectorAll("select[data-field]").forEach(element => {
-    element.value = "";
-  });
+  autosaveSuppressed = true;
+  try {
+      document.querySelectorAll("input[data-field], textarea[data-field]").forEach(element => {
+        element.value = "";
+      });
+      document.querySelectorAll("select[data-field]").forEach(element => {
+        element.value = "";
+      });
 
-  setCareerChoice(GENERAL_CAREER, "No Restrictions");
-  refreshHomeworldChoices({ preserve: false });
-  refreshRestrictionChoices();
-  clearTraitAndTalentSlots();
+      setCareerChoice(GENERAL_CAREER, "No Restrictions");
+      refreshHomeworldChoices({ preserve: false });
+      refreshRestrictionChoices();
+      clearTraitAndTalentSlots();
 
-  // Clear all gear first, then deliberately set Armour to 0.
-  document.querySelectorAll("select[data-weapon-select], select[data-equipment-select], select[data-condition-select]").forEach(element => {
-    element.value = "";
-    element.dispatchEvent(new Event("change"));
-  });
+      // Clear all gear first, then deliberately set Armour to 0.
+      document.querySelectorAll("select[data-weapon-select], select[data-equipment-select], select[data-condition-select]").forEach(element => {
+        element.value = "";
+        element.dispatchEvent(new Event("change"));
+      });
 
-  clearFocusAllocations();
-  setMainSkillsToStartingBaseline();
-  resetStartingBonuses();
-  setDefaultTracks();
-  applyArmourFromEquipment();
-  updateSkillRatings();
+      clearFocusAllocations();
+      setMainSkillsToStartingBaseline();
+      resetStartingBonuses();
+      setDefaultTracks();
+      applyArmourFromEquipment();
+      updateSkillRatings();  } finally {
+    autosaveSuppressed = false;
+  }
+  activeSaveId = "";
+  autosaveDirty = false;
+  setAutosaveStatus("New sheet - autosave ready", "ready");
 }
 
 
@@ -1432,13 +2096,9 @@ function selectedPrintConditions() {
 
 function printMainSkillCard(skill) {
   const parts = skillRatingParts(skill);
-  return `<div class="print-skill-chip">
+  return `<div class="print-skill-chip print-skill-chip-simple">
     <div class="print-skill-chip-name">${printEscape(skill)}</div>
-    <div class="print-skill-chip-stats">
-      <div><span>Base</span><b>${printEscape(parts.base)}</b></div>
-      <div><span>Bonus</span><b>${printEscape(printSigned(parts.bonus))}</b></div>
-      <div class="print-skill-chip-total"><span>Total</span><strong>${printEscape(parts.total)}</strong></div>
-    </div>
+    <div class="print-skill-chip-total-only"><strong>${printEscape(parts.total)}</strong></div>
   </div>`;
 }
 
@@ -1450,26 +2110,22 @@ function printSkillTable(skills) {
     const source = [...parts.sources, note].filter(Boolean).join("; ") || (mainSkills.includes(skill) ? "Main skill" : "");
     return `<tr class="${mainSkills.includes(skill) ? "print-main-row" : ""}">
       <td class="print-skill-name">${printEscape(skill)}</td>
-      <td class="number">${printEscape(parts.base)}</td>
-      <td class="number">${printEscape(printSigned(parts.bonus))}</td>
       <td class="number print-skill-total">${printEscape(parts.total)}</td>
       <td class="number">${printText(focus, "")}</td>
       <td class="print-skill-source">${printText(source, "")}</td>
     </tr>`;
   }).join("");
 
-  /* Inline geometry is intentional: every print path receives the exact same six columns. */
+  /* Inline geometry is intentional: every print path receives the same simplified columns. */
   return `<div class="print-skills-panel" data-equal-skills-panel style="flex:0 0 calc((100% - 1.7mm) / 2);width:calc((100% - 1.7mm) / 2);min-width:0;box-sizing:border-box;">
     <table class="print-table print-skills-table" style="width:100%;min-width:0;max-width:100%;table-layout:fixed;">
       <colgroup>
-        <col class="print-skill-col-name" style="width:20%">
-        <col class="print-skill-col-base" style="width:9%">
-        <col class="print-skill-col-rating" style="width:9%">
-        <col class="print-skill-col-total" style="width:9%">
-        <col class="print-skill-col-focus" style="width:9%">
-        <col class="print-skill-col-source" style="width:44%">
+        <col class="print-skill-col-name" style="width:27%">
+        <col class="print-skill-col-total" style="width:13%">
+        <col class="print-skill-col-focus" style="width:13%">
+        <col class="print-skill-col-source" style="width:47%">
       </colgroup>
-      <thead><tr><th>Skill</th><th>Base</th><th>Rating +</th><th>Total</th><th>Focus</th><th>Source</th></tr></thead>
+      <thead><tr><th>Skill</th><th>Total</th><th>Focus</th><th>Source</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>
   </div>`;
@@ -1480,7 +2136,6 @@ function buildPrintCorePage(page, total) {
     ["Player", printValue("player")],
     ["Faction", printValue("faction")],
     ["Homeworld / Habitat", printValue("homeworld")],
-    ["XP / Advancement", printValue("xp")],
     ["Career", printValue("career")]
   ].filter(([, value]) => value);
 
@@ -1490,7 +2145,7 @@ function buildPrintCorePage(page, total) {
   const tracks = [
     ["HP / Vigor", printValue("hp")], ["Firewall", printValue("firewall")], ["Armour", printValue("armour")],
     ["Mental Stress", printValue("mentalStress")], ["Infinity Points", printValue("infinityPoints")], ["Credits", printValue("credits")],
-    ["Momentum", printValue("momentum")], ["Heat", printValue("heat")], ["Wounds", printValue("wounds")]
+    ["Momentum", printValue("momentum")], ["Wounds", printValue("wounds")]
   ].map(([label, value]) => `<div class="print-track"><span>${printEscape(label)}</span><strong>${printText(value, "-")}</strong></div>`).join("");
 
   const core = printSection("Main Skills & Resources", `<div class="print-core-grid">
@@ -1728,10 +2383,9 @@ function buildPrintSupplementPage(page, total, content) {
 }
 
 function isBeginnerPrintCharacter() {
-  const xp = printValue("xp").toLowerCase();
   const player = printValue("player").toLowerCase();
   const notes = printValue("campaignNotes").toLowerCase();
-  return xp.includes("starting character") || player.includes("starting character") || notes.includes("portfolio-based beginner");
+  return player.includes("starting character") || notes.includes("portfolio-based beginner");
 }
 
 function printSupplementContent() {
@@ -1820,10 +2474,10 @@ function compactPrintFrameHtml(markup, title, token) {
     .print-skills-grid[data-equal-skills-grid]{display:flex!important;width:100%!important;gap:1.7mm!important;align-items:flex-start!important;box-sizing:border-box!important;}
     .print-skills-panel[data-equal-skills-panel]{flex:0 0 calc((100% - 1.7mm)/2)!important;width:calc((100% - 1.7mm)/2)!important;min-width:0!important;box-sizing:border-box!important;}
     .print-skills-table{width:100%!important;min-width:0!important;max-width:100%!important;table-layout:fixed!important;}
-    .print-skills-table col.print-skill-col-name{width:20%!important;}
-    .print-skills-table col.print-skill-col-base,.print-skills-table col.print-skill-col-rating,.print-skills-table col.print-skill-col-total,.print-skills-table col.print-skill-col-focus{width:9%!important;}
-    .print-skills-table col.print-skill-col-source{width:44%!important;}
-    .print-skills-table td:nth-child(6),.print-skills-table th:nth-child(6){white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important;}
+    .print-skills-table col.print-skill-col-name{width:27%!important;}
+    .print-skills-table col.print-skill-col-total,.print-skills-table col.print-skill-col-focus{width:13%!important;}
+    .print-skills-table col.print-skill-col-source{width:47%!important;}
+    .print-skills-table td:nth-child(4),.print-skills-table th:nth-child(4){white-space:normal!important;overflow-wrap:anywhere!important;word-break:break-word!important;}
     .print-beginner-gear-stack[data-equal-gear-stack]{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto auto!important;gap:2.2mm!important;width:100%!important;min-width:0!important;box-sizing:border-box!important;}
     .print-beginner-gear-row[data-equal-gear-row]{min-width:0!important;box-sizing:border-box!important;}
     .print-beginner-gear-row[data-equal-gear-row] .print-section{height:100%!important;margin-bottom:0!important;}
@@ -1856,6 +2510,77 @@ function compactPrintFrameHtml(markup, title, token) {
 .identity-grid label:has([data-field="campaignNotes"]) { display:none !important; }
 .card-talent [data-talent-doctrine],
 .card-talent [data-talent-faction] { display:none !important; }
+
+/* v38 compact frame override: keep A4 landscape geometry while enforcing Arial 12pt minimum and flexible boxes. */
+#_unused_v38_marker { display:none; }
+body.print-window #printPortfolio,
+body.print-window #printPortfolio *{font-family:Arial,Helvetica,sans-serif!important;font-size:12pt!important;line-height:1.18!important;}
+body.print-window .print-page{height:auto!important;min-height:196mm!important;max-height:none!important;overflow:visible!important;}
+body.print-window .print-header h1{font-size:16pt!important;}
+body.print-window .print-section-title,body.print-window .print-locked-full-gear-title{font-size:12.5pt!important;line-height:1.1!important;}
+body.print-window .print-skill-chip-total-only strong,body.print-window .print-skill-chip-total strong{font-size:18pt!important;line-height:.95!important;}
+body.print-window .print-table th,body.print-window .print-table td,body.print-window .print-locked-gear-row>div,body.print-window .print-locked-gear-header>div{font-size:12pt!important;line-height:1.15!important;padding:.55mm .75mm!important;}
+
+/* v39 frame print override: later than all old hard geometry, so it wins. */
+body.print-window #printPortfolio,body.print-window #printPortfolio *{font-family:Arial,Helvetica,sans-serif!important;font-size:12pt!important;line-height:1.22!important;}
+body.print-window #printPortfolio{width:285mm!important;min-width:0!important;max-width:285mm!important;}
+body.print-window .print-page,body.print-window .print-section,body.print-window .print-field,body.print-window .print-track,body.print-window .print-option-meta-cell,body.print-window .print-copy-box,body.print-window .print-option-card,body.print-window .print-option-body,body.print-window .print-locked-full-gear-stack[data-locked-full-gear-stack],body.print-window .print-locked-full-gear-block[data-locked-full-gear-block],body.print-window .print-full-gear-stack[data-equal-full-gear-stack],body.print-window .print-full-gear-row[data-equal-full-gear-row],body.print-window .print-beginner-gear-stack[data-equal-gear-stack],body.print-window .print-beginner-gear-row[data-equal-gear-row]{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+body.print-window .print-locked-full-gear-stack[data-locked-full-gear-stack],body.print-window .print-full-gear-stack[data-equal-full-gear-stack],body.print-window .print-beginner-gear-stack[data-equal-gear-stack]{grid-template-rows:auto auto!important;gap:1.4mm!important;}
+body.print-window .print-section-title,body.print-window .print-locked-full-gear-title{font-size:12.5pt!important;line-height:1.1!important;padding:1mm 1.35mm!important;}
+body.print-window .print-header h1{font-size:18pt!important;}
+body.print-window .print-header,body.print-window .print-section-body{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+body.print-window .print-table th,body.print-window .print-table td,body.print-window .print-locked-gear-row>div,body.print-window .print-locked-gear-header>div,body.print-window .print-skill-source{font-size:12pt!important;line-height:1.16!important;padding:.42mm .52mm!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+body.print-window .print-locked-gear-table{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+body.print-window .print-locked-gear-rules{max-height:none!important;overflow:visible!important;}
+@media print{body.print-window .print-locked-full-gear-stack[data-locked-full-gear-stack],body.print-window .print-locked-full-gear-block[data-locked-full-gear-block]{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}}
+
+
+/* v40 compact PDF/print override: remove remaining fixed-height/dead-space rules while keeping 12pt readable text. */
+#_unused_v40_marker{display:none;}
+@media print{
+  #printPortfolio,#printPortfolio *{font-family:Arial,Helvetica,sans-serif!important;font-size:12pt!important;line-height:1.12!important;}
+  #printPortfolio{width:283mm!important;max-width:283mm!important;}
+  #printPortfolio .print-page{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;break-after:page!important;page-break-after:always!important;padding:0!important;}
+  #printPortfolio .print-page:last-child{break-after:auto!important;page-break-after:auto!important;}
+  #printPortfolio .print-header{min-height:0!important;margin:0 0 1.4mm!important;padding:1.8mm 2.4mm!important;}
+  #printPortfolio .print-header h1{font-size:16pt!important;line-height:1.0!important;}
+  #printPortfolio .print-subtitle,#printPortfolio .print-page-number{font-size:12pt!important;line-height:1.05!important;}
+  #printPortfolio .print-section{margin:0 0 1.2mm!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;break-inside:auto!important;page-break-inside:auto!important;}
+  #printPortfolio .print-section-title,#printPortfolio .print-locked-full-gear-title{font-size:12pt!important;line-height:1.05!important;padding:.75mm 1mm!important;}
+  #printPortfolio .print-section-body{padding:.75mm 1mm!important;height:auto!important;min-height:0!important;}
+  #printPortfolio .print-fields{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:.65mm!important;}
+  #printPortfolio .print-field,#printPortfolio .print-track,#printPortfolio .print-option-meta-cell,#printPortfolio .print-copy-box,#printPortfolio .print-note{height:auto!important;min-height:0!important;max-height:none!important;padding:.45mm .6mm!important;}
+  #printPortfolio .print-field-label,#printPortfolio .print-track span,#printPortfolio .print-note b{font-size:12pt!important;line-height:1.05!important;margin:0 0 .2mm!important;}
+  #printPortfolio .print-field-value,#printPortfolio .print-track strong,#printPortfolio .print-note span{font-size:12pt!important;line-height:1.1!important;min-height:0!important;}
+  #printPortfolio .print-core-grid{grid-template-columns:1fr!important;gap:.9mm!important;}
+  #printPortfolio .print-main-skills{grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:.6mm!important;}
+  #printPortfolio .print-skill-chip,#printPortfolio .print-skill-chip-total-only,#printPortfolio .print-skill-chip-total{height:auto!important;min-height:0!important;max-height:none!important;}
+  #printPortfolio .print-skill-chip-name{font-size:11pt!important;line-height:1.0!important;padding:.45mm .25mm!important;}
+  #printPortfolio .print-skill-chip-total-only strong,#printPortfolio .print-skill-chip-total strong{font-size:16pt!important;line-height:.9!important;margin:0!important;}
+  #printPortfolio .print-tracks{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:.65mm!important;}
+  #printPortfolio .print-table{font-size:12pt!important;line-height:1.08!important;width:100%!important;table-layout:fixed!important;}
+  #printPortfolio .print-table th,#printPortfolio .print-table td,#printPortfolio .print-locked-gear-row>div,#printPortfolio .print-locked-gear-header>div{font-size:12pt!important;line-height:1.08!important;padding:.3mm .45mm!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-skills-grid[data-equal-skills-grid]{gap:.9mm!important;align-items:flex-start!important;}
+  #printPortfolio .print-skill-reminder{font-size:12pt!important;line-height:1.1!important;margin:.5mm 0 0!important;padding-top:.3mm!important;}
+  #printPortfolio .print-options-grid,#printPortfolio .print-gear-grid,#printPortfolio .print-supplement-grid{gap:1mm!important;}
+  #printPortfolio .print-option-card,#printPortfolio .print-option-body,#printPortfolio .print-copy-box{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-copy-text{font-size:12pt!important;line-height:1.12!important;}
+  #printPortfolio .print-locked-full-gear-stack[data-locked-full-gear-stack],#printPortfolio .print-full-gear-stack[data-equal-full-gear-stack],#printPortfolio .print-beginner-gear-stack[data-equal-gear-stack]{display:block!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-locked-full-gear-block[data-locked-full-gear-block],#printPortfolio .print-full-gear-row[data-equal-full-gear-row],#printPortfolio .print-beginner-gear-row[data-equal-gear-row]{display:block!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;margin:0 0 1mm!important;}
+  #printPortfolio .print-locked-gear-table{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;padding:.5mm .7mm!important;}
+  #printPortfolio .print-locked-gear-rules{display:block!important;max-height:none!important;overflow:visible!important;}
+  #printPortfolio .print-rule-reminder{font-size:12pt!important;line-height:1.1!important;margin-top:.7mm!important;padding:.6mm .8mm!important;}
+}
+body.print-window #printPortfolio,body.print-window #printPortfolio *{font-family:Arial,Helvetica,sans-serif!important;font-size:12pt!important;line-height:1.12!important;}
+body.print-window .print-page,body.print-window .print-section,body.print-window .print-field,body.print-window .print-track,body.print-window .print-locked-full-gear-stack[data-locked-full-gear-stack],body.print-window .print-locked-full-gear-block[data-locked-full-gear-block]{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+body.print-window .print-section{margin-bottom:1.2mm!important;}
+body.print-window .print-section-body{padding:.75mm 1mm!important;}
+body.print-window .print-field,body.print-window .print-track{padding:.45mm .6mm!important;}
+body.print-window .print-table th,body.print-window .print-table td,body.print-window .print-locked-gear-row>div,body.print-window .print-locked-gear-header>div{font-size:12pt!important;line-height:1.08!important;padding:.3mm .45mm!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+body.print-window .print-locked-full-gear-stack[data-locked-full-gear-stack]{display:block!important;}
+body.print-window .print-locked-full-gear-block[data-locked-full-gear-block]{display:block!important;margin-bottom:1mm!important;}
+
+
 </style>
 </head>
 <body class="print-window print-portfolio-mode" data-print-orientation="landscape">
@@ -1876,7 +2601,7 @@ function compactPrintFrameHtml(markup, title, token) {
             table.style.setProperty('width',panelWidth+'px','important');
             table.style.setProperty('table-layout','fixed','important');
             var cols=table.querySelectorAll('col');
-            [20,9,9,9,9,44].forEach(function(width,index){if(cols[index])cols[index].style.setProperty('width',width+'%','important');});
+            [27,13,13,47].forEach(function(width,index){if(cols[index])cols[index].style.setProperty('width',width+'%','important');});
           }
         });
       });
@@ -1893,8 +2618,9 @@ function compactPrintFrameHtml(markup, title, token) {
           });
         });
       }
-      lockEqualGearRows('[data-equal-gear-stack]','[data-equal-gear-row]');
-      lockEqualGearRows('[data-equal-full-gear-stack]','[data-equal-full-gear-row]');
+      // v39: do not equalise gear row heights; boxes now grow only as needed.
+      // lockEqualGearRows('[data-equal-gear-stack]','[data-equal-gear-row]');
+      // lockEqualGearRows('[data-equal-full-gear-stack]','[data-equal-full-gear-row]');
     }
     window.addEventListener('load',function(){
       requestAnimationFrame(function(){requestAnimationFrame(function(){
@@ -1997,9 +2723,10 @@ function pdfPage() {
     if(fill){ const [r,g,b]=fill; color(r,g,b,false); commands.push(`${x} ${y} ${w} ${h} re f`); }
     if(stroke){ const [r,g,b]=hexToRgb(stroke); color(r,g,b,true); commands.push(`${line} w ${x} ${y} ${w} ${h} re S`); }
   };
-  const text = (x,top,value,size=9,bold=false,colour='#172033') => {
-    const [r,g,b]=hexToRgb(colour); color(r,g,b,false); const y=H-top-size;
-    commands.push(`BT /${bold?'F2':'F1'} ${size} Tf 1 0 0 1 ${x} ${y} Tm (${pdfAscii(value)}) Tj ET`);
+  const text = (x,top,value,size=12,bold=false,colour='#172033') => {
+    const safeSize = Math.max(12, Number(size) || 12);
+    const [r,g,b]=hexToRgb(colour); color(r,g,b,false); const y=H-top-safeSize;
+    commands.push(`BT /${bold?'F2':'F1'} ${safeSize} Tf 1 0 0 1 ${x} ${y} Tm (${pdfAscii(value)}) Tj ET`);
   };
   const line = (x1,top1,x2,top2,colour='#9aa7b1',width=.5) => { const [r,g,b]=hexToRgb(colour); color(r,g,b,true); commands.push(`${width} w ${x1} ${H-top1} m ${x2} ${H-top2} l S`); };
   return {commands,rect,text,line,H};
@@ -2028,33 +2755,33 @@ function pdfWords(value, maxChars, maxLines=99) {
 function pdfHeader(page, total, subtitle='') {
   const p=pdfPage();
   p.rect(18,16,805,46,[0.09,0.21,0.37],null);
-  p.text(32,29,'INFINITY 2D20 CHARACTER PORTFOLIO',15,true,'#ffffff');
-  if(subtitle) p.text(32,47,subtitle,7,false,'#eaf3f8');
-  p.text(748,34,`PAGE ${page} OF ${total}`,8,true,'#ffffff');
+  p.text(32,25,'INFINITY 2D20 CHARACTER PORTFOLIO',18,true,'#ffffff');
+  if(subtitle) p.text(32,47,subtitle,12,false,'#eaf3f8');
+  p.text(722,33,`PAGE ${page} OF ${total}`,12,true,'#ffffff');
   return p;
 }
 
 function pdfSection(p,title,x,top,w,h) {
   p.rect(x,top,w,h,[1,1,1],'#9aa7b1');
-  p.rect(x,top,w,18,[0.12,0.31,0.48],null);
-  p.text(x+8,top+5,title.toUpperCase(),8,true,'#ffffff');
-  return {x,top:top+18,w,h:h-18};
+  p.rect(x,top,w,20,[0.12,0.31,0.48],null);
+  p.text(x+8,top+3,title.toUpperCase(),12,true,'#ffffff');
+  return {x,top:top+20,w,h:h-20};
 }
 
 function pdfBox(p,label,value,x,top,w,h) {
   p.rect(x,top,w,h,[1,1,1],'#c8d0d8');
-  p.text(x+5,top+4,label.toUpperCase(),5,true,'#536173');
-  const lines=pdfWords(value || '-', Math.max(8,Math.floor((w-10)/3.6)), Math.max(1,Math.floor((h-16)/8)));
-  lines.forEach((line,index)=>p.text(x+5,top+14+index*8,line,7,false,'#172033'));
+  p.text(x+5,top+3,label.toUpperCase(),12,true,'#536173');
+  const lines=pdfWords(value || '-', Math.max(6,Math.floor((w-10)/6.6)), Math.max(1,Math.floor((h-22)/12)));
+  lines.forEach((line,index)=>p.text(x+5,top+18+index*14,line,12,false,'#172033'));
 }
 
 function pdfSkillPanel(p,skills,x,top,w,h) {
-  const cols=[.20,.09,.09,.09,.09,.44];
+  const cols=[.27,.13,.13,.47];
   const xs=[x]; for(let i=0;i<cols.length;i++)xs.push(xs[i]+w*cols[i]);
-  const headerH=16; const rowH=(h-headerH)/skills.length;
+  const headerH=20; const rowH=(h-headerH)/skills.length;
   p.rect(x,top,w,h,[1,1,1],'#9aa7b1');
   p.rect(x,top,w,headerH,[0.12,0.31,0.48],null);
-  ['Skill','Base','Rating +','Total','Focus','Source'].forEach((label,i)=>p.text(xs[i]+3,top+4,label,4.7,true,'#ffffff'));
+  ['Skill','Total','Focus','Source'].forEach((label,i)=>p.text(xs[i]+3,top+3,label,12,true,'#ffffff'));
   skills.forEach((skill,row)=>{
     const parts=skillRatingParts(skill);
     const focus=document.querySelector(`select[data-focus="${CSS.escape(skill)}"]`)?.value || '';
@@ -2062,25 +2789,25 @@ function pdfSkillPanel(p,skills,x,top,w,h) {
     const source=[...parts.sources,note].filter(Boolean).join('; ') || '';
     const y=top+headerH+row*rowH;
     p.line(x,y+rowH,x+w,y+rowH,'#c8d0d8',.25);
-    [skill,parts.base,printSigned(parts.bonus),parts.total,focus,source].forEach((value,i)=>{
-      const char=Math.max(4,Math.floor((xs[i+1]-xs[i]-6)/2.6));
-      const lines=pdfWords(value, char, i===5?2:1);
-      lines.forEach((line,n)=>p.text(xs[i]+3,y+3+n*5.1,line,i===5?4.5:5.2,i===3,'#172033'));
+    [skill,parts.total,focus,source].forEach((value,i)=>{
+      const char=Math.max(4,Math.floor((xs[i+1]-xs[i]-6)/6.4));
+      const lines=pdfWords(value, char, 1);
+      lines.forEach((line,n)=>p.text(xs[i]+3,y+3+n*13,line,12,i===1,'#172033'));
     });
   });
 }
 
 function pdfCorePage(page,total) {
   const p=pdfHeader(page,total,'Identity, main skills, resources and complete skill list');
-  const identity=pdfSection(p,'Character Identity',18,70,805,72);
-  const fields=[['Character Name',printValue('characterName')||'Unnamed Character'],['Faction',printValue('faction')],['Homeworld / Habitat',printValue('homeworld')],['XP / Advancement',printValue('xp')],['Career',printValue('career')]];
-  const boxW=(identity.w-18)/4; fields.forEach((field,i)=>pdfBox(p,field[0],field[1],identity.x+5+(i%4)*(boxW+4.5),identity.top+5+Math.floor(i/4)*24,boxW,20));
-  const main=pdfSection(p,'Main Skills and Resources',18,150,805,70);
+  const identity=pdfSection(p,'Character Identity',18,70,805,76);
+  const fields=[['Character Name',printValue('characterName')||'Unnamed Character'],['Faction',printValue('faction')],['Homeworld / Habitat',printValue('homeworld')],['Career',printValue('career')]];
+  const boxW=(identity.w-18)/4; fields.forEach((field,i)=>pdfBox(p,field[0],field[1],identity.x+5+(i%4)*(boxW+4.5),identity.top+6+Math.floor(i/4)*36,boxW,32));
+  const main=pdfSection(p,'Main Skills and Resources',18,154,805,108);
   const chipW=(main.w-16)/7;
-  mainSkills.forEach((skill,i)=>{ const parts=skillRatingParts(skill); const x=main.x+5+i*(chipW+1.6); pdfBox(p,skill,`B ${parts.base}  +${parts.bonus||0}  = ${parts.total}`,x,main.top+5,chipW,26); });
-  const tracks=[['HP / Vigor',printValue('hp')],['Firewall',printValue('firewall')],['Armour',printValue('armour')],['Mental Stress',printValue('mentalStress')],['Momentum',printValue('momentum')],['Heat',printValue('heat')]];
-  const trackW=(main.w-16)/6; tracks.forEach((track,i)=>pdfBox(p,track[0],track[1],main.x+5+i*(trackW+1.6),main.top+36,trackW,22));
-  const skillSec=pdfSection(p,'Skills',18,228,805,346);
+  mainSkills.forEach((skill,i)=>{ const parts=skillRatingParts(skill); const x=main.x+5+i*(chipW+1.6); pdfBox(p,skill,String(parts.total),x,main.top+6,chipW,38); });
+  const tracks=[['HP / Vigor',printValue('hp')],['Firewall',printValue('firewall')],['Armour',printValue('armour')],['Mental Stress',printValue('mentalStress')],['Momentum',printValue('momentum')],['Wounds',printValue('wounds')]];
+  const trackW=(main.w-16)/6; tracks.forEach((track,i)=>pdfBox(p,track[0],track[1],main.x+5+i*(trackW+1.6),main.top+52,trackW,36));
+  const skillSec=pdfSection(p,'Skills',18,268,805,308);
   const gap=10; const panelW=(skillSec.w-10-gap)/2; const panelH=skillSec.h-10;
   pdfSkillPanel(p,skillOrder.slice(0,16),skillSec.x+5,skillSec.top+5,panelW,panelH);
   pdfSkillPanel(p,skillOrder.slice(16),skillSec.x+5+panelW+gap,skillSec.top+5,panelW,panelH);
@@ -2089,29 +2816,29 @@ function pdfCorePage(page,total) {
 
 function pdfOptionCard(p,title,item,x,top,w,h,kind) {
   p.rect(x,top,w,h,[0.97,0.985,0.995],'#9aa7b1');
-  p.rect(x,top,w,20,kind==='trait'?[0.14,0.35,0.52]:[0.12,0.31,0.48],null);
-  p.text(x+8,top+5,item?.name||title,8,true,'#ffffff');
+  p.rect(x,top,w,24,kind==='trait'?[0.14,0.35,0.52]:[0.12,0.31,0.48],null);
+  p.text(x+8,top+5,item?.name||title,12,true,'#ffffff');
   const primary=item?.primary||'-', secondary=item?.secondary||'-';
-  p.text(x+8,top+28,`Primary: ${primary}     Secondary: ${secondary}`,6.3,true,'#172033');
+  p.text(x+8,top+34,`Primary: ${primary}     Secondary: ${secondary}`,12,true,'#172033');
   const body=item?.description||item?.brief||''; const effect=item?.effect||'';
-  const bodyLines=pdfWords(body,Math.max(25,Math.floor((w-16)/3.3)),3); bodyLines.forEach((line,i)=>p.text(x+8,top+40+i*7,line,5.6,false,'#172033'));
-  const effectLines=pdfWords(effect,Math.max(25,Math.floor((w-16)/3.3)),3); effectLines.forEach((line,i)=>p.text(x+8,top+64+i*7,line,5.6,false,'#172033'));
+  const bodyLines=pdfWords(body,Math.max(18,Math.floor((w-16)/6.2)),3); bodyLines.forEach((line,i)=>p.text(x+8,top+52+i*14,line,12,false,'#172033'));
+  const effectLines=pdfWords(effect,Math.max(18,Math.floor((w-16)/6.2)),3); effectLines.forEach((line,i)=>p.text(x+8,top+98+i*14,line,12,false,'#172033'));
 }
 
 function pdfGearBlock(p,title,items,x,top,w,h,kind) {
   p.rect(x,top,w,h,[1,1,1],'#9aa7b1');
-  p.rect(x,top,w,20,[0.12,0.31,0.48],null);
-  p.text(x+8,top+5,title.toUpperCase(),8,true,'#ffffff');
+  p.rect(x,top,w,24,[0.12,0.31,0.48],null);
+  p.text(x+8,top+5,title.toUpperCase(),12,true,'#ffffff');
   const cols=[.03,.16,.09,.07,.65]; const xs=[x+5]; const innerW=w-10; for(let i=0;i<cols.length;i++)xs.push(xs[i]+innerW*cols[i]);
-  const tableTop=top+26; const headerH=14; const rows=Math.max(items.length, kind==='weapon'?2:5); const rowH=(h-32-headerH)/rows;
+  const tableTop=top+30; const headerH=20; const rows=Math.max(items.length,1); const rowH=Math.max(22,(h-36-headerH)/rows);
   p.rect(x+5,tableTop,innerW,headerH,[0.12,0.31,0.48],null);
-  ['#','Item',kind==='weapon'?'Skill':'Type','Wt','Rules / Notes'].forEach((label,i)=>p.text(xs[i]+2,tableTop+4,label,4.7,true,'#ffffff'));
+  ['#','Item',kind==='weapon'?'Skill':'Type','Wt','Rules / Notes'].forEach((label,i)=>p.text(xs[i]+2,tableTop+3,label,12,true,'#ffffff'));
   for(let row=0;row<rows;row++){
     const item=items[row]; const y=tableTop+headerH+row*rowH; p.line(x+5,y+rowH,x+5+innerW,y+rowH,'#c8d0d8',.25);
     if(!item)continue;
     const entry=item.entry||{}; const type=kind==='weapon'?inferWeaponSkill(entry.name||''):entry.type||''; const rules=entry.mechanic||entry.brief||'';
     const vals=[String(item.index||row+1),entry.name||'',type,entry.weight||'',rules];
-    vals.forEach((value,i)=>{const max=i===4?Math.max(18,Math.floor((xs[i+1]-xs[i]-4)/2.6)):Math.max(4,Math.floor((xs[i+1]-xs[i]-4)/3)); const lines=pdfWords(value,max,i===4?2:1); lines.forEach((line,n)=>p.text(xs[i]+2,y+3+n*5.1,line,i===4?4.5:5.1,false,'#172033'));});
+    vals.forEach((value,i)=>{const max=i===4?Math.max(14,Math.floor((xs[i+1]-xs[i]-4)/6.2)):Math.max(3,Math.floor((xs[i+1]-xs[i]-4)/6.6)); const lines=pdfWords(value,max,i===4?2:1); lines.forEach((line,n)=>p.text(xs[i]+2,y+3+n*13,line,12,false,'#172033'));});
   }
 }
 
@@ -2211,8 +2938,839 @@ function restoreCompactPrintMode() {
 window.addEventListener("beforeprint", activateCompactPrintMode);
 window.addEventListener("afterprint", restoreCompactPrintMode);
 
+
+
+/* -------------------------------------------------------------------------
+   v39 mobile direct-PDF flow layout
+   The mobile export path does not use browser print CSS. These replacements
+   draw larger 12pt text into more, less-cramped pages and let row/card height
+   grow from content instead of fixed legacy boxes.
+   ------------------------------------------------------------------------- */
+const MOBILE_PDF_FONT = 12;
+const MOBILE_PDF_LINE = 15;
+const MOBILE_PDF_LEFT = 18;
+const MOBILE_PDF_TOP = 70;
+const MOBILE_PDF_WIDTH = 805;
+const MOBILE_PDF_BOTTOM = 574;
+
+function pdfLineCapacity(width, avg = 6.2) {
+  return Math.max(8, Math.floor((Number(width) || 0) / avg));
+}
+
+function pdfDynamicBox(p, label, value, x, top, w, minH = 28, maxLines = 3) {
+  const textWidth = Math.max(12, w - 10);
+  const lines = pdfWords(value || '-', pdfLineCapacity(textWidth, 6.2), maxLines);
+  const h = Math.max(minH, 20 + lines.length * 13);
+  p.rect(x, top, w, h, [1,1,1], '#c8d0d8');
+  p.text(x + 5, top + 3, String(label || '').toUpperCase(), MOBILE_PDF_FONT, true, '#536173');
+  lines.forEach((line, index) => p.text(x + 5, top + 17 + index * 13, line, MOBILE_PDF_FONT, false, '#172033'));
+  return h;
+}
+
+function pdfSectionFrame(p, title, x, top, w, h) {
+  p.rect(x, top, w, h, [1,1,1], '#9aa7b1');
+  p.rect(x, top, w, 23, [0.12,0.31,0.48], null);
+  p.text(x + 8, top + 5, String(title || '').toUpperCase(), MOBILE_PDF_FONT, true, '#ffffff');
+  return { x: x + 6, top: top + 29, w: w - 12, h: h - 35 };
+}
+
+function pdfHeaderLarge(page, total, subtitle = '') {
+  const p = pdfPage();
+  p.rect(18, 16, 805, 48, [0.09,0.21,0.37], null);
+  p.text(32, 25, 'INFINITY 2D20 CHARACTER PORTFOLIO', 18, true, '#ffffff');
+  if (subtitle) p.text(32, 48, subtitle, MOBILE_PDF_FONT, false, '#eaf3f8');
+  p.text(710, 34, `PAGE ${page} OF ${total}`, MOBILE_PDF_FONT, true, '#ffffff');
+  return p;
+}
+
+
+function pdfMeasureBoxValue(value, w, minH = 30, maxLines = 2) {
+  const textWidth = Math.max(12, w - 10);
+  const lines = pdfWords(value || '-', pdfLineCapacity(textWidth, 6.2), maxLines);
+  return { lines, h: Math.max(minH, 20 + lines.length * 13) };
+}
+
+function pdfDrawMeasuredBox(p, label, measure, x, top, w) {
+  const safe = measure || { lines: ['-'], h: 30 };
+  p.rect(x, top, w, safe.h, [1,1,1], '#c8d0d8');
+  p.text(x + 5, top + 3, String(label || '').toUpperCase(), MOBILE_PDF_FONT, true, '#536173');
+  (safe.lines || ['-']).forEach((line, index) => p.text(x + 5, top + 17 + index * 13, line, MOBILE_PDF_FONT, false, '#172033'));
+  return safe.h;
+}
+
+function pdfDrawSectionFrame(p, title, x, top, w, h) {
+  p.rect(x, top, w, h, [1,1,1], '#9aa7b1');
+  p.rect(x, top, w, 23, [0.12,0.31,0.48], null);
+  p.text(x + 8, top + 5, String(title || '').toUpperCase(), MOBILE_PDF_FONT, true, '#ffffff');
+  return { x: x + 6, top: top + 29, w: w - 12, h: h - 35 };
+}
+
+function pdfCorePage(page, total) {
+  const p = pdfHeaderLarge(page, total, 'Identity, main skills and resources');
+  const pageX = 18;
+  const pageW = 805;
+  const sectionGap = 8;
+  const boxGap = 5;
+  let sectionTop = 72;
+
+  // Character Identity: calculate the required height first, then draw the frame.
+  // This prevents the Main Skills header from overlapping Homeworld/Career on mobile PDFs.
+  const identityFields = [
+    ['Character Name', printValue('characterName') || 'Unnamed Character'],
+    ['Player', printValue('player')],
+    ['Faction', printValue('faction')],
+    ['Homeworld / Habitat', printValue('homeworld')],
+    ['Career', printValue('career')]
+  ];
+  const identityInnerW = pageW - 12;
+  const identityColW = (identityInnerW - boxGap) / 2;
+  const nameM = pdfMeasureBoxValue(identityFields[0][1], identityInnerW, 30, 2);
+  const playerM = pdfMeasureBoxValue(identityFields[1][1], identityColW, 30, 2);
+  const factionM = pdfMeasureBoxValue(identityFields[2][1], identityColW, 30, 2);
+  const homeworldM = pdfMeasureBoxValue(identityFields[3][1], identityColW, 30, 2);
+  const careerM = pdfMeasureBoxValue(identityFields[4][1], identityColW, 30, 2);
+  const identityRow1H = Math.max(playerM.h, factionM.h);
+  const identityRow2H = Math.max(homeworldM.h, careerM.h);
+  const identityBodyH = nameM.h + boxGap + identityRow1H + boxGap + identityRow2H;
+  const identitySectionH = 29 + identityBodyH + 6;
+  const identity = pdfDrawSectionFrame(p, 'Character Identity', pageX, sectionTop, pageW, identitySectionH);
+  let y = identity.top;
+  pdfDrawMeasuredBox(p, identityFields[0][0], nameM, identity.x, y, identity.w);
+  y += nameM.h + boxGap;
+  pdfDrawMeasuredBox(p, identityFields[1][0], playerM, identity.x, y, identityColW);
+  pdfDrawMeasuredBox(p, identityFields[2][0], factionM, identity.x + identityColW + boxGap, y, identityColW);
+  y += identityRow1H + boxGap;
+  pdfDrawMeasuredBox(p, identityFields[3][0], homeworldM, identity.x, y, identityColW);
+  pdfDrawMeasuredBox(p, identityFields[4][0], careerM, identity.x + identityColW + boxGap, y, identityColW);
+  sectionTop += identitySectionH + sectionGap;
+
+  // Main skills and resources: dynamic frame based on box rows, not fixed top values.
+  const mainInnerW = pageW - 12;
+  const skillGap = 4;
+  const skillBoxH = 34;
+  const chipW = (mainInnerW - skillGap * 6) / 7;
+  const tracks = [
+    ['HP / Vigor', printValue('hp')],
+    ['Firewall', printValue('firewall')],
+    ['Armour', printValue('armour')],
+    ['Mental Stress', printValue('mentalStress')],
+    ['Infinity Points', printValue('infinityPoints')],
+    ['Credits', printValue('credits')],
+    ['Momentum', printValue('momentum')],
+    ['Wounds', printValue('wounds')]
+  ];
+  const trackGap = 5;
+  const trackW = (mainInnerW - trackGap * 3) / 4;
+  const trackMeasures = tracks.map(track => pdfMeasureBoxValue(track[1] || '-', trackW, 30, 1));
+  const trackRow1H = Math.max(...trackMeasures.slice(0, 4).map(m => m.h));
+  const trackRow2H = Math.max(...trackMeasures.slice(4).map(m => m.h));
+  const mainBodyH = skillBoxH + 8 + trackRow1H + boxGap + trackRow2H;
+  const mainSectionH = 29 + mainBodyH + 6;
+  const main = pdfDrawSectionFrame(p, 'Main Skills and Resources', pageX, sectionTop, pageW, mainSectionH);
+  mainSkills.forEach((skill, index) => {
+    const x = main.x + index * (chipW + skillGap);
+    const measure = { lines: [String(skillRatingParts(skill).total)], h: skillBoxH };
+    pdfDrawMeasuredBox(p, skill, measure, x, main.top, chipW);
+  });
+  const trackY1 = main.top + skillBoxH + 8;
+  const trackY2 = trackY1 + trackRow1H + boxGap;
+  tracks.forEach((track, index) => {
+    const row = Math.floor(index / 4);
+    const col = index % 4;
+    const top = row === 0 ? trackY1 : trackY2;
+    const measure = trackMeasures[index];
+    pdfDrawMeasuredBox(p, track[0], measure, main.x + col * (trackW + trackGap), top, trackW);
+  });
+  sectionTop += mainSectionH + sectionGap;
+
+  // A small optional note replaces the older oversized Export Notes box.
+  const noteText = 'Large-print PDF: Arial-equivalent 12pt text, clean skill totals, and non-overlapping adaptive boxes.';
+  const noteM = pdfMeasureBoxValue(noteText, pageW - 12, 26, 2);
+  const noteH = 29 + noteM.h + 6;
+  const notes = pdfDrawSectionFrame(p, 'Export Notes', pageX, sectionTop, pageW, noteH);
+  pdfDrawMeasuredBox(p, 'Notes', noteM, notes.x, notes.top, notes.w);
+
+  return p.commands.join('\n');
+}
+
+function pdfSkillsLargePage(page, total, title, skills) {
+  const p = pdfHeaderLarge(page, total, title);
+  const x = 18, top = 76, w = 805;
+  const headerH = 26;
+  const rowH = 26;
+  const h = headerH + skills.length * rowH + 10;
+  const cols = [0.27, 0.12, 0.12, 0.49];
+  const xs = [x + 6];
+  const innerW = w - 12;
+  cols.forEach(col => xs.push(xs[xs.length - 1] + innerW * col));
+
+  p.rect(x, top, w, h, [1,1,1], '#9aa7b1');
+  p.rect(x, top, w, headerH, [0.12,0.31,0.48], null);
+  ['Skill', 'Total', 'Focus', 'Source'].forEach((label, index) => p.text(xs[index] + 3, top + 6, label, MOBILE_PDF_FONT, true, '#ffffff'));
+
+  skills.forEach((skill, row) => {
+    const y = top + headerH + row * rowH;
+    const parts = skillRatingParts(skill);
+    const focus = mainSkills.includes(skill) ? '' : (document.querySelector(`select[data-focus="${CSS.escape(skill)}"]`)?.value || '');
+    const note = mainSkills.includes(skill) ? '' : (document.querySelector(`input[data-skill-note="${CSS.escape(skill)}"]`)?.value?.trim() || '');
+    const source = [...parts.sources, note].filter(Boolean).join('; ') || (mainSkills.includes(skill) ? 'Main skill' : '');
+    p.line(x, y + rowH, x + w, y + rowH, '#c8d0d8', .3);
+    const values = [skill, String(parts.total), focus, source];
+    values.forEach((value, index) => {
+      const colWidth = xs[index + 1] - xs[index] - 6;
+      const maxLines = index === 3 ? 2 : 1;
+      const lines = pdfWords(value, pdfLineCapacity(colWidth, 6.2), maxLines);
+      lines.forEach((line, n) => p.text(xs[index] + 3, y + 5 + n * 12, line, MOBILE_PDF_FONT, index === 1, '#172033'));
+    });
+  });
+  return p.commands.join('\n');
+}
+
+function pdfOptionCard(p, title, item, x, top, w, h, kind) {
+  const safeItem = item || {};
+  p.rect(x, top, w, h, [0.97,0.985,0.995], '#9aa7b1');
+  p.rect(x, top, w, 28, kind === 'trait' ? [0.14,0.35,0.52] : [0.12,0.31,0.48], null);
+  p.text(x + 8, top + 7, safeItem.name || title, 13, true, '#ffffff');
+  const meta = kind === 'trait'
+    ? `Primary: ${safeItem.primary || '-'}   Secondary: ${safeItem.secondary || '-'}   Rarity: ${safeItem.rarity || '-'}`
+    : `Level: ${safeItem.level || '-'}   Career: ${safeItem.career || '-'}   Skill Links: ${[safeItem.primary, safeItem.secondary].filter(Boolean).join(' / ') || '-'}`;
+  p.text(x + 8, top + 38, meta, MOBILE_PDF_FONT, true, '#172033');
+  const body = safeItem.description || safeItem.brief || '';
+  const effect = safeItem.effect || '';
+  const bodyLines = pdfWords(body, pdfLineCapacity(w - 18, 6.2), 5);
+  bodyLines.forEach((line, index) => p.text(x + 8, top + 58 + index * MOBILE_PDF_LINE, line, MOBILE_PDF_FONT, false, '#172033'));
+  const effectTop = top + 58 + Math.max(2, bodyLines.length) * MOBILE_PDF_LINE + 10;
+  p.text(x + 8, effectTop, 'Effect', MOBILE_PDF_FONT, true, '#536173');
+  const effectLines = pdfWords(effect, pdfLineCapacity(w - 18, 6.2), 7);
+  effectLines.forEach((line, index) => p.text(x + 8, effectTop + 17 + index * MOBILE_PDF_LINE, line, MOBILE_PDF_FONT, false, '#172033'));
+}
+
+function pdfOptionsPage(page, total, title, items, kind) {
+  const p = pdfHeaderLarge(page, total, title);
+  const shown = (items && items.length) ? items.slice(0, 3) : [{ name: `No ${kind === 'trait' ? 'Traits' : 'Talents'} selected` }];
+  const gap = 12;
+  const cardH = Math.floor((MOBILE_PDF_BOTTOM - MOBILE_PDF_TOP - (shown.length - 1) * gap) / shown.length);
+  shown.forEach((item, index) => pdfOptionCard(p, kind === 'trait' ? 'Trait' : 'Talent', item, 18, MOBILE_PDF_TOP + index * (cardH + gap), 805, cardH, kind));
+  return p.commands.join('\n');
+}
+
+function pdfGearBlockLarge(p, title, items, x, top, w, kind) {
+  const rowCount = Math.max(items.length, 1);
+  const headerH = 24;
+  const rowH = 28;
+  const h = headerH + 22 + rowCount * rowH + 10;
+  const cols = [0.05, 0.22, 0.13, 0.10, 0.50];
+  const innerX = x + 6;
+  const innerW = w - 12;
+  const xs = [innerX];
+  cols.forEach(col => xs.push(xs[xs.length - 1] + innerW * col));
+  p.rect(x, top, w, h, [1,1,1], '#9aa7b1');
+  p.rect(x, top, w, 24, [0.12,0.31,0.48], null);
+  p.text(x + 8, top + 5, title.toUpperCase(), MOBILE_PDF_FONT, true, '#ffffff');
+  const tableTop = top + 30;
+  p.rect(innerX, tableTop, innerW, headerH, [0.12,0.31,0.48], null);
+  ['#', 'Item', kind === 'weapon' ? 'Skill' : 'Type', 'Wt', 'Rules / Notes'].forEach((label, index) => p.text(xs[index] + 3, tableTop + 5, label, MOBILE_PDF_FONT, true, '#ffffff'));
+  for (let row = 0; row < rowCount; row += 1) {
+    const y = tableTop + headerH + row * rowH;
+    p.line(innerX, y + rowH, innerX + innerW, y + rowH, '#c8d0d8', .3);
+    const item = items[row];
+    if (!item) continue;
+    const entry = item.entry || {};
+    const type = kind === 'weapon' ? inferWeaponSkill(entry.name || '') : (entry.type || '');
+    const rules = entry.mechanic || entry.brief || '';
+    const values = [String(item.index || row + 1), entry.name || '', type, entry.weight || '', rules];
+    values.forEach((value, index) => {
+      const colWidth = xs[index + 1] - xs[index] - 6;
+      const maxLines = index === 4 ? 2 : 1;
+      const lines = pdfWords(value, pdfLineCapacity(colWidth, 6.2), maxLines);
+      lines.forEach((line, n) => p.text(xs[index] + 3, y + 5 + n * 12, line, MOBILE_PDF_FONT, false, '#172033'));
+    });
+  }
+  return h;
+}
+
+function pdfGearPage(page, total, content, beginner = false) {
+  const p = pdfHeaderLarge(page, total, 'Weapons and equipment');
+  let y = MOBILE_PDF_TOP;
+  if (content.weapons.length) y += pdfGearBlockLarge(p, `Weapons - ${content.weapons.length} Selected`, content.weapons, 18, y, 805, 'weapon') + 12;
+  if (content.equipment.length) pdfGearBlockLarge(p, `Equipment - ${content.equipment.length} Selected`, content.equipment, 18, y, 805, 'equipment');
+  if (!content.weapons.length && !content.equipment.length) {
+    const area = pdfSectionFrame(p, 'Weapons and Equipment', 18, y, 805, 120);
+    p.text(area.x, area.top, 'No weapons or equipment selected.', MOBILE_PDF_FONT, false, '#172033');
+  }
+  return p.commands.join('\n');
+}
+
+function buildMobilePortfolioPdfPages() {
+  const traits = selectedPrintTraits();
+  const talents = selectedPrintTalents();
+  const content = printSupplementContent();
+  const builders = [];
+  builders.push((page, total) => pdfCorePage(page, total));
+  builders.push((page, total) => pdfSkillsLargePage(page, total, 'Skills 1 of 2', skillOrder.slice(0, 15)));
+  builders.push((page, total) => pdfSkillsLargePage(page, total, 'Skills 2 of 2', skillOrder.slice(15)));
+  builders.push((page, total) => pdfOptionsPage(page, total, 'Selected Traits', traits, 'trait'));
+  builders.push((page, total) => pdfOptionsPage(page, total, 'Selected Talents', talents, 'talent'));
+  builders.push((page, total) => pdfGearPage(page, total, content, isBeginnerPrintCharacter()));
+  const total = builders.length;
+  return builders.map((build, index) => build(index + 1, total));
+}
+
+
+const GLOSSARY_CATEGORIES = [
+  "All",
+  "Rules Terms",
+  "Traits",
+  "Talents",
+  "Careers",
+  "Factions",
+  "Homeworlds / Habitats",
+  "Weapons",
+  "Equipment",
+  "Conditions"
+];
+let glossaryEntriesCache = null;
+let glossaryRenderPending = false;
+let glossaryInitialized = false;
+
+function glossaryEscape(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function glossarySort(list) {
+  return [...list].sort((a, b) => String(a.name || "").localeCompare(String(b.name || ""), undefined, { sensitivity: "base" }));
+}
+
+function glossaryMetaLine(parts) {
+  return parts.filter(Boolean).map(v => String(v).trim()).filter(Boolean);
+}
+
+function compactList(values, limit = 10) {
+  const cleaned = [...new Set((values || []).map(v => String(v || "").trim()).filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+  if (!cleaned.length) return "";
+  return cleaned.length > limit
+    ? `${cleaned.slice(0, limit).join(", ")}, and ${cleaned.length - limit} more`
+    : cleaned.join(", ");
+}
+
+function splitTerms(value) {
+  return String(value || "")
+    .split(/[,;/]|\band\b/gi)
+    .map(v => v.trim())
+    .filter(Boolean);
+}
+
+function normalizeGlossaryKey(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[’']/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function findFactionRecord(name) {
+  const key = normalizeGlossaryKey(name);
+  if (!key) return null;
+  return (DATA.factions || []).find(record => normalizeGlossaryKey(record.faction) === key)
+    || (DATA.factions || []).find(record => normalizeGlossaryKey(record.faction).includes(key) || key.includes(normalizeGlossaryKey(record.faction)))
+    || null;
+}
+
+function worldMatchesRecord(world, record) {
+  const worldKey = normalizeGlossaryKey(world);
+  const homeworldKey = normalizeGlossaryKey(record?.homeworld || "");
+  if (!worldKey || !homeworldKey) return false;
+  return homeworldKey.includes(worldKey) || worldKey.includes(homeworldKey);
+}
+
+function sourceGuidedFallback(kind, name, extra = "") {
+  const label = String(name || kind || "entry").trim();
+  const detail = String(extra || "").trim();
+  if (kind === "Career") return `${label} is a life-path and social role in the Human Sphere. It says where a character learned their craft, who might recognise their methods, and which institutions, crews, armies, labs, clans, or street networks shaped them.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Faction") return `${label} is a political, military, cultural, or corporate allegiance that places a character inside the rival powers and frontier tensions of the Human Sphere.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Homeworld / Habitat") return `${label} is a place of origin, residence, or formative deployment. It can represent a birth world, shipboard childhood, orbital station, contested colony, Maya-connected enclave, frontier outpost, or alien-controlled theatre.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Weapon") return `${label} is part of the violent material culture of the Human Sphere, shaped by the needs of soldiers, security teams, mercenaries, rebels, explorers, and covert operatives.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Equipment") return `${label} is practical mission gear that hints at how characters survive the Human Sphere: expeditions, black operations, urban infiltration, void travel, battlefield triage, or specialist tradecraft.${detail ? ` ${detail}` : ""}`;
+  if (kind === "Condition") return `${label} is a status effect used to describe the immediate fiction of a scene: shock, injury, fear, environmental pressure, hacking disruption, or battlefield loss of control.${detail ? ` ${detail}` : ""}`;
+  return `${label} is a reference entry used by this character sheet.${detail ? ` ${detail}` : ""}`;
+}
+
+function humanJoin(values, fallback = "") {
+  const cleaned = [...new Set((values || []).map(v => String(v || "").trim()).filter(Boolean))];
+  if (!cleaned.length) return fallback;
+  if (cleaned.length === 1) return cleaned[0];
+  if (cleaned.length === 2) return `${cleaned[0]} and ${cleaned[1]}`;
+  return `${cleaned.slice(0, -1).join(", ")}, and ${cleaned[cleaned.length - 1]}`;
+}
+
+function toneFromSkillName(skill) {
+  const key = normalizeGlossaryKey(skill);
+  if (!key) return "";
+  if (/ballistics/.test(key)) return "marksmanship, armoury culture, range discipline, and the nerve to take a shot when everyone is moving";
+  if (/close combat/.test(key)) return "duelling practice, breaching drills, body positioning, and the brutal intimacy of fights that happen too close";
+  if (/stealth/.test(key)) return "quiet routes, patience, controlled breathing, and the habits of people who survive by not being noticed";
+  if (/observation/.test(key)) return "watchfulness, battlefield reading, small details, and the habit of noticing what others dismiss";
+  if (/analysis/.test(key)) return "pattern reading, evidence, tactical sense, and the ability to turn confusion into a usable answer";
+  if (/extraplanetary|spacecraft|pilot/.test(key)) return "void routines, shipboard instinct, emergency checklists, and the strange confidence of people who treat vacuum as a workplace";
+  if (/survival/.test(key)) return "frontier memory, weather sense, improvised shelter, ration discipline, and lessons learned far from reliable help";
+  if (/thievery/.test(key)) return "locks, contraband routes, misdirection, urban back doors, and the moral flexibility of people who know where systems fail";
+  if (/athletics/.test(key)) return "movement, climbs, hard landings, pursuit, endurance, and confidence in what the body can do under pressure";
+  if (/resistance/.test(key)) return "pain tolerance, disease, fatigue, harsh climates, and the stubborn refusal to fold when the mission becomes ugly";
+  if (/hacking/.test(key)) return "quantronic intrusion, hidden credentials, Geist support, countermeasures, and the silent wars inside every connected device";
+  if (/education|science/.test(key)) return "formal learning, research habits, lab discipline, archives, and the authority that comes from knowing why something works";
+  if (/medicine/.test(key)) return "triage, silk medicine, surgery, body politics, and the responsibility of keeping people alive after violence";
+  if (/psychology/.test(key)) return "fear, trauma, motive, negotiation, interrogation, and the uncomfortable work of reading minds without opening skulls";
+  if (/tech/.test(key)) return "field repairs, drones, tools, machines, jury-rigged systems, and the trust placed in people who keep gear alive";
+  if (/animal handling/.test(key)) return "trained creatures, mutual trust, body language, patience, and instincts shared across species";
+  if (/command/.test(key)) return "orders, morale, hierarchy, responsibility, and the burden of asking others to act under fire";
+  if (/lifestyle/.test(key)) return "status, money, etiquette, favours, fashion, access, and the social codes that open doors without explosives";
+  if (/persuade/.test(key)) return "promises, threats, rhetoric, charm, bargaining, and knowing what another person needs to hear";
+  if (/discipline/.test(key)) return "fear control, oath, anger, focus, faith, drill, and the quiet moment before a character refuses to break";
+  return "specialist experience shaped by practice, culture, and hard lessons";
+}
+
+function categoryLoreHook(category) {
+  const key = normalizeGlossaryKey(category);
+  if (/combat|weapon|attack|marksman|fireteam/.test(key)) return "It belongs to the culture of soldiers, duellists, security teams, rebels, and mercenary outfits who measure trust in seconds and survival in scars.";
+  if (/infowar|hack|geist|maya|network/.test(key)) return "It comes from the invisible side of the Human Sphere, where a reputation can be rewritten, a door can be opened from orbit, and a silent breach can win a battle before anyone fires.";
+  if (/medical|bio|science|cube|lhost/.test(key)) return "It is rooted in clinics, laboratories, resurrection economies, gene-tech, battlefield medicine, and the unease of treating bodies as both people and systems.";
+  if (/social|command|diplomacy|criminal|submondo/.test(key)) return "It lives in the space between status and leverage: favours owed, names remembered, enemies humiliated, and rooms entered because someone knows who the character is.";
+  if (/explor|survival|frontier|void|ship|pilot|terrain/.test(key)) return "It belongs to people shaped by frontier habitats, dangerous routes, stations, ship corridors, contested colonies, and places where help arrives late.";
+  if (/engineering|tech|drone|tag|mechanic/.test(key)) return "It reflects the practical respect given to armourers, techs, drone handlers, and troubleshooters who can make complex tools work under bad conditions.";
+  if (/aleph|posthuman|proxy|ai/.test(key)) return "It carries the flavour of ALEPH, posthuman identity, optimized responses, and the unsettling question of where instinct ends and prediction begins.";
+  if (/combined|shasvastii|morat|tohaa|voodoo|alien/.test(key)) return "It points toward alien pressure, VoodooTech, infiltration, conquest, and ways of thinking that do not fit ordinary Human Sphere assumptions.";
+  return "It can be grounded through faction culture, homeworld, mentors, academy training, street experience, religious duty, military service, or a formative mission.";
+}
+
+function nameLoreHook(name, category = "") {
+  const key = normalizeGlossaryKey(`${name} ${category}`);
+  if (/dumb luck|lucky|risk taker/.test(key)) return "This entry suits a character known for impossible timing: the right smile, the wrong turn that becomes a shortcut, or a mistake that somehow becomes an advantage.";
+  if (/veteran|battle hardened|dogged|hard to kill|resilient|courageous/.test(key)) return "This entry fits someone whose calm was paid for: a siege, a botched evacuation, a failed command, or years of taking orders in places where hesitation killed people.";
+  if (/ambusher|mimetism|stealth|infiltrat|night vision|scout|tracker/.test(key)) return "This entry feels at home in alleys, jungles, station maintenance decks, blackout corridors, and ambush sites where patience matters more than bravado.";
+  if (/sniper|sharpshooter|marksman|eagle eye|quick draw|gunslinger|heavy gunner|suppressive/.test(key)) return "This entry is about weapon familiarity as identity: range habits, maintenance rituals, breath control, and the social distance created by carrying obvious lethality.";
+  if (/hacker|counter intel|anti virus|quantronic|infowar/.test(key)) return "This entry belongs to the data war, where the character's real battlefield may be a repeater net, a compromised comlog, or a trail of false credentials.";
+  if (/doctor|medic|paramedic|surgeon|biotech|regeneration|immunity/.test(key)) return "This entry is tied to flesh, recovery, Silk, battlefield care, genetic accident, or medical debt—the Human Sphere's promise that bodies can be repaired, altered, or exploited.";
+  if (/religious|faith|martyr|oath|discipline/.test(key)) return "This entry can be framed through vows, doctrine, honour, spiritual certainty, or the pressure of being watched by an order, sect, unit, or family.";
+  if (/command|strategist|tactical|leadership|superior doctrine/.test(key)) return "This entry marks a character who has learned to read groups, shape momentum, and carry the consequences when other people follow their judgement.";
+  if (/criminal|smuggler|thief|street|submondo|black market|urban/.test(key)) return "This entry belongs to favours, debts, hidden doors, contraband routes, and the kind of reputation that travels faster than official records.";
+  if (/pilot|spacecraft|void|starship|navigator|extraplanetary/.test(key)) return "This entry is coloured by shipboard routines, recycled air, docking clamps, vacuum drills, and the intimate trust formed between crews and machines.";
+  if (/animal|beast|antipode|wild/.test(key)) return "This entry suggests a character who reads instinct and movement as naturally as speech, whether dealing with trained animals, frontier creatures, or half-understood alien behaviour.";
+  if (/aleph|posthuman|proxy|lhost|mnemonica/.test(key)) return "This entry can feel uncanny: memory, body, identity, and decision-making are all touched by technologies or intelligences that blur ordinary human limits.";
+  if (/morat|shasvastii|combined|ei|voodoo/.test(key)) return "This entry carries alien weight, whether as enemy doctrine, captured technique, infiltration trauma, or a sign that the Human Sphere is not the only measure of intelligence.";
+  return "";
+}
+
+function skillLoreSentence(primary, secondary) {
+  const skills = [primary, secondary].filter(Boolean);
+  if (!skills.length) return "Its story expression should be tied to the character's background, faction, mentor, and the moment when this talent or trait first mattered.";
+  const tones = compactList(skills.map(toneFromSkillName).filter(Boolean), 4);
+  return `At the table, connect it to ${humanJoin(skills)} through ${tones}.`;
+}
+
+function restrictionLoreText(restriction) {
+  const value = String(restriction || "No Restrictions").trim();
+  if (!value || value === "No Restrictions") return "Availability: broadly available, but the GM should still colour it through the character's culture, faction, homeworld, mentor, or first serious mission.";
+  return `Availability: tied to ${value}; treat that link as a social marker, training pipeline, oath, faction secret, or community expectation rather than just a checkbox.`;
+}
+
+function loreForFactionName(faction) {
+  const record = findFactionRecord(faction);
+  if (record?.subfaction && record?.theme) return `${record.subfaction} Its table theme is ${record.theme}.`;
+  if (record?.subfaction) return record.subfaction;
+  const key = normalizeGlossaryKey(faction);
+  if (/aleph/.test(key)) return "ALEPH-linked characters often carry the aura of predictive support, posthuman possibility, Maya authority, and questions about how much of a choice was truly theirs.";
+  if (/nomad/.test(key)) return "Nomad-linked characters usually come from mobile nations, shipboard cultures, hacker communities, radical autonomy, black-market expertise, and a distrust of centralised control.";
+  if (/ariadna/.test(key)) return "Ariadnan characters are shaped by Dawn's frontier hardship, low-tech ingenuity, clan loyalties, antipode dangers, and hard-won independence.";
+  if (/haqqislam/.test(key)) return "Haqqislamite characters often reflect Bourak's humanist scholarship, Silk medicine, trade routes, desert cultures, and the tension between learning and survival.";
+  if (/panoc|panoceania/.test(key)) return "PanOceanian characters may carry the polish of hyperpower institutions, corporate patronage, high technology, religious orders, and professional military doctrine.";
+  if (/yu jing|yujing/.test(key)) return "Yu Jing characters often move through imperial service, state security, disciplined social expectations, industrial power, and competing visions of loyalty.";
+  if (/combined|shasvastii|morat|ei/.test(key)) return "Combined Army-linked entries carry the threat of alien empire, infiltration organisms, Morat militarism, EI strategy, and technology that feels wrong to human senses.";
+  if (/o 12|o-12/.test(key)) return "O-12-linked characters stand near diplomacy, law, inter-faction pressure, emergency mandates, and the uneasy politics of being the official neutral party.";
+  return "Its lore should be read through the faction, subfaction, homeworld, and career choices attached to the character.";
+}
+
+function loreForCareerName(career) {
+  const key = normalizeGlossaryKey(career);
+  if (/hacker|wardriver|interventor|infowar|cyber/.test(key)) return "This career lives in the invisible war: identity theft, intrusion duels, compromised comlogs, Maya reputations, and the constant risk that the network is watching back.";
+  if (/doctor|medic|bio|surgeon|akbar/.test(key)) return "This career carries the Human Sphere's complicated mercy: saving lives, negotiating medical debt, handling Silk and Cube culture, and deciding what survival should cost.";
+  if (/soldier|military|guard|trooper|security|veteran|mercenary|knight|order|marine|officer/.test(key)) return "This career is shaped by uniforms, contracts, command chains, unit legends, field trauma, and the knowledge that politics often arrives wearing armour.";
+  if (/pilot|void|ship|space|navigator|crew/.test(key)) return "This career belongs to docking corridors, cramped berths, station bars, emergency burns, crew superstition, and the trust formed by people who survive hard vacuum together.";
+  if (/detective|agent|intelligence|spy|investigator|bureau|operative/.test(key)) return "This career moves through secrets, surveillance, double meanings, informants, jurisdiction fights, and the suspicion that every clean answer is hiding a second one.";
+  if (/criminal|smuggler|thief|corsair|submondo|gang/.test(key)) return "This career comes from the unofficial economy: favours, fences, fake IDs, protection, reputation, quiet exits, and people who know which laws are negotiable.";
+  if (/diplomat|liaison|noble|social|media|celebrity|executive|merchant/.test(key)) return "This career treats conversation as terrain. Invitations, scandals, contracts, appearances, patronage, and public opinion can matter as much as weapons.";
+  if (/engineer|technician|mechanic|drone|tag|armourer|researcher|scientist/.test(key)) return "This career is built from tools, prototypes, repairs, lab politics, maintenance rituals, and the confidence that almost any system can be understood or broken.";
+  if (/explorer|scout|ranger|survival|frontier|colonist/.test(key)) return "This career is shaped by frontier maps, bad weather, missing supply lines, strange ruins, local guides, and the steady patience of people who travel beyond comfort.";
+  if (/religious|priest|imam|monk|chaplain/.test(key)) return "This career carries obligation, doctrine, community trust, ritual authority, and the hard question of what faith demands when the mission becomes compromised.";
+  return "This career is a social identity as much as employment: it points to mentors, rivals, credentials, habits, obligations, and the communities that taught the character how to survive.";
+}
+
+function traitGlossaryText(t) {
+  const name = t.name || "This Trait";
+  const hook = nameLoreHook(name, t.category);
+  const category = categoryLoreHook(t.category);
+  const skillLine = skillLoreSentence(t.primary, t.secondary);
+  const brief = t.brief ? `Character-sheet meaning: ${t.brief}` : "Character-sheet meaning: This Trait marks a recurring strength, training history, reputation, or survival instinct connected to the listed skills.";
+  const effect = t.effect ? `Rule effect: ${t.effect}` : "";
+  const eligibility = restrictionLoreText(t.restriction);
+  const opening = hook || `${name} reflects a recognisable habit, reputation, or way of surviving that other people in the setting can notice and remember.`;
+  return [opening, category, skillLine, brief, effect, eligibility].filter(Boolean).join("\n\n");
+}
+
+function talentGlossaryText(t) {
+  const name = t.name || "This Talent";
+  const hook = nameLoreHook(name, [t.category, t.career, t.faction, t.doctrine].filter(Boolean).join(" ")) || `${name} is a learned edge: a practiced method, school tradition, faction habit, personal trick, or specialist procedure that makes the character stand out.`;
+  const careerLore = t.career ? `Career colour: ${loreForCareerName(t.career)}` : "Career colour: tie this Talent to a mentor, crew, academy, unit, rival, or formative failure so it feels earned rather than purchased.";
+  const factionLore = t.faction ? `Faction colour: ${loreForFactionName(t.faction)}` : "Faction colour: it can be expressed differently by each faction, from polished academies to street apprenticeship, military doctrine, shipboard necessity, or black-market practice.";
+  const doctrine = t.doctrine ? `Doctrine / path: ${t.doctrine} suggests the school, unit culture, tactical habit, or specialist tradition behind the Talent.` : "";
+  const skillLine = skillLoreSentence(t.primary, t.secondary);
+  const original = t.description ? `Character-sheet meaning: ${t.description}` : "Character-sheet meaning: This Talent supports the listed concept, Career, Faction, doctrine, or skill link.";
+  const effect = t.effect ? `Rule effect: ${t.effect}` : "";
+  const limits = glossaryMetaLine([
+    t.career ? `Career link: ${t.career}` : "",
+    t.faction ? `Faction link: ${t.faction}` : "",
+    t.prerequisite ? `Prerequisite: ${t.prerequisite}` : "",
+    t.restriction && t.restriction !== "No Restrictions" ? `Restriction: ${t.restriction}` : ""
+  ]);
+  const rules = limits.length ? `Selection notes: ${limits.join(". ")}.` : "";
+  return [hook, careerLore, factionLore, doctrine, skillLine, original, effect, rules].filter(Boolean).join("\n\n");
+}
+
+function careerGlossaryText(name, relatedTalents, relatedFactions) {
+  const skillHints = [];
+  relatedTalents.forEach(t => {
+    if (t.primary) skillHints.push(t.primary);
+    if (t.secondary) skillHints.push(t.secondary);
+    if (t.category) skillHints.push(t.category);
+  });
+  const factionRecords = relatedFactions.map(findFactionRecord).filter(Boolean);
+  const themes = factionRecords.flatMap(record => splitTerms(record.theme));
+  const talentNames = compactList(relatedTalents.map(t => t.name), 18);
+  const factionNames = compactList(relatedFactions, 10);
+  const focus = compactList([...skillHints, ...themes], 12);
+  const lines = [];
+  // ARIADNA_SOURCE_CAREER_PROFILE_GLOSSARY
+  const sourceProfile = DATA.careerProfiles?.[name] || null;
+  if (sourceProfile?.brief) lines.push(`Source profile: ${sourceProfile.brief}`);
+  if (sourceProfile?.mandatorySkills?.length) lines.push(`Mandatory skills: ${sourceProfile.mandatorySkills.join(", ")}.`);
+  if (sourceProfile?.electiveSkills?.length) lines.push(`Elective skills: ${sourceProfile.electiveSkills.join(", ")}.`);
+  if (sourceProfile?.earnings) lines.push(`Source Earnings: ${sourceProfile.earnings}.`);
+  if (sourceProfile?.gear?.length) lines.push(`Source career gear: ${sourceProfile.gear.join(", ")}.`);
+  if (sourceProfile?.special) lines.push(`Source restriction / special: ${sourceProfile.special}`);
+  if (sourceProfile?.sourcePage) lines.push(`Source: Infinity RPG — Ariadna Supplement, p. ${sourceProfile.sourcePage}.`);
+  lines.push(`${name} is a Career identity, not only a job label. It tells players who trained the character, who might vouch for them, who might resent them, and what kind of trouble naturally follows them.`);
+  lines.push(loreForCareerName(name));
+  if (focus) lines.push(`Common tone and focus areas: ${focus}. Use these as prompts for roleplay, downtime contacts, mission complications, and how the character explains competence.`);
+  if (factionNames) lines.push(`Linked factions or subfactions: ${factionNames}. These can make the Career political, cultural, or institutional rather than neutral.`);
+  if (talentNames) lines.push(`Related Talents include: ${talentNames}. They suggest the techniques, social expectations, and specialist traditions that grow out of this Career.`);
+  if (!talentNames && !factionNames) lines.push("This is a broad career option suitable for general concepts; root it in a homeworld, mentor, company, unit, tribe, crew, academy, faith, or faction obligation.");
+  return lines.join("\n\n");
+}
+
+function factionGlossaryText(name, worlds, relatedTalents) {
+  const record = findFactionRecord(name);
+  const lines = [];
+  // ARIADNA_SOURCE_FACTION_SKILLS_GLOSSARY
+  if (record?.factionSkills?.length) lines.push(`Faction skills: ${record.factionSkills.join(", ")}.`);
+
+  if (record?.subfaction) lines.push(record.subfaction);
+  else lines.push(sourceGuidedFallback("Faction", name));
+  if (record?.theme) lines.push(`Theme: ${record.theme}.`);
+  const homeworldText = record?.homeworld || compactList(worlds, 20);
+  if (homeworldText) lines.push(`Homeworlds / Habitats: ${homeworldText}.`);
+  if (record?.suggested_traits) lines.push(`Suggested Traits: ${record.suggested_traits}.`);
+  if (record?.suggested_talents) lines.push(`Suggested Talents: ${record.suggested_talents}.`);
+  const talentNames = compactList(relatedTalents.map(t => t.name), 16);
+  if (talentNames) lines.push(`Character-sheet Talents linked to this Faction include: ${talentNames}.`);
+  return lines.join("\n\n");
+}
+
+function homeworldGlossaryText(name, factions) {
+  const factionRecords = (DATA.factions || []).filter(record => worldMatchesRecord(name, record) || factions.includes(record.faction));
+  const themes = compactList(factionRecords.flatMap(record => splitTerms(record.theme)), 14);
+  const descriptions = factionRecords.map(record => record.subfaction).filter(Boolean).slice(0, 3);
+  const linkedFactions = compactList(factions.length ? factions : factionRecords.map(record => record.faction), 18);
+  const lines = [];
+  // ARIADNA_SOURCE_HOMEWORLD_GLOSSARY
+  const sourceHomeworld = DATA.ariadnaReference?.homelands?.[name] || null;
+  if (sourceHomeworld) {
+    lines.push(`Ariadna source: ${sourceHomeworld.nation}. Languages: ${(sourceHomeworld.languages || []).join("; ")}.`);
+    if (sourceHomeworld.page) lines.push(`Source: Infinity RPG — Ariadna Supplement, p. ${sourceHomeworld.page}.`);
+  }
+  lines.push(`${name} is a Homeworld / Habitat origin used to place a character within a faction, colony, ship, station, frontier, warfront, or specialist deployment.`);
+  if (linkedFactions) lines.push(`Available through these Factions or subfactions: ${linkedFactions}.`);
+  if (themes) lines.push(`Associated themes: ${themes}.`);
+  if (descriptions.length) lines.push(`Source guidance: ${descriptions.join(" ")}`);
+  if (!linkedFactions) lines.push("It is kept in the full glossary for player reference even if no strict Faction relationship is currently assigned.");
+  return lines.join("\n\n");
+}
+
+function gearGlossaryText(item, kind) {
+  const lines = [];
+  if (item.brief) lines.push(item.brief);
+  else lines.push(sourceGuidedFallback(kind, item.name));
+  if (item.mechanic) lines.push(`Rules: ${item.mechanic}`);
+  // ARIADNA_SOURCE_GEAR_GLOSSARY
+  if (item.sourceProfile) lines.push(`Source profile: ${item.sourceProfile}`);
+  if (item.source && item.sourcePage) lines.push(`Source: ${item.source}, p. ${item.sourcePage}.`);
+  if (item.sourceRestriction) lines.push(`Source Restriction: ${item.sourceRestriction}.`);
+  const traits = glossaryMetaLine([item.type, item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]);
+  if (traits.length) lines.push(`Selection notes: ${traits.join("; ")}.`);
+  return lines.join("\n\n");
+}
+
+function glossaryEntry(category, name, tag, meta, text, searchText = "") {
+  const safeName = String(name || "").trim();
+  const safeTag = tag || category;
+  const safeMeta = Array.isArray(meta) ? meta : [];
+  const fallbackKind = category === "Homeworlds / Habitats" ? "Homeworld / Habitat" : category.replace(/s$/, "");
+  const safeText = String(text || "").trim() || sourceGuidedFallback(fallbackKind, safeName);
+  return {
+    category,
+    name: safeName,
+    tag: safeTag,
+    meta: safeMeta,
+    text: safeText,
+    search: [category, safeName, safeTag, ...safeMeta, safeText, searchText].join(" ").toLowerCase()
+  };
+}
+
+function glossaryPreviewText(text) {
+  const cleaned = String(text || "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!cleaned) return "Description available in the expanded glossary entry.";
+  if (cleaned.length <= 220) return cleaned;
+  const sentenceEnd = cleaned.slice(0, 220).search(/[.!?](\s|$)(?!.*[.!?](\s|$))/);
+  if (sentenceEnd > 80) return cleaned.slice(0, sentenceEnd + 1);
+  return cleaned.slice(0, 217).replace(/\s+\S*$/, "") + "...";
+}
+
+function buildGlossaryEntries() {
+  if (glossaryEntriesCache) return glossaryEntriesCache;
+
+  const entries = [];
+  const ruleTerms = [
+    ["Main Skills", "Rule", ["Agility", "Awareness", "Brawn", "Coordination", "Intelligence", "Personality", "Willpower"], "Main skills set the base value for their linked sub-skills. In this custom sheet, main skills cannot use Focus. Increasing a main skill increases all sub-skills beneath it."],
+    ["Sub-skills", "Rule", ["Skill tests", "Focus allowed"], "Sub-skills inherit the relevant main skill rating, then add starting allocation and applicable Trait/Talent modifiers. Focus may be assigned only to sub-skills."],
+    ["Focus", "Rule", ["Sub-skills only"], "Focus represents specialist training. Main skills cannot use Focus; assign Focus to specific sub-skills such as Ballistics, Hacking, Medicine, Persuade, or Survival."],
+    ["Career", "Character option", ["Eligibility", "Traits", "Talents"], "Career is the single field used for eligibility filtering. Choosing a Career filters Trait and Talent options while keeping general/unrestricted options available."],
+    ["Faction / Homeworld relationship", "Character option", ["Validation"], "Homeworld / Habitat choices are filtered by the selected Faction. Changing Faction clears an invalid Homeworld / Habitat selection so saved characters keep a valid relationship."],
+    ["Armour", "Resource", ["Light 5", "Medium 10", "Heavy 15"], "Armour replaces Temporary HP in this custom sheet. Armour can be selected directly or inferred from selected armour equipment."],
+    ["HP / Vigor", "Resource", ["0–20"], "The character's physical endurance track. Damage and recovery should be handled according to the GM's current 2D20 scene rules."],
+    ["Firewall", "Resource", ["0–20"], "The character's defensive quantronic or infowar resilience track, useful when facing hacking, intrusion, Geist, or network threats."],
+    ["Mental Stress", "Resource", ["0–20"], "The character's psychological resilience track for fear, pressure, interrogation, trauma, and other mental strain."],
+    ["Momentum", "Resource", ["Party resource"], "A shared or session-facing resource used to support player actions where the GM allows it."],
+    ["Infinity Points", "Resource", ["Heroic resource"], "A player-facing resource used for important heroic or cinematic moments."],
+    ["Wounds", "Resource", ["0–3"], "Wounds are tracked separately from HP / Vigor. This sheet restricts Wounds to values 0 through 3."],
+    ["Rarity", "Gear / option", ["Common", "Uncommon", "Rare", "Very Rare"], "Rarity helps determine availability and cost. Beginner/random generation currently prefers Common gear unless otherwise specified."],
+    ["Prerequisite", "Talent rule", ["Talent chains"], "A Talent prerequisite lists what a character should normally have before selecting that Talent."],
+    ["Condition", "Status", ["Temporary effect"], "Conditions represent temporary battlefield, physical, mental, environmental, or equipment-related effects tracked during play."]
+  ];
+  ruleTerms.forEach(([name, tag, meta, text]) => entries.push(glossaryEntry("Rules Terms", name, tag, meta, text)));
+
+  glossarySort(DATA.traits || []).forEach(t => {
+    entries.push(glossaryEntry(
+      "Traits",
+      t.name,
+      t.category ? `Trait · ${t.category}` : "Trait",
+      glossaryMetaLine([t.restriction || "No Restrictions", t.rarity, t.cost ? `Cost ${t.cost}` : "", t.primary && t.secondary ? `${t.primary} / ${t.secondary}` : ""]),
+      traitGlossaryText(t),
+      [t.primary, t.secondary, t.restriction, t.category, t.brief, t.effect].join(" ")
+    ));
+  });
+
+  glossarySort(DATA.talents || []).forEach(t => {
+    entries.push(glossaryEntry(
+      "Talents",
+      t.name,
+      t.level ? `Talent · Level ${t.level}` : "Talent",
+      glossaryMetaLine([t.category, t.career ? `Career: ${t.career}` : "", t.doctrine ? `Doctrine: ${t.doctrine}` : "", t.faction ? `Faction: ${t.faction}` : "", t.restriction, t.prerequisite ? `Prereq: ${t.prerequisite}` : "", t.rarity, t.cost ? `Cost ${t.cost}` : ""]),
+      talentGlossaryText(t),
+      [t.primary, t.secondary, t.career, t.doctrine, t.faction, t.restriction, t.category, t.description, t.effect].join(" ")
+    ));
+  });
+
+  const careerSet = new Set(DATA.lists?.careerRoles || []);
+  (DATA.talents || []).forEach(t => { if (t.career) careerSet.add(t.career); });
+  glossarySort([...careerSet].map(name => ({ name }))).forEach(c => {
+    const relatedTalents = (DATA.talents || []).filter(t => t.career === c.name).sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+    const factions = [...new Set(relatedTalents.map(t => t.faction).filter(Boolean))].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+    entries.push(glossaryEntry(
+      "Careers",
+      c.name,
+      "Career",
+      glossaryMetaLine([factions.length ? `Linked factions: ${factions.join(", ")}` : "General / Unrestricted", relatedTalents.length ? `${relatedTalents.length} related talents` : "Broad career option"]),
+      careerGlossaryText(c.name, relatedTalents, factions),
+      [factions.join(" "), relatedTalents.map(t => t.name).join(" "), relatedTalents.map(t => t.description).join(" ")].join(" ")
+    ));
+  });
+
+  glossarySort((DATA.lists?.factions || []).map(name => ({ name }))).forEach(f => {
+    const worlds = DATA.homeworldsByFaction?.[f.name] || [];
+    const relatedTalents = (DATA.talents || []).filter(t => t.faction === f.name).sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+    const record = findFactionRecord(f.name);
+    entries.push(glossaryEntry(
+      "Factions",
+      f.name,
+      "Faction",
+      glossaryMetaLine([worlds.length ? `${worlds.length} related homeworlds` : "No specific homeworld mapping", relatedTalents.length ? `${relatedTalents.length} related talents` : "", record?.theme ? `Theme: ${record.theme}` : ""]),
+      factionGlossaryText(f.name, worlds, relatedTalents),
+      [worlds.join(" "), relatedTalents.map(t => t.name).join(" "), record?.subfaction, record?.theme, record?.homeworld, record?.suggested_traits, record?.suggested_talents].join(" ")
+    ));
+  });
+
+  const homeworldToFactions = new Map();
+  Object.entries(DATA.homeworldsByFaction || {}).forEach(([faction, worlds]) => {
+    (worlds || []).forEach(world => {
+      if (!homeworldToFactions.has(world)) homeworldToFactions.set(world, []);
+      homeworldToFactions.get(world).push(faction);
+    });
+  });
+  const homeworldSet = new Set(DATA.lists?.homeworlds || []);
+  homeworldToFactions.forEach((_, world) => homeworldSet.add(world));
+  glossarySort([...homeworldSet].map(name => ({ name }))).forEach(w => {
+    const factions = [...new Set(homeworldToFactions.get(w.name) || [])].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+    const records = (DATA.factions || []).filter(record => worldMatchesRecord(w.name, record) || factions.includes(record.faction));
+    entries.push(glossaryEntry(
+      "Homeworlds / Habitats",
+      w.name,
+      "Homeworld / Habitat",
+      glossaryMetaLine([factions.length ? `Faction choices: ${factions.join(", ")}` : "General or unmapped option", records.length ? `${records.length} source links` : ""]),
+      homeworldGlossaryText(w.name, factions),
+      [factions.join(" "), records.map(record => [record.faction, record.subfaction, record.theme, record.homeworld].join(" ")).join(" ")].join(" ")
+    ));
+  });
+
+  glossarySort((DATA.equipment || []).filter(item => String(item.type || "").toLowerCase() === "weapon")).forEach(item => {
+    entries.push(glossaryEntry(
+      "Weapons",
+      item.name,
+      item.type || "Weapon",
+      glossaryMetaLine([item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]),
+      gearGlossaryText(item, "Weapon"),
+      [item.type, item.rarity, item.weight, item.mechanic, item.brief].join(" ")
+    ));
+  });
+
+  glossarySort((DATA.equipment || []).filter(item => String(item.type || "").toLowerCase() !== "weapon")).forEach(item => {
+    entries.push(glossaryEntry(
+      "Equipment",
+      item.name,
+      item.type || "Equipment",
+      glossaryMetaLine([item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]),
+      gearGlossaryText(item, "Equipment"),
+      [item.type, item.rarity, item.weight, item.mechanic, item.brief].join(" ")
+    ));
+  });
+
+  glossarySort((DATA.conditions || []).map(item => ({ ...item, name: item.name }))).forEach(condition => {
+    entries.push(glossaryEntry(
+      "Conditions",
+      condition.name,
+      "Condition",
+      glossaryMetaLine([condition.removal ? `Removal: ${condition.removal}` : "Status effect"]),
+      [condition.description || sourceGuidedFallback("Condition", condition.name), condition.removal ? `Removal guidance: ${condition.removal}.` : ""].filter(Boolean).join("\n\n"),
+      [condition.description, condition.removal].join(" ")
+    ));
+  });
+
+  glossaryEntriesCache = entries
+    .filter(e => e.name)
+    .map(e => ({ ...e, text: e.text || sourceGuidedFallback(e.tag, e.name) }))
+    .sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+  return glossaryEntriesCache;
+}
+
+function buildGlossary() {
+  const categorySelect = document.getElementById("glossaryCategory");
+  if (!categorySelect) return;
+
+  if (!glossaryInitialized) {
+    makeOptions(categorySelect, GLOSSARY_CATEGORIES, "");
+    categorySelect.value = "All";
+    const search = document.getElementById("glossarySearch");
+    const schedule = () => {
+      if (glossaryRenderPending) return;
+      glossaryRenderPending = true;
+      window.requestAnimationFrame(() => {
+        glossaryRenderPending = false;
+        renderGlossary();
+      });
+    };
+    categorySelect.addEventListener("change", schedule, { passive: true });
+    if (search) search.addEventListener("input", schedule, { passive: true });
+    glossaryInitialized = true;
+  }
+
+  // Mobile stability: initialise controls on page load, but do not build hundreds
+  // of glossary cards until the player actually opens the glossary panel.
+  const page = document.getElementById("glossaryPage");
+  if (document.body.classList.contains("glossary-mode") || (page && !page.hidden)) {
+    renderGlossary();
+  }
+}
+
+function renderGlossary() {
+  const list = document.getElementById("glossaryList");
+  const summary = document.getElementById("glossarySummary");
+  const category = document.getElementById("glossaryCategory")?.value || "All";
+  const query = (document.getElementById("glossarySearch")?.value || "").trim().toLowerCase();
+  if (!list) return;
+  const allEntries = buildGlossaryEntries();
+  const entries = allEntries.filter(entry => {
+    const categoryMatch = category === "All" || entry.category === category;
+    const queryMatch = !query || entry.search.includes(query);
+    return categoryMatch && queryMatch;
+  });
+  if (summary) {
+    const total = allEntries.length;
+    summary.textContent = `Showing ${entries.length} of ${total} entries${category !== "All" ? ` in ${category}` : ""}${query ? ` matching “${query}”` : ""}. Every listed glossary entry now includes a visible lore-first description preview and an expanded full description.`;
+  }
+  if (!entries.length) {
+    list.innerHTML = '<div class="glossary-empty">No glossary entries match the current search.</div>';
+    return;
+  }
+  list.innerHTML = entries.map(entry => {
+    const meta = entry.meta.length ? `<div class="glossary-meta">${entry.meta.map(v => `<span class="glossary-pill">${glossaryEscape(v)}</span>`).join("")}</div>` : "";
+    const preview = glossaryPreviewText(entry.text);
+    return `<details class="glossary-card">
+      <summary><span class="glossary-title-wrap"><span class="glossary-title">${glossaryEscape(entry.name)}</span><span class="glossary-preview">${glossaryEscape(preview)}</span></span><span class="glossary-tag">${glossaryEscape(entry.tag)}</span></summary>
+      <div class="glossary-body">${meta}<p class="glossary-text">${glossaryEscape(entry.text)}</p></div>
+    </details>`;
+  }).join("");
+}
+
+function showGlossary() {
+  // Save any recent edits before leaving the visible sheet. This prevents a
+  // pending autosave timer from later rebuilding the save selector and wiping
+  // out the player's selected load slot while they are in the glossary.
+  flushPendingAutosave();
+  document.body.classList.add("glossary-mode");
+  const page = document.getElementById("glossaryPage");
+  if (page) page.hidden = false;
+  buildGlossary();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  const search = document.getElementById("glossarySearch");
+  if (search && window.matchMedia("(min-width: 761px)").matches) search.focus({ preventScroll: true });
+}
+
+function hideGlossary(options = {}) {
+  document.body.classList.remove("glossary-mode");
+  const page = document.getElementById("glossaryPage");
+  if (page) page.hidden = true;
+  if (!options.silent) flushPendingAutosave();
+  if (!options.noScroll) window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v25-career-homeworld-relationships";
+  document.documentElement.dataset.infinityBuild = "v64-ariadna-yu-jing";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -2228,14 +3786,56 @@ document.addEventListener("DOMContentLoaded", () => {
   setDefaultTracks();
   resetStartingBonuses();
   clearFocusAllocations();
+  sanitizeSkillRatingDisplays();
   applyArmourFromEquipment();
   refreshSaveSlots();
+  installAutosave();
+  buildGlossary();
+  // Do not attach a MutationObserver to the skill Rating cells. Earlier builds
+  // rewrote those cells from inside the observer callback, which could retrigger
+  // itself and freeze the page after Career changes. updateSkillRatings() and
+  // sanitizeSkillRatingDisplays() now update the cells directly when needed.
 
   document.getElementById("randomCharacterBtn").addEventListener("click", randomCharacter);
   document.getElementById("randomBeginnerCharacterBtn").addEventListener("click", randomBeginnerCharacter);
+  ["glossaryBtn", "glossaryShortcutBtn"].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.addEventListener("click", showGlossary);
+  });
+  const backToSheetBtn = document.getElementById("backToSheetBtn");
+  if (backToSheetBtn) backToSheetBtn.addEventListener("click", hideGlossary);
   document.getElementById("saveBtn").addEventListener("click", saveCharacterToBrowser);
-  document.getElementById("loadBtn").addEventListener("click", loadCharacterFromBrowser);
+  const characterSlotSelect = document.getElementById("characterSlotSelect");
+  if (characterSlotSelect) {
+    characterSlotSelect.addEventListener("change", event => {
+      const selectedId = event.target.value;
+      if (selectedId) loadCharacterById(selectedId, { auto: true });
+    });
+  }
   document.getElementById("deleteSaveBtn").addEventListener("click", deleteSelectedSave);
+  ["exportXmlBtn", "exportXmlShortcutBtn"].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.addEventListener("click", exportCharacterXml);
+  });
+  const importXmlFile = document.getElementById("importXmlFile");
+  ["importXmlBtn", "importXmlShortcutBtn"].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn && importXmlFile) btn.addEventListener("click", () => importXmlFile.click());
+  });
+  if (importXmlFile) {
+    importXmlFile.addEventListener("change", event => {
+      const file = event.target.files && event.target.files[0];
+      importCharacterXmlFile(file);
+      event.target.value = "";
+    });
+  }
   document.getElementById("newSheetBtn").addEventListener("click", newCharacterSheet);
   document.getElementById("printBtn").addEventListener("click", printCharacterSheet);
+  runInitialAutoLoadSavedCharacter();
+});
+
+window.addEventListener("load", () => {
+  // Mobile Safari/Chrome can delay storage readiness in restored tabs; this is
+  // harmless after the first successful run because initialAutoLoadDone guards it.
+  window.setTimeout(runInitialAutoLoadSavedCharacter, 50);
 });

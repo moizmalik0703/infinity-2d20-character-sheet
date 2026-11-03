@@ -1,0 +1,58 @@
+{
+  "build": "v64-ariadna-yu-jing",
+  "reason": "PR #1 containing the Ariadna sourcebook update was not merged before the Yu Jing V63 update landed. This reconciliation reapplies the Ariadna delta onto current main while preserving Yu Jing.",
+  "sourceBranches": {
+    "main": "v63-yu-jing-faction-book",
+    "ariadna": "ariadna-sourcebook-update / PR #1"
+  },
+  "counts": {
+    "traits": 290,
+    "talents": 194,
+    "equipment": 401,
+    "factions": 66,
+    "homeworlds": 175,
+    "careers": 90,
+    "weaponsSelector": 120,
+    "equipmentSelector": 281
+  },
+  "validation": {
+    "embeddedDataMatchesDataJs": true,
+    "ariadnaReferencePresent": true,
+    "yuJingReferencePresent": true,
+    "allAriadnaCareersPresent": true,
+    "allYuJingCareersPresent": true,
+    "ariadnaCareerFilterHook": true,
+    "ariadnaCareerGlossaryHook": true,
+    "ariadnaHomeworldGlossaryHook": true,
+    "ariadnaFactionSkillsGlossaryHook": true,
+    "ariadnaGearGlossaryHook": true,
+    "indexBuildMetadataUpdated": true,
+    "appBuildMetadataUpdated": true,
+    "randomGearRespectsLoadoutEligibility": true,
+    "brokenWeaponRefs": [],
+    "brokenEquipmentRefs": []
+  },
+  "ariadnaHighlights": {
+    "factionChoices": [
+      "Ariadna - Caledonia",
+      "Ariadna - Merovingia",
+      "Ariadna - Rodina / Tartary",
+      "Ariadna - USAriadna",
+      "Ariadna - Dog-Blooded",
+      "Ariadna - Antipode"
+    ],
+    "hostTraits": [
+      "Dogface",
+      "Wulver",
+      "Antipode"
+    ],
+    "addedCoreTalents": [
+      "Catfall",
+      "Pattern Recognition",
+      "Sturdy"
+    ],
+    "careerProfiles": 29,
+    "sourcebookGearRecords": 69
+  },
+  "note": "Older non-Ariadna factions may still use the sheet's fallback from faction records to Homeworld/Habitat choices rather than explicit homeworldsByFaction entries; this is pre-existing behavior and not a V64 regression."
+}
