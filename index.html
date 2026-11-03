@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v59-persistent-autosave-stable">
-  <!-- DEPLOYMENT CHECK: v59-persistent-autosave-stable | Adds persistent autosave snapshots with localStorage + IndexedDB fallback, pagehide/visibility flush, and recovery auto-load while keeping no Load button, Glossary and XML buttons, lore-clean glossary, XML import/export, logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
+  <meta name="infinity-build" content="v64-ariadna-yu-jing">
+  <!-- DEPLOYMENT CHECK: v64-ariadna-yu-jing | Adds persistent autosave snapshots with localStorage + IndexedDB fallback, pagehide/visibility flush, and recovery auto-load while keeping no Load button, Glossary and XML buttons, lore-clean glossary, XML import/export, logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2496,7 +2496,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 </style>
 </head>
-<body data-build="v59-persistent-autosave-stable">
+<body data-build="v64-ariadna-yu-jing">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -19769,7 +19769,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v59-persistent-autosave-stable",
+    build: "v64-ariadna-yu-jing",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -20286,7 +20286,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v59-persistent-autosave-stable")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v64-ariadna-yu-jing")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -22189,7 +22189,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v59-persistent-autosave-stable";
+  document.documentElement.dataset.infinityBuild = "v64-ariadna-yu-jing";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
