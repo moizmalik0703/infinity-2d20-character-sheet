@@ -1,0 +1,75 @@
+{
+  "build": "v65-host-heritage",
+  "purpose": "Make Ariadna Host / Heritage a first-class character option instead of using Career or fake faction choices as a proxy.",
+  "source": {
+    "book": "Infinity RPG — Ariadna Supplement (Updated)",
+    "hostRules": {
+      "Antipode": 79,
+      "Dogface": 80,
+      "Wulver": 80
+    },
+    "careerTables": "Ariadna Supplement Dogface/Wulver and Antipode Career Tables already captured in V64 source metadata."
+  },
+  "changes": [
+    "Adds Host / Heritage with Standard / Human, Dogface, Wulver, and Antipode options for Ariadna.",
+    "Adds Current Form for Dogface: Human Form or Dog-Warrior Form.",
+    "Dogface Dog-Warrior form applies +2 Agility, +2 Brawn, +1 Vigour soak and restores the custom HP/Vigor track to full when entered.",
+    "Wulver applies AGI +1, AWA +1, BRW +1, COO -1, PER -1, WIL -1 and exposes the source +2 Vigour note.",
+    "Antipode applies AGI +2, AWA +1, BRW +2, COO -1, INT -2, PER -2, +2 Vigour soak and locks Firewall to 0.",
+    "Host modifiers change effective Main Skill totals and therefore flow to their sub-skills without overwriting the saved base Main Skill ratings.",
+    "Dogface, Wulver and Antipode no longer consume one of the three ordinary Trait slots.",
+    "Host choice filters source-compatible Careers. Dogface cannot select Wulver Shock Troop; Wulver can.",
+    "Antipode receives its source career list and tribe Homeworld/Habitat choices.",
+    "The old Ariadna - Dog-Blooded and Ariadna - Antipode UI faction choices are hidden but their source records/mappings remain for migration and reference.",
+    "Legacy saves infer Host / Heritage from old host Trait/faction selections and remove the old host Trait from ordinary Trait slots.",
+    "Host / Heritage and Current Form persist through browser save/autosave and XML, and Ariadna Host / Heritage is printed in the portfolio.",
+    "Non-Ariadna factions show Host / Heritage as not applicable in this build."
+  ],
+  "compatibility": {
+    "customMainSkillRulePreserved": "Main skills still cannot use Focus. Host modifiers alter effective main-skill totals; ordinary Trait/Talent automatic bonuses remain sub-skill-only.",
+    "armourConventionPreserved": "Light 5 / Medium 10 / Heavy 15 remains unchanged.",
+    "gearSlotsPreserved": "Weapons 5 rows; Equipment 10 rows.",
+    "yuJingV64Preserved": true,
+    "campaignArchiveUntouched": true
+  },
+  "validation": {
+    "appSyntax": "PASS",
+    "inlineAppSyntax": "PASS",
+    "embeddedDataMatchesDataJs": true,
+    "inlineAppMatchesAppJs": true,
+    "duplicateTraits": [],
+    "duplicateTalents": [],
+    "duplicateEquipment": [],
+    "duplicateFactionRecords": [],
+    "hostChoices": [
+      "Standard / Human",
+      "Dogface",
+      "Wulver",
+      "Antipode"
+    ],
+    "dogfaceWulverShockTroopExcluded": true,
+    "wulverWulverShockTroopIncluded": true,
+    "antipodeFirewallDisabled": true,
+    "legacyMigrationHooksPresent": true,
+    "hostTraitsExcludedFromOrdinaryTraitSlots": true,
+    "fakeHeritageFactionChoicesHidden": true,
+    "fakeHeritageSourceRecordsRetained": true,
+    "yuJingSourcePresent": true,
+    "brokenWeaponRefs": [],
+    "brokenEquipmentRefs": []
+  },
+  "counts": {
+    "traits": 290,
+    "talents": 194,
+    "equipment": 401,
+    "factionRecords": 66,
+    "selectableFactions": 64,
+    "homeworlds": 175,
+    "careers": 90
+  },
+  "notes": [
+    "The sheet does not roll Dogface's Discipline D1 transformation check. The player/GM resolves that test, then changes Current Form; all supported form modifiers apply automatically.",
+    "Wulver's +2 Vigour is surfaced as a Host modifier because the custom sheet's HP/Vigor track remains capped at 20.",
+    "Dogface armour damage, Fatigued when the form ends, Antipode Primal Technology/Pack Mentality/Trinary Mind, and equipment tailoring remain rules text because the sheet has no dedicated subsystems for those effects."
+  ]
+}
