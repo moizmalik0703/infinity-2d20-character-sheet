@@ -1074,11 +1074,11 @@ function setMainSkillsToStartingBaseline() {
 }
 
 function randomGenericGear() {
-  const armourChoices = DATA.equipment.filter(item => /armor|armour/i.test(`${item.type || ""} ${item.name || ""}`));
+  const armourChoices = DATA.equipment.filter(item => item.loadoutEligible !== false && /armor|armour/i.test(`${item.type || ""} ${item.name || ""}`));
   const armour = randomChoice(armourChoices);
   const nonArmourNames = DATA.lists.equipment.filter(name => {
     const item = byName(DATA.equipment, name);
-    return armourValueForItem(item) === 0;
+    return item && item.loadoutEligible !== false && armourValueForItem(item) === 0;
   });
   return {
     weapons: randomDistinct(DATA.lists.weapons, 2),
