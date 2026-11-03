@@ -11225,7 +11225,11 @@ window.INFINITY_DATA = {
       "homeworld": "Antipodean Wilds, Ariadna Exclusion Zone, Auron, Cailleach, Calonack, Castropol (Tartary), Coille Laith, Dál Riada, Dalnîy (Tartary), Dauphin, Dawn, Dynamo, Gök-Burgo, Inverloch, Jackson, Jefferson, Kennedy, Lafayette, Le Douar, Lincoln, Mariannebourg, Mat’, Mount Zion / The Wall, Novocherkassk, Ovsyanka (Tartary), Poictesme, Roosevelt, Scone, Skara Brae, Stanitsas, Tartary Outlands, The South Mirror, Tsitadel (Tartary), Tuathcruithne, Washington",
       "theme": "Dawn frontier grit, four Ariadnan nations, survival, low-tech ingenuity, Teseum, Dog-Blooded and Antipode contact",
       "suggested_traits": "Frontier Born; Dawn Survivor; Low-Tech Ingenuity",
-      "suggested_talents": "Ariadnan Ranger"
+      "suggested_talents": "Ariadnan Ranger",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Ariadna - Antipode",
@@ -11233,7 +11237,11 @@ window.INFINITY_DATA = {
       "homeworld": "Bitter Leaves, Bringers-of-Peace, Gentle Embrace of the Sagacious Progenitors, Ice Fangs, River Tribe, White Knives, 3-Winged Moth Tribe, Broken Plains Tribe, Death Claws, Long Talons",
       "theme": "Antipode tribes, trinary mind, primal technology, pack culture",
       "suggested_traits": "Antipode; Priority Target; Entirely Misunderstood",
-      "suggested_talents": "Catfall; Pattern Recognition"
+      "suggested_talents": "Catfall; Pattern Recognition",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Ariadna - Antipode Handlers",
@@ -11241,7 +11249,11 @@ window.INFINITY_DATA = {
       "homeworld": "Dawn, Ariadnan wilderness, Antipode territories",
       "theme": "Animal handling, pack tactics, frontier warfare, dangerous companions",
       "suggested_traits": "Antipode Handler; Pack Ranger; Beastmaster",
-      "suggested_talents": "Antipode Handler Doctrine"
+      "suggested_talents": "Antipode Handler Doctrine",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Ariadna - Caledonia",
@@ -11249,7 +11261,11 @@ window.INFINITY_DATA = {
       "homeworld": "Cailleach, Calonack, Coille Laith, Dál Riada, Inverloch, Scone, Skara Brae, Tuathcruithne",
       "theme": "Caledonian clans, honour, duelling, Teseum, frontier warfare",
       "suggested_traits": "Ariadnan Grit; Heirloom Weapon; Pioneer Spirit",
-      "suggested_talents": "Catfall; Sturdy"
+      "suggested_talents": "Catfall; Sturdy",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Ariadna - Dog-Blooded",
@@ -11257,7 +11273,11 @@ window.INFINITY_DATA = {
       "homeworld": "Antipodean Wilds, Ariadna Exclusion Zone, Auron, Cailleach, Calonack, Castropol (Tartary), Coille Laith, Dál Riada, Dalnîy (Tartary), Dauphin, Dynamo, Gök-Burgo, Inverloch, Jackson, Jefferson, Kennedy, Lafayette, Le Douar, Lincoln, Mariannebourg, Mat’, Mount Zion / The Wall, Novocherkassk, Ovsyanka (Tartary), Poictesme, Roosevelt, Scone, Skara Brae, Stanitsas, Tartary Outlands, The South Mirror, Tsitadel (Tartary), Tuathcruithne, Washington",
       "theme": "Dogface, Wulver, Dog Nation, Dog-Bowl, irregular regiments",
       "suggested_traits": "Dogface; Wulver; Unlikely Hero; Overconfident",
-      "suggested_talents": "Catfall; Sturdy"
+      "suggested_talents": "Catfall; Sturdy",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Ariadna - Merovingia",
@@ -11265,7 +11285,11 @@ window.INFINITY_DATA = {
       "homeworld": "Auron, Le Douar, Mariannebourg, Poictesme, Lafayette, Dauphin",
       "theme": "Trade, commercial agents, 112 responders, Loup-Garou, diplomacy",
       "suggested_traits": "Spirit of the 112; Patriot; Sardonic",
-      "suggested_talents": "Pattern Recognition; Sturdy"
+      "suggested_talents": "Pattern Recognition; Sturdy",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Ariadna - Ranger Corps",
@@ -11273,7 +11297,11 @@ window.INFINITY_DATA = {
       "homeworld": "Dawn, Ariadnan frontier settlements, wilderness theatres",
       "theme": "Survival, scouting, low-tech warfare, ambush, frontier resilience",
       "suggested_traits": "Frontier Survivor; Dawn Survivor; Antipode Hunter",
-      "suggested_talents": "Ariadna Ranger Corps"
+      "suggested_talents": "Ariadna Ranger Corps",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Ariadna - Rodina / Tartary",
@@ -11281,7 +11309,11 @@ window.INFINITY_DATA = {
       "homeworld": "Dynamo, Gök-Burgo, Mat’, Novocherkassk, Stanitsas, Castropol (Tartary), Dalnîy (Tartary), Ovsyanka (Tartary), Tsitadel (Tartary)",
       "theme": "Cossacks, Stavka, Spetsnaz, industry, frontier settlements",
       "suggested_traits": "Ariadnan Grit; Grizzled; Brand Loyalist",
-      "suggested_talents": "Sturdy; Pattern Recognition"
+      "suggested_talents": "Sturdy; Pattern Recognition",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Ariadna - USAriadna",
@@ -11289,7 +11321,11 @@ window.INFINITY_DATA = {
       "homeworld": "Mount Zion / The Wall, Jackson, Jefferson, Lincoln, Kennedy, Roosevelt, Washington",
       "theme": "Frontier justice, militia, hardcases, rangers, rugged vehicles",
       "suggested_traits": "Pioneer Spirit; Heirloom Weapon; Survivor",
-      "suggested_talents": "Sturdy; Catfall"
+      "suggested_talents": "Sturdy; Catfall",
+      "factionSkills": [
+        "Survival",
+        "Medicine"
+      ]
     },
     {
       "faction": "Combined Army",
@@ -13721,6 +13757,181 @@ window.INFINITY_DATA = {
         ],
         "page": 81
       }
+    },
+    "factionSkills": [
+      "Survival",
+      "Medicine"
+    ],
+    "hostTable": [
+      {
+        "range": "1–12",
+        "host": "Dogface"
+      },
+      {
+        "range": "13–17",
+        "host": "Wulver"
+      },
+      {
+        "range": "18–20",
+        "host": "Antipode"
+      }
+    ],
+    "hostProfiles": {
+      "Dogface": {
+        "page": 80,
+        "lifePointCost": 3,
+        "rules": "Scent +2d20 when relevant. On suffering a Wound, Discipline D1 or transform (may voluntarily fail). Dog-Warrior form: +2 Brawn, +2 Agility, +1 Vigour soak, recover all Vigour, Monstrous, Snarling Beast, Super-Jump/Catfall; human-sized armour can be damaged; Fatigued when the form ends."
+      },
+      "Wulver": {
+        "page": 80,
+        "lifePointCost": 3,
+        "rules": "AGI +1, AWA +1, BRW +1, COO −1, PER −1, WIL −1; Scent +2d20; +2 Vigour; Monstrous; Furious; Super-Jump/Catfall; worn gear needs tailoring or suffers penalties."
+      },
+      "Antipode": {
+        "page": 79,
+        "lifePointCost": 2,
+        "rules": "AGI +2, AWA +1, BRW +2, COO −1, INT −2, PER −2; Scent +2d20; +2 Vigour soak; Monstrous; Super-Jump/Catfall; Primal Technology; Pack Mentality; Trinary Mind; no Firewall, geist or cybernetic augmentation."
+      }
+    },
+    "careerTables": {
+      "Ariadna Faction Career Table": [
+        {
+          "range": "1",
+          "career": "Special Forces"
+        },
+        {
+          "range": "2",
+          "career": "Intelligence Operative"
+        },
+        {
+          "range": "3",
+          "career": "Frontiersman"
+        },
+        {
+          "range": "4",
+          "career": "Assault Pack Controller"
+        },
+        {
+          "range": "5",
+          "career": "Sports Personality"
+        },
+        {
+          "range": "6",
+          "career": "Paratrooper"
+        },
+        {
+          "range": "7",
+          "career": "112 Emergency Responder"
+        },
+        {
+          "range": "8",
+          "career": "Bratva Gangster"
+        },
+        {
+          "range": "9",
+          "career": "Caledonian Noble"
+        },
+        {
+          "range": "10",
+          "career": "Claymore Duellist"
+        },
+        {
+          "range": "11",
+          "career": "Free Miner"
+        },
+        {
+          "range": "12",
+          "career": "Frontier Doctor"
+        },
+        {
+          "range": "13",
+          "career": "Hardcase"
+        },
+        {
+          "range": "14",
+          "career": "Irmandinhos Smuggler"
+        },
+        {
+          "range": "15",
+          "career": "Loup-Garou"
+        },
+        {
+          "range": "16",
+          "career": "Merovingian Commercial Agent"
+        },
+        {
+          "range": "17",
+          "career": "Militia Member"
+        },
+        {
+          "range": "18",
+          "career": "Spetsnaz"
+        },
+        {
+          "range": "19–20",
+          "career": "Roll on general Faction Career Table"
+        }
+      ],
+      "Antipode Career Table": [
+        {
+          "range": "1–3",
+          "career": "Scavenger"
+        },
+        {
+          "range": "4–8",
+          "career": "Antipode Warlord"
+        },
+        {
+          "range": "9–12",
+          "career": "Assault Pack Member"
+        },
+        {
+          "range": "13–16",
+          "career": "Forest Ranger"
+        },
+        {
+          "range": "17–20",
+          "career": "Raider"
+        }
+      ],
+      "Dogface/Wulver Career Table": [
+        {
+          "range": "1–3",
+          "career": "Scavenger"
+        },
+        {
+          "range": "4–5",
+          "career": "Assault Pack Leader"
+        },
+        {
+          "range": "6–7",
+          "career": "Dog-Bowl Player"
+        },
+        {
+          "range": "8–9",
+          "career": "Dog Nation Activist"
+        },
+        {
+          "range": "10–11",
+          "career": "Forest Ranger"
+        },
+        {
+          "range": "12–14",
+          "career": "Dog-Blooded Irregular"
+        },
+        {
+          "range": "15–16",
+          "career": "Raider"
+        },
+        {
+          "range": "17–18",
+          "career": "Volk"
+        },
+        {
+          "range": "19–20",
+          "career": "Wulver Shock Troop"
+        }
+      ]
     }
   },
   "careerFilters": {
