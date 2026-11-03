@@ -1,0 +1,181 @@
+{
+  "build": "v63-yu-jing-faction-book",
+  "source": {
+    "product": "MUH050226",
+    "file": "MUH050226 Infinity - Yu Jing Faction Book.pdf",
+    "authority": "Faction-book Yu Jing character-creation entries supersede their Corebook counterparts when its variant Lifepath rules are used.",
+    "sections": [
+      "Chapter 5 — Yu Jing Gear (pp. 71–83)",
+      "Chapter 6 — Yu Jingese Characters (pp. 84–97)"
+    ]
+  },
+  "scope": {
+    "equipment_before": 278,
+    "equipment_after": 337,
+    "equipment_added": 59,
+    "equipment_updated": [
+      "X Visor"
+    ],
+    "weapons_after": 99,
+    "nonweapon_records_after": 238,
+    "careers_source_total": 20,
+    "careers_added": 18,
+    "careers_already_present": [
+      "TAG Pilot",
+      "Smuggler"
+    ],
+    "faction_records_added": [
+      "Yu Jing - StateEmpire Army",
+      "Yu Jing - Yănjīng Intelligence",
+      "Yu Jing - Invincible Army"
+    ],
+    "faction_records_corrected": [
+      "Yu Jing",
+      "Yu Jing - Imperial Service",
+      "Yu Jing - Tiger Soldiers"
+    ]
+  },
+  "homeworld_relationship": {
+    "source_basis": "Yu Jing Heritage Table",
+    "yu_jing_homeworlds": [
+      "Shentang",
+      "Yutang",
+      "Sol (Chung Kuo)",
+      "Paradiso",
+      "Svalarheima",
+      "Human Edge"
+    ],
+    "correction": "Replaces the previous generic Yu Jing homeworld string that included Earth and omitted Paradiso and Human Edge."
+  },
+  "careers": {
+    "yu_jing_table": [
+      "Special Forces",
+      "Intelligence Operative",
+      "Celestial Guard",
+      "Bōsōzoku",
+      "TAG Pilot",
+      "Internal Affairs Agent",
+      "Jopok",
+      "Ninja",
+      "Zhanshi Gōngchéng Mech-Engineers",
+      "Subversive",
+      "Wú Míng Assault Corps",
+      "Artisan",
+      "Combat Pilot",
+      "Yănjīng Agent",
+      "Imperial Agent"
+    ],
+    "japanese_table": [
+      "Intelligence Operative",
+      "Artisan",
+      "Combat Pilot",
+      "Smuggler",
+      "Jopok",
+      "Bōsōzoku",
+      "Subversive",
+      "Kuge Aristocrat",
+      "NeoBushi",
+      "Ninja",
+      "Oniwaban"
+    ],
+    "faction_prerequisite_careers": [
+      "Celestial Guard",
+      "Internal Affairs Agent",
+      "Zhanshi Gōngchéng Mech-Engineers",
+      "Yănjīng Agent",
+      "Imperial Agent",
+      "Kuge Aristocrat",
+      "Oniwaban"
+    ],
+    "note": "The unified Career dropdown now exposes these source careers. The current sheet does not automate Lifepath hazard rolls or era-dependent defection/status changes."
+  },
+  "lifepath_metadata": {
+    "homeworld_columns": [
+      "Shentang",
+      "Yutang",
+      "Sol (Chung Kuo)",
+      "Paradiso",
+      "Svalarheima",
+      "Human Edge"
+    ],
+    "heritages": [
+      "Shuǎlài",
+      "Guanxi",
+      "Chinese",
+      "Laowai",
+      "Imperial",
+      "Party"
+    ],
+    "social_class_attribute_earnings": [
+      [
+        "Dissident",
+        "Willpower",
+        0
+      ],
+      [
+        "Underclass",
+        "Willpower",
+        1
+      ],
+      [
+        "Demogrant",
+        "Agility",
+        2
+      ],
+      [
+        "Middle",
+        "Personality",
+        3
+      ],
+      [
+        "Upper",
+        "Agility",
+        4
+      ],
+      [
+        "Elite",
+        "Personality",
+        5
+      ],
+      [
+        "Hyper-Elite",
+        "Willpower",
+        6
+      ]
+    ],
+    "stored_in_data": true,
+    "rendered_as_new_fields": false
+  },
+  "equipment_coverage": {
+    "categories": [
+      "ammunition",
+      "armour and armour variants",
+      "augmentations",
+      "poison/explosive/drugs",
+      "melee weapons",
+      "ranged weapons",
+      "hacking programs/upgrades",
+      "remotes",
+      "tools and smart clothing",
+      "vehicles"
+    ],
+    "source_reference_only_records": "Vehicles, remotes, and other non-personal-loadout records are retained in the database but marked loadoutEligible=false so normal/random equipment selection does not treat them as carried personal gear.",
+    "armour_convention": "Existing sheet convention remains Light 5 / Medium 10 / Heavy or powered 15. Exact sourcebook Armour/BTS values are preserved in each item's Rules/Notes text.",
+    "rarity_mapping": "The sourcebook uses Restriction ratings rather than the sheet's Common/Uncommon/Rare vocabulary. For display only, Restriction 1–5 is mapped to Common/Uncommon/Rare/Very Rare/Legendary. Variable or variant-only entries remain Variable/Restricted-style source references rather than inventing a rating.",
+    "x_visor_correction": "Updated to the sourcebook effect: ignore one Difficulty worth of range penalties on Ballistics or Observation tests."
+  },
+  "deliberate_nonconversions": [
+    "Yu Jing adolescent/heritage event traits were not converted into the sheet's custom skill-bonus Trait model because the sourcebook treats them as narrative Lifepath traits and event outcomes, not as the custom primary/secondary-skill mechanics used by this sheet.",
+    "Full random Lifepath event generation, social-status UI, heritage UI, and era-dependent Japanese Uprising logic were not added because the current character sheet has no corresponding fields/workflow.",
+    "No source gaps were silently filled with invented rules; where a source value is variant-only or not priced as ordinary personal equipment, the record is marked accordingly."
+  ],
+  "regression_checks": {
+    "embedded_index_data_matches_data_js": true,
+    "duplicate_equipment_names": 0,
+    "duplicate_faction_names": 0,
+    "weapon_references_valid": true,
+    "equipment_references_valid": true,
+    "random_gear_respects_loadout_eligibility": true,
+    "campaign_archive_touched": false
+  }
+}
