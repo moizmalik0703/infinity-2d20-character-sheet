@@ -125,8 +125,29 @@ function isPanOceaniaFaction(faction) {
   return value === "PanOceania" || value.startsWith("PanOceania -");
 }
 
+function isNomadsFaction(faction) {
+  const value = String(faction || "").trim();
+  return value === "Nomads" || value.startsWith("Nomads -");
+}
+
 function usesSourceHostHeritage(faction) {
-  return isAriadnaFaction(faction) || isPanOceaniaFaction(faction);
+  return isAriadnaFaction(faction) || isPanOceaniaFaction(faction) || isNomadsFaction(faction);
+}
+
+function isUpliftHost() {
+  return isNomadsFaction(inputField("faction")?.value || "") && selectedHostHeritage() === "Uplift";
+}
+
+function selectedUpliftSpecies() {
+  return isUpliftHost() ? (inputField("upliftSpecies")?.value || "") : "";
+}
+
+function selectedUpliftBody() {
+  return isUpliftHost() ? (inputField("upliftBody")?.value || "") : "";
+}
+
+function upliftCareerNames() {
+  return DATA.nomadsReference?.uplift?.careerLists?.[selectedUpliftSpecies()] || [];
 }
 
 function selectedHostHeritage() {
@@ -157,6 +178,9 @@ function hostOptionsForFaction(faction) {
   if (isPanOceaniaFaction(selected)) {
     return configured.filter(value => value === DEFAULT_HOST_HERITAGE || value === "Helot");
   }
+  if (isNomadsFaction(selected)) {
+    return configured.filter(value => value === DEFAULT_HOST_HERITAGE || value === "Uplift");
+  }
   if (!isAriadnaFaction(selected)) return [DEFAULT_HOST_HERITAGE];
 
   // Antipodes use the broad Ariadna faction rather than a human national/service
@@ -170,6 +194,9 @@ function hostHomeworldsForFaction(faction, host = selectedHostHeritage()) {
 
   if (isPanOceaniaFaction(faction) && host === "Helot") {
     return [...(DATA.homeworldsByFaction?.["PanOceania - Helot"] || ["Varuna"])];
+  }
+  if (isNomadsFaction(faction) && host === "Uplift") {
+    return [...(DATA.homeworldsByFaction?.["Nomads - Uplift"] || ["Praxis Black Labs"])];
   }
   if (!isAriadnaFaction(faction)) return base;
 
@@ -191,6 +218,7 @@ function sourceCareerOptionsForFaction(faction, allCareers) {
   const sourceKey = selected.startsWith("Haqqislam") ? "Haqqislam"
     : selected.startsWith("Yu Jing") ? "Yu Jing"
     : selected.startsWith("PanOceania") ? "PanOceania"
+    : selected.startsWith("Nomads") ? "Nomads"
     : "";
   const configured = sourceKey ? DATA.careerOptionsByFaction?.[sourceKey] : null;
   if (!Array.isArray(configured) || !configured.length) return null;
@@ -203,12 +231,16 @@ function hostCareerOptions() {
   const host = selectedHostHeritage();
   const config = hostHeritageConfig(host);
 
+  if (isNomadsFaction(faction) && host === "Uplift") {
+    return sortNames(upliftCareerNames().filter(career => all.includes(career)));
+  }
+
   // A non-standard Birth Host can impose a source-specific career set.
   if (host !== DEFAULT_HOST_HERITAGE && Array.isArray(config.allowedCareers)) {
     return sortNames(config.allowedCareers.filter(career => all.includes(career)));
   }
 
-  // Haqqislam, Yu Jing and PanOceania use their faction-book career tables as
+  // Haqqislam, Yu Jing, PanOceania and Nomads use their faction-book career tables as
   // the visible Career selector. General / Unrestricted remains available for
   // standard human house-rule characters and legacy imports.
   const sourceCareers = sourceCareerOptionsForFaction(faction, all);
@@ -224,6 +256,9 @@ function isCareerCompatibleWithHost(career, host = selectedHostHeritage()) {
   const value = String(career || "").trim();
   if (!value || value === GENERAL_CAREER) return host === DEFAULT_HOST_HERITAGE;
   const faction = inputField("faction")?.value || "";
+  if (isNomadsFaction(faction) && host === "Uplift") {
+    return upliftCareerNames().includes(value);
+  }
   const config = hostHeritageConfig(host);
   if (host !== DEFAULT_HOST_HERITAGE && Array.isArray(config.allowedCareers)) {
     return config.allowedCareers.includes(value);
@@ -274,6 +309,63 @@ function refreshHostHeritageChoices({ value, preserve = true } = {}) {
   select.value = preserve && choices.includes(requested) ? requested : fallback;
   select.disabled = !usesSourceHostHeritage(faction);
   refreshHostStateChoices({ preserve: false });
+  refreshUpliftChoices({ preserve: true });
+  refreshNomadHeritageChoices({ preserve: true });
+}
+
+
+function nomadHeritageForHomeworld(homeworld) {
+  const world = String(homeworld || "").trim();
+  if (world === "Bakunin" || world.startsWith("Praxis ") || world === "Undocumented Orbital") return "Bakunian";
+  if (world === "Corregidor") return "Corregidoran";
+  if (world === "Tunguska") return "Tunguskan";
+  if (world === "Planet, Other Faction") return "Lub’";
+  if (world === "Commercial Mission") return "Missionary";
+  if (world === "Orbitals, Human Edge") return "Vagrant";
+  return "";
+}
+
+function refreshNomadHeritageChoices({ value, preserve = true, forceFromHomeworld = false } = {}) {
+  const select = inputField("nomadHeritage");
+  const label = document.getElementById("nomadHeritageLabel");
+  if (!select) return;
+  const nomad = isNomadsFaction(inputField("faction")?.value || "");
+  if (label) label.hidden = !nomad;
+  const choices = DATA.lists?.nomadHeritage || [];
+  const requested = value !== undefined ? String(value || "") : String(select.value || "");
+  const sourceDefault = isUpliftHost() ? "Bakunian" : nomadHeritageForHomeworld(inputField("homeworld")?.value || "");
+  makeOptions(select, choices, "Choose...");
+  select.value = isUpliftHost() ? "Bakunian" : forceFromHomeworld ? sourceDefault : preserve && choices.includes(requested) ? requested : sourceDefault;
+  select.disabled = !nomad || isUpliftHost();
+}
+
+function refreshUpliftChoices({ species, body, preserve = true } = {}) {
+  const enabled = isUpliftHost();
+  const config = [
+    [inputField("upliftSpecies"), document.getElementById("upliftSpeciesLabel"), DATA.lists?.upliftSpecies || [], species],
+    [inputField("upliftBody"), document.getElementById("upliftBodyLabel"), DATA.lists?.upliftBody || [], body]
+  ];
+  for (const [select, label, choices, specified] of config) {
+    if (label) label.hidden = !enabled;
+    if (!select) continue;
+    const requested = specified !== undefined ? String(specified || "") : String(select.value || "");
+    makeOptions(select, choices, "Choose...");
+    select.value = enabled && preserve && choices.includes(requested) ? requested : "";
+    select.disabled = !enabled;
+  }
+}
+
+function upliftSourceStatus() {
+  if (!isUpliftHost()) return "";
+  const source = DATA.nomadsReference?.uplift || {};
+  const species = selectedUpliftSpecies();
+  const body = selectedUpliftBody();
+  if (!species || !body) return "Choose both an Uplift Species and a Body / Platform; these are separate source decisions.";
+  const speciesInfo = source.species?.[species];
+  const bodyInfo = source.bodies?.[body];
+  const speciesCost = speciesInfo?.lifePoints ?? "?";
+  const bodyCost = bodyInfo?.alternateCosts?.[species] ?? bodyInfo?.lifePoints ?? "?";
+  return `Uplift ${species}, ${body}: Species ${speciesCost} LP, Body ${bodyCost} LP. Species Trait: ${speciesInfo?.trait || "—"}. ${(speciesInfo?.abilities || []).join("; ")}. Body: ${bodyInfo?.rules || ""}`;
 }
 
 function hostMainSkillModifier(mainSkill) {
@@ -281,6 +373,12 @@ function hostMainSkillModifier(mainSkill) {
   const state = selectedHostState();
   const base = Number(config.mainSkillModifiers?.[mainSkill] || 0);
   const form = Number(config.formMainSkillModifiers?.[state]?.[mainSkill] || 0);
+  if (isUpliftHost()) {
+    const uplift = DATA.nomadsReference?.uplift;
+    const species = Number(uplift?.species?.[selectedUpliftSpecies()]?.mainSkillModifiers?.[mainSkill] || 0);
+    const body = Number(uplift?.bodies?.[selectedUpliftBody()]?.mainSkillModifiers?.[mainSkill] || 0);
+    return base + form + species + body;
+  }
   return base + form;
 }
 
@@ -304,7 +402,7 @@ function updateHostHeritageStatus() {
   if (!status) return;
   const faction = inputField("faction")?.value || "";
   if (!usesSourceHostHeritage(faction)) {
-    status.textContent = "Host / Heritage: standard human host for this faction. Ariadna and PanOceania have additional source-backed Host / Heritage options.";
+    status.textContent = "Host / Heritage: standard human host for this faction. Ariadna, PanOceania and Nomads have additional source-backed Host / Heritage options.";
     return;
   }
   const host = selectedHostHeritage();
@@ -319,7 +417,9 @@ function updateHostHeritageStatus() {
   if (hostVigorSoakBonus()) extras.push(`Vigour soak +${hostVigorSoakBonus()}`);
   if (config.firewallDisabled) extras.push("Firewall unavailable");
   const summary = [...mods, ...extras].join("; ");
-  status.textContent = `Host / Heritage: ${host}${state ? ` — ${state}` : ""}.${summary ? ` Effective modifiers: ${summary}.` : ""} ${config.rules || ""}`;
+  status.textContent = isUpliftHost()
+    ? `Host / Heritage: Uplift. ${upliftSourceStatus()}${summary ? ` Effective modifiers: ${summary}.` : ""}`
+    : `Host / Heritage: ${host}${state ? ` — ${state}` : ""}.${summary ? ` Effective modifiers: ${summary}.` : ""} ${config.rules || ""}`;
 }
 
 function applyHostHeritageEffects({ recoverVigor = false } = {}) {
@@ -835,10 +935,14 @@ function initLists() {
   const host = inputField("hostHeritage");
   const hostState = inputField("hostState");
   const career = inputField("career");
+  const homeworld = inputField("homeworld");
+  const upliftSpecies = inputField("upliftSpecies");
+  const upliftBody = inputField("upliftBody");
 
   refreshHostHeritageChoices({ value: DEFAULT_HOST_HERITAGE, preserve: false });
   refreshCareerChoices({ value: GENERAL_CAREER, preserve: false });
   refreshHomeworldChoices({ preserve: false });
+  refreshNomadHeritageChoices({ preserve: false });
 
   if (career) career.addEventListener("change", refreshRestrictionChoices);
 
@@ -847,6 +951,7 @@ function initLists() {
       refreshHostHeritageChoices({ value: DEFAULT_HOST_HERITAGE, preserve: false });
       refreshCareerChoices({ preserve: false });
       refreshHomeworldChoices({ preserve: false });
+      refreshNomadHeritageChoices({ preserve: false });
       refreshRestrictionChoices();
       applyHostHeritageEffects({ recoverVigor: false });
       syncDogfaceAutomation();
@@ -858,6 +963,7 @@ function initLists() {
       refreshHostStateChoices({ preserve: false });
       refreshCareerChoices({ preserve: false });
       refreshHomeworldChoices({ preserve: true });
+      refreshNomadHeritageChoices({ preserve: false });
       refreshRestrictionChoices();
       applyHostHeritageEffects({ recoverVigor: false });
       syncDogfaceAutomation();
@@ -865,6 +971,13 @@ function initLists() {
   }
 
   if (hostState) hostState.addEventListener("change", handleHostStateChange);
+  if (homeworld) homeworld.addEventListener("change", () => refreshNomadHeritageChoices({ forceFromHomeworld: true }));
+  if (upliftSpecies) upliftSpecies.addEventListener("change", () => {
+    refreshCareerChoices({ preserve: false });
+    refreshRestrictionChoices();
+    applyHostHeritageEffects({ recoverVigor: false });
+  });
+  if (upliftBody) upliftBody.addEventListener("change", () => applyHostHeritageEffects({ recoverVigor: false }));
   applyHostHeritageEffects({ recoverVigor: false });
 }
 
@@ -1312,7 +1425,7 @@ function applyState(rawState) {
 
   // Identity dependencies are restored in order so Faction -> Host -> Homeworld /
   // Career filtering is valid before the rest of the saved sheet is applied.
-  const specialFields = new Set(["faction", "hostHeritage", "hostState", "homeworld", "career"]);
+  const specialFields = new Set(["faction", "hostHeritage", "hostState", "homeworld", "career", "nomadHeritage", "upliftSpecies", "upliftBody"]);
   document.querySelectorAll("input[data-field], textarea[data-field], select[data-field]").forEach(el => {
     if (!specialFields.has(el.dataset.field) && state[el.dataset.field] !== undefined) el.value = state[el.dataset.field];
   });
@@ -1321,7 +1434,9 @@ function applyState(rawState) {
   if (factionField) factionField.value = state.faction || "";
   refreshHostHeritageChoices({ value: state.hostHeritage || DEFAULT_HOST_HERITAGE, preserve: true });
   refreshHostStateChoices({ value: state.hostState || "", preserve: true });
+  refreshUpliftChoices({ species: state.upliftSpecies || "", body: state.upliftBody || "", preserve: true });
   refreshHomeworldChoices({ value: state.homeworld || "", preserve: true });
+  refreshNomadHeritageChoices({ value: state.nomadHeritage || "", preserve: true });
   refreshCareerChoices({ value: state.career || GENERAL_CAREER, preserve: true, allowLegacy: true });
   setCareerChoice(state.career || GENERAL_CAREER, legacyRestriction);
   refreshRestrictionChoices();
@@ -1362,7 +1477,8 @@ function applyState(rawState) {
   const migratedWeaponEquipment = [];
   const legacyWeaponToEquipment = {
     "Fireflies Grenade (BS)": "Fireflies Grenade",
-    "Palad Khik (BS)": "Palad Khik Ammo"
+    "Palad Khik (BS)": "Palad Khik Ammo",
+    "CrazyKoala Mine (BS)": "CrazyKoala Mine"
   };
   (state.weapons || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-weapon-select="${i}"]`);
@@ -1966,7 +2082,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v70-panoceania-source-reconciliation",
+    build: "v71-nomads-source-reconciliation",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -2483,7 +2599,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v70-panoceania-source-reconciliation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v71-nomads-source-reconciliation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -2758,12 +2874,15 @@ function buildPrintCorePage(page, total) {
     ["Player", printValue("player")],
     ["Faction", factionValue],
     ["Homeworld / Habitat", printValue("homeworld")],
+    ...(isNomadsFaction(factionValue) ? [["Nomad Heritage", printValue("nomadHeritage")]] : []),
     ...(showHost ? [["Host / Heritage", printValue("hostHeritage") || DEFAULT_HOST_HERITAGE], ["Current Form", printValue("hostState")]] : []),
+    ...(isNomadsFaction(factionValue) && selectedHostHeritage() === "Uplift" ? [["Uplift Species", printValue("upliftSpecies")], ["Body / Platform", printValue("upliftBody")]] : []),
     ["Career", printValue("career")]
   ].filter(([, value]) => value);
 
   const hostConfig = hostHeritageConfig();
-  const hostRules = showHost && selectedHostHeritage() !== DEFAULT_HOST_HERITAGE ? `<div class="print-rule-reminder"><b>Host / Heritage:</b> ${printText(hostConfig.rules, "")}</div>` : "";
+  const hostRuleText = isUpliftHost() ? upliftSourceStatus() : hostConfig.rules;
+  const hostRules = showHost && selectedHostHeritage() !== DEFAULT_HOST_HERITAGE ? `<div class="print-rule-reminder"><b>Host / Heritage:</b> ${printText(hostRuleText, "")}</div>` : "";
   const identity = printSection("Character Identity", `<div class="print-fields">${fields.map(field => printField(...field)).join("")}</div>${hostRules}`);
 
   const mainSkillChips = mainSkills.map(printMainSkillCard).join("");
@@ -4133,12 +4252,12 @@ function homeworldGlossaryText(name, factions) {
   const linkedFactions = compactList(factions.length ? factions : factionRecords.map(record => record.faction), 18);
   const lines = [];
   // Source-backed homeworld detail (Ariadna and Haqqislam).
-  const sourceHomeworld = DATA.ariadnaReference?.homelands?.[name] || DATA.haqqislamReference?.homelands?.[name] || DATA.yuJingSource?.homelands?.[name] || DATA.panOceaniaReference?.homelands?.[name] || null;
+  const sourceHomeworld = DATA.ariadnaReference?.homelands?.[name] || DATA.haqqislamReference?.homelands?.[name] || DATA.yuJingSource?.homelands?.[name] || DATA.panOceaniaReference?.homelands?.[name] || DATA.nomadsReference?.homelands?.[name] || null;
   if (sourceHomeworld) {
     const sourceLabel = sourceHomeworld.source || (DATA.ariadnaReference?.homelands?.[name] ? "Infinity RPG — Ariadna Supplement" : DATA.haqqislamReference?.source || "Infinity RPG sourcebook");
     const origin = sourceHomeworld.nation || sourceHomeworld.region || "";
     if (origin) lines.push(`Source region: ${origin}.`);
-    if (sourceHomeworld.parentWorld && sourceHomeworld.parentWorld !== name) lines.push(`Yu Jing Lifepath parent world: ${sourceHomeworld.parentWorld}.`);
+    if (sourceHomeworld.parentWorld && sourceHomeworld.parentWorld !== name) lines.push(`Lifepath parent world: ${sourceHomeworld.parentWorld}.`);
     if (sourceHomeworld.selectionRole) lines.push(`Sheet origin role: ${sourceHomeworld.selectionRole}.`);
     if ((sourceHomeworld.languages || []).length) lines.push(`Languages: ${sourceHomeworld.languages.join("; ")}.`);
     if (sourceHomeworld.page) lines.push(`Source: ${sourceLabel}, p. ${sourceHomeworld.page}.`);
@@ -4201,7 +4320,7 @@ function buildGlossaryEntries() {
     ["Sub-skills", "Rule", ["Skill tests", "Focus allowed"], "Sub-skills inherit the relevant main skill rating, then add starting allocation and applicable Trait/Talent modifiers. Focus may be assigned only to sub-skills."],
     ["Focus", "Rule", ["Sub-skills only"], "Focus represents specialist training. Main skills cannot use Focus; assign Focus to specific sub-skills such as Ballistics, Hacking, Medicine, Persuade, or Survival."],
     ["Career", "Character option", ["Eligibility", "Traits", "Talents"], "Career is the single field used for eligibility filtering. Choosing a Career filters Trait and Talent options while keeping general/unrestricted options available."],
-    ["Host / Heritage", "Character option", ["Ariadna", "PanOceania", "Dogface", "Wulver", "Antipode", "Helot"], "Host / Heritage is separate from Career. Ariadna supports Dogface, Wulver and Antipode; PanOceania supports Helot. Source host modifiers and compatible-career rules apply without consuming one of the three ordinary Trait slots."],
+    ["Host / Heritage", "Character option", ["Ariadna", "PanOceania", "Nomads", "Dogface", "Wulver", "Antipode", "Helot", "Uplift"], "Host / Heritage is separate from Career. Ariadna supports Dogface, Wulver and Antipode; PanOceania supports Helot; Nomads supports Uplift with separate Species and Body / Platform. Host modifiers apply without occupying an ordinary Trait slot."],
     ["Faction / Homeworld relationship", "Character option", ["Validation"], "Homeworld / Habitat choices are filtered by the selected Faction. Changing Faction clears an invalid Homeworld / Habitat selection so saved characters keep a valid relationship."],
     ["Armour", "Resource", ["Light 5", "Medium 10", "Heavy 15"], "Armour replaces Temporary HP in this custom sheet. Armour can be selected directly or inferred from selected armour equipment."],
     ["HP / Vigor", "Resource", ["0–20"], "The character's physical endurance track. Damage and recovery should be handled according to the GM's current 2D20 scene rules."],
@@ -4249,6 +4368,44 @@ function buildGlossaryEntries() {
 
     const normalisation = (panO.normalizationNotes || []).join(" ");
     if (normalisation) entries.push(glossaryEntry("Source References","PanOceania Source Normalisation Notes","PanOceania Reference",[panO.source],normalisation,normalisation));
+  }
+
+
+  const nomads = DATA.nomadsReference;
+  if (nomads) {
+    const rows = (values, fn) => (values || []).map(fn).join("; ");
+    const reference = (name, page, text) => entries.push(glossaryEntry("Source References", name, "Nomads Reference", [`Source: ${nomads.source}, ${page}`], text, text));
+
+    reference("Nomad Heritage Traits", "p. 57", rows(nomads.heritages, row => `${row.region}: ${row.heritage}. ${row.note}`));
+    reference("Nomad Social Status Table", "p. 58", rows(nomads.socialStatusTable, row =>
+      `${row.roll}: ${(row.values || []).map((v,i) => `${nomads.socialStatusColumns?.[i] || i}: ${v}`).join(", ")}`));
+    reference("Nomad Social Class Table", "p. 58", rows(nomads.socialClasses, row =>
+      `${row.roll}: ${row.status} (+1 ${row.attribute}, Earnings ${row.earnings})`));
+    reference("Nomad Home Environments", "p. 58", rows(nomads.homeEnvironments, row =>
+      `${row.roll}: ${row.name} (+1 ${row.attribute}, ${row.skill})`));
+    reference("Nomad Adolescent Event Table", "p. 59", rows(nomads.adolescentEvents, row =>
+      `${row.roll}. ${row.trait}: ${row.effect}`));
+    reference("Nomad Faction Career Table", "p. 60", rows(nomads.careerTable, row =>
+      `${row.range}: ${row.career}${row.flags?.length ? ` [${row.flags.join(", ")}]` : ""}`));
+    reference("Nomad Heritage Careers", "p. 60", Object.entries(nomads.heritageCareers || {}).map(([k,v])=>`${k}: ${v.join(", ")}`).join("; ") + ". " + (nomads.heritageCareerRule || ""));
+    reference("Nomad Career Event Table", "p. 61", rows(nomads.careerEvents, row => `${row.roll}. ${row.result} ${row.effect}`));
+    reference("Nomad ‘Cat Squads", "p. 62", rows(nomads.catSquads, row =>
+      `${row.roll}: ${row.squad}; electives ${row.electiveSkills.join(", ")}; gear ${row.gear.join(", ")}; Earnings ${row.earnings}`));
+    const uplift = nomads.uplift || {};
+    reference("Uplift Species", "pp. 85–86", Object.entries(uplift.species || {}).map(([name, x]) =>
+      `${name}: ${x.lifePoints} LP; trait ${x.trait}; ${x.abilities.join(", ")}`).join("; "));
+    reference("Uplift Bodies / Platforms", "pp. 87–88", Object.entries(uplift.bodies || {}).map(([name,x]) =>
+      `${name}: ${x.lifePoints} LP; ${x.rules}`).join("; "));
+    reference("Uplift Lab Table", "p. 88", rows(uplift.labs, row =>
+      `${row.roll}: ${row.region}, ${row.languages}; ${row.skill}`));
+    reference("Uplift Social Class Table", "p. 89", rows(uplift.socialStatus, row =>
+      `${row.roll}: ${row.status}, +1 ${row.attribute}, Earnings ${row.earnings}`));
+    reference("Uplift Awakening Table", "p. 89", rows(uplift.awakening, row =>
+      `${row.roll}: ${row.skill} [${row.talent}]`));
+    reference("Uplift Species Career Tables", "p. 90", Object.entries(uplift.careerLists || {}).map(([k,v]) =>
+      `${k}: ${v.join(", ")}`).join("; ") + ". " + (uplift.careerNotes || ""));
+    if (nomads.doubleAgentRule) reference("Nomad Double Agents", "p. 60", nomads.doubleAgentRule);
+    if ((nomads.sourceNotes||[]).length) reference("Nomads Source Normalisation Notes", "sourcebook", nomads.sourceNotes.join(" "));
   }
 
   const haqq = DATA.haqqislamReference;
@@ -4518,7 +4675,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v70-panoceania-source-reconciliation";
+  document.documentElement.dataset.infinityBuild = "v71-nomads-source-reconciliation";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
