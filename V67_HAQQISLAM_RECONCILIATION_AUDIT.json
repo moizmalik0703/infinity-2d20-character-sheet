@@ -1,0 +1,62 @@
+{
+  "build": "v67-haqqislam-source",
+  "purpose": "Reconcile the online Infinity 2D20 character sheet with the Haqqislam Supplement supplied in the user's Google Drive source folder.",
+  "source": {
+    "book": "MUH050253 Infinity RPG - Haqqislam Supplement.pdf",
+    "label": "Infinity RPG — Haqqislam Supplement",
+    "chapters": {
+      "faction": 4,
+      "bourak": 13,
+      "caravanserai": 37,
+      "gear": 63,
+      "characters": 76,
+      "livingHaqqislam": 87
+    }
+  },
+  "sourceBackedChanges": [
+    "Replaces placeholder Haqq faction choices with Haqqislam, Sword of Allah, Qapu Khalqi, Hassassin Bahram, and Guilds.",
+    "Adds 17 Bourak / Haqqislam Homeworld or Habitat choices and explicit Faction relationships.",
+    "Adds the Haqq Faction Social Status Table, Al-Mustaslaha table/rules, Adolescent Event Table, Expanded Faction Career Table, and Hassassin Orders Table to source-reference data and the browser glossary.",
+    "Adds 16 new Haqq source career profiles; the already-existing Special Forces profile is cross-referenced to the Haqq supplement.",
+    "Adds source attribute modifiers, mandatory/elective skills, earnings, career gear and special restrictions to Career glossary entries.",
+    "Adds 60 Haqq source gear records, including 6 weapons, augmentations, programs, drugs, poisons, tools, armour variants, remotes and vehicle reference profiles.",
+    "Adds missing Haqq adolescent-event Trait names without overwriting existing same-name generic Traits.",
+    "Adds source/page metadata to Haqq faction, homeworld, career, Trait and gear reference content.",
+    "Adds migration from legacy Akbar/Ghulam/Fiday/Janissary/Khawarij/Scholar-Physician placeholder factions to source-backed faction choices.",
+    "Migrates the legacy 360* Visor spelling to 360° Visor.",
+    "Prevents location-based source armour such as Ad-Qali and Khafiin from being silently converted to the custom 5/10/15 Armour track; the sheet shows a manual-source-profile notice instead."
+  ],
+  "preservedCustomContent": [
+    "Existing custom Haqq talent chains are retained for compatibility but are not falsely source-tagged as Haqqislam Supplement content.",
+    "Existing custom Career filtering, main-skill/Focus house rules, Dogface automation, browser saves, XML import/export, print portfolio, 5 Weapon slots and 10 Equipment slots remain intact."
+  ],
+  "sourceNormalisation": [
+    "Persuasion is normalised to the sheet skill name Persuade.",
+    "Ballistic in the Kum Ganger and Muhafiz Agent source profiles is normalised to Ballistics.",
+    "The Khawarij mandatory line Athletics / Discipline / Athletics is preserved exactly rather than silently guessing a replacement skill.",
+    "Boarding-Colt follows the narrative/index spelling; the source table rendering contains Boading-Col.",
+    "Rihla Rations follows the gear catalogue spelling; one career line prints Riha Rations."
+  ],
+  "validation": {
+    "appSyntax": "PASS",
+    "dataSyntax": "PASS",
+    "embeddedDataMatchesDataJs": true,
+    "inlineAppMatchesAppJs": true,
+    "oldBuildMarkerAbsent": true,
+    "canonicalHaqqFactionCount": 5,
+    "haqqHomeworldCount": 17,
+    "newSourceCareerProfileCount": 16,
+    "specialForcesAdditionalHaqqSource": true,
+    "haqqSourceGearCount": 60,
+    "sourceWeaponDropdownMissing": [],
+    "sourceEquipmentDropdownMissing": [],
+    "duplicateTraits": [],
+    "duplicateTalents": [],
+    "duplicateEquipment": [],
+    "legacyFactionMigration": true,
+    "legacyVisorMigration": true,
+    "manualSourceArmourGuard": true,
+    "sourceReferencesGlossary": true,
+    "adolescentEventTraitCoverage": true
+  }
+}
