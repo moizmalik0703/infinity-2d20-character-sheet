@@ -1,0 +1,157 @@
+{
+  "build": "v75-technology-workshop-foundation",
+  "date": "2026-11-04",
+  "sourceScope": {
+    "requested": "Technology of the Human Sphere (standalone sourcebook)",
+    "availability": "NOT PROVIDED in connected Google Drive source folder or project attachments",
+    "sourcebookMechanicsVerified": false,
+    "actualData": "585 existing equipment records from V74, with their existing provenance and descriptions preserved",
+    "publicCatalogReference": "https://www.human-sphere.com/Infinity_RPG"
+  },
+  "counts": {
+    "total": 585,
+    "infogear": 71,
+    "medical": 15,
+    "augmentation": 52,
+    "modification": 11,
+    "other": 436
+  },
+  "features": [
+    "Read-only technology catalogue for existing gear with fast search and category browsing",
+    "Medical equipment index includes surgical facilities, field kits and diagnostic devices",
+    "Infogear/quantronic gear grouped separately from augmentations and modifications",
+    "Safe add-to-first-free-slot without overwriting gear or enabling reference-only vehicles/facilities",
+    "Per-equipped-slot and per-item quality, modifications, notes and explicit GM review",
+    "Changing gear clears its stale annotations; editing an approved record resets GM review",
+    "Autosave/browser JSON/XML round-trip through technologyGearJson scalar",
+    "Print row short annotation without changing underlying source equipment mechanics",
+    "No expansion of weapon/equipment slots; original custom 2d20 rules unchanged",
+    "Embedded index/app source parity and no changes to data.js"
+  ],
+  "deliberateLimits": [
+    "NOT a full sourcebook import: original Technology sourcebook equipment and exact quality/modification prices/mechanics not present",
+    "User-entered quality/modification notes grant NO automatic skill, damage, Armour, Focus, rarity or cost bonus",
+    "Display categories are UI indexing convenience based on existing item types and names, not official source categories",
+    "Print rows may truncate long notes under existing layout; full notes preserved in saves",
+    "Synthetic test harness; not full real-browser interactive testing"
+  ],
+  "tests": [
+    {
+      "name": "JS parses",
+      "pass": true
+    },
+    {
+      "name": "Embedded app exact parity",
+      "pass": true
+    },
+    {
+      "name": "Embedded data exact parity",
+      "pass": true
+    },
+    {
+      "name": "V74 core remains present",
+      "pass": true
+    },
+    {
+      "name": "Dogface V66 remains present",
+      "pass": true
+    },
+    {
+      "name": "Wounds 0-3 control remains present",
+      "pass": true
+    },
+    {
+      "name": "5/10 Weapons and Equipment rows remain",
+      "pass": true
+    },
+    {
+      "name": "No data.js modifications",
+      "pass": true
+    },
+    {
+      "name": "Gear HTML compiled and V75 marker",
+      "pass": true
+    },
+    {
+      "name": "Technology UI is nonprint and in sheet",
+      "pass": true
+    },
+    {
+      "name": "Synthetic technology runtime loads",
+      "pass": true
+    },
+    {
+      "name": "Indexed counts = 585",
+      "pass": true
+    },
+    {
+      "name": "Infogear catalogue >50",
+      "pass": true
+    },
+    {
+      "name": "Augmentation catalogue >=50",
+      "pass": true
+    },
+    {
+      "name": "Medical catalogue includes surgical bay",
+      "pass": true
+    },
+    {
+      "name": "Medical catalogue includes surgical waldo",
+      "pass": true
+    },
+    {
+      "name": "Bioscanner classified as medical tool",
+      "pass": true
+    },
+    {
+      "name": "Equipment upgrades recognised",
+      "pass": true
+    },
+    {
+      "name": "Slot and item names prevent cross-item metadata leak",
+      "pass": true
+    },
+    {
+      "name": "Quality and mods included in print rows",
+      "pass": true
+    },
+    {
+      "name": "Source dataset unchanged by printing",
+      "pass": true
+    },
+    {
+      "name": "Saves include scalar technologyGearJson",
+      "pass": true
+    },
+    {
+      "name": "Saves still include scalar V74 lifepath JSON",
+      "pass": true
+    },
+    {
+      "name": "Editing approved modification resets prior GM approval",
+      "pass": true
+    },
+    {
+      "name": "Status announces approval reset",
+      "pass": true
+    },
+    {
+      "name": "GM can explicitly reapprove edited gear",
+      "pass": true
+    },
+    {
+      "name": "Replacing a gear item discards stale quality and mods",
+      "pass": true
+    },
+    {
+      "name": "Invalid 16th equipment/weapon slots blocked",
+      "pass": true
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "passed": 28,
+    "failed": 0
+  }
+}
