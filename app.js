@@ -868,7 +868,7 @@ function closestFactionHomeworld(faction, preferred = "") {
   return tokenMatch || "";
 }
 
-function refreshHomeworldChoices({ value, preserve = true } = {}) {
+function refreshHomeworldChoices({ value, preserve = true, allowLegacy = false } = {}) {
   const faction = inputField("faction")?.value || "";
   const select = inputField("homeworld");
   if (!select) return;
@@ -893,6 +893,15 @@ function refreshHomeworldChoices({ value, preserve = true } = {}) {
     return;
   }
 
+  // Older Nomad sheets used organisational habitats (shipyards, secure markets,
+  // etc.) as homes. Preserve such saved values during import until the player
+  // deliberately chooses a sourcebook origin; never invent a birthplace.
+  if (allowLegacy && isNomadsFaction(faction) && requested && !worlds.includes(requested)) {
+    ensureSelectValue(select, requested);
+    select.value = requested;
+    if (hint) hint.textContent = "Legacy Nomad homeworld preserved from saved character. You can select a sourcebook origin when ready.";
+    return;
+  }
   const selected = preserve ? closestFactionHomeworld(faction, requested) : "";
   select.value = worlds.includes(selected) ? selected : "";
 }
@@ -1435,7 +1444,7 @@ function applyState(rawState) {
   refreshHostHeritageChoices({ value: state.hostHeritage || DEFAULT_HOST_HERITAGE, preserve: true });
   refreshHostStateChoices({ value: state.hostState || "", preserve: true });
   refreshUpliftChoices({ species: state.upliftSpecies || "", body: state.upliftBody || "", preserve: true });
-  refreshHomeworldChoices({ value: state.homeworld || "", preserve: true });
+  refreshHomeworldChoices({ value: state.homeworld || "", preserve: true, allowLegacy: true });
   refreshNomadHeritageChoices({ value: state.nomadHeritage || "", preserve: true });
   refreshCareerChoices({ value: state.career || GENERAL_CAREER, preserve: true, allowLegacy: true });
   setCareerChoice(state.career || GENERAL_CAREER, legacyRestriction);
