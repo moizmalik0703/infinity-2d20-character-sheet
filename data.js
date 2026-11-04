@@ -6836,7 +6836,8 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 61,
-      "sourceRestriction": "2"
+      "sourceRestriction": "2",
+      "dogfaceCompatible": true
     },
     {
       "type": "Armour",
@@ -11819,6 +11820,23 @@ window.INFINITY_DATA = {
       "subtype": "Remote Controller",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Dogface Claws (CC)",
+      "brief": "Innate natural weapon of a Dogface, retained when transformed into Dog-Warrior form.",
+      "mechanic": "Melee; 1+2§ damage; Subtle 1; Vicious 1. Innate Dogface weapon; does not require carried gear.",
+      "rarity": "Innate",
+      "weight": "—",
+      "cost": "—",
+      "category": "Weapon",
+      "subtype": "Natural Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Dogface only; auto-managed by Host / Heritage automation.",
+      "hostRestriction": "Dogface",
+      "source": "Infinity RPG Corebook",
+      "sourcePage": 41
     }
   ],
   "conditions": [
@@ -11861,6 +11879,11 @@ window.INFINITY_DATA = {
       "name": "Exhaustion 2",
       "description": "-10 in all checks, cannot use talents. 1 long rest per Exhaustion level",
       "removal": "Brawn"
+    },
+    {
+      "name": "Fatigued",
+      "description": "+1 complication range to all skill tests. Multiple Fatigued conditions stack.",
+      "removal": "After 8 hours rest: Resistance D1. Spend Momentum to remove additional Fatigued instances; Medicine may assist."
     },
     {
       "name": "Frightened",
@@ -13545,6 +13568,7 @@ window.INFINITY_DATA = {
       "Custom Shotgun \"Readiness\" (BS)",
       "D.E.P. (BS)",
       "Dagger (CC)",
+      "Dogface Claws (CC)",
       "Dueling Bracers (CC)",
       "E/Mauler Deployable",
       "E/Mauler, Non-Hackable (BS)",
@@ -13930,6 +13954,7 @@ window.INFINITY_DATA = {
       "Drowning",
       "Exhaustion 1",
       "Exhaustion 2",
+      "Fatigued",
       "Frightened",
       "Grappled",
       "Hidden",
@@ -15850,6 +15875,10 @@ window.INFINITY_DATA = {
           "Dog-Warrior Form": 1
         },
         "recoverVigorOnEnter": "Dog-Warrior Form",
+        "innateWeapon": "Dogface Claws (CC)",
+        "fatigueCondition": "Fatigued",
+        "armourDamageOnTransform": "2+3§",
+        "woundTransformTest": "Discipline D1",
         "rules": "Scent +2d20. On Wound: Discipline D1 or transform (may voluntarily fail). Dog-Warrior form: +2 Brawn, +2 Agility, +1 Vigour soak, recover all Vigour, Monstrous, Snarling Beast and Super-Jump. Armour can be damaged. Fatigued when the form ends."
       },
       "Wulver": {
@@ -15919,4 +15948,4 @@ window.INFINITY_DATA = {
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v65-host-heritage";
+window.INFINITY_BUILD = "v66-dogface-automation";
