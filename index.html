@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v73-o12-source-reconciliation">
-  <!-- DEPLOYMENT CHECK: v73-o12-source-reconciliation | Adds persistent autosave snapshots with localStorage + IndexedDB fallback, pagehide/visibility flush, and recovery auto-load while keeping no Load button, Glossary and XML buttons, lore-clean glossary, XML import/export, logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
+  <meta name="infinity-build" content="v74-o12-character-creation-automation">
+  <!-- DEPLOYMENT CHECK: v74-o12-character-creation-automation | Adds persistent autosave snapshots with localStorage + IndexedDB fallback, pagehide/visibility flush, and recovery auto-load while keeping no Load button, Glossary and XML buttons, lore-clean glossary, XML import/export, logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2521,7 +2521,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 #nomadHeritageLabel[hidden], #upliftSpeciesLabel[hidden], #upliftBodyLabel[hidden] { display:none !important; }
 </style>
 </head>
-<body data-build="v73-o12-source-reconciliation">
+<body data-build="v74-o12-character-creation-automation">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -32935,7 +32935,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v73-o12-source-reconciliation";
+window.INFINITY_BUILD = "v74-o12-character-creation-automation";
 </script>
   <script>
 const DATA = window.INFINITY_DATA || window.DATA;
@@ -35153,7 +35153,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v73-o12-source-reconciliation",
+    build: "v74-o12-character-creation-automation",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -35670,7 +35670,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v73-o12-source-reconciliation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v74-o12-character-creation-automation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -37809,7 +37809,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v73-o12-source-reconciliation";
+  document.documentElement.dataset.infinityBuild = "v74-o12-character-creation-automation";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -37879,6 +37879,558 @@ window.addEventListener("load", () => {
   // harmless after the first successful run because initialAutoLoadDone guards it.
   window.setTimeout(runInitialAutoLoadSavedCharacter, 50);
 });
+
+
+/* V74 — opt-in O-12 Lifepath automation. The character sheet is not a replacement for the
+   complete Corebook Lifepath: unsupported dice, contacts, talents and earned gear choices
+   remain explicitly manual. All generated numeric bonuses are derived from a saved ledger. */
+(function installO12LifepathV74() {
+  const NEW_BUILD = "v74-o12-character-creation-automation";
+  const careerSources = DATA.o12Reference?.careerProfiles || {};
+  const o12Source = DATA.o12Reference || {};
+  const defaultLedger = () => ({ version: 74, lifePoints: 5, otherSpent: 0, phases: [], adolescent: null, pillar: null, criminalRecord: false });
+  let ledger = defaultLedger();
+  let rolledBureau = "";
+  let rolledCareer = "";
+  let rolledAdolescent = null;
+  let rolledEvent = null;
+  let notice = "";
+
+  const number = (n, fallback = 0) => Number.isFinite(Number(n)) ? Number(n) : fallback;
+  const el = id => document.getElementById(id);
+  const chosen = id => el(id)?.value || "";
+  const integer = n => Math.max(0, Math.floor(number(n)));
+  // Corebook pp.61–69: the six inherited O-12 careers have first-phase attributes.
+  const coreAttributes = {
+    "Special Forces": [2,2,2,1,1,0,2],
+    "Intelligence Operative": [1,3,0,2,2,1,1],
+    "Politician": [1,2,0,2,2,2,1],
+    "Diplomat": [1,2,0,2,2,2,1],
+    "Bureau Toth Agent": [1,2,0,1,2,2,2],
+    "Field Scientist": [1,2,1,2,3,1,0]
+  };
+  const inheritedFieldScientist = {
+    source:"Infinity RPG Corebook", sourcePage:63,
+    mandatorySkills:["Science","Education","Survival"],
+    electiveSkills:["Observation","Tech","Athletics"],
+    earnings:"2+1§", gear:["Analytical Kit","Survival Kit","Sensor Suite ×3"]
+  };
+  const careerRecord = name => {
+    const profile = careerSources[name] || DATA.careerProfiles?.[name] ||
+      (name === "Field Scientist" ? inheritedFieldScientist : null);
+    if (!profile) return null;
+    if (!coreAttributes[name]) return profile;
+    const keys = ["Agility","Awareness","Brawn","Coordination","Intelligence","Personality","Willpower"];
+    return {...profile,attributeBonuses:Object.fromEntries(keys.map((key,i)=>[key,coreAttributes[name][i]]))};
+  };
+  const pick = list => list[Math.floor(Math.random() * list.length)];
+  const r20 = () => Math.floor(Math.random() * 20) + 1;
+  const rollRange = value => {
+    const [lo, hi] = String(value || "").replace(/[–—]/g, "-").split("-").map(Number);
+    return [lo, Number.isFinite(hi) ? hi : lo];
+  };
+  const byRoll = (table, n) => (table || []).find(row => {
+    const [low, high] = rollRange(row.roll);
+    return n >= low && n <= high;
+  }) || null;
+  const isO12 = () => isO12Faction(inputField("faction")?.value || "");
+  // The sheet does not have a selectable Criminal Record Trait: use explicit source status.
+  const hasCriminalRecord = () => !!ledger.criminalRecord;
+  const assignmentRows = career => career === "Bureau Analyst"
+    ? (o12Source.bureauAnalystTable || []).filter(r => !/^Choose/.test(r.name))
+    : career === "Bureau Aegis Specialist"
+      ? (o12Source.aegisUnitTable || []).filter(r => !/^Choose/.test(r.name)) : [];
+
+  const eventChoices = (type, n) => {
+    const source = type === "adolescent" ? {
+      4: [["defy","Defy family (+1 Resolve, manual)"],["accept","Accept family's wishes (+1 Discipline)"]],
+      19: [["defect","Defect: GM resolves faction"],["double","Double agent: GM resolves"]]
+    } : {
+      1: [["assets","Keep quiet: 5 Assets (manual)"],["nemesis","Refuse: nemesis (manual)"]],
+      4: [["intervene","Intervene: contact + rival (manual)"],["abstain","Do nothing: +1 Discipline"]],
+      7: [["debt","Take on debt (manual)"],["stone","Refuse: +1 Discipline, Stone Cold"]],
+      11: [["help","Help crew: contacts + 1 Asset"],["report","Report crew: O-12 contact"]],
+      14: [["assets","Accept 5 Assets"],["rival","Gain rival"]],
+      17: [["evidence","Report crime: nemesis + Momentum (manual)"],["blackmail","Blackmail: trait (manual)"],["abstain","Do nothing: +1 Discipline"]]
+    };
+    return source[n] || [];
+  };
+  function ledgerModifiers() {
+    const main = {}, subs = {};
+    let vigor = 0, social = 0;
+    if (!isO12()) return { main, subs, vigor, social };
+    const first = ledger.phases[0];
+    // Corebook p. 53: attribute improvements apply to FIRST career only.
+    if (first) Object.entries(careerRecord(first.career)?.attributeBonuses || {}).forEach(([k, v]) => main[k] = number(v));
+    const addSkill = skill => { if (subSkills.includes(skill)) subs[skill] = (subs[skill] || 0) + 1; };
+    (ledger.phases || []).forEach(phase => {
+      const profile = careerRecord(phase.career) || {};
+      (profile.mandatorySkills || []).forEach(addSkill);
+      (phase.electives || []).forEach(addSkill);
+      if (phase.signature) addSkill(phase.signature);
+      const e = integer(phase.event);
+      if ((e === 4 && phase.eventChoice === "abstain") ||
+          (e === 7 && phase.eventChoice === "stone") ||
+          (e === 17 && phase.eventChoice === "abstain")) addSkill("Discipline");
+    });
+    const a = integer(ledger.adolescent?.roll);
+    if (a === 1) addSkill("Analysis");
+    if (a === 2) { main.Personality = (main.Personality || 0) - 1; main.Brawn = (main.Brawn || 0) + 1; }
+    if (a === 4 && ledger.adolescent?.choice === "accept") addSkill("Discipline");
+    if (a === 5 || a === 15) addSkill("Observation");
+    if (a === 7) vigor -= 1; // Ledger only: current HP track is not reset.
+    if (a === 9) addSkill("Stealth");
+    if (a === 14) addSkill("Animal Handling");
+    if (a === 16) addSkill("Education");
+    if (ledger.pillar === "Support") social += 1;
+    if (ledger.pillar === "None") social -= 1;
+    return { main, subs, vigor, social };
+  }
+  function lifePointsSpent() {
+    const extended = (ledger.phases || []).filter((p, i) => i >= 2).length;
+    const assignment = (ledger.phases || []).filter(p => p.assignmentMethod === "chosen").length;
+    const careerTable = (ledger.phases || []).filter(p => p.careerMethod === "faction-roll").length;
+    const events = (ledger.phases || []).filter(p => p.eventMethod === "selected").length;
+    return integer(ledger.otherSpent) + extended + assignment + careerTable + events +
+      (ledger.adolescent?.method === "selected" ? 1 : 0);
+  }
+  function remaining() { return integer(ledger.lifePoints) - lifePointsSpent(); }
+
+  // Keep printed values and table ratings in sync while avoiding changes to base
+  // attribute selects, manual starting allocation, Traits/Talents and host modifiers.
+  const previousBaseRating = baseRating;
+  baseRating = function(skill) {
+    const parent = mainSkills.includes(skill) ? skill : parentOf[skill];
+    return previousBaseRating(skill) + number(ledgerModifiers().main[parent]);
+  };
+  const previousSkillRatingParts = skillRatingParts;
+  skillRatingParts = function(skill) {
+    const result = previousSkillRatingParts(skill);
+    const extra = mainSkills.includes(skill) ? 0 : number(ledgerModifiers().subs[skill]);
+    const parent = mainSkills.includes(skill) ? skill : parentOf[skill];
+    const attr = number(ledgerModifiers().main[parent]);
+    result.lifepathBonus = extra;
+    result.bonus += extra;
+    result.total += extra;
+    if (attr) result.sources.push("O-12 Lifepath attribute " + parent + " " + (attr > 0 ? "+" : "") + attr);
+    if (extra) result.sources.push("O-12 career/event training +" + extra);
+    return result;
+  };
+  const previousUpdateRatings = updateSkillRatings;
+  updateSkillRatings = function() {
+    previousUpdateRatings();
+    document.querySelectorAll("[data-rating]").forEach(cell => {
+      const skill = cell.dataset.rating;
+      const bonus = skillRatingParts(skill).lifepathBonus;
+      const rule = document.querySelector('[data-skill-rule="' + skill + '"]');
+      if (rule && bonus) rule.textContent += "; O-12 Lifepath +" + bonus;
+    });
+    document.querySelectorAll("select[data-main-skill]").forEach(sel => {
+      const delta = number(ledgerModifiers().main[sel.dataset.mainSkill]);
+      sel.title = delta ? "O-12 Lifepath attribute " + (delta > 0 ? "+" : "") + delta + " applied to this skill and its sub-skills." : "";
+    });
+  };
+
+  function normalizeLedger(value) {
+    let obj = value;
+    if (typeof value === "string") {
+      try { obj = JSON.parse(value); } catch { obj = null; }
+    }
+    if (!obj || typeof obj !== "object") return defaultLedger();
+    const out = defaultLedger();
+    out.lifePoints = Math.min(20, integer(obj.lifePoints ?? 5));
+    out.otherSpent = Math.min(20, integer(obj.otherSpent));
+    out.criminalRecord = obj.criminalRecord === true || obj.criminalRecord === "true";
+    out.phases = Array.isArray(obj.phases) ? obj.phases.slice(0, 4).filter(p => p && typeof p === "object").map(p => ({
+      career: String(p.career || ""), assignment: String(p.assignment || ""),
+      assignmentMethod: String(p.assignmentMethod || ""), careerMethod: String(p.careerMethod || ""),
+      electives: Array.isArray(p.electives) ? p.electives.slice(0, 2).map(String) : [],
+      signature: String(p.signature || ""), event: integer(p.event), eventChoice: String(p.eventChoice || ""),
+      eventMethod: String(p.eventMethod || ""), ageYears: integer(p.ageYears),
+      criminalRecordBefore: p.criminalRecordBefore === true || p.criminalRecordBefore === "true",
+      granted: Array.isArray(p.granted) ? p.granted : [],
+      unresolvedGear: Array.isArray(p.unresolvedGear) ? p.unresolvedGear : []
+    })) : [];
+    out.adolescent = obj.adolescent && typeof obj.adolescent === "object"
+      ? {roll: integer(obj.adolescent.roll), choice: String(obj.adolescent.choice || ""),
+         method: String(obj.adolescent.method || ""), ageYears:integer(obj.adolescent.ageYears),
+         hpBefore: String(obj.adolescent.hpBefore || ""), hpAfter:String(obj.adolescent.hpAfter || "")} : null;
+    out.pillar = (o12Source.pillars || []).some(p => p.name === obj.pillar) ? obj.pillar : null;
+    return out;
+  }
+  const previousCollectState = collectState;
+  collectState = function() {
+    const state = previousCollectState();
+    // Scalar JSON is deliberate: the existing XML converter only supports primitive array items.
+    state.o12LifepathJson = JSON.stringify(ledger);
+    return state;
+  };
+  const previousApplyState = applyState;
+  applyState = function(raw) {
+    ledger = normalizeLedger(raw?.o12LifepathJson);
+    rolledBureau = ""; rolledCareer = ""; rolledAdolescent = null; rolledEvent = null;
+    previousApplyState(raw);
+    updateSkillRatings();
+    renderV74();
+  };
+  const oldRandomCharacter = randomCharacter, oldRandomBeginner = randomBeginnerCharacter;
+  randomCharacter = function() {
+    ledger = defaultLedger();
+    oldRandomCharacter();
+    updateSkillRatings();
+    renderV74();
+  };
+  randomBeginnerCharacter = function() {
+    ledger = defaultLedger();
+    oldRandomBeginner();
+    updateSkillRatings();
+    renderV74();
+  };
+
+  function fillSelect(select, options, initial) {
+    if (!select) return;
+    const previous = initial === undefined ? select.value : initial;
+    select.innerHTML = "";
+    options.forEach(item => {
+      const option = document.createElement("option");
+      option.value = String(item.value); option.textContent = String(item.label);
+      select.appendChild(option);
+    });
+    select.value = options.some(o => String(o.value) === String(previous)) ? String(previous) : String(options[0]?.value || "");
+  }
+  function eventTitle(type, row) {
+    if (!row) return "";
+    return type === "adolescent" ? row.trait : row.result;
+  }
+  function refreshEventChoice(type) {
+    const n = integer(chosen(type === "adolescent" ? "v74Adolescent" : "v74CareerEvent"));
+    const id = type === "adolescent" ? "v74AdolescentChoice" : "v74CareerEventChoice";
+    const opts = eventChoices(type, n);
+    fillSelect(el(id), [{value:"",label:opts.length ? "Choose outcome..." : "No choice required"}, ...opts.map(x => ({value:x[0],label:x[1]}))]);
+    el(id).disabled = !opts.length;
+  }
+  function refreshCareerEditor() {
+    if (!el("v74Elective1")) return;
+    const name = inputField("career")?.value || "";
+    const profile = careerRecord(name);
+    const assigned = assignmentRows(name);
+    const chosenAssignment = assigned.find(row => row.name === inputField("o12Assignment")?.value);
+    const electives = assigned.length ? chosenAssignment?.electiveSkills || [] : profile?.electiveSkills || [];
+    const previousFirst = chosen("v74Elective1"), previousSecond = chosen("v74Elective2"), previousSignature = chosen("v74Signature");
+    const items = [{value:"",label:electives.length ? "Choose elective..." : "Select Bureau / Unit first"}, ...electives.map(s => ({value:s,label:s}))];
+    fillSelect(el("v74Elective1"), items, previousFirst);
+    fillSelect(el("v74Elective2"), items, previousSecond);
+    const gained = [...new Set([...(profile?.mandatorySkills || []), ...electives])].filter(s => subSkills.includes(s));
+    fillSelect(el("v74Signature"), [{value:"",label:"No signature skill"}, ...gained.map(s => ({value:s,label:s}))], previousSignature);
+    const priorAssignment = (ledger.phases || []).find(p => p.career === name)?.assignment || "";
+    el("v74RollAssignment").disabled = !assigned.length || Boolean(priorAssignment);
+    const repeatMode = el("v74RepeatAssignmentMode")?.closest("label");
+    if (repeatMode) repeatMode.hidden = !priorAssignment;
+    const info = [];
+    if (profile) {
+      info.push("Mandatory skills: " + (profile.mandatorySkills || []).join(", ") + ".");
+      if (!profile.attributeBonuses && !(ledger.phases || []).length) info.push("Source attribute profile unavailable: first-career attributes require manual Corebook check.");
+      info.push("Career Earnings " + (profile.earnings || "see Corebook") + "; signature skill and talent choice follow Corebook p.53.");
+    } else info.push("This career has no verified rules profile in V73. Apply phase is blocked rather than inventing bonuses.");
+    el("v74CareerReference").textContent = info.join(" ");
+  }
+  function v74SummaryLine() {
+    const mods = ledgerModifiers(), keys = Object.entries(mods.main).filter(([,v]) => v).map(([k,v])=>k+" "+(v>0?"+":"")+v);
+    return (ledger.phases || []).length + " career phases · " + remaining() + "/" + ledger.lifePoints + " Life Points left" +
+      (keys.length ? " · first career: " + keys.join(", ") : "") +
+      (ledger.pillar ? " · Pillar: " + ledger.pillar : "");
+  }
+  function renderV74() {
+    const panel = el("v74O12Lifepath");
+    if (!panel) return;
+    panel.hidden = !isO12();
+    if (!isO12()) return;
+    if (el("v74LifePoints") && document.activeElement !== el("v74LifePoints")) el("v74LifePoints").value = ledger.lifePoints;
+    if (el("v74OtherSpent") && document.activeElement !== el("v74OtherSpent")) el("v74OtherSpent").value = ledger.otherSpent;
+    refreshCareerEditor();
+    if(el("v74CriminalRecord") && document.activeElement!==el("v74CriminalRecord"))el("v74CriminalRecord").checked=!!ledger.criminalRecord;
+    el("v74Status").textContent = v74SummaryLine() + (ledger.criminalRecord ? " · Criminal Record: ACTIVE" : "");
+    el("v74Ledger").textContent = (ledger.phases || []).map((p,i)=>"Phase "+(i+1)+": "+p.career+
+      (p.assignment ? " / "+p.assignment : "")+"; electives "+p.electives.join(" + ")+
+      (p.signature ? "; signature "+p.signature : "")+(p.event ? "; event "+p.event : "")+
+      (p.unresolvedGear?.length ? "; manual gear "+p.unresolvedGear.join(", ") : "")).join("\n") || "No O-12 career phases applied.";
+    const event = (o12Source.adolescentEvents || []).find(e => e.roll === ledger.adolescent?.roll);
+    el("v74EventLedger").textContent = (event ? "Adolescent event "+event.roll+" "+event.trait+" — "+event.effect+". " : "")+
+      (ledger.adolescent?.ageYears ? "Adolescent age increase "+ledger.adolescent.ageYears+" years. " : "")+
+      (ledger.pillar ? "Pillar "+ledger.pillar+" — "+(o12Source.pillars || []).find(p=>p.name===ledger.pillar)?.effect+". " : "")+
+      "Social Status modifier "+(ledgerModifiers().social > 0 ? "+" : "")+ledgerModifiers().social+
+      "; Vigor modifier "+ledgerModifiers().vigor+".";
+    el("v74Notice").textContent = notice;
+    el("v74ApplyPhase").disabled = ledger.phases.length >= 4;
+    el("v74UndoPhase").disabled = !ledger.phases.length;
+    el("v74ApplyAdolescent").disabled = !!ledger.adolescent;
+    el("v74UndoAdolescent").disabled = !ledger.adolescent;
+    el("v74ApplyPillar").disabled = !!ledger.pillar;
+    el("v74UndoPillar").disabled = !ledger.pillar;
+  }
+  function eventDescription(type, roll) {
+    const pool = type === "adolescent" ? o12Source.adolescentEvents : o12Source.careerEvents;
+    return (pool || []).find(r => r.roll === roll)?.effect || "";
+  }
+  function enoughLP(extra) {
+    if (remaining() < extra) {
+      notice = "Insufficient Life Points for this choice (" + extra + " needed; " + remaining() + " available). Increase the starting budget only if the GM has granted additional Life Points.";
+      renderV74(); return false;
+    }
+    return true;
+  }
+  function availableGear(profile, assignment) {
+    const rows = assignmentRows(profile?.name || "");
+    return [...(profile?.gear || []), ...(rows.find(r=>r.name===assignment)?.gear || [])];
+  }
+  function grantGear(names) {
+    const granted = [], manual = [];
+    names.forEach(raw => {
+      // Never guess between "or" alternatives, unspecified ammunition, a loan or different armour variants.
+      if (/\bor\b|\/|rental|credit|^choose/i.test(raw)) { manual.push(raw); return; }
+      const trim = x=>String(x).toLowerCase().replace(/\s*\((bs|cc)\)$/i,"").replace(/[’']/g,"").trim();
+      const match = (DATA.equipment || []).filter(item=>trim(item.name)===trim(raw) && item.loadoutEligible!==false);
+      if (match.length!==1) { manual.push(raw); return; }
+      const item=match[0];
+      const weapon = (DATA.lists.weapons || []).includes(item.name);
+      const category = weapon ? "weapon" : "equipment";
+      const rows = [...document.querySelectorAll(weapon ? "select[data-weapon-select]" : "select[data-equipment-select]")];
+      if (rows.some(r=>r.value===item.name)) return;
+      const slot=rows.findIndex(r=>!r.value);
+      if (slot<0) { manual.push(raw + " (no free slot)"); return; }
+      const field=rows[slot];
+      if (![...field.options].some(o=>o.value===item.name)) { manual.push(raw); return; }
+      field.value=item.name; field.dispatchEvent(new Event("change"));
+      granted.push({kind:category, index:slot, name:item.name});
+    });
+    applyArmourFromEquipment();
+    return {granted, manual};
+  }
+  function undoGear(granted) {
+    (granted || []).forEach(g => {
+      const field=document.querySelector('select[data-'+(g.kind==="weapon"?"weapon":"equipment")+'-select="'+g.index+'"]');
+      if(field?.value===g.name){field.value="";field.dispatchEvent(new Event("change"));}
+    });
+    applyArmourFromEquipment();
+  }
+  function applyPhase() {
+    if (!isO12()) return;
+    const career = inputField("career")?.value || "";
+    const profile = careerRecord(career);
+    if (!profile || !(profile.mandatorySkills || []).length) { notice="No source-verified Career profile for "+career+"; no grants made.";renderV74();return; }
+    const assignmentTable = assignmentRows(career);
+    const assignment = assignmentTable.length ? (inputField("o12Assignment")?.value || "") : "";
+    if (assignmentTable.length && !assignment) { notice="Choose or roll your Bureau / Unit before applying this career.";renderV74();return; }
+    if (career==="Bureau Aegis Specialist" && hasCriminalRecord() && assignment!=="Beta") {
+      notice="Criminal Record requires Beta Unit. Select Beta first.";renderV74();return;
+    }
+    const priorAssignment = (ledger.phases || []).find(p => p.career === career)?.assignment || "";
+    const assignMethod = assignmentTable.length
+      ? (career==="Bureau Aegis Specialist" && hasCriminalRecord() ? "forced" :
+        priorAssignment && priorAssignment === assignment ? "retained" :
+        priorAssignment && chosen("v74RepeatAssignmentMode") === "hazard" ? "hazard" :
+        !priorAssignment && assignment && assignment === rolledBureau ? "rolled" : "chosen") : "none";
+    const elective1=chosen("v74Elective1"), elective2=chosen("v74Elective2");
+    const assignedRow=assignmentTable.find(r=>r.name===assignment);
+    const allowed=(assignmentTable.length ? assignedRow?.electiveSkills : profile.electiveSkills) || [];
+    if (!elective1 || !elective2 || elective1===elective2 || !allowed.includes(elective1) || !allowed.includes(elective2)) {
+      notice="Choose two DIFFERENT electives from the selected career/Bureau list.";renderV74();return;
+    }
+    const signature=chosen("v74Signature");
+    const prior=(ledger.phases || []).map(p=>p.signature).filter(Boolean);
+    const validSignature=[...(profile.mandatorySkills||[]),elective1,elective2];
+    if ((!signature && prior.length < 3) || (signature && (!validSignature.includes(signature) || prior.includes(signature) || prior.length>=3))) {
+      notice="Signature skill must be a new mandatory/chosen elective; a character may have no more than three.";renderV74();return;
+    }
+    const ev=integer(chosen("v74CareerEvent"));
+    const evMethod=ev ? chosen("v74CareerEventMethod") : "";
+    const evChoice=chosen("v74CareerEventChoice");
+    if (ev===20) {notice="Music of the Spheres requires three additional Career Event rolls (and recursion); resolve with the GM before applying.";renderV74();return;}
+    if(ev && eventChoices("career",ev).length && !evChoice){notice="Select the Career Event outcome before applying.";renderV74();return;}
+    if(evMethod==="selected" && ev===20){notice="Corebook prohibits choosing event 20 by spending a Life Point.";renderV74();return;}
+    const careerMethod=career===rolledCareer ? "faction-roll" : "resolved";
+    const nextCost=(ledger.phases.length>=2?1:0)+(assignMethod==="chosen"?1:0)+(careerMethod==="faction-roll"?1:0)+(ev && evMethod==="selected"?1:0);
+    if(!enoughLP(nextCost))return;
+    const gearList=[...(profile.gear||[]),...(assignedRow?.gear||[])];
+    const gear=grantGear(gearList);
+    const criminalRecordBefore=career==="Bureau Aegis Specialist" && hasCriminalRecord() && assignment==="Beta";
+    ledger.phases.push({career,assignment,assignmentMethod:assignMethod,careerMethod,criminalRecordBefore,electives:[elective1,elective2],
+      signature,event:ev,eventChoice:evChoice,eventMethod:evMethod,ageYears:Math.floor(Math.random()*6)+2,
+      granted:gear.granted,unresolvedGear:gear.manual});
+    if (criminalRecordBefore) {ledger.criminalRecord=false;if(el("v74CriminalRecord"))el("v74CriminalRecord").checked=false;}
+    rolledCareer="";rolledBureau="";rolledEvent=null;
+    notice=(criminalRecordBefore ? "Criminal Record cleared after completing Beta Unit career phase. " : "")+
+      "Applied "+career+". Source gear loaded when unambiguous; "+gear.manual.length+
+      " gear choices remain manual. Add a permitted Talent, roll Earnings "+(profile.earnings || "per Corebook")+
+      " and account for Social Status/contacts with the GM. Career age increased by "+ledger.phases.at(-1).ageYears+" years.";
+    updateSkillRatings();renderV74();scheduleAutosave();
+  }
+  function undoPhase() {
+    const last=ledger.phases.pop(); if(!last)return;
+    undoGear(last.granted);
+    if(last.criminalRecordBefore) {ledger.criminalRecord=true;if(el("v74CriminalRecord"))el("v74CriminalRecord").checked=true;}
+    notice="Removed last career phase and its derived bonuses; granted gear was cleared only when the original slot/item still matched.";
+    updateSkillRatings();renderV74();scheduleAutosave();
+  }
+  function applyAdolescent() {
+    const n=integer(chosen("v74Adolescent")),choice=chosen("v74AdolescentChoice");
+    if(!n){notice="Select or roll an O-12 adolescent event.";renderV74();return;}
+    if(eventChoices("adolescent",n).length && !choice){notice="Choose the adolescent outcome first.";renderV74();return;}
+    const method=chosen("v74AdolescentMethod");
+    const cost=method==="selected" ? 1 : 0;
+    if(!enoughLP(cost))return;
+    const previousHp = n === 7 && inputField("hp")?.value === "20" ? "20" : "";
+    const adjustedHp = previousHp ? "19" : "";
+    if (adjustedHp) setFieldValue("hp", adjustedHp);
+    ledger.adolescent={roll:n,choice,method,ageYears:n===16 ? Math.floor(Math.random()*6)+1 : 0,
+      hpBefore:previousHp,hpAfter:adjustedHp};
+    rolledAdolescent=null;
+    notice="Recorded event "+n+": "+eventDescription("adolescent",n)+". "+
+      (adjustedHp ? "Full HP/Vigor automatically reduced from 20 to 19. " : n===7 ? "HP/Vigor was not at 20; apply permanent Vigor change manually. " : "")+
+      (ledger.adolescent.ageYears ? "Age increased by "+ledger.adolescent.ageYears+" years. " : "")+
+      "Contacts, traits and unresolved effects require GM adjudication.";
+    updateSkillRatings();renderV74();scheduleAutosave();
+  }
+  function applyPillar() {
+    if(!chosen("v74PillarConfirm")){notice="Roll a Pillar or explicitly choose a GM-approved result.";renderV74();return;}
+    const name=chosen("v74PillarConfirm");
+    if(!(o12Source.pillars||[]).some(r=>r.name===name))return;
+    ledger.pillar=name;
+    notice="Applied Pillar: "+name+". Social Status +/- is tracked in the O-12 ledger; contacts are narrative and entered manually.";
+    renderV74();scheduleAutosave();
+  }
+
+  function initPanelV74() {
+    if(el("v74O12Lifepath"))return;
+    const anchor=document.querySelector(".page-1 [data-identity-grid]");
+    if(!anchor)return;
+    const section=document.createElement("section");section.id="v74O12Lifepath";section.className="panel no-print";section.hidden=true;
+    section.innerHTML = '<details><summary><strong>O-12 Lifepath Automation (V74)</strong> — opt-in career phases, events and Life Points</summary>'+
+      '<p class="v74-note">Corebook p.53: first-career attributes apply once; mandatory skills and two electives each career phase. Existing sheet/gear choices are never overwritten. GM decisions and non-numeric results remain manual.</p>'+
+      '<p id="v74Status"></p>'+
+      '<div class="v74-grid"><label>Starting Life Points<input id="v74LifePoints" type="number" min="0" max="20" value="5"></label>'+
+      '<label>Spent in earlier Lifepath decisions<input id="v74OtherSpent" type="number" min="0" max="20" value="0"></label></div>'+
+      '<h4>O-12 Adolescent Event</h4><div class="v74-grid"><label>Result<select id="v74Adolescent"></select></label>'+
+      '<label>Outcome<select id="v74AdolescentChoice"></select></label>'+
+      '<label>Resolution<select id="v74AdolescentMethod"><option value="rolled">Rolled (0 LP)</option><option value="selected">Chosen with GM approval (1 LP)</option></select></label></div>'+
+      '<div class="v74-actions"><button type="button" id="v74RollAdolescent">Roll d6 / d20</button><button type="button" id="v74ApplyAdolescent">Apply event</button><button type="button" id="v74UndoAdolescent">Undo event</button></div>'+
+      '<h4>Career Phase — uses the main Career field above</h4><p id="v74CareerReference"></p>'+
+      '<label class="v74-checkbox"><input id="v74CriminalRecord" type="checkbox"> Criminal Record at start of career (forces Beta Unit; clears after phase)</label>'+
+      '<div class="v74-grid"><label>Elective 1<select id="v74Elective1"></select></label>'+
+      '<label>Elective 2<select id="v74Elective2"></select></label>'+
+      '<label>New signature skill (optional)<select id="v74Signature"></select></label></div>'+
+      '<div class="v74-grid"><label hidden>Repeat Bureau / Unit change<select id="v74RepeatAssignmentMode"><option value="life">Choose new assignment (1 LP)</option><option value="hazard">GM confirmed successful D1 career hazard (0 LP)</option></select></label></div>'+
+      '<div class="v74-actions"><button type="button" id="v74RollCareer">Roll O-12 career table (costs 1 LP)</button>'+
+      '<button type="button" id="v74RollAssignment">Roll Bureau / Unit (free)</button></div>'+
+      '<div class="v74-grid"><label>Career Event<select id="v74CareerEvent"></select></label>'+
+      '<label>Event outcome<select id="v74CareerEventChoice"></select></label>'+
+      '<label>Resolution<select id="v74CareerEventMethod"><option value="rolled">Already rolled / resolved (0 LP)</option><option value="selected">Chosen with GM approval (1 LP)</option></select></label></div>'+
+      '<div class="v74-actions"><button type="button" id="v74RollEvent">Roll d6 / d20 Career Event</button><button type="button" id="v74ApplyPhase">Apply career phase</button>'+
+      '<button type="button" id="v74UndoPhase">Undo last phase</button></div>'+
+      '<h4>Final Customisation — Pillars</h4><div class="v74-grid"><label>Pillar<select id="v74PillarConfirm"></select></label></div>'+
+      '<div class="v74-actions"><button type="button" id="v74RollPillar">Roll d20 Pillar</button><button type="button" id="v74ApplyPillar">Apply Pillar</button>'+
+      '<button type="button" id="v74UndoPillar">Undo Pillar</button></div>'+
+      '<h4>Applied career ledger</h4><pre id="v74Ledger"></pre><p id="v74EventLedger"></p><p id="v74Notice" role="status"></p>'+
+      '<p class="v74-note">V74 does not automatically grant talents, Earnings rolls, contacts, uncertain age/event dice, source-location armour conversions or Core A/B/C events. Save and XML preserve every recorded phase.</p></details>';
+    anchor.insertAdjacentElement("afterend",section);
+    const css=document.createElement("style");
+    css.textContent='#v74O12Lifepath{margin:10px 0;padding:10px 14px}#v74O12Lifepath[hidden]{display:none!important}'+
+      '#v74O12Lifepath summary{cursor:pointer;font-size:14px}#v74O12Lifepath .v74-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:6px 0}'+
+      '#v74O12Lifepath label{display:flex;flex-direction:column;gap:3px;font-size:12px}#v74O12Lifepath select,#v74O12Lifepath input{width:100%;min-height:32px}'+
+      '#v74O12Lifepath .v74-actions{display:flex;gap:7px;flex-wrap:wrap;margin:7px 0}#v74O12Lifepath .v74-actions button{padding:7px 10px;cursor:pointer}'+
+      '#v74O12Lifepath .v74-checkbox{display:flex;align-items:center;flex-direction:row;gap:7px}#v74O12Lifepath .v74-checkbox input{width:auto;min-height:auto}'+
+      '#v74O12Lifepath .v74-note{font-size:12px}#v74Ledger{white-space:pre-wrap;font-size:12px}#v74Notice{font-weight:600}';
+    document.head.appendChild(css);
+    fillSelect(el("v74Adolescent"),[{value:"",label:"No O-12 event"},...(o12Source.adolescentEvents||[]).map(r=>({value:r.roll,label:r.roll+" — "+r.trait}))]);
+    fillSelect(el("v74CareerEvent"),[{value:"",label:"Resolved outside wizard"},...(o12Source.careerEvents||[]).map(r=>({value:r.roll,label:r.roll+" — "+r.result}))]);
+    fillSelect(el("v74PillarConfirm"),[{value:"",label:"Choose or roll..."},...(o12Source.pillars||[]).map(r=>({value:r.name,label:r.name+" ("+r.roll+")"}))]);
+    el("v74Adolescent").addEventListener("change",()=>refreshEventChoice("adolescent"));
+    el("v74CareerEvent").addEventListener("change",()=>refreshEventChoice("career"));
+    refreshEventChoice("adolescent");refreshEventChoice("career");
+    el("v74LifePoints").addEventListener("change",()=>{ledger.lifePoints=Math.min(20,integer(chosen("v74LifePoints")));renderV74();scheduleAutosave();});
+    el("v74OtherSpent").addEventListener("change",()=>{ledger.otherSpent=Math.min(20,integer(chosen("v74OtherSpent")));renderV74();scheduleAutosave();});
+    el("v74CriminalRecord").addEventListener("change",()=>{
+      ledger.criminalRecord=!!el("v74CriminalRecord").checked;
+      if (ledger.criminalRecord && inputField("career")?.value==="Bureau Aegis Specialist" && inputField("o12Assignment")) {
+        inputField("o12Assignment").value="Beta";inputField("o12Assignment").dispatchEvent(new Event("change"));
+      }
+      renderV74();scheduleAutosave();
+    });
+    el("v74RollCareer").addEventListener("click",()=>{
+      const row=byRoll(o12Source.careerTable,r20());
+      if (!row || !careerRecord(row.name)) {notice="Career result requires another faction/Corebook profile; resolve manually.";renderV74();return;}
+      inputField("career").value=row.name; inputField("career").dispatchEvent(new Event("change"));
+      rolledCareer=row.name;notice="Rolled "+row.name+" on the O-12 Faction Career Table. Charges 1 LP on application (Corebook faction-table choice).";
+      refreshCareerEditor();renderV74();
+    });
+    el("v74RollAssignment").addEventListener("click",()=>{
+      const rows=assignmentRows(inputField("career")?.value);
+      if(!rows.length)return;
+      const name=inputField("career").value;
+      const forced=name==="Bureau Aegis Specialist" && hasCriminalRecord();
+      const row=forced ? rows.find(r=>r.name==="Beta") : byRoll(rows,r20());
+      if(!row){notice="Assignment roll needs a GM-selected Bureau/Unit (printed result 20).";renderV74();return;}
+      inputField("o12Assignment").value=row.name;inputField("o12Assignment").dispatchEvent(new Event("change"));
+      rolledBureau=forced ? "" : row.name;
+      notice=forced?"Criminal Record forces Beta Unit; see the source rule for clearing that record after this career.":"Rolled "+row.name+" (free Bureau/Unit assignment).";
+      refreshCareerEditor();renderV74();
+    });
+    inputField("o12Assignment")?.addEventListener("change",()=>{if(rolledBureau!==inputField("o12Assignment").value)rolledBureau="";refreshCareerEditor();});
+    inputField("career")?.addEventListener("change",()=>{rolledCareer="";rolledBureau="";refreshCareerEditor();renderV74();});
+    inputField("faction")?.addEventListener("change",renderV74);
+    el("v74RollAdolescent").addEventListener("click",()=>{
+      const die=Math.floor(Math.random()*6)+1;
+      if(die>3){
+        el("v74Adolescent").value="";refreshEventChoice("adolescent");rolledAdolescent=null;
+        notice="Adolescent d6="+die+": use Corebook Table "+(["","A","B","C"][die-3])+" instead. No O-12 event was applied.";renderV74();return;
+      }
+      const value=r20();
+      el("v74Adolescent").value=String(value);el("v74Adolescent").dispatchEvent(new Event("change"));
+      el("v74AdolescentMethod").value="rolled";rolledAdolescent=value;
+      notice="O-12 Adolescent Event rolled d6="+die+", d20="+value+".";renderV74();
+    });
+    el("v74RollEvent").addEventListener("click",()=>{
+      const die=Math.floor(Math.random()*6)+1;
+      if(die>3){
+        el("v74CareerEvent").value="";refreshEventChoice("career");rolledEvent=null;
+        notice="Career d6="+die+": resolve Corebook Career Event Table "+(["","A","B","C"][die-3])+" manually. No O-12 event selected.";renderV74();return;
+      }
+      const value=r20();
+      el("v74CareerEvent").value=String(value);el("v74CareerEvent").dispatchEvent(new Event("change"));
+      el("v74CareerEventMethod").value="rolled";rolledEvent=value;
+      notice="O-12 Career Event rolled d6="+die+", d20="+value+".";renderV74();
+    });
+    el("v74RollPillar").addEventListener("click",()=>{
+      const n=r20(), row=byRoll(o12Source.pillars,n);
+      if(row){el("v74PillarConfirm").value=row.name;notice="Rolled d20="+n+" → "+row.name+".";renderV74();}
+    });
+    el("v74ApplyPhase").addEventListener("click",applyPhase);
+    el("v74UndoPhase").addEventListener("click",undoPhase);
+    el("v74ApplyAdolescent").addEventListener("click",applyAdolescent);
+    el("v74UndoAdolescent").addEventListener("click",()=>{
+      const prior=ledger.adolescent;
+      if (prior?.hpAfter && inputField("hp")?.value===prior.hpAfter) setFieldValue("hp",prior.hpBefore);
+      ledger.adolescent=null;
+      notice="Adolescent event removed. HP restored only if the automatically modified value was still unchanged.";
+      updateSkillRatings();renderV74();scheduleAutosave();
+    });
+    el("v74ApplyPillar").addEventListener("click",applyPillar);
+    el("v74UndoPillar").addEventListener("click",()=>{ledger.pillar=null;notice="Pillar removed.";renderV74();scheduleAutosave();});
+    renderV74();
+  }
+  // Do not replace the original print layout: derived main/sub-skill values already
+  // appear in the existing PDF. Record phase/LP summary in its existing print header.
+  const previousPrintCore = buildPrintCorePage;
+  buildPrintCorePage = function(page,total) {
+    const markup=previousPrintCore(page,total);
+    if(!isO12() || !(ledger.phases || []).length)return markup;
+    return markup.replace("Identity, main skills, resources and skill calculations",
+      printEscape("O-12 Lifepath · "+ledger.phases.length+" career phases · "+remaining()+" Life Points left"));
+  };
+  window.INFINITY_BUILD=NEW_BUILD;
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initPanelV74);
+  else initPanelV74();
+})();
 </script>
 
 <script>
