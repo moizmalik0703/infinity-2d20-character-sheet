@@ -6685,7 +6685,9 @@ window.INFINITY_DATA = {
       "category": "Geist",
       "subtype": "Geist Upgrade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Weapon",
@@ -6698,7 +6700,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Ranged Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Countermeasure",
@@ -7482,7 +7486,9 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Quantronic Security",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Credential",
@@ -7792,7 +7798,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Ranged Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Tool",
@@ -7834,7 +7842,9 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Quantronic Security Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Weapon",
@@ -7847,7 +7857,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Ranged Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Environment Suit",
@@ -7873,7 +7885,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Hacking Program",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Hacking Program",
@@ -8090,7 +8104,9 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Cybernetic Full-Body",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Armour",
@@ -8103,7 +8119,10 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "armourAutomation": false
     },
     {
       "type": "Mine",
@@ -8462,7 +8481,9 @@ window.INFINITY_DATA = {
       "category": "Resource",
       "subtype": "Ammunition",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Weapon",
@@ -8478,17 +8499,20 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
-      "type": "Weapon",
+      "type": "Legacy Reference",
       "name": "Fireflies Grenade (BS)",
-      "brief": "A sensor-microdrone grenade that blankets a zone with telemetry to expose opponents in cover.",
-      "mechanic": "Damage 2+5§; 1H; Disposable, Indiscriminate (Close), Nonlethal, Speculative Fire, Thrown, Unsubtle. After deployment, Analysis D1; spend Momentum to reduce targets' Cover Soak by 1§ per Momentum. At 0 Cover Soak they become Marked until leaving the zone. Restriction 2 (Yu Jing 1).",
+      "brief": "Legacy V67 weapon-slot alias. Source classifies Fireflies under Explosives; V68 migrates this to Fireflies Grenade in Equipment.",
+      "mechanic": "Legacy save alias only.",
       "rarity": "Uncommon",
       "weight": "Light",
       "cost": "5+1§; T1",
-      "category": "Weapon",
+      "category": "Legacy",
       "subtype": "Grenade",
-      "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "legacyAliasOnly": true,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Hacking Program",
@@ -8649,7 +8673,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Hacking Program",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Weapon",
@@ -8716,7 +8742,9 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Silk Full-Body",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Tool",
@@ -9131,7 +9159,9 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Heavy Combat Armour Variant",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "armourAutomation": false
     },
     {
       "type": "Armour",
@@ -9144,7 +9174,9 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "XO Suit Variant",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "armourAutomation": false
     },
     {
       "type": "Tool",
@@ -9157,7 +9189,9 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Survival Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Weapon",
@@ -9183,7 +9217,9 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Surveillance/Encryption Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Augmentation",
@@ -9248,7 +9284,10 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "armourAutomation": false
     },
     {
       "type": "Armour",
@@ -9261,7 +9300,9 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Light Combat Armour Variant",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "armourAutomation": false
     },
     {
       "type": "Remote",
@@ -9304,7 +9345,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Camouflage Clothing",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Ammunition",
@@ -9317,7 +9360,9 @@ window.INFINITY_DATA = {
       "category": "Resource",
       "subtype": "Ammunition",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Weapon",
@@ -9330,7 +9375,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Ranged Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Weapon",
@@ -9343,7 +9390,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Vehicle",
@@ -9356,7 +9405,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Vehicle",
       "loadoutEligible": false,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 83
     },
     {
       "type": "Vehicle",
@@ -9369,7 +9420,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Vehicle",
       "loadoutEligible": false,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 83
     },
     {
       "type": "Facility",
@@ -9516,7 +9569,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Recorder",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Vehicle",
@@ -9529,7 +9584,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Vehicle",
       "loadoutEligible": false,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 83
     },
     {
       "type": "Vehicle Module",
@@ -9542,7 +9599,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Vehicle Module",
       "loadoutEligible": false,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 83
     },
     {
       "type": "Kit",
@@ -9595,7 +9654,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Personal Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Utility",
@@ -9634,7 +9695,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Vehicle",
       "loadoutEligible": false,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 83
     },
     {
       "type": "Weapon",
@@ -9926,7 +9989,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Tool",
@@ -9991,7 +10056,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Drug",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Visor",
@@ -10056,7 +10123,8 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book"
     },
     {
       "type": "Vehicle",
@@ -10133,17 +10201,20 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
-      "type": "Weapon",
+      "type": "Legacy Reference",
       "name": "Palad Khik (BS)",
-      "brief": "A one-use grenade launcher commonly mounted to bōsōzoku motorcycles.",
-      "mechanic": "Range C/M/L (chosen when fitted); Damage 2+4§; Burst 1; 2H or Mounted; Disposable, Indiscriminate (Close), Munition, Speculative Fire. Pilot Focus 3+ or installing Tech Focus 3+ removes Improvised. Restriction 3 (Jopok 1, Yu Jing 2).",
+      "brief": "Legacy V67 weapon-slot alias. Source classifies Palad Khik as an Ammo Type; V68 migrates this to Palad Khik Ammo in Equipment.",
+      "mechanic": "Legacy save alias only.",
       "rarity": "Rare",
       "weight": "Medium",
       "cost": "2 + Reload cost; T1",
-      "category": "Weapon",
+      "category": "Legacy",
       "subtype": "Ranged Weapon",
-      "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "legacyAliasOnly": true,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Weapon",
@@ -10225,7 +10296,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Hacking Program Upgrade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Camouflage",
@@ -10430,7 +10503,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Weapon",
@@ -10443,7 +10518,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Respirator",
@@ -10472,7 +10549,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Drug",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Recorder",
@@ -10633,7 +10712,9 @@ window.INFINITY_DATA = {
       "category": "Remote",
       "subtype": "Combat Remote",
       "loadoutEligible": false,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Utility",
@@ -10688,7 +10769,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Suite",
@@ -10796,7 +10879,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Kit",
@@ -10903,7 +10988,9 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Cybernetic Full-Body",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Charge",
@@ -11114,7 +11201,9 @@ window.INFINITY_DATA = {
       "category": "Remote",
       "subtype": "Heavy Infantry Remote",
       "loadoutEligible": false,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Weapon",
@@ -11232,7 +11321,9 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Program",
@@ -11245,7 +11336,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Hacking Program",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Augmentation",
@@ -11442,7 +11535,10 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "armourAutomation": false
     },
     {
       "type": "Camouflage",
@@ -11598,7 +11694,9 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Medical Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Credential",
@@ -11624,7 +11722,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Vehicle",
       "loadoutEligible": false,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 83
     },
     {
       "type": "Hacking Upgrade",
@@ -11760,7 +11860,9 @@ window.INFINITY_DATA = {
       "category": "Contagion",
       "subtype": "Poison",
       "loadoutEligible": false,
-      "loadoutConditional": true
+      "loadoutConditional": true,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Weapon",
@@ -11907,11 +12009,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Smart Clothing",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82
     },
     {
       "type": "Visor",
-      "name": "X Visor",
+      "name": "X-Visor",
       "brief": "A visual-focus enhancement used as a hardware or software upgrade in visors, implants, and armour.",
       "mechanic": "Ignore one Difficulty worth of penalties due to range on Ballistics or Observation tests.",
       "rarity": "Uncommon",
@@ -11920,7 +12024,10 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Visor",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82,
+      "sourceProfile": "Source table name: X-Visor."
     },
     {
       "type": "Drug",
@@ -11949,7 +12056,9 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Heavy Combat Armour Variant",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "armourAutomation": false
     },
     {
       "type": "Weapon",
@@ -11975,7 +12084,9 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Drug",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81
     },
     {
       "type": "Remote",
@@ -11988,7 +12099,8 @@ window.INFINITY_DATA = {
       "category": "Remote",
       "subtype": "Support Remote",
       "loadoutEligible": false,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book"
     },
     {
       "type": "Armour",
@@ -12001,7 +12113,9 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Light Combat Armour Variant",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "armourAutomation": false
     },
     {
       "type": "Tool",
@@ -13007,6 +13121,87 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 71,
       "sourceRestriction": ""
+    },
+    {
+      "type": "Explosive",
+      "name": "Fireflies Grenade",
+      "brief": "Micro-drone grenade that blankets a zone with low-grade sensors to expose opponents in cover.",
+      "mechanic": "Damage 2+5§; 1H; Disposable, Indiscriminate (Close), Nonlethal, Speculative Fire, Thrown, Unsubtle. After successful deployment, Analysis D1; spend Momentum to reduce effective Cover Soak by 1§ per Momentum. At 0 Cover Soak the target is Marked until leaving the zone.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "5+1§",
+      "category": "Other Item",
+      "subtype": "Explosive / Grenade",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "sourceRestriction": "2 (Yu Jing 1)"
+    },
+    {
+      "type": "Ammunition",
+      "name": "Palad Khik Ammo",
+      "brief": "Jopok/Yu Jing heavy grenade and mounted-weapon ammunition type.",
+      "mechanic": "Source table profile: Range C, M, or L depending on weapon; 2+4§; Burst 1; 2H or Mounted; Heavy/Grenades; Disposable, Indiscriminate (Close), Munition, Speculative Fire.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "2 + cost of Reload",
+      "category": "Resource",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82,
+      "sourceRestriction": "3 (Jopok 1, Yu Jing 2)",
+      "sourceProfile": "Source table name: Palad Khik (Ammo Type)."
+    },
+    {
+      "type": "Augmentation",
+      "name": "Fúcánglóng Arm (one arm)",
+      "brief": "Temperature-resistant extensible replacement arm popular with workers, bravos, and dissidents.",
+      "mechanic": "Gain +1d20 on tests relying on the replaced arm’s strength; that arm gains Armour Soak 2 and immunity to extreme temperatures; unarmed strikes gain +2§ and Extended Reach. If only one arm is replaced and Brawn is 9 or less, Agility tests have +1 Complication Range.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+2§",
+      "category": "Other Item",
+      "subtype": "Cybernetic Replacement (Limb)",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "sourceRestriction": "2 (Yu Jing 1)"
+    },
+    {
+      "type": "Augmentation",
+      "name": "Fúcánglóng Arms (both)",
+      "brief": "Paired temperature-resistant extensible replacement arms.",
+      "mechanic": "Gain +1d20 on tests relying on arm strength; both arms gain Armour Soak 2 and immunity to extreme temperatures; unarmed strikes gain +2§ and Extended Reach. The one-arm imbalance clause does not apply to a matched pair.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+2§",
+      "category": "Other Item",
+      "subtype": "Cybernetic Replacement (Limbs)",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "sourceRestriction": "2 (Yu Jing 1)"
+    },
+    {
+      "type": "Explosive",
+      "name": "Vigour Poison Charge X",
+      "brief": "Disposable charge dispersing Vigour Poison.",
+      "mechanic": "Source table profile: Damage X§; 1H; Comms, Disposable. Use the Vigour Poison X source rules for the poison effect.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "4X+X§",
+      "category": "Other Item",
+      "subtype": "Explosive / Charge",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "sourceRestriction": "5 (Dissident 4)"
     }
   ],
   "conditions": [
@@ -13600,7 +13795,10 @@ window.INFINITY_DATA = {
       "homeworld": "Shentang, Yutang, Sol (Chung Kuo), Paradiso, Svalarheima, Human Edge",
       "theme": "Willpower, close combat, hierarchy, authority, power armour, Imperial Service, intelligence, mechanised warfare",
       "suggested_traits": "Imperial Loyalty; Invincible Doctrine",
-      "suggested_talents": "Yu Jing Imperial Command School; Imperial Service Agent; Tiger Soldier Drop Troops"
+      "suggested_talents": "Yu Jing Imperial Command School; Imperial Service Agent; Tiger Soldier Drop Troops",
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 4,
+      "sourceNote": "Direct Yu Jing faction record."
     },
     {
       "faction": "Yu Jing - Imperial Service",
@@ -13608,7 +13806,9 @@ window.INFINITY_DATA = {
       "homeworld": "Shentang, Yutang, Sol (Chung Kuo), Paradiso, Svalarheima, Human Edge",
       "theme": "Investigation, authority, command, counter-insurgency, close combat, political enforcement",
       "suggested_traits": "Imperial Loyalty; Invincible Doctrine",
-      "suggested_talents": "Imperial Service Agent; Yu Jing Imperial Command School"
+      "suggested_talents": "Imperial Service Agent; Yu Jing Imperial Command School",
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourceNote": "Sheet organisational selector informed by the Yu Jing sourcebook; not a separate Lifepath faction-table result."
     },
     {
       "faction": "Yu Jing - Invincible Army",
@@ -13616,7 +13816,9 @@ window.INFINITY_DATA = {
       "homeworld": "Shentang, Yutang, Sol (Chung Kuo), Paradiso, Svalarheima, Human Edge",
       "theme": "Power armour, heavy weapons, resilience, disciplined assault",
       "suggested_traits": "Invincible Doctrine; Battle Hardened; Imperial Loyalty",
-      "suggested_talents": "Yu Jing Imperial Command School"
+      "suggested_talents": "Yu Jing Imperial Command School",
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourceNote": "Sheet organisational selector informed by the Yu Jing sourcebook; not a separate Lifepath faction-table result."
     },
     {
       "faction": "Yu Jing - StateEmpire Army",
@@ -13624,7 +13826,9 @@ window.INFINITY_DATA = {
       "homeworld": "Shentang, Yutang, Sol (Chung Kuo), Paradiso, Svalarheima, Human Edge",
       "theme": "Mechanised infantry, heavy armour, close combat, remotes, combined arms",
       "suggested_traits": "Invincible Doctrine; Imperial Loyalty; Battle Hardened",
-      "suggested_talents": "Yu Jing Imperial Command School; Tiger Soldier Drop Troops"
+      "suggested_talents": "Yu Jing Imperial Command School; Tiger Soldier Drop Troops",
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourceNote": "Sheet organisational selector informed by the Yu Jing sourcebook; not a separate Lifepath faction-table result."
     },
     {
       "faction": "Yu Jing - Tiger Soldiers",
@@ -13632,7 +13836,9 @@ window.INFINITY_DATA = {
       "homeworld": "Shentang, Yutang, Sol (Chung Kuo), Paradiso, Svalarheima, Human Edge",
       "theme": "Airborne assault, combat jump, mobility, surprise attacks",
       "suggested_traits": "Imperial Loyalty; Battle Hardened",
-      "suggested_talents": "Tiger Soldier Drop Troops"
+      "suggested_talents": "Tiger Soldier Drop Troops",
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourceNote": "Sheet organisational selector informed by the Yu Jing sourcebook; not a separate Lifepath faction-table result."
     },
     {
       "faction": "Yu Jing - Yănjīng Intelligence",
@@ -13640,7 +13846,9 @@ window.INFINITY_DATA = {
       "homeworld": "Shentang, Yutang, Sol (Chung Kuo), Paradiso, Svalarheima, Human Edge",
       "theme": "Espionage, surveillance, infiltration, covert action, political intelligence",
       "suggested_traits": "Imperial Loyalty; Blending In; Bureaucrat",
-      "suggested_talents": "Imperial Service Agent"
+      "suggested_talents": "Imperial Service Agent",
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourceNote": "Sheet organisational selector informed by the Yu Jing sourcebook; not a separate Lifepath faction-table result."
     },
     {
       "faction": "Haqqislam",
@@ -13775,6 +13983,7 @@ window.INFINITY_DATA = {
       "Auron",
       "Bakunin",
       "Bayram caravanserai",
+      "Bêi Tû",
       "bimaristans",
       "Bitter Leaves",
       "black markets",
@@ -13804,6 +14013,7 @@ window.INFINITY_DATA = {
       "Corregidor",
       "covert mission sites",
       "covert offices",
+      "Dailing",
       "Dál Riada",
       "Dalnîy (Tartary)",
       "Dar El Funduq",
@@ -13826,10 +14036,13 @@ window.INFINITY_DATA = {
       "frontier zones",
       "Funduq Sultanate",
       "Gabqar Khanate",
+      "Gandakpur",
       "Gentle Embrace of the Sagacious Progenitors",
       "Gök-Burgo",
       "Haqqislamite hospitals",
       "Hassassin safehouses",
+      "Henggu",
+      "Hou Tu",
       "Human Edge",
       "Human Sphere conflict zones",
       "Human Sphere covert networks",
@@ -13844,14 +14057,20 @@ window.INFINITY_DATA = {
       "Japanese communities",
       "Japanese-held territories",
       "Jefferson",
+      "Kambu",
+      "Karkorin",
       "Kennedy",
       "Khiva Kala",
+      "Koguryo",
       "Kum-Dag",
+      "Kuraimori",
+      "Lac Viet",
       "Lafayette",
       "Le Douar",
       "Lhost clinics",
       "Lincoln",
       "Long Talons",
+      "Luang-Sokeo",
       "major presence in Maya and advanced infrastructure",
       "Mariannebourg",
       "Mat’",
@@ -13863,6 +14082,7 @@ window.INFINITY_DATA = {
       "Military Order fortresses",
       "Morat Supremacy territories",
       "Mount Zion / The Wall",
+      "Nakonthai",
       "naval facilities",
       "Nawal Island",
       "Neoterra",
@@ -13894,6 +14114,7 @@ window.INFINITY_DATA = {
       "Paradiso warfronts",
       "Parthalia Island",
       "peacekeeping deployments",
+      "Pianli",
       "Poictesme",
       "Praxis labs",
       "proxy bodies across the Human Sphere",
@@ -13904,6 +14125,7 @@ window.INFINITY_DATA = {
       "Scone",
       "secure data markets",
       "seed-embryo caches",
+      "Sën Sûn",
       "Shasvastii Continuum assets",
       "Shentang",
       "shipboard habitats",
@@ -13929,6 +14151,7 @@ window.INFINITY_DATA = {
       "TAG facilities",
       "TAG hangars",
       "Tartary Outlands",
+      "Thaton",
       "The South Mirror",
       "Tohaa territories",
       "Tohaa worlds and scattered operations",
@@ -13941,13 +14164,18 @@ window.INFINITY_DATA = {
       "Varuna",
       "warzones",
       "Washington",
+      "Wei Chuän",
       "White Knives",
       "wilderness theatres",
       "workshops",
+      "Ya Lang",
       "Yu Jing embassies",
       "Yu Jing military bases",
+      "Yunmen",
       "Yutang",
-      "zero-g work modules"
+      "zero-g work modules",
+      "Zhî Tû",
+      "Zhöu Zhöug"
     ],
     "careerRoles": [
       "112 Emergency Responder",
@@ -14175,9 +14403,11 @@ window.INFINITY_DATA = {
       "Remote, drone, or Tech background",
       "TAG, heavy infantry, or advanced Tech background",
       "Tohaa, Sygmaa, or alien diplomacy background",
+      "Yu Jing faction prerequisite",
       "Yu Jing or airborne operations background",
       "Yu Jing or command/security background",
-      "Yu Jing or state-security background"
+      "Yu Jing or state-security background",
+      "Yu Jing sourcebook career"
     ],
     "talentFactions": [
       "ALEPH",
@@ -14779,7 +15009,6 @@ window.INFINITY_DATA = {
       "E/Mauler Deployable",
       "E/Mauler, Non-Hackable (BS)",
       "Feuerbach (BS)",
-      "Fireflies Grenade (BS)",
       "Flammenspeer (BS)",
       "Flash Pulse (BS)",
       "Garrotte (CC)",
@@ -14815,7 +15044,6 @@ window.INFINITY_DATA = {
       "Nomad Spear (CC)",
       "Numbfish (CC)",
       "Ojotnik (BS)",
-      "Palad Khik (BS)",
       "Panzerfaust (BS)",
       "Pistol (Normal)",
       "Plasma Carbine (BS)",
@@ -14993,6 +15221,7 @@ window.INFINITY_DATA = {
       "Fast Download Port",
       "Fayudan Poison",
       "Ferro-gel Ammo",
+      "Fireflies Grenade",
       "Firewall Programme (USB)",
       "Flares",
       "Flying Drone",
@@ -15000,7 +15229,9 @@ window.INFINITY_DATA = {
       "Forensics Kit X",
       "Forgery Tool",
       "Fúcánglóng Arm",
+      "Fúcánglóng Arm (one arm)",
       "Fúcánglóng Arms",
+      "Fúcánglóng Arms (both)",
       "Fusebox",
       "GADGET-3 Zhang Xun",
       "Gallabeyya",
@@ -15101,6 +15332,7 @@ window.INFINITY_DATA = {
       "Optical Disruption Device",
       "Ore Hauler",
       "Pain Filters",
+      "Palad Khik Ammo",
       "Parachute",
       "Paragon Lhost",
       "Pet X (tiny/small/large)",
@@ -15187,12 +15419,13 @@ window.INFINITY_DATA = {
       "Vac Suit",
       "Varuna Lungs",
       "Vertexpert Journal",
+      "Vigour Poison Charge X",
       "Vigour Poison X",
       "VoodooTech Relay",
       "Vorpal Armour",
       "Wolfshot",
       "Wushu Tracksuit",
-      "X Visor",
+      "X-Visor",
       "Yaga",
       "Yan Huo Invincibles Armour",
       "Yangwater",
@@ -15398,52 +15631,172 @@ window.INFINITY_DATA = {
       "Human Edge"
     ],
     "Yu Jing": [
-      "Shentang",
-      "Yutang",
-      "Sol (Chung Kuo)",
+      "Bêi Tû",
+      "Dailing",
+      "Gandakpur",
+      "Henggu",
+      "Hou Tu",
+      "Human Edge",
+      "Kambu",
+      "Karkorin",
+      "Koguryo",
+      "Kuraimori",
+      "Lac Viet",
+      "Luang-Sokeo",
+      "Nakonthai",
       "Paradiso",
+      "Pianli",
+      "Sën Sûn",
+      "Shentang",
+      "Sol (Chung Kuo)",
       "Svalarheima",
-      "Human Edge"
+      "Thaton",
+      "Wei Chuän",
+      "Ya Lang",
+      "Yunmen",
+      "Yutang",
+      "Zhî Tû",
+      "Zhöu Zhöug"
     ],
     "Yu Jing - Imperial Service": [
-      "Shentang",
-      "Yutang",
-      "Sol (Chung Kuo)",
+      "Bêi Tû",
+      "Dailing",
+      "Gandakpur",
+      "Henggu",
+      "Hou Tu",
+      "Human Edge",
+      "Kambu",
+      "Karkorin",
+      "Koguryo",
+      "Kuraimori",
+      "Lac Viet",
+      "Luang-Sokeo",
+      "Nakonthai",
       "Paradiso",
+      "Pianli",
+      "Sën Sûn",
+      "Shentang",
+      "Sol (Chung Kuo)",
       "Svalarheima",
-      "Human Edge"
+      "Thaton",
+      "Wei Chuän",
+      "Ya Lang",
+      "Yunmen",
+      "Yutang",
+      "Zhî Tû",
+      "Zhöu Zhöug"
     ],
     "Yu Jing - Tiger Soldiers": [
-      "Shentang",
-      "Yutang",
-      "Sol (Chung Kuo)",
+      "Bêi Tû",
+      "Dailing",
+      "Gandakpur",
+      "Henggu",
+      "Hou Tu",
+      "Human Edge",
+      "Kambu",
+      "Karkorin",
+      "Koguryo",
+      "Kuraimori",
+      "Lac Viet",
+      "Luang-Sokeo",
+      "Nakonthai",
       "Paradiso",
+      "Pianli",
+      "Sën Sûn",
+      "Shentang",
+      "Sol (Chung Kuo)",
       "Svalarheima",
-      "Human Edge"
+      "Thaton",
+      "Wei Chuän",
+      "Ya Lang",
+      "Yunmen",
+      "Yutang",
+      "Zhî Tû",
+      "Zhöu Zhöug"
     ],
     "Yu Jing - StateEmpire Army": [
-      "Shentang",
-      "Yutang",
-      "Sol (Chung Kuo)",
+      "Bêi Tû",
+      "Dailing",
+      "Gandakpur",
+      "Henggu",
+      "Hou Tu",
+      "Human Edge",
+      "Kambu",
+      "Karkorin",
+      "Koguryo",
+      "Kuraimori",
+      "Lac Viet",
+      "Luang-Sokeo",
+      "Nakonthai",
       "Paradiso",
+      "Pianli",
+      "Sën Sûn",
+      "Shentang",
+      "Sol (Chung Kuo)",
       "Svalarheima",
-      "Human Edge"
+      "Thaton",
+      "Wei Chuän",
+      "Ya Lang",
+      "Yunmen",
+      "Yutang",
+      "Zhî Tû",
+      "Zhöu Zhöug"
     ],
     "Yu Jing - Yănjīng Intelligence": [
-      "Shentang",
-      "Yutang",
-      "Sol (Chung Kuo)",
+      "Bêi Tû",
+      "Dailing",
+      "Gandakpur",
+      "Henggu",
+      "Hou Tu",
+      "Human Edge",
+      "Kambu",
+      "Karkorin",
+      "Koguryo",
+      "Kuraimori",
+      "Lac Viet",
+      "Luang-Sokeo",
+      "Nakonthai",
       "Paradiso",
+      "Pianli",
+      "Sën Sûn",
+      "Shentang",
+      "Sol (Chung Kuo)",
       "Svalarheima",
-      "Human Edge"
+      "Thaton",
+      "Wei Chuän",
+      "Ya Lang",
+      "Yunmen",
+      "Yutang",
+      "Zhî Tû",
+      "Zhöu Zhöug"
     ],
     "Yu Jing - Invincible Army": [
-      "Shentang",
-      "Yutang",
-      "Sol (Chung Kuo)",
+      "Bêi Tû",
+      "Dailing",
+      "Gandakpur",
+      "Henggu",
+      "Hou Tu",
+      "Human Edge",
+      "Kambu",
+      "Karkorin",
+      "Koguryo",
+      "Kuraimori",
+      "Lac Viet",
+      "Luang-Sokeo",
+      "Nakonthai",
       "Paradiso",
+      "Pianli",
+      "Sën Sûn",
+      "Shentang",
+      "Sol (Chung Kuo)",
       "Svalarheima",
-      "Human Edge"
+      "Thaton",
+      "Wei Chuän",
+      "Ya Lang",
+      "Yunmen",
+      "Yutang",
+      "Zhî Tû",
+      "Zhöu Zhöug"
     ],
     "Ariadna": [
       "Antipodean Wilds",
@@ -15806,7 +16159,127 @@ window.INFINITY_DATA = {
         "Yu Jing faction-book Lifepath entries supersede their Corebook counterparts when the variant rules are used.",
         "Yu Jing character creation emphasises Willpower and Close Combat.",
         "Japanese characters use the Japanese career rules; post-Uprising faction/status choices are era-dependent.",
-        "Narrative Lifepath traits and event outcomes are retained here as source notes rather than converted into the sheet's custom skill-bonus Trait model."
+        "Narrative Lifepath traits and event outcomes are retained as source references rather than silently converted into the sheet’s custom skill-bonus Trait model."
+      ],
+      "socialStatusColumns": [
+        "Shuǎlài",
+        "Guanxi",
+        "Chinese",
+        "Laowai",
+        "Imperial",
+        "Party"
+      ],
+      "socialStatusTable": {
+        "2": [
+          "Dissident",
+          "Dissident",
+          "Dissident",
+          "Dissident",
+          "Dissident",
+          "Dissident"
+        ],
+        "11": [
+          "Upper",
+          "Upper",
+          "Elite",
+          "Upper",
+          "Hyper-Elite",
+          "Elite"
+        ],
+        "12": [
+          "Upper",
+          "Elite",
+          "Hyper-Elite",
+          "Upper",
+          "Hyper-Elite",
+          "Hyper-Elite"
+        ],
+        "3–4": [
+          "Underclass",
+          "Demogrant",
+          "Demogrant",
+          "Underclass",
+          "Upper",
+          "Middle"
+        ],
+        "5–6": [
+          "Demogrant",
+          "Demogrant",
+          "Middle",
+          "Demogrant",
+          "Upper",
+          "Middle"
+        ],
+        "7–8": [
+          "Middle",
+          "Middle",
+          "Middle",
+          "Demogrant",
+          "Elite",
+          "Upper"
+        ],
+        "9–10": [
+          "Middle",
+          "Middle",
+          "Upper",
+          "Demogrant",
+          "Elite",
+          "Elite"
+        ]
+      },
+      "specialHeritage": {
+        "Imperial": "Gain the Dragon-Blooded trait. Imperial Agent may be chosen as first career at no cost, though rank is still determined normally.",
+        "Party": "May reroll one hazard test during the character’s career. Yănjīng Agent may be chosen as first career at no cost; underlying ethnicity may be Chinese/Guanxi or determined by reroll."
+      },
+      "heritageCareers": [
+        {
+          "heritage": "Shuǎlài",
+          "recommended": [
+            "Artisan",
+            "Criminal",
+            "Jopok",
+            "Subversive"
+          ],
+          "prohibited": [
+            "Celestial Guard",
+            "Imperial Agent",
+            "Internal Affairs Agent",
+            "Police",
+            "Yănjīng Agent"
+          ]
+        },
+        {
+          "heritage": "Guanxi",
+          "recommended": [
+            "Celestial Guard",
+            "Corporate",
+            "Imperial Agent",
+            "Internal Affairs Agent",
+            "Medical",
+            "Yănjīng Agent"
+          ],
+          "prohibited": [
+            "NeoBushi",
+            "Ninja",
+            "Subversive"
+          ]
+        },
+        {
+          "heritage": "Laowai",
+          "recommended": [
+            "Artisan",
+            "Jopok",
+            "NeoBushi",
+            "Ninja",
+            "Subversive"
+          ],
+          "prohibited": [
+            "Celestial Guard",
+            "Imperial Agent",
+            "Internal Affairs Agent",
+            "Yănjīng Agent"
+          ]
+        }
       ]
     },
     "careerTables": {
@@ -15849,7 +16322,580 @@ window.INFINITY_DATA = {
         "Kuge Aristocrat",
         "Oniwaban"
       ]
-    }
+    },
+    "source": "Infinity RPG — Yu Jing Faction Book",
+    "sourceFile": "MUH050226 Infinity - Yu Jing Faction Book.pdf",
+    "chapters": {
+      "faction": 4,
+      "shentang": 19,
+      "yutang": 44,
+      "assets": 66,
+      "gear": 71,
+      "characters": 84,
+      "adversaries": 98
+    },
+    "adolescentEvents": [
+      {
+        "roll": "1",
+        "trait": "Radical Futurist",
+        "effect": "Gain 1 rank in Persuasion (sheet: Persuade). Gain a rival in the Yu Jing Old Guard."
+      },
+      {
+        "roll": "2",
+        "trait": "Workaholic",
+        "effect": "Gain 1 rank in Education and add 1d6 years to age. May freely select Internal Affairs Agent as first career."
+      },
+      {
+        "roll": "3",
+        "trait": "Religious Dedicant",
+        "effect": "Gain 1 rank in Discipline."
+      },
+      {
+        "roll": "4",
+        "trait": "Cultural Anachronism",
+        "effect": "Increase Social Status by 1 step; +1 Complication Range on Lifestyle tests to blend in."
+      },
+      {
+        "roll": "5",
+        "trait": "Underachiever",
+        "effect": "Gain 1 rank in Psychology and add 1d6 years to age. May freely select Academic or Artisan as first career."
+      },
+      {
+        "roll": "6",
+        "trait": "Troublemaker",
+        "effect": "Reduce Social Status by 1 step; gain 1 rank in Resolve."
+      },
+      {
+        "roll": "7",
+        "trait": "Thrill Seeker",
+        "effect": "Gain 1 rank in Acrobatics."
+      },
+      {
+        "roll": "8",
+        "trait": "Convict",
+        "effect": "Gain a Criminal Record and spend 1d6 years in an off-world prison before first career."
+      },
+      {
+        "roll": "9",
+        "trait": "Absent-Minded",
+        "effect": "Gain 1 rank in Science."
+      },
+      {
+        "roll": "10",
+        "trait": "Rigid Traditionalist",
+        "effect": "Gain 1 rank in Discipline. Gain a rival in the Yu Jing New Wave."
+      },
+      {
+        "roll": "11",
+        "trait": "Street Fighter",
+        "effect": "Gain 1 rank in Close Combat."
+      },
+      {
+        "roll": "12",
+        "trait": "Washout",
+        "effect": "Increase Difficulty of hazarding the first career by 1 step."
+      },
+      {
+        "roll": "13",
+        "trait": "Hot-Tempered",
+        "effect": "Gain a debt worth 5 Assets."
+      },
+      {
+        "roll": "14",
+        "trait": "Backwater Manners",
+        "effect": "Gain 1 rank in Animal Handling."
+      },
+      {
+        "roll": "15",
+        "trait": "Irredeemable Reprobate",
+        "effect": "Reduce Social Status by 1 step, or gain a 4 Asset debt to keep the cheating evidence quiet."
+      },
+      {
+        "roll": "16",
+        "trait": "Adrenaline Junkie",
+        "effect": "Gain 1 rank in Pilot and an addiction to Nitrocaine. May freely select Bōsōzoku as first career."
+      },
+      {
+        "roll": "17",
+        "trait": "Sentimentalist",
+        "effect": "Gain an Ally (or Rival) in another faction."
+      },
+      {
+        "roll": "18",
+        "trait": "Ruthless",
+        "effect": "Increase Willpower by 1, decrease Brawn by 1, add 1d6 years to age, and may freely select Imperial Agent as first career."
+      },
+      {
+        "roll": "19",
+        "trait": "Youxia",
+        "effect": "Defect to a new faction using the Faction Table."
+      },
+      {
+        "roll": "20",
+        "trait": "Debt of Gratitude",
+        "effect": "Character died and was resurrected using the Corebook Resurrection rules."
+      }
+    ],
+    "careerTable": [
+      {
+        "range": "1",
+        "career": "Special Forces",
+        "flags": [
+          "Corebook career"
+        ]
+      },
+      {
+        "range": "2",
+        "career": "Intelligence Operative",
+        "flags": [
+          "Corebook career"
+        ]
+      },
+      {
+        "range": "3",
+        "career": "Celestial Guard",
+        "flags": [
+          "Corebook career",
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "4",
+        "career": "Bōsōzoku",
+        "flags": [
+          "Corebook career"
+        ]
+      },
+      {
+        "range": "5",
+        "career": "TAG Pilot",
+        "flags": [
+          "Corebook career"
+        ]
+      },
+      {
+        "range": "6",
+        "career": "Internal Affairs Agent",
+        "flags": [
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "7",
+        "career": "Jopok",
+        "flags": []
+      },
+      {
+        "range": "8",
+        "career": "Ninja",
+        "flags": []
+      },
+      {
+        "range": "9",
+        "career": "Zhanshi Gōngchéng Mech-Engineers",
+        "flags": [
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "10",
+        "career": "Subversive",
+        "flags": []
+      },
+      {
+        "range": "11",
+        "career": "Wú Míng Assault Corps",
+        "flags": []
+      },
+      {
+        "range": "12",
+        "career": "Artisan",
+        "flags": []
+      },
+      {
+        "range": "13",
+        "career": "Combat Pilot",
+        "flags": []
+      },
+      {
+        "range": "14–15",
+        "career": "Yănjīng Agent",
+        "flags": [
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "16–17",
+        "career": "Imperial Agent",
+        "flags": [
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "18–20",
+        "career": "Roll on Faction Table of Your Choice",
+        "flags": []
+      }
+    ],
+    "careerEventTable": [
+      {
+        "roll": "1–2",
+        "result": "Roll again on the Yu Jing Adolescent Event Table; ignore any additional trait."
+      },
+      {
+        "roll": "3",
+        "result": "Japanese Career Event Table"
+      },
+      {
+        "roll": "4",
+        "result": "Adolescent Event Table A"
+      },
+      {
+        "roll": "5",
+        "result": "Adolescent Event Table B"
+      },
+      {
+        "roll": "6",
+        "result": "Adolescent Event Table C"
+      }
+    ],
+    "japaneseCareerTable": [
+      {
+        "range": "1",
+        "career": "Intelligence Operative",
+        "flags": [
+          "Corebook career"
+        ]
+      },
+      {
+        "range": "2",
+        "career": "Artisan",
+        "flags": [
+          "Yu Jing career"
+        ]
+      },
+      {
+        "range": "3",
+        "career": "Combat Pilot",
+        "flags": [
+          "Yu Jing career"
+        ]
+      },
+      {
+        "range": "4",
+        "career": "Smuggler",
+        "flags": [
+          "Corebook career"
+        ]
+      },
+      {
+        "range": "5–6",
+        "career": "Jopok",
+        "flags": [
+          "Yu Jing career"
+        ]
+      },
+      {
+        "range": "7–8",
+        "career": "Bōsōzoku",
+        "flags": [
+          "Corebook career"
+        ]
+      },
+      {
+        "range": "9–12",
+        "career": "Subversive",
+        "flags": [
+          "Yu Jing career"
+        ]
+      },
+      {
+        "range": "13–14",
+        "career": "Kuge Aristocrat",
+        "flags": [
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "15–16",
+        "career": "NeoBushi",
+        "flags": []
+      },
+      {
+        "range": "17–18",
+        "career": "Ninja",
+        "flags": [
+          "Faction prerequisite",
+          "Yu Jing career"
+        ]
+      },
+      {
+        "range": "19",
+        "career": "Oniwaban",
+        "flags": [
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "20",
+        "career": "Roll on Faction Table of Your Choice",
+        "flags": []
+      }
+    ],
+    "japaneseCareerEventTable": [
+      {
+        "roll": "1–3",
+        "result": "Japanese Career Event Table"
+      },
+      {
+        "roll": "4",
+        "result": "Adolescent Event Table A"
+      },
+      {
+        "roll": "5",
+        "result": "Adolescent Event Table B"
+      },
+      {
+        "roll": "6",
+        "result": "Adolescent Event Table C"
+      }
+    ],
+    "japaneseUprisingRule": "For games beginning after the first day of the Uprising, a Japanese-origin character decides whether to remain with Yu Jing or join the Uprising. Joining changes Faction to Minor Nations and rerolls Social Class without changing Earnings or the Decision Four Attribute gain. Dissidents are swept into the Uprising automatically. Japanese-origin characters who remain with Yu Jing reduce Social Status and Earnings by one step and gain Suspected Rebel.",
+    "imperialRanks": [
+      {
+        "range": "1–7",
+        "rank": "Zhànyīng (Eagles)",
+        "freeEntryStatus": [
+          "Middle"
+        ],
+        "electiveSkills": [
+          "Athletics",
+          "Observation",
+          "Thievery"
+        ],
+        "gear": [
+          "Breaker Combi Rifle or Qiang",
+          "Light Combat Armour"
+        ],
+        "earnings": "1+3§"
+      },
+      {
+        "range": "8–13",
+        "rank": "Yě Jī (Pheasants)",
+        "freeEntryStatus": [
+          "Upper"
+        ],
+        "electiveSkills": [
+          "Analysis",
+          "Close Combat",
+          "Stealth"
+        ],
+        "gear": [
+          "Sword of Office",
+          "Yě Jī Inspector (Variant Light Combat Armour)"
+        ],
+        "earnings": "1+4§"
+      },
+      {
+        "range": "14–18",
+        "rank": "Xiān Hè (Cranes)",
+        "freeEntryStatus": [
+          "Elite",
+          "Hyper-Elite"
+        ],
+        "electiveSkills": [
+          "Close Combat",
+          "Command",
+          "Education"
+        ],
+        "gear": [
+          "Numbfish (Variant Sword of Office) or MULTI Rifle",
+          "Crane Armour"
+        ],
+        "earnings": "2+3§"
+      },
+      {
+        "range": "19–20",
+        "rank": "Hsien (Immortals)",
+        "freeEntryStatus": [
+          "Hyper-Elite"
+        ],
+        "electiveSkills": [
+          "Acrobatics",
+          "Ballistics",
+          "Command"
+        ],
+        "gear": [
+          "MULTI Rifle or HMG",
+          "Yánda (Variant Sword of Office)",
+          "Hsien Emissary (Variant Heavy Combat Armour)"
+        ],
+        "earnings": "2+4§"
+      }
+    ],
+    "homelands": {
+      "Shentang": {
+        "parentWorld": "Shentang",
+        "page": 19,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Yu Jing Heritage Table world"
+      },
+      "Gandakpur": {
+        "parentWorld": "Shentang",
+        "page": 26,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Dailing": {
+        "parentWorld": "Shentang",
+        "page": 27,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Henggu": {
+        "parentWorld": "Shentang",
+        "page": 28,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Hou Tu": {
+        "parentWorld": "Shentang",
+        "page": 28,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Kambu": {
+        "parentWorld": "Shentang",
+        "page": 29,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Karkorin": {
+        "parentWorld": "Shentang",
+        "page": 30,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Koguryo": {
+        "parentWorld": "Shentang",
+        "page": 31,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Luang-Sokeo": {
+        "parentWorld": "Shentang",
+        "page": 33,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Lac Viet": {
+        "parentWorld": "Shentang",
+        "page": 33,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Kuraimori": {
+        "parentWorld": "Shentang",
+        "page": 34,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Nakonthai": {
+        "parentWorld": "Shentang",
+        "page": 39,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Thaton": {
+        "parentWorld": "Shentang",
+        "page": 41,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Ya Lang": {
+        "parentWorld": "Shentang",
+        "page": 43,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Yutang": {
+        "parentWorld": "Yutang",
+        "page": 44,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Yu Jing Heritage Table world"
+      },
+      "Bêi Tû": {
+        "parentWorld": "Yutang",
+        "page": 50,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Pianli": {
+        "parentWorld": "Yutang",
+        "page": 52,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Sën Sûn": {
+        "parentWorld": "Yutang",
+        "page": 53,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Wei Chuän": {
+        "parentWorld": "Yutang",
+        "page": 55,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Yunmen": {
+        "parentWorld": "Yutang",
+        "page": 58,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Zhî Tû": {
+        "parentWorld": "Yutang",
+        "page": 59,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin"
+      },
+      "Zhöu Zhöug": {
+        "parentWorld": "Yutang",
+        "page": 64,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Regional origin; spelling follows sourcebook text extraction"
+      },
+      "Sol (Chung Kuo)": {
+        "parentWorld": "Sol (Chung Kuo)",
+        "page": 66,
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Yu Jing Heritage Table world"
+      },
+      "Paradiso": {
+        "parentWorld": "Paradiso",
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Yu Jing Heritage Table world"
+      },
+      "Svalarheima": {
+        "parentWorld": "Svalarheima",
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Yu Jing Heritage Table world"
+      },
+      "Human Edge": {
+        "parentWorld": "Human Edge",
+        "source": "Infinity RPG — Yu Jing Faction Book",
+        "selectionRole": "Yu Jing Heritage Table world"
+      }
+    },
+    "normalizationNotes": [
+      "Source skill Persuasion is normalised to the sheet skill name Persuade.",
+      "The Artisan profile prints 'Analyis'; the sheet normalises this apparent typo to Analysis.",
+      "The career table prints Yanjing Agent while the profile and surrounding text use Yănjīng Agent; the sheet uses Yănjīng Agent.",
+      "Palad Khik is an Ammo Type in the source table, not a standalone weapon; V68 moves it to Equipment.",
+      "Fireflies are listed under Explosives, not standalone weapons; V68 moves them to Equipment.",
+      "The source ToC text extraction spells Zhöu Zhöug that way; the sheet preserves the extracted spelling rather than inventing a different diacritic form."
+    ]
   },
   "ariadnaReference": {
     "source": "Infinity RPG — Ariadna Supplement (Updated)",
@@ -16570,6 +17616,57 @@ window.INFINITY_DATA = {
     "Hafza": [
       "Haqqislam sourcebook career",
       "Haqqislam faction prerequisite"
+    ],
+    "Imperial Agent": [
+      "Yu Jing faction prerequisite",
+      "Yu Jing sourcebook career"
+    ],
+    "Artisan": [
+      "Yu Jing sourcebook career"
+    ],
+    "Combat Pilot": [
+      "Yu Jing sourcebook career"
+    ],
+    "Bōsōzoku": [
+      "Yu Jing sourcebook career"
+    ],
+    "Internal Affairs Agent": [
+      "Yu Jing faction prerequisite",
+      "Yu Jing sourcebook career"
+    ],
+    "Jopok": [
+      "Yu Jing sourcebook career"
+    ],
+    "Ninja": [
+      "Yu Jing sourcebook career"
+    ],
+    "Subversive": [
+      "Yu Jing sourcebook career"
+    ],
+    "Wú Míng Assault Corps": [
+      "Yu Jing sourcebook career"
+    ],
+    "Yănjīng Agent": [
+      "Yu Jing faction prerequisite",
+      "Yu Jing sourcebook career"
+    ],
+    "Zhanshi Gōngchéng Mech-Engineers": [
+      "Yu Jing faction prerequisite",
+      "Yu Jing sourcebook career"
+    ],
+    "Kuge Aristocrat": [
+      "Yu Jing faction prerequisite",
+      "Yu Jing sourcebook career"
+    ],
+    "Oniwaban": [
+      "Yu Jing faction prerequisite",
+      "Yu Jing sourcebook career"
+    ],
+    "Tokusetsu": [
+      "Yu Jing sourcebook career"
+    ],
+    "NeoBushi": [
+      "Yu Jing sourcebook career"
     ]
   },
   "careerProfiles": {
@@ -16738,7 +17835,11 @@ window.INFINITY_DATA = {
         "Breaking & Entering Kit",
         "Recorder"
       ],
-      "brief": "Covert operative trained for espionage, sabotage and strategic intelligence."
+      "brief": "Covert operative trained for espionage, sabotage and strategic intelligence.",
+      "source": "Infinity RPG — Ariadna Supplement (Updated)",
+      "additionalSources": [
+        "Infinity RPG — Yu Jing Faction Book, p. 94–95"
+      ]
     },
     "Hardcase": {
       "sourcePage": 71,
@@ -16932,8 +18033,10 @@ window.INFINITY_DATA = {
       ],
       "brief": "Elite covert military operator.",
       "additionalSources": [
-        "Infinity RPG — Haqqislam Supplement, p. 86"
-      ]
+        "Infinity RPG — Haqqislam Supplement, p. 86",
+        "Infinity RPG — Yu Jing Faction Book, Yu Jing Career Table p. 88"
+      ],
+      "source": "Infinity RPG — Ariadna Supplement (Updated)"
     },
     "Paratrooper": {
       "sourcePage": 73,
@@ -17663,6 +18766,467 @@ window.INFINITY_DATA = {
       ],
       "brief": "Scientist responsible for transforming new worlds for human habitation.",
       "source": "Infinity RPG — Haqqislam Supplement"
+    },
+    "Imperial Agent": {
+      "sourcePage": 92,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 2,
+        "Brawn": 1,
+        "Coordination": 1,
+        "Intelligence": 1,
+        "Personality": 2,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Close Combat",
+        "Discipline",
+        "Observation"
+      ],
+      "electiveSkills": [
+        "See Imperial Ranks"
+      ],
+      "earnings": "Special",
+      "gear": [
+        "See Imperial Ranks"
+      ],
+      "brief": "Tactical judiciary career whose rank determines elective skills, gear, and Earnings.",
+      "special": "Cannot be selected by a character with a Criminal Record. First entry determines Imperial rank; later advancement can hazard the next rank.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Artisan": {
+      "sourcePage": 92,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 1,
+        "Brawn": 1,
+        "Coordination": 2,
+        "Intelligence": 2,
+        "Personality": 2,
+        "Willpower": 1
+      },
+      "mandatorySkills": [
+        "Education",
+        "Lifestyle",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Analysis",
+        "Discipline",
+        "Hacking"
+      ],
+      "earnings": "1+4§",
+      "gear": [
+        "Engineering Waldo or Hacking Device",
+        "Powered Multitool",
+        "Fashionable Clothing",
+        "Memories Kit"
+      ],
+      "brief": "Meticulous craft specialist producing bespoke works and advanced custom equipment.",
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourceNote": "The printed profile says 'Analyis'; normalised here to Analysis."
+    },
+    "Combat Pilot": {
+      "sourcePage": 92,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 1,
+        "Brawn": 1,
+        "Coordination": 3,
+        "Intelligence": 1,
+        "Personality": 0,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Observation",
+        "Pilot",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Pilot",
+        "Spacecraft"
+      ],
+      "earnings": "2+1§",
+      "gear": [
+        "Motorcycle or Remote Presence Gear",
+        "Inlaid Palm Circuitry",
+        "TF Coat or Armoured Clothing (Uniform)"
+      ],
+      "brief": "Vehicle and remote specialist trained for high-risk combat piloting.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Bōsōzoku": {
+      "sourcePage": 93,
+      "attributeBonuses": {
+        "Agility": 2,
+        "Awareness": 2,
+        "Brawn": 2,
+        "Coordination": 0,
+        "Intelligence": 2,
+        "Personality": 1,
+        "Willpower": 1
+      },
+      "mandatorySkills": [
+        "Pilot",
+        "Thievery",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Pilot",
+        "Tech",
+        "Hacking"
+      ],
+      "earnings": "0+2§",
+      "gear": [
+        "Motorcycle",
+        "AP Pistol with 2 AP Reloads",
+        "Armoured Clothing (Racer’s Suit)"
+      ],
+      "brief": "Illegal street racer steeped in underground danger, loyalty, and violence.",
+      "special": "Criminal Career.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Internal Affairs Agent": {
+      "sourcePage": 94,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 3,
+        "Brawn": 1,
+        "Coordination": 0,
+        "Intelligence": 1,
+        "Personality": 1,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Discipline",
+        "Observation",
+        "Psychology"
+      ],
+      "electiveSkills": [
+        "Analysis",
+        "Lifestyle",
+        "Stealth"
+      ],
+      "earnings": "2+3§",
+      "gear": [
+        "Aletheia Kit",
+        "Armoured Clothing",
+        "Kanrèn Gatecrasher (Variant Light Combat Armour) or X-Visor",
+        "Sensei Wraps or Boarding Shotgun"
+      ],
+      "brief": "StateEmpire counter-insurgency and internal-security operative.",
+      "special": "Cannot be selected by characters with a Criminal Record.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Jopok": {
+      "sourcePage": 94,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 1,
+        "Brawn": 1,
+        "Coordination": 1,
+        "Intelligence": 1,
+        "Personality": 1,
+        "Willpower": 3
+      },
+      "mandatorySkills": [
+        "Close Combat",
+        "Persuade",
+        "Thievery"
+      ],
+      "electiveSkills": [
+        "Acrobatics",
+        "Hacking",
+        "Thievery"
+      ],
+      "earnings": "0+5§",
+      "gear": [
+        "TF Coat",
+        "Knife",
+        "Yangwater (2 doses)"
+      ],
+      "brief": "Locally embedded organised-crime operator tied to Yu Jing’s social and political fabric.",
+      "special": "Criminal Career.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Ninja": {
+      "sourcePage": 95,
+      "attributeBonuses": {
+        "Agility": 3,
+        "Awareness": 1,
+        "Brawn": 1,
+        "Coordination": 1,
+        "Intelligence": 2,
+        "Personality": 0,
+        "Willpower": 1
+      },
+      "mandatorySkills": [
+        "Acrobatics",
+        "Close Combat",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Discipline",
+        "Hacking"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Tactical Bow with AP/DA/DT Arrow Reloads or Assault Hacking Device",
+        "Covert Dermal Grafts or Light Combat Armour",
+        "Thermo-Optical Camouflage"
+      ],
+      "brief": "Covert martial and infiltration specialist operating through quasi-legitimate fronts.",
+      "special": "If play begins during the Japanese Uprising and the character joins or remains with Yu Jing, add +1 Earnings in Decision Nine.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Subversive": {
+      "sourcePage": 95,
+      "attributeBonuses": {
+        "Agility": 2,
+        "Awareness": 2,
+        "Brawn": 0,
+        "Coordination": 0,
+        "Intelligence": 1,
+        "Personality": 1,
+        "Willpower": 3
+      },
+      "mandatorySkills": [
+        "Discipline",
+        "Stealth",
+        "Thievery"
+      ],
+      "electiveSkills": [
+        "Hacking",
+        "Persuade",
+        "Tech"
+      ],
+      "earnings": "1§ (max 0)",
+      "gear": [
+        "Breaking & Entering Kit",
+        "Fake ID 2",
+        "Heavy Pistol with 2 Standard Reloads or Hacking Device"
+      ],
+      "brief": "Dissident operative pursuing political change through covert or revolutionary activity.",
+      "special": "Gain On the Watchlist. The character may voluntarily become Dissident and defect at this time.",
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourceNote": "Earnings wording is preserved from the extracted source profile rather than silently corrected."
+    },
+    "Wú Míng Assault Corps": {
+      "sourcePage": 95,
+      "attributeBonuses": {
+        "Agility": 2,
+        "Awareness": 1,
+        "Brawn": 3,
+        "Coordination": 1,
+        "Intelligence": 0,
+        "Personality": 0,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Acrobatics",
+        "Ballistics",
+        "Close Combat"
+      ],
+      "electiveSkills": [
+        "Athletics",
+        "Ballistics",
+        "Close Combat"
+      ],
+      "earnings": "0+6§ (max 0)",
+      "gear": [
+        "Boarding Shotgun or Panzerfaust",
+        "Heavy Combat Armour",
+        "Painkillers (2 doses)"
+      ],
+      "brief": "Penal assault corps whose members serve without names in exchange for the possibility of a new legal identity.",
+      "special": "Gain On the Watchlist and add 2d6 years to age. If not the final career, leaving requires an Average (D1) hazard test; on exit the criminal record is erased.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Yănjīng Agent": {
+      "sourcePage": 96,
+      "attributeBonuses": {
+        "Agility": 2,
+        "Awareness": 2,
+        "Brawn": 1,
+        "Coordination": 0,
+        "Intelligence": 2,
+        "Personality": 1,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Observation",
+        "Psychology",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Close Combat",
+        "Hacking",
+        "Persuade"
+      ],
+      "earnings": "2+4§",
+      "gear": [
+        "Assault Hacking Device with UPGRADE: Phoenixware or MULTI Rifle",
+        "Armoured Clothing or Iron Turtle Suit",
+        "Aletheia Kit"
+      ],
+      "brief": "Party military-intelligence field operative serving StateEmpire interests internally and abroad.",
+      "special": "Cannot be selected by characters with a Criminal Record.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Zhanshi Gōngchéng Mech-Engineers": {
+      "sourcePage": 96,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 0,
+        "Brawn": 2,
+        "Coordination": 2,
+        "Intelligence": 2,
+        "Personality": 1,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Athletics",
+        "Discipline",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Medicine",
+        "Tech"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Powered Multitool",
+        "Armoured Clothing (Uniform)",
+        "Combi Rifle"
+      ],
+      "brief": "Mechanised-infantry field engineer maintaining TAGs, weapons, powered armour, and augmentations under fire.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Kuge Aristocrat": {
+      "sourcePage": 96,
+      "attributeBonuses": {
+        "Agility": 0,
+        "Awareness": 2,
+        "Brawn": 0,
+        "Coordination": 0,
+        "Intelligence": 2,
+        "Personality": 3,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Discipline",
+        "Lifestyle",
+        "Persuade"
+      ],
+      "electiveSkills": [
+        "Discipline",
+        "Education",
+        "Psychology"
+      ],
+      "earnings": "2+4§",
+      "gear": [
+        "AiQ Upgrade",
+        "Chongqing Quantronic Security Kit",
+        "Ki-rin Rifle"
+      ],
+      "brief": "Japanese aristocratic-corporate powerbroker operating through patient political and economic influence.",
+      "special": "During the Uprising era, Decision Nine changes status as specified by the source.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Oniwaban": {
+      "sourcePage": 97,
+      "attributeBonuses": {
+        "Agility": 2,
+        "Awareness": 2,
+        "Brawn": 2,
+        "Coordination": 0,
+        "Intelligence": 1,
+        "Personality": 1,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Acrobatics",
+        "Close Combat",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Lifestyle",
+        "Stealth",
+        "Thievery"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Cosmetics Kit",
+        "Sensei Wraps (2 pairs) or Shinobigatana",
+        "Thermo-Optical Camouflage"
+      ],
+      "brief": "Elite clandestine Japanese operative connecting political authority with the ninja clans.",
+      "special": "If play begins during the Japanese Uprising, the character automatically joins Independent Great Japan.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "Tokusetsu": {
+      "sourcePage": 97,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 2,
+        "Brawn": 1,
+        "Coordination": 1,
+        "Intelligence": 2,
+        "Personality": 1,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Discipline",
+        "Observation",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Medicine",
+        "Survival",
+        "Tech"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "MediKit or Powered Multitool",
+        "Knife",
+        "Wushu Tracksuit",
+        "Yangwater (1 dose)"
+      ],
+      "brief": "JSA support specialist covering medicine, engineering, and field survival.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "NeoBushi": {
+      "sourcePage": 97,
+      "attributeBonuses": {
+        "Agility": 2,
+        "Awareness": 1,
+        "Brawn": 2,
+        "Coordination": 1,
+        "Intelligence": 1,
+        "Personality": 1,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Close Combat",
+        "Discipline",
+        "Resistance"
+      ],
+      "electiveSkills": [
+        "Acrobatics",
+        "Close Combat",
+        "Education"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Nokogiri Benkei (Variant Sword of Office) or Teseum Chopper",
+        "Powered Combat Armour"
+      ],
+      "brief": "Japanese warrior-aristocrat defined by Bushido, honour, and martial duty.",
+      "special": "During the Uprising era, Decision Nine changes status as specified by the source.",
+      "source": "Infinity RPG — Yu Jing Faction Book"
     }
   },
   "hostHeritage": {
@@ -17876,7 +19440,7 @@ window.INFINITY_DATA = {
         "attribute": "Brawn"
       }
     ],
-    "alMustaslahaRules": "Wards of the state; initially Cubeless and use Near-Death Experience until the first career. After the first career they may purchase a Cube for 1 Life Point. Transitory status becomes Middle at Decision Eight. Akbar Doctor, Military, or Special Forces may be chosen as a first career without a hazard.",
+    "alMustaslahaRules": "Al-Mustaslaha are wards of the state and begin Cubeless. Until the first career is completed, a death-and-resurrection Lifepath result becomes a Near-Death Experience instead: reduce Vigour by 2 and increase Resolve by 1. After the first career, the inhibitors are removed and a Cube may be purchased for 1 Life Point; Near-Death Experience can no longer substitute after that. Al-Mustaslaha is transitory: at Decision Eight raise Status to Middle, and later Al-Mustaslaha status results count as Middle. Akbar Doctor, Military, or Special Forces may be chosen as a first career without a hazard test.",
     "adolescentEvents": [
       {
         "roll": "1",
@@ -18269,10 +19833,13 @@ window.INFINITY_DATA = {
       "The Khawarij mandatory-skill line prints Athletics, Discipline, Athletics. The duplicate is preserved in the source profile rather than silently replaced.",
       "The gear catalogue narrative and index use Boarding-Colt; a table rendering contains the typo Boading-Col.",
       "Career text contains Riha Rations in one place; the gear catalogue item is Rihla Rations."
+    ],
+    "sourceNotes": [
+      "The Lifepath sidebar on p. 76/77 says 'PanOceanian faction' once; context, heading, and all adjacent rules clearly identify this as the Haqqislam faction rules. The sheet records the rule under Haqqislam without reproducing that apparent editorial slip."
     ]
   }
 };
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v67-haqqislam-source";
+window.INFINITY_BUILD = "v68-haqq-yujing-integrity";
