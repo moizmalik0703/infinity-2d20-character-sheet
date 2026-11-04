@@ -11823,7 +11823,8 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "loadoutEligible": true,
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
-      "armourAutomation": false
+      "armourAutomation": false,
+      "sourcePage": 93
     },
     {
       "type": "Armour",
@@ -11964,7 +11965,8 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "loadoutEligible": true,
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
-      "armourAutomation": false
+      "armourAutomation": false,
+      "sourcePage": 94
     },
     {
       "type": "Remote",
@@ -12024,7 +12026,8 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "loadoutEligible": true,
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
-      "sourcePage": 81
+      "sourcePage": 81,
+      "sourceProfile": "Source table: Ki-rin X (Ammo Type)."
     },
     {
       "type": "Weapon",
@@ -12786,7 +12789,8 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false,
-      "source": "Infinity RPG — Yu Jing Faction Book"
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 93
     },
     {
       "type": "Vehicle",
@@ -12960,7 +12964,8 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "loadoutEligible": true,
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
-      "sourcePage": 82
+      "sourcePage": 82,
+      "sourceProfile": "Source table: UPGRADE - Phoenixware."
     },
     {
       "type": "Camouflage",
@@ -14777,7 +14782,8 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "loadoutEligible": true,
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
-      "armourAutomation": false
+      "armourAutomation": false,
+      "sourcePage": 93
     },
     {
       "type": "Tool",
@@ -15864,6 +15870,22 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 81,
       "sourceRestriction": "5 (Dissident 4)"
+    },
+    {
+      "type": "Weapon",
+      "name": "Yánda (CC)",
+      "brief": "Hsien ceremonial/combat blade listed as a Sword of Office variant in the Imperial Ranks Table.",
+      "mechanic": "Use the Sword of Office weapon profile; Yánda is its Hsien variant.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "",
+      "category": "Weapon",
+      "subtype": "Melee Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 93,
+      "sourceProfile": "Imperial Ranks Table: Yánda (Variant Sword of Office)."
     }
   ],
   "conditions": [
@@ -17758,7 +17780,8 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "Vrabec Pistol",
       "Vulkan Shotgun (BS)",
       "Wetspike (CC)",
-      "Yǎndǎ (CC)"
+      "Yǎndǎ (CC)",
+      "Yánda (CC)"
     ],
     "equipment": [
       "360° Vision",
@@ -26697,8 +26720,9 @@ function buildGlossaryEntries() {
     entries.push(glossaryEntry("Source References","Expanded Haqqislamite Faction Career Table","Haqqislam Reference",[`Source: ${haqq.source}, p. 79`],careersText,careersText));
     const ordersText = (haqq.hassassinOrders || []).map(row => `${row.roll}. ${row.order} — Electives: ${row.electiveSkills.join(", ")}; Gear: ${row.gear.join(", ")}`).join(" ");
     entries.push(glossaryEntry("Source References","Hassassin Orders Table","Haqqislam Reference",[`Source: ${haqq.source}, p. 83`],ordersText,ordersText));
-    if ((haqq.normalizationNotes || []).length) {
-      const noteText = haqq.normalizationNotes.join(" ");
+    const haqqNotes = [...(haqq.normalizationNotes || []), ...(haqq.sourceNotes || [])];
+    if (haqqNotes.length) {
+      const noteText = haqqNotes.join(" ");
       entries.push(glossaryEntry("Source References","Haqqislam Source Normalisation Notes","Haqqislam Reference",[haqq.source],noteText,noteText));
     }
   }
@@ -26731,8 +26755,17 @@ function buildGlossaryEntries() {
     ).join(" ");
     entries.push(glossaryEntry("Source References","Yu Jing Heritage Careers Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 89`],heritageCareerText,heritageCareerText));
 
+    const specialHeritageText = Object.entries(yuJing.lifepath?.specialHeritage || {}).map(([heritage,text]) => `${heritage}: ${text}`).join(" ");
+    if (specialHeritageText) entries.push(glossaryEntry("Source References","Yu Jing Special Heritage Events","Yu Jing Reference",[`Source: ${yuJing.source}, p. 85`],specialHeritageText,specialHeritageText));
+
+    const careerEventText = (yuJing.careerEventTable || []).map(row => `${row.roll}: ${row.result}`).join("; ");
+    if (careerEventText) entries.push(glossaryEntry("Source References","Yu Jing Career Event Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 88`],careerEventText,careerEventText));
+
     const japaneseCareerText = (yuJing.japaneseCareerTable || []).map(row => `${row.range}: ${row.career}${row.flags?.length ? ` [${row.flags.join(", ")}]` : ""}`).join("; ");
     entries.push(glossaryEntry("Source References","Japanese Career Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 90`],japaneseCareerText,japaneseCareerText));
+
+    const japaneseCareerEventText = (yuJing.japaneseCareerEventTable || []).map(row => `${row.roll}: ${row.result}`).join("; ");
+    if (japaneseCareerEventText) entries.push(glossaryEntry("Source References","Japanese Career Event Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 90`],japaneseCareerEventText,japaneseCareerEventText));
 
     const rankText = (yuJing.imperialRanks || []).map(row =>
       `${row.range}: ${row.rank}; free entry ${row.freeEntryStatus.join("/")}; electives ${row.electiveSkills.join(", ")}; gear ${row.gear.join(", ")}; Earnings ${row.earnings}.`
