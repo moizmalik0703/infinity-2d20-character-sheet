@@ -1,0 +1,138 @@
+{
+  "build": "v74-o12-character-creation-automation",
+  "date": "2026-11-04",
+  "sources": [
+    "Infinity RPG O-12 Sourcebook MUH050220, character creation pp.83–92",
+    "Infinity RPG Corebook MUH050206, career Lifepath p.53 and inherited careers pp.61–69"
+  ],
+  "features": [
+    "12 source-aligned O-12 Career profiles with first-phase-only attributes",
+    "Mandatory/elective/signature skill training in phase ledger",
+    "Life Point budget, costs for extra phases, assignment choice, Faction Table rolls and event selection",
+    "Bureau Analyst and Aegis Unit rolls; repeat roles require D1 career hazard confirmation or 1 Life Point",
+    "Explicit Criminal Record with forced Beta Unit and post-phase clearance",
+    "O-12 Adolescent/Career Event routes and unambiguous numeric outcomes",
+    "Pillar effects and Social Status modifier ledger",
+    "Safe gear grants; manual deferral for ambiguous or missing items",
+    "Phase undo, non-O12 bonus isolation, autosave/JSON/XML and existing print-rating integration",
+    "Embedded one-file parity with standalone app/data"
+  ],
+  "limitations": [
+    "Earnings and final Social Status cannot be calculated without career dice and earlier Lifepath choices",
+    "Contacts, non-numeric outcomes, traits, conditional event consequences, talent prerequisites remain GM/player tasks",
+    "Core A/B/C events and Music of the Spheres recursive events are not auto-resolved",
+    "Careers are opt-in and do not change existing character data merely by changing Career",
+    "Unchosen gear alternatives and armour with locational soak require manual selection",
+    "These are synthetic runtime and static parity checks, not interactive full-browser end-to-end testing"
+  ],
+  "checks": [
+    {
+      "name": "Standalone JS syntax",
+      "pass": true
+    },
+    {
+      "name": "HTML app parity",
+      "pass": true
+    },
+    {
+      "name": "HTML data parity",
+      "pass": true
+    },
+    {
+      "name": "V74 build marker",
+      "pass": true
+    },
+    {
+      "name": "Source data untouched",
+      "pass": true
+    },
+    {
+      "name": "Opt-in, no-print UI",
+      "pass": true
+    },
+    {
+      "name": "Lifepath JSON scalar XML compatibility",
+      "pass": true
+    },
+    {
+      "name": "Extra career phase LP charge",
+      "pass": true
+    },
+    {
+      "name": "Repeated assignment GM hazard/LP rule",
+      "pass": true
+    },
+    {
+      "name": "O12 event routes to Core A/B/C",
+      "pass": true
+    },
+    {
+      "name": "Synthetic application boots",
+      "pass": true
+    },
+    {
+      "name": "All 12 source O12 career profiles",
+      "pass": true
+    },
+    {
+      "name": "First career phase creation",
+      "pass": true
+    },
+    {
+      "name": "First career attributes and signature",
+      "pass": true
+    },
+    {
+      "name": "Bureau elective and abstain event",
+      "pass": true
+    },
+    {
+      "name": "Rolled Bureau free",
+      "pass": true
+    },
+    {
+      "name": "Adolescent 7 full HP reduction",
+      "pass": true
+    },
+    {
+      "name": "Second career adds ranks but not attributes",
+      "pass": true
+    },
+    {
+      "name": "Third phase + changed assignment charges 2 LP",
+      "pass": true
+    },
+    {
+      "name": "Undo restores LP and phase",
+      "pass": true
+    },
+    {
+      "name": "Criminal Record forces Beta no charge",
+      "pass": true
+    },
+    {
+      "name": "Beta clears criminal record",
+      "pass": true
+    },
+    {
+      "name": "Undo Beta restores criminal record",
+      "pass": true
+    },
+    {
+      "name": "Core Field Scientist and adolescence stats",
+      "pass": true
+    },
+    {
+      "name": "Pillar Social Status delta",
+      "pass": true
+    },
+    {
+      "name": "No bonus leakage to other faction",
+      "pass": true
+    }
+  ],
+  "validation": {
+    "result": "PASS",
+    "checks": 26
+  }
+}
