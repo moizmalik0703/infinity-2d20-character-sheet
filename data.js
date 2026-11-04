@@ -15581,7 +15581,59 @@ window.INFINITY_DATA = {
       "homeworld": "Bayram caravanserai, black markets, mercenary theatres, trade routes",
       "theme": "Mercenary contracts, smuggling, intimidation, flexible loyalties",
       "suggested_traits": "Druze Contractor; Submondo Ties; Smuggler",
-      "suggested_talents": "Druze Bayram Security Contractor"
+      "suggested_talents": "Druze Bayram Security Contractor",
+      "source": "Infinity: War Market — The Mercenaries Sourcebook",
+      "sourceSection": "Chapter 2 — Companies of Note"
+    },
+    {
+      "faction": "NA2 - Dahshat Company",
+      "subfaction": "Major War Market mercenary company affiliation.",
+      "homeworld": "Various worlds, stations, warzones, caravanserai, ships",
+      "theme": "Mercenary contracts, combined-arms deployments, War Market operations",
+      "suggested_traits": "Mercenary Veteran; War Market Contractor",
+      "suggested_talents": "Mercenary Contractor",
+      "source": "Infinity: War Market — The Mercenaries Sourcebook",
+      "sourceSection": "Chapter 2 — Companies of Note"
+    },
+    {
+      "faction": "NA2 - Foreign Company",
+      "subfaction": "Major War Market mercenary company affiliation.",
+      "homeworld": "Various worlds, stations, warzones, caravanserai, ships",
+      "theme": "Mercenary contracts, public profile, mixed specialist deployments",
+      "suggested_traits": "Mercenary Veteran; War Market Contractor",
+      "suggested_talents": "Mercenary Contractor",
+      "source": "Infinity: War Market — The Mercenaries Sourcebook",
+      "sourceSection": "Chapter 2 — Companies of Note"
+    },
+    {
+      "faction": "NA2 - Free Company of the Star (StarCo)",
+      "subfaction": "Major War Market mercenary company affiliation.",
+      "homeworld": "Various worlds, stations, warzones, caravanserai, ships",
+      "theme": "Mercenary contracts, independent military service, War Market operations",
+      "suggested_traits": "Mercenary Veteran; War Market Contractor",
+      "suggested_talents": "Mercenary Contractor",
+      "source": "Infinity: War Market — The Mercenaries Sourcebook",
+      "sourceSection": "Chapter 2 — Companies of Note"
+    },
+    {
+      "faction": "NA2 - Ikari Company",
+      "subfaction": "Major War Market mercenary company affiliation.",
+      "homeworld": "Various worlds, stations, warzones, caravanserai, ships",
+      "theme": "Mercenary contracts, aggressive operations, mixed specialist deployments",
+      "suggested_traits": "Mercenary Veteran; War Market Contractor",
+      "suggested_talents": "Mercenary Contractor",
+      "source": "Infinity: War Market — The Mercenaries Sourcebook",
+      "sourceSection": "Chapter 2 — Companies of Note"
+    },
+    {
+      "faction": "NA2 - Spiral Corps",
+      "subfaction": "Major War Market mercenary company affiliation.",
+      "homeworld": "Various worlds, stations, warzones, caravanserai, ships",
+      "theme": "Mercenary contracts, specialist operations, War Market deployments",
+      "suggested_traits": "Mercenary Veteran; War Market Contractor",
+      "suggested_talents": "Mercenary Contractor",
+      "source": "Infinity: War Market — The Mercenaries Sourcebook",
+      "sourceSection": "Chapter 2 — Companies of Note"
     },
     {
       "faction": "NA2 / Mercenaries",
@@ -15589,7 +15641,9 @@ window.INFINITY_DATA = {
       "homeworld": "Various worlds, stations, warzones, caravanserai, ships",
       "theme": "Contracts, flexible loyalties, mixed equipment, war stories",
       "suggested_traits": "Mercenary Veteran; Submondo Ties; Caravanserai Trader",
-      "suggested_talents": "Mercenary Contractor"
+      "suggested_talents": "Mercenary Contractor",
+      "source": "Infinity: War Market — The Mercenaries Sourcebook",
+      "sourceSection": "Faction / War Market overview; full source reconciliation pending"
     },
     {
       "faction": "Nomads",
@@ -16484,6 +16538,16 @@ window.INFINITY_DATA = {
       "Voidfarer",
       "Voidship Engineer",
       "Volk",
+      "Arms Dealer",
+      "Corporate Security Unit",
+      "Druze Shock Trooper",
+      "Free Company Irregular",
+      "Hitter",
+      "Kaplan Tactical Service Member",
+      "Mercenary Officer",
+      "Recruiter Agent",
+      "Wardriver",
+      "Warmonger",
       "Wrench",
       "Wú Míng Assault Corps",
       "Wulver Shock Troop",
@@ -18970,6 +19034,86 @@ window.INFINITY_DATA = {
       "Senatorial Support Staff",
       "Bureau Analyst",
       "Bureau Aegis Specialist"
+    ],
+    "NA2": [
+      "Corporate Security Unit",
+      "Free Company Irregular",
+      "Mercenary Officer",
+      "Wardriver",
+      "Recruiter Agent",
+      "Arms Dealer",
+      "Hitter",
+      "Druze Shock Trooper",
+      "Warmonger",
+      "Kaplan Tactical Service Member"
+    ]
+  },
+  "mercenariesReference": {
+    "product": "MUH050216",
+    "title": "Infinity: War Market — The Mercenaries Sourcebook",
+    "isbnPrint": "978-1-912200-50-4",
+    "isbnPdf": "978-1-912200-49-8",
+    "sourceStatus": "Publisher scope and public chapter/review material reconciled; complete MUH050216 PDF is not present in the supplied source corpus.",
+    "mechanicsVerified": false,
+    "majorCompanies": [
+      "Dahshat Company",
+      "Druze Bayram Security",
+      "Foreign Company",
+      "Free Company of the Star (StarCo)",
+      "Ikari Company",
+      "Spiral Corps"
+    ],
+    "careerProfiles": [
+      "Corporate Security Unit",
+      "Free Company Irregular",
+      "Mercenary Officer",
+      "Wardriver",
+      "Recruiter Agent",
+      "Arms Dealer",
+      "Hitter",
+      "Druze Shock Trooper",
+      "Warmonger",
+      "Kaplan Tactical Service Member"
+    ],
+    "chapterScope": [
+      "Chapter 1 — Mercenaries",
+      "Chapter 2 — Companies of Note",
+      "Chapter 3 — Warzones and Contracts",
+      "Chapter 4 — The War Market",
+      "Chapter 5 — Gear",
+      "Chapter 6 — Mercenary Vehicles",
+      "Chapter 7 — Mercenary Characters",
+      "Chapter 8 — Warmongering 101",
+      "Chapter 9 — Adversaries"
+    ],
+    "requestedReconciliation": [
+      "NA2 mercenary careers",
+      "company affiliations",
+      "weapons and gear",
+      "vehicles",
+      "vehicle upgrades",
+      "War Market and Free Company mechanics"
+    ],
+    "verifiedPublicScope": [
+      "War Market hiring and company selection",
+      "mercenary Lifepaths and faction careers",
+      "weapons, equipment and vehicles",
+      "vehicle upgrades",
+      "Free Company creation and mercenary campaign play",
+      "funds/assets and contract negotiation are discussed in campaign rules",
+      "optional Debt exists in Mercenary character creation"
+    ],
+    "pendingFullSource": [
+      "career attribute/skill/gear profiles",
+      "adolescent and career event tables",
+      "gear catalogue statistics and acquisition details",
+      "vehicle profiles",
+      "vehicle-upgrade hardpoint effects and costs",
+      "War Market Exchange numerical procedures",
+      "contract negotiation Capital/Leverage/Metanoia details",
+      "PMC funds/assets rules",
+      "Debt procedure and consequences",
+      "Advanced Warfare interactions"
     ]
   },
   "equipmentTaxonomy": {
@@ -30261,4 +30405,4 @@ window.INFINITY_DATA = {
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v73-o12-source-reconciliation";
+window.INFINITY_BUILD = "v77-mercenaries-foundation";
