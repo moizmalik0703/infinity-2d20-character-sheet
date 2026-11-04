@@ -6954,6 +6954,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Angel Drone",
+      "category": "Remote",
+      "type": "Remote",
+      "subtype": "Police Recorder Remote",
+      "brief": "O-12 police recorder remote.",
+      "mechanic": "Autonomous police witness recorder launched with an officer's sidearm; after five minutes calls Overwatch remote.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 94,
+      "sourceRestriction": "0",
+      "cost": "5+2§",
+      "tariff": "T1",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Habitat",
       "name": "Animal Habitat",
       "brief": "A portable or fixed enclosure designed to safely house, transport, and care for an animal.",
@@ -8086,6 +8104,44 @@ window.INFINITY_DATA = {
       "loadoutConditional": true
     },
     {
+      "name": "Bond Suit (Heavy)",
+      "category": "Armour",
+      "type": "Armour",
+      "subtype": "Concealed Armour",
+      "brief": "O-12 concealed armour.",
+      "mechanic": "Head 0/Torso 3/Arm 2/Leg 1/BTS 1; Hidden 2.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "2",
+      "cost": "7+3§",
+      "tariff": "T2",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "armourAutomation": false
+    },
+    {
+      "name": "Bond Suit (Summer)",
+      "category": "Armour",
+      "type": "Armour",
+      "subtype": "Concealed Armour",
+      "brief": "O-12 concealed armour.",
+      "mechanic": "Head 0/Torso 2/Arm 1/Leg 1/BTS 1; Hidden 2.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "2",
+      "cost": "6+3§",
+      "tariff": "T2",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "armourAutomation": false
+    },
+    {
       "type": "Consumable",
       "name": "Bottled Water",
       "brief": "Clean sealed drinking water for field operations and emergency survival.",
@@ -8145,6 +8201,60 @@ window.INFINITY_DATA = {
       "sourceRestriction": "1"
     },
     {
+      "name": "Bureau Aegis Cordon Control Vehicle",
+      "category": "Other Item",
+      "type": "Vehicle",
+      "subtype": "Ground Vehicle",
+      "brief": "O-12 ground vehicle.",
+      "mechanic": "Scale 1, Speed 4, Brawn 9(+1), Armour 2, two passengers, Impact 1+3§.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 94,
+      "sourceRestriction": "2",
+      "cost": "12+2§",
+      "tariff": "T2",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": false,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Bureau Aegis Interceptor Patrol Vehicle",
+      "category": "Other Item",
+      "type": "Vehicle",
+      "subtype": "Ground Patrol Vehicle",
+      "brief": "O-12 ground patrol vehicle.",
+      "mechanic": "Scale 2, Speed 4, Brawn 16(+1), Armour 4, BTS 4, seven passengers, Impact 2+6§.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 95,
+      "sourceRestriction": "3",
+      "cost": "10+2§",
+      "tariff": "T2",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": false,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Bureau Aegis Rapid Deployment Vehicle",
+      "category": "Other Item",
+      "type": "Vehicle",
+      "subtype": "Convertiplane",
+      "brief": "O-12 convertiplane.",
+      "mechanic": "Scale 3, Speed 4/2, Brawn 18(+1), Armour 4, BTS 4; modular cargo, Ground Suppression and Cover Plating.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 95,
+      "sourceRestriction": "4",
+      "cost": "6+5§",
+      "tariff": "T2",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": false,
+      "loadoutConditional": false
+    },
+    {
       "type": "Drug",
       "name": "Caffeine Tablets",
       "brief": "Fast-acting caffeine tablets used to maintain alertness during exhausting operations.",
@@ -8158,6 +8268,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Calm",
+      "category": "Other Item",
+      "type": "Drug",
+      "subtype": "Sedative",
+      "brief": "O-12 sedative.",
+      "mechanic": "Long-duration mood stabiliser under psychological oversight; Addiction/Compulsion risks (p.96).",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 96,
+      "sourceRestriction": "4",
+      "cost": "3+1§",
+      "tariff": "T4",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Area Control",
       "name": "Caltrops",
       "brief": "Sharp metal spikes scattered across the ground to deny movement and punish pursuit.",
@@ -8167,6 +8295,24 @@ window.INFINITY_DATA = {
       "cost": "50",
       "category": "Other Item",
       "subtype": "Area Control",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Capture Bag",
+      "category": "Tool",
+      "type": "Tool",
+      "subtype": "Restraint",
+      "brief": "O-12 restraint.",
+      "mechanic": "Armoured 2 and self-repairing prisoner bag; no environmental protection.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "4",
+      "cost": "4+2§",
+      "tariff": "T3",
+      "maintenance": "1",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
     },
@@ -8422,6 +8568,25 @@ window.INFINITY_DATA = {
       "sourceRestriction": "1"
     },
     {
+      "name": "Collapsible Exoskeleton",
+      "category": "Armour",
+      "type": "Armour",
+      "subtype": "Emergency Exoskeleton",
+      "brief": "O-12 emergency exoskeleton.",
+      "mechanic": "Head 0/Torso 2/Arm 1/Leg 1/BTS 0; Exoskeleton 1. Deployment requires 5 min and Tech D1.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "2",
+      "cost": "8+5§",
+      "tariff": "T2",
+      "maintenance": "2",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "armourAutomation": false
+    },
+    {
       "type": "Mobility Gear",
       "name": "Combat Jump Pack",
       "brief": "Airborne deployment device using advanced airbrakes to deliver troops from atmospheric aircraft or orbit.",
@@ -8528,6 +8693,24 @@ window.INFINITY_DATA = {
       "cost": "100",
       "category": "Tool",
       "subtype": "Field Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Cordon Rope",
+      "category": "Tool",
+      "type": "Tool",
+      "subtype": "Vehicle Stopper",
+      "brief": "O-12 vehicle stopper.",
+      "mechanic": "Self-repairing high-voltage anti-vehicle cord; damage varies by vehicle scale (p.96).",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "2",
+      "cost": "4+1§",
+      "tariff": "T1",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
     },
@@ -8688,6 +8871,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Cryo-Pod",
+      "category": "Tool",
+      "type": "Tool",
+      "subtype": "Vehicle Cryostasis",
+      "brief": "O-12 vehicle cryostasis.",
+      "mechanic": "Armoured 3 prisoner pod, 1 Internal vehicle hardpoint per captive; risk of failure.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "2",
+      "cost": "6+3§",
+      "tariff": "",
+      "maintenance": "2",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": false,
+      "loadoutConditional": false
+    },
+    {
       "type": "Augmentation",
       "name": "Cube 2.0",
       "brief": "An advanced Cube with enhanced backup, connectivity, and identity-preservation systems.",
@@ -8809,6 +9010,24 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 63,
       "sourceRestriction": "3"
+    },
+    {
+      "name": "Disaster Recovery Suit",
+      "category": "Other Item",
+      "type": "Vehicle",
+      "subtype": "TAG Rescue Frame",
+      "brief": "O-12 tag rescue frame.",
+      "mechanic": "Rescue TAG frame; mechanical stats depend on the particular TAG originally used.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "*",
+      "cost": "*−2+2§",
+      "tariff": "T1",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": false,
+      "loadoutConditional": false
     },
     {
       "type": "Augmentation",
@@ -9014,6 +9233,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "EMT Equipment",
+      "category": "Tool",
+      "type": "Tool",
+      "subtype": "First Aid Kit",
+      "brief": "O-12 first aid kit.",
+      "mechanic": "Medicine checks of D2 or less without insufficient-equipment penalty; no bonus with MediKit.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 97,
+      "sourceRestriction": "1",
+      "cost": "4+3§",
+      "tariff": "",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Waldo",
       "name": "Engineering Waldo X",
       "brief": "A remotely controlled engineering manipulator used for precision repairs in dangerous or inaccessible spaces.",
@@ -9192,15 +9429,21 @@ window.INFINITY_DATA = {
     {
       "type": "Weapon",
       "name": "Feuerbach (BS)",
-      "brief": "A battlefield firearm designed for trained Ballistics users; this variant is the Feuerbach.",
-      "mechanic": "Range 20 / 80; Damage 6d6; two-handed; heavy weapon.",
-      "rarity": "Very Rare",
-      "weight": "Heavy",
-      "cost": "5000",
+      "brief": "O-12 heavy ranged weapon.",
+      "mechanic": "Source name Feuerbach; legacy (BS) identifier preserved. Long range 2+5§, Burst 2, Unbalanced, Piercing 1, Salvo (Anti-Materiel 2).",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+3§",
       "category": "Weapon",
-      "subtype": "Weapon",
+      "subtype": "Heavy Ranged Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "legacyMechanic": "Range 20 / 80; Damage 6d6; two-handed; heavy weapon.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "3",
+      "tariff": "T2",
+      "maintenance": ""
     },
     {
       "type": "Resource",
@@ -9262,6 +9505,25 @@ window.INFINITY_DATA = {
       "subtype": "Program",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "name": "First Responder Uniform",
+      "category": "Armour",
+      "type": "Armour",
+      "subtype": "Emergency Uniform",
+      "brief": "O-12 emergency uniform.",
+      "mechanic": "Head 1/Torso 2/Arm 1/Leg 1/BTS 3; emergency tools and beacon.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "2",
+      "cost": "6+3§",
+      "tariff": "T2",
+      "maintenance": "1",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "armourAutomation": false
     },
     {
       "name": "Flammenspeer",
@@ -9558,6 +9820,25 @@ window.INFINITY_DATA = {
       "sourceRestriction": "1 (Haqqislam 0)"
     },
     {
+      "name": "Gamma Armour",
+      "category": "Armour",
+      "type": "Armour",
+      "subtype": "Powered Armour",
+      "brief": "O-12 powered armour.",
+      "mechanic": "Head 4/Torso 5/Arm 3/Leg 4/BTS 4; Exoskeleton 3, Bioscanner.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "5 (O-12 4)",
+      "cost": "15+5§",
+      "tariff": "T2",
+      "maintenance": "2",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "armourAutomation": false
+    },
+    {
       "type": "Tool",
       "name": "Garn Grub",
       "brief": "Sourcebook Nomad resource catalogue entry.",
@@ -9795,6 +10076,24 @@ window.INFINITY_DATA = {
       "cost": "1000",
       "category": "Weapon",
       "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Ground Spikes",
+      "category": "Tool",
+      "type": "Tool",
+      "subtype": "Roadblock",
+      "brief": "O-12 roadblock.",
+      "mechanic": "Armour 3, Structure 5; 2+4§ collision damage when struck.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 98,
+      "sourceRestriction": "",
+      "cost": "—",
+      "tariff": "",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
     },
@@ -10431,6 +10730,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Interrogation Cell",
+      "category": "Tool",
+      "type": "Installation",
+      "subtype": "Interrogation Facility",
+      "brief": "O-12 interrogation facility.",
+      "mechanic": "After one hour, Vicious 2 on Psywar; later 4§ mental damage after Willpower×10 min; legal consequences.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "3",
+      "cost": "10+4§",
+      "tariff": "T2",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": false,
+      "loadoutConditional": false
+    },
+    {
       "type": "Armour",
       "name": "Iron Turtle Suit",
       "brief": "A formal smart-material suit that transforms into a spiked sealed protective shell.",
@@ -10478,6 +10795,24 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 74,
       "sourceRestriction": "3 (Haqqislam 1)"
+    },
+    {
+      "name": "Jaws of Life",
+      "category": "Weapon",
+      "type": "Weapon",
+      "subtype": "Rescue Cutter / Melee",
+      "brief": "O-12 rescue cutter / melee.",
+      "mechanic": "3+5§, Grievous, Piercing 2, Vicious 2; +2 Difficulty when used to cut in melee.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "1",
+      "cost": "2+4§",
+      "tariff": "T1",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -10793,6 +11128,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Large Improvised Explosive Device",
+      "category": "Explosive Device",
+      "type": "Explosive",
+      "subtype": "Mine",
+      "brief": "O-12 mine.",
+      "mechanic": "0+7§; Disposable, Indiscriminate (Medium), Unsubtle; prohibited.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "3 (Submondo 2)",
+      "cost": "2+cost of 2 Reloads",
+      "tariff": "T1",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Kit",
       "name": "Li-Turing Kit",
       "brief": "Tool for distinguishing and understanding AI identities",
@@ -10880,6 +11233,24 @@ window.INFINITY_DATA = {
       "sourcePage": 78,
       "sourceRestriction": "3 (Nomads 2)",
       "sourceProfile": "Melee 1+4§, 1H; Piercing 1, Subtle 3."
+    },
+    {
+      "name": "LinkSWORD",
+      "category": "Weapon",
+      "type": "Weapon",
+      "subtype": "Melee / Infowar",
+      "brief": "O-12 melee / infowar.",
+      "mechanic": "1+4§, Unbalanced, Parry 2, Vicious 1. On successful melee add 1§ quantronic damage per Hacking Focus; SWORD program rerolls per Close Combat Focus.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "3",
+      "cost": "3+3§",
+      "tariff": "T2 (O-12 no tariff)",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Armour",
@@ -11916,6 +12287,24 @@ window.INFINITY_DATA = {
       "sourceRestriction": "2"
     },
     {
+      "name": "Overwatch Remote",
+      "category": "Remote",
+      "type": "Remote",
+      "subtype": "Aerial Surveillance",
+      "brief": "O-12 aerial surveillance.",
+      "mechanic": "Long-term aerial surveillance; Observation Difficulty −1 within Medium range (source NPC details p.99).",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "3",
+      "cost": "9+3§",
+      "tariff": "T1 (O-12 no tariff)",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Augmentation",
       "name": "Pain Filters",
       "brief": "Biological or Silk-derived filters that dampen pain responses and keep the user functional while injured.",
@@ -12235,6 +12624,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Prisoner Habitation",
+      "category": "Other Item",
+      "type": "Vehicle Upgrade",
+      "subtype": "Vehicle Module",
+      "brief": "O-12 vehicle module.",
+      "mechanic": "1 Internal hardpoint for two prisoners, Faraday shielding and Armour/Security 6.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 95,
+      "sourceRestriction": "",
+      "cost": "Vehicle upgrade",
+      "tariff": "",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": false,
+      "loadoutConditional": false
+    },
+    {
       "name": "Proxy Mk.0 i-Lhost",
       "type": "Lhost",
       "category": "Lhost",
@@ -12399,6 +12806,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 81
+    },
+    {
+      "name": "Quantronic Paints",
+      "category": "Tool",
+      "type": "Tool",
+      "subtype": "Programmable Markings",
+      "brief": "O-12 programmable markings.",
+      "mechanic": "Project public network tags/messages; specialist variants change remotely.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "",
+      "cost": "1+2§",
+      "tariff": "",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Respirator",
@@ -12757,6 +13182,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Sense Link",
+      "category": "Augmentation",
+      "type": "Augmentation",
+      "subtype": "Cybernetic Implant",
+      "brief": "O-12 cybernetic implant.",
+      "mechanic": "Concealed Cube-parallel device records objective sensory information across nine senses.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "1",
+      "cost": "7+2§",
+      "tariff": "",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Weapon",
       "name": "Sensei Wraps (CC)",
       "brief": "Smart-material martial-arts wraps that analyse technique and vary hardness to improve strikes and blocks.",
@@ -13100,6 +13543,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Small Improvised Explosive Device",
+      "category": "Explosive Device",
+      "type": "Explosive",
+      "subtype": "Mine",
+      "brief": "O-12 mine.",
+      "mechanic": "0+6§; Disposable, Indiscriminate (Close), Unsubtle; Concilium Convention prohibited.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "3 (Submondo 2)",
+      "cost": "1+cost of Reload",
+      "tariff": "T1",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "name": "Smart Grenade Launcher",
       "type": "Weapon",
       "category": "Weapon",
@@ -13257,6 +13718,24 @@ window.INFINITY_DATA = {
       "cost": "2000",
       "category": "Weapon",
       "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Social Care Kit",
+      "category": "Tool",
+      "type": "Tool",
+      "subtype": "Recovery Kit",
+      "brief": "O-12 recovery kit.",
+      "mechanic": "Successful recovery restores one additional Resolve.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "",
+      "cost": "2+1§",
+      "tariff": "T1",
+      "maintenance": "1",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
     },
@@ -13423,6 +13902,24 @@ window.INFINITY_DATA = {
       "sourceRestriction": "X−1"
     },
     {
+      "name": "Statement Taker",
+      "category": "Tool",
+      "type": "Tool",
+      "subtype": "Witness Evidence Device",
+      "brief": "O-12 witness evidence device.",
+      "mechanic": "Copies voluntarily designated Cube memories into witness record; ALEPH flags coercion.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "1",
+      "cost": "1+3§",
+      "tariff": "",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Drug",
       "name": "Steady",
       "brief": "Coordination-enhancing drug.",
@@ -13448,6 +13945,24 @@ window.INFINITY_DATA = {
       "cost": "4000",
       "category": "Other Item",
       "subtype": "Repeater",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Striptape",
+      "category": "Tool",
+      "type": "Tool",
+      "subtype": "Restraint",
+      "brief": "O-12 restraint.",
+      "mechanic": "Temporary police restraint with optional quantronic tags; not EVA seal.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 102,
+      "sourceRestriction": "1",
+      "cost": "1+2§",
+      "tariff": "",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
     },
@@ -13478,6 +13993,24 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 82
+    },
+    {
+      "name": "Subdual Baton",
+      "category": "Weapon",
+      "type": "Weapon",
+      "subtype": "Nonlethal Baton",
+      "brief": "O-12 nonlethal baton.",
+      "mechanic": "1+4§, Non-Hackable, Knockdown; proper use Subtle 1/Stun; misuse Vicious 1.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "2",
+      "cost": "4+1§",
+      "tariff": "T2",
+      "maintenance": "",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Weapon",
@@ -13720,6 +14253,25 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 383,
       "sourceRestriction": "2"
+    },
+    {
+      "name": "Tactical Magnetic Harness",
+      "category": "Armour",
+      "type": "Armour",
+      "subtype": "Portable Cover",
+      "brief": "O-12 portable cover.",
+      "mechanic": "4§ cover to torso (not Armour Soak); encumbered with other armour except Bond Suit.",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 101,
+      "sourceRestriction": "2",
+      "cost": "6+3§",
+      "tariff": "T4",
+      "maintenance": "1",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "armourAutomation": false
     },
     {
       "type": "Load-Bearing Gear",
@@ -15127,7 +15679,9 @@ window.INFINITY_DATA = {
       "homeworld": "Concilium Prima",
       "theme": "Law, diplomacy, investigation, international authority",
       "suggested_traits": "Concilium Insider; Bureau Authority; Diplomatic Immunity",
-      "suggested_talents": "O-12 Marshal"
+      "suggested_talents": "O-12 Marshal",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 84
     },
     {
       "faction": "O-12 - Bureau Aegis",
@@ -15135,7 +15689,9 @@ window.INFINITY_DATA = {
       "homeworld": "Concilium Prima, O-12 facilities, peacekeeping deployments",
       "theme": "Law enforcement, command authority, investigation, peacekeeping",
       "suggested_traits": "Bureau Authority; Concilium Mandate; O-12 Marshal",
-      "suggested_talents": "Bureau Aegis Command Track"
+      "suggested_talents": "Bureau Aegis Command Track",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 54
     },
     {
       "faction": "O-12 - Bureau Noir",
@@ -15143,7 +15699,9 @@ window.INFINITY_DATA = {
       "homeworld": "Concilium Prima, covert offices, classified Maya spaces",
       "theme": "Counter-intrusion, black investigations, cyber defence, intelligence",
       "suggested_traits": "Firewall Sense; Black ICE Handler; Bureau Noir Clearance",
-      "suggested_talents": "Bureau Noir Counter-Intrusion Cell"
+      "suggested_talents": "Bureau Noir Counter-Intrusion Cell",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 72
     },
     {
       "faction": "O-12 - Liaison Corps",
@@ -15151,7 +15709,9 @@ window.INFINITY_DATA = {
       "homeworld": "Concilium Prima, embassies, inter-faction missions",
       "theme": "Diplomacy, negotiation, social pressure, legal mandate",
       "suggested_traits": "Silver Tongue; Diplomatic Immunity; Voice of O-12",
-      "suggested_talents": "O-12 Liaison Corps"
+      "suggested_talents": "O-12 Liaison Corps",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 54
     },
     {
       "faction": "O-12 - Survey Corps",
@@ -15159,7 +15719,9 @@ window.INFINITY_DATA = {
       "homeworld": "Concilium Prima, survey missions, frontier worlds, orbital expeditions",
       "theme": "Exploration, survival, hazard mapping, scientific assessment",
       "suggested_traits": "Scanner Sweep; Hazard Mapping; World Reader",
-      "suggested_talents": "O-12 Survey Corps"
+      "suggested_talents": "O-12 Survey Corps",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 54
     },
     {
       "faction": "O-12 / Nomads - Circular Crew",
@@ -15394,6 +15956,14 @@ window.INFINITY_DATA = {
       "suggested_talents": "",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 9
+    },
+    {
+      "faction": "O-12 - Starmada",
+      "subfaction": "Bureau Aegis spacecraft and fleet security service.",
+      "homeworld": "Concilium Prima, stations, fleet deployments",
+      "theme": "Interstellar law enforcement and patrol",
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 54
     }
   ],
   "lists": {
@@ -15436,6 +16006,7 @@ window.INFINITY_DATA = {
       "O-12 - Bureau Aegis",
       "O-12 - Bureau Noir",
       "O-12 - Liaison Corps",
+      "O-12 - Starmada",
       "O-12 - Survey Corps",
       "O-12 / Nomads - Circular Crew",
       "PanOceania",
@@ -15462,6 +16033,7 @@ window.INFINITY_DATA = {
     "homeworlds": [
       "3-Winged Moth Tribe",
       "Acontecimento",
+      "Akrarnir (Concilium System)",
       "Al Medinat Caliphate",
       "Alamut",
       "ALEPH facilities",
@@ -15477,12 +16049,15 @@ window.INFINITY_DATA = {
       "Ariadnan wilderness",
       "Arkhangelsk",
       "Aryavarta",
+      "Asaheim (Concilium System)",
+      "Asgard (Concilium System)",
       "Asteroid Belts",
       "Atlantea Archipelago",
       "Auron",
       "Bakunin",
       "Bayram caravanserai",
       "Bêi Tû",
+      "Bifrost (Concilium System)",
       "bimaristans",
       "Bitter Leaves",
       "black markets",
@@ -15492,6 +16067,7 @@ window.INFINITY_DATA = {
       "Bourak",
       "Bourak universities",
       "Bringers-of-Peace",
+      "Brísingamen (Concilium System)",
       "Broken Plains Tribe",
       "Cailleach",
       "Calonack",
@@ -15502,6 +16078,7 @@ window.INFINITY_DATA = {
       "caravanserai garrisons",
       "Castropol (Tartary)",
       "Charismatic",
+      "Cibola (Concilium System)",
       "Circulars",
       "classified Maya spaces",
       "coastal theatres",
@@ -15529,9 +16106,11 @@ window.INFINITY_DATA = {
       "Dynamo",
       "Earth",
       "Eclectic",
+      "Edda (Concilium Prima)",
       "EI nodes",
       "EI-controlled territories",
       "embassies",
+      "End of the Line Free Orbital",
       "enemy cities",
       "enemy command zones",
       "enemy worlds",
@@ -15545,6 +16124,7 @@ window.INFINITY_DATA = {
       "Gandakpur",
       "Gāyatrī",
       "Gentle Embrace of the Sagacious Progenitors",
+      "Gjǫll (Concilium System)",
       "Gök-Burgo",
       "Graceful",
       "Gratia Archipelago",
@@ -15590,6 +16170,7 @@ window.INFINITY_DATA = {
       "Lux",
       "Magalhães",
       "major presence in Maya and advanced infrastructure",
+      "Manaheim (Concilium Prima)",
       "Mariannebourg",
       "Mat’",
       "Maya",
@@ -15622,6 +16203,7 @@ window.INFINITY_DATA = {
       "orbital staging points",
       "orbital stations",
       "Orbitals, Human Edge",
+      "Other Human Sphere origin (specify in notes)",
       "Ovsyanka (Tartary)",
       "PanOceanian bases",
       "PanOceanian black operations",
@@ -15676,6 +16258,7 @@ window.INFINITY_DATA = {
       "survey missions",
       "Svalarheima",
       "Svalarheima and PanOceanian high-security theatres",
+      "Svalinn (Concilium System)",
       "Swift",
       "Sword of Allah academies",
       "Sword of Allah deployments",
@@ -15750,6 +16333,8 @@ window.INFINITY_DATA = {
       "Bōsōzoku",
       "BouBoutique Clerk",
       "Bratva Gangster",
+      "Bureau Aegis Specialist",
+      "Bureau Analyst",
       "Bureau Toth Agent",
       "Caledonian Noble",
       "Caravaner",
@@ -15765,6 +16350,7 @@ window.INFINITY_DATA = {
       "Corsair",
       "Criminal",
       "Croc Man",
+      "Cyberghost",
       "Dactyl",
       "Dasyu",
       "Deep-Sea Explorer",
@@ -15782,6 +16368,7 @@ window.INFINITY_DATA = {
       "Entertainer",
       "Explorer",
       "Faction Prestige",
+      "Field Scientist",
       "Fighter Pilot",
       "Financial Security Commission Analyst",
       "Fleet Officer",
@@ -15791,6 +16378,7 @@ window.INFINITY_DATA = {
       "Frontier Scout",
       "Frontiersman",
       "Fusilier",
+      "Gangbuster",
       "Geist Handler",
       "Grey Market Spy",
       "Hacker",
@@ -15857,6 +16445,7 @@ window.INFINITY_DATA = {
       "Praxis Scientist",
       "Priest",
       "Provocateur",
+      "Psi Unit",
       "Psychosanitary Risk Evaluator",
       "Quantronic Quality Assurance",
       "Raider",
@@ -15866,6 +16455,7 @@ window.INFINITY_DATA = {
       "Reverend Agent",
       "Scavenger",
       "Scuball Player",
+      "Senatorial Support Staff",
       "Sensorium Mayacaster",
       "Shasvastii Infiltrator",
       "Ship Crew",
@@ -18174,6 +18764,107 @@ window.INFINITY_DATA = {
       "Praxis Black Labs",
       "Praxis Black Ships",
       "Undocumented Orbital"
+    ],
+    "O-12": [
+      "Concilium Prima",
+      "Edda (Concilium Prima)",
+      "Manaheim (Concilium Prima)",
+      "Asaheim (Concilium System)",
+      "Asgard (Concilium System)",
+      "Bifrost (Concilium System)",
+      "Cibola (Concilium System)",
+      "Gjǫll (Concilium System)",
+      "Brísingamen (Concilium System)",
+      "Svalinn (Concilium System)",
+      "Akrarnir (Concilium System)",
+      "End of the Line Free Orbital",
+      "Other Human Sphere origin (specify in notes)"
+    ],
+    "O-12 - Bureau Aegis": [
+      "Concilium Prima",
+      "Edda (Concilium Prima)",
+      "Manaheim (Concilium Prima)",
+      "Asaheim (Concilium System)",
+      "Asgard (Concilium System)",
+      "Bifrost (Concilium System)",
+      "Cibola (Concilium System)",
+      "Gjǫll (Concilium System)",
+      "Brísingamen (Concilium System)",
+      "Svalinn (Concilium System)",
+      "Akrarnir (Concilium System)",
+      "End of the Line Free Orbital",
+      "Other Human Sphere origin (specify in notes)",
+      "O-12 facilities",
+      "peacekeeping deployments"
+    ],
+    "O-12 - Bureau Noir": [
+      "Concilium Prima",
+      "Edda (Concilium Prima)",
+      "Manaheim (Concilium Prima)",
+      "Asaheim (Concilium System)",
+      "Asgard (Concilium System)",
+      "Bifrost (Concilium System)",
+      "Cibola (Concilium System)",
+      "Gjǫll (Concilium System)",
+      "Brísingamen (Concilium System)",
+      "Svalinn (Concilium System)",
+      "Akrarnir (Concilium System)",
+      "End of the Line Free Orbital",
+      "Other Human Sphere origin (specify in notes)",
+      "covert offices",
+      "classified Maya spaces"
+    ],
+    "O-12 - Liaison Corps": [
+      "Concilium Prima",
+      "Edda (Concilium Prima)",
+      "Manaheim (Concilium Prima)",
+      "Asaheim (Concilium System)",
+      "Asgard (Concilium System)",
+      "Bifrost (Concilium System)",
+      "Cibola (Concilium System)",
+      "Gjǫll (Concilium System)",
+      "Brísingamen (Concilium System)",
+      "Svalinn (Concilium System)",
+      "Akrarnir (Concilium System)",
+      "End of the Line Free Orbital",
+      "Other Human Sphere origin (specify in notes)",
+      "embassies",
+      "inter-faction missions"
+    ],
+    "O-12 - Survey Corps": [
+      "Concilium Prima",
+      "Edda (Concilium Prima)",
+      "Manaheim (Concilium Prima)",
+      "Asaheim (Concilium System)",
+      "Asgard (Concilium System)",
+      "Bifrost (Concilium System)",
+      "Cibola (Concilium System)",
+      "Gjǫll (Concilium System)",
+      "Brísingamen (Concilium System)",
+      "Svalinn (Concilium System)",
+      "Akrarnir (Concilium System)",
+      "End of the Line Free Orbital",
+      "Other Human Sphere origin (specify in notes)",
+      "survey missions",
+      "frontier worlds",
+      "orbital expeditions"
+    ],
+    "O-12 - Starmada": [
+      "Concilium Prima",
+      "Edda (Concilium Prima)",
+      "Manaheim (Concilium Prima)",
+      "Asaheim (Concilium System)",
+      "Asgard (Concilium System)",
+      "Bifrost (Concilium System)",
+      "Cibola (Concilium System)",
+      "Gjǫll (Concilium System)",
+      "Brísingamen (Concilium System)",
+      "Svalinn (Concilium System)",
+      "Akrarnir (Concilium System)",
+      "End of the Line Free Orbital",
+      "Other Human Sphere origin (specify in notes)",
+      "stations",
+      "fleet deployments"
     ]
   },
   "careerOptionsByFaction": {
@@ -18265,6 +18956,20 @@ window.INFINITY_DATA = {
       "Quantronic Quality Assurance",
       "Deva Functionary",
       "Posthuman Savant"
+    ],
+    "O-12": [
+      "Special Forces",
+      "Intelligence Operative",
+      "Politician",
+      "Diplomat",
+      "Bureau Toth Agent",
+      "Gangbuster",
+      "Psi Unit",
+      "Field Scientist",
+      "Cyberghost",
+      "Senatorial Support Staff",
+      "Bureau Analyst",
+      "Bureau Aegis Specialist"
     ]
   },
   "equipmentTaxonomy": {
@@ -19988,6 +20693,34 @@ window.INFINITY_DATA = {
     "Sophist": [
       "ALEPH sourcebook career",
       "ALEPH or relevant O-12 authorisation"
+    ],
+    "Gangbuster": [
+      "O-12 sourcebook career",
+      "O-12 affiliation or GM-approved secondment"
+    ],
+    "Psi Unit": [
+      "O-12 sourcebook career",
+      "O-12 affiliation or GM-approved secondment"
+    ],
+    "Field Scientist": [
+      "O-12 sourcebook career",
+      "O-12 affiliation or GM-approved secondment"
+    ],
+    "Cyberghost": [
+      "O-12 sourcebook career",
+      "O-12 affiliation or GM-approved secondment"
+    ],
+    "Senatorial Support Staff": [
+      "O-12 sourcebook career",
+      "O-12 affiliation or GM-approved secondment"
+    ],
+    "Bureau Analyst": [
+      "O-12 sourcebook career",
+      "O-12 affiliation or GM-approved secondment"
+    ],
+    "Bureau Aegis Specialist": [
+      "O-12 sourcebook career",
+      "O-12 affiliation or GM-approved secondment"
     ]
   },
   "careerProfiles": {
@@ -22394,6 +23127,181 @@ window.INFINITY_DATA = {
         "Tattletale Grenade"
       ],
       "special": "ALEPH spokesperson and negotiator."
+    },
+    "Bureau Analyst": {
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 88,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 3,
+        "Brawn": 0,
+        "Coordination": 1,
+        "Intelligence": 2,
+        "Personality": 1,
+        "Willpower": 1
+      },
+      "mandatorySkills": [
+        "Analysis",
+        "Education",
+        "Observation"
+      ],
+      "electiveSkills": [],
+      "earnings": "2+1§",
+      "gear": [
+        "Analysis Suite",
+        "Negotiator's Suite (7 days' credit)",
+        "Psychoanalysis Suite"
+      ],
+      "special": "Choose bureau via Bureau Analyst Table; it sets electives. Change on repeat via Hazard D1 or spend 1 Life Point.",
+      "brief": "O-12 sourcebook career."
+    },
+    "Cyberghost": {
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 89,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 1,
+        "Brawn": 1,
+        "Coordination": 1,
+        "Intelligence": 3,
+        "Personality": 0,
+        "Willpower": 1
+      },
+      "mandatorySkills": [
+        "Close Combat",
+        "Hacking",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Hacking",
+        "Observation",
+        "Tech"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Armoured Clothing (casual)",
+        "Assault or White Hacking Device",
+        "LinkSWORD"
+      ],
+      "special": "Bureau Aegis Quantronic Intervention Unit.",
+      "brief": "O-12 sourcebook career."
+    },
+    "Gangbuster": {
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 89,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 1,
+        "Brawn": 2,
+        "Coordination": 2,
+        "Intelligence": 0,
+        "Personality": 2,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Ballistics",
+        "Discipline",
+        "Lifestyle"
+      ],
+      "electiveSkills": [
+        "Resistance",
+        "Tech",
+        "Thievery"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Armoured Clothing",
+        "Boarding Shotgun",
+        "Multispectral Visor 1"
+      ],
+      "special": "Special Crime Squad undercover enforcement.",
+      "brief": "O-12 sourcebook career."
+    },
+    "Psi Unit": {
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 89,
+      "attributeBonuses": {
+        "Agility": 2,
+        "Awareness": 2,
+        "Brawn": 1,
+        "Coordination": 1,
+        "Intelligence": 2,
+        "Personality": 1,
+        "Willpower": 1
+      },
+      "mandatorySkills": [
+        "Hacking",
+        "Observation",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Close Combat",
+        "Discipline",
+        "Thievery"
+      ],
+      "earnings": "2+2§",
+      "gear": [
+        "Armoured Clothing (business)",
+        "Hacking Device",
+        "Nanopulser"
+      ],
+      "special": "Bureau Aegis intelligence unit.",
+      "brief": "O-12 sourcebook career."
+    },
+    "Senatorial Support Staff": {
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 89,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 2,
+        "Brawn": 1,
+        "Coordination": 1,
+        "Intelligence": 2,
+        "Personality": 1,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Education",
+        "Lifestyle",
+        "Observation"
+      ],
+      "electiveSkills": [
+        "Close Combat",
+        "Hacking",
+        "Persuade"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Nav Suite (Edda)",
+        "Painkillers ×3",
+        "Sensor Suite",
+        "Stims ×2"
+      ],
+      "special": "Öberhaus senatorial support.",
+      "brief": "O-12 sourcebook career."
+    },
+    "Bureau Aegis Specialist": {
+      "source": "Infinity RPG — O-12 Sourcebook",
+      "sourcePage": 90,
+      "attributeBonuses": {
+        "Agility": 1,
+        "Awareness": 1,
+        "Brawn": 2,
+        "Coordination": 2,
+        "Intelligence": 1,
+        "Personality": 1,
+        "Willpower": 2
+      },
+      "mandatorySkills": [
+        "Ballistics",
+        "Discipline",
+        "Resistance"
+      ],
+      "electiveSkills": [],
+      "earnings": "1+4§",
+      "gear": [],
+      "special": "Choose Aegis Unit for electives/gear. Criminal Record forces Beta Unit; record clears after career phase.",
+      "brief": "O-12 sourcebook career."
     }
   },
   "hostHeritage": {
@@ -28307,9 +29215,1050 @@ window.INFINITY_DATA = {
         "action": "added"
       }
     ]
+  },
+  "o12Reference": {
+    "source": "Infinity RPG — O-12 Sourcebook",
+    "sourceFile": "MUH050220 O-12_Final PDF 061221.pdf",
+    "product": "MUH050220",
+    "driveUrl": "https://drive.google.com/file/d/13CGmBwyuyJJLRiCMtvxGNWac2kshjeVP/view",
+    "chapters": {
+      "faction": 3,
+      "conciliumPrima": 12,
+      "conciliumSystem": 26,
+      "embassies": 32,
+      "fieldOffices": 48,
+      "bureauAegis": 54,
+      "pillarsAndReputation": 64,
+      "bureauNoir": 72,
+      "characters": 83,
+      "gear": 93,
+      "adversaries": 103
+    },
+    "historicalTies": {
+      "page": 84,
+      "rule": "When Faction and Heritage are both O-12, determine Historical Ties by rerolling Corebook Faction Table until other than 18. If result 20 roll again once and gain a family nemesis trait.",
+      "doubleAgentRule": "Using true faction instead of current faction doubles Complication Range; triple agents follow similar cover mechanics (p.86)."
+    },
+    "adolescentRouting": [
+      {
+        "roll": "1–3",
+        "table": "O-12 Adolescent Events"
+      },
+      {
+        "roll": "4",
+        "table": "Core A"
+      },
+      {
+        "roll": "5",
+        "table": "Core B"
+      },
+      {
+        "roll": "6",
+        "table": "Core C"
+      }
+    ],
+    "adolescentEvents": [
+      {
+        "roll": 1,
+        "trait": "Policy Wonk",
+        "effect": "Analysis +1; may select Senatorial Support Staff first career."
+      },
+      {
+        "roll": 2,
+        "trait": "Sticky Fingers",
+        "effect": "Personality −1; Brawn +1."
+      },
+      {
+        "roll": 3,
+        "trait": "Luminous Biochemistry",
+        "effect": "Symbiotic parasite causes luminescent fluids; cure reduces Agility by 1."
+      },
+      {
+        "roll": 4,
+        "trait": "Hopeless Romantic / Conflict Avoidant",
+        "effect": "Defy family: Resolve +1; acquiesce: Discipline +1; gain paramour contact."
+      },
+      {
+        "roll": 5,
+        "trait": "Suspicious",
+        "effect": "Observation +1."
+      },
+      {
+        "roll": 6,
+        "trait": "Star-Crossed",
+        "effect": "Contact from another faction."
+      },
+      {
+        "roll": 7,
+        "trait": "Rasping Wheeze",
+        "effect": "Vigour −1 from burns."
+      },
+      {
+        "roll": 8,
+        "trait": "Hydrophobic",
+        "effect": "Resolve −1."
+      },
+      {
+        "roll": 9,
+        "trait": "Reckless",
+        "effect": "Stealth +1."
+      },
+      {
+        "roll": 10,
+        "trait": "Criminal Ties",
+        "effect": "5 Assets and Submondo contact."
+      },
+      {
+        "roll": 11,
+        "trait": "Easily Tugged Heartstrings",
+        "effect": "Tohaa contact."
+      },
+      {
+        "roll": 12,
+        "trait": "On the Watchlist",
+        "effect": "Geist Intelligence +2; nemesis in Bureau Toth."
+      },
+      {
+        "roll": 13,
+        "trait": "Rising Star",
+        "effect": "O-12 first-career roll without Life Point."
+      },
+      {
+        "roll": 14,
+        "trait": "Critter Whisperer",
+        "effect": "Animal Handling +1; Persuade-based tests +2 Complication Range near insects."
+      },
+      {
+        "roll": 15,
+        "trait": "Troubling Secret",
+        "effect": "Observation +1."
+      },
+      {
+        "roll": 16,
+        "trait": "Tunnel Vision",
+        "effect": "Age +1d6 years and Education +1."
+      },
+      {
+        "roll": 17,
+        "trait": "Ringing in Your Ears",
+        "effect": "Sound-based Observation +1 Complication Range until treated for 3+3§ Assets."
+      },
+      {
+        "roll": 18,
+        "trait": "Politically Notorious",
+        "effect": "Lifestyle Difficulty +1 until trait bought off."
+      },
+      {
+        "roll": 19,
+        "trait": "Rogue Asset",
+        "effect": "Defect along heritage/historical ties or become double agent under source result."
+      },
+      {
+        "roll": 20,
+        "trait": "Mysterious Secrets",
+        "effect": "Death and Resurrection; Corebook rules."
+      }
+    ],
+    "careerTable": [
+      {
+        "roll": "1",
+        "name": "Special Forces",
+        "from": "Corebook"
+      },
+      {
+        "roll": "2",
+        "name": "Intelligence Operative",
+        "from": "Corebook"
+      },
+      {
+        "roll": "3",
+        "name": "Politician",
+        "from": "Corebook"
+      },
+      {
+        "roll": "4",
+        "name": "Diplomat",
+        "from": "Corebook"
+      },
+      {
+        "roll": "5–6",
+        "name": "Bureau Toth Agent",
+        "from": "Corebook"
+      },
+      {
+        "roll": "7",
+        "name": "Gangbuster",
+        "from": "O-12"
+      },
+      {
+        "roll": "8",
+        "name": "Psi Unit",
+        "from": "O-12"
+      },
+      {
+        "roll": "9",
+        "name": "Field Scientist",
+        "from": "Corebook"
+      },
+      {
+        "roll": "10",
+        "name": "Cyberghost",
+        "from": "O-12"
+      },
+      {
+        "roll": "11–13",
+        "name": "Senatorial Support Staff",
+        "from": "O-12"
+      },
+      {
+        "roll": "14–16",
+        "name": "Bureau Analyst",
+        "from": "O-12"
+      },
+      {
+        "roll": "17–19",
+        "name": "Bureau Aegis Specialist",
+        "from": "O-12"
+      },
+      {
+        "roll": "20",
+        "name": "Roll on Faction Table of Your Choice",
+        "from": "Other"
+      }
+    ],
+    "careerEventRouting": [
+      {
+        "roll": "1–3",
+        "table": "O-12 Career Events"
+      },
+      {
+        "roll": "4",
+        "table": "Core A"
+      },
+      {
+        "roll": "5",
+        "table": "Core B"
+      },
+      {
+        "roll": "6",
+        "table": "Core C"
+      }
+    ],
+    "careerEvents": [
+      {
+        "roll": 1,
+        "result": "Bought Silence",
+        "effect": "5 Assets or nemesis from random faction."
+      },
+      {
+        "roll": 2,
+        "result": "Political Enemies",
+        "effect": "Rival in random faction."
+      },
+      {
+        "roll": 3,
+        "result": "Targeted Politically",
+        "effect": "Career Hazard D2; failure Fired."
+      },
+      {
+        "roll": 4,
+        "result": "Diplomatic Intervention",
+        "effect": "Intervene: contact one faction and rival another; abstain: Discipline +1."
+      },
+      {
+        "roll": 5,
+        "result": "Blackmailed",
+        "effect": "Gain trait Blackmailed."
+      },
+      {
+        "roll": 6,
+        "result": "Recognised Excellence",
+        "effect": "3 Assets."
+      },
+      {
+        "roll": 7,
+        "result": "Family Obligation",
+        "effect": "Debt of 2+6 Assets, or Discipline +1 and Stone Cold."
+      },
+      {
+        "roll": 8,
+        "result": "Lost Diplomat",
+        "effect": "Contact in another faction."
+      },
+      {
+        "roll": 9,
+        "result": "Dirty Politics",
+        "effect": "Career Hazard D2; failure Fired plus Criminal Record."
+      },
+      {
+        "roll": 10,
+        "result": "Mediator",
+        "effect": "Trait Mediator."
+      },
+      {
+        "roll": 11,
+        "result": "Corregidor Crew",
+        "effect": "Help miners for Corregidor contacts and 1 Asset, or report for Bureau Aegis/Hermes contact."
+      },
+      {
+        "roll": 12,
+        "result": "Void Terror",
+        "effect": "Trait Void Terror; +1 Complication Range on Extraplanetary tests."
+      },
+      {
+        "roll": 13,
+        "result": "Unexpected Bequest",
+        "effect": "Encrypted comlog, onyx ring and painkillers."
+      },
+      {
+        "roll": 14,
+        "result": "Corruption Scandal",
+        "effect": "5 Assets or rival, plus narrative consequences."
+      },
+      {
+        "roll": 15,
+        "result": "Poisoned Drink",
+        "effect": "Resistance D3 or death/resurrection in Standard, Orlando or Siren Lhost; gain ally."
+      },
+      {
+        "roll": 16,
+        "result": "Promotion Rival",
+        "effect": "O-12 rival."
+      },
+      {
+        "roll": 17,
+        "result": "Secret Witness",
+        "effect": "Give evidence for nemesis and bonus law-enforcement Momentum, blackmail for trait, or Discipline +1."
+      },
+      {
+        "roll": 18,
+        "result": "Dismissal",
+        "effect": "Fired; trait Definitely Hard Feelings."
+      },
+      {
+        "roll": 19,
+        "result": "Explosion and Resurrection",
+        "effect": "Death/resurrection; heritage/historical ties contact."
+      },
+      {
+        "roll": 20,
+        "result": "Music of the Spheres",
+        "effect": "Roll three additional events; cannot be chosen by Life Point."
+      }
+    ],
+    "bureauAnalystTable": [
+      {
+        "roll": "1",
+        "name": "Aegis",
+        "electiveSkills": [
+          "Athletics",
+          "Hacking",
+          "Resistance"
+        ]
+      },
+      {
+        "roll": "2",
+        "name": "Agni",
+        "electiveSkills": [
+          "Hacking",
+          "Science",
+          "Tech"
+        ]
+      },
+      {
+        "roll": "3",
+        "name": "Athena",
+        "electiveSkills": [
+          "Lifestyle",
+          "Persuade",
+          "Psychology"
+        ]
+      },
+      {
+        "roll": "4",
+        "name": "Concilium",
+        "electiveSkills": [
+          "Discipline",
+          "Lifestyle",
+          "Persuade"
+        ]
+      },
+      {
+        "roll": "5–6",
+        "name": "Gaea",
+        "electiveSkills": [
+          "Extraplanetary",
+          "Science",
+          "Survival"
+        ]
+      },
+      {
+        "roll": "7",
+        "name": "Ganesh",
+        "electiveSkills": [
+          "Analysis",
+          "Hacking",
+          "Lifestyle"
+        ]
+      },
+      {
+        "roll": "8",
+        "name": "Hermes",
+        "electiveSkills": [
+          "Lifestyle",
+          "Pilot",
+          "Spacecraft"
+        ]
+      },
+      {
+        "roll": "9",
+        "name": "Lakshmi",
+        "electiveSkills": [
+          "Medicine",
+          "Psychology",
+          "Science"
+        ]
+      },
+      {
+        "roll": "10",
+        "name": "Noir",
+        "electiveSkills": [
+          "Discipline",
+          "Stealth",
+          "Thievery"
+        ]
+      },
+      {
+        "roll": "11–13",
+        "name": "Tiandi",
+        "electiveSkills": [
+          "Extraplanetary",
+          "Spacecraft",
+          "Tech"
+        ]
+      },
+      {
+        "roll": "14–16",
+        "name": "Toth",
+        "electiveSkills": [
+          "Command",
+          "Hacking",
+          "Tech"
+        ]
+      },
+      {
+        "roll": "17–19",
+        "name": "Trimurti",
+        "electiveSkills": [
+          "Command",
+          "Persuade",
+          "Psychology"
+        ]
+      },
+      {
+        "roll": "20",
+        "name": "Choose Your Bureau",
+        "electiveSkills": []
+      }
+    ],
+    "aegisUnitTable": [
+      {
+        "roll": "1–2",
+        "name": "Alpha",
+        "electiveSkills": [
+          "Command",
+          "Education",
+          "Persuade"
+        ],
+        "gear": [
+          "Armoured Clothing",
+          "Heavy Combat Armour",
+          "MULTI Rifle",
+          "Negotiation Suite (1-week rental credit)"
+        ]
+      },
+      {
+        "roll": "3–4",
+        "name": "Beta",
+        "electiveSkills": [
+          "Hacking",
+          "Pilot",
+          "Tech"
+        ],
+        "gear": [
+          "D-Charges ×2",
+          "Nanopulser",
+          "Remote Presence Gear"
+        ]
+      },
+      {
+        "roll": "5–6",
+        "name": "Delta",
+        "electiveSkills": [
+          "Observation",
+          "Stealth",
+          "Survival"
+        ],
+        "gear": [
+          "Combi Rifle",
+          "D-Charge",
+          "Hacking Device",
+          "Pistol",
+          "Knife"
+        ]
+      },
+      {
+        "roll": "7–8",
+        "name": "Epsilon",
+        "electiveSkills": [
+          "Discipline",
+          "Persuade",
+          "Psychology"
+        ],
+        "gear": [
+          "Medium Combat Armour",
+          "MULTI Sniper Rifle"
+        ]
+      },
+      {
+        "roll": "9–10",
+        "name": "Gamma",
+        "electiveSkills": [
+          "Ballistics",
+          "Resistance",
+          "Tech"
+        ],
+        "gear": [
+          "Panzerfaust (2 Needle Reloads)",
+          "Powered Armour"
+        ]
+      },
+      {
+        "roll": "11–12",
+        "name": "Kappa",
+        "electiveSkills": [
+          "Athletics",
+          "Observation",
+          "Persuade"
+        ],
+        "gear": [
+          "Combi Rifle",
+          "Light Combat Armour"
+        ]
+      },
+      {
+        "roll": "13–15",
+        "name": "Lambda",
+        "electiveSkills": [
+          "Athletics",
+          "Medicine",
+          "Tech"
+        ],
+        "gear": [
+          "Combi Rifle",
+          "Light Combat Armour",
+          "MediKit",
+          "Powered Multitool"
+        ]
+      },
+      {
+        "roll": "16–17",
+        "name": "Omega",
+        "electiveSkills": [
+          "Ballistics",
+          "Close Combat",
+          "Resistance"
+        ],
+        "gear": [
+          "Heavy Machine Gun",
+          "Powered Armour",
+          "Knife"
+        ]
+      },
+      {
+        "roll": "18–19",
+        "name": "Zeta",
+        "electiveSkills": [
+          "Ballistics",
+          "Discipline",
+          "Pilot"
+        ],
+        "gear": [
+          "Armoured Clothing (Uniform)",
+          "Inlaid Palm Circuitry",
+          "Pistol (4 reloads)"
+        ]
+      },
+      {
+        "roll": "20",
+        "name": "Choose Your Unit",
+        "electiveSkills": [],
+        "gear": []
+      }
+    ],
+    "pillars": [
+      {
+        "roll": "1–4",
+        "name": "Unity",
+        "effect": "Contact outside faction."
+      },
+      {
+        "roll": "5–8",
+        "name": "Cooperation",
+        "effect": "Contact inside faction."
+      },
+      {
+        "roll": "9–12",
+        "name": "Support",
+        "effect": "Social Status +1."
+      },
+      {
+        "roll": "13–16",
+        "name": "Progress",
+        "effect": "Tohaa contact."
+      },
+      {
+        "roll": "17–20",
+        "name": "None",
+        "effect": "Social Status −1."
+      }
+    ],
+    "careerProfiles": {
+      "Bureau Analyst": {
+        "source": "Infinity RPG — O-12 Sourcebook",
+        "sourcePage": 88,
+        "attributeBonuses": {
+          "Agility": 1,
+          "Awareness": 3,
+          "Brawn": 0,
+          "Coordination": 1,
+          "Intelligence": 2,
+          "Personality": 1,
+          "Willpower": 1
+        },
+        "mandatorySkills": [
+          "Analysis",
+          "Education",
+          "Observation"
+        ],
+        "electiveSkills": [],
+        "earnings": "2+1§",
+        "gear": [
+          "Analysis Suite",
+          "Negotiator's Suite (7 days' credit)",
+          "Psychoanalysis Suite"
+        ],
+        "special": "Choose bureau via Bureau Analyst Table; it sets electives. Change on repeat via Hazard D1 or spend 1 Life Point.",
+        "brief": "O-12 sourcebook career."
+      },
+      "Cyberghost": {
+        "source": "Infinity RPG — O-12 Sourcebook",
+        "sourcePage": 89,
+        "attributeBonuses": {
+          "Agility": 1,
+          "Awareness": 1,
+          "Brawn": 1,
+          "Coordination": 1,
+          "Intelligence": 3,
+          "Personality": 0,
+          "Willpower": 1
+        },
+        "mandatorySkills": [
+          "Close Combat",
+          "Hacking",
+          "Stealth"
+        ],
+        "electiveSkills": [
+          "Hacking",
+          "Observation",
+          "Tech"
+        ],
+        "earnings": "1+3§",
+        "gear": [
+          "Armoured Clothing (casual)",
+          "Assault or White Hacking Device",
+          "LinkSWORD"
+        ],
+        "special": "Bureau Aegis Quantronic Intervention Unit.",
+        "brief": "O-12 sourcebook career."
+      },
+      "Gangbuster": {
+        "source": "Infinity RPG — O-12 Sourcebook",
+        "sourcePage": 89,
+        "attributeBonuses": {
+          "Agility": 1,
+          "Awareness": 1,
+          "Brawn": 2,
+          "Coordination": 2,
+          "Intelligence": 0,
+          "Personality": 2,
+          "Willpower": 2
+        },
+        "mandatorySkills": [
+          "Ballistics",
+          "Discipline",
+          "Lifestyle"
+        ],
+        "electiveSkills": [
+          "Resistance",
+          "Tech",
+          "Thievery"
+        ],
+        "earnings": "1+3§",
+        "gear": [
+          "Armoured Clothing",
+          "Boarding Shotgun",
+          "Multispectral Visor 1"
+        ],
+        "special": "Special Crime Squad undercover enforcement.",
+        "brief": "O-12 sourcebook career."
+      },
+      "Psi Unit": {
+        "source": "Infinity RPG — O-12 Sourcebook",
+        "sourcePage": 89,
+        "attributeBonuses": {
+          "Agility": 2,
+          "Awareness": 2,
+          "Brawn": 1,
+          "Coordination": 1,
+          "Intelligence": 2,
+          "Personality": 1,
+          "Willpower": 1
+        },
+        "mandatorySkills": [
+          "Hacking",
+          "Observation",
+          "Stealth"
+        ],
+        "electiveSkills": [
+          "Close Combat",
+          "Discipline",
+          "Thievery"
+        ],
+        "earnings": "2+2§",
+        "gear": [
+          "Armoured Clothing (business)",
+          "Hacking Device",
+          "Nanopulser"
+        ],
+        "special": "Bureau Aegis intelligence unit.",
+        "brief": "O-12 sourcebook career."
+      },
+      "Senatorial Support Staff": {
+        "source": "Infinity RPG — O-12 Sourcebook",
+        "sourcePage": 89,
+        "attributeBonuses": {
+          "Agility": 1,
+          "Awareness": 2,
+          "Brawn": 1,
+          "Coordination": 1,
+          "Intelligence": 2,
+          "Personality": 1,
+          "Willpower": 2
+        },
+        "mandatorySkills": [
+          "Education",
+          "Lifestyle",
+          "Observation"
+        ],
+        "electiveSkills": [
+          "Close Combat",
+          "Hacking",
+          "Persuade"
+        ],
+        "earnings": "1+3§",
+        "gear": [
+          "Nav Suite (Edda)",
+          "Painkillers ×3",
+          "Sensor Suite",
+          "Stims ×2"
+        ],
+        "special": "Öberhaus senatorial support.",
+        "brief": "O-12 sourcebook career."
+      },
+      "Bureau Aegis Specialist": {
+        "source": "Infinity RPG — O-12 Sourcebook",
+        "sourcePage": 90,
+        "attributeBonuses": {
+          "Agility": 1,
+          "Awareness": 1,
+          "Brawn": 2,
+          "Coordination": 2,
+          "Intelligence": 1,
+          "Personality": 1,
+          "Willpower": 2
+        },
+        "mandatorySkills": [
+          "Ballistics",
+          "Discipline",
+          "Resistance"
+        ],
+        "electiveSkills": [],
+        "earnings": "1+4§",
+        "gear": [],
+        "special": "Choose Aegis Unit for electives/gear. Criminal Record forces Beta Unit; record clears after career phase.",
+        "brief": "O-12 sourcebook career."
+      }
+    },
+    "originChoices": [
+      "Concilium Prima",
+      "Edda (Concilium Prima)",
+      "Manaheim (Concilium Prima)",
+      "Asaheim (Concilium System)",
+      "Asgard (Concilium System)",
+      "Bifrost (Concilium System)",
+      "Cibola (Concilium System)",
+      "Gjǫll (Concilium System)",
+      "Brísingamen (Concilium System)",
+      "Svalinn (Concilium System)",
+      "Akrarnir (Concilium System)",
+      "End of the Line Free Orbital",
+      "Other Human Sphere origin (specify in notes)"
+    ],
+    "gearAudit": [
+      {
+        "name": "Angel Drone",
+        "sourceLabel": "Angel Drone",
+        "sourcePage": 94,
+        "category": "Remote",
+        "action": "added"
+      },
+      {
+        "name": "Bond Suit (Summer)",
+        "sourceLabel": "Bond Suit (Summer)",
+        "sourcePage": 101,
+        "category": "Armour",
+        "action": "added"
+      },
+      {
+        "name": "Bond Suit (Heavy)",
+        "sourceLabel": "Bond Suit (Heavy)",
+        "sourcePage": 101,
+        "category": "Armour",
+        "action": "added"
+      },
+      {
+        "name": "Bureau Aegis Cordon Control Vehicle",
+        "sourceLabel": "Bureau Aegis Cordon Control Vehicle",
+        "sourcePage": 94,
+        "category": "Other Item",
+        "action": "added"
+      },
+      {
+        "name": "Bureau Aegis Interceptor Patrol Vehicle",
+        "sourceLabel": "Bureau Aegis Interceptor Patrol Vehicle",
+        "sourcePage": 95,
+        "category": "Other Item",
+        "action": "added"
+      },
+      {
+        "name": "Bureau Aegis Rapid Deployment Vehicle",
+        "sourceLabel": "Bureau Aegis Rapid Deployment Vehicle",
+        "sourcePage": 95,
+        "category": "Other Item",
+        "action": "added"
+      },
+      {
+        "name": "Calm",
+        "sourceLabel": "Calm",
+        "sourcePage": 96,
+        "category": "Other Item",
+        "action": "added"
+      },
+      {
+        "name": "Capture Bag",
+        "sourceLabel": "Capture Bag",
+        "sourcePage": 102,
+        "category": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Collapsible Exoskeleton",
+        "sourceLabel": "Collapsible Exoskeleton",
+        "sourcePage": 101,
+        "category": "Armour",
+        "action": "added"
+      },
+      {
+        "name": "Cordon Rope",
+        "sourceLabel": "Cordon Rope",
+        "sourcePage": 102,
+        "category": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Cryo-Pod",
+        "sourceLabel": "Cryo-Pod",
+        "sourcePage": 102,
+        "category": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Disaster Recovery Suit",
+        "sourceLabel": "Disaster Recovery Suit",
+        "sourcePage": 102,
+        "category": "Other Item",
+        "action": "added"
+      },
+      {
+        "name": "EMT Equipment",
+        "sourceLabel": "EMT Equipment",
+        "sourcePage": 97,
+        "category": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Feuerbach (BS)",
+        "sourceLabel": "Feuerbach",
+        "sourcePage": 102,
+        "category": "Weapon",
+        "action": "enriched"
+      },
+      {
+        "name": "First Responder Uniform",
+        "sourceLabel": "First Responder Uniform",
+        "sourcePage": 101,
+        "category": "Armour",
+        "action": "added"
+      },
+      {
+        "name": "Gamma Armour",
+        "sourceLabel": "Gamma Armour",
+        "sourcePage": 101,
+        "category": "Armour",
+        "action": "added"
+      },
+      {
+        "name": "Ground Spikes",
+        "sourceLabel": "Ground Spikes",
+        "sourcePage": 98,
+        "category": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Small Improvised Explosive Device",
+        "sourceLabel": "Small Improvised Explosive Device",
+        "sourcePage": 101,
+        "category": "Explosive Device",
+        "action": "added"
+      },
+      {
+        "name": "Large Improvised Explosive Device",
+        "sourceLabel": "Large Improvised Explosive Device",
+        "sourcePage": 101,
+        "category": "Explosive Device",
+        "action": "added"
+      },
+      {
+        "name": "Interrogation Cell",
+        "sourceLabel": "Interrogation Cell",
+        "sourcePage": 102,
+        "category": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Jaws of Life",
+        "sourceLabel": "Jaws of Life",
+        "sourcePage": 101,
+        "category": "Weapon",
+        "action": "added"
+      },
+      {
+        "name": "LinkSWORD",
+        "sourceLabel": "LinkSWORD",
+        "sourcePage": 101,
+        "category": "Weapon",
+        "action": "added"
+      },
+      {
+        "name": "Overwatch Remote",
+        "sourceLabel": "Overwatch Remote",
+        "sourcePage": 102,
+        "category": "Remote",
+        "action": "added"
+      },
+      {
+        "name": "Quantronic Paints",
+        "sourceLabel": "Quantronic Paints",
+        "sourcePage": 102,
+        "category": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Sense Link",
+        "sourceLabel": "Sense Link",
+        "sourcePage": 101,
+        "category": "Augmentation",
+        "action": "added"
+      },
+      {
+        "name": "Statement Taker",
+        "sourceLabel": "Statement Taker",
+        "sourcePage": 102,
+        "category": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Social Care Kit",
+        "sourceLabel": "Social Care Kit",
+        "sourcePage": 102,
+        "category": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Striptape",
+        "sourceLabel": "Striptape",
+        "sourcePage": 102,
+        "category": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Subdual Baton",
+        "sourceLabel": "Subdual Baton",
+        "sourcePage": 101,
+        "category": "Weapon",
+        "action": "added"
+      },
+      {
+        "name": "Tactical Magnetic Harness",
+        "sourceLabel": "Tactical Magnetic Harness",
+        "sourcePage": 101,
+        "category": "Armour",
+        "action": "added"
+      },
+      {
+        "name": "Prisoner Habitation",
+        "sourceLabel": "Prisoner Habitation",
+        "sourcePage": 95,
+        "category": "Other Item",
+        "action": "added"
+      }
+    ],
+    "sourceNotes": [
+      "O-12 personnel renounce old national allegiance, though double and triple agents may preserve hidden loyalties.",
+      "Source Decision Two: O-12 Faction and Heritage both O-12 → Historical Ties roll on Corebook Faction Table.",
+      "Decision Seven: d6 1–3 O-12 Adolescent Events; otherwise Core A/B/C. Mixed Heritage and Faction may choose either Faction's special table on the 1–3 result.",
+      "Decision Eight: O-12 Faction Career Table supersedes Corebook. Career events use d6 1–3 O-12; 4–6 Core A/B/C.",
+      "Decision Nine: O-12 Pillars table is applied before normal customisation; contacts/Social Status are recorded manually.",
+      "Bureau Analyst and Bureau Aegis Specialist have distinct career-assignment tables; not separate biological hosts or birth factions.",
+      "Aegis Specialist with Criminal Record must use Beta Unit, and record clears after completing career phase.",
+      "Double/triple agents use current faction by default; true faction rolls have double Complication Range.",
+      "Existing O-12 Liaison Corps and Survey Corps organisational entries are retained as older sheet conventions, not newly sourced classes.",
+      "O-12 Bureaucrat legacy career remains importable but is not a result on the source Career Table."
+    ],
+    "sourceNormalisation": [
+      "Printed O-12 Faction Career Table is headed D6 despite result ranges 1–20; use d20 results.",
+      "Bureau Analyst text references Aegis Unit Table, but has its own adjacent Bureau Analyst Table; use dedicated Analyst table.",
+      "Printed 'Medical' electives for Bureau Lakshmi and Aegis Lambda normalised to sheet skill Medicine.",
+      "Feuerbach is enriched under legacy weapon name Feuerbach (BS) to preserve saved items.",
+      "Ground Spikes and Prisoner Habitation are in narrative entries rather than final gear tables.",
+      "Source's locational Armour Soak stays descriptive, not auto-converted to custom Armour tiers.",
+      "Other Human Sphere origin is a user-interface convenience, not a named place in source.",
+      "Career profile attribute boosts, Life Point costs, faction allegiance, and random effects remain reference, not silent changes."
+    ]
   }
 };
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v72-aleph-source-reconciliation";
+window.INFINITY_BUILD = "v73-o12-source-reconciliation";

@@ -141,6 +141,70 @@ function selectedAlephFoundation() {
   return DATA.alephReference?.psychogeneticFoundations?.find(row => row.name === choice) || null;
 }
 
+function isO12Faction(faction) {
+  const selected = String(faction || "").trim();
+  return selected === "O-12" || selected.startsWith("O-12 -");
+}
+
+function o12AssignmentRows() {
+  if (!isO12Faction(inputField("faction")?.value || "")) return [];
+  const career = inputField("career")?.value || "";
+  const source = DATA.o12Reference || {};
+  if (career === "Bureau Analyst") return (source.bureauAnalystTable || []).filter(row => row.name !== "Choose Your Bureau");
+  if (career === "Bureau Aegis Specialist") return (source.aegisUnitTable || []).filter(row => row.name !== "Choose Your Unit");
+  return [];
+}
+
+function refreshO12Assignment({ value, preserve = true } = {}) {
+  const field = inputField("o12Assignment");
+  if (!field) return;
+  const label = document.getElementById("o12AssignmentLabel");
+  const status = document.getElementById("o12AssignmentStatus");
+  const rows = o12AssignmentRows();
+  const career = inputField("career")?.value || "";
+  const requested = value !== undefined ? String(value || "") : String(field.value || "");
+  makeOptions(field, rows.map(row => row.name), "Choose...");
+  field.value = preserve && rows.some(row => row.name === requested) ? requested : "";
+  field.disabled = rows.length === 0;
+  if (label) {
+    label.hidden = !rows.length;
+    const node = Array.from(label.childNodes || []).find(node => node.nodeType === 3);
+    if (node) node.nodeValue = career === "Bureau Analyst" ? "O-12 Analyst Bureau" : "O-12 Aegis Unit";
+  }
+  if (status) {
+    const row = rows.find(row => row.name === field.value);
+    status.hidden = !rows.length;
+    const extra = row?.name === "Beta" ? " Criminal Record requires Beta Unit until the career phase ends." : "";
+    status.textContent = !rows.length ? "" : row
+      ? `O-12 ${career} (${row.name}): electives ${row.electiveSkills.join(", ")}.${row.gear?.length ? " Gear: " + row.gear.join(", ") + "." : ""}${extra}`
+      : "Select an O-12 Bureau / Unit to show source electives and gear. These are not automatically granted as extra skill ranks.";
+  }
+}
+
+function refreshO12Pillar({ value, preserve = true } = {}) {
+  const field = inputField("o12Pillar");
+  if (!field) return;
+  const label = document.getElementById("o12PillarLabel");
+  const status = document.getElementById("o12PillarStatus");
+  const active = isO12Faction(inputField("faction")?.value || "");
+  const records = DATA.o12Reference?.pillars || [];
+  const requested = value !== undefined ? String(value || "") : String(field.value || "");
+  makeOptions(field, active ? records.map(row => row.name) : [], "Choose...");
+  field.value = active && preserve && records.some(row => row.name === requested) ? requested : "";
+  field.disabled = !active;
+  if (label) label.hidden = !active;
+  if (status) {
+    const chosen = records.find(row => row.name === field.value);
+    status.hidden = !active || !chosen;
+    status.textContent = chosen ? `O-12 Pillar ${chosen.name} (d20 ${chosen.roll}): ${chosen.effect} Record contacts and Social Status manually.` : "";
+  }
+}
+
+function refreshO12HistoricalTiesVisibility() {
+  const label = document.getElementById("o12HistoricalTiesLabel");
+  if (label) label.hidden = !isO12Faction(inputField("faction")?.value || "");
+}
+
 function isNomadsFaction(faction) {
   const value = String(faction || "").trim();
   return value === "Nomads" || value.startsWith("Nomads -");
@@ -243,6 +307,7 @@ function sourceCareerOptionsForFaction(faction, allCareers) {
     : selected.startsWith("PanOceania") ? "PanOceania"
     : selected.startsWith("Nomads") ? "Nomads"
     : selected.startsWith("ALEPH") ? "ALEPH"
+    : isO12Faction(selected) ? "O-12"
     : "";
   const configured = sourceKey ? DATA.careerOptionsByFaction?.[sourceKey] : null;
   if (!Array.isArray(configured) || !configured.length) return null;
@@ -311,6 +376,7 @@ function refreshCareerChoices({ value, preserve = true, allowLegacy = false } = 
   } else {
     select.value = choices.includes(GENERAL_CAREER) ? GENERAL_CAREER : "";
   }
+  refreshO12Assignment({ preserve: false });
 }
 
 function refreshHostStateChoices({ value, preserve = true } = {}) {
@@ -983,13 +1049,20 @@ function initLists() {
   const homeworld = inputField("homeworld");
   const upliftSpecies = inputField("upliftSpecies");
   const upliftBody = inputField("upliftBody");
+  const o12Assignment = inputField("o12Assignment");
+  const o12Pillar = inputField("o12Pillar");
 
   refreshHostHeritageChoices({ value: DEFAULT_HOST_HERITAGE, preserve: false });
   refreshCareerChoices({ value: GENERAL_CAREER, preserve: false });
   refreshHomeworldChoices({ preserve: false });
   refreshNomadHeritageChoices({ preserve: false });
+  refreshO12Assignment({ preserve: false });
+  refreshO12Pillar({ preserve: false });
+  refreshO12HistoricalTiesVisibility();
 
-  if (career) career.addEventListener("change", refreshRestrictionChoices);
+  if (career) career.addEventListener("change", () => { refreshRestrictionChoices(); refreshO12Assignment({ preserve: false }); });
+  if (o12Assignment) o12Assignment.addEventListener("change", () => refreshO12Assignment({ value: o12Assignment.value, preserve: true }));
+  if (o12Pillar) o12Pillar.addEventListener("change", () => refreshO12Pillar({ value: o12Pillar.value, preserve: true }));
 
   if (faction) {
     faction.addEventListener("change", () => {
@@ -997,6 +1070,9 @@ function initLists() {
       refreshCareerChoices({ preserve: false });
       refreshHomeworldChoices({ preserve: false });
       refreshNomadHeritageChoices({ preserve: false });
+      refreshO12Assignment({ preserve: false });
+      refreshO12Pillar({ preserve: false });
+      refreshO12HistoricalTiesVisibility();
       refreshRestrictionChoices();
       applyHostHeritageEffects({ recoverVigor: false });
       syncDogfaceAutomation();
@@ -1476,7 +1552,7 @@ function applyState(rawState) {
 
   // Identity dependencies are restored in order so Faction -> Host -> Homeworld /
   // Career filtering is valid before the rest of the saved sheet is applied.
-  const specialFields = new Set(["faction", "hostHeritage", "hostState", "homeworld", "career", "nomadHeritage", "upliftSpecies", "upliftBody"]);
+  const specialFields = new Set(["faction", "hostHeritage", "hostState", "homeworld", "career", "nomadHeritage", "upliftSpecies", "upliftBody", "o12Assignment", "o12Pillar", "o12HistoricalTies"]);
   document.querySelectorAll("input[data-field], textarea[data-field], select[data-field]").forEach(el => {
     if (!specialFields.has(el.dataset.field) && state[el.dataset.field] !== undefined) el.value = state[el.dataset.field];
   });
@@ -1490,6 +1566,10 @@ function applyState(rawState) {
   refreshNomadHeritageChoices({ value: state.nomadHeritage || "", preserve: true });
   refreshCareerChoices({ value: state.career || GENERAL_CAREER, preserve: true, allowLegacy: true });
   setCareerChoice(state.career || GENERAL_CAREER, legacyRestriction);
+  refreshO12Assignment({ value: state.o12Assignment || "", preserve: true });
+  refreshO12Pillar({ value: state.o12Pillar || "", preserve: true });
+  refreshO12HistoricalTiesVisibility();
+  if (inputField("o12HistoricalTies")) inputField("o12HistoricalTies").value = state.o12HistoricalTies || "";
   refreshRestrictionChoices();
 
   const woundsField = inputField("wounds");
@@ -2133,7 +2213,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v72-aleph-source-reconciliation",
+    build: "v73-o12-source-reconciliation",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -2650,7 +2730,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v72-aleph-source-reconciliation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v73-o12-source-reconciliation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -2928,7 +3008,12 @@ function buildPrintCorePage(page, total) {
     ...(isNomadsFaction(factionValue) ? [["Nomad Heritage", printValue("nomadHeritage")]] : []),
     ...(showHost ? [["Host / Heritage", printValue("hostHeritage") || DEFAULT_HOST_HERITAGE], ["Current Form", printValue("hostState")]] : []),
     ...(isNomadsFaction(factionValue) && selectedHostHeritage() === "Uplift" ? [["Uplift Species", printValue("upliftSpecies")], ["Body / Platform", printValue("upliftBody")]] : []),
-    ["Career", printValue("career")]
+    ["Career", printValue("career")],
+    ...(isO12Faction(factionValue) ? [
+      ["Historical Ties", printValue("o12HistoricalTies")],
+      ["O-12 Bureau / Unit", printValue("o12Assignment")],
+      ["O-12 Pillar", printValue("o12Pillar")]
+    ] : [])
   ].filter(([, value]) => value);
 
   const hostConfig = hostHeritageConfig();
@@ -4371,7 +4456,7 @@ function buildGlossaryEntries() {
     ["Sub-skills", "Rule", ["Skill tests", "Focus allowed"], "Sub-skills inherit the relevant main skill rating, then add starting allocation and applicable Trait/Talent modifiers. Focus may be assigned only to sub-skills."],
     ["Focus", "Rule", ["Sub-skills only"], "Focus represents specialist training. Main skills cannot use Focus; assign Focus to specific sub-skills such as Ballistics, Hacking, Medicine, Persuade, or Survival."],
     ["Career", "Character option", ["Eligibility", "Traits", "Talents"], "Career is the single field used for eligibility filtering. Choosing a Career filters Trait and Talent options while keeping general/unrestricted options available."],
-    ["Host / Heritage", "Character option", ["Ariadna", "PanOceania", "Nomads", "ALEPH", "Dogface", "Wulver", "Antipode", "Helot", "Uplift", "Aspect", "Recreation", "True AI"], "Host / Heritage is separate from Career. Ariadna supports Dogface, Wulver and Antipode; PanOceania supports Helot; Nomads supports Uplift; ALEPH supports Aspect, Recreation or True AI. AI psychogenesis is distinct from Lhost body choice. Host modifiers apply without occupying an ordinary Trait slot."],
+    ["Host / Heritage", "Character option", ["Ariadna", "PanOceania", "Nomads", "ALEPH", "O-12", "Dogface", "Wulver", "Antipode", "Helot", "Uplift", "Aspect", "Recreation", "True AI"], "Host / Heritage is separate from Career. Ariadna supports Dogface, Wulver and Antipode; PanOceania supports Helot; Nomads supports Uplift; ALEPH supports Aspect, Recreation or True AI. AI psychogenesis is distinct from Lhost body choice. Host modifiers apply without occupying an ordinary Trait slot."],
     ["Faction / Homeworld relationship", "Character option", ["Validation"], "Homeworld / Habitat choices are filtered by the selected Faction. Changing Faction clears an invalid Homeworld / Habitat selection so saved characters keep a valid relationship."],
     ["Armour", "Resource", ["Light 5", "Medium 10", "Heavy 15"], "Armour replaces Temporary HP in this custom sheet. Armour can be selected directly or inferred from selected armour equipment."],
     ["HP / Vigor", "Resource", ["0–20"], "The character's physical endurance track. Damage and recovery should be handled according to the GM's current 2D20 scene rules."],
@@ -4408,6 +4493,25 @@ function buildGlossaryEntries() {
     ref("ALEPH Geist Path","pp. 82–90",aleph.geists.note+" Decisions: "+aleph.geists.decisions.join(", ")+".");
     ref("ALEPH Advanced Infowar","pp. 19–34",aleph.advancedInfowar.note);
     ref("ALEPH Source Normalisation Notes","Chs. 3–6",aleph.sourceNormalisation.join(" "));
+  }
+
+  const o12 = DATA.o12Reference;
+  if (o12) {
+    const ref = (name, page, body) => entries.push(glossaryEntry("Source References", name, "O-12 Reference", [`Source: ${o12.source}, p. ${page}`], body, body));
+    const rows = (arr, fn) => (arr || []).map(fn).join("; ");
+    ref("O-12 Historical Ties and Double Agents", "84–86", o12.historicalTies.rule + " " + o12.historicalTies.doubleAgentRule);
+    ref("O-12 Adolescent Routing", "84", rows(o12.adolescentRouting, x => `${x.roll}: ${x.table}`));
+    ref("O-12 Adolescent Events", "85", rows(o12.adolescentEvents, x => `${x.roll}: ${x.trait}: ${x.effect}`));
+    ref("O-12 Faction Career Table", "86", rows(o12.careerTable, x => `${x.roll}: ${x.name}`));
+    ref("O-12 Career Event Routing", "86", rows(o12.careerEventRouting, x => `${x.roll}: ${x.table}`));
+    ref("O-12 Career Events", "87", rows(o12.careerEvents, x => `${x.roll}: ${x.result}: ${x.effect}`));
+    ref("O-12 Bureau Analyst Table", "88", rows(o12.bureauAnalystTable, x => `${x.roll}: ${x.name} (Electives: ${x.electiveSkills.join(", ")})`));
+    ref("O-12 Aegis Unit Table", "91", rows(o12.aegisUnitTable, x => `${x.roll}: ${x.name} (Electives: ${x.electiveSkills.join(", ")}; Gear: ${x.gear.join(", ")})`));
+    ref("O-12 Pillars Table", "92", rows(o12.pillars, x => `${x.roll}: ${x.name}: ${x.effect}`));
+    ref("O-12 Equipment Catalogue", "94–102", rows(o12.gearAudit, x => `${x.sourceLabel} [${x.category}; p. ${x.sourcePage}]`));
+    ref("O-12 Bureau Noir", "72–82", "The source details clandestine operational structures, assets, and inter-bureau relations. Career affiliation alone grants no automatic legal authority or extra resources.");
+    ref("O-12 Ideals and Reputation", "64–71", "Campaign-level reputation, splashback, and Pillar ideals can be used with GM approval; they do not grant free bonuses in the simplified sheet.");
+    ref("O-12 Source Exceptions", "83–102", o12.sourceNotes.concat(o12.sourceNormalisation).join(" "));
   }
 
   const panO = DATA.panOceaniaReference;
@@ -4765,7 +4869,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v72-aleph-source-reconciliation";
+  document.documentElement.dataset.infinityBuild = "v73-o12-source-reconciliation";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
