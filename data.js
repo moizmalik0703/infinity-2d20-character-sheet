@@ -15217,6 +15217,7 @@ window.INFINITY_DATA = {
       "Criminal",
       "Croc Man",
       "Deep-Sea Explorer",
+      "Die Morlock Aufstand Gruppe",
       "Die Morlock Gruppe",
       "Diplomat",
       "Diwân Functionary",
@@ -21290,6 +21291,28 @@ window.INFINITY_DATA = {
         "Plasteel Pipe"
       ],
       "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Die Morlock Aufstand Gruppe": {
+      "sourcePage": 90,
+      "mandatorySkills": [
+        "Athletics",
+        "Close Combat",
+        "Thievery"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Close Combat",
+        "Psychology"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Combi Rifle or Chain Rifle",
+        "D-Charges ×2",
+        "Smoke Grenades ×2",
+        "Sword"
+      ],
+      "special": "The Canine Uplift Career Table specifies the Aufstand subgroup. Use the Die Morlock Gruppe profile and the source’s subgroup-specific context; overlaps in printed Canine roll ranges require GM adjudication.",
+      "source": "Infinity RPG — Nomads Faction Book"
     }
   },
   "hostHeritage": {
@@ -24421,7 +24444,7 @@ window.INFINITY_DATA = {
         "Canine": [
           "Test Subject",
           "Personal Security",
-          "Die Morlock Gruppe",
+          "Die Morlock Aufstand Gruppe",
           "Entertainer",
           "Military",
           "Ship Crew",
@@ -25367,6 +25390,27 @@ window.INFINITY_DATA = {
           "Repair Kit",
           "Plasteel Pipe"
         ]
+      },
+      "Die Morlock Aufstand Gruppe": {
+        "sourcePage": 90,
+        "mandatorySkills": [
+          "Athletics",
+          "Close Combat",
+          "Thievery"
+        ],
+        "electiveSkills": [
+          "Ballistics",
+          "Close Combat",
+          "Psychology"
+        ],
+        "earnings": "1+3§",
+        "gear": [
+          "Combi Rifle or Chain Rifle",
+          "D-Charges ×2",
+          "Smoke Grenades ×2",
+          "Sword"
+        ],
+        "special": "The Canine Uplift Career Table specifies the Aufstand subgroup. Use the Die Morlock Gruppe profile and the source’s subgroup-specific context; overlaps in printed Canine roll ranges require GM adjudication."
       }
     },
     "sourceNotes": [
