@@ -1,0 +1,78 @@
+{
+  "build": "v68-haqq-yujing-integrity",
+  "purpose": "Joint source-integrity pass for Haqqislam and Yu Jing character-sheet content, using the faction books supplied in the user's Google Drive folder.",
+  "sources": {
+    "haqqislam": {
+      "file": "MUH050253 Infinity RPG - Haqqislam Supplement.pdf",
+      "label": "Infinity RPG — Haqqislam Supplement"
+    },
+    "yuJing": {
+      "file": "MUH050226 Infinity - Yu Jing Faction Book.pdf",
+      "label": "Infinity RPG — Yu Jing Faction Book"
+    }
+  },
+  "haqqislam": {
+    "status": "V67 source reconciliation retained and rechecked.",
+    "checks": [
+      "60 source-tagged gear records retained.",
+      "16 source-tagged Haqqislam career profiles retained.",
+      "Faction Social Status, Al-Mustaslaha, Adolescent Event, Faction Career and Hassassin Orders reference data retained.",
+      "Al-Mustaslaha Near-Death Experience now records the exact source mechanic: Vigour -2 and Resolve +1.",
+      "App glossary now surfaces the sourcebook's apparent PanOceania/Haqqislam sidebar editorial slip as a source note instead of silently ignoring it."
+    ]
+  },
+  "yuJing": {
+    "changes": [
+      "Expanded yuJingSource with Heritage Table, Social Class Table, Social Status matrix, Special Heritage rules, Heritage Careers, Adolescent Event Table, Yu Jing Career and Career Event Tables, Japanese Career and Career Event Tables, Imperial Ranks, Uprising Decision Nine rule, and source-normalisation notes.",
+      "Added 26 source-backed broad-world/regional origins covering Shentang, Yutang, Sol (Chung Kuo), Paradiso, Svalarheima and Human Edge plus the sourcebook's named Shentang/Yutang regions.",
+      "Added 15 source-specific career profiles with source attributes, mandatory/elective skills, Earnings, gear and special rules; Intelligence Operative and Special Forces receive Yu Jing cross-references while retaining their existing source identity.",
+      "Tagged 59 Yu Jing gear/reference records with source metadata and completed missing source catalogue entries.",
+      "Added Fúcánglóng Arm (one arm), Fúcánglóng Arms (both), Vigour Poison Charge X, and Yánda (CC).",
+      "Corrected Fireflies from a weapon-slot item to Explosive/Equipment.",
+      "Corrected Palad Khik from a standalone weapon to Ammunition/Equipment.",
+      "Canonicalised X Visor to X-Visor.",
+      "Location-based Yu Jing source armour is no longer silently converted into the custom 5/10/15 Armour track.",
+      "Legacy save migration preserves Fireflies, Palad Khik and X Visor; a completely full Equipment loadout preserves the old weapon-slot record rather than dropping data."
+    ],
+    "sourceNormalisation": [
+      "Persuasion -> Persuade to match the sheet skill.",
+      "Artisan source typo Analyis -> Analysis.",
+      "Career-table Yanjing Agent -> profile spelling Yănjīng Agent.",
+      "Zhöu Zhöug preserves the sourcebook text extraction spelling.",
+      "Subversive Earnings wording is preserved from the extracted source profile rather than guessed."
+    ]
+  },
+  "appBehaviour": {
+    "factionAwareEligibility": "Trait/Talent eligibility now considers selected Faction as well as Career. This prevents shared careers such as Special Forces or Intelligence Operative from hiding valid Haqqislam/Yu Jing faction-linked options.",
+    "preservedHouseRules": [
+      "Main skills cannot use Focus.",
+      "Main-skill changes continue to propagate to dependent sub-skills.",
+      "5 Weapon slots and 10 Equipment slots retained.",
+      "Dogface automation retained.",
+      "Browser save/XML compatibility retained."
+    ]
+  },
+  "validation": {
+    "appSyntax": "PASS",
+    "dataSyntax": "PASS",
+    "embeddedAppMatchesAppJs": true,
+    "embeddedDataMatchesDataJs": true,
+    "oldBuildMarkerAbsent": true,
+    "duplicateTraits": [],
+    "duplicateTalents": [],
+    "duplicateEquipment": [],
+    "haqqSourceGearCount": 60,
+    "haqqSourceCareerProfileCount": 16,
+    "yuJingSourceGearCount": 59,
+    "yuJingSourceCareerProfileCount": 15,
+    "yuJingIntelligenceOperativeCrossReference": true,
+    "yuJingSpecialForcesCrossReference": true,
+    "yuJingOriginCount": 26,
+    "yuJingAdolescentEventCount": 20,
+    "yuJingImperialRankCount": 4,
+    "missingSourceDropdownEntries": [],
+    "legacyClassificationMigrations": true,
+    "sourceArmourManualGuard": true,
+    "factionAwareEligibility": true
+  }
+}
