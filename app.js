@@ -993,11 +993,22 @@ function activeRestriction() {
   return activeRestrictions().join(" | ") || "No Restrictions";
 }
 
+function restrictionMatchesSelectedFaction(itemRestriction) {
+  const restriction = String(itemRestriction || "").trim().toLowerCase();
+  const faction = String(inputField("faction")?.value || "").trim();
+  if (!restriction || !faction) return false;
+  const baseFaction = faction.split(" - ")[0].trim();
+  return [faction, baseFaction]
+    .filter(Boolean)
+    .some(value => restriction.includes(value.toLowerCase()));
+}
+
 function isEligibleForRestriction(item) {
   const selected = activeRestrictions();
-  if (!selected.length || selected.includes("No Restrictions")) return true;
   const itemRestriction = item.restriction || "No Restrictions";
-  return itemRestriction === "No Restrictions" || selected.includes(itemRestriction);
+  if (itemRestriction === "No Restrictions") return true;
+  if (!selected.length || selected.includes("No Restrictions")) return true;
+  return selected.includes(itemRestriction) || restrictionMatchesSelectedFaction(itemRestriction);
 }
 
 function eligibleTraits() {
