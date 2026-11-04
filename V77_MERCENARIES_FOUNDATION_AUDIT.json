@@ -1,0 +1,84 @@
+{
+  "build": "v77-mercenaries-foundation",
+  "date": "2026-11-04",
+  "base": "V76 Technology preview reconciliation",
+  "sourceScope": {
+    "requested": "Infinity: War Market — The Mercenaries Sourcebook",
+    "productCode": "MUH050216",
+    "fullPdfInSuppliedCorpus": false,
+    "publisherScopeVerified": true,
+    "publicChapterMapVerified": true,
+    "exactSourcebookMechanicsVerified": false
+  },
+  "counts": {
+    "existingEquipmentRecords": 585,
+    "totalFactionRecords": 69,
+    "na2FactionRecords": 7,
+    "majorCompanies": 6,
+    "mercenaryCareerNames": 10
+  },
+  "preserved": {
+    "mainSkillsNoFocus": true,
+    "weaponSlots": 5,
+    "equipmentSlots": 10,
+    "v74O12": true,
+    "v76Technology": true,
+    "automaticUnverifiedBonuses": false
+  },
+  "tests": [
+    {
+      "name": "data.js parses",
+      "pass": true
+    },
+    {
+      "name": "six major company affiliations",
+      "pass": true
+    },
+    {
+      "name": "ten Mercenary career names",
+      "pass": true
+    },
+    {
+      "name": "NA2 career routing",
+      "pass": true
+    },
+    {
+      "name": "War Market save scalar",
+      "pass": true
+    },
+    {
+      "name": "full-source mechanics boundary",
+      "pass": true
+    },
+    {
+      "name": "embedded app parity",
+      "pass": true
+    },
+    {
+      "name": "embedded data parity",
+      "pass": true
+    },
+    {
+      "name": "V76 Technology preserved",
+      "pass": true
+    },
+    {
+      "name": "V74 O-12 preserved",
+      "pass": true
+    },
+    {
+      "name": "custom main-skill rules preserved",
+      "pass": true
+    },
+    {
+      "name": "V77 build marker",
+      "pass": true
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "passed": 12,
+    "failed": 0
+  },
+  "nextPass": "Supply MUH050216 to reconcile Chapters 5–8 mechanically: gear, vehicles/upgrades, Lifepath career profiles/events, Debt, War Market Exchange, Free Company funds/assets and contract negotiation."
+}
