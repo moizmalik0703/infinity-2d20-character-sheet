@@ -1,0 +1,64 @@
+{
+  "build": "v76-technology-preview-reconciliation",
+  "date": "2026-11-04",
+  "base": "V75 Technology Workshop foundation",
+  "sourceScope": {
+    "requested": "Infinity: Technology of the Human Sphere",
+    "productCode": "MUH050217",
+    "isbn": "9781912200474",
+    "fullPdfInSuppliedCorpus": false,
+    "officialProductDescriptionVerified": true,
+    "publicPreviewVerified": true,
+    "sourcebookMechanicsVerified": false
+  },
+  "preserved": {
+    "existingEquipmentCount": 585,
+    "technologyGearJson": true,
+    "weaponSlots": 5,
+    "equipmentSlots": 10,
+    "v75ControlIds": true,
+    "automaticUnverifiedBonuses": false
+  },
+  "added": [
+    "MUH050217 and ISBN 9781912200474 identity",
+    "Ten verified chapter headings exposed in the Technology Workshop",
+    "Preview/full-source boundary shown directly to users",
+    "Reference JSON for future full-PDF reconciliation"
+  ],
+  "tests": [
+    {
+      "name": "appBuild",
+      "pass": true
+    },
+    {
+      "name": "sourceIdentity",
+      "pass": true
+    },
+    {
+      "name": "tenChapters",
+      "pass": true
+    },
+    {
+      "name": "safetyBoundary",
+      "pass": true
+    },
+    {
+      "name": "legacyIdsRetained",
+      "pass": true
+    },
+    {
+      "name": "embeddedParity",
+      "pass": true
+    },
+    {
+      "name": "indexBuild",
+      "pass": true
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "passed": 7,
+    "failed": 0
+  },
+  "nextPass": "When the complete MUH050217 PDF is supplied, reconcile chapter-by-chapter tables and rules against this map. Do not infer missing mechanics from preview copy."
+}

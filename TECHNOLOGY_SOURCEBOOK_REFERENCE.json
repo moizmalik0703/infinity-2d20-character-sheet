@@ -1,0 +1,55 @@
+{
+  "build": "v76-technology-preview-reconciliation",
+  "sourcebook": {
+    "title": "Infinity: Technology of the Human Sphere",
+    "productCode": "MUH050217",
+    "isbn": "9781912200474",
+    "fullSourceAvailable": false,
+    "sourceStatus": "Reconciled only to publisher product description and public preview sample.",
+    "verifiedScope": [
+      "Human Sphere Technology",
+      "Comfort and Style",
+      "Augmented Reality, Virtual Property, and Infowar",
+      "Infiltration and Security",
+      "Mind and Body",
+      "Survival and Labour",
+      "Variant Weapons",
+      "Attachments and Modifications",
+      "Armour",
+      "Manufacturing and Modding",
+      "Reference Tables"
+    ],
+    "publisherScope": [
+      "neomaterials and Silk",
+      "consumer technology, acquisition and lifestyle",
+      "dataspheres, augmented reality and Infowar",
+      "security gear and physical augmentations",
+      "weapons and labour equipment",
+      "equipment modification",
+      "equipment, gear, weapon and vehicle reference tables"
+    ],
+    "sources": [
+      "https://modiphius.net/products/infinity-technology-of-the-human-sphere-pdf",
+      "https://d1vzi28wh99zvq.cloudfront.net/pdf_previews/397617-sample.pdf"
+    ]
+  },
+  "reconciliationBoundary": {
+    "importedNow": [
+      "Sourcebook identity and product code",
+      "ISBN",
+      "Ten-chapter sourcebook map",
+      "Publisher-described scope",
+      "Explicit preview-only/full-PDF-missing status in the Technology Workshop"
+    ],
+    "intentionallyNotImported": [
+      "Equipment stat tables",
+      "Exact item quality rules",
+      "Weapon attachment statistics",
+      "Modification procedures and costs",
+      "Manufacturing test difficulties or consequences",
+      "New armour values",
+      "Prices, tariffs, availability or rarity",
+      "Any automatic character-sheet modifiers"
+    ]
+  }
+}
