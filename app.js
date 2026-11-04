@@ -558,6 +558,22 @@ function handleHostStateChange() {
 
 function migrateLegacyHostState(state) {
   const copy = { ...(state || {}) };
+  const legacyHaqqFactionMap = {
+    "Haqqislam - Akbar Doctors": "Haqqislam - Sword of Allah",
+    "Haqqislam - Ghulam Doctors": "Haqqislam - Sword of Allah",
+    "Haqqislam - Janissaries": "Haqqislam - Sword of Allah",
+    "Haqqislam - Khawarij": "Haqqislam - Sword of Allah",
+    "Haqqislam - Fiday Impersonators": "Haqqislam - Hassassin Bahram",
+    "Haqqislam - Scholar-Physicians": "Haqqislam"
+  };
+  if (legacyHaqqFactionMap[copy.faction]) copy.faction = legacyHaqqFactionMap[copy.faction];
+  const legacyHaqqHomeworldMap = {
+    "Haqqislamite hospitals":"Bourak","Sword of Allah warfronts":"Bourak","Sword of Allah deployments":"Bourak",
+    "Sword of Allah heavy infantry formations":"Bourak","Sword of Allah academies":"Bourak","caravanserai garrisons":"Caravanserai",
+    "Hassassin safehouses":"Alamut","Human Sphere covert networks":"Alamut","enemy command zones":"Alamut",
+    "covert mission sites":"Alamut","Bourak universities":"Bourak","bimaristans":"Bourak","research centres":"Bourak"
+  };
+  if (legacyHaqqHomeworldMap[copy.homeworld]) copy.homeworld = legacyHaqqHomeworldMap[copy.homeworld];
   const legacyTraits = Array.isArray(copy.traits) ? copy.traits.map(resolveLegacyTraitTalentName) : [];
   if (!copy.hostHeritage) {
     if (legacyTraits.includes("Wulver")) copy.hostHeritage = "Wulver";
@@ -1296,9 +1312,11 @@ function applyState(rawState) {
     const el = document.querySelector(`select[data-weapon-select="${i}"]`);
     if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
   });
+  const legacyEquipmentAliases = {"360* Visor":"360° Visor"};
   (state.equipment || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-equipment-select="${i}"]`);
-    if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+    const resolved = legacyEquipmentAliases[v] || v;
+    if (el) { el.value = resolved; el.dispatchEvent(new Event("change")); }
   });
   (state.conditions || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-condition-select="${i}"]`);
@@ -1609,9 +1627,13 @@ function setArmourValue(value) {
   }
 }
 
-function updateArmourStatus(value, itemName = "") {
+function updateArmourStatus(value, itemName = "", manualSourceArmour = false) {
   const status = document.getElementById("armourStatus");
   if (!status) return;
+  if (manualSourceArmour) {
+    status.textContent = `Armour: manual source profile — ${itemName}. This armour uses location-based source soak and is not converted automatically to the custom 5/10/15 Armour track.`;
+    return;
+  }
   status.textContent = value > 0
     ? `Armour: ${value} — auto-calculated from ${itemName || "equipped armour"}.`
     : "Armour: 0 — no armour equipment selected.";
@@ -1638,6 +1660,7 @@ function clearEditableNotes() {
 
 function armourValueForItem(item) {
   if (!item || !/armor|armour/i.test(`${item.type || ""} ${item.name || ""}`)) return 0;
+  if (item.armourAutomation === false) return 0;
   const weight = String(item.weight || "").toLowerCase();
   const name = String(item.name || "").toLowerCase();
   if (weight.includes("heavy") || name.includes("heavy") || name.includes("powered") || name.includes("exo")) return 15;
@@ -1652,6 +1675,7 @@ function applyArmourFromEquipment() {
 
   let armourItem = null;
   let armourValue = 0;
+  const manualSourceArmour = selectedEquipment.find(item => item.armourAutomation === false && /armor|armour/i.test(`${item.type || ""} ${item.name || ""}`)) || null;
   selectedEquipment.forEach(item => {
     const value = armourValueForItem(item);
     if (value > armourValue) {
@@ -1661,7 +1685,7 @@ function applyArmourFromEquipment() {
   });
 
   setArmourValue(armourValue);
-  updateArmourStatus(armourValue, armourItem?.name || "");
+  updateArmourStatus(armourValue, armourItem?.name || manualSourceArmour?.name || "", Boolean(manualSourceArmour && armourValue === 0));
 }
 
 function setWeaponsAndEquipment(weapons = [], equipment = []) {
@@ -1860,7 +1884,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v66-dogface-automation",
+    build: "v67-haqqislam-source",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -2377,7 +2401,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v66-dogface-automation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v67-haqqislam-source")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -3739,6 +3763,7 @@ function buildMobilePortfolioPdfPages() {
 const GLOSSARY_CATEGORIES = [
   "All",
   "Rules Terms",
+  "Source References",
   "Traits",
   "Talents",
   "Careers",
@@ -3937,8 +3962,9 @@ function traitGlossaryText(t) {
   const brief = t.brief ? `Character-sheet meaning: ${t.brief}` : "Character-sheet meaning: This Trait marks a recurring strength, training history, reputation, or survival instinct connected to the listed skills.";
   const effect = t.effect ? `Rule effect: ${t.effect}` : "";
   const eligibility = restrictionLoreText(t.restriction);
+  const source = t.source && t.sourcePage ? `Source: ${t.source}, p. ${t.sourcePage}.` : "";
   const opening = hook || `${name} reflects a recognisable habit, reputation, or way of surviving that other people in the setting can notice and remember.`;
-  return [opening, category, skillLine, brief, effect, eligibility].filter(Boolean).join("\n\n");
+  return [opening, category, skillLine, brief, effect, eligibility, source].filter(Boolean).join("\n\n");
 }
 
 function talentGlossaryText(t) {
@@ -3976,12 +4002,19 @@ function careerGlossaryText(name, relatedTalents, relatedFactions) {
   // ARIADNA_SOURCE_CAREER_PROFILE_GLOSSARY
   const sourceProfile = DATA.careerProfiles?.[name] || null;
   if (sourceProfile?.brief) lines.push(`Source profile: ${sourceProfile.brief}`);
+  if (sourceProfile?.attributeBonuses) {
+    const labels = {Agility:"AGI",Awareness:"AWA",Brawn:"BRW",Coordination:"COO",Intelligence:"INT",Personality:"PER",Willpower:"WIL"};
+    const mods = Object.entries(sourceProfile.attributeBonuses).map(([name,value]) => `${labels[name] || name} ${Number(value) > 0 ? "+" : ""}${value}`);
+    lines.push(`Attribute modifiers: ${mods.join(", ")}.`);
+  }
   if (sourceProfile?.mandatorySkills?.length) lines.push(`Mandatory skills: ${sourceProfile.mandatorySkills.join(", ")}.`);
   if (sourceProfile?.electiveSkills?.length) lines.push(`Elective skills: ${sourceProfile.electiveSkills.join(", ")}.`);
   if (sourceProfile?.earnings) lines.push(`Source Earnings: ${sourceProfile.earnings}.`);
   if (sourceProfile?.gear?.length) lines.push(`Source career gear: ${sourceProfile.gear.join(", ")}.`);
   if (sourceProfile?.special) lines.push(`Source restriction / special: ${sourceProfile.special}`);
-  if (sourceProfile?.sourcePage) lines.push(`Source: Infinity RPG — Ariadna Supplement, p. ${sourceProfile.sourcePage}.`);
+  if (sourceProfile?.sourceNote) lines.push(`Source note: ${sourceProfile.sourceNote}`);
+  if (sourceProfile?.sourcePage) lines.push(`Source: ${sourceProfile.source || "Infinity RPG sourcebook"}, p. ${sourceProfile.sourcePage}.`);
+  (sourceProfile?.additionalSources || []).forEach(source => lines.push(`Additional source: ${source}.`));
   lines.push(`${name} is a Career identity, not only a job label. It tells players who trained the character, who might vouch for them, who might resent them, and what kind of trouble naturally follows them.`);
   lines.push(loreForCareerName(name));
   if (focus) lines.push(`Common tone and focus areas: ${focus}. Use these as prompts for roleplay, downtime contacts, mission complications, and how the character explains competence.`);
@@ -3999,6 +4032,7 @@ function factionGlossaryText(name, worlds, relatedTalents) {
 
   if (record?.subfaction) lines.push(record.subfaction);
   else lines.push(sourceGuidedFallback("Faction", name));
+  if (record?.source && record?.sourcePage) lines.push(`Source: ${record.source}, p. ${record.sourcePage}.`);
   if (record?.theme) lines.push(`Theme: ${record.theme}.`);
   const homeworldText = record?.homeworld || compactList(worlds, 20);
   if (homeworldText) lines.push(`Homeworlds / Habitats: ${homeworldText}.`);
@@ -4015,11 +4049,14 @@ function homeworldGlossaryText(name, factions) {
   const descriptions = factionRecords.map(record => record.subfaction).filter(Boolean).slice(0, 3);
   const linkedFactions = compactList(factions.length ? factions : factionRecords.map(record => record.faction), 18);
   const lines = [];
-  // ARIADNA_SOURCE_HOMEWORLD_GLOSSARY
-  const sourceHomeworld = DATA.ariadnaReference?.homelands?.[name] || null;
+  // Source-backed homeworld detail (Ariadna and Haqqislam).
+  const sourceHomeworld = DATA.ariadnaReference?.homelands?.[name] || DATA.haqqislamReference?.homelands?.[name] || null;
   if (sourceHomeworld) {
-    lines.push(`Ariadna source: ${sourceHomeworld.nation}. Languages: ${(sourceHomeworld.languages || []).join("; ")}.`);
-    if (sourceHomeworld.page) lines.push(`Source: Infinity RPG — Ariadna Supplement, p. ${sourceHomeworld.page}.`);
+    const sourceLabel = sourceHomeworld.source || (DATA.ariadnaReference?.homelands?.[name] ? "Infinity RPG — Ariadna Supplement" : DATA.haqqislamReference?.source || "Infinity RPG sourcebook");
+    const origin = sourceHomeworld.nation || sourceHomeworld.region || "";
+    if (origin) lines.push(`Source region: ${origin}.`);
+    if ((sourceHomeworld.languages || []).length) lines.push(`Languages: ${sourceHomeworld.languages.join("; ")}.`);
+    if (sourceHomeworld.page) lines.push(`Source: ${sourceLabel}, p. ${sourceHomeworld.page}.`);
   }
   lines.push(`${name} is a Homeworld / Habitat origin used to place a character within a faction, colony, ship, station, frontier, warfront, or specialist deployment.`);
   if (linkedFactions) lines.push(`Available through these Factions or subfactions: ${linkedFactions}.`);
@@ -4093,6 +4130,24 @@ function buildGlossaryEntries() {
     ["Condition", "Status", ["Temporary effect"], "Conditions represent temporary battlefield, physical, mental, environmental, or equipment-related effects tracked during play."]
   ];
   ruleTerms.forEach(([name, tag, meta, text]) => entries.push(glossaryEntry("Rules Terms", name, tag, meta, text)));
+
+  const haqq = DATA.haqqislamReference;
+  if (haqq) {
+    const statusText = (haqq.socialStatus || []).map(row => `${row.roll}: ${row.status} — ${row.attribute}, Earnings ${row.earnings}`).join("; ");
+    entries.push(glossaryEntry("Source References","Haqqislam Faction Social Status Table","Haqqislam Reference",[`Source: ${haqq.source}, p. 76`],statusText,statusText));
+    const mustaslahaText = [...(haqq.alMustaslaha || []).map(row => `${row.roll}: ${row.origin} — ${row.attribute}`),haqq.alMustaslahaRules].filter(Boolean).join("; ");
+    entries.push(glossaryEntry("Source References","Al-Mustaslaha","Haqqislam Reference",[`Source: ${haqq.source}, p. 76`],mustaslahaText,mustaslahaText));
+    const adolescentText = (haqq.adolescentEvents || []).map(row => `${row.roll}. ${row.trait}: ${row.effect}`).join(" ");
+    entries.push(glossaryEntry("Source References","Haqqislam Adolescent Event Table","Haqqislam Reference",[`Source: ${haqq.source}, p. 78`],adolescentText,adolescentText));
+    const careersText = (haqq.careerTable || []).map(row => `${row.range}: ${row.career}${row.flags?.length ? ` [${row.flags.join(", ")}]` : ""}`).join("; ");
+    entries.push(glossaryEntry("Source References","Expanded Haqqislamite Faction Career Table","Haqqislam Reference",[`Source: ${haqq.source}, p. 79`],careersText,careersText));
+    const ordersText = (haqq.hassassinOrders || []).map(row => `${row.roll}. ${row.order} — Electives: ${row.electiveSkills.join(", ")}; Gear: ${row.gear.join(", ")}`).join(" ");
+    entries.push(glossaryEntry("Source References","Hassassin Orders Table","Haqqislam Reference",[`Source: ${haqq.source}, p. 83`],ordersText,ordersText));
+    if ((haqq.normalizationNotes || []).length) {
+      const noteText = haqq.normalizationNotes.join(" ");
+      entries.push(glossaryEntry("Source References","Haqqislam Source Normalisation Notes","Haqqislam Reference",[haqq.source],noteText,noteText));
+    }
+  }
 
   glossarySort(DATA.traits || []).forEach(t => {
     entries.push(glossaryEntry(
@@ -4290,7 +4345,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v66-dogface-automation";
+  document.documentElement.dataset.infinityBuild = "v67-haqqislam-source";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
