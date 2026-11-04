@@ -1,0 +1,79 @@
+{
+  "build": "v73-o12-source-reconciliation",
+  "completed": "2026-11-04",
+  "source": {
+    "title": "Infinity RPG — O-12 Sourcebook",
+    "file": "MUH050220 O-12_Final PDF 061221.pdf",
+    "product": "MUH050220",
+    "driveUrl": "https://drive.google.com/file/d/13CGmBwyuyJJLRiCMtvxGNWac2kshjeVP/view",
+    "chapters": {
+      "faction": 3,
+      "conciliumPrima": 12,
+      "conciliumSystem": 26,
+      "embassies": 32,
+      "fieldOffices": 48,
+      "bureauAegis": 54,
+      "pillarsAndReputation": 64,
+      "bureauNoir": 72,
+      "characters": 83,
+      "gear": 93,
+      "adversaries": 103
+    }
+  },
+  "counts": {
+    "careers": 12,
+    "newProfiles": 6,
+    "adolescentEvents": 20,
+    "careerEvents": 20,
+    "analystBureaus": 12,
+    "aegisUnits": 9,
+    "pillars": 5,
+    "sourceGear": 31,
+    "gearAdded": 30,
+    "gearEnriched": 1
+  },
+  "features": [
+    "O-12-specific career filtering for main and O-12 subfactions",
+    "Six new career profiles and source attribute/skill/gear metadata",
+    "Analyst Bureau and Aegis Unit dependent dropdowns, with Beta Criminal Record note",
+    "Optional O-12 Pillar and Historical Ties controls, included in autosave/XML/print",
+    "Source routing and 20 adolescent plus 20 career events",
+    "31 source Chapter 10 gear records; nonweapon and vehicle classifications, restrictions and costs",
+    "Starmada affiliation and source-linked Concilium locations; older O-12 subfactions preserved",
+    "Existing V72 faction logic and standalone/embedded scripts preserved"
+  ],
+  "sourceExceptions": [
+    "Printed O-12 Faction Career Table is headed D6 despite result ranges 1–20; use d20 results.",
+    "Bureau Analyst text references Aegis Unit Table, but has its own adjacent Bureau Analyst Table; use dedicated Analyst table.",
+    "Printed 'Medical' electives for Bureau Lakshmi and Aegis Lambda normalised to sheet skill Medicine.",
+    "Feuerbach is enriched under legacy weapon name Feuerbach (BS) to preserve saved items.",
+    "Ground Spikes and Prisoner Habitation are in narrative entries rather than final gear tables.",
+    "Source's locational Armour Soak stays descriptive, not auto-converted to custom Armour tiers.",
+    "Other Human Sphere origin is a user-interface convenience, not a named place in source.",
+    "Career profile attribute boosts, Life Point costs, faction allegiance, and random effects remain reference, not silent changes."
+  ],
+  "validation": {
+    "status": "PASS",
+    "checks": [
+      "data.js parses",
+      "app.js parses",
+      "embedded HTML matches standalone app and data",
+      "v73 build marker",
+      "O-12 has 12 source careers",
+      "O-12 subfaction career filter excludes unrelated Nomad/Uplift careers",
+      "Bureau Analyst displays 12 source Bureaus including Noir",
+      "Aegis Specialist displays 9 source units including Beta",
+      "Pillar source option and event-dependent controls",
+      "Non-O12 hides dependent assignment/Pillar",
+      "Joint O-12/Nomads Circular Crew not accidentally treated as O12 source career",
+      "20 adolescent/20 career events",
+      "31 O-12 gear",
+      "valid equipment taxonomy and no duplicate names",
+      "locational armour not auto tier-assigned",
+      "vehicles/facility gear not selectable as personal kit",
+      "5 Weapon / 10 Equipment slots remain",
+      "custom skill group/Focus logic remains",
+      "V72 ALEPH/Nomad/PanO reference data preserved"
+    ]
+  }
+}
