@@ -1,0 +1,64 @@
+{
+  "build": "v70-panoceania-source-reconciliation",
+  "purpose": "Source reconciliation for PanOceania using MUH050224 Infinity RPG - PanOceania Faction Book.pdf from the user's linked Google Drive folder.",
+  "source": {
+    "file": "MUH050224 Infinity RPG - PanOceania Faction Book.pdf",
+    "product": "MUH050224",
+    "label": "Infinity RPG — PanOceania Faction Book",
+    "chapters": {
+      "faction": 5,
+      "acontecimento": 15,
+      "neoterra": 31,
+      "varuna": 50,
+      "gear": 67,
+      "characters": 80,
+      "helots": 91,
+      "helotCharacters": 98
+    }
+  },
+  "changes": [
+    "Added panOceaniaReference with expanded homelands, social status, adolescent events, faction career table, career event routing/results, Military Orders, source career profiles, Helot Lifepath and normalisation notes.",
+    "Added 41 PanOceania Homeworld/Homeland choices across Acontecimento, Neoterra, Varuna, Paradiso, Human Edge, Svalarheima and Earth.",
+    "Added 16 source-backed PanOceanian faction careers and faction-aware Career filtering.",
+    "Added 16 PanO source career profiles with mandatory/elective skills, Earnings, gear and special rules where stated.",
+    "Added Helot as a PanOceania Host / Heritage option with AWA +1, PER +1, WIL -1, Life Point Cost 2 and source abilities/rules.",
+    "Added six combined Varuna/Sissolu Waters origin choices for Helot characters.",
+    "Added ten Helot career names to the sheet's career catalogue and constrained them through Helot Host / Heritage.",
+    "Removed Helots from the selectable Faction list while preserving the legacy source record for migration/reference.",
+    "Legacy saves using Faction=Helots now migrate to Faction=PanOceania and Host / Heritage=Helot.",
+    "Updated glossary Source References for PanO status, expanded homelands, adolescent events, careers, career events, Military Orders and Helot Lifepath.",
+    "Print identity now includes Host / Heritage for PanOceania when applicable.",
+    "Embedded data.js and app.js inside index.html were updated to exactly match the standalone files."
+  ],
+  "preservedHouseRules": [
+    "Main skills cannot use Focus.",
+    "Main-skill changes continue to propagate to dependent sub-skills.",
+    "5 Weapon slots and 10 Equipment slots retained.",
+    "Armour replaces Temporary HP.",
+    "Existing Ariadna Dogface/Wulver/Antipode automation retained.",
+    "Existing Haqqislam and Yu Jing source-career filtering retained.",
+    "Browser save/XML compatibility retained."
+  ],
+  "sourceNormalisation": [
+    "Persuasion in source text is represented as Persuade to match the sheet's skill name.",
+    "Neoterra table extraction shows 'Tecendur System'; chapter naming identifies Tencendur System, used by the sheet.",
+    "Varuna table extraction shows 'Hawaki Archipelago'; Chapter 4 naming identifies Hawaiki, used by the sheet.",
+    "The sheet combines Homeworld and Homeland in one field, so both broad worlds and source regional homelands are selectable."
+  ],
+  "validation": {
+    "appSyntax": "PASS",
+    "dataSyntax": "PASS",
+    "embeddedAppMatchesAppJs": true,
+    "embeddedDataMatchesDataJs": true,
+    "panoCareerCount": 16,
+    "panoOriginCount": 41,
+    "adolescentEventCount": 20,
+    "careerEventCount": 20,
+    "militaryOrderCount": 7,
+    "sourceCareerProfileCount": 16,
+    "helotSelectableFaction": false,
+    "helotHostAvailable": true,
+    "helotAllowedCareerCount": 26,
+    "helotOriginCount": 6
+  }
+}
