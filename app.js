@@ -315,14 +315,245 @@ function applyHostHeritageEffects({ recoverVigor = false } = {}) {
 
   updateHostHeritageStatus();
   updateSkillRatings();
+  updateDogfaceAutomationPanel();
+}
+
+const DOGFACE_HOST = "Dogface";
+const DOGFACE_HUMAN_FORM = "Human Form";
+const DOGFACE_WARRIOR_FORM = "Dog-Warrior Form";
+const DOGFACE_ARMOUR_AUTO = "Auto";
+const DOGFACE_ARMOUR_HUMAN = "Human-sized";
+const DOGFACE_ARMOUR_COMPATIBLE = "Dogface-compatible";
+
+function isDogfaceHost() {
+  return selectedHostHeritage() === DOGFACE_HOST;
+}
+
+function isDogWarriorForm() {
+  return isDogfaceHost() && selectedHostState() === DOGFACE_WARRIOR_FORM;
+}
+
+function dogfaceConfig() {
+  return DATA.hostHeritage?.options?.[DOGFACE_HOST] || {};
+}
+
+function dogfaceInnateWeaponName() {
+  return dogfaceConfig().innateWeapon || "Dogface Claws (CC)";
+}
+
+function dogfaceFatigueConditionName() {
+  return dogfaceConfig().fatigueCondition || "Fatigued";
+}
+
+function dogfaceSelectedArmourItems() {
+  return [...document.querySelectorAll("select[data-equipment-select]")]
+    .map(element => byName(DATA.equipment, element.value))
+    .filter(item => item && item.name && armourValueForItem(item) > 0);
+}
+
+function resolvedDogfaceArmourFit() {
+  const control = inputField("dogfaceArmourFit");
+  const selected = control?.value || DOGFACE_ARMOUR_AUTO;
+  if (selected === DOGFACE_ARMOUR_COMPATIBLE) return DOGFACE_ARMOUR_COMPATIBLE;
+  if (selected === DOGFACE_ARMOUR_HUMAN) return DOGFACE_ARMOUR_HUMAN;
+  const armourItems = dogfaceSelectedArmourItems();
+  return armourItems.length > 0 && armourItems.every(item => item.dogfaceCompatible === true)
+    ? DOGFACE_ARMOUR_COMPATIBLE
+    : DOGFACE_ARMOUR_HUMAN;
+}
+
+function ensureDogfaceClaws() {
+  if (!isDogfaceHost()) return true;
+  const weaponName = dogfaceInnateWeaponName();
+  const slots = [...document.querySelectorAll("select[data-weapon-select]")];
+  if (slots.some(slot => slot.value === weaponName)) return true;
+  const empty = slots.find(slot => !slot.value);
+  if (!empty) return false;
+  ensureSelectValue(empty, weaponName);
+  empty.dispatchEvent(new Event("change", { bubbles: true }));
+  return true;
+}
+
+function removeDogfaceClaws() {
+  const weaponName = dogfaceInnateWeaponName();
+  document.querySelectorAll("select[data-weapon-select]").forEach(slot => {
+    if (slot.value !== weaponName) return;
+    slot.value = "";
+    slot.dispatchEvent(new Event("change", { bubbles: true }));
+  });
+}
+
+function addDogfaceFatiguedCondition() {
+  const conditionName = dogfaceFatigueConditionName();
+  const slots = [...document.querySelectorAll("select[data-condition-select]")];
+  const empty = slots.find(slot => !slot.value);
+  if (!empty) return false;
+  ensureSelectValue(empty, conditionName);
+  empty.dispatchEvent(new Event("change", { bubbles: true }));
+  const note = document.querySelector(`input[data-condition-note="${empty.dataset.conditionSelect}"]`);
+  if (note && !note.value) note.value = "Dogface reversion";
+  return true;
+}
+
+function dogfaceArmourWarningText() {
+  if (!isDogWarriorForm()) return "";
+  const armourItems = dogfaceSelectedArmourItems();
+  if (!armourItems.length) return "Armour: none selected.";
+  if (resolvedDogfaceArmourFit() === DOGFACE_ARMOUR_COMPATIBLE) {
+    return "Armour fit: Dogface-compatible; transformation damage does not apply.";
+  }
+  const damage = dogfaceConfig().armourDamageOnTransform || "2+3§";
+  return `ARMOUR WARNING: ${armourItems.map(item => item.name).join(", ")} is treated as human-sized. On transformation apply ${damage} damage to the Dogface and mark the armour as needing repair.`;
+}
+
+function updateDogfaceAutomationPanel(message = "") {
+  const panel = document.getElementById("dogfaceAutomationPanel");
+  if (!panel) return;
+  const active = isDogfaceHost();
+  panel.hidden = !active;
+  if (!active) return;
+
+  const fit = inputField("dogfaceArmourFit");
+  if (fit && !fit.value) fit.value = DOGFACE_ARMOUR_AUTO;
+
+  const button = document.getElementById("dogfaceTransformBtn");
+  const warrior = isDogWarriorForm();
+  if (button) {
+    button.textContent = warrior ? "Revert to Human Form" : "Transform to Dog-Warrior";
+    button.dataset.state = warrior ? "warrior" : "human";
+  }
+
+  const summary = document.getElementById("dogfaceAutomationSummary");
+  if (!summary) return;
+  const clawPresent = [...document.querySelectorAll("select[data-weapon-select]")]
+    .some(slot => slot.value === dogfaceInnateWeaponName());
+  const base = warrior
+    ? "ACTIVE — +2 Agility, +2 Brawn, +1 Vigour soak; Vigour restored on entry; Scent +2d20; Monstrous; Snarling Beast (+2 Difficulty to non-intimidation Personality tests); Super-Jump. Reverting applies Fatigued."
+    : "HUMAN FORM — Scent +2d20. When a Wound is suffered, resolve Discipline D1; failure or voluntary failure transforms the Dogface.";
+  const clawText = clawPresent
+    ? " Innate Claws are present in the Weapons box."
+    : " No free Weapon slot is available for innate Claws; free a slot to let automation add them.";
+  const armourText = dogfaceArmourWarningText();
+  summary.textContent = [base + clawText, armourText, message].filter(Boolean).join(" ");
+}
+
+function syncDogfaceAutomation(options = {}) {
+  if (isDogfaceHost()) {
+    const clawsPlaced = ensureDogfaceClaws();
+    const message = options.message || (clawsPlaced ? "" : "Innate Claws could not be added because all five Weapon slots are occupied.");
+    updateDogfaceAutomationPanel(message);
+  } else {
+    removeDogfaceClaws();
+    updateDogfaceAutomationPanel("");
+  }
+}
+
+function setDogfaceForm(form) {
+  if (!isDogfaceHost()) return;
+  const select = inputField("hostState");
+  if (!select || select.value === form) return;
+  ensureSelectValue(select, form);
+  select.dispatchEvent(new Event("change", { bubbles: true }));
+}
+
+function handleDogfaceWoundChange() {
+  const wounds = inputField("wounds");
+  if (!wounds) return;
+  const current = Number.parseInt(wounds.value || "0", 10) || 0;
+  const previous = Number.parseInt(wounds.dataset.lastDogfaceWounds || String(current), 10) || 0;
+  wounds.dataset.lastDogfaceWounds = String(current);
+  if (!isDogfaceHost() || selectedHostState() !== DOGFACE_HUMAN_FORM || current <= previous) return;
+
+  for (let wound = previous + 1; wound <= current; wound += 1) {
+    if (selectedHostState() !== DOGFACE_HUMAN_FORM) break;
+    const succeeded = window.confirm(
+      `Dogface Wound trigger (${wound}/${current}): resolve ${dogfaceConfig().woundTransformTest || "Discipline D1"}.\n\nOK = test succeeds; remain in Human Form.\nCancel = failed test or voluntary failure; transform to Dog-Warrior.`
+    );
+    if (!succeeded) {
+      setDogfaceForm(DOGFACE_WARRIOR_FORM);
+      break;
+    }
+    updateDogfaceAutomationPanel("Wound trigger resolved: Discipline test succeeded; Human Form retained.");
+  }
+}
+
+function initDogfaceAutomation() {
+  const hostState = inputField("hostState");
+  if (!hostState || document.getElementById("dogfaceAutomationPanel")) return;
+
+  if (!document.getElementById("dogfaceAutomationStyles")) {
+    const style = document.createElement("style");
+    style.id = "dogfaceAutomationStyles";
+    style.textContent = `
+      #dogfaceAutomationPanel{grid-column:1/-1;border:1px solid #86a8bd;background:#eef7fb;padding:.7rem;border-radius:8px;margin-top:.35rem}
+      #dogfaceAutomationPanel[hidden]{display:none!important}
+      .dogface-automation-actions{display:flex;gap:.7rem;align-items:end;flex-wrap:wrap}
+      #dogfaceTransformBtn{font-weight:700;min-height:40px;padding:.55rem .8rem}
+      #dogfaceTransformBtn[data-state="warrior"]{outline:2px solid #8b1e1e}
+      .dogface-armour-fit{display:flex;flex-direction:column;gap:.25rem;min-width:210px}
+      #dogfaceAutomationSummary{margin-top:.55rem;font-size:.92rem;line-height:1.4}
+      @media (max-width:760px){.dogface-automation-actions{align-items:stretch}.dogface-armour-fit{min-width:100%}#dogfaceTransformBtn{width:100%}}
+    `;
+    document.head.appendChild(style);
+  }
+
+  const panel = document.createElement("div");
+  panel.id = "dogfaceAutomationPanel";
+  panel.hidden = true;
+  panel.innerHTML = `
+    <div class="dogface-automation-actions">
+      <button type="button" id="dogfaceTransformBtn">Transform to Dog-Warrior</button>
+      <label class="dogface-armour-fit"><span>Dogface Armour Fit</span>
+        <select data-field="dogfaceArmourFit">
+          <option value="Auto">Auto (from gear)</option>
+          <option value="Human-sized">Human-sized</option>
+          <option value="Dogface-compatible">Dogface-compatible</option>
+        </select>
+      </label>
+    </div>
+    <div id="dogfaceAutomationSummary" role="status" aria-live="polite"></div>
+  `;
+
+  const anchor = document.getElementById("hostStateLabel") || hostState.closest("label") || hostState.parentElement;
+  anchor.insertAdjacentElement("afterend", panel);
+
+  document.getElementById("dogfaceTransformBtn")?.addEventListener("click", () => {
+    setDogfaceForm(isDogWarriorForm() ? DOGFACE_HUMAN_FORM : DOGFACE_WARRIOR_FORM);
+  });
+  inputField("dogfaceArmourFit")?.addEventListener("change", () => updateDogfaceAutomationPanel());
+
+  const wounds = inputField("wounds");
+  if (wounds) {
+    wounds.dataset.lastDogfaceWounds = wounds.value || "0";
+    wounds.addEventListener("change", handleDogfaceWoundChange);
+  }
+
+  syncDogfaceAutomation();
 }
 
 function handleHostStateChange() {
   const select = inputField("hostState");
   const previous = select?.dataset.lastValue || "";
   const current = select?.value || "";
+  const wasDogWarrior = isDogfaceHost() && previous === DOGFACE_WARRIOR_FORM;
+  const isHumanNow = isDogfaceHost() && current === DOGFACE_HUMAN_FORM;
+  const enteringDogWarrior = isDogfaceHost() && current === DOGFACE_WARRIOR_FORM && previous !== DOGFACE_WARRIOR_FORM;
+
   applyHostHeritageEffects({ recoverVigor: Boolean(current && current !== previous) });
+
+  let message = "";
+  if (wasDogWarrior && isHumanNow) {
+    message = addDogfaceFatiguedCondition()
+      ? "Reversion complete: Fatigued was added to Conditions."
+      : "Reversion complete, but both Condition slots are full. Add Fatigued manually; multiple Fatigued conditions can stack.";
+  }
+  if (enteringDogWarrior) {
+    const warning = dogfaceArmourWarningText();
+    message = [message, warning].filter(Boolean).join(" ");
+  }
+
   if (select) select.dataset.lastValue = current;
+  syncDogfaceAutomation({ message });
 }
 
 function migrateLegacyHostState(state) {
@@ -562,6 +793,7 @@ function initLists() {
       refreshHomeworldChoices({ preserve: false });
       refreshRestrictionChoices();
       applyHostHeritageEffects({ recoverVigor: false });
+      syncDogfaceAutomation();
     });
   }
 
@@ -572,6 +804,7 @@ function initLists() {
       refreshHomeworldChoices({ preserve: true });
       refreshRestrictionChoices();
       applyHostHeritageEffects({ recoverVigor: false });
+      syncDogfaceAutomation();
     });
   }
 
@@ -935,7 +1168,10 @@ function buildItemTable(id, rows, type) {
       document.querySelector(`[data-${type}-weight="${i}"]`).textContent = e.weight || "";
       document.querySelector(`[data-${type}-rules="${i}"]`).textContent = e.mechanic || e.brief || "";
       document.querySelector(`[data-${type}-rarity="${i}"]`).textContent = e.rarity || "";
-      if (type === "equipment") applyArmourFromEquipment();
+      if (type === "equipment") {
+        applyArmourFromEquipment();
+        updateDogfaceAutomationPanel();
+      }
     });
   });
 }
@@ -1024,7 +1260,10 @@ function applyState(rawState) {
   refreshRestrictionChoices();
 
   const woundsField = inputField("wounds");
-  if (woundsField) woundsField.value = normalizeWounds(state.wounds);
+  if (woundsField) {
+    woundsField.value = normalizeWounds(state.wounds);
+    woundsField.dataset.lastDogfaceWounds = woundsField.value;
+  }
 
   Object.entries(state.mainSkills || {}).forEach(([k, v]) => {
     const el = document.querySelector(`select[data-main-skill="${k}"]`);
@@ -1083,6 +1322,7 @@ function applyState(rawState) {
   applyHostHeritageEffects({ recoverVigor: false });
   applyArmourFromEquipment();
   updateSkillRatings();
+  syncDogfaceAutomation();
 }
 
 const RANDOM_GIVEN_NAMES = ["Aster", "Badr", "Celia", "Dara", "Elias", "Farah", "Galen", "Hana", "Iris", "Juno", "Kade", "Lina"];
@@ -1620,7 +1860,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v65-host-heritage",
+    build: "v66-dogface-automation",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -2137,7 +2377,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v65-host-heritage")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v66-dogface-automation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -4050,7 +4290,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v65-host-heritage";
+  document.documentElement.dataset.infinityBuild = "v66-dogface-automation";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -4064,6 +4304,7 @@ document.addEventListener("DOMContentLoaded", () => {
   buildItemTable("equipmentTable", 10, "equipment");
   buildConditions();
   setDefaultTracks();
+  initDogfaceAutomation();
   resetStartingBonuses();
   clearFocusAllocations();
   sanitizeSkillRatingDisplays();
