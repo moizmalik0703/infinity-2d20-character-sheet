@@ -5493,13 +5493,34 @@ window.addEventListener("load", () => {
 })();
 
 
-/* V75 Technology Workshop — source-preserving foundation.
-   This version DOES NOT claim the standalone Technology of the Human Sphere sourcebook
-   was reconciled: that source is absent from the supplied/connected source collection.
-   All catalogue entries retain their existing source data; Quality and Modification
-   notes are player/GM records and never invent bonuses, costs or rules. */
+/* V76 Technology Workshop — official-preview reconciliation.
+   MUH050217 / ISBN 9781912200474 is now identified and its published chapter scope is
+   mapped from Modiphius' product description and the public sourcebook sample.
+   The complete sourcebook PDF is still absent from the supplied/connected source
+   collection, so exact tables, qualities, costs, attachments and modification mechanics
+   remain deliberately unimplemented. Existing V75 control IDs are retained for save and
+   UI compatibility; existing catalogue records keep their prior source data. */
 (function installTechnologyWorkshopV75() {
-  const BUILD = "v75-technology-workshop-foundation";
+  const BUILD = "v76-technology-preview-reconciliation";
+  const TECHNOLOGY_SOURCEBOOK = Object.freeze({
+    title: "Infinity: Technology of the Human Sphere",
+    productCode: "MUH050217",
+    isbn: "9781912200474",
+    sourceStatus: "Official product page + public sample; full PDF not supplied",
+    mechanicsVerified: false,
+    chapters: Object.freeze([
+      "1 — Human Sphere Technology",
+      "2 — Comfort and Style",
+      "3 — Augmented Reality, Virtual Property, and Infowar",
+      "4 — Infiltration and Security",
+      "5 — Mind and Body",
+      "6 — Survival and Labour",
+      "7 — Variant Weapons",
+      "8 — Attachments and Modifications",
+      "9 — Armour",
+      "10 — Manufacturing and Modding"
+    ])
+  });
   const MAX_TEXT = { quality: 120, modifications: 800, notes: 500 };
   const MAX_RECORDS = 15;
   const selected = id => document.getElementById(id);
@@ -5796,12 +5817,29 @@ window.addEventListener("load", () => {
     section.id="v75TechnologyWorkshop";section.className="panel no-print";
     const details=document.createElement("details");
     const heading=document.createElement("summary");
-    heading.textContent="Technology Workshop (V75) — infogear, medical, augmentations, equipment quality & modifications";
+    heading.textContent="Technology Workshop (V76) — MUH050217 preview reconciliation";
     details.appendChild(heading);
     const disclaimer=document.createElement("p");
     disclaimer.className="tech-v75-small";
-    disclaimer.textContent="Existing, previously sourced gear only. The standalone Technology of the Human Sphere sourcebook is not available in the supplied collection. Quality and modification fields are GM notes, not verified new bonuses, prices or slots.";
+    disclaimer.textContent=TECHNOLOGY_SOURCEBOOK.title+" ("+TECHNOLOGY_SOURCEBOOK.productCode+", ISBN "+TECHNOLOGY_SOURCEBOOK.isbn+") is now identified and its chapter scope is verified from the official/public preview. The complete sourcebook is still not in the supplied collection, so exact new gear tables, qualities, prices, attachments and modification mechanics are not yet imported.";
     details.appendChild(disclaimer);
+    const sourceScope=document.createElement("details");
+    sourceScope.className="tech-v75-source-scope";
+    const sourceScopeSummary=document.createElement("summary");
+    sourceScopeSummary.textContent="Verified sourcebook chapter map (scope only)";
+    sourceScope.appendChild(sourceScopeSummary);
+    const sourceScopeList=document.createElement("ol");
+    TECHNOLOGY_SOURCEBOOK.chapters.forEach(chapter=>{
+      const li=document.createElement("li");
+      li.textContent=chapter;
+      sourceScopeList.appendChild(li);
+    });
+    sourceScope.appendChild(sourceScopeList);
+    const sourceBoundary=document.createElement("p");
+    sourceBoundary.className="tech-v75-small";
+    sourceBoundary.textContent="These headings establish where later reconciliation belongs; they do not grant mechanics. V75 catalogue categories remain convenience indexes rather than official sourcebook categories.";
+    sourceScope.appendChild(sourceBoundary);
+    details.appendChild(sourceScope);
     const countsP=document.createElement("p");
     countsP.className="tech-v75-small";
     countsP.textContent="Indexed existing records: "+entries.length+" total; "+counts.infogear+" infogear/quantronic, "+
@@ -5840,7 +5878,7 @@ window.addEventListener("load", () => {
     const status=document.createElement("p");status.id="v75TechStatus";status.setAttribute("role","status");status.className="tech-v75-small";
     details.appendChild(status);
     const note=document.createElement("p");note.className="tech-v75-small";
-    note.textContent="Gear quality and modifications do not automatically change skill ratings, damage, Soak, Armour, rarity, availability, loadout eligibility or credits. Existing source mechanics are unchanged; data is saved in browser/JSON/XML and summarised in gear print rows.";
+    note.textContent="Until the complete MUH050217 source is supplied, gear quality and modifications do not automatically change skill ratings, damage, Soak, Armour, rarity, availability, loadout eligibility or credits. Existing source mechanics are unchanged; annotations remain GM-reviewed records saved in browser/JSON/XML and summarised in gear print rows.";
     details.appendChild(note);
     section.appendChild(details);
     const anchor=table.closest(".table-wrap") || table;
@@ -5877,7 +5915,7 @@ window.addEventListener("load", () => {
     }
     filterCatalogue();
     renderSlots();
-    updateStatus("Ready. Edit quality/modification notes for an equipped item. Source effects must be entered and adjudicated by the GM.");
+    updateStatus("V76 preview map loaded. Existing gear is browsable; exact MUH050217 qualities, attachments, costs and modification rules remain pending the full sourcebook.");
   }
   window.INFINITY_BUILD=BUILD;
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initTechnologyWorkshop);
