@@ -4188,8 +4188,9 @@ function buildGlossaryEntries() {
     entries.push(glossaryEntry("Source References","Expanded Haqqislamite Faction Career Table","Haqqislam Reference",[`Source: ${haqq.source}, p. 79`],careersText,careersText));
     const ordersText = (haqq.hassassinOrders || []).map(row => `${row.roll}. ${row.order} — Electives: ${row.electiveSkills.join(", ")}; Gear: ${row.gear.join(", ")}`).join(" ");
     entries.push(glossaryEntry("Source References","Hassassin Orders Table","Haqqislam Reference",[`Source: ${haqq.source}, p. 83`],ordersText,ordersText));
-    if ((haqq.normalizationNotes || []).length) {
-      const noteText = haqq.normalizationNotes.join(" ");
+    const haqqNotes = [...(haqq.normalizationNotes || []), ...(haqq.sourceNotes || [])];
+    if (haqqNotes.length) {
+      const noteText = haqqNotes.join(" ");
       entries.push(glossaryEntry("Source References","Haqqislam Source Normalisation Notes","Haqqislam Reference",[haqq.source],noteText,noteText));
     }
   }
@@ -4222,8 +4223,17 @@ function buildGlossaryEntries() {
     ).join(" ");
     entries.push(glossaryEntry("Source References","Yu Jing Heritage Careers Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 89`],heritageCareerText,heritageCareerText));
 
+    const specialHeritageText = Object.entries(yuJing.lifepath?.specialHeritage || {}).map(([heritage,text]) => `${heritage}: ${text}`).join(" ");
+    if (specialHeritageText) entries.push(glossaryEntry("Source References","Yu Jing Special Heritage Events","Yu Jing Reference",[`Source: ${yuJing.source}, p. 85`],specialHeritageText,specialHeritageText));
+
+    const careerEventText = (yuJing.careerEventTable || []).map(row => `${row.roll}: ${row.result}`).join("; ");
+    if (careerEventText) entries.push(glossaryEntry("Source References","Yu Jing Career Event Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 88`],careerEventText,careerEventText));
+
     const japaneseCareerText = (yuJing.japaneseCareerTable || []).map(row => `${row.range}: ${row.career}${row.flags?.length ? ` [${row.flags.join(", ")}]` : ""}`).join("; ");
     entries.push(glossaryEntry("Source References","Japanese Career Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 90`],japaneseCareerText,japaneseCareerText));
+
+    const japaneseCareerEventText = (yuJing.japaneseCareerEventTable || []).map(row => `${row.roll}: ${row.result}`).join("; ");
+    if (japaneseCareerEventText) entries.push(glossaryEntry("Source References","Japanese Career Event Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 90`],japaneseCareerEventText,japaneseCareerEventText));
 
     const rankText = (yuJing.imperialRanks || []).map(row =>
       `${row.range}: ${row.rank}; free entry ${row.freeEntryStatus.join("/")}; electives ${row.electiveSkills.join(", ")}; gear ${row.gear.join(", ")}; Earnings ${row.earnings}.`
