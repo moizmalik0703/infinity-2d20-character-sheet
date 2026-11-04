@@ -28366,8 +28366,8 @@ function hostOptionsForFaction(faction) {
 
   // Antipodes use the broad Ariadna faction rather than a human national/service
   // subfaction. Dogface and Wulver can retain their Ariadnan national identity.
-  if (selected === "Ariadna") return configured.filter(value => value !== "Helot");
-  return configured.filter(value => value !== "Antipode" && value !== "Helot");
+  if (selected === "Ariadna") return configured.filter(value => value !== "Helot" && value !== "Uplift");
+  return configured.filter(value => value !== "Antipode" && value !== "Helot" && value !== "Uplift");
 }
 
 function hostHomeworldsForFaction(faction, host = selectedHostHeritage()) {
