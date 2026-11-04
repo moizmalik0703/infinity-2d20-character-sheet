@@ -4404,6 +4404,22 @@ function buildGlossaryEntries() {
       `${row.roll}: ${row.skill} [${row.talent}]`));
     reference("Uplift Species Career Tables", "p. 90", Object.entries(uplift.careerLists || {}).map(([k,v]) =>
       `${k}: ${v.join(", ")}`).join("; ") + ". " + (uplift.careerNotes || ""));
+
+    if (uplift.careerRollTables) {
+      reference("Uplift Species Career Rolls", "p. 90", Object.entries(uplift.careerRollTables).map(([species, table]) =>
+        `${species}: ${table.map(row => `${row.range} ${row.career}`).join("; ")}`).join(" | "));
+    }
+    reference("Uplift Career Events", "p. 91", rows(uplift.careerEvents, row => `${row.roll}. ${row.result} ${row.effect}`));
+    if (uplift.sourceDiscrepancies?.length) reference("Uplift Career Table Source Discrepancies", "p. 90", uplift.sourceDiscrepancies.join(" "));
+    if (nomads.socialEnergy) {
+      const ser = nomads.socialEnergy;
+      reference("Bakunin Social Energy (Optional)", "pp. 45–56", [ser.explanation, ...ser.rules,
+        ...Object.entries(ser.groups).map(([g, factions]) => `Group ${g}: ${factions.join(", ")}.`)].join(" "));
+      reference("Starting Social Energy Rank and Inertia", "p. 55",
+        `Rank: ${ser.rankRolls.map(row => `${row.rank} [A ${row.A}, B ${row.B}, C ${row.C}, D ${row.D}]`).join("; ")}.
+        Inertia: ${ser.inertiaRolls.map(row => `${row.inertia} [A ${row.A}, B ${row.B}, C ${row.C}, D ${row.D}]`).join("; ")}`);
+      reference("Social Energy Layers", "p. 54", ser.layers.map(x => `${x.name}: ${x.access}`).join("; "));
+    }
     if (nomads.doubleAgentRule) reference("Nomad Double Agents", "p. 60", nomads.doubleAgentRule);
     if ((nomads.sourceNotes||[]).length) reference("Nomads Source Normalisation Notes", "sourcebook", nomads.sourceNotes.join(" "));
   }
