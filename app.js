@@ -168,11 +168,27 @@ function hostHomeworldsForFaction(faction, host = selectedHostHeritage()) {
   return base;
 }
 
+function sourceCareerOptionsForFaction(faction, allCareers) {
+  const selected = String(faction || "").trim();
+  const sourceKey = selected.startsWith("Haqqislam") ? "Haqqislam"
+    : selected.startsWith("Yu Jing") ? "Yu Jing"
+    : "";
+  const configured = sourceKey ? DATA.careerOptionsByFaction?.[sourceKey] : null;
+  if (!Array.isArray(configured) || !configured.length) return null;
+  return sortNames(configured.filter(career => allCareers.includes(career)));
+}
+
 function hostCareerOptions() {
   const all = sortNames(DATA.lists.careerRoles || []).filter(value => value !== GENERAL_CAREER);
   const faction = inputField("faction")?.value || "";
   const host = selectedHostHeritage();
   const config = hostHeritageConfig(host);
+
+  // Haqqislam and Yu Jing use their faction-book career tables as the visible
+  // Career selector. General / Unrestricted remains available for house-rule
+  // characters, while legacy imports can still preserve an older career value.
+  const sourceCareers = sourceCareerOptionsForFaction(faction, all);
+  if (sourceCareers) return [GENERAL_CAREER, ...sourceCareers];
 
   if (!isAriadnaFaction(faction)) return [GENERAL_CAREER, ...all];
 
@@ -1926,7 +1942,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v68-haqq-yujing-integrity",
+    build: "v69-haqq-yujing-careers",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -2443,7 +2459,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v68-haqq-yujing-integrity")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v69-haqq-yujing-careers")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -4443,7 +4459,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v68-haqq-yujing-integrity";
+  document.documentElement.dataset.infinityBuild = "v69-haqq-yujing-careers";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
