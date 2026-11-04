@@ -1308,15 +1308,46 @@ function applyState(rawState) {
       el.dispatchEvent(new Event("change"));
     }
   });
+  const migratedWeaponEquipment = [];
+  const legacyWeaponToEquipment = {
+    "Fireflies Grenade (BS)": "Fireflies Grenade",
+    "Palad Khik (BS)": "Palad Khik Ammo"
+  };
   (state.weapons || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-weapon-select="${i}"]`);
+    const equipmentAlias = legacyWeaponToEquipment[v];
+    if (equipmentAlias) {
+      migratedWeaponEquipment.push({ value: equipmentAlias, oldValue: v, weaponIndex: i });
+      if (el) { el.value = ""; el.dispatchEvent(new Event("change")); }
+      return;
+    }
     if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
   });
-  const legacyEquipmentAliases = {"360* Visor":"360° Visor"};
-  (state.equipment || []).forEach((v, i) => {
+
+  const legacyEquipmentAliases = {
+    "360* Visor": "360° Visor",
+    "X Visor": "X-Visor"
+  };
+  const equipmentValues = (state.equipment || []).map(v => legacyEquipmentAliases[v] || v);
+  migratedWeaponEquipment.forEach(migration => {
+    if (equipmentValues.includes(migration.value)) return;
+    let emptyIndex = equipmentValues.findIndex(value => !value);
+    if (emptyIndex < 0 && equipmentValues.length < 10) emptyIndex = equipmentValues.length;
+    if (emptyIndex >= 0) {
+      equipmentValues[emptyIndex] = migration.value;
+      return;
+    }
+    // Preserve a full-loadout legacy save rather than silently losing the item.
+    const weaponEl = document.querySelector(`select[data-weapon-select="${migration.weaponIndex}"]`);
+    if (weaponEl) {
+      ensureSelectValue(weaponEl, migration.oldValue);
+      weaponEl.value = migration.oldValue;
+      weaponEl.dispatchEvent(new Event("change"));
+    }
+  });
+  equipmentValues.forEach((v, i) => {
     const el = document.querySelector(`select[data-equipment-select="${i}"]`);
-    const resolved = legacyEquipmentAliases[v] || v;
-    if (el) { el.value = resolved; el.dispatchEvent(new Event("change")); }
+    if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
   });
   (state.conditions || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-condition-select="${i}"]`);
@@ -1884,7 +1915,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v67-haqqislam-source",
+    build: "v68-haqq-yujing-integrity",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -2401,7 +2432,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v67-haqqislam-source")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v68-haqq-yujing-integrity")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -4032,7 +4063,8 @@ function factionGlossaryText(name, worlds, relatedTalents) {
 
   if (record?.subfaction) lines.push(record.subfaction);
   else lines.push(sourceGuidedFallback("Faction", name));
-  if (record?.source && record?.sourcePage) lines.push(`Source: ${record.source}, p. ${record.sourcePage}.`);
+  if (record?.source) lines.push(`Source: ${record.source}${record.sourcePage ? `, p. ${record.sourcePage}` : ""}.`);
+  if (record?.sourceNote) lines.push(`Source note: ${record.sourceNote}`);
   if (record?.theme) lines.push(`Theme: ${record.theme}.`);
   const homeworldText = record?.homeworld || compactList(worlds, 20);
   if (homeworldText) lines.push(`Homeworlds / Habitats: ${homeworldText}.`);
@@ -4050,11 +4082,13 @@ function homeworldGlossaryText(name, factions) {
   const linkedFactions = compactList(factions.length ? factions : factionRecords.map(record => record.faction), 18);
   const lines = [];
   // Source-backed homeworld detail (Ariadna and Haqqislam).
-  const sourceHomeworld = DATA.ariadnaReference?.homelands?.[name] || DATA.haqqislamReference?.homelands?.[name] || null;
+  const sourceHomeworld = DATA.ariadnaReference?.homelands?.[name] || DATA.haqqislamReference?.homelands?.[name] || DATA.yuJingSource?.homelands?.[name] || null;
   if (sourceHomeworld) {
     const sourceLabel = sourceHomeworld.source || (DATA.ariadnaReference?.homelands?.[name] ? "Infinity RPG — Ariadna Supplement" : DATA.haqqislamReference?.source || "Infinity RPG sourcebook");
     const origin = sourceHomeworld.nation || sourceHomeworld.region || "";
     if (origin) lines.push(`Source region: ${origin}.`);
+    if (sourceHomeworld.parentWorld && sourceHomeworld.parentWorld !== name) lines.push(`Yu Jing Lifepath parent world: ${sourceHomeworld.parentWorld}.`);
+    if (sourceHomeworld.selectionRole) lines.push(`Sheet origin role: ${sourceHomeworld.selectionRole}.`);
     if ((sourceHomeworld.languages || []).length) lines.push(`Languages: ${sourceHomeworld.languages.join("; ")}.`);
     if (sourceHomeworld.page) lines.push(`Source: ${sourceLabel}, p. ${sourceHomeworld.page}.`);
   }
@@ -4073,7 +4107,7 @@ function gearGlossaryText(item, kind) {
   if (item.mechanic) lines.push(`Rules: ${item.mechanic}`);
   // ARIADNA_SOURCE_GEAR_GLOSSARY
   if (item.sourceProfile) lines.push(`Source profile: ${item.sourceProfile}`);
-  if (item.source && item.sourcePage) lines.push(`Source: ${item.source}, p. ${item.sourcePage}.`);
+  if (item.source) lines.push(`Source: ${item.source}${item.sourcePage ? `, p. ${item.sourcePage}` : ""}.`);
   if (item.sourceRestriction) lines.push(`Source Restriction: ${item.sourceRestriction}.`);
   const traits = glossaryMetaLine([item.type, item.rarity, item.weight, item.cost ? `Cost ${item.cost}` : ""]);
   if (traits.length) lines.push(`Selection notes: ${traits.join("; ")}.`);
@@ -4149,6 +4183,49 @@ function buildGlossaryEntries() {
     }
   }
 
+  const yuJing = DATA.yuJingSource;
+  if (yuJing) {
+    const heritageColumns = yuJing.lifepath?.heritageHomeworlds || [];
+    const heritageText = Object.entries(yuJing.lifepath?.heritageTable || {}).map(([roll,values]) =>
+      `${roll}: ${values.map((value,index) => `${heritageColumns[index] || `Column ${index+1}`}: ${value}`).join("; ")}`
+    ).join(" ");
+    entries.push(glossaryEntry("Source References","Yu Jing Heritage Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 85`],heritageText,heritageText));
+
+    const statusColumns = yuJing.lifepath?.socialStatusColumns || [];
+    const statusText = Object.entries(yuJing.lifepath?.socialStatusTable || {}).map(([roll,values]) =>
+      `${roll}: ${values.map((value,index) => `${statusColumns[index] || `Column ${index+1}`}: ${value}`).join("; ")}`
+    ).join(" ");
+    entries.push(glossaryEntry("Source References","Yu Jing Social Status Table","Yu Jing Reference",[`Source: ${yuJing.source}, pp. 85–86`],statusText,statusText));
+
+    const classText = (yuJing.lifepath?.socialClasses || []).map(row => `${row.status}: +1 ${row.attribute}, Earnings ${row.earnings}`).join("; ");
+    entries.push(glossaryEntry("Source References","Yu Jing Social Class Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 85`],classText,classText));
+
+    const adolescentText = (yuJing.adolescentEvents || []).map(row => `${row.roll}. ${row.trait}: ${row.effect}`).join(" ");
+    entries.push(glossaryEntry("Source References","Yu Jing Adolescent Event Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 89`],adolescentText,adolescentText));
+
+    const careerText = (yuJing.careerTable || []).map(row => `${row.range}: ${row.career}${row.flags?.length ? ` [${row.flags.join(", ")}]` : ""}`).join("; ");
+    entries.push(glossaryEntry("Source References","Yu Jing Career Table","Yu Jing Reference",[`Source: ${yuJing.source}, pp. 88–89`],careerText,careerText));
+
+    const heritageCareerText = (yuJing.lifepath?.heritageCareers || []).map(row =>
+      `${row.heritage} — Recommended: ${row.recommended.join(", ")}. Prohibited: ${row.prohibited.join(", ")}.`
+    ).join(" ");
+    entries.push(glossaryEntry("Source References","Yu Jing Heritage Careers Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 89`],heritageCareerText,heritageCareerText));
+
+    const japaneseCareerText = (yuJing.japaneseCareerTable || []).map(row => `${row.range}: ${row.career}${row.flags?.length ? ` [${row.flags.join(", ")}]` : ""}`).join("; ");
+    entries.push(glossaryEntry("Source References","Japanese Career Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 90`],japaneseCareerText,japaneseCareerText));
+
+    const rankText = (yuJing.imperialRanks || []).map(row =>
+      `${row.range}: ${row.rank}; free entry ${row.freeEntryStatus.join("/")}; electives ${row.electiveSkills.join(", ")}; gear ${row.gear.join(", ")}; Earnings ${row.earnings}.`
+    ).join(" ");
+    entries.push(glossaryEntry("Source References","Imperial Ranks Table","Yu Jing Reference",[`Source: ${yuJing.source}, p. 93`],rankText,rankText));
+
+    if (yuJing.japaneseUprisingRule) {
+      entries.push(glossaryEntry("Source References","Japanese Uprising — Decision Nine","Yu Jing Reference",[`Source: ${yuJing.source}, p. 90`],yuJing.japaneseUprisingRule,yuJing.japaneseUprisingRule));
+    }
+    const normalisation = (yuJing.normalizationNotes || []).join(" ");
+    if (normalisation) entries.push(glossaryEntry("Source References","Yu Jing Source Normalisation Notes","Yu Jing Reference",[yuJing.source],normalisation,normalisation));
+  }
+
   glossarySort(DATA.traits || []).forEach(t => {
     entries.push(glossaryEntry(
       "Traits",
@@ -4222,7 +4299,7 @@ function buildGlossaryEntries() {
     ));
   });
 
-  glossarySort((DATA.equipment || []).filter(item => String(item.type || "").toLowerCase() === "weapon")).forEach(item => {
+  glossarySort((DATA.equipment || []).filter(item => !item.legacyAliasOnly && String(item.type || "").toLowerCase() === "weapon")).forEach(item => {
     entries.push(glossaryEntry(
       "Weapons",
       item.name,
@@ -4233,7 +4310,7 @@ function buildGlossaryEntries() {
     ));
   });
 
-  glossarySort((DATA.equipment || []).filter(item => String(item.type || "").toLowerCase() !== "weapon")).forEach(item => {
+  glossarySort((DATA.equipment || []).filter(item => !item.legacyAliasOnly && String(item.type || "").toLowerCase() !== "weapon")).forEach(item => {
     entries.push(glossaryEntry(
       "Equipment",
       item.name,
@@ -4345,7 +4422,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v67-haqqislam-source";
+  document.documentElement.dataset.infinityBuild = "v68-haqq-yujing-integrity";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
