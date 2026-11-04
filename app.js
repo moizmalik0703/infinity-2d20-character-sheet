@@ -5525,9 +5525,9 @@ window.addEventListener("load", () => {
     if (/^modification$|upgrade$/.test(t) || /\bmodification\b|\bupgrade\b/.test(name) ||
         /program upgrade|vehicle upgrade|hacking upgrade/.test(t)) return "modification";
     if (t === "augmentation" || category === "augmentation" ||
-        /neural implant|cybernetic implant|biograft implant/.test(subtype)) return "augmentation";
-    if (/medical|automedikit|medical facility/.test(t) || /medical|surgical|medical nanites/.test(subtype) ||
-        /^(medikit|health kit|automedikit|nannies|nannie-pump|akbar kit)$/i.test(item?.name || "")) return "medical";
+        /neural implant|cybernetic implant|biograft implant|augmentation kit/.test(subtype)) return "augmentation";
+    if (/medical|automedikit|medical facility/.test(t) || /medical|surgical|medical nanites|first aid kit|recovery kit/.test(subtype) ||
+        /^(medikit|health kit|automedikit|nannies|nannie-pump|akbar kit|surgical bay|surgical waldo x|psychoanalysis suite|bioscanner|social care kit)$/i.test(item?.name || "")) return "medical";
     if (/program|hacking|comlog|geist|data storage|holographic|credential|repeater|recorder|scanner|sensor|visor|signal gear|quantronic/.test(t + " " + subtype) ||
         /infowar|data storage|network|quantronic/.test(subtype) || /^comm(s|log)\b/.test(name)) return "infogear";
     return "other";
