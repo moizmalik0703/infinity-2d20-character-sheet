@@ -71,7 +71,33 @@
       "Ariadna Dogface code retained",
       "PanO Helot code retained",
       "Custom main-skill / Focus rules retained",
-      "Custom gear slot limits remain 5/10"
+      "Custom gear slot limits remain 5/10",
+      "All 42 ALEPH gear records remain unique; 11 corrected entries retain source provenance",
+      "Smart Taxi broad category in valid taxonomy and loadoutEligible=false",
+      "Second Skin is a disguise drug, not armour",
+      "Embedded updated data matches standalone data"
+    ]
+  },
+  "precisionCorrections": {
+    "date": "2026-11-04",
+    "gearRecordsUpdated": [
+      "Recreation Garb",
+      "Sophotect Armour",
+      "Second Skin",
+      "XOFF",
+      "Nannie-Pump",
+      "Nannies",
+      "Li-Turing Kit",
+      "Paragon Lhost",
+      "Proxy Mk.0 i-Lhost",
+      "Resurrection Cake",
+      "Smart Taxi"
+    ],
+    "notes": [
+      "Detailed source rules added for Recreation Garb, Sophotect Armour, Second Skin, XOFF, Nannie-Pump, Nannies, Li-Turing Kit, Paragon Lhost, Proxy Mk.0, Resurrection Cake and Smart Taxi.",
+      "Source effect for Second Skin explicitly disclaims obsolete armour equivalence.",
+      "Smart Taxi reclassified under allowed broad category Other Item, with Vehicle type and non-loadout-eligible status.",
+      "No change to build version, career/filter code, saved-state format or other faction gear."
     ]
   }
 }
