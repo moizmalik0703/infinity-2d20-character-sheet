@@ -37900,7 +37900,29 @@ window.addEventListener("load", () => {
   const el = id => document.getElementById(id);
   const chosen = id => el(id)?.value || "";
   const integer = n => Math.max(0, Math.floor(number(n)));
-  const careerRecord = name => careerSources[name] || DATA.careerProfiles?.[name] || null;
+  // Corebook pp.61–69: the six inherited O-12 careers have first-phase attributes.
+  const coreAttributes = {
+    "Special Forces": [2,2,2,1,1,0,2],
+    "Intelligence Operative": [1,3,0,2,2,1,1],
+    "Politician": [1,2,0,2,2,2,1],
+    "Diplomat": [1,2,0,2,2,2,1],
+    "Bureau Toth Agent": [1,2,0,1,2,2,2],
+    "Field Scientist": [1,2,1,2,3,1,0]
+  };
+  const inheritedFieldScientist = {
+    source:"Infinity RPG Corebook", sourcePage:63,
+    mandatorySkills:["Science","Education","Survival"],
+    electiveSkills:["Observation","Tech","Athletics"],
+    earnings:"2+1§", gear:["Analytical Kit","Survival Kit","Sensor Suite ×3"]
+  };
+  const careerRecord = name => {
+    const profile = careerSources[name] || DATA.careerProfiles?.[name] ||
+      (name === "Field Scientist" ? inheritedFieldScientist : null);
+    if (!profile) return null;
+    if (!coreAttributes[name]) return profile;
+    const keys = ["Agility","Awareness","Brawn","Coordination","Intelligence","Personality","Willpower"];
+    return {...profile,attributeBonuses:Object.fromEntries(keys.map((key,i)=>[key,coreAttributes[name][i]]))};
+  };
   const pick = list => list[Math.floor(Math.random() * list.length)];
   const r20 = () => Math.floor(Math.random() * 20) + 1;
   const rollRange = value => {
@@ -37956,7 +37978,7 @@ window.addEventListener("load", () => {
     if (a === 2) { main.Personality = (main.Personality || 0) - 1; main.Brawn = (main.Brawn || 0) + 1; }
     if (a === 4 && ledger.adolescent?.choice === "accept") addSkill("Discipline");
     if (a === 5 || a === 15) addSkill("Observation");
-    if (a === 7) vigor -= 1;
+    if (a === 7) vigor -= 1; // Ledger only: current HP track is not reset.
     if (a === 9) addSkill("Stealth");
     if (a === 14) addSkill("Animal Handling");
     if (a === 16) addSkill("Education");
@@ -38205,7 +38227,7 @@ window.addEventListener("load", () => {
     const signature=chosen("v74Signature");
     const prior=(ledger.phases || []).map(p=>p.signature).filter(Boolean);
     const validSignature=[...(profile.mandatorySkills||[]),elective1,elective2];
-    if (signature && (!validSignature.includes(signature) || prior.includes(signature) || prior.length>=3)) {
+    if ((!signature && prior.length < 3) || (signature && (!validSignature.includes(signature) || prior.includes(signature) || prior.length>=3))) {
       notice="Signature skill must be a new mandatory/chosen elective; a character may have no more than three.";renderV74();return;
     }
     const ev=integer(chosen("v74CareerEvent"));
