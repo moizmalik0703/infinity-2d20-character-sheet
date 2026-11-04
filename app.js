@@ -5678,21 +5678,30 @@ window.addEventListener("load", () => {
     if(desc) desc.textContent=item ? "Editing "+item+". Notes are bound to this exact slot AND item name; changing the gear entry clears its annotations." :
       "Select an equipped weapon or item above. Quality/modification text is GM-entered and does not change calculated bonuses.";
   }
-  function storeCurrent() {
+  function storeCurrent(event) {
     const key = selected("v75SlotChoice")?.value || "";
     if (!validSlot(key)) return;
     const item = currentItem(key);
     if (!item) return;
-    const r=normalizeRecord({
+    const old = records[key];
+    const editedByText = event?.target?.id !== "v75Approved";
+    const proposed = {
       item,
       quality:selected("v75Quality")?.value || "",
       modifications:selected("v75Modification")?.value || "",
       notes:selected("v75TechNotes")?.value || "",
       approved:!!selected("v75Approved")?.checked
-    });
+    };
+    if (editedByText && old?.approved &&
+      (old.quality !== proposed.quality || old.modifications !== proposed.modifications || old.notes !== proposed.notes)) {
+      proposed.approved = false;
+      if (selected("v75Approved")) selected("v75Approved").checked = false;
+    }
+    const r=normalizeRecord(proposed);
     if (r) records[key]=r; else delete records[key];
-    updateStatus(r ? "Technology annotation saved in the current character. No mechanical modifiers applied." :
-      "Technology annotation cleared.");
+    updateStatus(r ? "Technology annotation saved. "+
+      (editedByText && old?.approved && !r.approved ? "Previous GM check reset after edits. " : "")+
+      "No mechanical modifiers applied." : "Technology annotation cleared.");
   }
   function addCatalogueEntry() {
     const item=entryOf(browserEntry);
