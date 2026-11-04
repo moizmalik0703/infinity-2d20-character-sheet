@@ -1,0 +1,51 @@
+{
+  "build": "v66-dogface-automation",
+  "purpose": "Complete the Dogface automation pass on top of V65 Host / Heritage support.",
+  "source": {
+    "playableDogface": "Infinity RPG Corebook p.41 and Ariadna Host / Heritage data already integrated in V65",
+    "condition": "Infinity RPG Corebook p.104 (Fatigued)"
+  },
+  "changes": [
+    "Adds a Dogface-only Transform / Revert control beside Host / Heritage.",
+    "Keeps Current Form as the persisted source of truth, so browser saves and XML remain compatible.",
+    "Automatically adds innate Dogface Claws to the first free Weapon slot and removes them when Host / Heritage is no longer Dogface.",
+    "Adds the missing Fatigued condition to the master condition data and selectable condition list.",
+    "On reversion from Dog-Warrior to Human Form, automatically adds one Fatigued instance to the first free Condition slot.",
+    "When Wounds increase while a Dogface is in Human Form, prompts the player to resolve Discipline D1; a failed or voluntarily failed check transforms the character.",
+    "Dog-Warrior entry continues to restore Vigour and apply +2 Agility, +2 Brawn and +1 Vigour soak through the V65 Host modifier system.",
+    "Adds Dogface Armour Fit: Auto / Human-sized / Dogface-compatible. Auto recognises Dog-Bowl armour as compatible.",
+    "Human-sized armour in Dog-Warrior form generates the source 2+3§ transformation damage / repair warning instead of silently ignoring the rule.",
+    "Adds active form reminders for Scent, Monstrous, Snarling Beast and Super-Jump.",
+    "Synchronises app.js, data.js and the embedded single-file index.html deployment payload."
+  ],
+  "compatibility": {
+    "mainSkillsNoFocus": true,
+    "mainSkillPropagationPreserved": true,
+    "weaponSlots": 5,
+    "equipmentSlots": 10,
+    "browserSave": true,
+    "xmlImportExport": true,
+    "legacyV65Saves": true,
+    "wulverAntipodeBehaviourPreserved": true
+  },
+  "automationLimits": [
+    "The sheet does not roll the Discipline D1 test; it prompts the player to resolve it and records the chosen outcome.",
+    "The sheet does not roll 2+3§ armour-transformation damage; it displays an explicit warning and repair requirement.",
+    "The sheet has two Condition slots. If both are occupied when a Dogface reverts, it warns the player to record Fatigued manually.",
+    "Vigour soak is surfaced as an active Host modifier because the sheet has no separate damage-resolution engine."
+  ],
+  "validation": {
+    "appSyntax": "PASS",
+    "dataSyntax": "PASS",
+    "embeddedDataMatchesDataJs": true,
+    "inlineAppMatchesAppJs": true,
+    "oldBuildMarkerAbsent": true,
+    "dogfaceClawsMasterCount": 1,
+    "dogfaceClawsWeaponListCount": 1,
+    "fatiguedMasterCount": 1,
+    "fatiguedConditionListCount": 1,
+    "dogBowlCompatibleFlag": true,
+    "duplicateEquipment": [],
+    "duplicateConditions": []
+  }
+}
