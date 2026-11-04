@@ -37888,7 +37888,7 @@ window.addEventListener("load", () => {
   const NEW_BUILD = "v74-o12-character-creation-automation";
   const careerSources = DATA.o12Reference?.careerProfiles || {};
   const o12Source = DATA.o12Reference || {};
-  const defaultLedger = () => ({ version: 74, lifePoints: 5, otherSpent: 0, phases: [], adolescent: null, pillar: null });
+  const defaultLedger = () => ({ version: 74, lifePoints: 5, otherSpent: 0, phases: [], adolescent: null, pillar: null, criminalRecord: false });
   let ledger = defaultLedger();
   let rolledBureau = "";
   let rolledCareer = "";
@@ -37934,8 +37934,8 @@ window.addEventListener("load", () => {
     return n >= low && n <= high;
   }) || null;
   const isO12 = () => isO12Faction(inputField("faction")?.value || "");
-  const hasCriminalRecord = () => selectedTraitObjects().some(t => t.name === "Criminal Record") ||
-    /criminal record/i.test(String(inputField("lifepathSecret")?.value || ""));
+  // The sheet does not have a selectable Criminal Record Trait: use explicit source status.
+  const hasCriminalRecord = () => !!ledger.criminalRecord;
   const assignmentRows = career => career === "Bureau Analyst"
     ? (o12Source.bureauAnalystTable || []).filter(r => !/^Choose/.test(r.name))
     : career === "Bureau Aegis Specialist"
@@ -38040,12 +38040,14 @@ window.addEventListener("load", () => {
     const out = defaultLedger();
     out.lifePoints = Math.min(20, integer(obj.lifePoints ?? 5));
     out.otherSpent = Math.min(20, integer(obj.otherSpent));
+    out.criminalRecord = obj.criminalRecord === true || obj.criminalRecord === "true";
     out.phases = Array.isArray(obj.phases) ? obj.phases.slice(0, 4).filter(p => p && typeof p === "object").map(p => ({
       career: String(p.career || ""), assignment: String(p.assignment || ""),
       assignmentMethod: String(p.assignmentMethod || ""), careerMethod: String(p.careerMethod || ""),
       electives: Array.isArray(p.electives) ? p.electives.slice(0, 2).map(String) : [],
       signature: String(p.signature || ""), event: integer(p.event), eventChoice: String(p.eventChoice || ""),
       eventMethod: String(p.eventMethod || ""), ageYears: integer(p.ageYears),
+      criminalRecordBefore: p.criminalRecordBefore === true || p.criminalRecordBefore === "true",
       granted: Array.isArray(p.granted) ? p.granted : [],
       unresolvedGear: Array.isArray(p.unresolvedGear) ? p.unresolvedGear : []
     })) : [];
@@ -38146,7 +38148,8 @@ window.addEventListener("load", () => {
     if (el("v74LifePoints") && document.activeElement !== el("v74LifePoints")) el("v74LifePoints").value = ledger.lifePoints;
     if (el("v74OtherSpent") && document.activeElement !== el("v74OtherSpent")) el("v74OtherSpent").value = ledger.otherSpent;
     refreshCareerEditor();
-    el("v74Status").textContent = v74SummaryLine();
+    if(el("v74CriminalRecord") && document.activeElement!==el("v74CriminalRecord"))el("v74CriminalRecord").checked=!!ledger.criminalRecord;
+    el("v74Status").textContent = v74SummaryLine() + (ledger.criminalRecord ? " · Criminal Record: ACTIVE" : "");
     el("v74Ledger").textContent = (ledger.phases || []).map((p,i)=>"Phase "+(i+1)+": "+p.career+
       (p.assignment ? " / "+p.assignment : "")+"; electives "+p.electives.join(" + ")+
       (p.signature ? "; signature "+p.signature : "")+(p.event ? "; event "+p.event : "")+
@@ -38250,11 +38253,14 @@ window.addEventListener("load", () => {
     if(!enoughLP(nextCost))return;
     const gearList=[...(profile.gear||[]),...(assignedRow?.gear||[])];
     const gear=grantGear(gearList);
-    ledger.phases.push({career,assignment,assignmentMethod:assignMethod,careerMethod,electives:[elective1,elective2],
+    const criminalRecordBefore=career==="Bureau Aegis Specialist" && hasCriminalRecord() && assignment==="Beta";
+    ledger.phases.push({career,assignment,assignmentMethod:assignMethod,careerMethod,criminalRecordBefore,electives:[elective1,elective2],
       signature,event:ev,eventChoice:evChoice,eventMethod:evMethod,ageYears:Math.floor(Math.random()*6)+2,
       granted:gear.granted,unresolvedGear:gear.manual});
+    if (criminalRecordBefore) {ledger.criminalRecord=false;if(el("v74CriminalRecord"))el("v74CriminalRecord").checked=false;}
     rolledCareer="";rolledBureau="";rolledEvent=null;
-    notice="Applied "+career+". Source gear loaded when unambiguous; "+gear.manual.length+
+    notice=(criminalRecordBefore ? "Criminal Record cleared after completing Beta Unit career phase. " : "")+
+      "Applied "+career+". Source gear loaded when unambiguous; "+gear.manual.length+
       " gear choices remain manual. Add a permitted Talent, roll Earnings "+(profile.earnings || "per Corebook")+
       " and account for Social Status/contacts with the GM. Career age increased by "+ledger.phases.at(-1).ageYears+" years.";
     updateSkillRatings();renderV74();scheduleAutosave();
@@ -38262,6 +38268,7 @@ window.addEventListener("load", () => {
   function undoPhase() {
     const last=ledger.phases.pop(); if(!last)return;
     undoGear(last.granted);
+    if(last.criminalRecordBefore) {ledger.criminalRecord=true;if(el("v74CriminalRecord"))el("v74CriminalRecord").checked=true;}
     notice="Removed last career phase and its derived bonuses; granted gear was cleared only when the original slot/item still matched.";
     updateSkillRatings();renderV74();scheduleAutosave();
   }
@@ -38308,6 +38315,7 @@ window.addEventListener("load", () => {
       '<label>Resolution<select id="v74AdolescentMethod"><option value="rolled">Rolled (0 LP)</option><option value="selected">Chosen with GM approval (1 LP)</option></select></label></div>'+
       '<div class="v74-actions"><button type="button" id="v74RollAdolescent">Roll d6 / d20</button><button type="button" id="v74ApplyAdolescent">Apply event</button><button type="button" id="v74UndoAdolescent">Undo event</button></div>'+
       '<h4>Career Phase — uses the main Career field above</h4><p id="v74CareerReference"></p>'+
+      '<label class="v74-checkbox"><input id="v74CriminalRecord" type="checkbox"> Criminal Record at start of career (forces Beta Unit; clears after phase)</label>'+
       '<div class="v74-grid"><label>Elective 1<select id="v74Elective1"></select></label>'+
       '<label>Elective 2<select id="v74Elective2"></select></label>'+
       '<label>New signature skill (optional)<select id="v74Signature"></select></label></div>'+
@@ -38330,6 +38338,7 @@ window.addEventListener("load", () => {
       '#v74O12Lifepath summary{cursor:pointer;font-size:14px}#v74O12Lifepath .v74-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:6px 0}'+
       '#v74O12Lifepath label{display:flex;flex-direction:column;gap:3px;font-size:12px}#v74O12Lifepath select,#v74O12Lifepath input{width:100%;min-height:32px}'+
       '#v74O12Lifepath .v74-actions{display:flex;gap:7px;flex-wrap:wrap;margin:7px 0}#v74O12Lifepath .v74-actions button{padding:7px 10px;cursor:pointer}'+
+      '#v74O12Lifepath .v74-checkbox{display:flex;align-items:center;flex-direction:row;gap:7px}#v74O12Lifepath .v74-checkbox input{width:auto;min-height:auto}'+
       '#v74O12Lifepath .v74-note{font-size:12px}#v74Ledger{white-space:pre-wrap;font-size:12px}#v74Notice{font-weight:600}';
     document.head.appendChild(css);
     fillSelect(el("v74Adolescent"),[{value:"",label:"No O-12 event"},...(o12Source.adolescentEvents||[]).map(r=>({value:r.roll,label:r.roll+" — "+r.trait}))]);
@@ -38340,6 +38349,13 @@ window.addEventListener("load", () => {
     refreshEventChoice("adolescent");refreshEventChoice("career");
     el("v74LifePoints").addEventListener("change",()=>{ledger.lifePoints=Math.min(20,integer(chosen("v74LifePoints")));renderV74();scheduleAutosave();});
     el("v74OtherSpent").addEventListener("change",()=>{ledger.otherSpent=Math.min(20,integer(chosen("v74OtherSpent")));renderV74();scheduleAutosave();});
+    el("v74CriminalRecord").addEventListener("change",()=>{
+      ledger.criminalRecord=!!el("v74CriminalRecord").checked;
+      if (ledger.criminalRecord && inputField("career")?.value==="Bureau Aegis Specialist" && inputField("o12Assignment")) {
+        inputField("o12Assignment").value="Beta";inputField("o12Assignment").dispatchEvent(new Event("change"));
+      }
+      renderV74();scheduleAutosave();
+    });
     el("v74RollCareer").addEventListener("click",()=>{
       const row=byRoll(o12Source.careerTable,r20());
       if (!row || !careerRecord(row.name)) {notice="Career result requires another faction/Corebook profile; resolve manually.";renderV74();return;}
