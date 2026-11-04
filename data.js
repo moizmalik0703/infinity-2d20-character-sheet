@@ -6607,6 +6607,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Augmentation",
+      "name": "360° Vision",
+      "brief": "Biosynthetic all-direction vision augmentation.",
+      "mechanic": "Gain +1d20 on Observation tests.",
+      "rarity": "",
+      "weight": "",
+      "cost": "8+2§",
+      "category": "Other Item",
+      "subtype": "Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (Haqqislam 1)"
+    },
+    {
+      "type": "Tool",
+      "name": "360° Visor",
+      "brief": "Unimplanted all-direction vision visor.",
+      "mechanic": "Gain +1d20 on Observation tests, but those tests also have +1 Complication Range.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+2§",
+      "category": "Other Item",
+      "subtype": "Visor",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "3 (Haqqislam 1)"
+    },
+    {
       "type": "Tool",
       "name": "Abseil Rope (100ft)",
       "brief": "A strong climbing rope used for rappelling, ascents, rescues, and vertical movement.",
@@ -6618,6 +6650,23 @@ window.INFINITY_DATA = {
       "subtype": "Climbing Tool",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Armour",
+      "name": "Ad-Qali Armour X",
+      "brief": "Fashionable Kum motorcycle armour with intentionally incomplete coverage.",
+      "mechanic": "Gain X bonus Momentum on relevant street-fashion or Kum-culture social tests against characters with lower Pilot or Lifestyle Expertise. On purchase, X distinct hit locations provide Armour Soak 0 instead of 2.",
+      "rarity": "",
+      "weight": "",
+      "cost": "",
+      "category": "Armour",
+      "subtype": "Haqqislam Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 72,
+      "sourceRestriction": "Variable",
+      "armourAutomation": false
     },
     {
       "type": "Weapon",
@@ -6647,6 +6696,22 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 61,
       "sourceRestriction": "1"
+    },
+    {
+      "type": "Tool",
+      "name": "Adhesive Solvent",
+      "brief": "Sourcebook Nomad disposable tool catalogue entry.",
+      "mechanic": "Source table: Disposable; Area (Close).",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+1§",
+      "category": "Tool",
+      "subtype": "Disposable Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "2 (Illicit 1, Nomads 1)"
     },
     {
       "type": "Drug",
@@ -6690,6 +6755,38 @@ window.INFINITY_DATA = {
       "sourcePage": 82
     },
     {
+      "type": "Medical Tool",
+      "name": "Akbar Kit",
+      "brief": "Prestigious Akbar Doctor medical kit.",
+      "mechanic": "Requires Medicine Focus 3. Reduce Medicine test Difficulty by 1; contains Serum ×6, Silk ×3 and Psychotropics ×1. Serious Treatment begun within an hour halves treatment time; Momentum can repeatedly halve it to a 15-minute minimum.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+4§",
+      "category": "Other Item",
+      "subtype": "Medical Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "4 (Haqqislam 3; Akbar Doctor 1)"
+    },
+    {
+      "type": "Vehicle",
+      "name": "Akrep TAG",
+      "brief": "XPR-5 Akrep TAG of the Maghariba Guard.",
+      "mechanic": "Scale 2; Speed 2; Brawn 17 (+1); Structure 16; Firewall 10; Armour 8; BTS 6; Impact 3+6§ Knockdown. Tail MULTI HMG; secondary Heavy Flamethrower or 2 Heavy Pistols; Clamber, Hull Down, Qutb Rasasa.",
+      "rarity": "",
+      "weight": "",
+      "cost": "14+3§",
+      "category": "Other Item",
+      "subtype": "TAG",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "5 (Haqqislam 4)"
+    },
+    {
       "type": "Weapon",
       "name": "Akrylat-Kanone (BS)",
       "brief": "A long-range anti-armour adhesive launcher mass-produced in Yu Jing from a Nomad design.",
@@ -6703,6 +6800,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 82
+    },
+    {
+      "type": "AR Program",
+      "name": "al-Masjid AR",
+      "brief": "Prayer and social-presence AR program that transforms the user’s surroundings into mosque imagery as prescribed prayer times approach.",
+      "mechanic": "Primarily narrative/AR utility; the source describes prayer cues, remote participation and subtle communication rather than a standalone test modifier.",
+      "rarity": "",
+      "weight": "",
+      "cost": "",
+      "category": "Other Item",
+      "subtype": "AR Program",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 65,
+      "sourceRestriction": ""
     },
     {
       "type": "Countermeasure",
@@ -6745,6 +6858,22 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 62,
       "sourceRestriction": "1"
+    },
+    {
+      "type": "Augmentation",
+      "name": "Amygdawire Augmentation",
+      "brief": "Sourcebook Nomad cybernetic neural implant catalogue entry.",
+      "mechanic": "Source table: Source neural augmentation rules.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+2§",
+      "category": "Augmentation",
+      "subtype": "Cybernetic Neural Implant",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "5 (Praxis Black Labs 2)"
     },
     {
       "type": "Suite",
@@ -6823,6 +6952,86 @@ window.INFINITY_DATA = {
       "subtype": "Augmentation",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Tool",
+      "name": "AnyRez (D0)",
+      "brief": "Sourcebook Nomad service catalogue entry.",
+      "mechanic": "Source table: AnyRez Host Replacement service, D0 defects threshold.",
+      "rarity": "",
+      "weight": "",
+      "cost": "8+8§",
+      "category": "Tool",
+      "subtype": "Service",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Tool",
+      "name": "AnyRez (D1)",
+      "brief": "Sourcebook Nomad service catalogue entry.",
+      "mechanic": "Source table: AnyRez Host Replacement service, D1 defects threshold.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+7§",
+      "category": "Tool",
+      "subtype": "Service",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Tool",
+      "name": "AnyRez (D2)",
+      "brief": "Sourcebook Nomad service catalogue entry.",
+      "mechanic": "Source table: AnyRez Host Replacement service, D2 defects threshold.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+6§",
+      "category": "Tool",
+      "subtype": "Service",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "3"
+    },
+    {
+      "type": "Tool",
+      "name": "AnyRez (D3)",
+      "brief": "Sourcebook Nomad service catalogue entry.",
+      "mechanic": "Source table: AnyRez Host Replacement service, D3 defects threshold.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+6§",
+      "category": "Tool",
+      "subtype": "Service",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "2"
+    },
+    {
+      "type": "Tool",
+      "name": "AnyRez (D4)",
+      "brief": "Sourcebook Nomad service catalogue entry.",
+      "mechanic": "Source table: AnyRez Host Replacement service, D4 defects threshold.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+6§",
+      "category": "Tool",
+      "subtype": "Service",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "1"
     },
     {
       "type": "Armour",
@@ -7415,6 +7624,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Poison",
+      "name": "Azelik Poison",
+      "brief": "Tuareg poison that induces Azelik Syndrome.",
+      "mechanic": "Ingested 3; Chronic Progressive 2 (6 Momentum); Week; 1+6§ Radiation 2 physical damage.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+3§",
+      "category": "Other Item",
+      "subtype": "Poison",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (Tuareg 1)"
+    },
+    {
+      "type": "Ammunition",
+      "name": "Azelik Shells",
+      "brief": "Depleted-uranium shotgun shells that disperse radioactive dust.",
+      "mechanic": "Adds Area (Close) and Radiation 2; a Wound Effect inflicts Azelik Syndrome.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+1§",
+      "category": "Other Item",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 65,
+      "sourceRestriction": "3 (Haqqislam 2)"
+    },
+    {
       "type": "Drug",
       "name": "Baba",
       "brief": "Long-lasting fever-inducing Ariadnan euphoric used to endure cold exposure.",
@@ -7533,6 +7774,22 @@ window.INFINITY_DATA = {
       "sourceRestriction": "0"
     },
     {
+      "type": "Weapon",
+      "name": "Bardom Rifle",
+      "brief": "Custom Haqqislamite rifle with a wide-bore light grenade launcher.",
+      "mechanic": "Range M; 1+5§; Burst 2; 2H; MULTI Light Mod [light grenade launcher]; Non-Hackable; Vicious 1. Deployable repeaters can be fired as grenades at +2 Complication Range.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+2§",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (Haqqislam 1)"
+    },
+    {
       "type": "Augmentation",
       "name": "Basic Limb Replacement (Biografted)",
       "brief": "A biological replacement limb grown to restore normal function and integrate naturally with the user's body.",
@@ -7604,6 +7861,22 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Augmentation",
+      "name": "Bio-Invulnerability Augmentation",
+      "brief": "Gene-spliced immune reinforcement with artificial antibody factories.",
+      "mechanic": "+6 BTS against Biotech attacks; Vigour −1 while installed. Each unpaid month of Maintenance reduces the BTS bonus by 1 until maintenance is paid.",
+      "rarity": "",
+      "weight": "",
+      "cost": "9+2§",
+      "category": "Other Item",
+      "subtype": "Silk Full-Body Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (Haqqislam 1)"
+    },
+    {
+      "type": "Augmentation",
       "name": "Bioimmunity Organ",
       "brief": "A Silk-derived organ that strengthens the body's defences against pathogens and toxins.",
       "mechanic": "Reduce Difficulty by 1 on Resistance checks against disease, poison, toxins, and biological contamination.",
@@ -7656,6 +7929,38 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Weapon",
+      "name": "Blitzen",
+      "brief": "E/M pulse launcher based on the Panzerfaust.",
+      "mechanic": "Range L; 2+5§; Burst 1; 2H; E/M2 Munition. Contains 2 Reloads; reloading after expenditure requires Tech D2 as a Standard Action.",
+      "rarity": "",
+      "weight": "",
+      "cost": "8+1§",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (Haqqislam 2)"
+    },
+    {
+      "type": "Drug",
+      "name": "Blu Khat",
+      "brief": "Stimulant leaves or pills engineered from khat.",
+      "mechanic": "For 4 hours: no sleep-deprivation Resistance tests, heal 1 Resolve every 10 minutes, +1d20 Observation and Personality tests. Addiction 1 (4 doses), Compulsion 1; source also defines withdrawal.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+1§",
+      "category": "Other Item",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (Illicit 1)"
+    },
+    {
+      "type": "Weapon",
       "name": "Boarding Shotgun (BS)",
       "brief": "A short-range firearm built for room clearing, boarding actions, and brutal close engagements.",
       "mechanic": "Range 15 / 45; Damage 4d6; two-handed. Scatter: on an Effect, one additional target in the same zone takes 1d6 damage.",
@@ -7666,6 +7971,22 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Boarding-Colt",
+      "brief": "Heavy revolver with a single-shot underbarrel shotgun tube.",
+      "mechanic": "Range R/C; 2+4§; Burst 1; Unbalanced; Light MULTI. Primary: Unforgiving 1, Vicious 1. Secondary: Improvised 1 plus Shell qualities. Reloading the shot tube requires Tech D1 as a Standard Action.",
+      "rarity": "",
+      "weight": "",
+      "cost": "",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 65,
+      "sourceRestriction": "2 (Corsair 1; Submondo 1)"
     },
     {
       "type": "Grenade",
@@ -7704,7 +8025,11 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "4 (Nomads 2, Illicit 1)",
+      "sourceProfile": "Melee 1+4§, 2H; Anti-Materiel 2, Piercing 1, Improvised 4."
     },
     {
       "type": "Weapon",
@@ -7760,6 +8085,22 @@ window.INFINITY_DATA = {
       "subtype": "Area Control",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Tool",
+      "name": "Carbon4 Outfit",
+      "brief": "Sourcebook Nomad clothing catalogue entry.",
+      "mechanic": "Source table: Armoured 2; low-class imitation high-style clothing.",
+      "rarity": "",
+      "weight": "",
+      "cost": "0",
+      "category": "Tool",
+      "subtype": "Clothing",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "1"
     },
     {
       "type": "Modification",
@@ -7833,6 +8174,22 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Tool",
+      "name": "Chisisi Ark X",
+      "brief": "Luxurious reinforced safe box.",
+      "mechanic": "Opening without the combination is a complex Intelligence + Thievery D(X+2) test requiring 2X Momentum before 6 failures.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+2X§",
+      "category": "Other Item",
+      "subtype": "Secure Container",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "Haqqislam X+1 / X+2"
+    },
+    {
+      "type": "Tool",
       "name": "Chongqing Quantronic Security Kit",
       "brief": "A disposable defensive package that floods an intruder with false identities and dead-end file trees after a Breach.",
       "mechanic": "After the user's first Breach, subsequent hacking attempts are +1 Difficulty until a second Breach or the attacker succeeds at Analysis D2. Three installations; install in five minutes with Hacking D0. Restriction 3 (Yu Jing 2).",
@@ -7873,6 +8230,22 @@ window.INFINITY_DATA = {
       "subtype": "Environment Suit",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Hacking Program",
+      "name": "CLAW-2 Black Widow",
+      "brief": "Sourcebook Nomad claw 2 catalogue entry.",
+      "mechanic": "Source table: Damage 1+3§; Breach Effect per source program entry.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+3§",
+      "category": "Tool",
+      "subtype": "CLAW 2",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "3 (Nomads 2, Tunguska 1)"
     },
     {
       "type": "Program",
@@ -8042,6 +8415,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Augmentation",
+      "name": "Conlang Voicebox",
+      "brief": "Sourcebook Nomad biograft / silk catalogue entry.",
+      "mechanic": "Source table: Aug, Neural; constructed language and voice mimicry.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+2§",
+      "category": "Augmentation",
+      "subtype": "Biograft / Silk",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "3 (Nomads 1)"
+    },
+    {
       "type": "Kit",
       "name": "Cooking Equipment",
       "brief": "Compact field cookware for preparing meals and stretching rations during travel.",
@@ -8125,17 +8514,51 @@ window.INFINITY_DATA = {
       "armourAutomation": false
     },
     {
+      "type": "Armour",
+      "name": "Crashsuit - S&J Zephyr Armour",
+      "brief": "Long-distance motorcycle crashsuit variant.",
+      "mechanic": "Provides +1 Morale Soak and retains Armour Soak 1 to all locations after its normal crash protection dissolves.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "",
+      "category": "Armour",
+      "subtype": "Crashsuit Variant",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 68,
+      "sourceRestriction": ""
+    },
+    {
+      "type": "Explosive Device",
+      "name": "CrazyKoala Mine",
+      "brief": "Sourcebook Nomad mine catalogue entry.",
+      "mechanic": "Source table: 2+5§; Comms, Disposable, Indiscriminate (Close), Unsubtle, Vicious 1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "9+3§",
+      "category": "Explosive Device",
+      "subtype": "Mine",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "3 (Nomads 2, Yu Jing 2)"
+    },
+    {
       "type": "Mine",
       "name": "CrazyKoala Mine (BS)",
-      "brief": "A compact aggressive mine-drone used for area denial and close security traps.",
+      "brief": "Legacy weapon-slot alias; in the Nomads faction book this is an explosive mine, not a Ballistics weapon.",
       "mechanic": "Deployable explosive. Damage 5d6; Disposable; Indiscriminate within Close range; obvious once active.",
       "rarity": "Rare",
       "weight": "Medium",
       "cost": "8000",
       "category": "Explosive Device",
       "subtype": "Mine",
-      "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "legacyAliasOnly": true,
+      "legacyReplacement": "CrazyKoala Mine"
     },
     {
       "type": "Weapon",
@@ -8300,6 +8723,54 @@ window.INFINITY_DATA = {
       "sourceRestriction": "3"
     },
     {
+      "type": "Augmentation",
+      "name": "Djanbazan Regeneration",
+      "brief": "Silk-based Djanbazan regenerative treatment.",
+      "mechanic": "Minor Action: heal 2§ physical damage; if an Effect is rolled, heal 1 Wound. +5 BTS vs Biotech; rejects other biograft/cybernetic augmentation. After injury, Willpower tests have +2 Complication Range until sleep.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+3§",
+      "category": "Other Item",
+      "subtype": "Silk Full-Body Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (Haqqislam 2)"
+    },
+    {
+      "type": "Tool",
+      "name": "Djinn Kit",
+      "brief": "Hassassin nanofabrication kit.",
+      "mechanic": "With Science D2 over 6 hours, grow a Djinncloak, create a D-Charge, or make tetrodotoxin-equivalent spray. Complications can add Fragile and Improvised 2; creations dissolve in cleaning agents.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+1§",
+      "category": "Other Item",
+      "subtype": "Disposable Fabrication Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "4 (Hassassins 1)"
+    },
+    {
+      "type": "Tool",
+      "name": "Djinncloak",
+      "brief": "Haqqislamite stealth cloak.",
+      "mechanic": "At Medium or longer range, face-to-face Stealth tests gain 2 bonus Momentum if prone/motionless. If not Revealed, gain +3§ Cover Soak against ranged attacks.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+3§",
+      "category": "Other Item",
+      "subtype": "Stealth Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "3 (Haqqislam 2)"
+    },
+    {
       "type": "Clothing",
       "name": "Dog-Bowl Jersey X",
       "brief": "Team jersey worn over Dog-Bowl armour; quality/authenticity is rated X.",
@@ -8317,6 +8788,39 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Weapon",
+      "name": "Dogface Claws (CC)",
+      "brief": "Innate natural weapon of a Dogface, retained when transformed into Dog-Warrior form.",
+      "mechanic": "Melee; 1+2§ damage; Subtle 1; Vicious 1. Innate Dogface weapon; does not require carried gear.",
+      "rarity": "Innate",
+      "weight": "—",
+      "cost": "—",
+      "category": "Weapon",
+      "subtype": "Natural Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Dogface only; auto-managed by Host / Heritage automation.",
+      "hostRestriction": "Dogface",
+      "source": "Infinity RPG Corebook",
+      "sourcePage": 41
+    },
+    {
+      "type": "Tool",
+      "name": "Domovik Apprentice",
+      "brief": "Sourcebook Nomad companion tool catalogue entry.",
+      "mechanic": "Source table: Comms; source companion system.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+2§",
+      "category": "Tool",
+      "subtype": "Companion Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "5 (Nomads 3)"
+    },
+    {
+      "type": "Weapon",
       "name": "Dueling Bracers (CC)",
       "brief": "Caledonian reinforced bracers used to enhance unarmed duelling.",
       "mechanic": "Source profile: add 1+1§, Parry 1 and Vicious 1 to unarmed damage; source armour table also gives local arm protection.",
@@ -8330,6 +8834,22 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 62,
       "sourceRestriction": "3"
+    },
+    {
+      "type": "Weapon",
+      "name": "E/Marat",
+      "brief": "Short-range E/M transmitter.",
+      "mechanic": "Range C; 1+4§; Burst 1; 1H; Torrent. On a complication the GM may drain the battery; recharge with Tech D1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+1§",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (Haqqislam 1)"
     },
     {
       "type": "Weapon",
@@ -8445,6 +8965,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Drug",
+      "name": "ExcelRate",
+      "brief": "Short-duration coordination and awareness stimulant.",
+      "mechanic": "Gain +1d20 on Coordination- and Awareness-based tests for 1d6 rounds; afterward become Dazed for 1d3 rounds. Overlapping doses can cause Staggered; source defines addiction/withdrawal.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+2§",
+      "category": "Other Item",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (Illicit 1)"
+    },
+    {
+      "type": "Tool",
+      "name": "Experimental Waldo X",
+      "brief": "Sourcebook Nomad robot tool catalogue entry.",
+      "mechanic": "Source table: Comms; variable rating X and maintenance.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+X§",
+      "category": "Tool",
+      "subtype": "Robot Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "X (Nomads X−1)"
+    },
+    {
       "type": "Credential",
       "name": "Fake ID X",
       "brief": "A fabricated identity package with supporting credentials, records, and digital history.",
@@ -8458,6 +9010,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Remote",
+      "name": "Fanous Remote",
+      "brief": "Fast Haqqislamite utility remote.",
+      "mechanic": "Source profile includes electric pulse, flash pulse, hardened repeater, sniffer and Road Runner capabilities.",
+      "rarity": "",
+      "weight": "",
+      "cost": "9+3§",
+      "category": "Other Item",
+      "subtype": "Remote",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (Haqqislam 1)"
+    },
+    {
+      "type": "Poison",
+      "name": "Fasji Poison",
+      "brief": "Fast-acting ingested poison.",
+      "mechanic": "Ingested; Instant; Chronic 3; 1+2§ physical damage. Effect: Staggered for 3 rounds.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+1§",
+      "category": "Other Item",
+      "subtype": "Poison",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (Haqqislam 1)"
+    },
+    {
       "type": "Augmentation",
       "name": "Fast Download Port",
       "brief": "A high-bandwidth neural data port designed for rapid memory, sensory, and database transfer.",
@@ -8469,6 +9053,38 @@ window.INFINITY_DATA = {
       "subtype": "Augmentation",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Tool",
+      "name": "FastPanda",
+      "brief": "Sourcebook Nomad repeater catalogue entry.",
+      "mechanic": "Source table: Comms, Repeater.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+2§",
+      "category": "Tool",
+      "subtype": "Repeater",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "2 (Nomads 1)"
+    },
+    {
+      "type": "Poison",
+      "name": "Fayudan Poison",
+      "brief": "Socially oriented drug used to blunt resistance to influence.",
+      "mechanic": "+3 Morale Soak against intimidation/coercion. Psychology D1 plus 2 Momentum can reduce by 2 the Difficulty of extracting information in friendly conversation for an hour. Afterward Resistance D2 or suffer 2+2§ physical damage and Dazed 2 rounds.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+2§",
+      "category": "Other Item",
+      "subtype": "Poison",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (Haqqislam 2)"
     },
     {
       "type": "Ammunition",
@@ -8497,6 +9113,38 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Resource",
+      "name": "FFP Repeater Rounds",
+      "brief": "Sourcebook Nomad ammunition catalogue entry.",
+      "mechanic": "Source table: Repeater munition for Foomp Flinger (see source description).",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+4§",
+      "category": "Resource",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 76,
+      "sourceRestriction": "4 (Nomads 2, Bakunin 1)"
+    },
+    {
+      "type": "Explosive",
+      "name": "Fireflies Grenade",
+      "brief": "Micro-drone grenade that blankets a zone with low-grade sensors to expose opponents in cover.",
+      "mechanic": "Damage 2+5§; 1H; Disposable, Indiscriminate (Close), Nonlethal, Speculative Fire, Thrown, Unsubtle. After successful deployment, Analysis D1; spend Momentum to reduce effective Cover Soak by 1§ per Momentum. At 0 Cover Soak the target is Marked until leaving the zone.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "5+1§",
+      "category": "Other Item",
+      "subtype": "Explosive / Grenade",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "sourceRestriction": "2 (Yu Jing 1)"
     },
     {
       "type": "Legacy Reference",
@@ -8567,6 +9215,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Tool",
+      "name": "Flexwear Outfit",
+      "brief": "Sourcebook Nomad clothing catalogue entry.",
+      "mechanic": "Source table: Comms; smart-material apparel.",
+      "rarity": "",
+      "weight": "",
+      "cost": "8+3§",
+      "category": "Tool",
+      "subtype": "Clothing",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "3 (Nomads 1)"
+    },
+    {
       "type": "Remote",
       "name": "Flying Drone",
       "brief": "A small aerial drone used for scouting, surveillance, and remote observation.",
@@ -8595,6 +9259,22 @@ window.INFINITY_DATA = {
       "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
+      "type": "Weapon",
+      "name": "Foomp Flinger (BS)",
+      "brief": "Sourcebook Nomad ranged weapon catalogue entry.",
+      "mechanic": "Source table: Range Medium, 1H; Burst 1; FFP ammunition, Munition, Speculative Fire.",
+      "rarity": "",
+      "weight": "",
+      "cost": "9+2§",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "3 (Nomads 2)"
+    },
+    {
       "type": "Kit",
       "name": "Forensics Kit X",
       "brief": "A configurable forensic toolkit for crime-scene work, trace evidence, and technical reconstruction.",
@@ -8621,6 +9301,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Tool",
+      "name": "Freedom Kit",
+      "brief": "Sourcebook Nomad survival / anti-aleph kit catalogue entry.",
+      "mechanic": "Source table: Comms; off-grid equipment, avoids reliance on ALEPH-managed amenities.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+2§",
+      "category": "Tool",
+      "subtype": "Survival / Anti-ALEPH Kit",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "3 (Nomads 1)"
+    },
+    {
       "type": "Augmentation",
       "name": "Fúcánglóng Arm",
       "brief": "A temperature-resistant extensible cybernetic arm associated with miners, labourers, bravos, and dissidents.",
@@ -8635,6 +9331,22 @@ window.INFINITY_DATA = {
     },
     {
       "type": "Augmentation",
+      "name": "Fúcánglóng Arm (one arm)",
+      "brief": "Temperature-resistant extensible replacement arm popular with workers, bravos, and dissidents.",
+      "mechanic": "Gain +1d20 on tests relying on the replaced arm’s strength; that arm gains Armour Soak 2 and immunity to extreme temperatures; unarmed strikes gain +2§ and Extended Reach. If only one arm is replaced and Brawn is 9 or less, Agility tests have +1 Complication Range.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+2§",
+      "category": "Other Item",
+      "subtype": "Cybernetic Replacement (Limb)",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "sourceRestriction": "2 (Yu Jing 1)"
+    },
+    {
+      "type": "Augmentation",
       "name": "Fúcánglóng Arms",
       "brief": "A paired set of extensible temperature-resistant cybernetic arms.",
       "mechanic": "Both arms gain the Fúcánglóng benefits: +1d20 to arm-strength tests; Armour Soak 2 and immunity to extreme temperatures; unarmed strikes gain +2§ and Extended Reach. Restriction 2 (Yu Jing 1).",
@@ -8645,6 +9357,38 @@ window.INFINITY_DATA = {
       "subtype": "Cybernetic Limbs",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Augmentation",
+      "name": "Fúcánglóng Arms (both)",
+      "brief": "Paired temperature-resistant extensible replacement arms.",
+      "mechanic": "Gain +1d20 on tests relying on arm strength; both arms gain Armour Soak 2 and immunity to extreme temperatures; unarmed strikes gain +2§ and Extended Reach. The one-arm imbalance clause does not apply to a matched pair.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+2§",
+      "category": "Other Item",
+      "subtype": "Cybernetic Replacement (Limbs)",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "sourceRestriction": "2 (Yu Jing 1)"
+    },
+    {
+      "type": "Weapon",
+      "name": "Fulgor Rifle (BS)",
+      "brief": "Sourcebook Nomad ranged weapon catalogue entry.",
+      "mechanic": "Source table: C/M 1+5§, 2H, Burst 2/1, Standard; Expert 1, Multi Light Mod, Vicious 1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+3§",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "3 (Nomads 1)"
     },
     {
       "type": "Signal Gear",
@@ -8676,6 +9420,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 82
+    },
+    {
+      "type": "Clothing",
+      "name": "Gallabeyya",
+      "brief": "Haqqislamite desert-adapted clothing.",
+      "mechanic": "Adapted (Desert).",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+1§",
+      "category": "Other Item",
+      "subtype": "Clothing",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "1 (Haqqislam 0)"
+    },
+    {
+      "type": "Tool",
+      "name": "Garn Grub",
+      "brief": "Sourcebook Nomad resource catalogue entry.",
+      "mechanic": "Source table: Source survival/consumable item.",
+      "rarity": "",
+      "weight": "",
+      "cost": "2+1§",
+      "category": "Tool",
+      "subtype": "Resource",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "1 (Nomads 0)"
     },
     {
       "type": "Weapon",
@@ -8745,6 +9521,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 81
+    },
+    {
+      "type": "Geist",
+      "name": "Gestalt Geist X",
+      "brief": "Sourcebook Nomad geist catalogue entry.",
+      "mechanic": "Source table: Comms; multi-user gestalt Geist, variable X.",
+      "rarity": "",
+      "weight": "",
+      "cost": "2+4X§",
+      "category": "Geist",
+      "subtype": "Geist",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "4 (Nomads 1)"
+    },
+    {
+      "type": "Resource",
+      "name": "Glavar Powder",
+      "brief": "Sourcebook Nomad drug catalogue entry.",
+      "mechanic": "Source table: Source drug, p. 78.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+3§",
+      "category": "Resource",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "3 (Haqqislam 2, Nomads 1)"
     },
     {
       "type": "Tool",
@@ -8987,6 +9795,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Tool",
+      "name": "Hafza Holomask",
+      "brief": "Holomask optimised for Hafza impersonation.",
+      "mechanic": "Gain 3 bonus Momentum when disguising as a generic Haqqislam soldier or Amir. To imitate a known individual, bonus Momentum equals Psychology Focus.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+2§",
+      "category": "Other Item",
+      "subtype": "Holomask",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "4 (Haqqislam 3)"
+    },
+    {
       "type": "Kit",
       "name": "Handler's Kit",
       "brief": "A practical set of restraints, lures, signals, and care tools for trained animal handlers.",
@@ -8998,6 +9822,38 @@ window.INFINITY_DATA = {
       "subtype": "Kit",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Financial Tool",
+      "name": "Hawala Dot X",
+      "brief": "Quantronic hawala deposit token.",
+      "mechanic": "May hold up to 3X Assets. Withdrawal at a caravanserai requires identity proof and applies the source fee; Cashflow is temporarily reduced by X after withdrawal.",
+      "rarity": "",
+      "weight": "",
+      "cost": "X",
+      "category": "Other Item",
+      "subtype": "Hawala",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "1 (Haqqislam 0)"
+    },
+    {
+      "type": "Tool",
+      "name": "Headclamp",
+      "brief": "Sourcebook Nomad restraint / quantronic tool catalogue entry.",
+      "mechanic": "Source table: Source headclamp equipment.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+4§",
+      "category": "Tool",
+      "subtype": "Restraint / Quantronic Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "4 (Tunguska 2)"
     },
     {
       "type": "Kit",
@@ -9024,6 +9880,22 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Armour",
+      "name": "Heavy Combat Armour - Azra'il Variant",
+      "brief": "Azra’il heavy combat armour variant.",
+      "mechanic": "Adds Exoskeleton 1 without reducing protection; its bulk adds +1 Complication Range to Agility tests.",
+      "rarity": "",
+      "weight": "Heavy",
+      "cost": "",
+      "category": "Armour",
+      "subtype": "Heavy Combat Armour Variant",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 72,
+      "sourceRestriction": ""
     },
     {
       "type": "Weapon",
@@ -9092,6 +9964,22 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Poison",
+      "name": "Hofrehgiyahi Poison",
+      "brief": "Hallucinogenic inhaled poison.",
+      "mechanic": "Inhaled; Progressive 1 (2 Momentum); Hour; 1+3§ physical and mental damage. Effects can cause Dazed or +2 Complication Range to all tests if already Dazed.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+2§",
+      "category": "Other Item",
+      "subtype": "Poison",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (Illicit 1)"
     },
     {
       "type": "Holographic Device",
@@ -9208,6 +10096,118 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "i-Kohl",
+      "name": "i-Kohl Athnansaa",
+      "brief": "Subtle cosmetic drug designed to cloud recent memory.",
+      "mechanic": "After a successful Stealth or Close Combat D2 application, the target becomes Staggered for 2 rounds and remembering the event becomes harder as described by the source.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+2§",
+      "category": "Other Item",
+      "subtype": "i-Kohl",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "4 (Haqqislam 3)"
+    },
+    {
+      "type": "i-Kohl",
+      "name": "i-Kohl Bilqis",
+      "brief": "Target-tailored attraction and rapport cosmetic.",
+      "mechanic": "On physical contact, Persuade D1; spend up to 3 Momentum for bonus d20s on relevant attraction/seduction negotiation until sleep. Source raises Difficulty for normally unattracted targets and grants immunity after failure.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+1§",
+      "category": "Other Item",
+      "subtype": "i-Kohl",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "3 (Haqqislam 2)"
+    },
+    {
+      "type": "i-Kohl",
+      "name": "i-Kohl Carrón X",
+      "brief": "Defensive social-control cosmetic.",
+      "mechanic": "Reaction Persuade D1 within Reach; target then makes Discipline D(X + Momentum) or cannot take an aggressive action until attacked; later attempts are made with +X Complication Range.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+2§",
+      "category": "Other Item",
+      "subtype": "i-Kohl",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "4 (Haqqislam 3)"
+    },
+    {
+      "type": "i-Kohl",
+      "name": "i-Kohl Concealer",
+      "brief": "Cosmetic concealer that masks other i-Kohl formulations.",
+      "mechanic": "Raises another i-Kohl product’s Subtle quality to 3 and increases by 3 the Difficulty to detect its source/evidence while intact.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+1§",
+      "category": "Other Item",
+      "subtype": "i-Kohl",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "3 (Haqqislam 2)"
+    },
+    {
+      "type": "i-Kohl",
+      "name": "i-Kohl Ta’riya-t",
+      "brief": "Animal-calming i-Kohl formulation.",
+      "mechanic": "Animal Handling D1; spending 1 Momentum on Metanoia can make an animal friendly, suppress a guard alert, or provide bonus Momentum in social interaction with its owner. Intelligent/uplifted creatures are immune.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+1§",
+      "category": "Other Item",
+      "subtype": "i-Kohl",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "4 (Haqqislam 2)"
+    },
+    {
+      "type": "Program",
+      "name": "IC-X Haboob",
+      "brief": "Intrusion countermeasure for concealing a target Quantronic Zone.",
+      "mechanic": "Increase by X the Difficulty of Observation tests made to discover the protected Quantronic Zone.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+X§",
+      "category": "Other Item",
+      "subtype": "Program",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "X+1"
+    },
+    {
+      "type": "Tool",
+      "name": "Ihya Pendant",
+      "brief": "Gardener Guild pendant showing a live miniature terraforming landscape.",
+      "mechanic": "Gain 1 bonus Momentum in face-to-face social interactions with Gardener Guild members or terraforming enthusiasts.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+2§",
+      "category": "Other Item",
+      "subtype": "Guild Token",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "2 (Haqqislam 1)"
+    },
+    {
       "type": "Tool",
       "name": "Imperial Messenger Ceremonial Kit",
       "brief": "Traditional-looking courier materials concealing sophisticated surveillance and encryption resources.",
@@ -9291,6 +10291,38 @@ window.INFINITY_DATA = {
       "armourAutomation": false
     },
     {
+      "type": "Other Item",
+      "name": "J-Tabby Socks",
+      "brief": "Sourcebook Nomad protective wear catalogue entry.",
+      "mechanic": "Source table: Source armour table; see special footwear effects.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+3§",
+      "category": "Tool",
+      "subtype": "Protective Wear",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "2 (Nomads 1)"
+    },
+    {
+      "type": "Vehicle",
+      "name": "Jamal Transport",
+      "brief": "Massive three-tiered hover transport used for freight and settlement logistics.",
+      "mechanic": "Scale 4; Speed 2; Brawn 16 (+2); Structure 27; Firewall 6; Armour 2/4 at reinforced prow; BTS 1; Impact 4+7§. Cargo Cranes, Hard-headed prow and Modular Interior.",
+      "rarity": "",
+      "weight": "",
+      "cost": "13+1§",
+      "category": "Other Item",
+      "subtype": "Vehicle",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "3 (Haqqislam 1)"
+    },
+    {
       "type": "Armour",
       "name": "Kanrèn Gatecrasher Armour",
       "brief": "Low-profile light combat armour for Kanrèn counter-insurgency infiltrators.",
@@ -9335,6 +10367,39 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 62,
       "sourceRestriction": "3"
+    },
+    {
+      "type": "Armour",
+      "name": "Khafiin Microservo Armour",
+      "brief": "Compact Áyyār microservo armour that folds into a backpack.",
+      "mechanic": "Source location protection: Head 2, Torso 3, Arms 3, Legs 3; BTS 1; Comms, Exoskeleton 1, Self-Repairing 4. If Agility 10+, donning from storage takes 1+1§ rounds per hit location.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+7§",
+      "category": "Armour",
+      "subtype": "Powered Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 72,
+      "sourceRestriction": "4",
+      "armourAutomation": false
+    },
+    {
+      "type": "Augmentation",
+      "name": "Khat/un Augmentation X",
+      "brief": "Sourcebook Nomad silk full-body catalogue entry.",
+      "mechanic": "Source table: Source full-body augmentation (variable X).",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+X§",
+      "category": "Augmentation",
+      "subtype": "Silk Full-Body",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "X+1 (Nomads 2)"
     },
     {
       "type": "Clothing",
@@ -9383,6 +10448,54 @@ window.INFINITY_DATA = {
       "sourcePage": 82
     },
     {
+      "type": "Armour",
+      "name": "Krab Gauntlet, Ka-3",
+      "brief": "Sourcebook Nomad gauntlet catalogue entry.",
+      "mechanic": "Source table: Arm soak 2; BTS 1; heavy armour and MediKit.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+2§",
+      "category": "Armour",
+      "subtype": "Gauntlet",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "3 (Nomads 1)"
+    },
+    {
+      "type": "Armour",
+      "name": "Krab Gauntlet, N3V",
+      "brief": "Sourcebook Nomad gauntlet catalogue entry.",
+      "mechanic": "Source table: Arm soak 2; BTS 1; heavy armour and Powered Multitool.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+2§",
+      "category": "Armour",
+      "subtype": "Gauntlet",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "3 (Nomads 1)"
+    },
+    {
+      "type": "Armour",
+      "name": "Krab Gauntlet, VaNk",
+      "brief": "Sourcebook Nomad gauntlet catalogue entry.",
+      "mechanic": "Source table: Arm soak 3; BTS 1; heavy armour and Panzerfaust.",
+      "rarity": "",
+      "weight": "",
+      "cost": "9+2§",
+      "category": "Armour",
+      "subtype": "Gauntlet",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "3 (Nomads 2)"
+    },
+    {
       "type": "Weapon",
       "name": "Kukri (CC)",
       "brief": "A modern Nepalese short blade with an E/M mode for attacking both people and systems.",
@@ -9396,6 +10509,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 81
+    },
+    {
+      "type": "Vehicle",
+      "name": "Kum Motorcycle",
+      "brief": "Kum motorised troop motorcycle.",
+      "mechanic": "Scale 0; Speed 3; Brawn 10 (+1); Structure 10; Firewall 6; Armour 2; BTS 0; Impact 2+4§. Chassis cache Concealed 2; Sālik! Pilot D2 +2 Complication Range can increase Speed to 4 for 2 rounds.",
+      "rarity": "",
+      "weight": "",
+      "cost": "9+3§",
+      "category": "Other Item",
+      "subtype": "Motorcycle",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "3 (Haqqislam 2; Kum 1)"
     },
     {
       "type": "Vehicle",
@@ -9442,6 +10571,22 @@ window.INFINITY_DATA = {
       "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
     },
     {
+      "type": "Tool",
+      "name": "Laboratory, Personal",
+      "brief": "Sourcebook Nomad laboratory catalogue entry.",
+      "mechanic": "Source table: Comms; portable personal science lab.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+4§",
+      "category": "Tool",
+      "subtype": "Laboratory",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "2"
+    },
+    {
       "type": "Utility",
       "name": "Lantern",
       "brief": "A bright portable area light for camps, tunnels, emergency work, and search operations.",
@@ -9466,6 +10611,22 @@ window.INFINITY_DATA = {
       "subtype": "Kit",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Armour",
+      "name": "Light Combat Armour - Bashi Bazouk Armour",
+      "brief": "Bashi Bazouk light combat armour variant.",
+      "mechanic": "Includes a built-in Vac Suit and Holomask.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "",
+      "category": "Armour",
+      "subtype": "Light Combat Armour Variant",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 71,
+      "sourceRestriction": ""
     },
     {
       "type": "Weapon",
@@ -9517,7 +10678,27 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "3 (Nomads 2)",
+      "sourceProfile": "Melee 1+4§, 1H; Piercing 1, Subtle 3."
+    },
+    {
+      "type": "Armour",
+      "name": "Lizard Suit",
+      "brief": "Sourcebook Nomad combat armour catalogue entry.",
+      "mechanic": "Source table: Soak Head 2, Torso 2, Arms 1, Legs 1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+3§",
+      "category": "Armour",
+      "subtype": "Combat Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "3 (Nomads 2)"
     },
     {
       "type": "Beacon",
@@ -9577,6 +10758,22 @@ window.INFINITY_DATA = {
       "sourcePage": 82
     },
     {
+      "type": "Armour",
+      "name": "Lounge-lizard Suit",
+      "brief": "Sourcebook Nomad vac suit / pilot suit catalogue entry.",
+      "mechanic": "Source table: Vac Suit with emergency pistol/knife; source pilot suit.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+2§",
+      "category": "Armour",
+      "subtype": "Vac Suit / Pilot Suit",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "4 (NMF 1, Nomads 2)"
+    },
+    {
       "type": "Vehicle",
       "name": "Lunar Dragon Head",
       "brief": "The armoured control module at the head of a modular luxury 'lunar dragon' vehicle.",
@@ -9607,6 +10804,54 @@ window.INFINITY_DATA = {
       "sourcePage": 83
     },
     {
+      "type": "Armour",
+      "name": "MaiSa Armour",
+      "brief": "Sourcebook Nomad combat armour catalogue entry.",
+      "mechanic": "Source table: Soak 1/2/2/1; BTS 2; Combat Jump Pack, Grip Pads.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+3§",
+      "category": "Armour",
+      "subtype": "Combat Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "3 (Nomads 1)"
+    },
+    {
+      "type": "Augmentation",
+      "name": "Mantella Poison Augmentation",
+      "brief": "Poison-secreting biograft based on mantella frog toxins.",
+      "mechanic": "Can add Tariki-like ingested poison to food/drink by touch; Unarmed Strikes gain Toxic 2. User is immune to its poison but Vigour is reduced by 1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "9+2§",
+      "category": "Other Item",
+      "subtype": "Biograft Implant",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2"
+    },
+    {
+      "type": "Weapon",
+      "name": "Matulid Rifle",
+      "brief": "Tuareg custom rifle with underbarrel light shotgun.",
+      "mechanic": "Range M; 1+5§; Burst 2; 2H; MULTI Light Mod [light shotgun]; Non-Hackable; Unforgiving 1; Vicious 1; chamber supports Azelik ammunition.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+2§",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2"
+    },
+    {
       "type": "Kit",
       "name": "Mechanic Tools",
       "brief": "A practical toolkit for repairing small machines, devices, and field equipment.",
@@ -9631,6 +10876,38 @@ window.INFINITY_DATA = {
       "subtype": "Medical Kit",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Armour",
+      "name": "Medium Combat Armour - Lasiq Variant",
+      "brief": "Lasiq medium combat armour variant.",
+      "mechanic": "Includes Hidden Armour 2, Chameleonwear and Climbing Plus.",
+      "rarity": "",
+      "weight": "Medium",
+      "cost": "",
+      "category": "Armour",
+      "subtype": "Medium Combat Armour Variant",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 72,
+      "sourceRestriction": ""
+    },
+    {
+      "type": "Tool",
+      "name": "Meltsand (1 Meter³)",
+      "brief": "Electrically charged sand mixed with a smart-material solvent.",
+      "mechanic": "An encrypted quantronic command collapses a one-metre cube into a few centimetres of slurry within seconds.",
+      "rarity": "",
+      "weight": "",
+      "cost": "2+2§",
+      "category": "Other Item",
+      "subtype": "Smart Material",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "2 (Haqqislam 1)"
     },
     {
       "type": "Resource",
@@ -9660,6 +10937,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 82
+    },
+    {
+      "type": "Resource",
+      "name": "Mess",
+      "brief": "Sourcebook Nomad drug catalogue entry.",
+      "mechanic": "Source table: Source drug, p. 78.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+1§",
+      "category": "Resource",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "3 (Nomads 1)"
+    },
+    {
+      "type": "Weapon",
+      "name": "Mgomo Tube (BS)",
+      "brief": "Sourcebook Nomad ranged weapon catalogue entry.",
+      "mechanic": "Source table: C/M 1+5§, 2H, Burst 1, GOO ammo; Disposable, Stun.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+2§",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "3 (Nomads 2, Corregidor 1)"
     },
     {
       "type": "Utility",
@@ -9914,7 +11223,11 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Implant",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "1",
+      "sourceProfile": "Aug, Comms; requires maintenance."
     },
     {
       "type": "Defence System",
@@ -9941,6 +11254,38 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Tool",
+      "name": "Naught (1 day’s dose)",
+      "brief": "Sourcebook Nomad resource catalogue entry.",
+      "mechanic": "Source table: Comms; per-day Naught service.",
+      "rarity": "",
+      "weight": "",
+      "cost": "1+3§",
+      "category": "Tool",
+      "subtype": "Resource",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "2 (Illicit 0, Nomads 1)"
+    },
+    {
+      "type": "Tool",
+      "name": "Naughties (1 month)",
+      "brief": "Sourcebook Nomad resource catalogue entry.",
+      "mechanic": "Source table: Comms; source monthly service.",
+      "rarity": "",
+      "weight": "",
+      "cost": "1+6§",
+      "category": "Tool",
+      "subtype": "Resource",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "3 (Illicit 1, Nomads 1)"
     },
     {
       "type": "Suite",
@@ -9979,7 +11324,11 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "5 (Nomads 3, Illicit 2)",
+      "sourceProfile": "Melee 1+3§; Anti-Materiel 2, Backlash 1, Monofilament, NFB, Vicious 2."
     },
     {
       "type": "Weapon",
@@ -10049,6 +11398,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Augmentation",
+      "name": "Neurocinetics Augmentation",
+      "brief": "Sourcebook Nomad cybernetic full-body catalogue entry.",
+      "mechanic": "Source table: Source enhanced neural-motor augmentation.",
+      "rarity": "",
+      "weight": "",
+      "cost": "8+2§",
+      "category": "Augmentation",
+      "subtype": "Cybernetic Full-Body",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "4 (Nomads 2)"
+    },
+    {
       "type": "Drug",
       "name": "Ngam Drops",
       "brief": "A mild euphoric commonly served in sweet drinks, especially in fashionable Yu Jing venues.",
@@ -10103,6 +11468,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Weapon",
+      "name": "Nomad Spear X (CC)",
+      "brief": "Sourcebook Nomad melee weapon catalogue entry.",
+      "mechanic": "Source table: Melee 1+4§, 2H; Extended Reach, Vicious 1, variable added features.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+2X§",
+      "category": "Weapon",
+      "subtype": "Melee Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "X−1"
+    },
+    {
+      "type": "AR Program",
+      "name": "Noor AR",
+      "brief": "Educational Maya overlay supporting the Search for Knowledge.",
+      "mechanic": "Using it for hours each day for a month halves the XP cost to acquire one specific Education Talent; Observation tests have +1 Complication Range while using it. One Noor course at a time.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+1§",
+      "category": "Other Item",
+      "subtype": "AR Program",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "3 (Haqqislam 1)"
+    },
+    {
       "type": "Countermeasure",
       "name": "Nullifier",
       "brief": "A Tohaa anti-quantronic device that suppresses nearby network activity and hostile infowar.",
@@ -10129,6 +11526,38 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 93
+    },
+    {
+      "type": "Resource",
+      "name": "O2 Spray",
+      "brief": "Sourcebook Nomad drug catalogue entry.",
+      "mechanic": "Source table: Source drug, p. 78.",
+      "rarity": "",
+      "weight": "",
+      "cost": "2+2§",
+      "category": "Resource",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "1"
+    },
+    {
+      "type": "Augmentation",
+      "name": "Odalisque Augmentation",
+      "brief": "Aletheia super-soldier Silk enhancement.",
+      "mechanic": "Superhuman Personality 2; Psywar gains Grievous. Compatible with Silk Full-Body augmentations but incompatible with cybernetics/biografts. Source lists outsider prerequisites.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+3§",
+      "category": "Other Item",
+      "subtype": "Silk Full-Body Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "4 (Haqqislam 3)"
     },
     {
       "type": "Vehicle",
@@ -10161,6 +11590,38 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 62,
       "sourceRestriction": "5"
+    },
+    {
+      "type": "Vehicle",
+      "name": "Olabisi Board",
+      "brief": "Smart-sail water board.",
+      "mechanic": "Scale 0; Speed 1; Brawn 7; Structure 6; Firewall 6; Armour 1; BTS 2; Impact 1+3§; Superhuman Agility 1. Smart-Sail can raise Speed by 1 after Agility + Pilot test at current Speed Difficulty until a test fails.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+1§",
+      "category": "Other Item",
+      "subtype": "Watercraft",
+      "loadoutEligible": false,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "1"
+    },
+    {
+      "type": "Resource",
+      "name": "Old Steely",
+      "brief": "Sourcebook Nomad drug catalogue entry.",
+      "mechanic": "Source table: Source drug, p. 78.",
+      "rarity": "",
+      "weight": "",
+      "cost": "2+2§",
+      "category": "Resource",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "2 (Nomads 1)"
     },
     {
       "type": "Camouflage",
@@ -10219,6 +11680,23 @@ window.INFINITY_DATA = {
       "legacyAliasOnly": true,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 82
+    },
+    {
+      "type": "Ammunition",
+      "name": "Palad Khik Ammo",
+      "brief": "Jopok/Yu Jing heavy grenade and mounted-weapon ammunition type.",
+      "mechanic": "Source table profile: Range C, M, or L depending on weapon; 2+4§; Burst 1; 2H or Mounted; Heavy/Grenades; Disposable, Indiscriminate (Close), Munition, Speculative Fire.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "2 + cost of Reload",
+      "category": "Resource",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 82,
+      "sourceRestriction": "3 (Jopok 1, Yu Jing 2)",
+      "sourceProfile": "Source table name: Palad Khik (Ammo Type)."
     },
     {
       "type": "Weapon",
@@ -10400,6 +11878,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Poison",
+      "name": "Pop-pod Poison",
+      "brief": "Injected progressive poison.",
+      "mechanic": "Injected; Progressive 1 (2 Momentum); Hour; 1+4§ physical damage; ineffective against BTS 1+. Effect causes Dazed; if already Dazed the victim suffocates until Resistance D1 succeeds.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+1§",
+      "category": "Other Item",
+      "subtype": "Poison",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (Haqqislam 1)"
+    },
+    {
       "type": "Weapon",
       "name": "Portable Autocannon (BS)",
       "brief": "Rodinan man-portable heavy weapon designed for Apex ammunition.",
@@ -10414,6 +11908,22 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 62,
       "sourceRestriction": "3"
+    },
+    {
+      "type": "Tool",
+      "name": "Portable Monkey Bar",
+      "brief": "Sourcebook Nomad movement tool catalogue entry.",
+      "mechanic": "Source table: Comms; movement aid.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+3§",
+      "category": "Tool",
+      "subtype": "Movement Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "3 (Illicit 1, Nomads 1)"
     },
     {
       "type": "Tool",
@@ -10585,6 +12095,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Armour",
+      "name": "RedX Jumpsuit",
+      "brief": "Sourcebook Nomad vac suit catalogue entry.",
+      "mechanic": "Source table: Locational Beacon, Vac Suit.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+3§",
+      "category": "Armour",
+      "subtype": "Vac Suit",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "3 (Nomads 1)"
+    },
+    {
       "type": "Augmentation",
       "name": "Regeneration Augmentation",
       "brief": "A full-body biological modification that accelerates tissue repair and recovery.",
@@ -10677,6 +12203,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Rations",
+      "name": "Rihla Rations",
+      "brief": "Haqqislamite travel ration pack.",
+      "mechanic": "Provides +1 Morale Soak while supplies last and feeds one traveller for one month.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+3§",
+      "category": "Other Item",
+      "subtype": "Rations",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "3 (Haqqislam 1)"
+    },
+    {
       "type": "Mobility Gear",
       "name": "Rocket pack",
       "brief": "A compact jump pack for powered descents, short aerial bursts, and combat insertion.",
@@ -10720,6 +12262,54 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 82
+    },
+    {
+      "type": "Augmentation",
+      "name": "Runihura Augmentation",
+      "brief": "Khawarij full-body super-soldier xenograft process.",
+      "mechanic": "Inured to Aging, Disease, Pain and Poison; Superhuman Agility 2; Superhuman Brawn 2; Vicious 2 on Unarmed Strikes; enhanced jumping and difficult-terrain movement. Incompatible with other Large, Full-Body or Replacement augmentations.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+3§",
+      "category": "Other Item",
+      "subtype": "Silk Full-Body Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "4 (Haqqislam 3)"
+    },
+    {
+      "type": "Augmentation",
+      "name": "S-Beacon",
+      "brief": "Silk-grafted locational beacon.",
+      "mechanic": "Triggers by a Brawn + Athletics D1 sequence or when the user takes 4+ physical damage; transmits location for one round. Source specifies Medicine/Hacking detection and D4 disabling tests.",
+      "rarity": "",
+      "weight": "",
+      "cost": "14+1§",
+      "category": "Other Item",
+      "subtype": "Silk Full-Body Augmentation",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "1"
+    },
+    {
+      "type": "AR Program",
+      "name": "Saifari AR",
+      "brief": "Calming Maya overlay based on Saif’s Impossible Gardens.",
+      "mechanic": "Heal 3 Resolve per half-hour of use; if used daily, gain +1d20 on one Discipline test each week.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+1§",
+      "category": "Other Item",
+      "subtype": "AR Program",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "2 (Haqqislam 1)"
     },
     {
       "type": "Utility",
@@ -10861,6 +12451,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Program",
+      "name": "SHIELD-2 Taharat",
+      "brief": "Medical Supportware against biological and toxic attack.",
+      "mechanic": "Requires Medicine Expertise 2. Standard Action: allies within Long range wearing Bioscanners gain +2 BTS against Biotech or Toxic attacks until the start of the user’s next turn.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+3§",
+      "category": "Other Item",
+      "subtype": "Supportware",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (Haqqislam 2)"
+    },
+    {
       "type": "Hacking Program",
       "name": "SHIELD-3 AECM",
       "brief": "An advanced electronic countermeasure suite for battlefield survivability.",
@@ -10941,6 +12547,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Poison",
+      "name": "SHVYY Poison",
+      "brief": "Weapon-applied combat toxin.",
+      "mechanic": "Tech D1 to apply to a melee weapon; lasts 1d20 rounds +1 per Momentum. Adds Biotech, Grievous and +4 Complication Range; a complication on application causes a Wound to the user.",
+      "rarity": "",
+      "weight": "",
+      "cost": "1+5§",
+      "category": "Other Item",
+      "subtype": "Poison",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (Illicit 1)"
+    },
+    {
       "type": "Weapon",
       "name": "Silenced Light MULTI Assault Pistol (BS)",
       "brief": "A suppressed MULTI assault pistol capable of switching from lethal fire to a discreet nonlethal stun mode.",
@@ -10996,6 +12618,54 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 81
+    },
+    {
+      "type": "Weapon",
+      "name": "Slag-cannon (BS)",
+      "brief": "Sourcebook Nomad ranged weapon catalogue entry.",
+      "mechanic": "Source table: C/M/L/E 2+5§, 2H; Anti-Materiel 1, Improvised 1, Incendiary 2, Piercing 2.",
+      "rarity": "",
+      "weight": "",
+      "cost": "2+5§",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "2 (Nomads 1)"
+    },
+    {
+      "type": "Resource",
+      "name": "Slag-slug",
+      "brief": "Sourcebook Nomad ammunition catalogue entry.",
+      "mechanic": "Source table: Knockdown; Piercing 1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+1§",
+      "category": "Resource",
+      "subtype": "Ammunition",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 76,
+      "sourceRestriction": "2 (Human Edge 1)"
+    },
+    {
+      "type": "Weapon",
+      "name": "Slammer (Ammo Type) (CC)",
+      "brief": "Sourcebook Nomad melee weapon catalogue entry.",
+      "mechanic": "Source table: Melee 1+4§, 1H; Disposable, Improvised 1, Subtle 1, Unforgiving 1; ammunition-dependent qualities.",
+      "rarity": "",
+      "weight": "",
+      "cost": "1+Reload cost",
+      "category": "Weapon",
+      "subtype": "Melee Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "3 (Illicit 1, Nomads 2)"
     },
     {
       "type": "Charge",
@@ -11079,6 +12749,22 @@ window.INFINITY_DATA = {
       "sourceRestriction": "1"
     },
     {
+      "type": "Sensor",
+      "name": "Sniffer X",
+      "brief": "Deployable networked sensor package.",
+      "mechanic": "Functions as a sensor suite with X+1 sensor types; deploy as a Standard Action; active 12 hours. Allied Sniffers extend Observation coverage and provide the source Difficulty/Momentum benefits. Armour 1; Structure 1; Fragile.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+X§",
+      "category": "Other Item",
+      "subtype": "Sensor",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "X (Haqqislam 1)"
+    },
+    {
       "type": "Weapon",
       "name": "Sniper Rifle (BS)",
       "brief": "A long-range precision rifle used by marksmen to eliminate targets from extreme distance.",
@@ -11131,6 +12817,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Armour",
+      "name": "Spektr Armour",
+      "brief": "Sourcebook Nomad combat armour catalogue entry.",
+      "mechanic": "Source table: Soak 1/1/1/1, BTS 3; Concealed 2, Self-Repairing, TO Camo.",
+      "rarity": "",
+      "weight": "",
+      "cost": "9+6§",
+      "category": "Armour",
+      "subtype": "Combat Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 77,
+      "sourceRestriction": "5 (Nomads 4, Tunguska 3)"
+    },
+    {
       "type": "Weapon",
       "name": "Spiked Knuckles (CC)",
       "brief": "Compact reinforced knuckles fitted with spikes for concealed close-quarters fighting.",
@@ -11168,6 +12870,70 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Remote",
+      "name": "Sputnik, Lunokhod",
+      "brief": "Sourcebook Nomad remote catalogue entry.",
+      "mechanic": "Source table: Nomad combat-support Remote; see source Remote profile.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+3§",
+      "category": "Remote",
+      "subtype": "Remote",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "4 (Nomads 2)"
+    },
+    {
+      "type": "Remote",
+      "name": "Sputnik, Tsyklon",
+      "brief": "Sourcebook Nomad remote catalogue entry.",
+      "mechanic": "Source table: Nomad repeater/suppression Remote; see source Remote profile.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+2§",
+      "category": "Remote",
+      "subtype": "Remote",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "4 (Nomads 2)"
+    },
+    {
+      "type": "Tool",
+      "name": "Stashpocket X",
+      "brief": "Sourcebook Nomad concealment catalogue entry.",
+      "mechanic": "Source table: Concealed X; variable concealed pocket.",
+      "rarity": "",
+      "weight": "",
+      "cost": "X+X§",
+      "category": "Tool",
+      "subtype": "Concealment",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "X−1"
+    },
+    {
+      "type": "Drug",
+      "name": "Steady",
+      "brief": "Coordination-enhancing drug.",
+      "mechanic": "For 6 hours, gain +1d20 on Coordination-based tests but increase Difficulty of Brawn- and Agility-based tests by 1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+1§",
+      "category": "Other Item",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (Haqqislam 1)"
     },
     {
       "type": "Repeater",
@@ -11331,6 +13097,22 @@ window.INFINITY_DATA = {
       "sourcePage": 81
     },
     {
+      "type": "Hacking Program",
+      "name": "SWORD-1 Fritz",
+      "brief": "Sourcebook Nomad sword 1 catalogue entry.",
+      "mechanic": "Source table: Damage 1+4§; Nonlethal, Piercing 1, Vicious 1; added effects per source.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+4§",
+      "category": "Tool",
+      "subtype": "SWORD 1",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "3 (Nomads 2, Tunguska 1)"
+    },
+    {
       "type": "Program",
       "name": "SWORD-1 Horrorshow X",
       "brief": "An Otaku Brain Blast variant that synchronises disturbing sensory material with adrenaline dumps.",
@@ -11344,6 +13126,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 82
+    },
+    {
+      "type": "Program",
+      "name": "SWORD-X Samâ",
+      "brief": "Neural attack program.",
+      "mechanic": "Security Soak is treated as Acrobatics Focus. After a successful attack, source Momentum spend can inflict 3+6§ physical damage with Knockdown, Nonlethal, Stun and Vicious X; Wounds can Daze or knock out the target.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+2X§",
+      "category": "Other Item",
+      "subtype": "Attack Program",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "X+1 (Haqqislam X)"
     },
     {
       "type": "Augmentation",
@@ -11437,6 +13235,22 @@ window.INFINITY_DATA = {
       "sourceRestriction": "1"
     },
     {
+      "type": "Poison",
+      "name": "Tariki Poison",
+      "brief": "Fast injected/contact poison.",
+      "mechanic": "Contact/Injected; Complex; Progressive 1 (2 Momentum); 1 round; 1+4§ physical damage. Effect causes Dazed, or Staggered if already Dazed.",
+      "rarity": "",
+      "weight": "",
+      "cost": "3+3§",
+      "category": "Other Item",
+      "subtype": "Poison",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (Haqqislam 2)"
+    },
+    {
       "type": "Grenade",
       "name": "Tattletale Grenade (BS)",
       "brief": "A sensor grenade that tags movement and exposes hidden targets.",
@@ -11498,6 +13312,22 @@ window.INFINITY_DATA = {
       "sourceProfile": "Melee; 2+5§; 2H; Grievous; Non-Hackable; Parry 2; Piercing 2; Vicious 2; restriction 4 (Caledonia 2, Ariadna 3)."
     },
     {
+      "type": "Tool",
+      "name": "Teseum Hardcase",
+      "brief": "Sourcebook Nomad container catalogue entry.",
+      "mechanic": "Source table: Armoured 4, +2 BTS versus E/M.",
+      "rarity": "",
+      "weight": "",
+      "cost": "8+4§",
+      "category": "Tool",
+      "subtype": "Container",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "5 (Ariadna 3, Nomads 4, Wardrivers 3)"
+    },
+    {
       "type": "Weapon",
       "name": "Teseum Hatchet (CC)",
       "brief": "Compact Teseum axe that combines armour penetration with a throwable profile.",
@@ -11544,6 +13374,22 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 81,
       "armourAutomation": false
+    },
+    {
+      "type": "Medical Facility",
+      "name": "Theraic Pod X",
+      "brief": "Advanced Haqqislamite recovery pod.",
+      "mechanic": "Physician may use Medicine instead of the patient’s Resistance for recovery; patient may assist. Pod contributes X Momentum toward removing additional Harms. Extended treatment can restore age-reduced attributes up to X, not above original values.",
+      "rarity": "",
+      "weight": "",
+      "cost": "16+2§",
+      "category": "Other Item",
+      "subtype": "Medical Facility",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 74,
+      "sourceRestriction": "X+2 (Haqqislam X+1)"
     },
     {
       "type": "Camouflage",
@@ -11610,6 +13456,22 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Resource",
+      "name": "Toque-Farra Spines",
+      "brief": "Sourcebook Nomad drug catalogue entry.",
+      "mechanic": "Source table: Source drug, p. 78.",
+      "rarity": "",
+      "weight": "",
+      "cost": "1+3§",
+      "category": "Resource",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "4 (Corregidor 1, Illicit 1, Nomads 2)"
     },
     {
       "type": "Utility",
@@ -11732,6 +13594,38 @@ window.INFINITY_DATA = {
       "sourcePage": 83
     },
     {
+      "type": "Program",
+      "name": "UPGRADE Bendelladj Archive X",
+      "brief": "Hacking Device code library for authentication attacks.",
+      "mechanic": "Successful Spoofing/Authentication hacks gain +X Authentication Quality; Gain Difficult Authentication tests reduce Difficulty by X. The source availability table lists rating 1 for Haqqislam purchase.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+2§",
+      "category": "Other Item",
+      "subtype": "Upgrade",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "4 (Haqqislam 3)"
+    },
+    {
+      "type": "Hacking Program",
+      "name": "UPGRADE Fadeware",
+      "brief": "Sourcebook Nomad upgrade catalogue entry.",
+      "mechanic": "Source table: Personal supportware; stealth/countermeasures per source.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+4§",
+      "category": "Tool",
+      "subtype": "UPGRADE",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "4 (Nomads 2, Tunguska 1)"
+    },
+    {
       "type": "Hacking Upgrade",
       "name": "UPGRADE Flashsocket",
       "brief": "A Geist or comlog upgrade for rapid signal handling.",
@@ -11758,6 +13652,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Hacking Program",
+      "name": "UPGRADE Lightning",
+      "brief": "Sourcebook Nomad upgrade catalogue entry.",
+      "mechanic": "Source table: Adds +1§ and Breaker to SWORD attacks; Personal supportware.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+4§",
+      "category": "Tool",
+      "subtype": "UPGRADE",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "4 (Nomads 2)"
+    },
+    {
       "type": "Hacking Upgrade",
       "name": "UPGRADE Null",
       "brief": "A stealth-focused upgrade that suppresses routine digital signatures.",
@@ -11769,6 +13679,22 @@ window.INFINITY_DATA = {
       "subtype": "Upgrade",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Hacking Program",
+      "name": "UPGRADE Solifugae",
+      "brief": "Sourcebook Nomad upgrade catalogue entry.",
+      "mechanic": "Source table: Personal supportware; see source description.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+4§",
+      "category": "Tool",
+      "subtype": "UPGRADE",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "4 (Nomads 2)"
     },
     {
       "type": "Weapon",
@@ -11829,6 +13755,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Tool",
+      "name": "VaudePet X",
+      "brief": "Sourcebook Nomad companion catalogue entry.",
+      "mechanic": "Source table: Comms, Locational Beacon; variable X.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4X+X§",
+      "category": "Tool",
+      "subtype": "Companion",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 79,
+      "sourceRestriction": "X+1"
+    },
+    {
       "type": "Reference",
       "name": "Vertexpert Journal",
       "brief": "A specialist research archive and analytical knowledge source.",
@@ -11840,6 +13782,22 @@ window.INFINITY_DATA = {
       "subtype": "Reference",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Explosive",
+      "name": "Vigour Poison Charge X",
+      "brief": "Disposable charge dispersing Vigour Poison.",
+      "mechanic": "Source table profile: Damage X§; 1H; Comms, Disposable. Use the Vigour Poison X source rules for the poison effect.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "4X+X§",
+      "category": "Other Item",
+      "subtype": "Explosive / Charge",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 81,
+      "sourceRestriction": "5 (Dissident 4)"
     },
     {
       "type": "Weapon",
@@ -11906,7 +13864,11 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 78,
+      "sourceRestriction": "3 (Nomads 1)",
+      "sourceProfile": "Melee 1+6§, 1H; Biotech, Concealed 1, Extended Reach, Grievous, Piercing 1."
     },
     {
       "type": "Hacking Device",
@@ -11960,6 +13922,22 @@ window.INFINITY_DATA = {
       "subtype": "Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Weapon",
+      "name": "Vrabec Pistol",
+      "brief": "Concealable Haqqislamite Breaker pistol.",
+      "mechanic": "Range R/C; 1+4§; Burst 1; 1H; Breaker; Concealed 1; Subtle 1; Vicious 1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "6+1§",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 73,
+      "sourceRestriction": "2"
     },
     {
       "type": "Weapon",
@@ -12079,6 +14057,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "type": "Weapon",
+      "name": "Yánda (CC)",
+      "brief": "Hsien ceremonial/combat blade listed as a Sword of Office variant in the Imperial Ranks Table.",
+      "mechanic": "Use the Sword of Office weapon profile; Yánda is its Hsien variant.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "",
+      "category": "Weapon",
+      "subtype": "Melee Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 93,
+      "sourceProfile": "Imperial Ranks Table: Yánda (Variant Sword of Office)."
+    },
+    {
       "type": "Drug",
       "name": "Yangwater",
       "brief": "A stimulant powder that sharply increases physical power and confidence before causing a severe crash.",
@@ -12148,1082 +14142,6 @@ window.INFINITY_DATA = {
       "subtype": "Remote Controller",
       "loadoutEligible": true,
       "loadoutConditional": false
-    },
-    {
-      "type": "Weapon",
-      "name": "Dogface Claws (CC)",
-      "brief": "Innate natural weapon of a Dogface, retained when transformed into Dog-Warrior form.",
-      "mechanic": "Melee; 1+2§ damage; Subtle 1; Vicious 1. Innate Dogface weapon; does not require carried gear.",
-      "rarity": "Innate",
-      "weight": "—",
-      "cost": "—",
-      "category": "Weapon",
-      "subtype": "Natural Weapon",
-      "loadoutEligible": true,
-      "loadoutConditional": true,
-      "loadoutNote": "Dogface only; auto-managed by Host / Heritage automation.",
-      "hostRestriction": "Dogface",
-      "source": "Infinity RPG Corebook",
-      "sourcePage": 41
-    },
-    {
-      "type": "Augmentation",
-      "name": "360° Vision",
-      "brief": "Biosynthetic all-direction vision augmentation.",
-      "mechanic": "Gain +1d20 on Observation tests.",
-      "rarity": "",
-      "weight": "",
-      "cost": "8+2§",
-      "category": "Other Item",
-      "subtype": "Augmentation",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2 (Haqqislam 1)"
-    },
-    {
-      "type": "Tool",
-      "name": "360° Visor",
-      "brief": "Unimplanted all-direction vision visor.",
-      "mechanic": "Gain +1d20 on Observation tests, but those tests also have +1 Complication Range.",
-      "rarity": "",
-      "weight": "",
-      "cost": "7+2§",
-      "category": "Other Item",
-      "subtype": "Visor",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "3 (Haqqislam 1)"
-    },
-    {
-      "type": "Armour",
-      "name": "Ad-Qali Armour X",
-      "brief": "Fashionable Kum motorcycle armour with intentionally incomplete coverage.",
-      "mechanic": "Gain X bonus Momentum on relevant street-fashion or Kum-culture social tests against characters with lower Pilot or Lifestyle Expertise. On purchase, X distinct hit locations provide Armour Soak 0 instead of 2.",
-      "rarity": "",
-      "weight": "",
-      "cost": "",
-      "category": "Armour",
-      "subtype": "Haqqislam Armour",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 72,
-      "sourceRestriction": "Variable",
-      "armourAutomation": false
-    },
-    {
-      "type": "Medical Tool",
-      "name": "Akbar Kit",
-      "brief": "Prestigious Akbar Doctor medical kit.",
-      "mechanic": "Requires Medicine Focus 3. Reduce Medicine test Difficulty by 1; contains Serum ×6, Silk ×3 and Psychotropics ×1. Serious Treatment begun within an hour halves treatment time; Momentum can repeatedly halve it to a 15-minute minimum.",
-      "rarity": "",
-      "weight": "",
-      "cost": "5+4§",
-      "category": "Other Item",
-      "subtype": "Medical Kit",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "4 (Haqqislam 3; Akbar Doctor 1)"
-    },
-    {
-      "type": "Vehicle",
-      "name": "Akrep TAG",
-      "brief": "XPR-5 Akrep TAG of the Maghariba Guard.",
-      "mechanic": "Scale 2; Speed 2; Brawn 17 (+1); Structure 16; Firewall 10; Armour 8; BTS 6; Impact 3+6§ Knockdown. Tail MULTI HMG; secondary Heavy Flamethrower or 2 Heavy Pistols; Clamber, Hull Down, Qutb Rasasa.",
-      "rarity": "",
-      "weight": "",
-      "cost": "14+3§",
-      "category": "Other Item",
-      "subtype": "TAG",
-      "loadoutEligible": false,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "5 (Haqqislam 4)"
-    },
-    {
-      "type": "AR Program",
-      "name": "al-Masjid AR",
-      "brief": "Prayer and social-presence AR program that transforms the user’s surroundings into mosque imagery as prescribed prayer times approach.",
-      "mechanic": "Primarily narrative/AR utility; the source describes prayer cues, remote participation and subtle communication rather than a standalone test modifier.",
-      "rarity": "",
-      "weight": "",
-      "cost": "",
-      "category": "Other Item",
-      "subtype": "AR Program",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 65,
-      "sourceRestriction": ""
-    },
-    {
-      "type": "Poison",
-      "name": "Azelik Poison",
-      "brief": "Tuareg poison that induces Azelik Syndrome.",
-      "mechanic": "Ingested 3; Chronic Progressive 2 (6 Momentum); Week; 1+6§ Radiation 2 physical damage.",
-      "rarity": "",
-      "weight": "",
-      "cost": "4+3§",
-      "category": "Other Item",
-      "subtype": "Poison",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "3 (Tuareg 1)"
-    },
-    {
-      "type": "Ammunition",
-      "name": "Azelik Shells",
-      "brief": "Depleted-uranium shotgun shells that disperse radioactive dust.",
-      "mechanic": "Adds Area (Close) and Radiation 2; a Wound Effect inflicts Azelik Syndrome.",
-      "rarity": "",
-      "weight": "",
-      "cost": "5+1§",
-      "category": "Other Item",
-      "subtype": "Ammunition",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 65,
-      "sourceRestriction": "3 (Haqqislam 2)"
-    },
-    {
-      "type": "Weapon",
-      "name": "Bardom Rifle",
-      "brief": "Custom Haqqislamite rifle with a wide-bore light grenade launcher.",
-      "mechanic": "Range M; 1+5§; Burst 2; 2H; MULTI Light Mod [light grenade launcher]; Non-Hackable; Vicious 1. Deployable repeaters can be fired as grenades at +2 Complication Range.",
-      "rarity": "",
-      "weight": "",
-      "cost": "6+2§",
-      "category": "Weapon",
-      "subtype": "Ranged Weapon",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2 (Haqqislam 1)"
-    },
-    {
-      "type": "Augmentation",
-      "name": "Bio-Invulnerability Augmentation",
-      "brief": "Gene-spliced immune reinforcement with artificial antibody factories.",
-      "mechanic": "+6 BTS against Biotech attacks; Vigour −1 while installed. Each unpaid month of Maintenance reduces the BTS bonus by 1 until maintenance is paid.",
-      "rarity": "",
-      "weight": "",
-      "cost": "9+2§",
-      "category": "Other Item",
-      "subtype": "Silk Full-Body Augmentation",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "3 (Haqqislam 1)"
-    },
-    {
-      "type": "Weapon",
-      "name": "Blitzen",
-      "brief": "E/M pulse launcher based on the Panzerfaust.",
-      "mechanic": "Range L; 2+5§; Burst 1; 2H; E/M2 Munition. Contains 2 Reloads; reloading after expenditure requires Tech D2 as a Standard Action.",
-      "rarity": "",
-      "weight": "",
-      "cost": "8+1§",
-      "category": "Weapon",
-      "subtype": "Ranged Weapon",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "3 (Haqqislam 2)"
-    },
-    {
-      "type": "Drug",
-      "name": "Blu Khat",
-      "brief": "Stimulant leaves or pills engineered from khat.",
-      "mechanic": "For 4 hours: no sleep-deprivation Resistance tests, heal 1 Resolve every 10 minutes, +1d20 Observation and Personality tests. Addiction 1 (4 doses), Compulsion 1; source also defines withdrawal.",
-      "rarity": "",
-      "weight": "",
-      "cost": "4+1§",
-      "category": "Other Item",
-      "subtype": "Drug",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2 (Illicit 1)"
-    },
-    {
-      "type": "Weapon",
-      "name": "Boarding-Colt",
-      "brief": "Heavy revolver with a single-shot underbarrel shotgun tube.",
-      "mechanic": "Range R/C; 2+4§; Burst 1; Unbalanced; Light MULTI. Primary: Unforgiving 1, Vicious 1. Secondary: Improvised 1 plus Shell qualities. Reloading the shot tube requires Tech D1 as a Standard Action.",
-      "rarity": "",
-      "weight": "",
-      "cost": "",
-      "category": "Weapon",
-      "subtype": "Ranged Weapon",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 65,
-      "sourceRestriction": "2 (Corsair 1; Submondo 1)"
-    },
-    {
-      "type": "Tool",
-      "name": "Chisisi Ark X",
-      "brief": "Luxurious reinforced safe box.",
-      "mechanic": "Opening without the combination is a complex Intelligence + Thievery D(X+2) test requiring 2X Momentum before 6 failures.",
-      "rarity": "",
-      "weight": "",
-      "cost": "10+2X§",
-      "category": "Other Item",
-      "subtype": "Secure Container",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "Haqqislam X+1 / X+2"
-    },
-    {
-      "type": "Augmentation",
-      "name": "Djanbazan Regeneration",
-      "brief": "Silk-based Djanbazan regenerative treatment.",
-      "mechanic": "Minor Action: heal 2§ physical damage; if an Effect is rolled, heal 1 Wound. +5 BTS vs Biotech; rejects other biograft/cybernetic augmentation. After injury, Willpower tests have +2 Complication Range until sleep.",
-      "rarity": "",
-      "weight": "",
-      "cost": "10+3§",
-      "category": "Other Item",
-      "subtype": "Silk Full-Body Augmentation",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "3 (Haqqislam 2)"
-    },
-    {
-      "type": "Tool",
-      "name": "Djinncloak",
-      "brief": "Haqqislamite stealth cloak.",
-      "mechanic": "At Medium or longer range, face-to-face Stealth tests gain 2 bonus Momentum if prone/motionless. If not Revealed, gain +3§ Cover Soak against ranged attacks.",
-      "rarity": "",
-      "weight": "",
-      "cost": "5+3§",
-      "category": "Other Item",
-      "subtype": "Stealth Tool",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "3 (Haqqislam 2)"
-    },
-    {
-      "type": "Tool",
-      "name": "Djinn Kit",
-      "brief": "Hassassin nanofabrication kit.",
-      "mechanic": "With Science D2 over 6 hours, grow a Djinncloak, create a D-Charge, or make tetrodotoxin-equivalent spray. Complications can add Fragile and Improvised 2; creations dissolve in cleaning agents.",
-      "rarity": "",
-      "weight": "",
-      "cost": "7+1§",
-      "category": "Other Item",
-      "subtype": "Disposable Fabrication Kit",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "4 (Hassassins 1)"
-    },
-    {
-      "type": "Weapon",
-      "name": "E/Marat",
-      "brief": "Short-range E/M transmitter.",
-      "mechanic": "Range C; 1+4§; Burst 1; 1H; Torrent. On a complication the GM may drain the battery; recharge with Tech D1.",
-      "rarity": "",
-      "weight": "",
-      "cost": "6+1§",
-      "category": "Weapon",
-      "subtype": "Ranged Weapon",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2 (Haqqislam 1)"
-    },
-    {
-      "type": "Drug",
-      "name": "ExcelRate",
-      "brief": "Short-duration coordination and awareness stimulant.",
-      "mechanic": "Gain +1d20 on Coordination- and Awareness-based tests for 1d6 rounds; afterward become Dazed for 1d3 rounds. Overlapping doses can cause Staggered; source defines addiction/withdrawal.",
-      "rarity": "",
-      "weight": "",
-      "cost": "3+2§",
-      "category": "Other Item",
-      "subtype": "Drug",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2 (Illicit 1)"
-    },
-    {
-      "type": "Remote",
-      "name": "Fanous Remote",
-      "brief": "Fast Haqqislamite utility remote.",
-      "mechanic": "Source profile includes electric pulse, flash pulse, hardened repeater, sniffer and Road Runner capabilities.",
-      "rarity": "",
-      "weight": "",
-      "cost": "9+3§",
-      "category": "Other Item",
-      "subtype": "Remote",
-      "loadoutEligible": false,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2 (Haqqislam 1)"
-    },
-    {
-      "type": "Poison",
-      "name": "Fasji Poison",
-      "brief": "Fast-acting ingested poison.",
-      "mechanic": "Ingested; Instant; Chronic 3; 1+2§ physical damage. Effect: Staggered for 3 rounds.",
-      "rarity": "",
-      "weight": "",
-      "cost": "3+1§",
-      "category": "Other Item",
-      "subtype": "Poison",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2 (Haqqislam 1)"
-    },
-    {
-      "type": "Poison",
-      "name": "Fayudan Poison",
-      "brief": "Socially oriented drug used to blunt resistance to influence.",
-      "mechanic": "+3 Morale Soak against intimidation/coercion. Psychology D1 plus 2 Momentum can reduce by 2 the Difficulty of extracting information in friendly conversation for an hour. Afterward Resistance D2 or suffer 2+2§ physical damage and Dazed 2 rounds.",
-      "rarity": "",
-      "weight": "",
-      "cost": "4+2§",
-      "category": "Other Item",
-      "subtype": "Poison",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "3 (Haqqislam 2)"
-    },
-    {
-      "type": "Clothing",
-      "name": "Gallabeyya",
-      "brief": "Haqqislamite desert-adapted clothing.",
-      "mechanic": "Adapted (Desert).",
-      "rarity": "",
-      "weight": "",
-      "cost": "4+1§",
-      "category": "Other Item",
-      "subtype": "Clothing",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "1 (Haqqislam 0)"
-    },
-    {
-      "type": "Tool",
-      "name": "Hafza Holomask",
-      "brief": "Holomask optimised for Hafza impersonation.",
-      "mechanic": "Gain 3 bonus Momentum when disguising as a generic Haqqislam soldier or Amir. To imitate a known individual, bonus Momentum equals Psychology Focus.",
-      "rarity": "",
-      "weight": "",
-      "cost": "7+2§",
-      "category": "Other Item",
-      "subtype": "Holomask",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "4 (Haqqislam 3)"
-    },
-    {
-      "type": "Financial Tool",
-      "name": "Hawala Dot X",
-      "brief": "Quantronic hawala deposit token.",
-      "mechanic": "May hold up to 3X Assets. Withdrawal at a caravanserai requires identity proof and applies the source fee; Cashflow is temporarily reduced by X after withdrawal.",
-      "rarity": "",
-      "weight": "",
-      "cost": "X",
-      "category": "Other Item",
-      "subtype": "Hawala",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "1 (Haqqislam 0)"
-    },
-    {
-      "type": "Poison",
-      "name": "Hofrehgiyahi Poison",
-      "brief": "Hallucinogenic inhaled poison.",
-      "mechanic": "Inhaled; Progressive 1 (2 Momentum); Hour; 1+3§ physical and mental damage. Effects can cause Dazed or +2 Complication Range to all tests if already Dazed.",
-      "rarity": "",
-      "weight": "",
-      "cost": "3+2§",
-      "category": "Other Item",
-      "subtype": "Poison",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2 (Illicit 1)"
-    },
-    {
-      "type": "Program",
-      "name": "IC-X Haboob",
-      "brief": "Intrusion countermeasure for concealing a target Quantronic Zone.",
-      "mechanic": "Increase by X the Difficulty of Observation tests made to discover the protected Quantronic Zone.",
-      "rarity": "",
-      "weight": "",
-      "cost": "5+X§",
-      "category": "Other Item",
-      "subtype": "Program",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "X+1"
-    },
-    {
-      "type": "i-Kohl",
-      "name": "i-Kohl Athnansaa",
-      "brief": "Subtle cosmetic drug designed to cloud recent memory.",
-      "mechanic": "After a successful Stealth or Close Combat D2 application, the target becomes Staggered for 2 rounds and remembering the event becomes harder as described by the source.",
-      "rarity": "",
-      "weight": "",
-      "cost": "6+2§",
-      "category": "Other Item",
-      "subtype": "i-Kohl",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "4 (Haqqislam 3)"
-    },
-    {
-      "type": "i-Kohl",
-      "name": "i-Kohl Bilqis",
-      "brief": "Target-tailored attraction and rapport cosmetic.",
-      "mechanic": "On physical contact, Persuade D1; spend up to 3 Momentum for bonus d20s on relevant attraction/seduction negotiation until sleep. Source raises Difficulty for normally unattracted targets and grants immunity after failure.",
-      "rarity": "",
-      "weight": "",
-      "cost": "6+1§",
-      "category": "Other Item",
-      "subtype": "i-Kohl",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "3 (Haqqislam 2)"
-    },
-    {
-      "type": "i-Kohl",
-      "name": "i-Kohl Carrón X",
-      "brief": "Defensive social-control cosmetic.",
-      "mechanic": "Reaction Persuade D1 within Reach; target then makes Discipline D(X + Momentum) or cannot take an aggressive action until attacked; later attempts are made with +X Complication Range.",
-      "rarity": "",
-      "weight": "",
-      "cost": "7+2§",
-      "category": "Other Item",
-      "subtype": "i-Kohl",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "4 (Haqqislam 3)"
-    },
-    {
-      "type": "i-Kohl",
-      "name": "i-Kohl Concealer",
-      "brief": "Cosmetic concealer that masks other i-Kohl formulations.",
-      "mechanic": "Raises another i-Kohl product’s Subtle quality to 3 and increases by 3 the Difficulty to detect its source/evidence while intact.",
-      "rarity": "",
-      "weight": "",
-      "cost": "5+1§",
-      "category": "Other Item",
-      "subtype": "i-Kohl",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "3 (Haqqislam 2)"
-    },
-    {
-      "type": "i-Kohl",
-      "name": "i-Kohl Ta’riya-t",
-      "brief": "Animal-calming i-Kohl formulation.",
-      "mechanic": "Animal Handling D1; spending 1 Momentum on Metanoia can make an animal friendly, suppress a guard alert, or provide bonus Momentum in social interaction with its owner. Intelligent/uplifted creatures are immune.",
-      "rarity": "",
-      "weight": "",
-      "cost": "6+1§",
-      "category": "Other Item",
-      "subtype": "i-Kohl",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "4 (Haqqislam 2)"
-    },
-    {
-      "type": "Tool",
-      "name": "Ihya Pendant",
-      "brief": "Gardener Guild pendant showing a live miniature terraforming landscape.",
-      "mechanic": "Gain 1 bonus Momentum in face-to-face social interactions with Gardener Guild members or terraforming enthusiasts.",
-      "rarity": "",
-      "weight": "",
-      "cost": "10+2§",
-      "category": "Other Item",
-      "subtype": "Guild Token",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "2 (Haqqislam 1)"
-    },
-    {
-      "type": "Vehicle",
-      "name": "Jamal Transport",
-      "brief": "Massive three-tiered hover transport used for freight and settlement logistics.",
-      "mechanic": "Scale 4; Speed 2; Brawn 16 (+2); Structure 27; Firewall 6; Armour 2/4 at reinforced prow; BTS 1; Impact 4+7§. Cargo Cranes, Hard-headed prow and Modular Interior.",
-      "rarity": "",
-      "weight": "",
-      "cost": "13+1§",
-      "category": "Other Item",
-      "subtype": "Vehicle",
-      "loadoutEligible": false,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "3 (Haqqislam 1)"
-    },
-    {
-      "type": "Armour",
-      "name": "Khafiin Microservo Armour",
-      "brief": "Compact Áyyār microservo armour that folds into a backpack.",
-      "mechanic": "Source location protection: Head 2, Torso 3, Arms 3, Legs 3; BTS 1; Comms, Exoskeleton 1, Self-Repairing 4. If Agility 10+, donning from storage takes 1+1§ rounds per hit location.",
-      "rarity": "",
-      "weight": "",
-      "cost": "7+7§",
-      "category": "Armour",
-      "subtype": "Powered Armour",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 72,
-      "sourceRestriction": "4",
-      "armourAutomation": false
-    },
-    {
-      "type": "Vehicle",
-      "name": "Kum Motorcycle",
-      "brief": "Kum motorised troop motorcycle.",
-      "mechanic": "Scale 0; Speed 3; Brawn 10 (+1); Structure 10; Firewall 6; Armour 2; BTS 0; Impact 2+4§. Chassis cache Concealed 2; Sālik! Pilot D2 +2 Complication Range can increase Speed to 4 for 2 rounds.",
-      "rarity": "",
-      "weight": "",
-      "cost": "9+3§",
-      "category": "Other Item",
-      "subtype": "Motorcycle",
-      "loadoutEligible": false,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "3 (Haqqislam 2; Kum 1)"
-    },
-    {
-      "type": "Augmentation",
-      "name": "Mantella Poison Augmentation",
-      "brief": "Poison-secreting biograft based on mantella frog toxins.",
-      "mechanic": "Can add Tariki-like ingested poison to food/drink by touch; Unarmed Strikes gain Toxic 2. User is immune to its poison but Vigour is reduced by 1.",
-      "rarity": "",
-      "weight": "",
-      "cost": "9+2§",
-      "category": "Other Item",
-      "subtype": "Biograft Implant",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2"
-    },
-    {
-      "type": "Weapon",
-      "name": "Matulid Rifle",
-      "brief": "Tuareg custom rifle with underbarrel light shotgun.",
-      "mechanic": "Range M; 1+5§; Burst 2; 2H; MULTI Light Mod [light shotgun]; Non-Hackable; Unforgiving 1; Vicious 1; chamber supports Azelik ammunition.",
-      "rarity": "",
-      "weight": "",
-      "cost": "7+2§",
-      "category": "Weapon",
-      "subtype": "Ranged Weapon",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2"
-    },
-    {
-      "type": "Tool",
-      "name": "Meltsand (1 Meter³)",
-      "brief": "Electrically charged sand mixed with a smart-material solvent.",
-      "mechanic": "An encrypted quantronic command collapses a one-metre cube into a few centimetres of slurry within seconds.",
-      "rarity": "",
-      "weight": "",
-      "cost": "2+2§",
-      "category": "Other Item",
-      "subtype": "Smart Material",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "2 (Haqqislam 1)"
-    },
-    {
-      "type": "AR Program",
-      "name": "Noor AR",
-      "brief": "Educational Maya overlay supporting the Search for Knowledge.",
-      "mechanic": "Using it for hours each day for a month halves the XP cost to acquire one specific Education Talent; Observation tests have +1 Complication Range while using it. One Noor course at a time.",
-      "rarity": "",
-      "weight": "",
-      "cost": "5+1§",
-      "category": "Other Item",
-      "subtype": "AR Program",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "3 (Haqqislam 1)"
-    },
-    {
-      "type": "Augmentation",
-      "name": "Odalisque Augmentation",
-      "brief": "Aletheia super-soldier Silk enhancement.",
-      "mechanic": "Superhuman Personality 2; Psywar gains Grievous. Compatible with Silk Full-Body augmentations but incompatible with cybernetics/biografts. Source lists outsider prerequisites.",
-      "rarity": "",
-      "weight": "",
-      "cost": "10+3§",
-      "category": "Other Item",
-      "subtype": "Silk Full-Body Augmentation",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "4 (Haqqislam 3)"
-    },
-    {
-      "type": "Vehicle",
-      "name": "Olabisi Board",
-      "brief": "Smart-sail water board.",
-      "mechanic": "Scale 0; Speed 1; Brawn 7; Structure 6; Firewall 6; Armour 1; BTS 2; Impact 1+3§; Superhuman Agility 1. Smart-Sail can raise Speed by 1 after Agility + Pilot test at current Speed Difficulty until a test fails.",
-      "rarity": "",
-      "weight": "",
-      "cost": "6+1§",
-      "category": "Other Item",
-      "subtype": "Watercraft",
-      "loadoutEligible": false,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "1"
-    },
-    {
-      "type": "Poison",
-      "name": "Pop-pod Poison",
-      "brief": "Injected progressive poison.",
-      "mechanic": "Injected; Progressive 1 (2 Momentum); Hour; 1+4§ physical damage; ineffective against BTS 1+. Effect causes Dazed; if already Dazed the victim suffocates until Resistance D1 succeeds.",
-      "rarity": "",
-      "weight": "",
-      "cost": "3+1§",
-      "category": "Other Item",
-      "subtype": "Poison",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2 (Haqqislam 1)"
-    },
-    {
-      "type": "Rations",
-      "name": "Rihla Rations",
-      "brief": "Haqqislamite travel ration pack.",
-      "mechanic": "Provides +1 Morale Soak while supplies last and feeds one traveller for one month.",
-      "rarity": "",
-      "weight": "",
-      "cost": "3+3§",
-      "category": "Other Item",
-      "subtype": "Rations",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "3 (Haqqislam 1)"
-    },
-    {
-      "type": "Augmentation",
-      "name": "Runihura Augmentation",
-      "brief": "Khawarij full-body super-soldier xenograft process.",
-      "mechanic": "Inured to Aging, Disease, Pain and Poison; Superhuman Agility 2; Superhuman Brawn 2; Vicious 2 on Unarmed Strikes; enhanced jumping and difficult-terrain movement. Incompatible with other Large, Full-Body or Replacement augmentations.",
-      "rarity": "",
-      "weight": "",
-      "cost": "10+3§",
-      "category": "Other Item",
-      "subtype": "Silk Full-Body Augmentation",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "4 (Haqqislam 3)"
-    },
-    {
-      "type": "AR Program",
-      "name": "Saifari AR",
-      "brief": "Calming Maya overlay based on Saif’s Impossible Gardens.",
-      "mechanic": "Heal 3 Resolve per half-hour of use; if used daily, gain +1d20 on one Discipline test each week.",
-      "rarity": "",
-      "weight": "",
-      "cost": "5+1§",
-      "category": "Other Item",
-      "subtype": "AR Program",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "2 (Haqqislam 1)"
-    },
-    {
-      "type": "Augmentation",
-      "name": "S-Beacon",
-      "brief": "Silk-grafted locational beacon.",
-      "mechanic": "Triggers by a Brawn + Athletics D1 sequence or when the user takes 4+ physical damage; transmits location for one round. Source specifies Medicine/Hacking detection and D4 disabling tests.",
-      "rarity": "",
-      "weight": "",
-      "cost": "14+1§",
-      "category": "Other Item",
-      "subtype": "Silk Full-Body Augmentation",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "1"
-    },
-    {
-      "type": "Program",
-      "name": "SHIELD-2 Taharat",
-      "brief": "Medical Supportware against biological and toxic attack.",
-      "mechanic": "Requires Medicine Expertise 2. Standard Action: allies within Long range wearing Bioscanners gain +2 BTS against Biotech or Toxic attacks until the start of the user’s next turn.",
-      "rarity": "",
-      "weight": "",
-      "cost": "4+3§",
-      "category": "Other Item",
-      "subtype": "Supportware",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "3 (Haqqislam 2)"
-    },
-    {
-      "type": "Poison",
-      "name": "SHVYY Poison",
-      "brief": "Weapon-applied combat toxin.",
-      "mechanic": "Tech D1 to apply to a melee weapon; lasts 1d20 rounds +1 per Momentum. Adds Biotech, Grievous and +4 Complication Range; a complication on application causes a Wound to the user.",
-      "rarity": "",
-      "weight": "",
-      "cost": "1+5§",
-      "category": "Other Item",
-      "subtype": "Poison",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "3 (Illicit 1)"
-    },
-    {
-      "type": "Sensor",
-      "name": "Sniffer X",
-      "brief": "Deployable networked sensor package.",
-      "mechanic": "Functions as a sensor suite with X+1 sensor types; deploy as a Standard Action; active 12 hours. Allied Sniffers extend Observation coverage and provide the source Difficulty/Momentum benefits. Armour 1; Structure 1; Fragile.",
-      "rarity": "",
-      "weight": "",
-      "cost": "6+X§",
-      "category": "Other Item",
-      "subtype": "Sensor",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "X (Haqqislam 1)"
-    },
-    {
-      "type": "Drug",
-      "name": "Steady",
-      "brief": "Coordination-enhancing drug.",
-      "mechanic": "For 6 hours, gain +1d20 on Coordination-based tests but increase Difficulty of Brawn- and Agility-based tests by 1.",
-      "rarity": "",
-      "weight": "",
-      "cost": "4+1§",
-      "category": "Other Item",
-      "subtype": "Drug",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2 (Haqqislam 1)"
-    },
-    {
-      "type": "Program",
-      "name": "SWORD-X Samâ",
-      "brief": "Neural attack program.",
-      "mechanic": "Security Soak is treated as Acrobatics Focus. After a successful attack, source Momentum spend can inflict 3+6§ physical damage with Knockdown, Nonlethal, Stun and Vicious X; Wounds can Daze or knock out the target.",
-      "rarity": "",
-      "weight": "",
-      "cost": "4+2X§",
-      "category": "Other Item",
-      "subtype": "Attack Program",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "X+1 (Haqqislam X)"
-    },
-    {
-      "type": "Poison",
-      "name": "Tariki Poison",
-      "brief": "Fast injected/contact poison.",
-      "mechanic": "Contact/Injected; Complex; Progressive 1 (2 Momentum); 1 round; 1+4§ physical damage. Effect causes Dazed, or Staggered if already Dazed.",
-      "rarity": "",
-      "weight": "",
-      "cost": "3+3§",
-      "category": "Other Item",
-      "subtype": "Poison",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "3 (Haqqislam 2)"
-    },
-    {
-      "type": "Medical Facility",
-      "name": "Theraic Pod X",
-      "brief": "Advanced Haqqislamite recovery pod.",
-      "mechanic": "Physician may use Medicine instead of the patient’s Resistance for recovery; patient may assist. Pod contributes X Momentum toward removing additional Harms. Extended treatment can restore age-reduced attributes up to X, not above original values.",
-      "rarity": "",
-      "weight": "",
-      "cost": "16+2§",
-      "category": "Other Item",
-      "subtype": "Medical Facility",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 74,
-      "sourceRestriction": "X+2 (Haqqislam X+1)"
-    },
-    {
-      "type": "Program",
-      "name": "UPGRADE Bendelladj Archive X",
-      "brief": "Hacking Device code library for authentication attacks.",
-      "mechanic": "Successful Spoofing/Authentication hacks gain +X Authentication Quality; Gain Difficult Authentication tests reduce Difficulty by X. The source availability table lists rating 1 for Haqqislam purchase.",
-      "rarity": "",
-      "weight": "",
-      "cost": "4+2§",
-      "category": "Other Item",
-      "subtype": "Upgrade",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "4 (Haqqislam 3)"
-    },
-    {
-      "type": "Weapon",
-      "name": "Vrabec Pistol",
-      "brief": "Concealable Haqqislamite Breaker pistol.",
-      "mechanic": "Range R/C; 1+4§; Burst 1; 1H; Breaker; Concealed 1; Subtle 1; Vicious 1.",
-      "rarity": "",
-      "weight": "",
-      "cost": "6+1§",
-      "category": "Weapon",
-      "subtype": "Ranged Weapon",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 73,
-      "sourceRestriction": "2"
-    },
-    {
-      "type": "Armour",
-      "name": "Heavy Combat Armour - Azra'il Variant",
-      "brief": "Azra’il heavy combat armour variant.",
-      "mechanic": "Adds Exoskeleton 1 without reducing protection; its bulk adds +1 Complication Range to Agility tests.",
-      "rarity": "",
-      "weight": "Heavy",
-      "cost": "",
-      "category": "Armour",
-      "subtype": "Heavy Combat Armour Variant",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 72,
-      "sourceRestriction": ""
-    },
-    {
-      "type": "Armour",
-      "name": "Crashsuit - S&J Zephyr Armour",
-      "brief": "Long-distance motorcycle crashsuit variant.",
-      "mechanic": "Provides +1 Morale Soak and retains Armour Soak 1 to all locations after its normal crash protection dissolves.",
-      "rarity": "",
-      "weight": "Light",
-      "cost": "",
-      "category": "Armour",
-      "subtype": "Crashsuit Variant",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 68,
-      "sourceRestriction": ""
-    },
-    {
-      "type": "Armour",
-      "name": "Medium Combat Armour - Lasiq Variant",
-      "brief": "Lasiq medium combat armour variant.",
-      "mechanic": "Includes Hidden Armour 2, Chameleonwear and Climbing Plus.",
-      "rarity": "",
-      "weight": "Medium",
-      "cost": "",
-      "category": "Armour",
-      "subtype": "Medium Combat Armour Variant",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 72,
-      "sourceRestriction": ""
-    },
-    {
-      "type": "Armour",
-      "name": "Light Combat Armour - Bashi Bazouk Armour",
-      "brief": "Bashi Bazouk light combat armour variant.",
-      "mechanic": "Includes a built-in Vac Suit and Holomask.",
-      "rarity": "",
-      "weight": "Light",
-      "cost": "",
-      "category": "Armour",
-      "subtype": "Light Combat Armour Variant",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 71,
-      "sourceRestriction": ""
-    },
-    {
-      "type": "Explosive",
-      "name": "Fireflies Grenade",
-      "brief": "Micro-drone grenade that blankets a zone with low-grade sensors to expose opponents in cover.",
-      "mechanic": "Damage 2+5§; 1H; Disposable, Indiscriminate (Close), Nonlethal, Speculative Fire, Thrown, Unsubtle. After successful deployment, Analysis D1; spend Momentum to reduce effective Cover Soak by 1§ per Momentum. At 0 Cover Soak the target is Marked until leaving the zone.",
-      "rarity": "",
-      "weight": "Light",
-      "cost": "5+1§",
-      "category": "Other Item",
-      "subtype": "Explosive / Grenade",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Yu Jing Faction Book",
-      "sourcePage": 81,
-      "sourceRestriction": "2 (Yu Jing 1)"
-    },
-    {
-      "type": "Ammunition",
-      "name": "Palad Khik Ammo",
-      "brief": "Jopok/Yu Jing heavy grenade and mounted-weapon ammunition type.",
-      "mechanic": "Source table profile: Range C, M, or L depending on weapon; 2+4§; Burst 1; 2H or Mounted; Heavy/Grenades; Disposable, Indiscriminate (Close), Munition, Speculative Fire.",
-      "rarity": "",
-      "weight": "Light",
-      "cost": "2 + cost of Reload",
-      "category": "Resource",
-      "subtype": "Ammunition",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Yu Jing Faction Book",
-      "sourcePage": 82,
-      "sourceRestriction": "3 (Jopok 1, Yu Jing 2)",
-      "sourceProfile": "Source table name: Palad Khik (Ammo Type)."
-    },
-    {
-      "type": "Augmentation",
-      "name": "Fúcánglóng Arm (one arm)",
-      "brief": "Temperature-resistant extensible replacement arm popular with workers, bravos, and dissidents.",
-      "mechanic": "Gain +1d20 on tests relying on the replaced arm’s strength; that arm gains Armour Soak 2 and immunity to extreme temperatures; unarmed strikes gain +2§ and Extended Reach. If only one arm is replaced and Brawn is 9 or less, Agility tests have +1 Complication Range.",
-      "rarity": "",
-      "weight": "",
-      "cost": "6+2§",
-      "category": "Other Item",
-      "subtype": "Cybernetic Replacement (Limb)",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Yu Jing Faction Book",
-      "sourcePage": 81,
-      "sourceRestriction": "2 (Yu Jing 1)"
-    },
-    {
-      "type": "Augmentation",
-      "name": "Fúcánglóng Arms (both)",
-      "brief": "Paired temperature-resistant extensible replacement arms.",
-      "mechanic": "Gain +1d20 on tests relying on arm strength; both arms gain Armour Soak 2 and immunity to extreme temperatures; unarmed strikes gain +2§ and Extended Reach. The one-arm imbalance clause does not apply to a matched pair.",
-      "rarity": "",
-      "weight": "",
-      "cost": "10+2§",
-      "category": "Other Item",
-      "subtype": "Cybernetic Replacement (Limbs)",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Yu Jing Faction Book",
-      "sourcePage": 81,
-      "sourceRestriction": "2 (Yu Jing 1)"
-    },
-    {
-      "type": "Explosive",
-      "name": "Vigour Poison Charge X",
-      "brief": "Disposable charge dispersing Vigour Poison.",
-      "mechanic": "Source table profile: Damage X§; 1H; Comms, Disposable. Use the Vigour Poison X source rules for the poison effect.",
-      "rarity": "",
-      "weight": "Light",
-      "cost": "4X+X§",
-      "category": "Other Item",
-      "subtype": "Explosive / Charge",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Yu Jing Faction Book",
-      "sourcePage": 81,
-      "sourceRestriction": "5 (Dissident 4)"
-    },
-    {
-      "type": "Weapon",
-      "name": "Yánda (CC)",
-      "brief": "Hsien ceremonial/combat blade listed as a Sword of Office variant in the Imperial Ranks Table.",
-      "mechanic": "Use the Sword of Office weapon profile; Yánda is its Hsien variant.",
-      "rarity": "",
-      "weight": "Light",
-      "cost": "",
-      "category": "Weapon",
-      "subtype": "Melee Weapon",
-      "loadoutEligible": true,
-      "loadoutConditional": false,
-      "source": "Infinity RPG — Yu Jing Faction Book",
-      "sourcePage": 93,
-      "sourceProfile": "Imperial Ranks Table: Yánda (Variant Sword of Office)."
     }
   ],
   "conditions": [
@@ -13584,19 +14502,23 @@ window.INFINITY_DATA = {
     },
     {
       "faction": "Nomads",
-      "subfaction": "A nation of independent motherships outside normal state control, famous for hackers, radicals, labourers, and black-market expertise.",
-      "homeworld": "Bakunin, Corregidor, Tunguska",
-      "theme": "Freedom, hacking, black markets, anarchic innovation, shipborn culture",
+      "subfaction": "Bakunin, Corregidor and Tunguska: three independent motherships bound by opposition to the established powers and by their free, Arachne-based datasphere.",
+      "homeworld": "Bakunin, Corregidor, Tunguska, Planet, Other Faction, Commercial Mission, Orbitals, Human Edge",
+      "theme": "Independent mothership nation; Arachne, transhuman experimentation, shipboard labour, legal and information security, anti-ALEPH culture.",
       "suggested_traits": "Data Anarchist; Maya Native; Free Thinker; Nomad Shipborn",
-      "suggested_talents": "Nomad Anarch"
+      "suggested_talents": "Nomad Anarch",
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 4
     },
     {
       "faction": "Nomads - Bakunin Praxis",
       "subfaction": "Radical body-modification, experimental medicine, and extreme social freedom aboard Bakunin.",
-      "homeworld": "Bakunin, Praxis labs, Nomad mothership habitats",
+      "homeworld": "Bakunin, Commercial Mission, Orbitals, Human Edge",
       "theme": "Body modification, biotechnology, social experimentation",
       "suggested_traits": "Praxis Modified; Bakunin Social Energy",
-      "suggested_talents": "Praxis Bodysmith"
+      "suggested_talents": "Praxis Bodysmith",
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 12
     },
     {
       "faction": "Nomads - Clockmakers",
@@ -13609,10 +14531,12 @@ window.INFINITY_DATA = {
     {
       "faction": "Nomads - Corregidor Jurisdictional Command",
       "subfaction": "Hard-bitten ship crews, mercenaries, and zero-g fighters from Corregidor.",
-      "homeworld": "Corregidor, shipboard habitats, mercenary contracts",
+      "homeworld": "Corregidor, Commercial Mission, Orbitals, Human Edge",
       "theme": "Boarding actions, EVA, toughness, labour crews",
       "suggested_traits": "Corregidor G-Time Veteran; Mothership Native",
-      "suggested_talents": "Corregidor Zero-G Fighter"
+      "suggested_talents": "Corregidor Zero-G Fighter",
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 24
     },
     {
       "faction": "Nomads - Mobile Brigada",
@@ -13633,18 +14557,22 @@ window.INFINITY_DATA = {
     {
       "faction": "Nomads - Tunguska Data Markets",
       "subfaction": "Information brokers, secure-bank specialists, and cyberwarfare elites from Tunguska.",
-      "homeworld": "Tunguska, secure data markets, Nomad mothership infrastructure",
+      "homeworld": "Tunguska, Commercial Mission, Orbitals, Human Edge",
       "theme": "Black data, contracts, Hacking, finance and leverage",
       "suggested_traits": "Tunguska Data Broker; Arachne Native",
-      "suggested_talents": "Tunguska Secure Data Vault"
+      "suggested_talents": "Tunguska Secure Data Vault",
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 33
     },
     {
       "faction": "Nomads - Tunguska Interventors",
       "subfaction": "Elite Nomad hackers and cyberwarfare specialists famous for dominating quantronic battlespaces.",
-      "homeworld": "Tunguska, Nomad mothership infrastructure, secure data markets",
+      "homeworld": "Tunguska, Commercial Mission, Orbitals, Human Edge",
       "theme": "Hacking, counter-intrusion, cyber dominance, black-market information",
       "suggested_traits": "Interventor Training; Data Ghost; System Cracker",
-      "suggested_talents": "Tunguska Interventor Program"
+      "suggested_talents": "Tunguska Interventor Program",
+      "source": "Infinity RPG — Nomads Faction Book",
+      "sourcePage": 33
     },
     {
       "faction": "Nomads - Zond Remote Controllers",
@@ -14041,6 +14969,7 @@ window.INFINITY_DATA = {
       "combat deployments",
       "Combined Army deployments",
       "Combined Civilisation space",
+      "Commercial Mission",
       "Concilium Prima",
       "contested warzones",
       "contested Yu Jing border regions",
@@ -14150,6 +15079,7 @@ window.INFINITY_DATA = {
       "orbital habitats",
       "orbital staging points",
       "orbital stations",
+      "Orbitals, Human Edge",
       "Ovsyanka (Tartary)",
       "PanOceanian bases",
       "PanOceanian black operations",
@@ -14167,7 +15097,10 @@ window.INFINITY_DATA = {
       "Pax",
       "peacekeeping deployments",
       "Pianli",
+      "Planet, Other Faction",
       "Poictesme",
+      "Praxis Black Labs",
+      "Praxis Black Ships",
       "Praxis labs",
       "proxy bodies across the Human Sphere",
       "remote bays",
@@ -14220,6 +15153,7 @@ window.INFINITY_DATA = {
       "Tsitadel (Tartary)",
       "Tuathcruithne",
       "Tunguska",
+      "Undocumented Orbital",
       "Various worlds",
       "Varuna",
       "Varuna — Atlantea Waters",
@@ -14245,6 +15179,7 @@ window.INFINITY_DATA = {
       "Zhöu Zhöug"
     ],
     "careerRoles": [
+      "‘Cat Squad Member",
       "112 Emergency Responder",
       "Advanced Infowar Analyst",
       "AI Aspect",
@@ -14260,22 +15195,28 @@ window.INFINITY_DATA = {
       "Assault Pack Leader",
       "Assault Pack Member",
       "Bakunin Social Operator",
+      "Barrister Corps",
       "Bartender",
       "Beastmaster",
       "Bodyguard",
       "Bōsōzoku",
+      "BouBoutique Clerk",
       "Bratva Gangster",
       "Caledonian Noble",
       "Caravaner",
       "Celestial Guard",
+      "Chimera",
       "Claymore Duellist",
+      "Clockmaker",
       "Combat Pilot",
       "Combined Army Operative",
       "Corporate Executive",
       "Corregidor Crew",
       "Corsair",
+      "Criminal",
       "Croc Man",
       "Deep-Sea Explorer",
+      "Die Morlock Gruppe",
       "Diplomat",
       "Diwân Functionary",
       "Doctor",
@@ -14284,6 +15225,7 @@ window.INFINITY_DATA = {
       "Dog-Bowl Player",
       "EI Handler",
       "Engineer",
+      "Entertainer",
       "Explorer",
       "Faction Prestige",
       "Fighter Pilot",
@@ -14303,6 +15245,7 @@ window.INFINITY_DATA = {
       "Hassassin Bahram",
       "Hassassin Exemplar",
       "Hassassin Fiday",
+      "Heavy Industry",
       "Heavy Infantry",
       "Helot Militia",
       "Hexas Agent",
@@ -14312,7 +15255,10 @@ window.INFINITY_DATA = {
       "Infowar Specialist",
       "Intelligence Operative",
       "Internal Affairs Agent",
+      "Interventor",
+      "Investigative Journalist",
       "Irmandinhos Smuggler",
+      "Jaguar",
       "Jopok",
       "Khawarij",
       "Knight",
@@ -14327,12 +15273,16 @@ window.INFINITY_DATA = {
       "Maghariba Guard",
       "Maya Personality",
       "Mayacast Support Staff",
+      "Medical",
       "Medical Researcher",
       "Merovingian Commercial Agent",
+      "Military",
       "Militia Member",
       "Morat Warrior",
       "Mothership Crew",
+      "Mothership Security Corps",
       "Muhafiz Agent",
+      "Negotiator",
       "NeoBushi",
       "Neoterran Special Officer",
       "Ninja",
@@ -14343,11 +15293,17 @@ window.INFINITY_DATA = {
       "Oniwaban",
       "Order Sergeant",
       "Paratrooper",
+      "Personal Security",
+      "Pilot",
       "Praxis Bodymodder",
+      "Praxis Scientist",
       "Priest",
+      "Provocateur",
       "Raider",
       "Recon",
       "Remote Controller",
+      "Remote Operator",
+      "Reverend Agent",
       "Scavenger",
       "Scuball Player",
       "Sensorium Mayacaster",
@@ -14359,17 +15315,21 @@ window.INFINITY_DATA = {
       "Spetsnaz",
       "Sports Personality",
       "Starfish",
+      "Starswimmer",
       "Steel Phalanx Operative",
       "Subversive",
       "Sygmaa Diplomat",
       "TAG Pilot",
       "Terraforming Scientist",
+      "Test Subject",
+      "Tinkerer",
       "Tokusetsu",
       "Tunguska Data Broker",
       "Varunan Guide",
       "Voidfarer",
       "Voidship Engineer",
       "Volk",
+      "Wrench",
       "Wú Míng Assault Corps",
       "Wulver Shock Troop",
       "Yănjīng Agent",
@@ -15624,7 +16584,32 @@ window.INFINITY_DATA = {
       "Dogface",
       "Wulver",
       "Antipode",
-      "Helot"
+      "Helot",
+      "Uplift"
+    ],
+    "nomadHeritage": [
+      "Bakunian",
+      "Corregidoran",
+      "Tunguskan",
+      "Lub’",
+      "Missionary",
+      "Vagrant"
+    ],
+    "upliftSpecies": [
+      "Avian",
+      "Canine",
+      "Cetacean",
+      "Cephalopod",
+      "Feline",
+      "Simian",
+      "Suidae"
+    ],
+    "upliftBody": [
+      "Custom Biomorph — Small",
+      "Custom Biomorph — Medium",
+      "Custom Biomorph — Large",
+      "Lhost",
+      "Remote Specialist"
     ]
   },
   "homeworldsByFaction": {
@@ -15648,19 +16633,18 @@ window.INFINITY_DATA = {
     ],
     "Nomads - Bakunin Praxis": [
       "Bakunin",
-      "Praxis labs",
-      "Nomad mothership habitats"
+      "Commercial Mission",
+      "Orbitals, Human Edge"
     ],
     "Nomads - Corregidor Jurisdictional Command": [
       "Corregidor",
-      "shipboard habitats",
-      "mercenary contracts",
-      "zero-g work modules"
+      "Commercial Mission",
+      "Orbitals, Human Edge"
     ],
     "Nomads - Tunguska Data Markets": [
       "Tunguska",
-      "secure data markets",
-      "Nomad mothership infrastructure"
+      "Commercial Mission",
+      "Orbitals, Human Edge"
     ],
     "Combined Army": [
       "Combined Civilisation space",
@@ -15713,7 +16697,9 @@ window.INFINITY_DATA = {
       "Bakunin",
       "Corregidor",
       "Tunguska",
-      "Nomad mothership habitats"
+      "Planet, Other Faction",
+      "Commercial Mission",
+      "Orbitals, Human Edge"
     ],
     "O-12 / Nomads": [
       "Circulars",
@@ -16554,6 +17540,44 @@ window.INFINITY_DATA = {
       "Varuna — Kumari Kandam Waters",
       "Varuna — Lemurian Waters",
       "Varuna — Katallpeac Lilypad"
+    ],
+    "Nomads - Clockmakers": [
+      "Bakunin",
+      "Corregidor",
+      "Tunguska",
+      "Commercial Mission",
+      "Orbitals, Human Edge"
+    ],
+    "Nomads - Mobile Brigada": [
+      "Corregidor",
+      "Bakunin",
+      "Tunguska",
+      "Commercial Mission",
+      "Orbitals, Human Edge"
+    ],
+    "Nomads - Spektrs": [
+      "Tunguska",
+      "Bakunin",
+      "Corregidor",
+      "Commercial Mission",
+      "Orbitals, Human Edge"
+    ],
+    "Nomads - Tunguska Interventors": [
+      "Tunguska",
+      "Commercial Mission",
+      "Orbitals, Human Edge"
+    ],
+    "Nomads - Zond Remote Controllers": [
+      "Bakunin",
+      "Corregidor",
+      "Tunguska",
+      "Commercial Mission",
+      "Orbitals, Human Edge"
+    ],
+    "Nomads - Uplift": [
+      "Praxis Black Labs",
+      "Praxis Black Ships",
+      "Undocumented Orbital"
     ]
   },
   "careerOptionsByFaction": {
@@ -16610,6 +17634,25 @@ window.INFINITY_DATA = {
       "Order Sergeant",
       "Knight",
       "Croc Man"
+    ],
+    "Nomads": [
+      "Special Forces",
+      "Intelligence Operative",
+      "Reverend Agent",
+      "Heavy Industry",
+      "Investigative Journalist",
+      "Hacker",
+      "‘Cat Squad Member",
+      "Jaguar",
+      "Negotiator",
+      "Barrister Corps",
+      "Chimera",
+      "Praxis Scientist",
+      "Infiltrator",
+      "Interventor",
+      "Mothership Security Corps",
+      "Clockmaker",
+      "Provocateur"
     ]
   },
   "equipmentTaxonomy": {
@@ -19813,6 +20856,241 @@ window.INFINITY_DATA = {
       "brief": "Japanese warrior-aristocrat defined by Bushido, honour, and martial duty.",
       "special": "During the Uprising era, Decision Nine changes status as specified by the source.",
       "source": "Infinity RPG — Yu Jing Faction Book"
+    },
+    "‘Cat Squad Member": {
+      "sourcePage": 62,
+      "mandatorySkills": [
+        "Ballistics",
+        "Extraplanetary",
+        "Hacking"
+      ],
+      "electiveSkills": [
+        "See ‘Cat Squads Table"
+      ],
+      "earnings": "By squad",
+      "gear": [
+        "See ‘Cat Squads Table"
+      ],
+      "special": "First phase determine Tomcats/Hellcats/Wildcats, then keep squad. Later switch requires a D1 hazard test or 1 Life Point.",
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Barrister Corps": {
+      "sourcePage": 63,
+      "mandatorySkills": [
+        "Analysis",
+        "Education",
+        "Psychology"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Education",
+        "Persuade"
+      ],
+      "earnings": "2+5§",
+      "gear": [
+        "Neural Hacking Socket",
+        "Assault Hacking Device"
+      ],
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Clockmaker": {
+      "sourcePage": 63,
+      "mandatorySkills": [
+        "Discipline",
+        "Education",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Acrobatics",
+        "Lifestyle",
+        "Tech"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Neural Comlog",
+        "D-Charge ×3",
+        "Powered Multitool",
+        "Repair Kit"
+      ],
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Chimera": {
+      "sourcePage": 63,
+      "mandatorySkills": [
+        "Acrobatics",
+        "Athletics",
+        "Close Combat"
+      ],
+      "electiveSkills": [],
+      "earnings": "0+4§",
+      "gear": [],
+      "brief": "Exotic transhuman body-modification career.",
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Mothership Security Corps": {
+      "sourcePage": 65,
+      "mandatorySkills": [
+        "Ballistics",
+        "Extraplanetary",
+        "Observation"
+      ],
+      "electiveSkills": [
+        "Command",
+        "Hacking",
+        "Medicine"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Armoured Clothing (Uniform)",
+        "Hacking Device or MediKit",
+        "Combi Rifle or Spitfire"
+      ],
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Investigative Journalist": {
+      "sourcePage": 65,
+      "mandatorySkills": [
+        "Stealth",
+        "Persuade",
+        "Observation"
+      ],
+      "electiveSkills": [
+        "Hacking",
+        "Education",
+        "Thievery"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Recorder or AR Eye Implants",
+        "Analysis Suite",
+        "Breaking & Entering Kit"
+      ],
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Negotiator": {
+      "sourcePage": 66,
+      "mandatorySkills": [
+        "Discipline",
+        "Lifestyle",
+        "Persuade"
+      ],
+      "electiveSkills": [
+        "Command",
+        "Observation",
+        "Persuade"
+      ],
+      "earnings": "1+4§",
+      "gear": [
+        "Aletheia Suite",
+        "Negotiator’s Suite (7 days)",
+        "Armoured Clothing (High Fashion)",
+        "Cosmetics Kit"
+      ],
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Provocateur": {
+      "sourcePage": 66,
+      "mandatorySkills": [
+        "Lifestyle",
+        "Persuade",
+        "Thievery"
+      ],
+      "electiveSkills": [
+        "Acrobatics",
+        "Hacking",
+        "Tech"
+      ],
+      "earnings": "0+4§",
+      "gear": [
+        "Freedom Kit",
+        "Fake ID 2",
+        "Recorder",
+        "Stealth Repeater",
+        "Optical Disruption Device"
+      ],
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Die Morlock Gruppe": {
+      "sourcePage": 92,
+      "mandatorySkills": [
+        "Athletics",
+        "Close Combat",
+        "Thievery"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Close Combat",
+        "Psychology"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Combi Rifle or Chain Rifle",
+        "D-Charges ×2",
+        "Smoke Grenades ×2",
+        "Sword"
+      ],
+      "special": "Roll on Chaotic Gear Table each time this career is taken.",
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Entertainer": {
+      "sourcePage": 93,
+      "mandatorySkills": [
+        "Acrobatics",
+        "Persuade",
+        "Psychology"
+      ],
+      "electiveSkills": [
+        "Athletics",
+        "Lifestyle",
+        "Observation"
+      ],
+      "earnings": "2+1§",
+      "gear": [
+        "Cosmetics Kit",
+        "SecurCuffs",
+        "Recorder",
+        "Nitrocane ×2",
+        "Naughties"
+      ],
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Starswimmer": {
+      "sourcePage": 93,
+      "mandatorySkills": [
+        "Discipline",
+        "Stealth",
+        "Spacecraft"
+      ],
+      "electiveSkills": [
+        "Extraplanetary",
+        "Stealth",
+        "Spacecraft"
+      ],
+      "earnings": "2+2§",
+      "gear": [
+        "Immersive Pilot Gear",
+        "Crashsuit"
+      ],
+      "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Tinkerer": {
+      "sourcePage": 93,
+      "mandatorySkills": [
+        "Analysis",
+        "Tech",
+        "Thievery"
+      ],
+      "electiveSkills": [
+        "Education",
+        "Hacking",
+        "Science"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Powered Multitool",
+        "Internal Pocket 1 or Geist Upgrade"
+      ],
+      "source": "Infinity RPG — Nomads Faction Book"
     }
   },
   "hostHeritage": {
@@ -19822,13 +21100,15 @@ window.INFINITY_DATA = {
       "Dogface",
       "Wulver",
       "Antipode",
-      "Helot"
+      "Helot",
+      "Uplift"
     ],
     "notes": [
       "The former Ariadna - Dog-Blooded and Ariadna - Antipode faction choices are retained as source records for migration/reference but hidden from the selectable Faction list.",
       "Dogface transformation modifiers are applied to effective Main Skill totals without overwriting the player's underlying ratings.",
       "Host / Heritage is separate from Career. Ariadna supports Dogface, Wulver and Antipode; PanOceania supports Helot as a source-backed alien Birth Host.",
-      "The legacy Helots faction selector is migrated to PanOceania + Helot Host / Heritage."
+      "The legacy Helots faction selector is migrated to PanOceania + Helot Host / Heritage.",
+      "Nomad Uplifts are a distinct Birth Host: Species and physical Body/Platform are separate choices, applied together without consuming ordinary Trait slots."
     ],
     "options": {
       "Standard / Human": {
@@ -20011,6 +21291,22 @@ window.INFINITY_DATA = {
         "vigorSoakBonus": 0,
         "lifePointCost": 2,
         "rules": "AWA +1, PER +1, WIL −1. Amphibious; Inured to Cold; begins with Strong Swimmer. Pressure Sensitive and Pressure Modifications apply. Helot Lifepath uses PanOceania for Faction and Heritage and Varuna for Homeworld, with a Sissolu Waters homeland."
+      },
+      "Uplift": {
+        "label": "Uplift",
+        "source": "Infinity RPG — Nomads Faction Book",
+        "sourcePage": 85,
+        "traitName": null,
+        "factionScope": "Nomads",
+        "forms": [
+          "Uplift — see Species & Body / Platform fields"
+        ],
+        "defaultForm": "Uplift — see Species & Body / Platform fields",
+        "mainSkillModifiers": {},
+        "vigorBonus": 0,
+        "vigorSoakBonus": 0,
+        "lifePointCost": "Species + Host",
+        "rules": "Roll or choose an Uplift Species (pp. 85–86) and independently choose a body/platform (pp. 87–88). Uplifts use Nomad faction, Bakunian heritage, Praxis Lab origin, Uplift status/awakening and species career tables. Most ordinary human careers require GM approval."
       }
     }
   },
@@ -21954,9 +23250,1325 @@ window.INFINITY_DATA = {
       "The Varuna homeland table extraction prints 'Hawaki Archipelago'; Chapter 4 identifies Hawaiki, used by the sheet.",
       "The source Lobbyist/Maya Personality profile layout is preserved by named profile rather than relying on column order in extracted PDF text."
     ]
+  },
+  "nomadsReference": {
+    "source": "Infinity RPG — Nomads Faction Book",
+    "sourceFile": "MUH050222 Infinity RPG - Nomads Faction Book.pdf",
+    "product": "MUH050222",
+    "chapters": {
+      "faction": 4,
+      "bakunin": 12,
+      "corregidor": 24,
+      "tunguska": 33,
+      "characters": 57,
+      "gear": 67,
+      "uplifts": 80,
+      "upliftCharacters": 85,
+      "bioengineering": 95
+    },
+    "note": "Nomad faction-book variant Lifepath rules supersede corresponding Corebook entries when used.",
+    "motherships": [
+      {
+        "name": "Bakunin",
+        "chapter": 12,
+        "focus": "Biotechnology, Praxis, body modification, open experimentation, Social Energy, Moderators and Observants."
+      },
+      {
+        "name": "Corregidor",
+        "chapter": 24,
+        "focus": "Hard-edged shipboard labour, repair, EVA, mercenary military and the Jurisdictional Command."
+      },
+      {
+        "name": "Tunguska",
+        "chapter": 33,
+        "focus": "Banking, data security, contract law, the Dragnet, Interventors and secure information markets."
+      }
+    ],
+    "heritages": [
+      {
+        "region": "Bakunin",
+        "heritage": "Bakunian",
+        "note": "Radical beliefs and conflicts with authority."
+      },
+      {
+        "region": "Corregidor",
+        "heritage": "Corregidoran",
+        "note": "Toughness, bluntness and survival amid shipboard labour."
+      },
+      {
+        "region": "Tunguska",
+        "heritage": "Tunguskan",
+        "note": "Financial leverage, contractual networks, criminal ties."
+      },
+      {
+        "region": "Planet, Other Faction",
+        "heritage": "Lub’",
+        "note": "Off-mothership outsider; also applied on defecting to the Nomads."
+      },
+      {
+        "region": "Commercial Mission",
+        "heritage": "Missionary",
+        "note": "Broad inter-faction contacts through Commercial Missions."
+      },
+      {
+        "region": "Orbitals, Human Edge",
+        "heritage": "Vagrant",
+        "note": "Independent orbital or Human Edge Nomad; origin mothership 1–2 Bakunin, 3–4 Corregidor, 5–6 Tunguska on 1d6."
+      }
+    ],
+    "socialStatusColumns": [
+      "Bakunian",
+      "Corregidoran",
+      "Tunguskan",
+      "Lub’",
+      "Missionary",
+      "Vagrant"
+    ],
+    "socialStatusTable": [
+      {
+        "roll": "2",
+        "values": [
+          "Underclass",
+          "Underclass",
+          "Demogrant",
+          "Underclass",
+          "Underclass",
+          "Underclass"
+        ]
+      },
+      {
+        "roll": "3–4",
+        "values": [
+          "Demogrant",
+          "Underclass",
+          "Demogrant",
+          "Demogrant",
+          "Demogrant",
+          "Underclass"
+        ]
+      },
+      {
+        "roll": "5–6",
+        "values": [
+          "Middle",
+          "Demogrant",
+          "Middle",
+          "Demogrant",
+          "Middle",
+          "Demogrant"
+        ]
+      },
+      {
+        "roll": "7–8",
+        "values": [
+          "Middle",
+          "Middle",
+          "Upper",
+          "Middle",
+          "Middle",
+          "Middle"
+        ]
+      },
+      {
+        "roll": "9–10",
+        "values": [
+          "Upper",
+          "Middle",
+          "Upper",
+          "Middle",
+          "Upper",
+          "Middle"
+        ]
+      },
+      {
+        "roll": "11",
+        "values": [
+          "Elite",
+          "Upper",
+          "Elite",
+          "Upper",
+          "Elite",
+          "Middle"
+        ]
+      },
+      {
+        "roll": "12",
+        "values": [
+          "Hyper-Elite",
+          "Elite",
+          "Hyper-Elite",
+          "Elite",
+          "Elite",
+          "Upper"
+        ]
+      }
+    ],
+    "socialClasses": [
+      {
+        "roll": "2",
+        "status": "Underclass",
+        "attribute": "Willpower",
+        "earnings": 1
+      },
+      {
+        "roll": "3–5",
+        "status": "Demogrant",
+        "attribute": "Personality",
+        "earnings": 2
+      },
+      {
+        "roll": "6–8",
+        "status": "Middle",
+        "attribute": "Willpower",
+        "earnings": 3
+      },
+      {
+        "roll": "9–10",
+        "status": "Upper",
+        "attribute": "Agility",
+        "earnings": 4
+      },
+      {
+        "roll": "11",
+        "status": "Elite",
+        "attribute": "Personality",
+        "earnings": 5
+      },
+      {
+        "roll": "12",
+        "status": "Hyper-Elite",
+        "attribute": "Willpower",
+        "earnings": 6
+      }
+    ],
+    "homeEnvironments": [
+      {
+        "roll": "1",
+        "name": "Bohemian",
+        "attribute": "Personality",
+        "skill": "Education"
+      },
+      {
+        "roll": "2",
+        "name": "Violent",
+        "attribute": "Brawn",
+        "skill": "Acrobatics"
+      },
+      {
+        "roll": "3",
+        "name": "Garage Rat",
+        "attribute": "Awareness",
+        "skill": "Tech"
+      },
+      {
+        "roll": "4",
+        "name": "Old-School",
+        "attribute": "Willpower",
+        "skill": "Pilot"
+      },
+      {
+        "roll": "5",
+        "name": "Regimented",
+        "attribute": "Intelligence",
+        "skill": "Discipline"
+      },
+      {
+        "roll": "6",
+        "name": "High Society",
+        "attribute": "Personality",
+        "skill": "Lifestyle"
+      }
+    ],
+    "adolescentEvents": [
+      {
+        "roll": "1",
+        "trait": "Known Black Hat",
+        "effect": "Hacking +1; Interventor can be first career."
+      },
+      {
+        "roll": "2",
+        "trait": "Void Terror",
+        "effect": "Morale −1; +2 complication range on Extraplanetary."
+      },
+      {
+        "roll": "3",
+        "trait": "Obsessive Tinkerer",
+        "effect": "Geist Intelligence +1; Firewall −1."
+      },
+      {
+        "roll": "4",
+        "trait": "Jinxed",
+        "effect": "Spend 1d6 years in prison; Extraplanetary +1; Bureau Noir rival/contact."
+      },
+      {
+        "roll": "5",
+        "trait": "Insatiable Curiosity",
+        "effect": "Science +1; Praxis Scientist can be first career."
+      },
+      {
+        "roll": "6",
+        "trait": "Glitchy Augs",
+        "effect": "Intelligence +1; +1 complication range on Intelligence-based tests."
+      },
+      {
+        "roll": "7",
+        "trait": "Reckless",
+        "effect": "Pilot +1."
+      },
+      {
+        "roll": "8",
+        "trait": "Stubborn",
+        "effect": "Vigour −1; Morale +1."
+      },
+      {
+        "roll": "9",
+        "trait": "Hyper-Sensitive Skin",
+        "effect": "Brawn −1."
+      },
+      {
+        "roll": "10",
+        "trait": "Mafia Connections",
+        "effect": "Education +1; 10 Asset debt; university contact; Barrister Corps can be first career."
+      },
+      {
+        "roll": "11",
+        "trait": "Shredded Immune System",
+        "effect": "+2 complication range on Resistance; correction costs 4+4§ Assets."
+      },
+      {
+        "roll": "12",
+        "trait": "Inhuman Appearance",
+        "effect": "Gain Cosmetic Augmentation 2; Chimera can be first career."
+      },
+      {
+        "roll": "13",
+        "trait": "Trouble Magnet",
+        "effect": "Criminal Record; prison for 1d6 years or Jaguar as first career."
+      },
+      {
+        "roll": "14",
+        "trait": "The Usual Suspect",
+        "effect": "Thievery +1; +1 difficulty to Stealth when recognised."
+      },
+      {
+        "roll": "15",
+        "trait": "Experimental Insides",
+        "effect": "+2 complication range on Resistance; Vigour +1."
+      },
+      {
+        "roll": "16",
+        "trait": "Bad Company",
+        "effect": "Criminal Record; one year prison; Tech +1."
+      },
+      {
+        "roll": "17",
+        "trait": "Person of Interest",
+        "effect": "Hacking +1."
+      },
+      {
+        "roll": "18",
+        "trait": "Early-Access Wetware",
+        "effect": "Brawn +1."
+      },
+      {
+        "roll": "19",
+        "trait": "Sellout",
+        "effect": "Defect to new faction; faction rolls 5, 6 or 20 instead indicate a Double Agent."
+      },
+      {
+        "roll": "20",
+        "trait": "Cynical",
+        "effect": "Character dies and is resurrected per Corebook rules."
+      }
+    ],
+    "careerTable": [
+      {
+        "range": "1",
+        "career": "Special Forces",
+        "flags": [
+          "Corebook"
+        ]
+      },
+      {
+        "range": "2",
+        "career": "Intelligence Operative",
+        "flags": [
+          "Corebook"
+        ]
+      },
+      {
+        "range": "3",
+        "career": "Reverend Agent",
+        "flags": [
+          "Corebook",
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "4",
+        "career": "Heavy Industry",
+        "flags": [
+          "Corebook"
+        ]
+      },
+      {
+        "range": "5",
+        "career": "Investigative Journalist",
+        "flags": [
+          "Corebook"
+        ]
+      },
+      {
+        "range": "6",
+        "career": "Hacker",
+        "flags": [
+          "Corebook"
+        ]
+      },
+      {
+        "range": "7",
+        "career": "‘Cat Squad Member",
+        "flags": []
+      },
+      {
+        "range": "8",
+        "career": "Jaguar",
+        "flags": []
+      },
+      {
+        "range": "9",
+        "career": "Negotiator",
+        "flags": []
+      },
+      {
+        "range": "10",
+        "career": "Barrister Corps",
+        "flags": [
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "11",
+        "career": "Chimera",
+        "flags": []
+      },
+      {
+        "range": "12",
+        "career": "Praxis Scientist",
+        "flags": []
+      },
+      {
+        "range": "13",
+        "career": "Infiltrator",
+        "flags": []
+      },
+      {
+        "range": "14",
+        "career": "Interventor",
+        "flags": [
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "15",
+        "career": "Praxis Scientist",
+        "flags": []
+      },
+      {
+        "range": "16",
+        "career": "Mothership Security Corps",
+        "flags": [
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "17",
+        "career": "Clockmaker",
+        "flags": [
+          "Faction prerequisite"
+        ]
+      },
+      {
+        "range": "18",
+        "career": "Provocateur",
+        "flags": []
+      },
+      {
+        "range": "19–20",
+        "career": "Roll on Faction Table of Your Choice",
+        "flags": []
+      }
+    ],
+    "heritageCareers": {
+      "Bakunian": [
+        "Chimera",
+        "Clockmaker",
+        "Provocateur"
+      ],
+      "Corregidoran": [
+        "‘Cat Squad Member",
+        "Jaguar",
+        "Heavy Industry"
+      ],
+      "Tunguskan": [
+        "Barrister Corps",
+        "Hacker",
+        "Interventor"
+      ],
+      "Lub’": [
+        "Infiltrator",
+        "Investigative Journalist",
+        "Pilot"
+      ],
+      "Missionary": [
+        "Bounty Hunter",
+        "Diplomat",
+        "Negotiator"
+      ]
+    },
+    "heritageCareerRule": "Hazarding a recommended Heritage Career reduces the hazard difficulty by 1 step. Other faction prerequisites still apply; bypass requires source-authorised exceptions such as spending 1 Life Point.",
+    "careerEventRouting": [
+      {
+        "roll": "1–3",
+        "result": "Nomad Career Event Table"
+      },
+      {
+        "roll": "4",
+        "result": "Career Event Table A"
+      },
+      {
+        "roll": "5",
+        "result": "Career Event Table B"
+      },
+      {
+        "roll": "6",
+        "result": "Career Event Table C"
+      }
+    ],
+    "careerEvents": [
+      {
+        "roll": "1",
+        "result": "Praxis experimental program.",
+        "effect": "Increase an Attribute by 1 with 10 Asset debt, or gain Praxis Black Labs contact."
+      },
+      {
+        "roll": "2",
+        "result": "Corporate buyout and layoffs.",
+        "effect": "Accept offer: Earnings +1 and an associated trait; decline: Fired."
+      },
+      {
+        "roll": "3",
+        "result": "Doppelgänger attack.",
+        "effect": "Gain Trait: Cube Doppelgänger."
+      },
+      {
+        "roll": "4",
+        "result": "Ship pilot emergency.",
+        "effect": "Spacecraft +1."
+      },
+      {
+        "roll": "5",
+        "result": "Emergency EVA rescue.",
+        "effect": "Gain contacts in random faction."
+      },
+      {
+        "roll": "6",
+        "result": "Memetic virus vs ALEPH.",
+        "effect": "Firewall −1."
+      },
+      {
+        "roll": "7",
+        "result": "Zero-G ship repairs.",
+        "effect": "Extraplanetary +1."
+      },
+      {
+        "roll": "8",
+        "result": "Geist personality tinkering.",
+        "effect": "Gain Quirky Geist; Geist Personality +1."
+      },
+      {
+        "roll": "9",
+        "result": "Stranded on planet.",
+        "effect": "Survival +1, 2 Asset debt to rescuers."
+      },
+      {
+        "roll": "10",
+        "result": "Salvage Tinbot.",
+        "effect": "Gain Tinbot Remote and troublesome character trait."
+      },
+      {
+        "roll": "11",
+        "result": "Subdermal reinforcement.",
+        "effect": "Vigour −1; gain Subdermal Graft at chosen hit location."
+      },
+      {
+        "roll": "12",
+        "result": "Experimental brain surgery.",
+        "effect": "Intelligence −1."
+      },
+      {
+        "roll": "13",
+        "result": "Romantic partner suspected ALEPH Aspect.",
+        "effect": "Contact in random faction; GM determines nature."
+      },
+      {
+        "roll": "14",
+        "result": "Esoteric subculture.",
+        "effect": "Gain character trait reflecting association."
+      },
+      {
+        "roll": "15",
+        "result": "Tunguskan legal controversy.",
+        "effect": "Social Status −1 step or debt of 6+6§ Assets."
+      },
+      {
+        "roll": "16",
+        "result": "Troubled Tunguskan Elite.",
+        "effect": "Help: Criminal Record, 1d6 prison years, +10 Assets; refuse: Status −1, Discipline +1."
+      },
+      {
+        "roll": "17",
+        "result": "Hobby invention becomes a fad.",
+        "effect": "Gain 5 Assets."
+      },
+      {
+        "roll": "18",
+        "result": "Punch supervisor.",
+        "effect": "Fired; gain appropriate trait."
+      },
+      {
+        "roll": "19",
+        "result": "Airlock fatality.",
+        "effect": "Died and resurrected; gain associated trait."
+      },
+      {
+        "roll": "20",
+        "result": "Murphy’s Law.",
+        "effect": "Roll three more career events; repeated events possible."
+      }
+    ],
+    "catSquads": [
+      {
+        "roll": "1–7",
+        "squad": "Tomcats",
+        "electiveSkills": [
+          "Medicine",
+          "Spacecraft",
+          "Tech"
+        ],
+        "gear": [
+          "MediKit or Powered Multitool",
+          "Light Combat Armour",
+          "Combi Rifle"
+        ],
+        "earnings": "2+2§"
+      },
+      {
+        "roll": "8–12",
+        "squad": "Hellcats",
+        "electiveSkills": [
+          "Athletics",
+          "Medicine",
+          "Pilot"
+        ],
+        "gear": [
+          "Combat Jump Pack",
+          "Spitfire or Assault Hacking Device",
+          "Light Combat Armour"
+        ],
+        "earnings": "2+1§"
+      },
+      {
+        "roll": "13–20",
+        "squad": "Wildcats",
+        "electiveSkills": [
+          "Discipline",
+          "Resistance",
+          "Thievery"
+        ],
+        "gear": [
+          "Boarding Shotgun or Assault Hacking Device",
+          "Medium Combat Armour"
+        ],
+        "earnings": "1+2§"
+      }
+    ],
+    "doubleAgentRule": "Use current or true faction for rolls involving career/restrictions/tariffs; rolls using true faction double complication range. Double Agents retain distinct allegiances until exposed.",
+    "homelands": {
+      "Bakunin": {
+        "source": "Infinity RPG — Nomads Faction Book",
+        "page": 12,
+        "heritage": "Bakunian",
+        "region": "Nomad mothership"
+      },
+      "Corregidor": {
+        "source": "Infinity RPG — Nomads Faction Book",
+        "page": 24,
+        "heritage": "Corregidoran",
+        "region": "Nomad mothership"
+      },
+      "Tunguska": {
+        "source": "Infinity RPG — Nomads Faction Book",
+        "page": 33,
+        "heritage": "Tunguskan",
+        "region": "Nomad mothership"
+      },
+      "Planet, Other Faction": {
+        "source": "Infinity RPG — Nomads Faction Book",
+        "page": 57,
+        "heritage": "Lub’",
+        "region": "Off-mothership Nomad origin"
+      },
+      "Commercial Mission": {
+        "source": "Infinity RPG — Nomads Faction Book",
+        "page": 57,
+        "heritage": "Missionary",
+        "region": "Commercial Mission"
+      },
+      "Orbitals, Human Edge": {
+        "source": "Infinity RPG — Nomads Faction Book",
+        "page": 57,
+        "heritage": "Vagrant",
+        "region": "Orbital / Human Edge"
+      },
+      "Praxis Black Labs": {
+        "source": "Infinity RPG — Nomads Faction Book",
+        "page": 88,
+        "region": "Bakunin / Praxis",
+        "selectionRole": "Uplift Lab",
+        "languages": [
+          "German, English"
+        ]
+      },
+      "Praxis Black Ships": {
+        "source": "Infinity RPG — Nomads Faction Book",
+        "page": 88,
+        "region": "Bakunin / Praxis",
+        "selectionRole": "Uplift Lab",
+        "languages": [
+          "English plus Nomad mothership second language"
+        ]
+      },
+      "Undocumented Orbital": {
+        "source": "Infinity RPG — Nomads Faction Book",
+        "page": 88,
+        "region": "Bakunin / Praxis",
+        "selectionRole": "Uplift Lab",
+        "languages": [
+          "German plus Nomad mothership second language"
+        ]
+      }
+    },
+    "uplift": {
+      "sourcePage": 85,
+      "source": "Infinity RPG — Nomads Faction Book",
+      "lifePath": "Nomad faction and heritage, Bakunian heritage trait; born on Bakunin or Praxis Black Ships.",
+      "speciesRolls": [
+        {
+          "roll": "1",
+          "species": "Simian"
+        },
+        {
+          "roll": "2–5",
+          "species": "Cephalopod"
+        },
+        {
+          "roll": "6–8",
+          "species": "Avian"
+        },
+        {
+          "roll": "9–13",
+          "species": "Cetacean"
+        },
+        {
+          "roll": "14–16",
+          "species": "Canine"
+        },
+        {
+          "roll": "17–18",
+          "species": "Suidae"
+        },
+        {
+          "roll": "19–20",
+          "species": "Feline"
+        }
+      ],
+      "species": {
+        "Avian": {
+          "lifePoints": 2,
+          "mainSkillModifiers": {
+            "Awareness": 1
+          },
+          "trait": "Inquisitive",
+          "abilities": [
+            "Hawkeye",
+            "Natural Flight in Small Biomorph (Aircraft; Athletics/Pilot)"
+          ]
+        },
+        "Canine": {
+          "lifePoints": 2,
+          "mainSkillModifiers": {
+            "Willpower": 1
+          },
+          "trait": "Loyal",
+          "abilities": [
+            "Athletics +1",
+            "Keen Senses (scent) in Biomorph"
+          ]
+        },
+        "Cetacean": {
+          "lifePoints": 4,
+          "mainSkillModifiers": {
+            "Personality": 1
+          },
+          "trait": "Boundary Issues",
+          "abilities": [
+            "Extraplanetary or Spacecraft +1",
+            "Space Ace talent",
+            "Aquatic, Inured to Cold, Strong Swimmer in Biomorph"
+          ]
+        },
+        "Cephalopod": {
+          "lifePoints": 3,
+          "mainSkillModifiers": {
+            "Intelligence": 1
+          },
+          "trait": "Antisocial",
+          "abilities": [
+            "Amphibious, Inured to Cold and Inured to Aquatic Pressure; Strong Swimmer in Biomorph"
+          ]
+        },
+        "Feline": {
+          "lifePoints": 3,
+          "mainSkillModifiers": {
+            "Agility": 1
+          },
+          "trait": "Sadistic",
+          "abilities": [
+            "Acrobatics +1",
+            "Catfall talent in Biomorph"
+          ]
+        },
+        "Simian": {
+          "lifePoints": 2,
+          "mainSkillModifiers": {
+            "Coordination": 1
+          },
+          "trait": "Foul-Tempered",
+          "abilities": [
+            "Climbing Plus in Biomorph",
+            "Prehensile tail in small/medium Biomorph"
+          ]
+        },
+        "Suidae": {
+          "lifePoints": 3,
+          "mainSkillModifiers": {
+            "Brawn": 1
+          },
+          "trait": "Neurotically Hygienic",
+          "abilities": [
+            "Morale +2"
+          ]
+        }
+      },
+      "bodies": {
+        "Custom Biomorph — Small": {
+          "lifePoints": 0,
+          "mainSkillModifiers": {
+            "Agility": 1,
+            "Brawn": -2,
+            "Intelligence": 1
+          },
+          "rules": "Odd Fit, Out of Sight Out of Mind (+1 Momentum on successful Stealth), Small Target (+1 ranged attack difficulty), Tiny weapon restrictions."
+        },
+        "Custom Biomorph — Medium": {
+          "lifePoints": 1,
+          "mainSkillModifiers": {},
+          "rules": "Custom MetaChemistry: player chooses any single Attribute +1; Uncanny Valley increases complication range of Personality-based tests by 1."
+        },
+        "Custom Biomorph — Large": {
+          "lifePoints": 3,
+          "mainSkillModifiers": {},
+          "rules": "Monstrous size/weapon rules and Odd Fit equipment restrictions."
+        },
+        "Lhost": {
+          "lifePoints": "Varies by selected Lhost",
+          "mainSkillModifiers": {},
+          "rules": "Cube and an Lhost chosen from an available source; Lhost template and its Life Point cost apply separately."
+        },
+        "Remote Specialist": {
+          "lifePoints": 2,
+          "alternateCosts": {
+            "Cetacean": 1,
+            "Cephalopod": 1
+          },
+          "mainSkillModifiers": {},
+          "rules": "Begin with Tinbot Remote body; choose Remote Presence Gear or Cube 2.0. Cetacean/Cephalopod pay 1 Life Point."
+        }
+      },
+      "labs": [
+        {
+          "roll": "1–9",
+          "region": "Praxis Black Labs",
+          "languages": "German, English",
+          "attributes": [
+            "Willpower",
+            "Agility"
+          ],
+          "skill": "Science"
+        },
+        {
+          "roll": "10–18",
+          "region": "Praxis Black Ships",
+          "languages": "English plus Nomad mothership second language",
+          "attributes": [
+            "Willpower",
+            "Awareness"
+          ],
+          "skill": "Extraplanetary"
+        },
+        {
+          "roll": "19–20",
+          "region": "Undocumented Orbital",
+          "languages": "German plus Nomad mothership second language",
+          "attributes": [
+            "Willpower",
+            "Intelligence"
+          ],
+          "skill": "Resistance"
+        }
+      ],
+      "socialStatus": [
+        {
+          "roll": "2",
+          "status": "Criminal Underclass",
+          "attribute": "Personality",
+          "earnings": 2
+        },
+        {
+          "roll": "3–5",
+          "status": "Underclass",
+          "attribute": "Willpower",
+          "earnings": 1
+        },
+        {
+          "roll": "6–8",
+          "status": "Middle",
+          "attribute": "Brawn",
+          "earnings": 3
+        },
+        {
+          "roll": "9–10",
+          "status": "Upper",
+          "attribute": "Intelligence",
+          "earnings": 4
+        },
+        {
+          "roll": "11",
+          "status": "Criminal Upper Class",
+          "attribute": "Personality",
+          "earnings": 4
+        },
+        {
+          "roll": "12",
+          "status": "Criminal Elite",
+          "attribute": "Brawn",
+          "earnings": 5
+        }
+      ],
+      "awakening": [
+        {
+          "roll": "1–4",
+          "skill": "Analysis",
+          "talent": "Pattern Recognition"
+        },
+        {
+          "roll": "5–8",
+          "skill": "Resistance",
+          "talent": "Sturdy"
+        },
+        {
+          "roll": "9–12",
+          "skill": "Discipline",
+          "talent": "Stubborn"
+        },
+        {
+          "roll": "13–16",
+          "skill": "Animal Handling",
+          "talent": "Wild Empathy"
+        },
+        {
+          "roll": "17–19",
+          "skill": "Stealth",
+          "talent": "Scout"
+        },
+        {
+          "roll": "20",
+          "skill": "Ballistics or Close Combat",
+          "talent": "Quickdraw"
+        }
+      ],
+      "careerLists": {
+        "Avian": [
+          "Test Subject",
+          "Smuggler",
+          "Entertainer",
+          "Tinkerer",
+          "BouBoutique Clerk",
+          "Die Morlock Gruppe",
+          "Starswimmer",
+          "Clockmaker"
+        ],
+        "Canine": [
+          "Test Subject",
+          "Personal Security",
+          "Die Morlock Gruppe",
+          "Entertainer",
+          "Military",
+          "Ship Crew",
+          "Wrench",
+          "Mothership Security Corps"
+        ],
+        "Cephalopod": [
+          "Test Subject",
+          "Starswimmer",
+          "Tinkerer",
+          "Hacker",
+          "Medical",
+          "Remote Operator",
+          "BouBoutique Clerk",
+          "TAG Pilot"
+        ],
+        "Cetacean": [
+          "Test Subject",
+          "Starswimmer",
+          "Remote Operator",
+          "Negotiator",
+          "Pilot",
+          "Entertainer",
+          "Medical",
+          "Corsair"
+        ],
+        "Feline": [
+          "Test Subject",
+          "Entertainer",
+          "Personal Security",
+          "Die Morlock Gruppe",
+          "Criminal",
+          "‘Cat Squad Member",
+          "Special Forces",
+          "BouBoutique Clerk"
+        ],
+        "Simian": [
+          "Test Subject",
+          "Wrench",
+          "Die Morlock Gruppe",
+          "Criminal",
+          "Tinkerer",
+          "Ship Crew",
+          "Infiltrator",
+          "Personal Security"
+        ],
+        "Suidae": [
+          "Test Subject",
+          "Personal Security",
+          "Heavy Industry",
+          "Die Morlock Gruppe",
+          "Military",
+          "Wrench",
+          "Criminal",
+          "BouBoutique Clerk"
+        ]
+      },
+      "careerNotes": "Uplifts use species career tables rather than Nomad faction careers; other careers normally require GM permission. Choosing Test Subject voluntarily can award 1 Life Point (maximum 2 via this mechanism), not when forced by events.",
+      "homeEnvironments": [
+        {
+          "roll": "1",
+          "name": "Underworld",
+          "attribute": "Brawn",
+          "skill": "Thievery"
+        },
+        {
+          "roll": "2",
+          "name": "Violent",
+          "attribute": "Brawn",
+          "skill": "Acrobatics"
+        },
+        {
+          "roll": "3",
+          "name": "Virtual",
+          "attribute": "Intelligence",
+          "skill": "Hacking"
+        },
+        {
+          "roll": "4",
+          "name": "Clinical",
+          "attribute": "Willpower",
+          "skill": "Resistance"
+        },
+        {
+          "roll": "5",
+          "name": "Regimented",
+          "attribute": "Awareness",
+          "skill": "Discipline"
+        },
+        {
+          "roll": "6",
+          "name": "High Society",
+          "attribute": "Personality",
+          "skill": "Lifestyle"
+        }
+      ]
+    },
+    "careerProfiles": {
+      "‘Cat Squad Member": {
+        "sourcePage": 62,
+        "mandatorySkills": [
+          "Ballistics",
+          "Extraplanetary",
+          "Hacking"
+        ],
+        "electiveSkills": [
+          "See ‘Cat Squads Table"
+        ],
+        "earnings": "By squad",
+        "gear": [
+          "See ‘Cat Squads Table"
+        ],
+        "special": "First phase determine Tomcats/Hellcats/Wildcats, then keep squad. Later switch requires a D1 hazard test or 1 Life Point."
+      },
+      "Barrister Corps": {
+        "sourcePage": 63,
+        "mandatorySkills": [
+          "Analysis",
+          "Education",
+          "Psychology"
+        ],
+        "electiveSkills": [
+          "Ballistics",
+          "Education",
+          "Persuade"
+        ],
+        "earnings": "2+5§",
+        "gear": [
+          "Neural Hacking Socket",
+          "Assault Hacking Device"
+        ]
+      },
+      "Clockmaker": {
+        "sourcePage": 63,
+        "mandatorySkills": [
+          "Discipline",
+          "Education",
+          "Tech"
+        ],
+        "electiveSkills": [
+          "Acrobatics",
+          "Lifestyle",
+          "Tech"
+        ],
+        "earnings": "1+2§",
+        "gear": [
+          "Neural Comlog",
+          "D-Charge ×3",
+          "Powered Multitool",
+          "Repair Kit"
+        ]
+      },
+      "Chimera": {
+        "sourcePage": 63,
+        "mandatorySkills": [
+          "Acrobatics",
+          "Athletics",
+          "Close Combat"
+        ],
+        "electiveSkills": [],
+        "earnings": "0+4§",
+        "gear": [],
+        "brief": "Exotic transhuman body-modification career."
+      },
+      "Mothership Security Corps": {
+        "sourcePage": 65,
+        "mandatorySkills": [
+          "Ballistics",
+          "Extraplanetary",
+          "Observation"
+        ],
+        "electiveSkills": [
+          "Command",
+          "Hacking",
+          "Medicine"
+        ],
+        "earnings": "1+2§",
+        "gear": [
+          "Armoured Clothing (Uniform)",
+          "Hacking Device or MediKit",
+          "Combi Rifle or Spitfire"
+        ]
+      },
+      "Investigative Journalist": {
+        "sourcePage": 65,
+        "mandatorySkills": [
+          "Stealth",
+          "Persuade",
+          "Observation"
+        ],
+        "electiveSkills": [
+          "Hacking",
+          "Education",
+          "Thievery"
+        ],
+        "earnings": "1+2§",
+        "gear": [
+          "Recorder or AR Eye Implants",
+          "Analysis Suite",
+          "Breaking & Entering Kit"
+        ]
+      },
+      "Negotiator": {
+        "sourcePage": 66,
+        "mandatorySkills": [
+          "Discipline",
+          "Lifestyle",
+          "Persuade"
+        ],
+        "electiveSkills": [
+          "Command",
+          "Observation",
+          "Persuade"
+        ],
+        "earnings": "1+4§",
+        "gear": [
+          "Aletheia Suite",
+          "Negotiator’s Suite (7 days)",
+          "Armoured Clothing (High Fashion)",
+          "Cosmetics Kit"
+        ]
+      },
+      "Provocateur": {
+        "sourcePage": 66,
+        "mandatorySkills": [
+          "Lifestyle",
+          "Persuade",
+          "Thievery"
+        ],
+        "electiveSkills": [
+          "Acrobatics",
+          "Hacking",
+          "Tech"
+        ],
+        "earnings": "0+4§",
+        "gear": [
+          "Freedom Kit",
+          "Fake ID 2",
+          "Recorder",
+          "Stealth Repeater",
+          "Optical Disruption Device"
+        ]
+      },
+      "Die Morlock Gruppe": {
+        "sourcePage": 92,
+        "mandatorySkills": [
+          "Athletics",
+          "Close Combat",
+          "Thievery"
+        ],
+        "electiveSkills": [
+          "Ballistics",
+          "Close Combat",
+          "Psychology"
+        ],
+        "earnings": "1+3§",
+        "gear": [
+          "Combi Rifle or Chain Rifle",
+          "D-Charges ×2",
+          "Smoke Grenades ×2",
+          "Sword"
+        ],
+        "special": "Roll on Chaotic Gear Table each time this career is taken."
+      },
+      "Entertainer": {
+        "sourcePage": 93,
+        "mandatorySkills": [
+          "Acrobatics",
+          "Persuade",
+          "Psychology"
+        ],
+        "electiveSkills": [
+          "Athletics",
+          "Lifestyle",
+          "Observation"
+        ],
+        "earnings": "2+1§",
+        "gear": [
+          "Cosmetics Kit",
+          "SecurCuffs",
+          "Recorder",
+          "Nitrocane ×2",
+          "Naughties"
+        ]
+      },
+      "Starswimmer": {
+        "sourcePage": 93,
+        "mandatorySkills": [
+          "Discipline",
+          "Stealth",
+          "Spacecraft"
+        ],
+        "electiveSkills": [
+          "Extraplanetary",
+          "Stealth",
+          "Spacecraft"
+        ],
+        "earnings": "2+2§",
+        "gear": [
+          "Immersive Pilot Gear",
+          "Crashsuit"
+        ]
+      },
+      "Tinkerer": {
+        "sourcePage": 93,
+        "mandatorySkills": [
+          "Analysis",
+          "Tech",
+          "Thievery"
+        ],
+        "electiveSkills": [
+          "Education",
+          "Hacking",
+          "Science"
+        ],
+        "earnings": "1+3§",
+        "gear": [
+          "Powered Multitool",
+          "Internal Pocket 1 or Geist Upgrade"
+        ]
+      }
+    },
+    "sourceNotes": [
+      "Source page 60 lists Praxis Scientist at both d20 results 12 and 15; duplicate roll outcomes are intentional.",
+      "The source 'Chimaera/Chimera' spelling differs by text context; this sheet uses 'Chimera' for the career title as printed in the career table.",
+      "Source career profile uses ‘Cat Squad Member with a leading curly apostrophe; this is preserved.",
+      "Uplift Species is distinct from Host/Platform; species attribute modifiers stack with the body's modifiers, while species abilities that require Biomorphs do not apply to Lhosts or remotes.",
+      "Uplift species do not consume a normal Trait slot: the book treats Species Traits as background source facts.",
+      "Arachne is the Nomad alternative to ALEPH-controlled Maya; this reference describes it without inventing a new sheet resource.",
+      "Chapter 5 source gear entries use source restriction/cost and describe source mechanics; custom generic rarity is intentionally left blank unless already present."
+    ],
+    "equipmentAudit": {
+      "sourceTablePages": [
+        76,
+        77,
+        78,
+        79
+      ],
+      "sourceEntries": 61,
+      "added": 56,
+      "enriched": 5,
+      "legacyCrazyKoalaReclassified": true
+    }
   }
 };
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v70-panoceania-source-reconciliation";
+window.INFINITY_BUILD = "v71-nomads-source-reconciliation";
