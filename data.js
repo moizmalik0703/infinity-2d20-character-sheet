@@ -16049,6 +16049,44 @@ window.INFINITY_DATA = {
       "Caravanserai"
     ]
   },
+  "careerOptionsByFaction": {
+    "Haqqislam": [
+      "Special Forces",
+      "Hassassin Fiday",
+      "Corsair",
+      "Terraforming Scientist",
+      "Bodyguard",
+      "Khawarij",
+      "Diwân Functionary",
+      "Grey Market Spy",
+      "Hassassin Exemplar",
+      "Maghariba Guard",
+      "Kum Ganger",
+      "Medical Researcher",
+      "Muhafiz Agent",
+      "Odalisque",
+      "Caravaner",
+      "Akbar Doctor",
+      "Hafza"
+    ],
+    "Yu Jing": [
+      "Special Forces",
+      "Intelligence Operative",
+      "Celestial Guard",
+      "Bōsōzoku",
+      "TAG Pilot",
+      "Internal Affairs Agent",
+      "Jopok",
+      "Ninja",
+      "Zhanshi Gōngchéng Mech-Engineers",
+      "Subversive",
+      "Wú Míng Assault Corps",
+      "Artisan",
+      "Combat Pilot",
+      "Yănjīng Agent",
+      "Imperial Agent"
+    ]
+  },
   "equipmentTaxonomy": {
     "version": "v64-ariadna-yu-jing",
     "categories": [
@@ -19865,4 +19903,4 @@ window.INFINITY_DATA = {
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v68-haqq-yujing-integrity";
+window.INFINITY_BUILD = "v69-haqq-yujing-careers";
