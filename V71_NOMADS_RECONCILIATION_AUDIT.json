@@ -1,0 +1,88 @@
+{
+  "build": "v71-nomads-source-reconciliation",
+  "completed": "2026-11-04",
+  "source": {
+    "title": "Infinity RPG — Nomads Faction Book",
+    "product": "MUH050222",
+    "file": "MUH050222 Infinity RPG - Nomads Faction Book.pdf",
+    "driveUrl": "https://drive.google.com/file/d/1et5leDYKYNowW-i4lLwSuDopYUto1pIR/view",
+    "chapters": {
+      "faction": 4,
+      "bakunin": 12,
+      "corregidor": 24,
+      "tunguska": 33,
+      "socialEnergy": 45,
+      "characters": 57,
+      "gear": 67,
+      "uplifts": 80,
+      "upliftCharacters": 85,
+      "bioengineering": 95
+    }
+  },
+  "changes": {
+    "factions": "Kept current Nomad organisational selections; source-backed mothership homeworlds and heritage added. Uplift represented as separate Host / Heritage, not political faction.",
+    "heritage": "Added Bakunian, Corregidoran, Tunguskan, Lub’, Missionary, Vagrant and six source origin contexts.",
+    "status": "Nomad social status/class tables, home environments, 20 adolescent events, 19 faction career-table rows, Heritage career recommendations, 20 Career Events and 3 ‘Cat Squads.",
+    "careers": "17 distinct Nomad source career names in main Career selector (plus General / Unrestricted for house-rule humans). Source career profiles added/updated, with existing cross-faction core profiles preserved.",
+    "uplifts": "7 source species, 5 physical body/platform options, separate Species/Body controls and additive applicable attribute modifiers, 3 lab origins, source social status/awakening, 7 species career tables, 20 career events.",
+    "equipment": "61 source-labelled Chapter 5 gear entries (56 new and 5 enriched existing names), source page/restriction/cost, no invented generic rarity. Corrected CrazyKoala Mine classification as explosive, preserving legacy weapon alias.",
+    "socialEnergy": "Optional Bakunin Social Energy Rank (SER) and inertia reference tables, faction groups, source access layers and mechanics in glossary. No compulsory extra track.",
+    "legacy": "Older Nomad characters with non-source homeworld/habitat labels preserve their original saved value during import, until player chooses a new source origin.",
+    "embedded": "Updated app.js/data.js and exact self-contained embedded scripts in index.html; site build metadata v71.",
+    "regression": "Preserved Ariadna Dogface/Wulver/Antipode, PanOceania Helot, Haqqislam and Yu Jing career filtering; custom Focus/skill inheritance, 5 weapons/10 equipment, Armour, and save compatibility."
+  },
+  "counts": {
+    "nomadMainUniqueCareers": 17,
+    "nomadCareerTableEntries": 19,
+    "nomadAdolescentEvents": 20,
+    "nomadCareerEvents": 20,
+    "catSquads": 3,
+    "upliftSpecies": 7,
+    "upliftBodies": 5,
+    "upliftLabOrigins": 3,
+    "upliftCareerRollTables": 7,
+    "upliftCareerEvents": 20,
+    "sourceCareerProfiles": 24,
+    "sourceGearEntries": 61,
+    "newGearEntries": 56,
+    "enrichedGearEntries": 5
+  },
+  "explicitSourceExceptions": [
+    "The printed Canine Uplift Career Table (p. 90) has overlapping ranges 8–15 and 12–13/14–15; the source ranges are preserved, and GM adjudication is needed.",
+    "The printed Feline Uplift Career Table (p. 90) omits d20 result 6; no result was invented.",
+    "The printed Nomad Faction Career Table lists Praxis Scientist twice, at results 12 and 15; both source outcomes are retained.",
+    "Uplift Medium Biomorph gives one player-chosen Attribute +1. This free choice is documented but not automatically assigned by the sheet.",
+    "Uplift Lhosts need a chosen specific Lhost template. The sheet does not fabricate a default Lhost attribute set.",
+    "Species-conditional Biomorph abilities remain source rules rather than automatically applied to Remote/Lhost bodies.",
+    "Nomad heritage career hazard reductions, source social class and Social Energy effects are described in Glossary rather than silently rewritten as custom Trait/Talent bonuses.",
+    "The main Nomad career table includes Reverend Agent as a Corebook career; no Nomad-book-only mechanical profile was invented."
+  ],
+  "validation": {
+    "date": "2026-11-04",
+    "testsRun": 21,
+    "testsPassed": 21,
+    "status": "PASS",
+    "checks": [
+      "App syntax",
+      "Standalone/embedded app and data parity",
+      "v71 HTML build marker",
+      "Nomad host list and 17 source career selection",
+      "Nomad six origin contexts",
+      "Nomad heritage derivation",
+      "Uplift three Praxis origin choices",
+      "Species-specific Uplift careers",
+      "Species+Biomorph attribute stacking",
+      "No unrelated Uplift careers",
+      "Canine Aufstand source career availability",
+      "Remote body does not apply biomorph modifiers",
+      "No Uplift host for Ariadna",
+      "No Uplift host for PanOceania",
+      "Haqq career regression",
+      "Yu Jing career regression",
+      "Legacy Nomad habitat preservation",
+      "Nomad source table counts",
+      "Uplift source table counts",
+      "61 tagged gear, unique names"
+    ]
+  }
+}
