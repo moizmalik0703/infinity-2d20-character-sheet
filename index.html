@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="infinity-build" content="v74-o12-character-creation-automation">
-  <!-- DEPLOYMENT CHECK: v74-o12-character-creation-automation | Adds persistent autosave snapshots with localStorage + IndexedDB fallback, pagehide/visibility flush, and recovery auto-load while keeping no Load button, Glossary and XML buttons, lore-clean glossary, XML import/export, logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
+  <meta name="infinity-build" content="v75-technology-workshop-foundation">
+  <!-- DEPLOYMENT CHECK: v75-technology-workshop-foundation | Adds persistent autosave snapshots with localStorage + IndexedDB fallback, pagehide/visibility flush, and recovery auto-load while keeping no Load button, Glossary and XML buttons, lore-clean glossary, XML import/export, logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -2521,7 +2521,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 #nomadHeritageLabel[hidden], #upliftSpeciesLabel[hidden], #upliftBodyLabel[hidden] { display:none !important; }
 </style>
 </head>
-<body data-build="v74-o12-character-creation-automation">
+<body data-build="v75-technology-workshop-foundation">
   <header class="app-header no-print">
     <div class="header-brand" aria-label="Campaign partners and sheet title">
       <div class="header-logos" aria-label="Criticals and Fumbles and Project Wing logos">
@@ -32935,7 +32935,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v74-o12-character-creation-automation";
+window.INFINITY_BUILD = "v75-technology-workshop-foundation";
 </script>
   <script>
 const DATA = window.INFINITY_DATA || window.DATA;
@@ -35153,7 +35153,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v74-o12-character-creation-automation",
+    build: "v75-technology-workshop-foundation",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -35670,7 +35670,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v74-o12-character-creation-automation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v75-technology-workshop-foundation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -37809,7 +37809,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v74-o12-character-creation-automation";
+  document.documentElement.dataset.infinityBuild = "v75-technology-workshop-foundation";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -37885,7 +37885,7 @@ window.addEventListener("load", () => {
    complete Corebook Lifepath: unsupported dice, contacts, talents and earned gear choices
    remain explicitly manual. All generated numeric bonuses are derived from a saved ledger. */
 (function installO12LifepathV74() {
-  const NEW_BUILD = "v74-o12-character-creation-automation";
+  const NEW_BUILD = "v75-technology-workshop-foundation";
   const careerSources = DATA.o12Reference?.careerProfiles || {};
   const o12Source = DATA.o12Reference || {};
   const defaultLedger = () => ({ version: 74, lifePoints: 5, otherSpent: 0, phases: [], adolescent: null, pillar: null, criminalRecord: false });
@@ -38430,6 +38430,389 @@ window.addEventListener("load", () => {
   window.INFINITY_BUILD=NEW_BUILD;
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initPanelV74);
   else initPanelV74();
+})();
+
+
+/* V75 Technology Workshop — source-preserving foundation.
+   This version DOES NOT claim the standalone Technology of the Human Sphere sourcebook
+   was reconciled: that source is absent from the supplied/connected source collection.
+   All catalogue entries retain their existing source data; Quality and Modification
+   notes are player/GM records and never invent bonuses, costs or rules. */
+(function installTechnologyWorkshopV75() {
+  const BUILD = "v75-technology-workshop-foundation";
+  const MAX_TEXT = { quality: 120, modifications: 800, notes: 500 };
+  const MAX_RECORDS = 15;
+  const selected = id => document.getElementById(id);
+  const allEquipment = DATA.equipment || [];
+  const slotKey = (kind, index) => kind + ":" + index;
+  const itemSelect = (kind, index) => document.querySelector(
+    'select[data-' + kind + '-select="' + index + '"]');
+  const normalString = (value, length) => String(value == null ? "" : value).slice(0, length);
+  const techCategories = [
+    ["technology", "Technology-related items"],
+    ["infogear", "Infogear / Quantronics"],
+    ["medical", "Medical equipment"],
+    ["augmentation", "Augmentations"],
+    ["modification", "Modifications / Upgrades"],
+    ["all", "Complete existing catalogue"]
+  ];
+
+  function technologyFamily(item) {
+    const t = String(item?.type || "").toLowerCase();
+    const subtype = String(item?.subtype || "").toLowerCase();
+    const name = String(item?.name || "").toLowerCase();
+    const category = String(item?.category || "").toLowerCase();
+    if (/^modification$|upgrade$/.test(t) || /\bmodification\b|\bupgrade\b/.test(name) ||
+        /program upgrade|vehicle upgrade|hacking upgrade/.test(t)) return "modification";
+    if (t === "augmentation" || category === "augmentation" ||
+        /neural implant|cybernetic implant|biograft implant/.test(subtype)) return "augmentation";
+    if (/medical|automedikit|medical facility/.test(t) || /medical|surgical|medical nanites/.test(subtype) ||
+        /^(medikit|health kit|automedikit|nannies|nannie-pump|akbar kit)$/i.test(item?.name || "")) return "medical";
+    if (/program|hacking|comlog|geist|data storage|holographic|credential|repeater|recorder|scanner|sensor|visor|signal gear|quantronic/.test(t + " " + subtype) ||
+        /infowar|data storage|network|quantronic/.test(subtype) || /^comm(s|log)\b/.test(name)) return "infogear";
+    return "other";
+  }
+  const entries = allEquipment.map(item => ({item, family:technologyFamily(item)}));
+  const counts = Object.fromEntries(["infogear","medical","augmentation","modification","other"]
+    .map(key => [key, entries.filter(entry => entry.family === key).length]));
+
+  let records = {};
+  let activeSlot = "";
+  let browserEntry = "";
+  let workshopActive = false;
+  let lastStatus = "";
+  function entryOf(name) { return allEquipment.find(item => item.name === name) || null; }
+  function currentItem(key) {
+    const match = /^((?:weapon|equipment)):(\d+)$/.exec(key || "");
+    if (!match) return "";
+    return itemSelect(match[1], Number(match[2]))?.value || "";
+  }
+  function validSlot(key) {
+    const m = /^(weapon|equipment):(\d+)$/.exec(String(key));
+    return !!m && Number(m[2]) < (m[1] === "weapon" ? 5 : 10);
+  }
+  function normalizeRecord(raw) {
+    if (!raw || typeof raw !== "object") return null;
+    const item = normalString(raw.item, 160);
+    if (!item || !entryOf(item)) return null;
+    const quality = normalString(raw.quality, MAX_TEXT.quality);
+    const modifications = normalString(raw.modifications, MAX_TEXT.modifications);
+    const notes = normalString(raw.notes, MAX_TEXT.notes);
+    const approved = raw.approved === true || raw.approved === "true";
+    if (!quality && !modifications && !notes && !approved) return null;
+    return {item, quality, modifications, notes, approved};
+  }
+  function restoreRecords(raw) {
+    let input = raw;
+    if (typeof raw === "string") {
+      try { input = JSON.parse(raw); } catch { input = {}; }
+    }
+    if (!input || typeof input !== "object" || Array.isArray(input)) return {};
+    const result = {};
+    Object.entries(input).slice(0, MAX_RECORDS).forEach(([key, value]) => {
+      if (!validSlot(key)) return;
+      const rec = normalizeRecord(value);
+      if (rec && rec.item === currentItem(key)) result[key] = rec;
+    });
+    return result;
+  }
+  function cleanStaleRecords() {
+    for (const key of Object.keys(records)) {
+      if (!validSlot(key) || records[key].item !== currentItem(key)) delete records[key];
+    }
+  }
+  function metaFor(kind, zeroBasedIndex, name) {
+    const key = slotKey(kind, zeroBasedIndex);
+    const record = records[key];
+    return record && record.item === name ? record : null;
+  }
+  function updateStatus(text) {
+    lastStatus = text;
+    const target = selected("v75TechStatus");
+    if (target) target.textContent = text;
+  }
+  function filterCatalogue() {
+    const filter = selected("v75FamilyFilter")?.value || "technology";
+    const query = String(selected("v75TechSearch")?.value || "").toLowerCase().trim();
+    const list = entries.filter(({item, family}) => {
+      if (filter !== "all" && (filter === "technology" ? family === "other" : family !== filter)) return false;
+      if (!query) return true;
+      return [item.name,item.type,item.subtype,item.category,item.brief,item.mechanic,item.source]
+        .some(value => String(value || "").toLowerCase().includes(query));
+    });
+    const box = selected("v75TechResults");
+    if (!box) return;
+    const previous = browserEntry || box.value;
+    box.textContent = "";
+    list.slice(0, 150).forEach(({item}) => {
+      const option = document.createElement("option");
+      option.value = item.name;
+      option.textContent = item.name + " — " + (item.type || "Other");
+      box.appendChild(option);
+    });
+    if (list.some(x=>x.item.name===previous) && [...box.options].some(x=>x.value===previous)) box.value=previous;
+    browserEntry = box.value || "";
+    const info = selected("v75CatalogueCount");
+    if (info) info.textContent = list.length + " records match; showing first " + Math.min(list.length,150) +
+      (list.length>150 ? ". Narrow the search to see the rest." : ".");
+    showCatalogueEntry();
+  }
+  function showCatalogueEntry() {
+    const item = entryOf(selected("v75TechResults")?.value);
+    browserEntry = item?.name || "";
+    const out = selected("v75TechDetail");
+    if (!out) return;
+    if (!item) { out.textContent = "Choose an item to view its existing source information."; return; }
+    const source = item.source ? item.source + (item.sourcePage ? ", p. " + item.sourcePage : "") :
+      "Existing sheet record — no verified source citation in this entry";
+    out.textContent = [
+      item.name,
+      "Class: " + (item.category || "Other") + " / " + (item.subtype || item.type || "Unknown"),
+      "Type: " + (item.type || "-") + " | Weight: " + (item.weight || "-") +
+        " | Rarity: " + (item.rarity || "-") + " | Cost: " + (item.cost || "-"),
+      "Source: " + source,
+      "Rule / description: " + (item.mechanic || item.brief || "No mechanical rule recorded"),
+      item.loadoutEligible === false ? "Reference only — not eligible for personal loadout." :
+        "Select 'Add to first free slot' to place this existing catalogue item if a compatible slot is open."
+    ].join("\n");
+  }
+  function renderSlots() {
+    cleanStaleRecords();
+    const selector = selected("v75SlotChoice");
+    if (!selector) return;
+    const current = activeSlot || selector.value;
+    const items = [];
+    for (const kind of ["weapon","equipment"]) {
+      const size = kind === "weapon" ? 5 : 10;
+      for (let n=0;n<size;n++) {
+        const item = currentItem(slotKey(kind,n));
+        if (item) items.push({key:slotKey(kind,n),title:(kind === "weapon" ? "Weapon " : "Equipment ")+(n+1)+": "+item});
+      }
+    }
+    selector.textContent = "";
+    const blank = document.createElement("option");
+    blank.value="";blank.textContent=items.length?"Choose equipped item...":"No gear currently equipped";
+    selector.appendChild(blank);
+    items.forEach(({key,title})=>{
+      const option=document.createElement("option");option.value=key;option.textContent=title;selector.appendChild(option);
+    });
+    activeSlot=items.some(row=>row.key===current) ? current : "";
+    selector.value=activeSlot;
+    renderSlotEditor();
+  }
+  function renderSlotEditor() {
+    const key = selected("v75SlotChoice")?.value || "";
+    activeSlot=key;
+    const item = currentItem(key);
+    const r = records[key];
+    const live = r && r.item === item ? r : null;
+    for(const [id,val] of [["v75Quality",live?.quality || ""],["v75Modification",live?.modifications || ""],["v75TechNotes",live?.notes || ""]]) {
+      const node = selected(id); if(node && document.activeElement!==node) node.value=val;
+    }
+    const check = selected("v75Approved");
+    if (check) check.checked=!!live?.approved;
+    for(const id of ["v75Quality","v75Modification","v75TechNotes","v75Approved"]) {
+      const node=selected(id);if(node)node.disabled=!item;
+    }
+    const desc = selected("v75EquippedDetail");
+    if(desc) desc.textContent=item ? "Editing "+item+". Notes are bound to this exact slot AND item name; changing the gear entry clears its annotations." :
+      "Select an equipped weapon or item above. Quality/modification text is GM-entered and does not change calculated bonuses.";
+  }
+  function storeCurrent() {
+    const key = selected("v75SlotChoice")?.value || "";
+    if (!validSlot(key)) return;
+    const item = currentItem(key);
+    if (!item) return;
+    const r=normalizeRecord({
+      item,
+      quality:selected("v75Quality")?.value || "",
+      modifications:selected("v75Modification")?.value || "",
+      notes:selected("v75TechNotes")?.value || "",
+      approved:!!selected("v75Approved")?.checked
+    });
+    if (r) records[key]=r; else delete records[key];
+    updateStatus(r ? "Technology annotation saved in the current character. No mechanical modifiers applied." :
+      "Technology annotation cleared.");
+  }
+  function addCatalogueEntry() {
+    const item=entryOf(browserEntry);
+    if(!item) return updateStatus("Choose a catalogue entry first.");
+    if(item.loadoutEligible===false) return updateStatus("This entry is reference-only; it cannot be added as personal gear.");
+    const weapon=(DATA.lists?.weapons || []).includes(item.name);
+    const type=weapon ? "weapon" : "equipment";
+    if(!weapon && !(DATA.lists?.equipment || []).includes(item.name))
+      return updateStatus("This entry is not selectable in Equipment slots. No changes made.");
+    const size=weapon ? 5:10;
+    const available=Array.from({length:size},(_,i)=>({i,el:itemSelect(type,i)}))
+      .find(row=>row.el && !row.el.value && [...row.el.options].some(o=>o.value===item.name));
+    if(!available)return updateStatus("No compatible free "+(weapon?"Weapon":"Equipment")+" slot; nothing was overwritten.");
+    available.el.value=item.name;
+    available.el.dispatchEvent(new Event("change",{bubbles:true}));
+    activeSlot=slotKey(type,available.i);
+    renderSlots();
+    updateStatus("Added "+item.name+" to "+type+" slot "+(available.i+1)+".");
+  }
+  function onGearChanged(event, kind) {
+    const index = Number(event?.target?.dataset?.[kind+"Select"]);
+    if(!Number.isInteger(index))return;
+    const key=slotKey(kind,index);
+    const record=records[key];
+    if(record && record.item!==currentItem(key)){
+      delete records[key];
+      updateStatus("Cleared quality/modification notes for replaced "+kind+" slot "+(index+1)+".");
+    }
+    renderSlots();
+  }
+  const originalCollect = collectState;
+  collectState = function() {
+    cleanStaleRecords();
+    const state=originalCollect();
+    // Scalar JSON: existing XML serializer does not support nested array item objects.
+    state.technologyGearJson=JSON.stringify(records);
+    return state;
+  };
+  const originalApply = applyState;
+  applyState = function(raw) {
+    records={};
+    activeSlot="";
+    originalApply(raw);
+    records=restoreRecords(raw?.technologyGearJson);
+    renderSlots();
+  };
+  const priorRandom = randomCharacter;
+  randomCharacter = function() {
+    records={};activeSlot="";
+    priorRandom();
+    renderSlots();
+    autosaveCurrentCharacterNow();
+  };
+  const priorBeginner = randomBeginnerCharacter;
+  randomBeginnerCharacter = function() {
+    records={};activeSlot="";
+    priorBeginner();
+    renderSlots();
+    autosaveCurrentCharacterNow();
+  };
+  // Print existing gear as before, but keep a short human-readable Quality/
+  // Modification note in the same row. Original source mechanics remain in DATA.
+  const originalSelectedPrintGear = selectedPrintGear;
+  selectedPrintGear = function(kind) {
+    return originalSelectedPrintGear(kind).map(row => {
+      const r=metaFor(kind,row.index-1,row.entry?.name);
+      if(!r)return row;
+      const prefix=[
+        r.quality ? "Quality: "+r.quality : "",
+        r.modifications ? "Mods: "+r.modifications : "",
+        r.notes ? "Tech: "+r.notes : "",
+        r.approved ? "GM checked" : ""
+      ].filter(Boolean).join("; ");
+      return {...row, entry:{...row.entry,mechanic:prefix+"; "+(row.entry.mechanic || row.entry.brief || "")}};
+    });
+  };
+  function makeField(tag, labelText, id, extra={}) {
+    const label=document.createElement("label");
+    label.textContent=labelText;
+    const input=document.createElement(tag);
+    input.id=id;
+    for(const [key,value] of Object.entries(extra))input.setAttribute(key,value);
+    label.appendChild(input);
+    return {label,input};
+  }
+  function initTechnologyWorkshop() {
+    if(workshopActive || selected("v75TechnologyWorkshop"))return;
+    const table=document.getElementById("equipmentTable");
+    if(!table)return;
+    workshopActive=true;
+    const section=document.createElement("section");
+    section.id="v75TechnologyWorkshop";section.className="panel no-print";
+    const details=document.createElement("details");
+    const heading=document.createElement("summary");
+    heading.textContent="Technology Workshop (V75) — infogear, medical, augmentations, equipment quality & modifications";
+    details.appendChild(heading);
+    const disclaimer=document.createElement("p");
+    disclaimer.className="tech-v75-small";
+    disclaimer.textContent="Existing, previously sourced gear only. The standalone Technology of the Human Sphere sourcebook is not available in the supplied collection. Quality and modification fields are GM notes, not verified new bonuses, prices or slots.";
+    details.appendChild(disclaimer);
+    const countsP=document.createElement("p");
+    countsP.className="tech-v75-small";
+    countsP.textContent="Indexed existing records: "+entries.length+" total; "+counts.infogear+" infogear/quantronic, "+
+      counts.medical+" medical, "+counts.augmentation+" augmentation, "+counts.modification+" upgrade/modification entries.";
+    details.appendChild(countsP);
+    const headingBrowser=document.createElement("h4");headingBrowser.textContent="Explore existing technology";details.appendChild(headingBrowser);
+    const filters=document.createElement("div");filters.className="tech-v75-grid";
+    const filter=makeField("select","Catalogue category","v75FamilyFilter");
+    techCategories.forEach(([value,label])=>{
+      const option=document.createElement("option");option.value=value;option.textContent=label;filter.input.appendChild(option);
+    });
+    filters.appendChild(filter.label);
+    filters.appendChild(makeField("input","Search item, rule or source","v75TechSearch",{type:"search",placeholder:"e.g. Nannies, Hacking Device, surgical"}).label);
+    details.appendChild(filters);
+    const browser=document.createElement("div");browser.className="tech-v75-browser";
+    const results=document.createElement("select");results.id="v75TechResults";results.size=9;
+    results.setAttribute("aria-label","Technology catalogue results");
+    browser.appendChild(results);
+    const preview=document.createElement("pre");preview.id="v75TechDetail";browser.appendChild(preview);
+    details.appendChild(browser);
+    const countText=document.createElement("p");countText.id="v75CatalogueCount";details.appendChild(countText);
+    const add=document.createElement("button");add.type="button";add.id="v75AddItem";add.textContent="Add selected item to first free compatible slot";
+    details.appendChild(add);
+    const slotTitle=document.createElement("h4");slotTitle.textContent="Quality & modifications for equipped gear";details.appendChild(slotTitle);
+    const slot=makeField("select","Choose equipped weapon or equipment","v75SlotChoice");
+    details.appendChild(slot.label);
+    const slotDesc=document.createElement("p");slotDesc.id="v75EquippedDetail";slotDesc.className="tech-v75-small";details.appendChild(slotDesc);
+    const quality=makeField("input","Item quality / condition (source or GM wording)","v75Quality",{maxlength:String(MAX_TEXT.quality),placeholder:"Enter verified or GM-approved wording"});
+    details.appendChild(quality.label);
+    const modification=makeField("textarea","Modifications / fitted upgrades (include rule reference)","v75Modification",{maxlength:String(MAX_TEXT.modifications),rows:"2",placeholder:"Modification name, source page, effect and acquisition cost"});
+    details.appendChild(modification.label);
+    const notes=makeField("textarea","Technology notes / constraints","v75TechNotes",{maxlength:String(MAX_TEXT.notes),rows:"2",placeholder:"e.g. surgery, maintenance, permissions, location, legality"});
+    details.appendChild(notes.label);
+    const approved=makeField("input","GM has checked the recorded customisation","v75Approved",{type:"checkbox"});
+    approved.label.className="tech-v75-check";details.appendChild(approved.label);
+    const status=document.createElement("p");status.id="v75TechStatus";status.setAttribute("role","status");status.className="tech-v75-small";
+    details.appendChild(status);
+    const note=document.createElement("p");note.className="tech-v75-small";
+    note.textContent="Gear quality and modifications do not automatically change skill ratings, damage, Soak, Armour, rarity, availability, loadout eligibility or credits. Existing source mechanics are unchanged; data is saved in browser/JSON/XML and summarised in gear print rows.";
+    details.appendChild(note);
+    section.appendChild(details);
+    const anchor=table.closest(".table-wrap") || table;
+    anchor.insertAdjacentElement("afterend",section);
+    const style=document.createElement("style");style.id="v75TechStyles";
+    style.textContent=
+      '#v75TechnologyWorkshop{margin:.6rem 0;padding:.8rem;border:1px solid #8fa9b6;border-radius:8px}'+
+      '#v75TechnologyWorkshop summary{cursor:pointer;font-weight:700;font-size:14px}'+
+      '#v75TechnologyWorkshop .tech-v75-small{font-size:12px;line-height:1.45}'+
+      '#v75TechnologyWorkshop .tech-v75-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}'+
+      '#v75TechnologyWorkshop label{display:flex;flex-direction:column;gap:4px;margin:7px 0;font-size:12px}'+
+      '#v75TechnologyWorkshop select,#v75TechnologyWorkshop input:not([type=checkbox]),#v75TechnologyWorkshop textarea{width:100%;box-sizing:border-box;min-height:34px}'+
+      '#v75TechnologyWorkshop .tech-v75-browser{display:grid;grid-template-columns:minmax(210px,1fr) minmax(260px,1.5fr);gap:10px;margin:10px 0}'+
+      '#v75TechnologyWorkshop .tech-v75-browser select{height:180px}'+
+      '#v75TechnologyWorkshop pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.45 Arial,sans-serif;background:transparent;border:1px solid #bbcbd1;padding:8px;margin:0;max-height:210px;overflow:auto}'+
+      '#v75TechnologyWorkshop .tech-v75-check{flex-direction:row;align-items:center}'+
+      '#v75TechnologyWorkshop .tech-v75-check input{width:auto;min-height:auto}'+
+      '#v75TechnologyWorkshop button{padding:8px 12px;cursor:pointer}'+
+      '@media(max-width:760px){#v75TechnologyWorkshop .tech-v75-browser{grid-template-columns:1fr}}';
+    document.head.appendChild(style);
+    filter.input.addEventListener("change",filterCatalogue);
+    selected("v75TechSearch").addEventListener("input",filterCatalogue);
+    results.addEventListener("change",showCatalogueEntry);
+    add.addEventListener("click",addCatalogueEntry);
+    slot.input.addEventListener("change",renderSlotEditor);
+    for(const id of ["v75Quality","v75Modification","v75TechNotes","v75Approved"]) {
+      const field=selected(id);
+      field.addEventListener(id==="v75Approved"?"change":"input",storeCurrent);
+    }
+    for(const kind of ["weapon","equipment"]) {
+      document.querySelectorAll('select[data-'+kind+'-select]').forEach(control=>{
+        control.addEventListener("change",event=>onGearChanged(event,kind));
+      });
+    }
+    filterCatalogue();
+    renderSlots();
+    updateStatus("Ready. Edit quality/modification notes for an equipped item. Source effects must be entered and adjudicated by the GM.");
+  }
+  window.INFINITY_BUILD=BUILD;
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initTechnologyWorkshop);
+  else initTechnologyWorkshop();
 })();
 </script>
 
