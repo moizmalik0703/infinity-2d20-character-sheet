@@ -58,8 +58,8 @@
       "Six major companies as selectable NA2 faction/company affiliations",
       "Ten Mercenary career names exposed through NA2 career routing",
       "Mercenaries reference object in data.js",
-      "Saveable War Market / PMC record panel for company name, employer, contract and notes",
-      "Sourcebook chapter map and pending-reconciliation boundary in the UI"
+      "Sourcebook chapter map and pending-reconciliation boundary in the UI",
+      "NA2 company affiliations and Mercenary career routing retained without a temporary War Market UI panel"
     ],
     "deliberatelyManual": [
       "Career attribute, mandatory/elective skill and starting gear effects",
@@ -73,6 +73,11 @@
       "Contract negotiation Capital, Leverage and Metanoia",
       "PMC funds and assets",
       "Advanced Warfare"
+    ],
+    "removedFromOnlineSheet": [
+      "Mercenaries / NA2 — War Market (V77 foundation) panel",
+      "Temporary Free Company/unit name, employer, contract and War Market/PMC note fields",
+      "mercenaryWarMarketJson collection/application hook"
     ]
   }
 }
