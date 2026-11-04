@@ -9161,7 +9161,8 @@ window.INFINITY_DATA = {
       "loadoutEligible": true,
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
-      "armourAutomation": false
+      "armourAutomation": false,
+      "sourcePage": 93
     },
     {
       "type": "Armour",
@@ -9302,7 +9303,8 @@ window.INFINITY_DATA = {
       "loadoutEligible": true,
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
-      "armourAutomation": false
+      "armourAutomation": false,
+      "sourcePage": 94
     },
     {
       "type": "Remote",
@@ -9362,7 +9364,8 @@ window.INFINITY_DATA = {
       "loadoutEligible": true,
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
-      "sourcePage": 81
+      "sourcePage": 81,
+      "sourceProfile": "Source table: Ki-rin X (Ammo Type)."
     },
     {
       "type": "Weapon",
@@ -10124,7 +10127,8 @@ window.INFINITY_DATA = {
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
       "loadoutConditional": false,
-      "source": "Infinity RPG — Yu Jing Faction Book"
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 93
     },
     {
       "type": "Vehicle",
@@ -10298,7 +10302,8 @@ window.INFINITY_DATA = {
       "loadoutEligible": true,
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
-      "sourcePage": 82
+      "sourcePage": 82,
+      "sourceProfile": "Source table: UPGRADE - Phoenixware."
     },
     {
       "type": "Camouflage",
@@ -12115,7 +12120,8 @@ window.INFINITY_DATA = {
       "loadoutEligible": true,
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
-      "armourAutomation": false
+      "armourAutomation": false,
+      "sourcePage": 93
     },
     {
       "type": "Tool",
@@ -13202,6 +13208,22 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 81,
       "sourceRestriction": "5 (Dissident 4)"
+    },
+    {
+      "type": "Weapon",
+      "name": "Yánda (CC)",
+      "brief": "Hsien ceremonial/combat blade listed as a Sword of Office variant in the Imperial Ranks Table.",
+      "mechanic": "Use the Sword of Office weapon profile; Yánda is its Hsien variant.",
+      "rarity": "",
+      "weight": "Light",
+      "cost": "",
+      "category": "Weapon",
+      "subtype": "Melee Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "source": "Infinity RPG — Yu Jing Faction Book",
+      "sourcePage": 93,
+      "sourceProfile": "Imperial Ranks Table: Yánda (Variant Sword of Office)."
     }
   ],
   "conditions": [
@@ -15096,7 +15118,8 @@ window.INFINITY_DATA = {
       "Vrabec Pistol",
       "Vulkan Shotgun (BS)",
       "Wetspike (CC)",
-      "Yǎndǎ (CC)"
+      "Yǎndǎ (CC)",
+      "Yánda (CC)"
     ],
     "equipment": [
       "360° Vision",
