@@ -1,0 +1,77 @@
+{
+  "build": "v72-aleph-source-reconciliation",
+  "date": "2026-11-04",
+  "source": {
+    "title": "Infinity RPG — ALEPH Faction Book",
+    "product": "MUH050225",
+    "file": "MUH050225 Infinity RPG - Aleph Faction Book.pdf",
+    "chapters": {
+      "faction": 4,
+      "advancedInfowar": 19,
+      "alephCharacters": 35,
+      "aiCharacters": 44,
+      "gear": 65,
+      "lhosts": 74,
+      "geists": 82,
+      "geistPath": 86,
+      "steelPhalanx": 91,
+      "adversaries": 102
+    }
+  },
+  "changes": {
+    "identity": "ALEPH standard human versus Aspect, Recreation, True AI Host / Heritage; distinct from physical Lhost or human Posthuman.",
+    "foundation": "AI hosts use the Homeworld/Habitat selector as Psychogenetic Foundation; fixed +1 main attributes and +1 subskill applied as effective modifiers, preserving underlying ratings; Eclectic manual.",
+    "careers": "14 ALEPH faction careers; 16 distinct AI careers from separate AI table; conditional Career filtering and source profile metadata.",
+    "lifepaths": "20 adolescent, 20 ALEPH career, 20 AI career events; AI host/origin, status, aspect traits, education, Geas and Insurrection references.",
+    "gear": "42 Chapter 5 table entries (source pp.72–73), preserve custom legacy descriptions on enriched items and correct source classifications.",
+    "references": "Dedicated ALEPH Source References in glossary including Lhosts, Geist Lifepath, Infowar and source notes.",
+    "compatibility": "V71 Nomad uplift, V70 PanO Helot, Ariadna Dogface, Haqq/Yu Jing career mapping, browser saves, XML and sheet custom rules preserved."
+  },
+  "counts": {
+    "careers": 14,
+    "aiCareers": 16,
+    "adolescent": 20,
+    "events": 20,
+    "aiEvents": 20,
+    "foundations": 7,
+    "lhosts": 10,
+    "gear": 42,
+    "profiles": 21,
+    "gearAdded": 31,
+    "gearEnriched": 11
+  },
+  "sourceExceptions": [
+    "The printed AI career table's 'Tactical Remote Pilot' corresponds to the Chapter 3 profile 'Tactical Remote Presence Pilot'. Use one selectable label while preserving the printed variant.",
+    "The source career profiles print 'Teck', 'Theivery', 'Anaylsis' and 'Persuasion' in some elective/mandatory rows. Normalised to Tech, Thievery, Analysis and Persuade matching the sheet's skill names.",
+    "Bureau Toth Agent and Sophotect appear on the ALEPH career table, but their individual profile special lines say O-12 Faction prerequisite. Both conflicting source facts are preserved for GM adjudication; no invented resolution.",
+    "Recreations may serve non-ALEPH factions and True AIs may originate elsewhere; the simplified single-faction sheet offers the AI host options through ALEPH selections, with cross-faction play handled as an explicit GM exception.",
+    "ALEPH source career events and AI events are separate d20 tables. No random effect or Life Point cost is silently imposed by selecting a career.",
+    "Homeworld / Habitat field functions as Psychogenetic Foundation only when an ALEPH AI host is chosen. Existing human ALEPH homes and legacy imports remain valid.",
+    "Lhost gear is not assumed to mean an AI host is currently embodied; physical body and software identity remain distinct."
+  ],
+  "validation": {
+    "status": "PASS (static)",
+    "checks": [
+      "Standalone app syntax",
+      "Standalone data syntax",
+      "Standalone vs embedded app parity",
+      "Standalone vs embedded data parity",
+      "Existing equipment name uniqueness",
+      "ALEPH Faction Career Table=14",
+      "AI Career Table=16",
+      "Adolescent / Faction Career / AI Career events 20 each",
+      "Psychogenetic Foundation=7",
+      "Lhost table=10",
+      "ALEPH gear source=42",
+      "Source profiles=21",
+      "ALEPH host/career branch",
+      "Fixed Foundation effective bonuses (source-specific)",
+      "No automatic Eclectic choice",
+      "V71 uplift code retained",
+      "Ariadna Dogface code retained",
+      "PanO Helot code retained",
+      "Custom main-skill / Focus rules retained",
+      "Custom gear slot limits remain 5/10"
+    ]
+  }
+}

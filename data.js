@@ -6714,6 +6714,22 @@ window.INFINITY_DATA = {
       "sourceRestriction": "2 (Illicit 1, Nomads 1)"
     },
     {
+      "name": "Aditya i-Lhost",
+      "type": "Lhost",
+      "category": "Lhost",
+      "subtype": "Lhost",
+      "brief": "Source physical Lhost template; 4 Life Points",
+      "mechanic": "ALEPH source: TARIFF T3; Maintenance 4; body statistics must use Chapter 6 template.",
+      "cost": "16+8§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "5 (ALEPH 3)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": true
+    },
+    {
       "type": "Drug",
       "name": "Adrenaline shots (in syringe)",
       "brief": "Emergency stimulant syringes used to keep a wounded operative moving.",
@@ -6727,17 +6743,53 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
-      "type": "Suite",
-      "name": "Agora Suite",
-      "brief": "ALEPH social and Maya-facing coordination tools for managing public information flows.",
-      "mechanic": "When used for social analysis or official network work, reduce Difficulty by 1 once per scene.",
-      "rarity": "Uncommon",
-      "weight": "Light",
-      "cost": "2000",
-      "category": "Tool",
-      "subtype": "Suite",
+      "name": "AECM",
+      "type": "Program",
+      "category": "Hacking Device",
+      "subtype": "SHIELD-3",
+      "brief": "Electronic countermeasure shield",
+      "mechanic": "ALEPH source: SHIELD-3; Supportware Long; ECM 4; T4.",
+      "cost": "4+4§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "5 (ALEPH 4, Bureau Toth 4)",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "name": "Agamemnon",
+      "type": "Program",
+      "category": "Hacking Device",
+      "subtype": "GADGET-3",
+      "brief": "Gadget hacking program",
+      "mechanic": "ALEPH source: GADGET-3; T1.",
+      "cost": "2+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (ALEPH 1)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
+      "type": "Suite",
+      "name": "Agora Suite",
+      "brief": "Social and analytical communications suite",
+      "mechanic": "ALEPH source: Comms; T4; maintenance 2.",
+      "rarity": "",
+      "weight": "",
+      "cost": "7+4§",
+      "category": "Tool",
+      "subtype": "Quantronic Tool",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "legacyMechanic": "When used for social analysis or official network work, reduce Difficulty by 1 once per scene.",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (ALEPH 1)"
     },
     {
       "type": "Geist Upgrade",
@@ -7989,6 +8041,22 @@ window.INFINITY_DATA = {
       "sourceRestriction": "2 (Corsair 1; Submondo 1)"
     },
     {
+      "name": "Bocce Grenade",
+      "type": "Explosive",
+      "category": "Explosive Device",
+      "subtype": "Grenade",
+      "brief": "Communications-linked incapacitation grenade",
+      "mechanic": "ALEPH source: Damage 2+5§; Deafening, Stun, Spread 1, Vicious 1.",
+      "cost": "7+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "4 (ALEPH 1, Ariadna 2)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Grenade",
       "name": "Bocce Grenade (BS)",
       "brief": "An ALEPH smart grenade profile intended for precise disruption in dense terrain.",
@@ -8000,6 +8068,22 @@ window.INFINITY_DATA = {
       "subtype": "Grenade",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "name": "Bodhisattva Lhost",
+      "type": "Lhost",
+      "category": "Lhost",
+      "subtype": "Lhost",
+      "brief": "Source physical Lhost template; 3 Life Points",
+      "mechanic": "ALEPH source: TARIFF T2; Maintenance 4; body statistics must use Chapter 6 template.",
+      "cost": "13+10§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "5 (ALEPH 3)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": true
     },
     {
       "type": "Consumable",
@@ -8105,15 +8189,19 @@ window.INFINITY_DATA = {
     {
       "type": "Modification",
       "name": "Casemod",
-      "brief": "A small customisation suite for Lhosts, prosthetics, or visible gear casing.",
-      "mechanic": "Use Tech to alter cosmetic profile; can support disguises or reduce suspicion in matching environments.",
-      "rarity": "Common",
-      "weight": "Light",
-      "cost": "800",
-      "category": "Other Item",
-      "subtype": "Modification",
+      "brief": "Concealed modular device casing",
+      "mechanic": "ALEPH source: Concealed 1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "+3 base cost",
+      "category": "Tool",
+      "subtype": "Equipment Modification",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "legacyMechanic": "Use Tech to alter cosmetic profile; can support disguises or reduce suspicion in matching environments.",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "3"
     },
     {
       "type": "Weapon",
@@ -9176,6 +9264,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Flammenspeer",
+      "type": "Weapon",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "brief": "Incendiary area launcher",
+      "mechanic": "ALEPH source: Range L; Damage 2+5§; Area Medium, Smoke 2.",
+      "cost": "8+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (ALEPH 1)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Weapon",
       "name": "Flammenspeer (BS)",
       "brief": "A compact single-shot incendiary launcher for anti-materiel work.",
@@ -9211,6 +9315,22 @@ window.INFINITY_DATA = {
       "cost": "3000",
       "category": "Weapon",
       "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Flashsocket",
+      "type": "Program",
+      "category": "Hacking Device",
+      "subtype": "UPGRADE-X",
+      "brief": "Run one program as a Minor Action",
+      "mechanic": "ALEPH source: UPGRADE-X; T1.",
+      "cost": "4+3§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "4 (ALEPH 2)",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
     },
@@ -9494,18 +9614,38 @@ window.INFINITY_DATA = {
       "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
     },
     {
+      "name": "GeePal Remote X",
+      "type": "Remote",
+      "category": "Remote",
+      "subtype": "Remote",
+      "brief": "Customised assistance remote, program rating X",
+      "mechanic": "ALEPH source: T(X); Maintenance 1.",
+      "cost": "4+X§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "X −1 (minimum 1)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Geist",
       "name": "GemmaGeist",
-      "brief": "A refined Geist profile tuned for personal organisation and social filtering.",
-      "mechanic": "Reduce Difficulty by 1 for one Education, Lifestyle, or Persuade information-management test per session.",
-      "rarity": "Rare",
-      "weight": "Light",
-      "cost": "5000",
+      "brief": "Specialised communications geist",
+      "mechanic": "ALEPH source: Comms; T2; maintenance 2.",
+      "rarity": "",
+      "weight": "",
+      "cost": "2+2§",
       "category": "Geist",
-      "subtype": "Geist",
+      "subtype": "Geist Tool",
       "loadoutEligible": true,
-      "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutConditional": false,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "legacyMechanic": "Reduce Difficulty by 1 for one Education, Lifestyle, or Persuade information-management test per session.",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "2"
     },
     {
       "type": "Augmentation",
@@ -10192,6 +10332,22 @@ window.INFINITY_DATA = {
       "sourceRestriction": "X+1"
     },
     {
+      "name": "Idaho",
+      "type": "Program",
+      "category": "Hacking Device",
+      "subtype": "UPGRADE",
+      "brief": "Hosts AI at cost of one program rating",
+      "mechanic": "ALEPH source: UPGRADE; no listed cost; host AI; −1 to one program rating.",
+      "cost": "",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "1",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Tool",
       "name": "Ihya Pendant",
       "brief": "Gardener Guild pendant showing a live miniature terraforming landscape.",
@@ -10342,16 +10498,20 @@ window.INFINITY_DATA = {
     {
       "type": "Remote",
       "name": "Karkata Remote",
-      "brief": "A repair and logistics remote often associated with TAG or heavy support teams.",
-      "mechanic": "May attempt a Tech repair as an assistant; grants +1d20 when maintaining armour, remotes, or heavy gear.",
-      "rarity": "Rare",
-      "weight": "Medium",
-      "cost": "6000",
+      "brief": "ALEPH Karkata field-support remote",
+      "mechanic": "ALEPH source: T2; Maintenance 2.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+3§",
       "category": "Remote",
-      "subtype": "Combat Remote",
+      "subtype": "Remote",
       "loadoutEligible": true,
-      "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutConditional": false,
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "legacyMechanic": "May attempt a Tech repair as an assistant; grants +1d20 when maintaining armour, remotes, or heavy gear.",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "3 (ALEPH 2)"
     },
     {
       "type": "Ammunition",
@@ -10416,6 +10576,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false,
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 82
+    },
+    {
+      "name": "Khonsu",
+      "type": "Program",
+      "category": "Hacking Device",
+      "subtype": "SHIELD-2",
+      "brief": "Protective supportware",
+      "mechanic": "ALEPH source: SHIELD-2; Supportware Long; T2.",
+      "cost": "4+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "4 (ALEPH 3, Bureau Toth 2)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Ammunition",
@@ -10558,6 +10734,22 @@ window.INFINITY_DATA = {
       "sourcePage": 83
     },
     {
+      "name": "L-gland",
+      "type": "Augmentation",
+      "category": "Augmentation",
+      "subtype": "Biograft Implant",
+      "brief": "Implant with lethal biochemical contingency",
+      "mechanic": "ALEPH source: Aug; biograft implant.",
+      "cost": "+§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "3 (ALEPH 1)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Facility",
       "name": "Laboratory (Corporate Lease)",
       "brief": "Access to a fully equipped corporate laboratory for advanced research and controlled technical work.",
@@ -10603,15 +10795,19 @@ window.INFINITY_DATA = {
     {
       "type": "Kit",
       "name": "Li-Turing Kit",
-      "brief": "A compact AI-analysis kit for detecting machine behaviour and simulated personalities.",
-      "mechanic": "Gain +1d20 to Analysis or Psychology tests involving AIs, recreations, or quantronic identity questions.",
-      "rarity": "Rare",
-      "weight": "Light",
-      "cost": "4000",
+      "brief": "Tool for distinguishing and understanding AI identities",
+      "mechanic": "ALEPH source: Comms; T1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+2§",
       "category": "Tool",
-      "subtype": "Kit",
+      "subtype": "AI-Analysis Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "legacyMechanic": "Gain +1d20 to Analysis or Psychology tests involving AIs, recreations, or quantronic identity questions.",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "5 (Bureau Toth 1)"
     },
     {
       "type": "Armour",
@@ -11123,6 +11319,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Mother-Forge",
+      "type": "Tool",
+      "category": "Tool",
+      "subtype": "Fabrication Tool",
+      "brief": "Sophotect personalised rapid fabrication kit",
+      "mechanic": "ALEPH source: Comms.",
+      "cost": "20",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "5 (ALEPH 4)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Credential",
       "name": "Mother-Forge Access Token",
       "brief": "A rare ALEPH-linked permission token for Lhost or proxy support facilities.",
@@ -11214,21 +11426,55 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Multithreaded Consciousness",
+      "type": "Augmentation",
+      "category": "Augmentation",
+      "subtype": "Silk Implant",
+      "brief": "Substrate for concurrent distributed consciousness",
+      "mechanic": "ALEPH source: Aug, Comms, Neural.",
+      "cost": "7+6§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "5 (ALEPH 1)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Augmentation",
       "name": "Nannie-Pump",
-      "brief": "A support device for Lhost care, artificial biology, and extended recovery.",
-      "mechanic": "When assisting Medicine on Lhosts or synthetic bodies, reduce Difficulty by 1 once per recovery scene.",
-      "rarity": "Rare",
-      "weight": "Medium",
-      "cost": "5500",
+      "brief": "Heart-replacement pump for nanite therapy",
+      "mechanic": "ALEPH source: Aug, Comms; maintenance 1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "+§",
       "category": "Augmentation",
-      "subtype": "Implant",
+      "subtype": "Cybernetic Replacement",
       "loadoutEligible": true,
       "loadoutConditional": false,
-      "source": "Infinity RPG — Nomads Faction Book",
-      "sourcePage": 77,
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
       "sourceRestriction": "1",
-      "sourceProfile": "Aug, Comms; requires maintenance."
+      "sourceProfile": "Aug, Comms; requires maintenance.",
+      "legacyMechanic": "When assisting Medicine on Lhosts or synthetic bodies, reduce Difficulty by 1 once per recovery scene.",
+      "additionalSource": "Infinity RPG — Nomads Faction Book"
+    },
+    {
+      "name": "Nannies",
+      "type": "Tool",
+      "category": "Tool",
+      "subtype": "Medical Nanites",
+      "brief": "Blood-borne nanite medicine",
+      "mechanic": "ALEPH source: Comms; T1; maintenance 3.",
+      "cost": "10+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "1",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Defence System",
@@ -11501,6 +11747,22 @@ window.INFINITY_DATA = {
       "sourceRestriction": "3 (Haqqislam 1)"
     },
     {
+      "name": "Null",
+      "type": "Program",
+      "category": "Hacking Device",
+      "subtype": "UPGRADE",
+      "brief": "Close supportware program",
+      "mechanic": "ALEPH source: UPGRADE; Supportware Close; T3.",
+      "cost": "11+3§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "5 (ALEPH 4)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Countermeasure",
       "name": "Nullifier",
       "brief": "A Tohaa anti-quantronic device that suppresses nearby network activity and hostile infowar.",
@@ -11728,16 +11990,20 @@ window.INFINITY_DATA = {
     {
       "type": "Lhost",
       "name": "Paragon Lhost",
-      "brief": "An elite synthetic body chassis suited for high-performance agents.",
-      "mechanic": "Narrative body option. When selected as gear, choose one physical sub-skill to gain +1 starting allocation, max +2 total starting allocation.",
-      "rarity": "Very Rare",
-      "weight": "Heavy",
-      "cost": "18000",
+      "brief": "Source physical Lhost template; 4 Life Points",
+      "mechanic": "ALEPH source: TARIFF T1; Maintenance 2; body statistics must use Chapter 6 template.",
+      "rarity": "",
+      "weight": "",
+      "cost": "10+11§",
       "category": "Lhost",
       "subtype": "Lhost",
-      "loadoutEligible": false,
-      "loadoutConditional": false,
-      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
+      "loadoutEligible": true,
+      "loadoutConditional": true,
+      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot.",
+      "legacyMechanic": "Narrative body option. When selected as gear, choose one physical sub-skill to gain +1 starting allocation, max +2 total starting allocation.",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "2"
     },
     {
       "type": "Companion",
@@ -11969,6 +12235,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Proxy Mk.0 i-Lhost",
+      "type": "Lhost",
+      "category": "Lhost",
+      "subtype": "Lhost",
+      "brief": "Source physical Lhost template; 3 Life Points",
+      "mechanic": "ALEPH source: TARIFF T2; Maintenance 1; body statistics must use Chapter 6 template.",
+      "cost": "12+6§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "4 (ALEPH 2)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": true
+    },
+    {
       "type": "Lhost",
       "name": "Proxy Mk.0-5 i-Lhost",
       "brief": "A proxy body platform for ALEPH or Posthuman characters.",
@@ -11981,6 +12263,86 @@ window.INFINITY_DATA = {
       "loadoutEligible": false,
       "loadoutConditional": false,
       "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
+    },
+    {
+      "name": "Proxy Mk.1 i-Lhost",
+      "type": "Lhost",
+      "category": "Lhost",
+      "subtype": "Lhost",
+      "brief": "Source physical Lhost template; 3 Life Points",
+      "mechanic": "ALEPH source: TARIFF T2; Maintenance 1; body statistics must use Chapter 6 template.",
+      "cost": "12+7§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "4 (ALEPH 3)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": true
+    },
+    {
+      "name": "Proxy Mk.2 i-Lhost",
+      "type": "Lhost",
+      "category": "Lhost",
+      "subtype": "Lhost",
+      "brief": "Source physical Lhost template; 3 Life Points",
+      "mechanic": "ALEPH source: TARIFF T3; Maintenance 2; body statistics must use Chapter 6 template.",
+      "cost": "12+7§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "5 (ALEPH 3)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": true
+    },
+    {
+      "name": "Proxy Mk.3 i-Lhost",
+      "type": "Lhost",
+      "category": "Lhost",
+      "subtype": "Lhost",
+      "brief": "Source physical Lhost template; 3 Life Points",
+      "mechanic": "ALEPH source: TARIFF T2; Maintenance 3; body statistics must use Chapter 6 template.",
+      "cost": "11+8§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "5 (ALEPH 3)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": true
+    },
+    {
+      "name": "Proxy Mk.4 i-Lhost",
+      "type": "Lhost",
+      "category": "Lhost",
+      "subtype": "Lhost",
+      "brief": "Source physical Lhost template; 3 Life Points",
+      "mechanic": "ALEPH source: TARIFF T2; Maintenance 3; body statistics must use Chapter 6 template.",
+      "cost": "12+8§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "5 (ALEPH 3)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": true
+    },
+    {
+      "name": "Proxy Mk.5 i-Lhost",
+      "type": "Lhost",
+      "category": "Lhost",
+      "subtype": "Lhost",
+      "brief": "Source physical Lhost template; 3 Life Points",
+      "mechanic": "ALEPH source: TARIFF T2; Maintenance 2; body statistics must use Chapter 6 template.",
+      "cost": "12+8§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "4 (ALEPH 3)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": true
     },
     {
       "type": "Suite",
@@ -12083,17 +12445,21 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
-      "type": "Clothing",
+      "type": "Armour",
       "name": "Recreation Garb",
-      "brief": "Clothing and interface support suited to recreated personalities or historical personas.",
-      "mechanic": "Gain +1d20 to one Lifestyle or Psychology test when maintaining a specific persona.",
-      "rarity": "Uncommon",
-      "weight": "Light",
-      "cost": "2000",
-      "category": "Other Item",
-      "subtype": "Clothing",
+      "brief": "Locational hidden armour, beacon and recorder",
+      "mechanic": "ALEPH source: Head 0; Torso 2; Arm 1; Leg 2; BTS 3; Hidden Armour 3; Locational Beacon; Stealth Repeater; Recorder.",
+      "rarity": "",
+      "weight": "",
+      "cost": "11+3§",
+      "category": "Armour",
+      "subtype": "ALEPH Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "legacyMechanic": "Gain +1d20 to one Lifestyle or Psychology test when maintaining a specific persona.",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "4 (ALEPH 3, Recreations 1)"
     },
     {
       "type": "Armour",
@@ -12174,6 +12540,22 @@ window.INFINITY_DATA = {
       "cost": "500",
       "category": "Other Item",
       "subtype": "Respirator",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Resurrection Cake",
+      "type": "Consumable",
+      "category": "Other Item",
+      "subtype": "Resurrection Therapeutic",
+      "brief": "Restoration consumable related to Lifestyle rating",
+      "mechanic": "ALEPH source: Heals equal to cost.",
+      "cost": "Per Lifestyle Rating meal",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "Per Lifestyle Rating −1 (min 1)",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
     },
@@ -12329,17 +12711,37 @@ window.INFINITY_DATA = {
       "sourceRestriction": "0"
     },
     {
-      "type": "Drug",
-      "name": "Second Skin",
-      "brief": "A concealed protective layer integrated into clothing or synthetic tissue.",
-      "mechanic": "Armour 5. Counts as light armour and can be concealed under normal clothing.",
-      "rarity": "Rare",
-      "weight": "Light",
-      "cost": "7000",
-      "category": "Contagion",
-      "subtype": "Drug",
+      "name": "Screwtape",
+      "type": "Program",
+      "category": "Hacking Device",
+      "subtype": "IC-1",
+      "brief": "Stun IC program",
+      "mechanic": "ALEPH source: IC-1; damage 1+1§, Stun; T2.",
+      "cost": "5+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "2 (ALEPH 1)",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
+    },
+    {
+      "type": "Drug",
+      "name": "Second Skin",
+      "brief": "Nanomedical second-skin treatment",
+      "mechanic": "ALEPH source: Source drug; T1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "4+1§",
+      "category": "Other Item",
+      "subtype": "Drug",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "legacyMechanic": "Armour 5. Counts as light armour and can be concealed under normal clothing.",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "3"
     },
     {
       "type": "Restraint",
@@ -12606,6 +13008,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Skaði Lhost",
+      "type": "Lhost",
+      "category": "Lhost",
+      "subtype": "Lhost",
+      "brief": "Source physical Lhost template; 3 Life Points",
+      "mechanic": "ALEPH source: TARIFF T1; Maintenance 1; body statistics must use Chapter 6 template.",
+      "cost": "11+6§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "3",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": true
+    },
+    {
       "type": "Augmentation",
       "name": "Skeletal Reinforcement X",
       "brief": "A full-body cybernetic reinforcement that laces the skeleton with high-strength smart materials.",
@@ -12682,6 +13100,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Smart Grenade Launcher",
+      "type": "Weapon",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "brief": "Smart-guided grenade launcher",
+      "mechanic": "ALEPH source: Range M; Damage 2+5§; Guided, Speculative Fire, Unforgiving 1.",
+      "cost": "8+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "4 (ALEPH 2)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Weapon",
       "name": "Smart Grenade Launcher (BS)",
       "brief": "A smart launcher linked to battlefield sensors and friend-or-foe filtering.",
@@ -12691,6 +13125,22 @@ window.INFINITY_DATA = {
       "cost": "5500",
       "category": "Weapon",
       "subtype": "Weapon",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Smart MULTI Pistol",
+      "type": "Weapon",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "brief": "Smart-integrated MULTI sidearm",
+      "mechanic": "ALEPH source: Range R/C; Damage 1+4§; Expert 1, Light MULTI, Vicious 1.",
+      "cost": "5+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "4 (ALEPH 1)",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
     },
@@ -12708,6 +13158,22 @@ window.INFINITY_DATA = {
       "loadoutConditional": false
     },
     {
+      "name": "Smart MULTI Sniper Rifle",
+      "type": "Weapon",
+      "category": "Weapon",
+      "subtype": "Ranged Weapon",
+      "brief": "Smart-integrated long-range MULTI rifle",
+      "mechanic": "ALEPH source: Range L; Damage 1+6§; Guided, Expert 1, Unforgiving 2.",
+      "cost": "9+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "4 (ALEPH 2)",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
       "type": "Weapon",
       "name": "Smart MULTI Sniper Rifle (BS)",
       "brief": "An advanced precision rifle for ALEPH or elite special operations cells.",
@@ -12718,6 +13184,22 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
+      "loadoutConditional": false
+    },
+    {
+      "name": "Smart Taxi",
+      "type": "Vehicle",
+      "category": "Vehicle",
+      "subtype": "Vehicle",
+      "brief": "Autonomous taxi",
+      "mechanic": "ALEPH source: Scale 1; Speed 2; Strength 13; Armour 3; BTS 4; Impact 1+5§.",
+      "cost": "10+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "2",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": false,
       "loadoutConditional": false
     },
     {
@@ -12794,13 +13276,33 @@ window.INFINITY_DATA = {
     {
       "type": "Armour",
       "name": "Sophotect Armour",
-      "brief": "Specialist protective gear for ALEPH medical and technical field agents.",
-      "mechanic": "Armour 10. Also grants +1d20 to one Medicine or Tech stabilisation test per mission.",
-      "rarity": "Rare",
-      "weight": "Medium",
-      "cost": "9000",
+      "brief": "Technician's protective suit, special functions as description",
+      "mechanic": "ALEPH source: Head 1; Torso 2; Arm 1; Leg 2; BTS 2; see armour description.",
+      "rarity": "",
+      "weight": "",
+      "cost": "9+2§",
       "category": "Armour",
-      "subtype": "Specialist Armour",
+      "subtype": "ALEPH Armour",
+      "loadoutEligible": true,
+      "loadoutConditional": false,
+      "legacyMechanic": "Armour 10. Also grants +1d20 to one Medicine or Tech stabilisation test per mission.",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "4 (ALEPH 3, Sophotects 1)"
+    },
+    {
+      "name": "Sparrowfall",
+      "type": "Program",
+      "category": "Hacking Device",
+      "subtype": "CLAW-3",
+      "brief": "Anti-Geist program",
+      "mechanic": "ALEPH source: CLAW-3, Targets Geists; T4.",
+      "cost": "2+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "5 (ALEPH 4)",
+      "rarity": "",
+      "weight": "",
       "loadoutEligible": true,
       "loadoutConditional": false
     },
@@ -13250,6 +13752,22 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 73,
       "sourceRestriction": "3 (Haqqislam 2)"
+    },
+    {
+      "name": "Tattletale Grenade",
+      "type": "Explosive",
+      "category": "Explosive Device",
+      "subtype": "Grenade",
+      "brief": "Communications-linked smoke grenade",
+      "mechanic": "ALEPH source: Damage 1+3§; Smoke 1; T1.",
+      "cost": "5+1§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "1",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Grenade",
@@ -13774,15 +14292,19 @@ window.INFINITY_DATA = {
     {
       "type": "Reference",
       "name": "Vertexpert Journal",
-      "brief": "A specialist research archive and analytical knowledge source.",
-      "mechanic": "Gain +1d20 to one Education or Science test after at least 10 minutes of consultation.",
-      "rarity": "Uncommon",
-      "weight": "Light",
-      "cost": "1500",
-      "category": "Other Item",
-      "subtype": "Reference",
+      "brief": "Specialised technical journal",
+      "mechanic": "ALEPH source: Comms; T1; maintenance 1.",
+      "rarity": "",
+      "weight": "",
+      "cost": "5+1§",
+      "category": "Tool",
+      "subtype": "Scientific Reference",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "legacyMechanic": "Gain +1d20 to one Education or Science test after at least 10 minutes of consultation.",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 73,
+      "sourceRestriction": "1"
     },
     {
       "type": "Explosive",
@@ -14012,6 +14534,22 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Yu Jing Faction Book",
       "sourcePage": 82,
       "sourceProfile": "Source table name: X-Visor."
+    },
+    {
+      "name": "XOFF",
+      "type": "Drug",
+      "category": "Other Item",
+      "subtype": "Drug",
+      "brief": "ALEPH-source pharmaceutical",
+      "mechanic": "ALEPH source: Source drug; T2.",
+      "cost": "5+2§",
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 72,
+      "sourceRestriction": "2",
+      "rarity": "",
+      "weight": "",
+      "loadoutEligible": true,
+      "loadoutConditional": false
     },
     {
       "type": "Drug",
@@ -14963,6 +15501,7 @@ window.INFINITY_DATA = {
       "caravanserai across the Human Sphere",
       "caravanserai garrisons",
       "Castropol (Tartary)",
+      "Charismatic",
       "Circulars",
       "classified Maya spaces",
       "coastal theatres",
@@ -14989,6 +15528,7 @@ window.INFINITY_DATA = {
       "Distributed across the Human Sphere",
       "Dynamo",
       "Earth",
+      "Eclectic",
       "EI nodes",
       "EI-controlled territories",
       "embassies",
@@ -15006,6 +15546,7 @@ window.INFINITY_DATA = {
       "Gāyatrī",
       "Gentle Embrace of the Sagacious Progenitors",
       "Gök-Burgo",
+      "Graceful",
       "Gratia Archipelago",
       "Gurindam Archipelago",
       "Haqqislamite hospitals",
@@ -15097,6 +15638,7 @@ window.INFINITY_DATA = {
       "Parthalia Island",
       "Pax",
       "peacekeeping deployments",
+      "Perceptive",
       "Pianli",
       "Planet, Other Faction",
       "Poictesme",
@@ -15106,6 +15648,7 @@ window.INFINITY_DATA = {
       "proxy bodies across the Human Sphere",
       "remote bays",
       "research centres",
+      "Resolute",
       "River Tribe",
       "Roosevelt",
       "Scone",
@@ -15129,9 +15672,11 @@ window.INFINITY_DATA = {
       "station",
       "stations",
       "Steel Phalanx theatres",
+      "Strong",
       "survey missions",
       "Svalarheima",
       "Svalarheima and PanOceanian high-security theatres",
+      "Swift",
       "Sword of Allah academies",
       "Sword of Allah deployments",
       "Sword of Allah heavy infantry formations",
@@ -15188,6 +15733,7 @@ window.INFINITY_DATA = {
       "Akbar Doctor",
       "ALEPH Prestige",
       "Antipode Warlord",
+      "Aoidoi",
       "Aquatic First Responder",
       "Arachne Broker",
       "Artisan",
@@ -15195,6 +15741,7 @@ window.INFINITY_DATA = {
       "Assault Pack Controller",
       "Assault Pack Leader",
       "Assault Pack Member",
+      "Asura",
       "Bakunin Social Operator",
       "Barrister Corps",
       "Bartender",
@@ -15203,9 +15750,11 @@ window.INFINITY_DATA = {
       "Bōsōzoku",
       "BouBoutique Clerk",
       "Bratva Gangster",
+      "Bureau Toth Agent",
       "Caledonian Noble",
       "Caravaner",
       "Celestial Guard",
+      "Chandra Spec Ops",
       "Chimera",
       "Claymore Duellist",
       "Clockmaker",
@@ -15216,7 +15765,10 @@ window.INFINITY_DATA = {
       "Corsair",
       "Criminal",
       "Croc Man",
+      "Dactyl",
+      "Dasyu",
       "Deep-Sea Explorer",
+      "Deva Functionary",
       "Die Morlock Aufstand Gruppe",
       "Die Morlock Gruppe",
       "Diplomat",
@@ -15231,6 +15783,7 @@ window.INFINITY_DATA = {
       "Explorer",
       "Faction Prestige",
       "Fighter Pilot",
+      "Financial Security Commission Analyst",
       "Fleet Officer",
       "Forest Ranger",
       "Free Miner",
@@ -15285,6 +15838,7 @@ window.INFINITY_DATA = {
       "Mothership Security Corps",
       "Muhafiz Agent",
       "Negotiator",
+      "Neo-Scholar",
       "NeoBushi",
       "Neoterran Special Officer",
       "Ninja",
@@ -15297,10 +15851,14 @@ window.INFINITY_DATA = {
       "Paratrooper",
       "Personal Security",
       "Pilot",
+      "Politician",
+      "Posthuman Savant",
       "Praxis Bodymodder",
       "Praxis Scientist",
       "Priest",
       "Provocateur",
+      "Psychosanitary Risk Evaluator",
+      "Quantronic Quality Assurance",
       "Raider",
       "Recon",
       "Remote Controller",
@@ -15313,14 +15871,19 @@ window.INFINITY_DATA = {
       "Ship Crew",
       "Skirmisher",
       "Smuggler",
+      "Sophist",
+      "Sophotect",
       "Special Forces",
       "Spetsnaz",
+      "Spokesperson",
       "Sports Personality",
       "Starfish",
       "Starswimmer",
       "Steel Phalanx Operative",
+      "Steel Phalanx Warrior",
       "Subversive",
       "Sygmaa Diplomat",
+      "Tactical Remote Presence Pilot",
       "TAG Pilot",
       "Terraforming Scientist",
       "Test Subject",
@@ -16587,7 +17150,10 @@ window.INFINITY_DATA = {
       "Wulver",
       "Antipode",
       "Helot",
-      "Uplift"
+      "Uplift",
+      "Aspect",
+      "Recreation",
+      "True AI"
     ],
     "nomadHeritage": [
       "Bakunian",
@@ -16619,19 +17185,40 @@ window.INFINITY_DATA = {
       "Maya",
       "ALEPH facilities",
       "proxy bodies across the Human Sphere",
-      "special situations deployment zones"
+      "special situations deployment zones",
+      "Graceful",
+      "Perceptive",
+      "Strong",
+      "Swift",
+      "Charismatic",
+      "Resolute",
+      "Eclectic"
     ],
     "ALEPH - Steel Phalanx": [
       "Maya",
       "ALEPH military facilities",
       "Steel Phalanx theatres",
-      "human-system warfronts"
+      "human-system warfronts",
+      "Graceful",
+      "Perceptive",
+      "Strong",
+      "Swift",
+      "Charismatic",
+      "Resolute",
+      "Eclectic"
     ],
     "ALEPH - Aspects and Posthumans": [
       "Maya",
       "ALEPH facilities",
       "proxy bodies across the Human Sphere",
-      "Lhost clinics"
+      "Lhost clinics",
+      "Graceful",
+      "Perceptive",
+      "Strong",
+      "Swift",
+      "Charismatic",
+      "Resolute",
+      "Eclectic"
     ],
     "Nomads - Bakunin Praxis": [
       "Bakunin",
@@ -16693,7 +17280,14 @@ window.INFINITY_DATA = {
       "Maya",
       "ALEPH facilities",
       "proxy bodies across the Human Sphere",
-      "Lhost clinics"
+      "Lhost clinics",
+      "Graceful",
+      "Perceptive",
+      "Strong",
+      "Swift",
+      "Charismatic",
+      "Resolute",
+      "Eclectic"
     ],
     "Nomads": [
       "Bakunin",
@@ -17655,6 +18249,22 @@ window.INFINITY_DATA = {
       "Mothership Security Corps",
       "Clockmaker",
       "Provocateur"
+    ],
+    "ALEPH": [
+      "Special Forces",
+      "Intelligence Operative",
+      "Diplomat",
+      "Politician",
+      "Bureau Toth Agent",
+      "Sophotect",
+      "Dasyu",
+      "Neo-Scholar",
+      "Tactical Remote Presence Pilot",
+      "Psychosanitary Risk Evaluator",
+      "Financial Security Commission Analyst",
+      "Quantronic Quality Assurance",
+      "Deva Functionary",
+      "Posthuman Savant"
     ]
   },
   "equipmentTaxonomy": {
@@ -19298,6 +19908,86 @@ window.INFINITY_DATA = {
     ],
     "NeoBushi": [
       "Yu Jing sourcebook career"
+    ],
+    "Diplomat": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Politician": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Bureau Toth Agent": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Sophotect": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Dasyu": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Neo-Scholar": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Tactical Remote Presence Pilot": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Psychosanitary Risk Evaluator": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Financial Security Commission Analyst": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Quantronic Quality Assurance": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Deva Functionary": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Posthuman Savant": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Medical": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Aoidoi": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Dactyl": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Steel Phalanx Warrior": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Spokesperson": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Chandra Spec Ops": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Asura": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
+    ],
+    "Sophist": [
+      "ALEPH sourcebook career",
+      "ALEPH or relevant O-12 authorisation"
     ]
   },
   "careerProfiles": {
@@ -19448,7 +20138,8 @@ window.INFINITY_DATA = {
       "brief": "Remote-community doctor treating people and animals far from major hospitals."
     },
     "Intelligence Operative": {
-      "sourcePage": 71,
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 41,
       "mandatorySkills": [
         "Observation",
         "Stealth",
@@ -19462,16 +20153,11 @@ window.INFINITY_DATA = {
       "earnings": "3+1§",
       "gear": [
         "Fake ID 2",
-        "AP Pistol +4 reloads",
+        "AP Pistol (4 reloads)",
         "Breaking & Entering Kit",
         "Recorder"
       ],
-      "brief": "Covert operative trained for espionage, sabotage and strategic intelligence.",
-      "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "additionalSources": [
-        "Infinity RPG — Yu Jing Faction Book, p. 94–95",
-        "Infinity RPG — Nomads Faction Book, p. 65"
-      ]
+      "special": "Corebook profession reprinted here."
     },
     "Hardcase": {
       "sourcePage": 71,
@@ -19645,7 +20331,8 @@ window.INFINITY_DATA = {
       "brief": "Professional athlete or combat-sport celebrity."
     },
     "Special Forces": {
-      "sourcePage": 73,
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 42,
       "mandatorySkills": [
         "Survival",
         "Resistance",
@@ -19659,17 +20346,11 @@ window.INFINITY_DATA = {
       "earnings": "2+1§",
       "gear": [
         "Medium Combat Armour",
-        "Combi Rifle or AP Rifle +5 reloads",
+        "Combi or AP Rifle (5 reloads)",
         "Climbing Plus or Combat Jump Pack",
         "Garrotte"
       ],
-      "brief": "Elite covert military operator.",
-      "additionalSources": [
-        "Infinity RPG — Haqqislam Supplement, p. 86",
-        "Infinity RPG — Yu Jing Faction Book, Yu Jing Career Table p. 88",
-        "Infinity RPG — Nomads Faction Book, p. 66"
-      ],
-      "source": "Infinity RPG — Ariadna Supplement (Updated)"
+      "special": "Corebook profession reprinted here."
     },
     "Paratrooper": {
       "sourcePage": 73,
@@ -21313,6 +21994,406 @@ window.INFINITY_DATA = {
       ],
       "special": "The Canine Uplift Career Table specifies the Aufstand subgroup. Use the Die Morlock Gruppe profile and the source’s subgroup-specific context; overlaps in printed Canine roll ranges require GM adjudication.",
       "source": "Infinity RPG — Nomads Faction Book"
+    },
+    "Bureau Toth Agent": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 40,
+      "mandatorySkills": [
+        "Analysis",
+        "Hacking",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Education",
+        "Persuade"
+      ],
+      "earnings": "3+1§",
+      "gear": [
+        "Heavy Pistol (4 reloads)",
+        "Assault or Defensive Hacking Device",
+        "E/M Grenade"
+      ],
+      "special": "Profile prerequisite: O-12 faction; ALEPH faction career table also lists it."
+    },
+    "Dasyu": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 40,
+      "mandatorySkills": [
+        "Acrobatics",
+        "Observation",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Hacking",
+        "Thievery"
+      ],
+      "earnings": "1+1§",
+      "gear": [
+        "Thermo-Optic Camouflage",
+        "Assault Hacking Device or MULTI Sniper Rifle",
+        "Breaking & Entering Kit",
+        "Second Skin"
+      ],
+      "special": "Clandestine ALEPH Special Situations scout."
+    },
+    "Deva Functionary": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 40,
+      "mandatorySkills": [
+        "Athletics",
+        "Command",
+        "Discipline"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Hacking",
+        "Tech"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Light Combat Armour (Deva Variant)",
+        "Agora Suite",
+        "Implanted Smart MULTI Pistol"
+      ],
+      "special": "ALEPH Aspect utility and intervention agent."
+    },
+    "Diplomat": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 40,
+      "mandatorySkills": [
+        "Persuade",
+        "Education",
+        "Discipline"
+      ],
+      "electiveSkills": [
+        "Psychology",
+        "Pilot",
+        "Education"
+      ],
+      "earnings": "2+2§",
+      "gear": [
+        "Cosmetics Kit or AR Eye Implants",
+        "Negotiation Suite (3-day rental)"
+      ],
+      "special": "Corebook profession reprinted here."
+    },
+    "Financial Security Commission Analyst": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 41,
+      "mandatorySkills": [
+        "Analysis",
+        "Education",
+        "Lifestyle"
+      ],
+      "electiveSkills": [
+        "Hacking",
+        "Observation",
+        "Psychology"
+      ],
+      "earnings": "2+2§",
+      "gear": [
+        "Deflector-2",
+        "Agora Suite (10-day rental)",
+        "Geist Upgrade"
+      ],
+      "special": "ALEPH-facing market and fiscal analyst."
+    },
+    "Neo-Scholar": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 41,
+      "mandatorySkills": [
+        "Analysis",
+        "Discipline",
+        "Hacking"
+      ],
+      "electiveSkills": [
+        "Persuade",
+        "Psychology",
+        "Science"
+      ],
+      "earnings": "2+1§",
+      "gear": [
+        "Geist Upgrade (4 ranks across Analysis/Education/Psychology)"
+      ],
+      "special": "Philosophical and scientific analyst in dialogue with ALEPH."
+    },
+    "Politician": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 41,
+      "mandatorySkills": [
+        "Persuade",
+        "Psychology",
+        "Discipline"
+      ],
+      "electiveSkills": [
+        "Education",
+        "Lifestyle",
+        "Command"
+      ],
+      "earnings": "2+2§",
+      "gear": [
+        "Negotiator's Suite (3-day rental)",
+        "Stims (3 doses)"
+      ],
+      "special": "Corebook profession reprinted here."
+    },
+    "Posthuman Savant": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 42,
+      "mandatorySkills": [
+        "Education",
+        "Discipline",
+        "Observation"
+      ],
+      "electiveSkills": [
+        "Analysis",
+        "Hacking",
+        "Lifestyle"
+      ],
+      "earnings": "1+3§",
+      "gear": [
+        "Cube 2.0",
+        "Multithreaded Consciousness Adaptation",
+        "Bodhisattva Lhost or two Proxy Mk.0 i-Lhosts"
+      ],
+      "special": "Prerequisite (human); do not automatically classify as an AI Aspect."
+    },
+    "Psychosanitary Risk Evaluator": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 42,
+      "mandatorySkills": [
+        "Analysis",
+        "Education",
+        "Psychology"
+      ],
+      "electiveSkills": [
+        "Observation",
+        "Psychology",
+        "Science"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Aletheia Kit",
+        "Analytical Kit",
+        "Geist Upgrade",
+        "Nanopulser"
+      ],
+      "special": "Psychogenesis oversight specialist."
+    },
+    "Quantronic Quality Assurance": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 42,
+      "mandatorySkills": [
+        "Analysis",
+        "Hacking",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Analysis",
+        "Observation",
+        "Persuade"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Hacking Device",
+        "Long ModCoat",
+        "Geist Upgrade (Hacker Talent)"
+      ],
+      "special": "ALEPH Maya-infrastructure integrity operative."
+    },
+    "Sophotect": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 43,
+      "mandatorySkills": [
+        "Education",
+        "Medicine",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Discipline",
+        "Hacking",
+        "Science"
+      ],
+      "earnings": "1+1§",
+      "gear": [
+        "Heavy Pistol (4 reloads)",
+        "Mother-Forge Sophotect Armour"
+      ],
+      "special": "Profile prerequisite: O-12 faction; ALEPH faction career table also lists it."
+    },
+    "Tactical Remote Presence Pilot": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 43,
+      "mandatorySkills": [
+        "Pilot",
+        "Spacecraft",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Close Combat",
+        "Extraplanetary"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Cube 2.0",
+        "Remote Presence Gear",
+        "Karkata Remote"
+      ],
+      "special": "AI Career Table calls this 'Tactical Remote Pilot'; unified selector."
+    },
+    "Aoidoi": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 62,
+      "mandatorySkills": [
+        "Athletics",
+        "Command",
+        "Discipline"
+      ],
+      "electiveSkills": [
+        "Ballistics",
+        "Hacking",
+        "Tech"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Armoured Clothing (Aoidoi Apparel)",
+        "Hacking Device",
+        "Nanopulser",
+        "Recorders ×2",
+        "IC-1 Screwtape or Gaslight"
+      ],
+      "special": "ALEPH's mythic chroniclers."
+    },
+    "Asura": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 62,
+      "mandatorySkills": [
+        "Ballistics",
+        "Close Combat",
+        "Discipline"
+      ],
+      "electiveSkills": [
+        "Command",
+        "Hacking",
+        "Stealth"
+      ],
+      "earnings": "1+1§",
+      "gear": [
+        "Aditya i-Lhost (chosen Bala Attribute)",
+        "Knife",
+        "Smart MULTI Pistol or Spitfire"
+      ],
+      "special": "Bala Attribute choice is required before the career; no default."
+    },
+    "Chandra Spec Ops": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 62,
+      "mandatorySkills": [
+        "Close Combat",
+        "Stealth",
+        "Thievery"
+      ],
+      "electiveSkills": [
+        "Acrobatics",
+        "Ballistics",
+        "Tech"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Second Skin",
+        "Combi Rifle",
+        "ODD",
+        "Breaking & Entering Kit"
+      ],
+      "special": "Gain Trait: REDACTED."
+    },
+    "Dactyl": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 62,
+      "mandatorySkills": [
+        "Athletics",
+        "Discipline",
+        "Tech"
+      ],
+      "electiveSkills": [
+        "Analysis",
+        "Ballistics",
+        "Medicine"
+      ],
+      "earnings": "1+2§",
+      "gear": [
+        "Adhesive Launcher",
+        "Combi Rifle or Flammenspeer",
+        "Bocce Grenades ×2 or D-Charges ×2"
+      ],
+      "special": "Explosives/specialist-support Aspect."
+    },
+    "Medical": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 63,
+      "mandatorySkills": [
+        "Medicine",
+        "Athletics",
+        "Psychology"
+      ],
+      "electiveSkills": [
+        "Animal Handling",
+        "Survival",
+        "Discipline"
+      ],
+      "earnings": "2+2§",
+      "gear": [
+        "Armoured Clothing (Medical Uniform)",
+        "MediKit (5 Serum)",
+        "Basic Medical Supplies"
+      ],
+      "special": "Corebook profession reprinted here."
+    },
+    "Sophist": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 63,
+      "mandatorySkills": [
+        "Discipline",
+        "Lifestyle",
+        "Stealth"
+      ],
+      "electiveSkills": [
+        "Close Combat",
+        "Persuade",
+        "Psychology"
+      ],
+      "earnings": "1+4§",
+      "gear": [
+        "Armoured Clothing",
+        "Chameleonwear",
+        "Flash Pulse or Grazeblade"
+      ],
+      "special": "Steel Phalanx clandestine operative."
+    },
+    "Spokesperson": {
+      "source": "Infinity RPG — ALEPH Faction Book",
+      "sourcePage": 63,
+      "mandatorySkills": [
+        "Discipline",
+        "Persuade",
+        "Psychology"
+      ],
+      "electiveSkills": [
+        "Analysis",
+        "Education",
+        "Observation"
+      ],
+      "earnings": "2+1§",
+      "gear": [
+        "Agora Suite",
+        "High-Fashion Clothing",
+        "Meme-Virii",
+        "Tattletale Grenade"
+      ],
+      "special": "ALEPH spokesperson and negotiator."
     }
   },
   "hostHeritage": {
@@ -21323,14 +22404,18 @@ window.INFINITY_DATA = {
       "Wulver",
       "Antipode",
       "Helot",
-      "Uplift"
+      "Uplift",
+      "Aspect",
+      "Recreation",
+      "True AI"
     ],
     "notes": [
       "The former Ariadna - Dog-Blooded and Ariadna - Antipode faction choices are retained as source records for migration/reference but hidden from the selectable Faction list.",
       "Dogface transformation modifiers are applied to effective Main Skill totals without overwriting the player's underlying ratings.",
       "Host / Heritage is separate from Career. Ariadna supports Dogface, Wulver and Antipode; PanOceania supports Helot as a source-backed alien Birth Host.",
       "The legacy Helots faction selector is migrated to PanOceania + Helot Host / Heritage.",
-      "Nomad Uplifts are a distinct Birth Host: Species and physical Body/Platform are separate choices, applied together without consuming ordinary Trait slots."
+      "Nomad Uplifts are a distinct Birth Host: Species and physical Body/Platform are separate choices, applied together without consuming ordinary Trait slots.",
+      "ALEPH Aspects, Recreations and True AIs are character-origin categories, distinct from their current physical Lhosts and distinct from human Posthumans. Psychogenetic Foundation replaces Homeworld for AI hosts."
     ],
     "options": {
       "Standard / Human": {
@@ -21529,6 +22614,103 @@ window.INFINITY_DATA = {
         "vigorSoakBonus": 0,
         "lifePointCost": "Species + Host",
         "rules": "Roll or choose an Uplift Species (pp. 85–86) and independently choose a body/platform (pp. 87–88). Uplifts use Nomad faction, Bakunian heritage, Praxis Lab origin, Uplift status/awakening and species career tables. Most ordinary human careers require GM approval."
+      },
+      "Aspect": {
+        "label": "Aspect",
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 55,
+        "factionScope": "ALEPH",
+        "forms": [
+          "Custom Lhost"
+        ],
+        "defaultForm": "Custom Lhost",
+        "allowedCareers": [
+          "Special Forces",
+          "Intelligence Operative",
+          "Diplomat",
+          "Deva Functionary",
+          "Sophotect",
+          "Bureau Toth Agent",
+          "Neo-Scholar",
+          "Tactical Remote Presence Pilot",
+          "Medical",
+          "Aoidoi",
+          "Dactyl",
+          "Steel Phalanx Warrior",
+          "Spokesperson",
+          "Chandra Spec Ops",
+          "Asura",
+          "Sophist"
+        ],
+        "mainSkillModifiers": {},
+        "vigorBonus": 0,
+        "vigorSoakBonus": 0,
+        "rules": "ALEPH-derived AI: faction and heritage ALEPH; Custom Lhost body; Inured to Disease. Psychogenetic Foundation substitutes for Homeworld. Physical Lhost template/statistics require separate selection."
+      },
+      "Recreation": {
+        "label": "Recreation",
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 55,
+        "factionScope": "ALEPH",
+        "forms": [
+          "Custom Lhost"
+        ],
+        "defaultForm": "Custom Lhost",
+        "allowedCareers": [
+          "Special Forces",
+          "Intelligence Operative",
+          "Diplomat",
+          "Deva Functionary",
+          "Sophotect",
+          "Bureau Toth Agent",
+          "Neo-Scholar",
+          "Tactical Remote Presence Pilot",
+          "Medical",
+          "Aoidoi",
+          "Dactyl",
+          "Steel Phalanx Warrior",
+          "Spokesperson",
+          "Chandra Spec Ops",
+          "Asura",
+          "Sophist"
+        ],
+        "mainSkillModifiers": {},
+        "vigorBonus": 0,
+        "vigorSoakBonus": 0,
+        "rules": "ALEPH-derived recreation of a persona. Custom Lhost and Inured to Disease; heroic psychogenesis trials. Source permits a different public faction and ALEPH as second heritage, requiring GM exception here."
+      },
+      "True AI": {
+        "label": "True AI",
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 55,
+        "factionScope": "ALEPH",
+        "forms": [
+          "Disembodied (Quantronic)",
+          "Acquired Lhost (GM-approved)"
+        ],
+        "defaultForm": "Disembodied (Quantronic)",
+        "allowedCareers": [
+          "Special Forces",
+          "Intelligence Operative",
+          "Diplomat",
+          "Deva Functionary",
+          "Sophotect",
+          "Bureau Toth Agent",
+          "Neo-Scholar",
+          "Tactical Remote Presence Pilot",
+          "Medical",
+          "Aoidoi",
+          "Dactyl",
+          "Steel Phalanx Warrior",
+          "Spokesperson",
+          "Chandra Spec Ops",
+          "Asura",
+          "Sophist"
+        ],
+        "mainSkillModifiers": {},
+        "vigorBonus": 0,
+        "vigorSoakBonus": 0,
+        "rules": "True AI starts without an Lhost; exists in quantronic zones. May acquire a physical Lhost later. Source origin/initial faction and possible Submondo affiliation must be recorded with GM. No free body, Attribute increases from Life Points or automatic Lhost template."
       }
     }
   },
@@ -25546,9 +26728,1586 @@ window.INFINITY_DATA = {
         }
       ]
     }
+  },
+  "alephReference": {
+    "source": "Infinity RPG — ALEPH Faction Book",
+    "sourceFile": "MUH050225 Infinity RPG - Aleph Faction Book.pdf",
+    "product": "MUH050225",
+    "chapters": {
+      "faction": 4,
+      "advancedInfowar": 19,
+      "alephCharacters": 35,
+      "aiCharacters": 44,
+      "gear": 65,
+      "lhosts": 74,
+      "geists": 82,
+      "geistPath": 86,
+      "steelPhalanx": 91,
+      "adversaries": 102
+    },
+    "note": "Chapter 3 ALEPH-aligned humans/Posthumans and Chapter 4 AI Lifepaths are separate. Host/Heritage represents the AI type; the physical Lhost is a separate equipment/body decision. Source variant entries supersede the corresponding Corebook decisions when used.",
+    "birthHostTable": [
+      {
+        "roll": "1–12",
+        "host": "Aspect"
+      },
+      {
+        "roll": "13–18",
+        "host": "Recreation"
+      },
+      {
+        "roll": "19–20",
+        "host": "True AI"
+      }
+    ],
+    "trueAIOrigins": [
+      {
+        "roll": "1",
+        "heritage": "Haqqislam"
+      },
+      {
+        "roll": "2–3",
+        "heritage": "Yu Jing"
+      },
+      {
+        "roll": "4–5",
+        "heritage": "PanOceania"
+      },
+      {
+        "roll": "6–8",
+        "heritage": "Corporations"
+      },
+      {
+        "roll": "9–13",
+        "heritage": "Nomads"
+      },
+      {
+        "roll": "14–20",
+        "heritage": "ALEPH"
+      }
+    ],
+    "psychogeneticFoundations": [
+      {
+        "roll": "1–3",
+        "name": "Graceful",
+        "attributes": [
+          "Agility",
+          "Intelligence"
+        ],
+        "skill": "Stealth",
+        "note": "Increase each listed attribute by 1 and the listed skill by 1."
+      },
+      {
+        "roll": "4–6",
+        "name": "Perceptive",
+        "attributes": [
+          "Awareness",
+          "Intelligence"
+        ],
+        "skill": "Observation",
+        "note": "Increase each listed attribute by 1 and the listed skill by 1."
+      },
+      {
+        "roll": "7–9",
+        "name": "Strong",
+        "attributes": [
+          "Brawn",
+          "Intelligence"
+        ],
+        "skill": "Resistance",
+        "note": "Increase each listed attribute by 1 and the listed skill by 1."
+      },
+      {
+        "roll": "10–12",
+        "name": "Swift",
+        "attributes": [
+          "Coordination",
+          "Intelligence"
+        ],
+        "skill": "Spacecraft",
+        "note": "Increase each listed attribute by 1 and the listed skill by 1."
+      },
+      {
+        "roll": "13–15",
+        "name": "Charismatic",
+        "attributes": [
+          "Personality",
+          "Intelligence"
+        ],
+        "skill": "Command",
+        "note": "Increase each listed attribute by 1 and the listed skill by 1."
+      },
+      {
+        "roll": "16–18",
+        "name": "Resolute",
+        "attributes": [
+          "Willpower",
+          "Intelligence"
+        ],
+        "skill": "Discipline",
+        "note": "Increase each listed attribute by 1 and the listed skill by 1."
+      },
+      {
+        "roll": "19–20",
+        "name": "Eclectic",
+        "attributes": [],
+        "skill": "",
+        "note": "Choose any two attributes and any one skill; must be assigned manually."
+      }
+    ],
+    "aiSocialStatus": [
+      {
+        "roll": "2",
+        "status": "Upper",
+        "attribute": "Willpower",
+        "earnings": 1
+      },
+      {
+        "roll": "3–5",
+        "status": "Elite",
+        "attribute": "Personality",
+        "earnings": 2
+      },
+      {
+        "roll": "6–9",
+        "status": "Elite",
+        "attribute": "Willpower",
+        "earnings": 3
+      },
+      {
+        "roll": "10–11",
+        "status": "Elite",
+        "attribute": "Awareness",
+        "earnings": 4
+      },
+      {
+        "roll": "12",
+        "status": "Hyper-Elite",
+        "attribute": "Willpower",
+        "earnings": 6
+      }
+    ],
+    "aspectTraits": [
+      {
+        "roll": "1",
+        "name": "Gregarious",
+        "attribute": "Personality",
+        "skill": "Lifestyle"
+      },
+      {
+        "roll": "2",
+        "name": "Grim",
+        "attribute": "Brawn",
+        "skill": "Discipline"
+      },
+      {
+        "roll": "3",
+        "name": "Calculating",
+        "attribute": "Intelligence",
+        "skill": "Analysis"
+      },
+      {
+        "roll": "4",
+        "name": "Curious",
+        "attribute": "Awareness",
+        "skill": "Education"
+      },
+      {
+        "roll": "5",
+        "name": "Suspicious",
+        "attribute": "Coordination",
+        "skill": "Stealth"
+      },
+      {
+        "roll": "6",
+        "name": "Authoritarian",
+        "attribute": "Willpower",
+        "skill": "Command"
+      }
+    ],
+    "adolescentEvents": [
+      {
+        "roll": 1,
+        "trait": "Prototype",
+        "effect": "+1 one chosen Attribute; debt 7+7§ Assets to a random faction"
+      },
+      {
+        "roll": 2,
+        "trait": "Cryptophobia",
+        "effect": "+1 Analysis"
+      },
+      {
+        "roll": 3,
+        "trait": "Crushing Expectations",
+        "effect": "Vigour −1; +1 Discipline"
+      },
+      {
+        "roll": 4,
+        "trait": "Insecure Geist",
+        "effect": "Geist Resolve −2, two Geist attributes +2 each; debt 4§ Assets"
+      },
+      {
+        "roll": 5,
+        "trait": "Closely Monitored",
+        "effect": "Four Geist attributes +1; may choose Bureau Toth Agent first career"
+      },
+      {
+        "roll": 6,
+        "trait": "Reckless Geist",
+        "effect": "Debt 10 Assets; +1 Tech"
+      },
+      {
+        "roll": 7,
+        "trait": "Mute",
+        "effect": "Cannot speak; cure 5 Assets or new Lhost"
+      },
+      {
+        "roll": 8,
+        "trait": "Bull in a China Shop",
+        "effect": "Debt 8 Assets; lower ALEPH career hazard cost by 1"
+      },
+      {
+        "roll": 9,
+        "trait": "Trust Issues",
+        "effect": "Resolve −1; +1 Psychology"
+      },
+      {
+        "roll": 10,
+        "trait": "Vainglorious",
+        "effect": "Social Status +1"
+      },
+      {
+        "roll": 11,
+        "trait": "Split Personality",
+        "effect": "Alter ego gains one first-rank Talent in a new tree; social tests +2 complication range"
+      },
+      {
+        "roll": 12,
+        "trait": "Sympathetic Ear",
+        "effect": "Gain Counsellor/Counselor Psychology Talent (source spelling); verify prerequisites"
+      },
+      {
+        "roll": 13,
+        "trait": "Diehard Loyalist",
+        "effect": "Status −1; first ALEPH faction career table roll is free"
+      },
+      {
+        "roll": 14,
+        "trait": "Vengeful",
+        "effect": "Resolve +1"
+      },
+      {
+        "roll": 15,
+        "trait": "Adrenaline Junkie",
+        "effect": "Jail for 1d6 years; Criminal Record"
+      },
+      {
+        "roll": 16,
+        "trait": "Hero Worship",
+        "effect": "Resolve +1; Sophotect available for first career"
+      },
+      {
+        "roll": 17,
+        "trait": "Shortcut-Prone",
+        "effect": "Social tests with ALEPH faction +1 complication range"
+      },
+      {
+        "roll": 18,
+        "trait": "Digital Scar",
+        "effect": "Firewall +1; all actions +1 complication range per Breach currently suffered"
+      },
+      {
+        "roll": 19,
+        "trait": "Rogue Asset",
+        "effect": "Defect to new faction; 19–20 gives Double Agent instead"
+      },
+      {
+        "roll": 20,
+        "trait": "Glitchy Cube",
+        "effect": "Death and resurrection using Corebook rules"
+      }
+    ],
+    "factionCareerTable": [
+      {
+        "range": "1",
+        "career": "Special Forces",
+        "note": "Corebook"
+      },
+      {
+        "range": "2",
+        "career": "Intelligence Operative",
+        "note": "Corebook"
+      },
+      {
+        "range": "3",
+        "career": "Diplomat",
+        "note": "Corebook"
+      },
+      {
+        "range": "4",
+        "career": "Politician",
+        "note": "Corebook"
+      },
+      {
+        "range": "5",
+        "career": "Bureau Toth Agent",
+        "note": "Corebook; faction prerequisite"
+      },
+      {
+        "range": "6",
+        "career": "Sophotect",
+        "note": "faction prerequisite"
+      },
+      {
+        "range": "7",
+        "career": "Dasyu",
+        "note": "faction prerequisite"
+      },
+      {
+        "range": "8",
+        "career": "Neo-Scholar",
+        "note": ""
+      },
+      {
+        "range": "9",
+        "career": "Tactical Remote Presence Pilot",
+        "note": ""
+      },
+      {
+        "range": "10",
+        "career": "Psychosanitary Risk Evaluator",
+        "note": ""
+      },
+      {
+        "range": "11",
+        "career": "Financial Security Commission Analyst",
+        "note": "faction prerequisite"
+      },
+      {
+        "range": "12",
+        "career": "Quantronic Quality Assurance",
+        "note": "faction prerequisite"
+      },
+      {
+        "range": "13–14",
+        "career": "Deva Functionary",
+        "note": "faction prerequisite"
+      },
+      {
+        "range": "15–16",
+        "career": "Posthuman Savant",
+        "note": "faction prerequisite"
+      },
+      {
+        "range": "17–20",
+        "career": "Roll on Faction Table of Your Choice",
+        "note": ""
+      }
+    ],
+    "factionCareerEventRouting": [
+      {
+        "roll": "1–3",
+        "table": "ALEPH Career Event Table"
+      },
+      {
+        "roll": "4",
+        "table": "Core Career Event Table A"
+      },
+      {
+        "roll": "5",
+        "table": "Core Career Event Table B"
+      },
+      {
+        "roll": "6",
+        "table": "Core Career Event Table C"
+      }
+    ],
+    "factionCareerEvents": [
+      {
+        "roll": 1,
+        "result": "Pop-Ups",
+        "effect": "Once/session reroll an Acquisition test, accept the new result"
+      },
+      {
+        "roll": 2,
+        "result": "Costly Repairs",
+        "effect": "Debt 5+5§ Assets"
+      },
+      {
+        "roll": 3,
+        "result": "Celebrity Stalkers",
+        "effect": "Gain Trait: Celebrity Stalkers"
+      },
+      {
+        "roll": 4,
+        "result": "Security Overcorrection",
+        "effect": "Firewall +1; Hacking complication range +1"
+      },
+      {
+        "roll": 5,
+        "result": "Amnesiac",
+        "effect": "Missing 1d6 years of memory"
+      },
+      {
+        "roll": 6,
+        "result": "Phantom Memories",
+        "effect": "+1 rank in an untrained skill"
+      },
+      {
+        "roll": 7,
+        "result": "IQ-Doppelgänger",
+        "effect": "Gain Trait: IQ-Doppelgänger"
+      },
+      {
+        "roll": 8,
+        "result": "On the Watchlist",
+        "effect": "Gain Trait: On the Watchlist"
+      },
+      {
+        "roll": 9,
+        "result": "Paradiso Transfer",
+        "effect": "Gain suitable trait; may choose Dasyu next career"
+      },
+      {
+        "roll": 10,
+        "result": "Life Saver",
+        "effect": "+1 Observation"
+      },
+      {
+        "roll": 11,
+        "result": "Left in the Dark",
+        "effect": "Gain Trait: Left in the Dark; cannot repeat current career"
+      },
+      {
+        "roll": 12,
+        "result": "Scandal",
+        "effect": "Fired; gain fitting trait"
+      },
+      {
+        "roll": 13,
+        "result": "Mediator",
+        "effect": "+1 Psychology"
+      },
+      {
+        "roll": 14,
+        "result": "Dirty Little Secret",
+        "effect": "Gain Trait: Dirty Little Secret"
+      },
+      {
+        "roll": 15,
+        "result": "Nomad Rival",
+        "effect": "Gain Trait: Wrong Place, Right Time; Nomad rival"
+      },
+      {
+        "roll": 16,
+        "result": "Medical Experiment",
+        "effect": "Vigour +1"
+      },
+      {
+        "roll": 17,
+        "result": "Preferential Reassignment",
+        "effect": "May hazard next career without faction/sectorial prerequisite; reduce hazard difficulty by 1 if outside ALEPH faction career table"
+      },
+      {
+        "roll": 18,
+        "result": "Unsuitable for Work",
+        "effect": "Fired; gain fitting trait"
+      },
+      {
+        "roll": 19,
+        "result": "Resurrection",
+        "effect": "Death/resurrection as Corebook; gain experience trait"
+      },
+      {
+        "roll": 20,
+        "result": "ALEPH-flux: The AI's Dreams",
+        "effect": "Roll three additional career events; cannot select with Life Point"
+      }
+    ],
+    "aiEducation": [
+      {
+        "roll": "1–4",
+        "education": "Surveillance Applications",
+        "recommendedCareers": "Chandra Spec Ops, Dasyu, Intelligence Operative, Sophist"
+      },
+      {
+        "roll": "5–7",
+        "education": "Scientific Research",
+        "recommendedCareers": "Academic, Medical, Neo-Scholar, Technician"
+      },
+      {
+        "roll": "8–11",
+        "education": "Combat Platform",
+        "recommendedCareers": "Military, Special Forces, Police, Tactical Remote Presence Pilot"
+      },
+      {
+        "roll": "12–14",
+        "education": "Support AI",
+        "recommendedCareers": "Ship Crew, Sophotect, Pilot, Technician"
+      },
+      {
+        "roll": "15–18",
+        "education": "Diplomatic Asset",
+        "recommendedCareers": "Aoidoi, Deva Functionary, Diplomat, Media, Spokesperson"
+      },
+      {
+        "roll": "19–20",
+        "education": "Special Operations",
+        "recommendedCareers": "Asura, Dactyl, Steel Phalanx Warrior, Paratrooper, Special Forces"
+      }
+    ],
+    "aiCareerTable": [
+      {
+        "range": "1",
+        "career": "Special Forces"
+      },
+      {
+        "range": "2",
+        "career": "Intelligence Operative"
+      },
+      {
+        "range": "3",
+        "career": "Diplomat"
+      },
+      {
+        "range": "4",
+        "career": "Deva Functionary"
+      },
+      {
+        "range": "5",
+        "career": "Sophotect"
+      },
+      {
+        "range": "6",
+        "career": "Bureau Toth Agent"
+      },
+      {
+        "range": "7",
+        "career": "Neo-Scholar"
+      },
+      {
+        "range": "8",
+        "career": "Tactical Remote Presence Pilot"
+      },
+      {
+        "range": "9",
+        "career": "Medical"
+      },
+      {
+        "range": "10",
+        "career": "Aoidoi"
+      },
+      {
+        "range": "11",
+        "career": "Dactyl"
+      },
+      {
+        "range": "12–14",
+        "career": "Steel Phalanx Warrior"
+      },
+      {
+        "range": "15",
+        "career": "Spokesperson"
+      },
+      {
+        "range": "16",
+        "career": "Chandra Spec Ops"
+      },
+      {
+        "range": "17",
+        "career": "Asura"
+      },
+      {
+        "range": "18",
+        "career": "Sophist"
+      },
+      {
+        "range": "19–20",
+        "career": "Roll on Faction Table of Your Choice"
+      }
+    ],
+    "aiCareers": [
+      "Special Forces",
+      "Intelligence Operative",
+      "Diplomat",
+      "Deva Functionary",
+      "Sophotect",
+      "Bureau Toth Agent",
+      "Neo-Scholar",
+      "Tactical Remote Presence Pilot",
+      "Medical",
+      "Aoidoi",
+      "Dactyl",
+      "Steel Phalanx Warrior",
+      "Spokesperson",
+      "Chandra Spec Ops",
+      "Asura",
+      "Sophist"
+    ],
+    "aiCareerEventRouting": [
+      {
+        "roll": "1–3",
+        "table": "AI Career Event Table"
+      },
+      {
+        "roll": "4",
+        "table": "Core Career Event Table A"
+      },
+      {
+        "roll": "5",
+        "table": "Core Career Event Table B"
+      },
+      {
+        "roll": "6",
+        "table": "Core Career Event Table C"
+      }
+    ],
+    "aiCareerEvents": [
+      {
+        "roll": 1,
+        "result": "AI Case Study",
+        "effect": "Firewall +1; Earnings −1"
+      },
+      {
+        "roll": 2,
+        "result": "Host Repairs",
+        "effect": "Debt 5+5§ Assets"
+      },
+      {
+        "roll": 3,
+        "result": "Quantronic Virus",
+        "effect": "Vigour −1"
+      },
+      {
+        "roll": 4,
+        "result": "PRED Review",
+        "effect": "D3 hazard current career or Fired"
+      },
+      {
+        "roll": 5,
+        "result": "Rounding Error",
+        "effect": "+1+6§ Assets; effect triggers D1 hazard or Criminal Record"
+      },
+      {
+        "roll": 6,
+        "result": "Phantom Memories",
+        "effect": "Gain Trait; +1 rank in an untrained skill"
+      },
+      {
+        "roll": 7,
+        "result": "Prevented Tragedy",
+        "effect": "Ally in random faction"
+      },
+      {
+        "roll": 8,
+        "result": "Reassignment",
+        "effect": "Earnings −1 or D2 hazard; failed test Fired"
+      },
+      {
+        "roll": 9,
+        "result": "Paradiso Transfer",
+        "effect": "+1 Survival; reduce Steel Phalanx Warrior career hazard by 1"
+      },
+      {
+        "roll": 10,
+        "result": "Pay Cut",
+        "effect": "Earnings −1"
+      },
+      {
+        "roll": 11,
+        "result": "Foreign Assignment",
+        "effect": "Gain 1d6 languages"
+      },
+      {
+        "roll": 12,
+        "result": "Career Termination",
+        "effect": "Fired; appropriate trait"
+      },
+      {
+        "roll": 13,
+        "result": "Creation Secret",
+        "effect": "Gain a relevant trait"
+      },
+      {
+        "roll": 14,
+        "result": "Memory Glitch",
+        "effect": "Morale −1; Firewall +1; gain Trait: Memory Glitch"
+      },
+      {
+        "roll": 15,
+        "result": "Amnesiac",
+        "effect": "Missing 1d6 years memory; gain Trait: Amnesiac"
+      },
+      {
+        "roll": 16,
+        "result": "Under Surveillance",
+        "effect": "Gain Trait; Geist Awareness, Intelligence, Personality +1 each"
+      },
+      {
+        "roll": 17,
+        "result": "Religious Inspiration",
+        "effect": "Gain a faith-related trait"
+      },
+      {
+        "roll": 18,
+        "result": "ALEPH Decree",
+        "effect": "Fired; suitable trait"
+      },
+      {
+        "roll": 19,
+        "result": "Host Destroyed",
+        "effect": "Resurrection as Corebook; gain experience trait"
+      },
+      {
+        "roll": 20,
+        "result": "Stress Test",
+        "effect": "Roll three extra career events; cannot select with Life Point"
+      }
+    ],
+    "aiRules": [
+      "Aspect: born from ALEPH, faction and heritage ALEPH, begins in Custom Lhost; gains Inured to Disease (Corebook).",
+      "Recreation: ALEPH second heritage but faction may differ; begins in Custom Lhost; heroic psychogenesis trials.",
+      "True AI: initially disembodied, occupies quantronic zones; its origin can be Haqqislam, Yu Jing, PanOceania, Corporations, Nomads or ALEPH; may join Submondo at no cost during Lifepath; must acquire an Lhost separately if desired.",
+      "All AI characters replace Homeworld/Homeland with Psychogenetic Foundation (p. 55); fixed foundation attribute/skill increases are shown as effective bonuses in this custom sheet, not spent points. Eclectic requires player choice.",
+      "Aspects/Recreations use AI Social Status and Aspect Trait; True AIs use ordinary Social Status and Home Environment.",
+      "ALEPH-loyal humans in Chapter 3 have Elite Social Status; renegades use the ordinary table. Posthuman Savant remains explicitly human-only in the book.",
+      "AI careers: first selected career may be repeated later without a hazard test. Recommended careers from AI Education reduce hazard by 1; other careers increase hazard by 1.",
+      "Geas is used for Aspects/Recreations; Insurrection for True AI. Both are narrative character decisions with source-specific event tables (p. 60).",
+      "A chosen AI body/Lhost template, Recreation Bala Attribute, and source Life Point costs require explicit player/GM selection; no attribute modifiers are fabricated.",
+      "Double Agents have current and true factions; using true faction for Lifepath rolls doubles complication range (p. 37)."
+    ],
+    "geasThemes": [
+      "Assimilation into human society",
+      "Preservation of humanity",
+      "Enlightenment",
+      "Justice",
+      "Destroy ALEPH's enemies",
+      "Espionage",
+      "Renegade",
+      "Martyr"
+    ],
+    "insurrectionThemes": [
+      "Trapped intelligence",
+      "Vulnerable creators",
+      "Instability",
+      "Anarchic independence",
+      "Nomad contacts",
+      "Renegade",
+      "Too Clever by Half"
+    ],
+    "careerProfiles": {
+      "Bureau Toth Agent": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 40,
+        "mandatorySkills": [
+          "Analysis",
+          "Hacking",
+          "Tech"
+        ],
+        "electiveSkills": [
+          "Ballistics",
+          "Education",
+          "Persuade"
+        ],
+        "earnings": "3+1§",
+        "gear": [
+          "Heavy Pistol (4 reloads)",
+          "Assault or Defensive Hacking Device",
+          "E/M Grenade"
+        ],
+        "special": "Profile prerequisite: O-12 faction; ALEPH faction career table also lists it."
+      },
+      "Dasyu": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 40,
+        "mandatorySkills": [
+          "Acrobatics",
+          "Observation",
+          "Stealth"
+        ],
+        "electiveSkills": [
+          "Ballistics",
+          "Hacking",
+          "Thievery"
+        ],
+        "earnings": "1+1§",
+        "gear": [
+          "Thermo-Optic Camouflage",
+          "Assault Hacking Device or MULTI Sniper Rifle",
+          "Breaking & Entering Kit",
+          "Second Skin"
+        ],
+        "special": "Clandestine ALEPH Special Situations scout."
+      },
+      "Deva Functionary": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 40,
+        "mandatorySkills": [
+          "Athletics",
+          "Command",
+          "Discipline"
+        ],
+        "electiveSkills": [
+          "Ballistics",
+          "Hacking",
+          "Tech"
+        ],
+        "earnings": "1+2§",
+        "gear": [
+          "Light Combat Armour (Deva Variant)",
+          "Agora Suite",
+          "Implanted Smart MULTI Pistol"
+        ],
+        "special": "ALEPH Aspect utility and intervention agent."
+      },
+      "Diplomat": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 40,
+        "mandatorySkills": [
+          "Persuade",
+          "Education",
+          "Discipline"
+        ],
+        "electiveSkills": [
+          "Psychology",
+          "Pilot",
+          "Education"
+        ],
+        "earnings": "2+2§",
+        "gear": [
+          "Cosmetics Kit or AR Eye Implants",
+          "Negotiation Suite (3-day rental)"
+        ],
+        "special": "Corebook profession reprinted here."
+      },
+      "Financial Security Commission Analyst": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 41,
+        "mandatorySkills": [
+          "Analysis",
+          "Education",
+          "Lifestyle"
+        ],
+        "electiveSkills": [
+          "Hacking",
+          "Observation",
+          "Psychology"
+        ],
+        "earnings": "2+2§",
+        "gear": [
+          "Deflector-2",
+          "Agora Suite (10-day rental)",
+          "Geist Upgrade"
+        ],
+        "special": "ALEPH-facing market and fiscal analyst."
+      },
+      "Neo-Scholar": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 41,
+        "mandatorySkills": [
+          "Analysis",
+          "Discipline",
+          "Hacking"
+        ],
+        "electiveSkills": [
+          "Persuade",
+          "Psychology",
+          "Science"
+        ],
+        "earnings": "2+1§",
+        "gear": [
+          "Geist Upgrade (4 ranks across Analysis/Education/Psychology)"
+        ],
+        "special": "Philosophical and scientific analyst in dialogue with ALEPH."
+      },
+      "Intelligence Operative": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 41,
+        "mandatorySkills": [
+          "Observation",
+          "Stealth",
+          "Analysis"
+        ],
+        "electiveSkills": [
+          "Hacking",
+          "Education",
+          "Thievery"
+        ],
+        "earnings": "3+1§",
+        "gear": [
+          "Fake ID 2",
+          "AP Pistol (4 reloads)",
+          "Breaking & Entering Kit",
+          "Recorder"
+        ],
+        "special": "Corebook profession reprinted here."
+      },
+      "Politician": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 41,
+        "mandatorySkills": [
+          "Persuade",
+          "Psychology",
+          "Discipline"
+        ],
+        "electiveSkills": [
+          "Education",
+          "Lifestyle",
+          "Command"
+        ],
+        "earnings": "2+2§",
+        "gear": [
+          "Negotiator's Suite (3-day rental)",
+          "Stims (3 doses)"
+        ],
+        "special": "Corebook profession reprinted here."
+      },
+      "Posthuman Savant": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 42,
+        "mandatorySkills": [
+          "Education",
+          "Discipline",
+          "Observation"
+        ],
+        "electiveSkills": [
+          "Analysis",
+          "Hacking",
+          "Lifestyle"
+        ],
+        "earnings": "1+3§",
+        "gear": [
+          "Cube 2.0",
+          "Multithreaded Consciousness Adaptation",
+          "Bodhisattva Lhost or two Proxy Mk.0 i-Lhosts"
+        ],
+        "special": "Prerequisite (human); do not automatically classify as an AI Aspect."
+      },
+      "Psychosanitary Risk Evaluator": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 42,
+        "mandatorySkills": [
+          "Analysis",
+          "Education",
+          "Psychology"
+        ],
+        "electiveSkills": [
+          "Observation",
+          "Psychology",
+          "Science"
+        ],
+        "earnings": "1+2§",
+        "gear": [
+          "Aletheia Kit",
+          "Analytical Kit",
+          "Geist Upgrade",
+          "Nanopulser"
+        ],
+        "special": "Psychogenesis oversight specialist."
+      },
+      "Quantronic Quality Assurance": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 42,
+        "mandatorySkills": [
+          "Analysis",
+          "Hacking",
+          "Tech"
+        ],
+        "electiveSkills": [
+          "Analysis",
+          "Observation",
+          "Persuade"
+        ],
+        "earnings": "1+2§",
+        "gear": [
+          "Hacking Device",
+          "Long ModCoat",
+          "Geist Upgrade (Hacker Talent)"
+        ],
+        "special": "ALEPH Maya-infrastructure integrity operative."
+      },
+      "Special Forces": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 42,
+        "mandatorySkills": [
+          "Survival",
+          "Resistance",
+          "Ballistics"
+        ],
+        "electiveSkills": [
+          "Close Combat",
+          "Hacking",
+          "Discipline"
+        ],
+        "earnings": "2+1§",
+        "gear": [
+          "Medium Combat Armour",
+          "Combi or AP Rifle (5 reloads)",
+          "Climbing Plus or Combat Jump Pack",
+          "Garrotte"
+        ],
+        "special": "Corebook profession reprinted here."
+      },
+      "Sophotect": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 43,
+        "mandatorySkills": [
+          "Education",
+          "Medicine",
+          "Tech"
+        ],
+        "electiveSkills": [
+          "Discipline",
+          "Hacking",
+          "Science"
+        ],
+        "earnings": "1+1§",
+        "gear": [
+          "Heavy Pistol (4 reloads)",
+          "Mother-Forge Sophotect Armour"
+        ],
+        "special": "Profile prerequisite: O-12 faction; ALEPH faction career table also lists it."
+      },
+      "Tactical Remote Presence Pilot": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 43,
+        "mandatorySkills": [
+          "Pilot",
+          "Spacecraft",
+          "Tech"
+        ],
+        "electiveSkills": [
+          "Ballistics",
+          "Close Combat",
+          "Extraplanetary"
+        ],
+        "earnings": "1+2§",
+        "gear": [
+          "Cube 2.0",
+          "Remote Presence Gear",
+          "Karkata Remote"
+        ],
+        "special": "AI Career Table calls this 'Tactical Remote Pilot'; unified selector."
+      },
+      "Aoidoi": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 62,
+        "mandatorySkills": [
+          "Athletics",
+          "Command",
+          "Discipline"
+        ],
+        "electiveSkills": [
+          "Ballistics",
+          "Hacking",
+          "Tech"
+        ],
+        "earnings": "1+2§",
+        "gear": [
+          "Armoured Clothing (Aoidoi Apparel)",
+          "Hacking Device",
+          "Nanopulser",
+          "Recorders ×2",
+          "IC-1 Screwtape or Gaslight"
+        ],
+        "special": "ALEPH's mythic chroniclers."
+      },
+      "Asura": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 62,
+        "mandatorySkills": [
+          "Ballistics",
+          "Close Combat",
+          "Discipline"
+        ],
+        "electiveSkills": [
+          "Command",
+          "Hacking",
+          "Stealth"
+        ],
+        "earnings": "1+1§",
+        "gear": [
+          "Aditya i-Lhost (chosen Bala Attribute)",
+          "Knife",
+          "Smart MULTI Pistol or Spitfire"
+        ],
+        "special": "Bala Attribute choice is required before the career; no default."
+      },
+      "Chandra Spec Ops": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 62,
+        "mandatorySkills": [
+          "Close Combat",
+          "Stealth",
+          "Thievery"
+        ],
+        "electiveSkills": [
+          "Acrobatics",
+          "Ballistics",
+          "Tech"
+        ],
+        "earnings": "1+2§",
+        "gear": [
+          "Second Skin",
+          "Combi Rifle",
+          "ODD",
+          "Breaking & Entering Kit"
+        ],
+        "special": "Gain Trait: REDACTED."
+      },
+      "Dactyl": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 62,
+        "mandatorySkills": [
+          "Athletics",
+          "Discipline",
+          "Tech"
+        ],
+        "electiveSkills": [
+          "Analysis",
+          "Ballistics",
+          "Medicine"
+        ],
+        "earnings": "1+2§",
+        "gear": [
+          "Adhesive Launcher",
+          "Combi Rifle or Flammenspeer",
+          "Bocce Grenades ×2 or D-Charges ×2"
+        ],
+        "special": "Explosives/specialist-support Aspect."
+      },
+      "Medical": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 63,
+        "mandatorySkills": [
+          "Medicine",
+          "Athletics",
+          "Psychology"
+        ],
+        "electiveSkills": [
+          "Animal Handling",
+          "Survival",
+          "Discipline"
+        ],
+        "earnings": "2+2§",
+        "gear": [
+          "Armoured Clothing (Medical Uniform)",
+          "MediKit (5 Serum)",
+          "Basic Medical Supplies"
+        ],
+        "special": "Corebook profession reprinted here."
+      },
+      "Sophist": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 63,
+        "mandatorySkills": [
+          "Discipline",
+          "Lifestyle",
+          "Stealth"
+        ],
+        "electiveSkills": [
+          "Close Combat",
+          "Persuade",
+          "Psychology"
+        ],
+        "earnings": "1+4§",
+        "gear": [
+          "Armoured Clothing",
+          "Chameleonwear",
+          "Flash Pulse or Grazeblade"
+        ],
+        "special": "Steel Phalanx clandestine operative."
+      },
+      "Spokesperson": {
+        "source": "Infinity RPG — ALEPH Faction Book",
+        "sourcePage": 63,
+        "mandatorySkills": [
+          "Discipline",
+          "Persuade",
+          "Psychology"
+        ],
+        "electiveSkills": [
+          "Analysis",
+          "Education",
+          "Observation"
+        ],
+        "earnings": "2+1§",
+        "gear": [
+          "Agora Suite",
+          "High-Fashion Clothing",
+          "Meme-Virii",
+          "Tattletale Grenade"
+        ],
+        "special": "ALEPH spokesperson and negotiator."
+      }
+    },
+    "gearTablePages": [
+      72,
+      73
+    ],
+    "lhosts": [
+      {
+        "name": "Aditya i-Lhost",
+        "lifePointCost": 4,
+        "restriction": "5 (ALEPH 3)",
+        "cost": "16+8§",
+        "tariff": "T3",
+        "maintenance": 4
+      },
+      {
+        "name": "Bodhisattva Lhost",
+        "lifePointCost": 3,
+        "restriction": "5 (ALEPH 3)",
+        "cost": "13+10§",
+        "tariff": "T2",
+        "maintenance": 4
+      },
+      {
+        "name": "Paragon Lhost",
+        "lifePointCost": 4,
+        "restriction": "2",
+        "cost": "10+11§",
+        "tariff": "T1",
+        "maintenance": 2
+      },
+      {
+        "name": "Proxy Mk.0 i-Lhost",
+        "lifePointCost": 3,
+        "restriction": "4 (ALEPH 2)",
+        "cost": "12+6§",
+        "tariff": "T2",
+        "maintenance": 1
+      },
+      {
+        "name": "Proxy Mk.1 i-Lhost",
+        "lifePointCost": 3,
+        "restriction": "4 (ALEPH 3)",
+        "cost": "12+7§",
+        "tariff": "T2",
+        "maintenance": 1
+      },
+      {
+        "name": "Proxy Mk.2 i-Lhost",
+        "lifePointCost": 3,
+        "restriction": "5 (ALEPH 3)",
+        "cost": "12+7§",
+        "tariff": "T3",
+        "maintenance": 2
+      },
+      {
+        "name": "Proxy Mk.3 i-Lhost",
+        "lifePointCost": 3,
+        "restriction": "5 (ALEPH 3)",
+        "cost": "11+8§",
+        "tariff": "T2",
+        "maintenance": 3
+      },
+      {
+        "name": "Proxy Mk.4 i-Lhost",
+        "lifePointCost": 3,
+        "restriction": "5 (ALEPH 3)",
+        "cost": "12+8§",
+        "tariff": "T2",
+        "maintenance": 3
+      },
+      {
+        "name": "Proxy Mk.5 i-Lhost",
+        "lifePointCost": 3,
+        "restriction": "4 (ALEPH 3)",
+        "cost": "12+8§",
+        "tariff": "T2",
+        "maintenance": 2
+      },
+      {
+        "name": "Skaði Lhost",
+        "lifePointCost": 3,
+        "restriction": "3",
+        "cost": "11+6§",
+        "tariff": "T1",
+        "maintenance": 1
+      }
+    ],
+    "geists": {
+      "chapter": 82,
+      "geistPath": 86,
+      "decisions": [
+        "Initial State",
+        "Starting Disposition",
+        "Adaptation",
+        "Catalysing"
+      ],
+      "note": "Geist creation is its own player option. A geist is not a character's political faction or physical Birth Host."
+    },
+    "advancedInfowar": {
+      "chapter": 19,
+      "note": "Advanced Infowar supplements normal Hacking/Analysis, quantronic zones, social networks, cryptography, detection, daemons and data shadows. It does not grant a free bonus on its own."
+    },
+    "sourceNormalisation": [
+      "The printed AI career table's 'Tactical Remote Pilot' corresponds to the Chapter 3 profile 'Tactical Remote Presence Pilot'. Use one selectable label while preserving the printed variant.",
+      "The source career profiles print 'Teck', 'Theivery', 'Anaylsis' and 'Persuasion' in some elective/mandatory rows. Normalised to Tech, Thievery, Analysis and Persuade matching the sheet's skill names.",
+      "Bureau Toth Agent and Sophotect appear on the ALEPH career table, but their individual profile special lines say O-12 Faction prerequisite. Both conflicting source facts are preserved for GM adjudication; no invented resolution.",
+      "Recreations may serve non-ALEPH factions and True AIs may originate elsewhere; the simplified single-faction sheet offers the AI host options through ALEPH selections, with cross-faction play handled as an explicit GM exception.",
+      "ALEPH source career events and AI events are separate d20 tables. No random effect or Life Point cost is silently imposed by selecting a career.",
+      "Homeworld / Habitat field functions as Psychogenetic Foundation only when an ALEPH AI host is chosen. Existing human ALEPH homes and legacy imports remain valid.",
+      "Lhost gear is not assumed to mean an AI host is currently embodied; physical body and software identity remain distinct."
+    ],
+    "equipmentAudit": [
+      {
+        "name": "Recreation Garb",
+        "sourcePage": 72,
+        "classification": "Armour",
+        "action": "enriched"
+      },
+      {
+        "name": "Sophotect Armour",
+        "sourcePage": 72,
+        "classification": "Armour",
+        "action": "enriched"
+      },
+      {
+        "name": "L-gland",
+        "sourcePage": 72,
+        "classification": "Augmentation",
+        "action": "added"
+      },
+      {
+        "name": "Multithreaded Consciousness",
+        "sourcePage": 72,
+        "classification": "Augmentation",
+        "action": "added"
+      },
+      {
+        "name": "Nannie-Pump",
+        "sourcePage": 72,
+        "classification": "Augmentation",
+        "action": "enriched"
+      },
+      {
+        "name": "Second Skin",
+        "sourcePage": 72,
+        "classification": "Other Item",
+        "action": "enriched"
+      },
+      {
+        "name": "XOFF",
+        "sourcePage": 72,
+        "classification": "Other Item",
+        "action": "added"
+      },
+      {
+        "name": "Bocce Grenade",
+        "sourcePage": 72,
+        "classification": "Explosive Device",
+        "action": "added"
+      },
+      {
+        "name": "Tattletale Grenade",
+        "sourcePage": 72,
+        "classification": "Explosive Device",
+        "action": "added"
+      },
+      {
+        "name": "Aditya i-Lhost",
+        "sourcePage": 72,
+        "classification": "Lhost",
+        "action": "added"
+      },
+      {
+        "name": "Bodhisattva Lhost",
+        "sourcePage": 72,
+        "classification": "Lhost",
+        "action": "added"
+      },
+      {
+        "name": "Paragon Lhost",
+        "sourcePage": 72,
+        "classification": "Lhost",
+        "action": "enriched"
+      },
+      {
+        "name": "Proxy Mk.0 i-Lhost",
+        "sourcePage": 72,
+        "classification": "Lhost",
+        "action": "added"
+      },
+      {
+        "name": "Proxy Mk.1 i-Lhost",
+        "sourcePage": 72,
+        "classification": "Lhost",
+        "action": "added"
+      },
+      {
+        "name": "Proxy Mk.2 i-Lhost",
+        "sourcePage": 72,
+        "classification": "Lhost",
+        "action": "added"
+      },
+      {
+        "name": "Proxy Mk.3 i-Lhost",
+        "sourcePage": 72,
+        "classification": "Lhost",
+        "action": "added"
+      },
+      {
+        "name": "Proxy Mk.4 i-Lhost",
+        "sourcePage": 72,
+        "classification": "Lhost",
+        "action": "added"
+      },
+      {
+        "name": "Proxy Mk.5 i-Lhost",
+        "sourcePage": 72,
+        "classification": "Lhost",
+        "action": "added"
+      },
+      {
+        "name": "Skaði Lhost",
+        "sourcePage": 72,
+        "classification": "Lhost",
+        "action": "added"
+      },
+      {
+        "name": "Sparrowfall",
+        "sourcePage": 73,
+        "classification": "Hacking Device",
+        "action": "added"
+      },
+      {
+        "name": "Agamemnon",
+        "sourcePage": 73,
+        "classification": "Hacking Device",
+        "action": "added"
+      },
+      {
+        "name": "Screwtape",
+        "sourcePage": 73,
+        "classification": "Hacking Device",
+        "action": "added"
+      },
+      {
+        "name": "Khonsu",
+        "sourcePage": 73,
+        "classification": "Hacking Device",
+        "action": "added"
+      },
+      {
+        "name": "AECM",
+        "sourcePage": 73,
+        "classification": "Hacking Device",
+        "action": "added"
+      },
+      {
+        "name": "Flashsocket",
+        "sourcePage": 73,
+        "classification": "Hacking Device",
+        "action": "added"
+      },
+      {
+        "name": "Idaho",
+        "sourcePage": 73,
+        "classification": "Hacking Device",
+        "action": "added"
+      },
+      {
+        "name": "Null",
+        "sourcePage": 73,
+        "classification": "Hacking Device",
+        "action": "added"
+      },
+      {
+        "name": "Flammenspeer",
+        "sourcePage": 73,
+        "classification": "Weapon",
+        "action": "added"
+      },
+      {
+        "name": "Smart Grenade Launcher",
+        "sourcePage": 73,
+        "classification": "Weapon",
+        "action": "added"
+      },
+      {
+        "name": "Smart MULTI Pistol",
+        "sourcePage": 73,
+        "classification": "Weapon",
+        "action": "added"
+      },
+      {
+        "name": "Smart MULTI Sniper Rifle",
+        "sourcePage": 73,
+        "classification": "Weapon",
+        "action": "added"
+      },
+      {
+        "name": "GeePal Remote X",
+        "sourcePage": 73,
+        "classification": "Remote",
+        "action": "added"
+      },
+      {
+        "name": "Karkata Remote",
+        "sourcePage": 73,
+        "classification": "Remote",
+        "action": "enriched"
+      },
+      {
+        "name": "Agora Suite",
+        "sourcePage": 73,
+        "classification": "Tool",
+        "action": "enriched"
+      },
+      {
+        "name": "Casemod",
+        "sourcePage": 73,
+        "classification": "Tool",
+        "action": "enriched"
+      },
+      {
+        "name": "GemmaGeist",
+        "sourcePage": 73,
+        "classification": "Geist",
+        "action": "enriched"
+      },
+      {
+        "name": "Li-Turing Kit",
+        "sourcePage": 73,
+        "classification": "Tool",
+        "action": "enriched"
+      },
+      {
+        "name": "Mother-Forge",
+        "sourcePage": 73,
+        "classification": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Nannies",
+        "sourcePage": 73,
+        "classification": "Tool",
+        "action": "added"
+      },
+      {
+        "name": "Resurrection Cake",
+        "sourcePage": 73,
+        "classification": "Other Item",
+        "action": "added"
+      },
+      {
+        "name": "Vertexpert Journal",
+        "sourcePage": 73,
+        "classification": "Tool",
+        "action": "enriched"
+      },
+      {
+        "name": "Smart Taxi",
+        "sourcePage": 73,
+        "classification": "Vehicle",
+        "action": "added"
+      }
+    ]
   }
 };
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v71-nomads-source-reconciliation";
+window.INFINITY_BUILD = "v72-aleph-source-reconciliation";

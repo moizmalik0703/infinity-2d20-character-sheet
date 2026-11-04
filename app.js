@@ -125,13 +125,29 @@ function isPanOceaniaFaction(faction) {
   return value === "PanOceania" || value.startsWith("PanOceania -");
 }
 
+function isAlephFaction(faction) {
+  const value = String(faction || "").trim();
+  return value === "ALEPH" || value.startsWith("ALEPH -");
+}
+
+function isAlephAIHost() {
+  return isAlephFaction(inputField("faction")?.value || "") &&
+    ["Aspect","Recreation","True AI"].includes(selectedHostHeritage());
+}
+
+function selectedAlephFoundation() {
+  if (!isAlephAIHost()) return null;
+  const choice = inputField("homeworld")?.value || "";
+  return DATA.alephReference?.psychogeneticFoundations?.find(row => row.name === choice) || null;
+}
+
 function isNomadsFaction(faction) {
   const value = String(faction || "").trim();
   return value === "Nomads" || value.startsWith("Nomads -");
 }
 
 function usesSourceHostHeritage(faction) {
-  return isAriadnaFaction(faction) || isPanOceaniaFaction(faction) || isNomadsFaction(faction);
+  return isAriadnaFaction(faction) || isPanOceaniaFaction(faction) || isNomadsFaction(faction) || isAlephFaction(faction);
 }
 
 function isUpliftHost() {
@@ -175,6 +191,9 @@ function hostOptionsForFaction(faction) {
   const configured = DATA.lists?.hostHeritage || [DEFAULT_HOST_HERITAGE];
   const selected = String(faction || "").trim();
 
+  if (isAlephFaction(selected)) {
+    return configured.filter(value => value === DEFAULT_HOST_HERITAGE || ["Aspect","Recreation","True AI"].includes(value));
+  }
   if (isPanOceaniaFaction(selected)) {
     return configured.filter(value => value === DEFAULT_HOST_HERITAGE || value === "Helot");
   }
@@ -191,6 +210,10 @@ function hostOptionsForFaction(faction) {
 
 function hostHomeworldsForFaction(faction, host = selectedHostHeritage()) {
   const base = homeworldsForFaction(faction);
+  if (isAlephFaction(faction)) {
+    const foundations = (DATA.alephReference?.psychogeneticFoundations || []).map(row => row.name);
+    return ["Aspect","Recreation","True AI"].includes(host) ? foundations : base.filter(world => !foundations.includes(world));
+  }
 
   if (isPanOceaniaFaction(faction) && host === "Helot") {
     return [...(DATA.homeworldsByFaction?.["PanOceania - Helot"] || ["Varuna"])];
@@ -219,6 +242,7 @@ function sourceCareerOptionsForFaction(faction, allCareers) {
     : selected.startsWith("Yu Jing") ? "Yu Jing"
     : selected.startsWith("PanOceania") ? "PanOceania"
     : selected.startsWith("Nomads") ? "Nomads"
+    : selected.startsWith("ALEPH") ? "ALEPH"
     : "";
   const configured = sourceKey ? DATA.careerOptionsByFaction?.[sourceKey] : null;
   if (!Array.isArray(configured) || !configured.length) return null;
@@ -234,13 +258,16 @@ function hostCareerOptions() {
   if (isNomadsFaction(faction) && host === "Uplift") {
     return sortNames(upliftCareerNames().filter(career => all.includes(career)));
   }
+  if (isAlephFaction(faction) && ["Aspect","Recreation","True AI"].includes(host)) {
+    return sortNames((DATA.alephReference?.aiCareers || []).filter(career => all.includes(career)));
+  }
 
   // A non-standard Birth Host can impose a source-specific career set.
   if (host !== DEFAULT_HOST_HERITAGE && Array.isArray(config.allowedCareers)) {
     return sortNames(config.allowedCareers.filter(career => all.includes(career)));
   }
 
-  // Haqqislam, Yu Jing, PanOceania and Nomads use their faction-book career tables as
+  // Haqqislam, Yu Jing, PanOceania, Nomads and ALEPH use their faction-book career tables as
   // the visible Career selector. General / Unrestricted remains available for
   // standard human house-rule characters and legacy imports.
   const sourceCareers = sourceCareerOptionsForFaction(faction, all);
@@ -258,6 +285,9 @@ function isCareerCompatibleWithHost(career, host = selectedHostHeritage()) {
   const faction = inputField("faction")?.value || "";
   if (isNomadsFaction(faction) && host === "Uplift") {
     return upliftCareerNames().includes(value);
+  }
+  if (isAlephFaction(faction) && ["Aspect","Recreation","True AI"].includes(host)) {
+    return (DATA.alephReference?.aiCareers || []).includes(value);
   }
   const config = hostHeritageConfig(host);
   if (host !== DEFAULT_HOST_HERITAGE && Array.isArray(config.allowedCareers)) {
@@ -379,7 +409,9 @@ function hostMainSkillModifier(mainSkill) {
     const body = Number(uplift?.bodies?.[selectedUpliftBody()]?.mainSkillModifiers?.[mainSkill] || 0);
     return base + form + species + body;
   }
-  return base + form;
+  const foundation = selectedAlephFoundation();
+  const foundationBonus = foundation?.attributes?.includes(mainSkill) ? 1 : 0;
+  return base + form + foundationBonus;
 }
 
 function hostVigorSoakBonus() {
@@ -402,7 +434,7 @@ function updateHostHeritageStatus() {
   if (!status) return;
   const faction = inputField("faction")?.value || "";
   if (!usesSourceHostHeritage(faction)) {
-    status.textContent = "Host / Heritage: standard human host for this faction. Ariadna, PanOceania and Nomads have additional source-backed Host / Heritage options.";
+    status.textContent = "Host / Heritage: standard human unless a source-backed Ariadna, PanOceania, Nomad or ALEPH host is selected.";
     return;
   }
   const host = selectedHostHeritage();
@@ -416,6 +448,9 @@ function updateHostHeritageStatus() {
   if (hostVigorBonus()) extras.push(`Vigour ${hostVigorBonus() > 0 ? "+" : ""}${hostVigorBonus()}`);
   if (hostVigorSoakBonus()) extras.push(`Vigour soak +${hostVigorSoakBonus()}`);
   if (config.firewallDisabled) extras.push("Firewall unavailable");
+  const foundation = selectedAlephFoundation();
+  if (foundation?.skill) extras.push(`Psychogenetic Foundation ${foundation.name}: +1 ${foundation.skill}`);
+  if (foundation?.name === "Eclectic") extras.push("Eclectic: choose two attributes and one skill manually");
   const summary = [...mods, ...extras].join("; ");
   status.textContent = isUpliftHost()
     ? `Host / Heritage: Uplift. ${upliftSourceStatus()}${summary ? ` Effective modifiers: ${summary}.` : ""}`
@@ -903,6 +938,7 @@ function refreshHomeworldChoices({ value, preserve = true, allowLegacy = false }
     return;
   }
   const selected = preserve ? closestFactionHomeworld(faction, requested) : "";
+  if (hint && isAlephAIHost()) hint.textContent = "ALEPH AI: this Homeworld / Habitat field selects your Psychogenetic Foundation (Chapter 4, p. 55).";
   select.value = worlds.includes(selected) ? selected : "";
 }
 
@@ -980,7 +1016,10 @@ function initLists() {
   }
 
   if (hostState) hostState.addEventListener("change", handleHostStateChange);
-  if (homeworld) homeworld.addEventListener("change", () => refreshNomadHeritageChoices({ forceFromHomeworld: true }));
+  if (homeworld) homeworld.addEventListener("change", () => {
+    refreshNomadHeritageChoices({ forceFromHomeworld: true });
+    if (isAlephAIHost()) applyHostHeritageEffects({ recoverVigor: false });
+  });
   if (upliftSpecies) upliftSpecies.addEventListener("change", () => {
     refreshCareerChoices({ preserve: false });
     refreshRestrictionChoices();
@@ -1049,6 +1088,9 @@ function calculateSkillBonuses() {
     details[skill].push(source);
   }
 
+  // Chapter 4 ALEPH Psychogenetic Foundation gives a skill increase separate from main attributes.
+  const aiFoundation = selectedAlephFoundation();
+  if (aiFoundation?.skill) addSubskillBonus(aiFoundation.skill, `Psychogenetic Foundation: ${aiFoundation.name}`);
   selectedTraitObjects().forEach(t => {
     addSubskillBonus(t.primary, `Trait: ${t.name}`);
     addSubskillBonus(t.secondary, `Trait: ${t.name}`);
@@ -2091,7 +2133,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v71-nomads-source-reconciliation",
+    build: "v72-aleph-source-reconciliation",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -2608,7 +2650,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v71-nomads-source-reconciliation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v72-aleph-source-reconciliation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -4329,7 +4371,7 @@ function buildGlossaryEntries() {
     ["Sub-skills", "Rule", ["Skill tests", "Focus allowed"], "Sub-skills inherit the relevant main skill rating, then add starting allocation and applicable Trait/Talent modifiers. Focus may be assigned only to sub-skills."],
     ["Focus", "Rule", ["Sub-skills only"], "Focus represents specialist training. Main skills cannot use Focus; assign Focus to specific sub-skills such as Ballistics, Hacking, Medicine, Persuade, or Survival."],
     ["Career", "Character option", ["Eligibility", "Traits", "Talents"], "Career is the single field used for eligibility filtering. Choosing a Career filters Trait and Talent options while keeping general/unrestricted options available."],
-    ["Host / Heritage", "Character option", ["Ariadna", "PanOceania", "Nomads", "Dogface", "Wulver", "Antipode", "Helot", "Uplift"], "Host / Heritage is separate from Career. Ariadna supports Dogface, Wulver and Antipode; PanOceania supports Helot; Nomads supports Uplift with separate Species and Body / Platform. Host modifiers apply without occupying an ordinary Trait slot."],
+    ["Host / Heritage", "Character option", ["Ariadna", "PanOceania", "Nomads", "ALEPH", "Dogface", "Wulver", "Antipode", "Helot", "Uplift", "Aspect", "Recreation", "True AI"], "Host / Heritage is separate from Career. Ariadna supports Dogface, Wulver and Antipode; PanOceania supports Helot; Nomads supports Uplift; ALEPH supports Aspect, Recreation or True AI. AI psychogenesis is distinct from Lhost body choice. Host modifiers apply without occupying an ordinary Trait slot."],
     ["Faction / Homeworld relationship", "Character option", ["Validation"], "Homeworld / Habitat choices are filtered by the selected Faction. Changing Faction clears an invalid Homeworld / Habitat selection so saved characters keep a valid relationship."],
     ["Armour", "Resource", ["Light 5", "Medium 10", "Heavy 15"], "Armour replaces Temporary HP in this custom sheet. Armour can be selected directly or inferred from selected armour equipment."],
     ["HP / Vigor", "Resource", ["0–20"], "The character's physical endurance track. Damage and recovery should be handled according to the GM's current 2D20 scene rules."],
@@ -4344,6 +4386,29 @@ function buildGlossaryEntries() {
   ];
   ruleTerms.forEach(([name, tag, meta, text]) => entries.push(glossaryEntry("Rules Terms", name, tag, meta, text)));
 
+
+  const aleph = DATA.alephReference;
+  if (aleph) {
+    const ref = (title,page,body) => entries.push(glossaryEntry("Source References",title,"ALEPH Reference",[`Source: ${aleph.source}, ${page}`],body,body));
+    const table = (rows,fn) => (rows||[]).map(fn).join("; ");
+    ref("ALEPH AI Host Table","p. 55",table(aleph.birthHostTable,r=>`${r.roll}: ${r.host}`) + ". " + aleph.aiRules.join(" "));
+    ref("ALEPH True AI Origins","p. 55",table(aleph.trueAIOrigins,r=>`${r.roll}: ${r.heritage}`));
+    ref("ALEPH Psychogenetic Foundation","pp. 55–56",table(aleph.psychogeneticFoundations,r=>`${r.roll}: ${r.name} (+1 ${r.attributes.join(", ") || "two chosen attributes"}; +1 ${r.skill||"chosen skill"})`));
+    ref("ALEPH AI Social Status","p. 56",table(aleph.aiSocialStatus,r=>`${r.roll}: ${r.status}; +1 ${r.attribute}; Earnings ${r.earnings}`));
+    ref("ALEPH Aspect Trait Table","p. 56",table(aleph.aspectTraits,r=>`${r.roll}: ${r.name}; +1 ${r.attribute}, +1 ${r.skill}`));
+    ref("ALEPH Adolescent Events","p. 36",table(aleph.adolescentEvents,r=>`${r.roll}. ${r.trait}: ${r.effect}`));
+    ref("ALEPH Faction Career Table","p. 38",table(aleph.factionCareerTable,r=>`${r.range}: ${r.career}${r.note?` [${r.note}]`:""}`));
+    ref("ALEPH Faction Career Events","p. 39",table(aleph.factionCareerEvents,r=>`${r.roll}. ${r.result}: ${r.effect}`));
+    ref("ALEPH AI Education Table","p. 58",table(aleph.aiEducation,r=>`${r.roll}: ${r.education} — ${r.recommendedCareers}`));
+    ref("ALEPH AI Career Table","p. 59",table(aleph.aiCareerTable,r=>`${r.range}: ${r.career}`));
+    ref("ALEPH AI Career Events","p. 61",table(aleph.aiCareerEvents,r=>`${r.roll}. ${r.result}: ${r.effect}`));
+    ref("ALEPH Geas and Insurrection","pp. 59–60",aleph.aiRules.filter(x=>x.includes("Geas")||x.includes("Insurrection")).join(" ")+" Geas themes: "+aleph.geasThemes.join(", ")+". Insurrection themes: "+aleph.insurrectionThemes.join(", ")+".");
+    ref("ALEPH AI Lhost Catalogue","pp. 72, 74–81",table(aleph.lhosts,r=>`${r.name}: ${r.lifePointCost} LP; ${r.restriction}; ${r.cost}; ${r.tariff}`));
+    ref("ALEPH Source Gear","pp. 65–73",table(aleph.equipmentAudit,r=>`${r.name} [${r.classification}; p. ${r.sourcePage}]`));
+    ref("ALEPH Geist Path","pp. 82–90",aleph.geists.note+" Decisions: "+aleph.geists.decisions.join(", ")+".");
+    ref("ALEPH Advanced Infowar","pp. 19–34",aleph.advancedInfowar.note);
+    ref("ALEPH Source Normalisation Notes","Chs. 3–6",aleph.sourceNormalisation.join(" "));
+  }
 
   const panO = DATA.panOceaniaReference;
   if (panO) {
@@ -4700,7 +4765,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v71-nomads-source-reconciliation";
+  document.documentElement.dataset.infinityBuild = "v72-aleph-source-reconciliation";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
