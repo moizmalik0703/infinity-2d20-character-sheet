@@ -43,10 +43,6 @@
       "pass": true
     },
     {
-      "name": "War Market save scalar",
-      "pass": true
-    },
-    {
       "name": "full-source mechanics boundary",
       "pass": true
     },
@@ -71,14 +67,22 @@
       "pass": true
     },
     {
-      "name": "V77 build marker",
+      "name": "temporary War Market panel removed",
+      "pass": true
+    },
+    {
+      "name": "NA2 company and career source scaffold retained",
+      "pass": true
+    },
+    {
+      "name": "V77 no-War-Market build marker",
       "pass": true
     }
   ],
   "validation": {
     "status": "PASS",
-    "passed": 12,
+    "passed": 13,
     "failed": 0
   },
-  "nextPass": "Supply MUH050216 to reconcile Chapters 5–8 mechanically: gear, vehicles/upgrades, Lifepath career profiles/events, Debt, War Market Exchange, Free Company funds/assets and contract negotiation."
+  "nextPass": "Resume Mercenaries mechanical reconciliation only when MUH050216 is available; the temporary War Market panel remains removed until then."
 }
