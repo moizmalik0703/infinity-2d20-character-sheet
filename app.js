@@ -120,6 +120,15 @@ function isAriadnaFaction(faction) {
   return value === "Ariadna" || value.startsWith("Ariadna -");
 }
 
+function isPanOceaniaFaction(faction) {
+  const value = String(faction || "").trim();
+  return value === "PanOceania" || value.startsWith("PanOceania -");
+}
+
+function usesSourceHostHeritage(faction) {
+  return isAriadnaFaction(faction) || isPanOceaniaFaction(faction);
+}
+
 function selectedHostHeritage() {
   return inputField("hostHeritage")?.value || DEFAULT_HOST_HERITAGE;
 }
@@ -143,16 +152,25 @@ function hostHeritageConfig(host = selectedHostHeritage()) {
 
 function hostOptionsForFaction(faction) {
   const configured = DATA.lists?.hostHeritage || [DEFAULT_HOST_HERITAGE];
-  if (!isAriadnaFaction(faction)) return [DEFAULT_HOST_HERITAGE];
+  const selected = String(faction || "").trim();
+
+  if (isPanOceaniaFaction(selected)) {
+    return configured.filter(value => value === DEFAULT_HOST_HERITAGE || value === "Helot");
+  }
+  if (!isAriadnaFaction(selected)) return [DEFAULT_HOST_HERITAGE];
 
   // Antipodes use the broad Ariadna faction rather than a human national/service
   // subfaction. Dogface and Wulver can retain their Ariadnan national identity.
-  if (String(faction || "") === "Ariadna") return configured.slice();
-  return configured.filter(value => value !== "Antipode");
+  if (selected === "Ariadna") return configured.filter(value => value !== "Helot");
+  return configured.filter(value => value !== "Antipode" && value !== "Helot");
 }
 
 function hostHomeworldsForFaction(faction, host = selectedHostHeritage()) {
   const base = homeworldsForFaction(faction);
+
+  if (isPanOceaniaFaction(faction) && host === "Helot") {
+    return [...(DATA.homeworldsByFaction?.["PanOceania - Helot"] || ["Varuna"])];
+  }
   if (!isAriadnaFaction(faction)) return base;
 
   if (host === "Antipode") {
@@ -172,6 +190,7 @@ function sourceCareerOptionsForFaction(faction, allCareers) {
   const selected = String(faction || "").trim();
   const sourceKey = selected.startsWith("Haqqislam") ? "Haqqislam"
     : selected.startsWith("Yu Jing") ? "Yu Jing"
+    : selected.startsWith("PanOceania") ? "PanOceania"
     : "";
   const configured = sourceKey ? DATA.careerOptionsByFaction?.[sourceKey] : null;
   if (!Array.isArray(configured) || !configured.length) return null;
@@ -184,17 +203,18 @@ function hostCareerOptions() {
   const host = selectedHostHeritage();
   const config = hostHeritageConfig(host);
 
-  // Haqqislam and Yu Jing use their faction-book career tables as the visible
-  // Career selector. General / Unrestricted remains available for house-rule
-  // characters, while legacy imports can still preserve an older career value.
+  // A non-standard Birth Host can impose a source-specific career set.
+  if (host !== DEFAULT_HOST_HERITAGE && Array.isArray(config.allowedCareers)) {
+    return sortNames(config.allowedCareers.filter(career => all.includes(career)));
+  }
+
+  // Haqqislam, Yu Jing and PanOceania use their faction-book career tables as
+  // the visible Career selector. General / Unrestricted remains available for
+  // standard human house-rule characters and legacy imports.
   const sourceCareers = sourceCareerOptionsForFaction(faction, all);
   if (sourceCareers) return [GENERAL_CAREER, ...sourceCareers];
 
   if (!isAriadnaFaction(faction)) return [GENERAL_CAREER, ...all];
-
-  if (host !== DEFAULT_HOST_HERITAGE && Array.isArray(config.allowedCareers)) {
-    return sortNames(config.allowedCareers.filter(career => all.includes(career)));
-  }
 
   const excluded = new Set(config.excludedCareers || []);
   return [GENERAL_CAREER, ...all.filter(career => !excluded.has(career))];
@@ -204,11 +224,11 @@ function isCareerCompatibleWithHost(career, host = selectedHostHeritage()) {
   const value = String(career || "").trim();
   if (!value || value === GENERAL_CAREER) return host === DEFAULT_HOST_HERITAGE;
   const faction = inputField("faction")?.value || "";
-  if (!isAriadnaFaction(faction)) return true;
   const config = hostHeritageConfig(host);
   if (host !== DEFAULT_HOST_HERITAGE && Array.isArray(config.allowedCareers)) {
     return config.allowedCareers.includes(value);
   }
+  if (!isAriadnaFaction(faction)) return true;
   return !(config.excludedCareers || []).includes(value);
 }
 
@@ -252,7 +272,7 @@ function refreshHostHeritageChoices({ value, preserve = true } = {}) {
   makeOptions(select, choices, "");
   const fallback = choices.includes(DEFAULT_HOST_HERITAGE) ? DEFAULT_HOST_HERITAGE : (choices[0] || DEFAULT_HOST_HERITAGE);
   select.value = preserve && choices.includes(requested) ? requested : fallback;
-  select.disabled = !isAriadnaFaction(faction);
+  select.disabled = !usesSourceHostHeritage(faction);
   refreshHostStateChoices({ preserve: false });
 }
 
@@ -283,8 +303,8 @@ function updateHostHeritageStatus() {
   const status = document.getElementById("hostHeritageStatus");
   if (!status) return;
   const faction = inputField("faction")?.value || "";
-  if (!isAriadnaFaction(faction)) {
-    status.textContent = "Host / Heritage: not used for this faction in the current sheet. Ariadna characters can choose Human, Dogface, Wulver, or Antipode.";
+  if (!usesSourceHostHeritage(faction)) {
+    status.textContent = "Host / Heritage: standard human host for this faction. Ariadna and PanOceania have additional source-backed Host / Heritage options.";
     return;
   }
   const host = selectedHostHeritage();
@@ -583,6 +603,8 @@ function migrateLegacyHostState(state) {
     "Haqqislam - Scholar-Physicians": "Haqqislam"
   };
   if (legacyHaqqFactionMap[copy.faction]) copy.faction = legacyHaqqFactionMap[copy.faction];
+  const legacyHelotFaction = copy.faction === "Helots";
+  if (legacyHelotFaction) copy.faction = "PanOceania";
   const legacyHaqqHomeworldMap = {
     "Haqqislamite hospitals":"Bourak","Sword of Allah warfronts":"Bourak","Sword of Allah deployments":"Bourak",
     "Sword of Allah heavy infantry formations":"Bourak","Sword of Allah academies":"Bourak","caravanserai garrisons":"Caravanserai",
@@ -597,9 +619,11 @@ function migrateLegacyHostState(state) {
     else if (legacyTraits.includes("Antipode")) copy.hostHeritage = "Antipode";
     else if (copy.faction === "Ariadna - Antipode") copy.hostHeritage = "Antipode";
     else if (copy.faction === "Ariadna - Dog-Blooded") copy.hostHeritage = "Dogface";
+    else if (legacyHelotFaction || legacyTraits.includes("Helot")) copy.hostHeritage = "Helot";
     else copy.hostHeritage = DEFAULT_HOST_HERITAGE;
   }
   if (copy.faction === "Ariadna - Antipode" || copy.faction === "Ariadna - Dog-Blooded") copy.faction = "Ariadna";
+  if (copy.hostHeritage === "Helot" && (!copy.homeworld || copy.homeworld === "Various worlds")) copy.homeworld = "Varuna — Atlantea Waters";
   const hostConfig = DATA.hostHeritage?.options?.[copy.hostHeritage] || {};
   if (!copy.hostState) copy.hostState = hostConfig.defaultForm || hostConfig.forms?.[0] || "";
   copy.traits = legacyTraits.filter(name => !HOST_HERITAGE_TRAITS.has(name));
@@ -1942,7 +1966,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v69-haqq-yujing-careers",
+    build: "v70-panoceania-source-reconciliation",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -2459,7 +2483,7 @@ function characterStateToXml(state) {
   const body = Object.entries(exportState)
     .map(([key, value]) => stateValueToXml(key, value, "    "))
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v69-haqq-yujing-careers")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<infinity2d20CharacterSheet format="Infinity2D20CharacterSheetXML-v1" build="${xmlSafeText(window.INFINITY_BUILD || "v70-panoceania-source-reconciliation")}">\n  <state>\n${body}\n  </state>\n</infinity2d20CharacterSheet>\n`;
 }
 
 function exportCharacterXml() {
@@ -2728,7 +2752,7 @@ function printSkillTable(skills) {
 }
 function buildPrintCorePage(page, total) {
   const factionValue = printValue("faction");
-  const showHost = isAriadnaFaction(factionValue);
+  const showHost = usesSourceHostHeritage(factionValue);
   const fields = [
     ["Character Name", printValue("characterName") || "Unnamed Character", true],
     ["Player", printValue("player")],
@@ -4109,7 +4133,7 @@ function homeworldGlossaryText(name, factions) {
   const linkedFactions = compactList(factions.length ? factions : factionRecords.map(record => record.faction), 18);
   const lines = [];
   // Source-backed homeworld detail (Ariadna and Haqqislam).
-  const sourceHomeworld = DATA.ariadnaReference?.homelands?.[name] || DATA.haqqislamReference?.homelands?.[name] || DATA.yuJingSource?.homelands?.[name] || null;
+  const sourceHomeworld = DATA.ariadnaReference?.homelands?.[name] || DATA.haqqislamReference?.homelands?.[name] || DATA.yuJingSource?.homelands?.[name] || DATA.panOceaniaReference?.homelands?.[name] || null;
   if (sourceHomeworld) {
     const sourceLabel = sourceHomeworld.source || (DATA.ariadnaReference?.homelands?.[name] ? "Infinity RPG — Ariadna Supplement" : DATA.haqqislamReference?.source || "Infinity RPG sourcebook");
     const origin = sourceHomeworld.nation || sourceHomeworld.region || "";
@@ -4177,7 +4201,7 @@ function buildGlossaryEntries() {
     ["Sub-skills", "Rule", ["Skill tests", "Focus allowed"], "Sub-skills inherit the relevant main skill rating, then add starting allocation and applicable Trait/Talent modifiers. Focus may be assigned only to sub-skills."],
     ["Focus", "Rule", ["Sub-skills only"], "Focus represents specialist training. Main skills cannot use Focus; assign Focus to specific sub-skills such as Ballistics, Hacking, Medicine, Persuade, or Survival."],
     ["Career", "Character option", ["Eligibility", "Traits", "Talents"], "Career is the single field used for eligibility filtering. Choosing a Career filters Trait and Talent options while keeping general/unrestricted options available."],
-    ["Host / Heritage", "Character option", ["Ariadna", "Dogface", "Wulver", "Antipode"], "Host / Heritage is separate from Career. For Ariadna, Dogface, Wulver and Antipode apply their source attribute modifiers and constrain compatible Careers; the host itself does not consume one of the three ordinary Trait slots."],
+    ["Host / Heritage", "Character option", ["Ariadna", "PanOceania", "Dogface", "Wulver", "Antipode", "Helot"], "Host / Heritage is separate from Career. Ariadna supports Dogface, Wulver and Antipode; PanOceania supports Helot. Source host modifiers and compatible-career rules apply without consuming one of the three ordinary Trait slots."],
     ["Faction / Homeworld relationship", "Character option", ["Validation"], "Homeworld / Habitat choices are filtered by the selected Faction. Changing Faction clears an invalid Homeworld / Habitat selection so saved characters keep a valid relationship."],
     ["Armour", "Resource", ["Light 5", "Medium 10", "Heavy 15"], "Armour replaces Temporary HP in this custom sheet. Armour can be selected directly or inferred from selected armour equipment."],
     ["HP / Vigor", "Resource", ["0–20"], "The character's physical endurance track. Damage and recovery should be handled according to the GM's current 2D20 scene rules."],
@@ -4191,6 +4215,41 @@ function buildGlossaryEntries() {
     ["Condition", "Status", ["Temporary effect"], "Conditions represent temporary battlefield, physical, mental, environmental, or equipment-related effects tracked during play."]
   ];
   ruleTerms.forEach(([name, tag, meta, text]) => entries.push(glossaryEntry("Rules Terms", name, tag, meta, text)));
+
+
+  const panO = DATA.panOceaniaReference;
+  if (panO) {
+    const statusText = (panO.socialStatus || []).map(row => `${row.roll}: ${row.status} — ${row.attribute}, Earnings ${row.earnings}${row.special ? `; ${row.special}` : ""}`).join("; ");
+    entries.push(glossaryEntry("Source References","PanOceania Faction Social Status Table","PanOceania Reference",[`Source: ${panO.source}, p. 82`],statusText,statusText));
+
+    const homelandText = Object.entries(panO.homelandTables || {}).map(([world,rows]) =>
+      `${world}: ${rows.map(row => `${row.roll} ${row.region} (${row.languages})`).join("; ")}`
+    ).join(" ");
+    entries.push(glossaryEntry("Source References","PanOceania Expanded Homelands","PanOceania Reference",[`Source: ${panO.source}, pp. 81–82`],homelandText,homelandText));
+
+    const adolescentText = (panO.adolescentEvents || []).map(row => `${row.roll}. ${row.trait}: ${row.effect}`).join(" ");
+    entries.push(glossaryEntry("Source References","PanOceanian Adolescent Event Table","PanOceania Reference",[`Source: ${panO.source}, p. 83`],adolescentText,adolescentText));
+
+    const careerText = (panO.careerTable || []).map(row => `${row.range}: ${row.career}${row.flags?.length ? ` [${row.flags.join(", ")}]` : ""}`).join("; ");
+    entries.push(glossaryEntry("Source References","Expanded PanOceanian Faction Career Table","PanOceania Reference",[`Source: ${panO.source}, p. 84`],careerText,careerText));
+
+    const eventText = (panO.careerEvents || []).map(row => `${row.roll}. ${row.result} ${row.effect}`).join(" ");
+    entries.push(glossaryEntry("Source References","PanOceanian Career Event Table","PanOceania Reference",[`Source: ${panO.source}, p. 85`],eventText,eventText));
+
+    const orderText = (panO.militaryOrders || []).map(row => `${row.roll}: ${row.order} — Electives: ${row.electiveSkills.join(", ")}; Gear: ${row.gear.join(", ")}`).join(" ");
+    entries.push(glossaryEntry("Source References","PanOceania Military Orders Table","PanOceania Reference",[`Source: ${panO.source}, p. 88`],orderText,orderText));
+
+    const helot = panO.helot;
+    if (helot) {
+      const helotText = [`Host modifiers: Awareness +1, Personality +1, Willpower −1; Life Point Cost ${helot.lifePointCost}.`, helot.rules,
+        `Sissolu Waters: ${(helot.sissoluWaters || []).map(row => `${row.roll} ${row.region}`).join("; ")}.`,
+        `Helot careers: ${(helot.careers || []).join(", ")}.`].join(" ");
+      entries.push(glossaryEntry("Source References","Helot Lifepath","PanOceania Reference",[`Source: ${panO.source}, pp. 98–106`],helotText,helotText));
+    }
+
+    const normalisation = (panO.normalizationNotes || []).join(" ");
+    if (normalisation) entries.push(glossaryEntry("Source References","PanOceania Source Normalisation Notes","PanOceania Reference",[panO.source],normalisation,normalisation));
+  }
 
   const haqq = DATA.haqqislamReference;
   if (haqq) {
@@ -4459,7 +4518,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v69-haqq-yujing-careers";
+  document.documentElement.dataset.infinityBuild = "v70-panoceania-source-reconciliation";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
