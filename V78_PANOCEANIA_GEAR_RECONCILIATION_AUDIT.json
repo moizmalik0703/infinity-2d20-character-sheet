@@ -1,0 +1,162 @@
+{
+  "build": "v78-panoceania-gear-reconciliation",
+  "date": "2026-11-05",
+  "source": {
+    "product": "MUH050224",
+    "title": "Infinity RPG - PanOceania Faction Book",
+    "chapter": "Chapter 5 — PanOceania Gear",
+    "pages": "67–78",
+    "localFile": "MUH050224 Infinity RPG - PanOceania Faction Book.pdf",
+    "sourceAuthority": "User-supplied sourcebook in Drive/project corpus"
+  },
+  "imported": {
+    "tableEntries": 48,
+    "sidebarVariants": 6,
+    "totalRecords": 54,
+    "catalogueBefore": 585,
+    "catalogueAfter": 639,
+    "categories": {
+      "Armour": 9,
+      "Augmentation": 3,
+      "Weapon": 12,
+      "Explosive Device": 6,
+      "Remote": 1,
+      "Tool": 11,
+      "Contagion": 3,
+      "Other Item": 9
+    },
+    "vehiclesAndTags": [
+      "Aeropter",
+      "Balisong Motorcycle",
+      "Cutter TAG",
+      "Ice Crawler Transport",
+      "Prison Transport",
+      "Rippa Board X",
+      "Seraph TAG",
+      "Squalos TAG",
+      "Tikbalang TAG"
+    ],
+    "armourVariants": [
+      "Bagh-Mari Armour",
+      "Knight of Santiago Armour",
+      "Hexas Nightwear",
+      "Swiss Guard Armour",
+      "Doc Armour",
+      "Sigma-OXS Phaliug"
+    ]
+  },
+  "sourceRulesCaptured": {
+    "quality": "Heritage Weapon X (Culture)",
+    "vehicleTypes": [
+      "Aircraft",
+      "Remote Presence",
+      "Submersible"
+    ],
+    "optionalRules": [
+      "Sensarecorder Candidates",
+      "Rem-Lag",
+      "Helot Armour compatibility"
+    ],
+    "sourceTables": [
+      "Armour",
+      "Augmentations",
+      "Melee Weapons",
+      "Ranged Weapons",
+      "Explosives",
+      "Remotes",
+      "Tools",
+      "Drugs",
+      "Vehicle Costs"
+    ]
+  },
+  "preserved": {
+    "mainSkillsNoFocus": true,
+    "mainSkillsIncreaseSubskills": true,
+    "customArmourValue": true,
+    "weaponSlots": 5,
+    "equipmentSlots": 10,
+    "technologyWorkshop": true,
+    "mercenaryWarMarketPanelRemoved": true
+  },
+  "boundaries": [
+    "Locational source Armour Soak is stored descriptively; no automatic conversion to the custom Armour field.",
+    "Variable-X entries retain X rather than silently choosing a rating.",
+    "Vehicles/TAGs and Mulebot are catalogue/reference records and cannot occupy normal Equipment slots.",
+    "Armour/vac-suit variants inherit base-item acquisition because the source provides no standalone acquisition row."
+  ],
+  "tests": [
+    {
+      "name": "app.js syntax",
+      "pass": true
+    },
+    {
+      "name": "data.js parses",
+      "pass": true
+    },
+    {
+      "name": "54 PanOceania source records",
+      "pass": true
+    },
+    {
+      "name": "48 table entries + 6 sidebar variants",
+      "pass": true
+    },
+    {
+      "name": "9 vehicles/TAGs imported",
+      "pass": true
+    },
+    {
+      "name": "all vehicles/TAGs excluded from normal loadout slots",
+      "pass": true
+    },
+    {
+      "name": "all 9 Armour records disable Armour automation",
+      "pass": true
+    },
+    {
+      "name": "MUH050224 source metadata on all imported records",
+      "pass": true
+    },
+    {
+      "name": "source pages constrained to Chapter 5 narrative pp. 67–76",
+      "pass": true
+    },
+    {
+      "name": "Heritage Weapon X reference captured",
+      "pass": true
+    },
+    {
+      "name": "Aircraft / Remote Presence / Submersible references captured",
+      "pass": true
+    },
+    {
+      "name": "custom main-skill rule preserved",
+      "pass": true
+    },
+    {
+      "name": "V76 Technology Workshop preserved",
+      "pass": true
+    },
+    {
+      "name": "V77 War Market panel remains removed",
+      "pass": true
+    },
+    {
+      "name": "embedded app parity",
+      "pass": true
+    },
+    {
+      "name": "embedded data parity",
+      "pass": true
+    },
+    {
+      "name": "V78 build marker",
+      "pass": true
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "passed": 17,
+    "failed": 0
+  }
+}

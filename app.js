@@ -5931,4 +5931,6 @@ window.addEventListener("load", () => {
 /* V77 Mercenaries / NA2 source scaffold retained.
    The temporary War Market foundation panel was removed because the complete
    MUH050216 sourcebook is not present in the supplied source corpus. */
-window.INFINITY_BUILD = "v77-mercenaries-no-war-market-panel";
+window.INFINITY_BUILD = "v78-panoceania-gear-reconciliation";
+
+/* V78: PanOceania Chapter 5 gear reconciliation — 54 source-backed records from MUH050224. */
