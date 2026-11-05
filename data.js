@@ -6604,7 +6604,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Visor",
       "loadoutEligible": false,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Augmentation",
@@ -6649,7 +6655,15 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Climbing Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Climbing Kit",
+        "relatedPage": 357,
+        "note": "Climbing equipment is related, but the rope is not a separately listed acquisition."
+      }
     },
     {
       "type": "Armour",
@@ -6679,7 +6693,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Adhesive Launcher",
+      "sourceRestriction": "2",
+      "sourceCost": "9+1§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Adhesive Launcher",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Ammunition",
@@ -6740,7 +6772,13 @@ window.INFINITY_DATA = {
       "category": "Contagion",
       "subtype": "Drug",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "AECM",
@@ -6880,7 +6918,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Countermeasure",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Kit",
@@ -6893,7 +6937,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Aletheia Kit",
+      "sourceRestriction": "2",
+      "sourceCost": "5+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Aletheia Kit",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -6938,7 +7000,26 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Suite",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Analysis Suite",
+      "sourceRestriction": "1",
+      "sourceCost": "10+3§",
+      "tariff": "—",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Analysis Suite",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Kit",
@@ -6951,7 +7032,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Analytical Kit",
+      "sourceRestriction": "1",
+      "sourceCost": "5+2§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Analytical Kit",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "name": "Angel Drone",
@@ -6982,7 +7081,26 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Habitat",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Animal Habitat",
+      "sourceRestriction": "1",
+      "sourceCost": "5+1§",
+      "tariff": "T1",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Animal Habitat",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Hacking Program",
@@ -6995,7 +7113,13 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Program",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Augmentation",
@@ -7008,7 +7132,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Antipode Control Cranial Implant",
+      "sourceRestriction": "4 (Ariadna 2)",
+      "sourceCost": "6+2§",
+      "tariff": "T2",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Antipode Control Cranial Implant",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -7021,7 +7164,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Antipode Control Device",
+      "sourceRestriction": "4 (Ariadna 2)",
+      "sourceCost": "5+2§",
+      "tariff": "T3",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Antipode Control Device",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Tool",
@@ -7114,7 +7276,13 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armoured Clothing Variant",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -7127,7 +7295,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Rifle",
+        "relatedPage": 359,
+        "note": "A specialised rifle can use AP ammunition; no separate AP Rifle item/table cost verified."
+      }
     },
     {
       "type": "Ammunition",
@@ -7156,7 +7332,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "AR Eye Implants",
+      "sourceRestriction": "0",
+      "sourceCost": "7+2§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "AR Eye Implants",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Data Storage",
@@ -7169,7 +7363,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Data Storage",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -7214,7 +7414,25 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Armoured Clothing",
+      "sourceRestriction": "2",
+      "sourceCost": "6+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Armoured Clothing",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7227,7 +7445,25 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Ballistic Vest",
+      "sourceRestriction": "2",
+      "sourceCost": "5+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Ballistic Vest",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7272,7 +7508,26 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Heavy Combat Armour",
+      "sourceRestriction": "3",
+      "sourceCost": "10+2§",
+      "tariff": "T2",
+      "maintenance": "3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Heavy Combat Armour",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7285,7 +7540,26 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Light Combat Armour",
+      "sourceRestriction": "2",
+      "sourceCost": "7+1§",
+      "tariff": "T2",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Light Combat Armour",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7298,7 +7572,26 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Medium Combat Armour",
+      "sourceRestriction": "3",
+      "sourceCost": "8+1§",
+      "tariff": "T2",
+      "maintenance": "2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Medium Combat Armour",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7311,7 +7604,25 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Crashsuit",
+      "sourceRestriction": "1",
+      "sourceCost": "5+1§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Crashsuit",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7341,7 +7652,26 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Symbiont Armour Table",
+      "sourceItem": "Ectros Armour",
+      "sourceRestriction": "Tohaa Only",
+      "sourceCost": "not listed",
+      "tariff": "not listed",
+      "maintenance": "not listed",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Ectros Armour",
+        "sourcePage": 343,
+        "sourceTable": "Symbiont Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7354,7 +7684,26 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "XO Suit",
+      "sourceRestriction": "2",
+      "sourceCost": "9+2§",
+      "tariff": "T1",
+      "maintenance": "2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "XO Suit",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7367,7 +7716,26 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Gruntsuit",
+      "sourceRestriction": "2",
+      "sourceCost": "9+2§",
+      "tariff": "T1",
+      "maintenance": "2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Gruntsuit",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7380,7 +7748,25 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Hard Hat",
+      "sourceRestriction": "0",
+      "sourceCost": "2+1§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Hard Hat",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7393,7 +7779,13 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Armour",
@@ -7422,7 +7814,25 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "ModCoat, Long",
+      "sourceRestriction": "2",
+      "sourceCost": "6+2§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "ModCoat, Long",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7435,7 +7845,25 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "ModCoat, Short",
+      "sourceRestriction": "2",
+      "sourceCost": "6+1§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "ModCoat, Short",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7464,7 +7892,26 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Symbiont Armour Table",
+      "sourceItem": "Nu-El Armour",
+      "sourceRestriction": "Tohaa Only",
+      "sourceCost": "not listed",
+      "tariff": "not listed",
+      "maintenance": "not listed",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Nu-El Armour",
+        "sourcePage": 343,
+        "sourceTable": "Symbiont Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7477,7 +7924,25 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Personal Protective Equipment",
+      "sourceRestriction": "1",
+      "sourceCost": "5+1§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Personal Protective Equipment",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7490,7 +7955,26 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Powered Combat Armour",
+      "sourceRestriction": "4",
+      "sourceCost": "13+2§",
+      "tariff": "T3",
+      "maintenance": "4",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Powered Combat Armour",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7503,7 +7987,26 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Powered Combat Armour (Ariadna)",
+      "sourceRestriction": "3",
+      "sourceCost": "12+2§",
+      "tariff": "T1",
+      "maintenance": "3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Powered Combat Armour (Ariadna)",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7516,7 +8019,26 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Symbiont Armour Table",
+      "sourceItem": "Sakiel Armour",
+      "sourceRestriction": "Tohaa Only",
+      "sourceCost": "not listed",
+      "tariff": "not listed",
+      "maintenance": "not listed",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Sakiel Armour",
+        "sourcePage": 343,
+        "sourceTable": "Symbiont Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7529,7 +8051,25 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Sports Padding",
+      "sourceRestriction": "0",
+      "sourceCost": "3+2§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Sports Padding",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7542,7 +8082,25 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 343,
+      "sourceTable": "Armour Table",
+      "sourceItem": "Subdermal Grafts",
+      "sourceRestriction": "2",
+      "sourceCost": "9+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Subdermal Grafts",
+        "sourcePage": 343,
+        "sourceTable": "Armour Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -7587,7 +8145,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Assault Pistol",
+      "sourceRestriction": "1",
+      "sourceCost": "4+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Assault Pistol",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -7600,7 +8176,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Rifle",
+        "relatedPage": 359,
+        "note": "Legacy EMT variant has no exact named Corebook table entry."
+      }
     },
     {
       "type": "Weapon",
@@ -7613,7 +8197,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Rifle",
+        "relatedPage": 359,
+        "note": "An assault-rifle label is not the Corebook's generic Rifle table entry."
+      }
     },
     {
       "type": "Weapon",
@@ -7626,7 +8218,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Rifle",
+        "relatedPage": 359,
+        "note": "Specialised-weapon rule exists; the named Shock assault rifle is not a table item."
+      }
     },
     {
       "type": "Weapon",
@@ -7639,7 +8239,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Rifle",
+        "relatedPage": 359,
+        "note": "Specialised-weapon rule exists; the named Viral assault rifle is not a table item."
+      }
     },
     {
       "type": "Augmentation",
@@ -7652,7 +8260,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Attribute Augmentation (Silk)",
+      "sourceRestriction": "3",
+      "sourceCost": "12+3§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Attribute Augmentation (Silk)",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -7665,7 +8291,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Attribute Augmentation X (Biografted)",
+      "sourceRestriction": "1",
+      "sourceCost": "10+X§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Attribute Augmentation X (Biografted)",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -7678,7 +8322,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Attribute Augmentation X (Cyber)",
+      "sourceRestriction": "1",
+      "sourceCost": "9+X§",
+      "tariff": "T1",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Attribute Augmentation X (Cyber)",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Kit",
@@ -7691,7 +8354,26 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Medical Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "AutoMediKit",
+      "sourceRestriction": "2",
+      "sourceCost": "7+2§",
+      "tariff": "—",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "AutoMediKit",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Poison",
@@ -7768,7 +8450,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Container",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Vehicle",
@@ -7812,7 +8500,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Credential / Reputation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Area Control",
@@ -7825,7 +8519,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Area Control",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Tool",
@@ -7870,7 +8570,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Basic Limb Replacement (Biografted)",
+      "sourceRestriction": "1",
+      "sourceCost": "7+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Basic Limb Replacement (Biografted)",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -7883,7 +8601,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Basic Limb Replacement (Cyber)",
+      "sourceRestriction": "0",
+      "sourceCost": "6+2§",
+      "tariff": "—",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Basic Limb Replacement (Cyber)",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -7896,7 +8633,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Basic Limb Replacement (Silk)",
+      "sourceRestriction": "2",
+      "sourceCost": "10+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Basic Limb Replacement (Silk)",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Medical Kit",
@@ -7956,7 +8711,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Bioimmunity Organ",
+      "sourceRestriction": "1",
+      "sourceCost": "13+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Bioimmunity Organ",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Visor",
@@ -7969,7 +8742,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Visor",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Sensor",
@@ -7982,7 +8761,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Sensor",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Bioscanner",
+      "sourceRestriction": "0",
+      "sourceCost": "3+1§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Bioscanner",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -7995,7 +8792,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -8040,7 +8843,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Boarding Shotgun",
+      "sourceRestriction": "3",
+      "sourceCost": "7+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Boarding Shotgun",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -8085,7 +8906,13 @@ window.INFINITY_DATA = {
       "category": "Explosive Device",
       "subtype": "Grenade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Bodhisattva Lhost",
@@ -8152,7 +8979,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Consumable",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Bottled Water",
+      "sourceRestriction": "0",
+      "sourceCost": "1+1§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Bottled Water",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -8182,7 +9027,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Rifle",
+        "relatedPage": 359,
+        "note": "A breaker-ammunition rifle is a possible specialised form; no exact entry."
+      }
     },
     {
       "type": "Tool",
@@ -8265,7 +9118,13 @@ window.INFINITY_DATA = {
       "category": "Contagion",
       "subtype": "Drug",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Calm",
@@ -8296,7 +9155,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Area Control",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Capture Bag",
@@ -8360,7 +9225,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Chain Rifle",
+      "sourceRestriction": "3",
+      "sourceCost": "5+1§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Chain Rifle",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -8388,7 +9271,15 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Camouflage Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Chameleonwear",
+        "relatedPage": 357,
+        "note": "Related camouflage technology; a suit is not an identical Corebook catalogue line."
+      }
     },
     {
       "type": "Weapon",
@@ -8463,7 +9354,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Environment Suit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Hacking Program",
@@ -8507,7 +9404,13 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Program — CLAW",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Kit",
@@ -8520,7 +9423,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Climbing Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Climbing Kit",
+      "sourceRestriction": "0",
+      "sourceCost": "5+2§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Climbing Kit",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Mobility Gear",
@@ -8533,7 +9454,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Mobility Gear",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Climbing Plus",
+      "sourceRestriction": "2",
+      "sourceCost": "4+3§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Climbing Plus",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -8613,7 +9552,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Combi Rifle",
+      "sourceRestriction": "3",
+      "sourceCost": "6+3§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Combi Rifle",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Comlog",
@@ -8626,7 +9583,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Comlog",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Comlog",
+      "sourceRestriction": "0",
+      "sourceCost": "5",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Comlog",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -8639,7 +9614,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Tactical Bow",
+        "relatedPage": 359,
+        "note": "Related bow/ammunition family; no exact compound bow variant."
+      }
     },
     {
       "type": "Weapon",
@@ -8652,7 +9635,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Tactical Bow",
+        "relatedPage": 359,
+        "note": "Related bow/ammunition family; no exact compound bow variant."
+      }
     },
     {
       "type": "Weapon",
@@ -8665,7 +9656,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Tactical Bow",
+        "relatedPage": 359,
+        "note": "Related bow family; not a published compound-bow acquisition row."
+      }
     },
     {
       "type": "Augmentation",
@@ -8694,7 +9693,13 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Field Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Cordon Rope",
@@ -8725,7 +9730,13 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Training / Environment Gear",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Augmentation",
@@ -8738,7 +9749,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Cosmetic Augmentation X",
+      "sourceRestriction": "X (Nomads X−1)",
+      "sourceCost": "X+X§ (minimum 1)",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Cosmetic Augmentation X",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Kit",
@@ -8751,7 +9780,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Cosmetics Kit",
+      "sourceRestriction": "0 (specific subculture 1)",
+      "sourceCost": "4+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Cosmetics Kit",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -8829,7 +9876,13 @@ window.INFINITY_DATA = {
       "loadoutEligible": false,
       "loadoutConditional": false,
       "legacyAliasOnly": true,
-      "legacyReplacement": "CrazyKoala Mine"
+      "legacyReplacement": "CrazyKoala Mine",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -8842,7 +9895,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Tactical Bow",
+        "relatedPage": 359,
+        "note": "A crossbow is not identical to the Corebook's Tactical Bow."
+      }
     },
     {
       "type": "Weapon",
@@ -8855,7 +9916,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Tactical Bow",
+        "relatedPage": 359,
+        "note": "A crossbow is not identical to the Corebook's Tactical Bow."
+      }
     },
     {
       "type": "Tool",
@@ -8868,7 +9937,13 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Hand Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Cryo-Pod",
@@ -8899,7 +9974,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Cube 2.0",
+      "sourceRestriction": "2 (Ariadna 3)",
+      "sourceCost": "11+3§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Cube 2.0",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -8912,7 +10005,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Charge",
@@ -8925,7 +10024,15 @@ window.INFINITY_DATA = {
       "category": "Explosive Device",
       "subtype": "Charge",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "D-Charges",
+        "relatedPage": 350,
+        "note": "Detonator/controller differs from the D-Charge explosive itself."
+      }
     },
     {
       "type": "Weapon",
@@ -8954,7 +10061,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Knife",
+        "relatedPage": 358,
+        "note": "Generic knife is similar, but dagger label and homebrew values require review."
+      }
     },
     {
       "type": "Area Control",
@@ -8967,7 +10082,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Area Control Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Kit",
@@ -8980,7 +10101,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Deactivator Kit",
+      "sourceRestriction": "2",
+      "sourceCost": "4+2§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Deactivator Kit",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Defence System",
@@ -8993,7 +10132,15 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Defence System",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Deflector-1 / Deflector-2",
+        "relatedPage": 360,
+        "note": "Shield level unspecified, so neither source purchase profile can be assigned."
+      }
     },
     {
       "type": "Camouflage",
@@ -9217,7 +10364,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Countermeasure",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "ECM X",
+      "sourceRestriction": "3",
+      "sourceCost": "refer to printed X-based expression",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "ECM X",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Credential",
@@ -9230,7 +10395,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Transponder / Credential",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "EMT Equipment",
@@ -9261,7 +10432,26 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Waldo",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Engineering Waldo X",
+      "sourceRestriction": "X",
+      "sourceCost": "7+X§",
+      "tariff": "T(X+1)",
+      "maintenance": "X",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Engineering Waldo X",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -9274,7 +10464,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Cube",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Cube",
+      "sourceRestriction": "0 (Ariadna 2)",
+      "sourceCost": "5+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Cube",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -9287,7 +10495,13 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Biotech Enhancement",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Drug",
@@ -9332,7 +10546,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Credential",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Fake ID X",
+      "sourceRestriction": "X",
+      "sourceCost": "4+X§",
+      "tariff": "T4",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Fake ID X",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Remote",
@@ -9377,7 +10609,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Fast Download Port",
+      "sourceRestriction": "1",
+      "sourceCost": "8+2§",
+      "tariff": "T1",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Fast Download Port",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Tool",
@@ -9504,7 +10755,13 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Program",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "First Responder Uniform",
@@ -9552,7 +10809,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Signal Gear",
@@ -9565,7 +10828,15 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Signal Gear",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Signal Flare",
+        "relatedPage": 360,
+        "note": "Generic flare item; exact signal-flare profile not confirmed."
+      }
     },
     {
       "type": "Weapon",
@@ -9578,7 +10849,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Flash Pulse",
+      "sourceRestriction": "2",
+      "sourceCost": "6+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Flash Pulse",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "name": "Flashsocket",
@@ -9624,7 +10913,13 @@ window.INFINITY_DATA = {
       "subtype": "Drone",
       "loadoutEligible": true,
       "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Transport",
@@ -9638,7 +10933,13 @@ window.INFINITY_DATA = {
       "subtype": "Personal Transport",
       "loadoutEligible": true,
       "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -9667,7 +10968,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Forensics Kit X",
+      "sourceRestriction": "X",
+      "sourceCost": "4+2§",
+      "tariff": "T(X)",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Forensics Kit X",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Kit",
@@ -9680,7 +10999,13 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Forgery Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Tool",
@@ -9709,7 +11034,13 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Cybernetic Limb",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Augmentation",
@@ -9738,7 +11069,13 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Cybernetic Limbs",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Augmentation",
@@ -9865,7 +11202,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Garrotte",
+      "sourceRestriction": "1",
+      "sourceCost": "3+1§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Garrotte",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -9878,7 +11233,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Gecko Pads",
+      "sourceRestriction": "2",
+      "sourceCost": "8+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Gecko Pads",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Remote",
@@ -9892,7 +11265,13 @@ window.INFINITY_DATA = {
       "subtype": "Personal Remote",
       "loadoutEligible": true,
       "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "GeePal Remote X",
@@ -9986,7 +11365,13 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Climbing Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -9999,7 +11384,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Grazeblade",
+      "sourceRestriction": "4 (Haqqislam 2)",
+      "sourceCost": "6+4§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Grazeblade",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Grenade",
@@ -10012,7 +11415,15 @@ window.INFINITY_DATA = {
       "category": "Explosive Device",
       "subtype": "Grenade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Eclipse ammunition + [Ammo Type] Grenades",
+        "relatedPage": 340,
+        "note": "Corebook supports Eclipse ammunition and general grenades separately, not this exact combined acquisition item."
+      }
     },
     {
       "type": "Grenade",
@@ -10025,7 +11436,15 @@ window.INFINITY_DATA = {
       "category": "Explosive Device",
       "subtype": "Grenade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Electromagnetic ammunition + [Ammo Type] Grenades",
+        "relatedPage": 340,
+        "note": "Legacy electric grenade is not the same explicit Corebook item."
+      }
     },
     {
       "type": "Grenade",
@@ -10038,7 +11457,15 @@ window.INFINITY_DATA = {
       "category": "Explosive Device",
       "subtype": "Grenade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Explosive ammunition + [Ammo Type] Grenades",
+        "relatedPage": 350,
+        "note": "Generic explosive grenade is based on components; no named frag-grenade row."
+      }
     },
     {
       "type": "Grenade",
@@ -10051,7 +11478,15 @@ window.INFINITY_DATA = {
       "category": "Explosive Device",
       "subtype": "Grenade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "[Ammo Type] Grenades",
+        "relatedPage": 350,
+        "note": "Generic grenade framework exists; malware payload not attested as named source item."
+      }
     },
     {
       "type": "Grenade",
@@ -10064,7 +11499,25 @@ window.INFINITY_DATA = {
       "category": "Explosive Device",
       "subtype": "Grenade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 350,
+      "sourceTable": "Explosives Table",
+      "sourceItem": "Smoke Grenades",
+      "sourceRestriction": "2",
+      "sourceCost": "3+1§ (per 3)",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Smoke Grenades",
+        "sourcePage": 350,
+        "sourceTable": "Explosives Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -10077,7 +11530,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Light Grenade Launcher",
+        "relatedPage": 359,
+        "note": "The legacy generic Grenade Launcher lacks the light-variant qualifier."
+      }
     },
     {
       "name": "Ground Spikes",
@@ -10140,7 +11601,25 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 352,
+      "sourceTable": "Hacking Devices Table",
+      "sourceItem": "Assault Hacking Device",
+      "sourceRestriction": "3",
+      "sourceCost": "10+2§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Assault Hacking Device",
+        "sourcePage": 352,
+        "sourceTable": "Hacking Devices Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Hacking Device",
@@ -10153,7 +11632,25 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 352,
+      "sourceTable": "Hacking Devices Table",
+      "sourceItem": "Assault Hacking Device (EI)",
+      "sourceRestriction": "EI Only",
+      "sourceCost": "N/A",
+      "tariff": "N/A",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Assault Hacking Device (EI)",
+        "sourcePage": 352,
+        "sourceTable": "Hacking Devices Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Hacking Device",
@@ -10166,7 +11663,25 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 352,
+      "sourceTable": "Hacking Devices Table",
+      "sourceItem": "Defensive Hacking Device",
+      "sourceRestriction": "2",
+      "sourceCost": "9+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Defensive Hacking Device",
+        "sourcePage": 352,
+        "sourceTable": "Hacking Devices Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Hacking Device",
@@ -10179,7 +11694,25 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 352,
+      "sourceTable": "Hacking Devices Table",
+      "sourceItem": "EI Hacking Device",
+      "sourceRestriction": "EI Only",
+      "sourceCost": "N/A",
+      "tariff": "N/A",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "EI Hacking Device",
+        "sourcePage": 352,
+        "sourceTable": "Hacking Devices Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Hacking Device",
@@ -10192,7 +11725,25 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 352,
+      "sourceTable": "Hacking Devices Table",
+      "sourceItem": "Killer Hacking Device",
+      "sourceRestriction": "4 (Nomads 2 / ALEPH 2)",
+      "sourceCost": "10+2§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Killer Hacking Device",
+        "sourcePage": 352,
+        "sourceTable": "Hacking Devices Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Hacking Device",
@@ -10205,7 +11756,25 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 352,
+      "sourceTable": "Hacking Devices Table",
+      "sourceItem": "Hacking Device Plus",
+      "sourceRestriction": "4 (Nomads 2 / ALEPH 2)",
+      "sourceCost": "11+2§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Hacking Device Plus",
+        "sourcePage": 352,
+        "sourceTable": "Hacking Devices Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Hacking Device",
@@ -10218,7 +11787,25 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 352,
+      "sourceTable": "Hacking Devices Table",
+      "sourceItem": "Hacking Device",
+      "sourceRestriction": "3",
+      "sourceCost": "7+2§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Hacking Device",
+        "sourcePage": 352,
+        "sourceTable": "Hacking Devices Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Hacking Device",
@@ -10231,7 +11818,25 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 352,
+      "sourceTable": "Hacking Devices Table",
+      "sourceItem": "White Hacking Device",
+      "sourceRestriction": "4 (Nomads 2 / ALEPH 2)",
+      "sourceCost": "10+2§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "White Hacking Device",
+        "sourcePage": 352,
+        "sourceTable": "Hacking Devices Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Tool",
@@ -10260,7 +11865,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Handler’s Kit",
+      "sourceRestriction": "1",
+      "sourceCost": "5+2§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Handler’s Kit",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Financial Tool",
@@ -10305,7 +11928,15 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Medical Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "MediKit",
+        "relatedPage": 357,
+        "note": "Legacy healing kit is not the same published MediKit rules profile."
+      }
     },
     {
       "type": "Weapon",
@@ -10318,7 +11949,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Axe",
+        "relatedPage": 358,
+        "note": "Heavy Axe variant not separately listed."
+      }
     },
     {
       "type": "Armour",
@@ -10347,7 +11986,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Heavy Flamethrower",
+      "sourceRestriction": "3",
+      "sourceCost": "9+2§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Heavy Flamethrower",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -10360,7 +12017,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Heavy Machine Gun (HMG)",
+      "sourceRestriction": "3",
+      "sourceCost": "9+3§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Heavy Machine Gun (HMG)",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -10373,7 +12048,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Heavy Pistol",
+      "sourceRestriction": "2",
+      "sourceCost": "4+3§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Heavy Pistol",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -10402,7 +12095,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Hedgehog",
+      "sourceRestriction": "3",
+      "sourceCost": "5+3§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Hedgehog",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Poison",
@@ -10431,7 +12142,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Holographic Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Holographic Device",
@@ -10444,7 +12161,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Holographic Device",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Tool",
@@ -10457,7 +12180,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Disguise Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Holomask",
+      "sourceRestriction": "3",
+      "sourceCost": "6+2§",
+      "tariff": "T4",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Holomask",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Ammunition",
@@ -10532,7 +12273,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Hyper-Rapid Magnetic Canon (HMC)",
+      "sourceRestriction": "4",
+      "sourceCost": "12+4§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Hyper-Rapid Magnetic Canon (HMC)",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "i-Kohl",
@@ -10688,7 +12447,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Implanted [Equipment]",
+      "sourceRestriction": "per item (minimum 1)",
+      "sourceCost": "per item",
+      "tariff": "minimum T1",
+      "maintenance": "per item (minimum 1)",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Implanted [Equipment]",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -10701,7 +12479,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Implanted [Weapon]",
+      "sourceRestriction": "per weapon (minimum 3)",
+      "sourceCost": "per item",
+      "tariff": "per item +T2",
+      "maintenance": "per weapon (minimum 1)",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Implanted [Weapon]",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -10714,7 +12511,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Inlaid Palm Circuitry",
+      "sourceRestriction": "2",
+      "sourceCost": "7+1§",
+      "tariff": "T1",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Inlaid Palm Circuitry",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -10727,7 +12543,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Internal Pocket X",
+      "sourceRestriction": "0",
+      "sourceCost": "8+X§",
+      "tariff": "—",
+      "maintenance": "1/0",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Internal Pocket X",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "name": "Interrogation Cell",
@@ -11096,7 +12931,26 @@ window.INFINITY_DATA = {
       "subtype": "Facility",
       "loadoutEligible": false,
       "loadoutConditional": false,
-      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
+      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot.",
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Laboratory (Corporate Lease)",
+      "sourceRestriction": "2",
+      "sourceCost": "10+4§",
+      "tariff": "T1",
+      "maintenance": "4",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Laboratory (Corporate Lease)",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Tool",
@@ -11125,7 +12979,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Light",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Lantern",
+      "sourceRestriction": "0",
+      "sourceCost": "1",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Lantern",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "name": "Large Improvised Explosive Device",
@@ -11189,7 +13061,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Light Flamethrower",
+      "sourceRestriction": "2",
+      "sourceCost": "8+1§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Light Flamethrower",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -11202,7 +13092,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Light Shotgun",
+      "sourceRestriction": "2",
+      "sourceCost": "6+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Light Shotgun",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -11215,7 +13123,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Limb Socket",
+      "sourceRestriction": "1",
+      "sourceCost": "6+1§",
+      "tariff": "T1",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Limb Socket",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -11279,7 +13206,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Beacon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Locational Beacon",
+      "sourceRestriction": "1",
+      "sourceCost": "4+2§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Locational Beacon",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Kit",
@@ -11292,7 +13237,15 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "B&E Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Breaking & Entering Kit",
+        "relatedPage": 357,
+        "note": "A lockpick set is a component, not an independently listed B&E kit."
+      }
     },
     {
       "type": "Clothing",
@@ -11430,7 +13383,15 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Repair Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Repair Kit",
+        "relatedPage": 357,
+        "note": "General repair tools are related to, not identical to, the listed Repair Kit."
+      }
     },
     {
       "type": "Kit",
@@ -11443,7 +13404,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Medical Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "MediKit",
+      "sourceRestriction": "1",
+      "sourceCost": "4+3§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "MediKit",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -11489,7 +13468,13 @@ window.INFINITY_DATA = {
       "subtype": "Meme-Virii",
       "loadoutEligible": true,
       "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Keepsake Kit",
@@ -11549,7 +13534,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Light",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Micro-Torch",
+      "sourceRestriction": "0",
+      "sourceCost": "1",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Micro-Torch",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Consumable",
@@ -11562,7 +13565,15 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Survival Consumable",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Survival Rations",
+        "relatedPage": 360,
+        "note": "Potential equivalent meal rations; retain legacy entry until explicitly reconciled."
+      }
     },
     {
       "type": "Vehicle",
@@ -11590,7 +13601,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Missile Launcher",
+      "sourceRestriction": "4",
+      "sourceCost": "10+4§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Missile Launcher",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -11619,7 +13648,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Modhand",
+      "sourceRestriction": "4 (Nomads 2)",
+      "sourceCost": "5+3§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Modhand",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -11648,7 +13695,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -11661,7 +13714,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Morat Scimitar",
+      "sourceRestriction": "3 (Paradiso 1)",
+      "sourceCost": "4+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Morat Scimitar",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -11674,7 +13745,13 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Combat Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Scanner",
@@ -11687,7 +13764,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Scanner",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Mother-Forge",
@@ -11716,7 +13799,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Credential",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -11729,7 +13818,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "MULTI Heavy Machinegun",
+      "sourceRestriction": "4",
+      "sourceCost": "11+4§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "MULTI Heavy Machinegun",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -11742,7 +13849,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "MULTI Rifle",
+      "sourceRestriction": "3",
+      "sourceCost": "8+4§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "MULTI Rifle",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -11755,7 +13880,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "MULTI Sniper Rifle",
+      "sourceRestriction": "3",
+      "sourceCost": "8+3§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "MULTI Sniper Rifle",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Visor",
@@ -11768,7 +13911,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Visor",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Multispectral Visor X",
+      "sourceRestriction": "X",
+      "sourceCost": "7+X§",
+      "tariff": "T(X)",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Multispectral Visor X",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Visor",
@@ -11781,7 +13942,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Visor",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Multispectral Visor X",
+      "sourceRestriction": "X",
+      "sourceCost": "7+X§",
+      "tariff": "T(X)",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Multispectral Visor X",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Visor",
@@ -11794,7 +13973,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Visor",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Multispectral Visor X",
+      "sourceRestriction": "X",
+      "sourceCost": "7+X§",
+      "tariff": "T(X)",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Multispectral Visor X",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "name": "Multithreaded Consciousness",
@@ -11858,7 +14055,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Defence System",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -11871,7 +14074,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Nanopulser",
+      "sourceRestriction": "3",
+      "sourceCost": "6+2§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Nanopulser",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Tool",
@@ -11916,7 +14137,26 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Suite",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Nav Suite (Region)",
+      "sourceRestriction": "0",
+      "sourceCost": "2+2§",
+      "tariff": "—",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Nav Suite (Region)",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Suite",
@@ -11929,7 +14169,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Suite",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Negotiator’s Suite",
+      "sourceRestriction": "1",
+      "sourceCost": "7+1§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Negotiator’s Suite",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -11974,7 +14232,13 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Restraint Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Comlog",
@@ -11987,7 +14251,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Comlog",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Comlog, Neural",
+      "sourceRestriction": "1",
+      "sourceCost": "5+3§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Comlog, Neural",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -12000,7 +14282,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Neural Hacking Socket",
+      "sourceRestriction": "2",
+      "sourceCost": "5+2§",
+      "tariff": "T3",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Neural Hacking Socket",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -12013,7 +14314,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Neural Shunts",
+      "sourceRestriction": "2",
+      "sourceCost": "8+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Neural Shunts",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Augmentation",
@@ -12057,7 +14376,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Visor",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -12070,7 +14395,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -12083,7 +14414,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -12144,7 +14481,26 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Countermeasure",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Nullifier",
+      "sourceRestriction": "Tohaa Only",
+      "sourceCost": "N/A",
+      "tariff": "—",
+      "maintenance": "N/A",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Nullifier",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -12268,7 +14624,26 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Camouflage",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Optical Disruption Device",
+      "sourceRestriction": "3",
+      "sourceCost": "6+6§",
+      "tariff": "T3",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Optical Disruption Device",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Vehicle",
@@ -12315,7 +14690,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Pain Filters",
+      "sourceRestriction": "2",
+      "sourceCost": "8+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Pain Filters",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Legacy Reference",
@@ -12361,7 +14754,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Panzerfaust",
+      "sourceRestriction": "3",
+      "sourceCost": "8+1§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Panzerfaust",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Mobility Gear",
@@ -12374,7 +14785,15 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Mobility Gear",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Combat Jump Pack",
+        "relatedPage": 360,
+        "note": "A parachute is related to airborne descent, but not a powered Combat Jump Pack."
+      }
     },
     {
       "type": "Lhost",
@@ -12421,7 +14840,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Pheromone Dispenser",
+      "sourceRestriction": "2",
+      "sourceCost": "4+3§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Pheromone Dispenser",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Program Upgrade",
@@ -12466,7 +14903,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Pistol",
+      "sourceRestriction": "1",
+      "sourceCost": "4+1§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Pistol",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -12479,7 +14934,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Plasma Carbine",
+      "sourceRestriction": "EI Only",
+      "sourceCost": "N/A",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Plasma Carbine",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -12492,7 +14965,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Plasma Rifle",
+      "sourceRestriction": "EI Only",
+      "sourceCost": "N/A",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Plasma Rifle",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -12505,7 +14996,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Plasma Sniper Rifle",
+      "sourceRestriction": "EI Only",
+      "sourceCost": "N/A",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Plasma Sniper Rifle",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -12518,7 +15027,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Plasteel Pipe",
+      "sourceRestriction": "1",
+      "sourceCost": "1+1§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Plasteel Pipe",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Poison",
@@ -12531,7 +15058,13 @@ window.INFINITY_DATA = {
       "category": "Contagion",
       "subtype": "Poison",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Poison",
@@ -12608,7 +15141,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Hand Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Powered Multitool",
+      "sourceRestriction": "0",
+      "sourceCost": "4+2§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Powered Multitool",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Kit",
@@ -12621,7 +15172,13 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Augmentation Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Prisoner Habitation",
@@ -12669,7 +15226,13 @@ window.INFINITY_DATA = {
       "subtype": "i-Lhost",
       "loadoutEligible": false,
       "loadoutConditional": false,
-      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
+      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot.",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Proxy Mk.1 i-Lhost",
@@ -12762,7 +15325,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Suite",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Psychoanalysis Suite",
+      "sourceRestriction": "3",
+      "sourceCost": "6+3§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Psychoanalysis Suite",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -12775,7 +15356,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -12867,7 +15454,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Recorder",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Recorder",
+      "sourceRestriction": "1",
+      "sourceCost": "4+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Recorder",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -12913,7 +15518,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Regeneration Augmentation",
+      "sourceRestriction": "3",
+      "sourceCost": "9+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Regeneration Augmentation",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Remote",
@@ -12927,7 +15550,15 @@ window.INFINITY_DATA = {
       "subtype": "Drone",
       "loadoutEligible": true,
       "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Core Remotes",
+        "relatedPage": 355,
+        "note": "Generic legacy drone lacks a specified Corebook remote model."
+      }
     },
     {
       "type": "Augmentation",
@@ -12940,7 +15571,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Remote Presence Gear",
+      "sourceRestriction": "3",
+      "sourceCost": "8+1§",
+      "tariff": "T1",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Remote Presence Gear",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Repeater",
@@ -12953,7 +15603,15 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Repeater",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Deployable Repeater",
+        "relatedPage": 360,
+        "note": "A portable repeater could differ from a deployed one."
+      }
     },
     {
       "type": "Respirator",
@@ -12966,7 +15624,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Respirator",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Respirator X",
+      "sourceRestriction": "0",
+      "sourceCost": "4+X§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Respirator X",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "name": "Resurrection Cake",
@@ -12995,7 +15671,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Rifle",
+        "relatedPage": 359,
+        "note": "Specialised-rifle rule applies, but this named variant has no individual table row."
+      }
     },
     {
       "type": "Weapon",
@@ -13008,7 +15692,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Rifle",
+        "relatedPage": 359,
+        "note": "Legacy EMT rifle is not a separate acquisition entry and may have non-source mechanics."
+      }
     },
     {
       "type": "Rations",
@@ -13038,7 +15730,15 @@ window.INFINITY_DATA = {
       "subtype": "Mobility Gear",
       "loadoutEligible": true,
       "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Combat Jump Pack",
+        "relatedPage": 360,
+        "note": "Jump/rocket pack not proven equivalent to a Corebook Combat Jump Pack."
+      }
     },
     {
       "type": "Container",
@@ -13179,7 +15879,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Restraint",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "SecurCuffs",
+      "sourceRestriction": "1",
+      "sourceCost": "3+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "SecurCuffs",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "name": "Sense Link",
@@ -13225,7 +15943,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Suite",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Sensor Suite (Type)",
+      "sourceRestriction": "1 to 3 (depending on type)",
+      "sourceCost": "4+3§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Sensor Suite (Type)",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -13238,7 +15974,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Sepsitor",
+      "sourceRestriction": "EI Only",
+      "sourceCost": "N/A",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Sepsitor",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -13251,7 +16005,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -13281,7 +16041,13 @@ window.INFINITY_DATA = {
       "subtype": "Bio-Tech Kit",
       "loadoutEligible": true,
       "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Hacking Program",
@@ -13294,7 +16060,13 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Program — SHIELD",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Program",
@@ -13323,7 +16095,13 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Program — SHIELD",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -13351,7 +16129,13 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Repair Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -13364,7 +16148,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -13377,7 +16167,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Rifle",
+        "relatedPage": 359,
+        "note": "Specialised-rifle rule exists, but not a named Shock Rifle row."
+      }
     },
     {
       "type": "Tool",
@@ -13390,7 +16188,15 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "USAriadnan Entrenching Tool",
+        "relatedPage": 357,
+        "note": "A general shovel is not the factional entrenching-tool profile."
+      }
     },
     {
       "type": "Poison",
@@ -13419,7 +16225,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Ammunition",
@@ -13448,7 +16260,25 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Sixth Sense",
+      "sourceRestriction": "2",
+      "sourceCost": "11+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Sixth Sense",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "name": "Skaði Lhost",
@@ -13540,7 +16370,13 @@ window.INFINITY_DATA = {
       "category": "Explosive Device",
       "subtype": "Charge",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Small Improvised Explosive Device",
@@ -13587,7 +16423,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Smart MULTI Pistol",
@@ -13616,7 +16458,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Smart MULTI Sniper Rifle",
@@ -13645,7 +16493,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "name": "Smart Taxi",
@@ -13674,7 +16528,15 @@ window.INFINITY_DATA = {
       "category": "Explosive Device",
       "subtype": "Grenade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Smoke Grenades",
+        "relatedPage": 350,
+        "note": "Similar smoke effect, but the legacy bomb is not an exact listed grenade item."
+      }
     },
     {
       "type": "Weapon",
@@ -13719,7 +16581,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Sniper Rifle",
+      "sourceRestriction": "2",
+      "sourceCost": "6+3§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Sniper Rifle",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "name": "Social Care Kit",
@@ -13750,7 +16630,15 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Repair Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Repair Kit",
+        "relatedPage": 357,
+        "note": "Soldering is a subset of repair equipment; no separate Corebook purchase line."
+      }
     },
     {
       "type": "Armour",
@@ -13796,7 +16684,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Spear",
+      "sourceRestriction": "2",
+      "sourceCost": "3+2§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Spear",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Armour",
@@ -13825,7 +16731,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Spiked Knuckles",
+      "sourceRestriction": "2",
+      "sourceCost": "3+1§",
+      "tariff": "T2",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Spiked Knuckles",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -13838,7 +16762,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Spitfire",
+      "sourceRestriction": "2",
+      "sourceCost": "6+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Spitfire",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -13851,7 +16793,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Spitfire",
+        "relatedPage": 359,
+        "note": "Legacy Spitfire Rifle mechanics conflict with the published Spitfire; do not treat them as equivalent."
+      }
     },
     {
       "type": "Remote",
@@ -13946,7 +16896,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Repeater",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Stealth Repeater",
+      "sourceRestriction": "1",
+      "sourceCost": "3+3§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Stealth Repeater",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "name": "Striptape",
@@ -13977,7 +16945,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Stun Baton",
+      "sourceRestriction": "2",
+      "sourceCost": "4+1§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Stun Baton",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Remote",
@@ -14023,7 +17009,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Augmentation",
@@ -14036,7 +17028,26 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Augmentation",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 346,
+      "sourceTable": "Augmentations Table",
+      "sourceItem": "Super-Jump",
+      "sourceRestriction": "2",
+      "sourceCost": "8+1§",
+      "tariff": "T1",
+      "maintenance": "1/0",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Super-Jump",
+        "sourcePage": 346,
+        "sourceTable": "Augmentations Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Facility",
@@ -14050,7 +17061,26 @@ window.INFINITY_DATA = {
       "subtype": "Facility",
       "loadoutEligible": false,
       "loadoutConditional": false,
-      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot."
+      "loadoutNote": "Reference/master-catalogue asset; not valid for a normal carried Equipment slot.",
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Surgical Bay",
+      "sourceRestriction": "2",
+      "sourceCost": "14+1§",
+      "tariff": "T4",
+      "maintenance": "3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Surgical Bay",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Waldo",
@@ -14063,7 +17093,26 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Waldo",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Surgical Waldo X",
+      "sourceRestriction": "X",
+      "sourceCost": "7+X§",
+      "tariff": "T(X+1)",
+      "maintenance": "X",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Surgical Waldo X",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Kit",
@@ -14076,7 +17125,25 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 357,
+      "sourceTable": "Tools Table",
+      "sourceItem": "Survival Kit (Environment)",
+      "sourceRestriction": "1",
+      "sourceCost": "4+2§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Survival Kit (Environment)",
+        "sourcePage": 357,
+        "sourceTable": "Tools Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Survival Gear",
@@ -14089,7 +17156,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Survival Gear",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Survival Pod",
+      "sourceRestriction": "1",
+      "sourceCost": "5+1§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Survival Pod",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Kit",
@@ -14102,7 +17187,15 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Medical Kit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Basic Medical Supplies",
+        "relatedPage": 357,
+        "note": "Component of medical supplies, not a separately published costed item."
+      }
     },
     {
       "type": "Weapon",
@@ -14115,7 +17208,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Sword",
+      "sourceRestriction": "3",
+      "sourceCost": "5+2§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Sword",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -14190,7 +17301,13 @@ window.INFINITY_DATA = {
       "category": "Augmentation",
       "subtype": "Biograft",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Tohaa Support",
@@ -14204,7 +17321,26 @@ window.INFINITY_DATA = {
       "subtype": "Tohaa Support",
       "loadoutEligible": true,
       "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "SymbioMate",
+      "sourceRestriction": "Tohaa Only",
+      "sourceCost": "N/A",
+      "tariff": "—",
+      "maintenance": "N/A",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "SymbioMate",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -14332,7 +17468,13 @@ window.INFINITY_DATA = {
       "category": "Explosive Device",
       "subtype": "Grenade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -14473,7 +17615,26 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Camouflage",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Thermo-Optical Camouflage",
+      "sourceRestriction": "4",
+      "sourceCost": "6+6§",
+      "tariff": "T3",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Thermo-Optical Camouflage",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Visor",
@@ -14486,7 +17647,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Visor",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -14499,7 +17666,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Axe",
+        "relatedPage": 358,
+        "note": "Core Axe has Thrown but not a separate Throwing Axe acquisition row."
+      }
     },
     {
       "type": "Remote",
@@ -14513,7 +17688,15 @@ window.INFINITY_DATA = {
       "subtype": "Support Remote",
       "loadoutEligible": true,
       "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "TinBot",
+        "relatedPage": 355,
+        "note": "Source has a generic TinBot; legacy X-parameterised ability is not the same rules profile."
+      }
     },
     {
       "type": "Weapon",
@@ -14526,7 +17709,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Tonfa Bangles",
+      "sourceRestriction": "1",
+      "sourceCost": "5+5§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Tonfa Bangles",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Resource",
@@ -14555,7 +17756,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Light",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Torch",
+      "sourceRestriction": "0",
+      "sourceCost": "1",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Torch",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Sensor",
@@ -14647,7 +17866,13 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Credential",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Vehicle",
@@ -14707,7 +17932,13 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Upgrade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Hacking Upgrade",
@@ -14720,7 +17951,13 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Upgrade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Hacking Program",
@@ -14749,7 +17986,13 @@ window.INFINITY_DATA = {
       "category": "Hacking Device",
       "subtype": "Upgrade",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Hacking Program",
@@ -14810,7 +18053,26 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Environment Suit",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Vac Suit",
+      "sourceRestriction": "1",
+      "sourceCost": "7+2§",
+      "tariff": "T2",
+      "maintenance": "1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Vac Suit",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Environmental Aid",
@@ -14823,7 +18085,25 @@ window.INFINITY_DATA = {
       "category": "Other Item",
       "subtype": "Environmental Aid",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 360,
+      "sourceTable": "Other Items Table",
+      "sourceItem": "Varuna Lungs",
+      "sourceRestriction": "1",
+      "sourceCost": "4+3§",
+      "tariff": "—",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "exact",
+        "sourceItem": "Varuna Lungs",
+        "sourcePage": 360,
+        "sourceTable": "Other Items Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Tool",
@@ -14885,7 +18165,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Explosive Device",
       "loadoutEligible": true,
-      "loadoutConditional": true
+      "loadoutConditional": true,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Contagion",
@@ -14913,7 +18199,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -14926,7 +18218,15 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "related-core-only",
+        "matchType": "analogue",
+        "relatedItem": "Rifle",
+        "relatedPage": 359,
+        "note": "Specialised rifle is possible, but the named version is not an individual table row."
+      }
     },
     {
       "type": "Weapon",
@@ -14957,7 +18257,13 @@ window.INFINITY_DATA = {
       "subtype": "Alien Relay",
       "loadoutEligible": true,
       "loadoutConditional": true,
-      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval."
+      "loadoutNote": "Conditional asset; may require faction, career, scenario, or GM approval.",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -14970,7 +18276,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Armour",
@@ -14983,7 +18295,13 @@ window.INFINITY_DATA = {
       "category": "Armour",
       "subtype": "Exotic Armour",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -14996,7 +18314,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -15025,7 +18349,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 359,
+      "sourceTable": "Ranged Weapons Table",
+      "sourceItem": "Vulkan Shotgun",
+      "sourceRestriction": "2",
+      "sourceCost": "7+3§",
+      "tariff": "T1",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Vulkan Shotgun",
+        "sourcePage": 359,
+        "sourceTable": "Ranged Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Weapon",
@@ -15038,7 +18380,25 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "source": "Infinity RPG Corebook",
+      "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+      "sourceProduct": "MUH050206",
+      "sourcePage": 358,
+      "sourceTable": "Melee Weapons Table",
+      "sourceItem": "Wetspike",
+      "sourceRestriction": "3",
+      "sourceCost": "2+4§",
+      "tariff": "T3",
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "core-verified",
+        "matchType": "named-alias",
+        "sourceItem": "Wetspike",
+        "sourcePage": 358,
+        "sourceTable": "Melee Weapons Table",
+        "note": "Official acquisition-table source is verified. Legacy credit cost and custom item mechanics remain unchanged."
+      }
     },
     {
       "type": "Poison",
@@ -15145,7 +18505,13 @@ window.INFINITY_DATA = {
       "category": "Weapon",
       "subtype": "Melee Weapon",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Weapon",
@@ -15219,7 +18585,13 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "EVA Tool",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "type": "Tool",
@@ -15232,7 +18604,13 @@ window.INFINITY_DATA = {
       "category": "Tool",
       "subtype": "Remote Controller",
       "loadoutEligible": true,
-      "loadoutConditional": false
+      "loadoutConditional": false,
+      "provenanceAudit": {
+        "version": "V79",
+        "status": "unverified",
+        "matchType": "none",
+        "note": "No exact item acquisition-table entry verified in the supplied Corebook. Player's Guide PDF not supplied; other sourcebook or custom rules may apply."
+      }
     },
     {
       "rarity": "",
@@ -31541,9 +34919,30 @@ window.INFINITY_DATA = {
       "Other Human Sphere origin is a user-interface convenience, not a named place in source.",
       "Career profile attribute boosts, Life Point costs, faction allegiance, and random effects remain reference, not silent changes."
     ]
+  },
+  "coreEquipmentProvenanceAudit": {
+    "build": "v79-core-equipment-provenance-audit",
+    "source": "Infinity RPG Corebook",
+    "sourceFile": "MUH050206 Infinity RPG Corebook - 20180326.pdf",
+    "sourceProduct": "MUH050206",
+    "sourceScope": "Part IV: Gear — Acquisitions pp. 328–331; armour p. 343; augmentations p. 346; explosives p. 350; hacking devices p. 352; remotes p. 355; tools p. 357; melee weapons p. 358; ranged weapons p. 359; other items p. 360.",
+    "playerGuideStatus": "Not available in the supplied source files; source-exclusive claims are pending direct inspection.",
+    "baselineUnsourced": 261,
+    "sourceNamesVerified": 141,
+    "relatedNotProven": 42,
+    "unresolvedWithoutDirectCoreEntry": 78,
+    "alreadySourcedMissingPage": 3,
+    "legacyCostDifferencesRetained": 141,
+    "policy": [
+      "Official source price/restriction/tariff metadata does not replace existing simplified credit costs or combat mechanics.",
+      "Related entries do not acquire a source citation merely because their names are similar.",
+      "Variable X items retain their parameters; no invented X level, restriction, or fixed cost.",
+      "No published Player's Guide content was asserted without the full document.",
+      "Legacy compatibility aliases are preserved and are not reintroduced as selectable items."
+    ]
   }
 };
 
-// Compatibility alias: older browser builds may still read window.DATA.
+// Compatibility alias for older browser builds.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v78-panoceania-gear-reconciliation";
+window.INFINITY_BUILD = "v79-core-equipment-provenance-audit";

@@ -4520,6 +4520,22 @@ function buildGlossaryEntries() {
     ref("O-12 Source Exceptions", "83–102", o12.sourceNotes.concat(o12.sourceNormalisation).join(" "));
   }
 
+  
+  const v79Audit=DATA.coreEquipmentProvenanceAudit;
+  if(v79Audit){
+    const lines=[
+      "V79 Corebook source audit:",
+      v79Audit.sourceNamesVerified+" of "+v79Audit.baselineUnsourced+" previously unsourced records verified against named Corebook acquisition rows.",
+      v79Audit.relatedNotProven+" related entries retained without invented source provenance.",
+      v79Audit.unresolvedWithoutDirectCoreEntry+" entries remain without direct Corebook table verification.",
+      "Source: "+v79Audit.sourceScope,
+      "Player's Guide: "+v79Audit.playerGuideStatus,
+      "Original simplified credits, mechanics and loadout conventions are unchanged."
+    ].join(" ");
+    entries.push(glossaryEntry("Source References","V79 Core Equipment Provenance Audit","Corebook Reference",
+      ["Source: "+v79Audit.source+", Part IV, pp. 328–360; "+v79Audit.sourceProduct],lines,lines));
+  }
+
   const panO = DATA.panOceaniaReference;
   if (panO) {
     const statusText = (panO.socialStatus || []).map(row => `${row.roll}: ${row.status} — ${row.attribute}, Earnings ${row.earnings}${row.special ? `; ${row.special}` : ""}`).join("; ");
@@ -4887,7 +4903,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v78-panoceania-gear-reconciliation";
+  document.documentElement.dataset.infinityBuild = "v79-core-equipment-provenance-audit";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -4963,7 +4979,7 @@ window.addEventListener("load", () => {
    complete Corebook Lifepath: unsupported dice, contacts, talents and earned gear choices
    remain explicitly manual. All generated numeric bonuses are derived from a saved ledger. */
 (function installO12LifepathV74() {
-  const NEW_BUILD = "v78-panoceania-gear-reconciliation";
+  const NEW_BUILD = "v79-core-equipment-provenance-audit";
   const careerSources = DATA.o12Reference?.careerProfiles || {};
   const o12Source = DATA.o12Reference || {};
   const defaultLedger = () => ({ version: 74, lifePoints: 5, otherSpent: 0, phases: [], adolescent: null, pillar: null, criminalRecord: false });
@@ -5670,6 +5686,17 @@ window.addEventListener("load", () => {
       "Type: " + (item.type || "-") + " | Weight: " + (item.weight || "-") +
         " | Rarity: " + (item.rarity || "-") + " | Cost: " + (item.cost || "-"),
       "Source: " + source,
+      item.provenanceAudit ? "Provenance: " + ({
+        "core-verified":"Corebook verified",
+        "related-core-only":"Related Corebook item only — not a verified acquisition",
+        "unverified":"No direct Corebook acquisition verified"
+      }[item.provenanceAudit.status] || "Review") +
+      (item.sourceItem ? " ["+item.sourceItem+"]" : item.provenanceAudit.relatedItem ? " ["+item.provenanceAudit.relatedItem+"]" : "") : "",
+      item.sourceCost ? "Official 2d20 acquisition: cost " + item.sourceCost +
+        "; Restriction " + (item.sourceRestriction || "not listed") +
+        "; Tariff " + (item.tariff || "not listed") +
+        (item.maintenance ? "; Maintenance " + item.maintenance : "") +
+        ". Legacy credits and mechanics are unchanged." : "",
       "Rule / description: " + (item.mechanic || item.brief || "No mechanical rule recorded"),
       item.loadoutEligible === false ? "Reference only — not eligible for personal loadout." :
         "Select 'Add to first free slot' to place this existing catalogue item if a compatible slot is open."
@@ -5863,6 +5890,16 @@ window.addEventListener("load", () => {
     countsP.textContent="Indexed existing records: "+entries.length+" total; "+counts.infogear+" infogear/quantronic, "+
       counts.medical+" medical, "+counts.augmentation+" augmentation, "+counts.modification+" upgrade/modification entries.";
     details.appendChild(countsP);
+    const coreAudit = DATA.coreEquipmentProvenanceAudit;
+    if (coreAudit) {
+      const auditP=document.createElement("p");
+      auditP.className="tech-v75-small";
+      auditP.textContent="V79 Core Equipment provenance: "+
+        coreAudit.sourceNamesVerified+" verified; "+coreAudit.relatedNotProven+
+        " related only; "+coreAudit.unresolvedWithoutDirectCoreEntry+
+        " unresolved. Original simplified stats and credits are unchanged. Player's Guide source PDF is pending.";
+      details.appendChild(auditP);
+    }
     const headingBrowser=document.createElement("h4");headingBrowser.textContent="Explore existing technology";details.appendChild(headingBrowser);
     const filters=document.createElement("div");filters.className="tech-v75-grid";
     const filter=makeField("select","Catalogue category","v75FamilyFilter");
@@ -5943,6 +5980,6 @@ window.addEventListener("load", () => {
 /* V77 Mercenaries / NA2 source scaffold retained.
    The temporary War Market foundation panel was removed because the complete
    MUH050216 sourcebook is not present in the supplied source corpus. */
-window.INFINITY_BUILD = "v78-panoceania-gear-reconciliation";
+window.INFINITY_BUILD = "v79-core-equipment-provenance-audit";
 
-/* V78: PanOceania Chapter 5 gear reconciliation — 54 source-backed records from MUH050224; source QA corrections applied. */
+/* V79: Core Equipment provenance audit — 141 named acquisitions verified; 42 related only; 78 unresolved pending further sources. */
