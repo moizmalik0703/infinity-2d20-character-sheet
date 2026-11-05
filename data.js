@@ -15233,9 +15233,8 @@ window.INFINITY_DATA = {
       "subtype": "Remote Controller",
       "loadoutEligible": true,
       "loadoutConditional": false
-    }
-  ,
-  {
+    },
+    {
       "rarity": "",
       "weight": "",
       "loadoutConditional": false,
@@ -15445,7 +15444,7 @@ window.INFINITY_DATA = {
       "name": "Haladie X",
       "brief": "Double-ended heritage dagger associated with Acontecimento Submondo circles.",
       "mechanic": "Melee; 1+4§; 1H; Heritage Weapon X (Acontecimento Submondo), Vicious 2.",
-      "cost": "5+X§",
+      "cost": "3+X§",
       "tariff": "T(X)",
       "category": "Weapon",
       "subtype": "Melee Weapon",
@@ -16271,7 +16270,7 @@ window.INFINITY_DATA = {
       "sourceFile": "MUH050224 Infinity RPG - PanOceania Faction Book.pdf",
       "sourceProduct": "MUH050224",
       "type": "Armour",
-      "name": "Sigma-OXS Phaliug",
+      "name": "Sigma-OXS Piailug",
       "brief": "Advanced Vac Suit variant for experienced solitary explorers.",
       "mechanic": "Source variant of Vac Suit: Exo-Compass, two Sensor Suites of the purchaser's preferred type, one additional Oxygen Load and one Part. Users with Extraplanetary Focus below 3 suffer +2 Complication Range. Use the base Vac Suit profile; no separate acquisition row is provided.",
       "cost": "Variant — use Vac Suit",
@@ -18727,7 +18726,7 @@ window.INFINITY_DATA = {
       "Shipboard Repair Kit",
       "Shovel",
       "SHVYY Poison",
-      "Sigma-OXS Phaliug",
+      "Sigma-OXS Piailug",
       "Silver Bullets",
       "Sixth Sense",
       "Skeletal Reinforcement X",
@@ -26799,7 +26798,7 @@ window.INFINITY_DATA = {
       "build": "v78-panoceania-gear-reconciliation",
       "status": "Complete Chapter 5 player-facing gear reconciliation",
       "chapter": "Chapter 5 — PanOceania Gear",
-      "pages": "67–78",
+      "pages": "67–79",
       "tableEntries": 48,
       "variantEntries": 6,
       "importedRecords": 54,
@@ -26829,7 +26828,7 @@ window.INFINITY_DATA = {
         "Hexas Nightwear",
         "Swiss Guard Armour",
         "Doc Armour",
-        "Sigma-OXS Phaliug"
+        "Sigma-OXS Piailug"
       ],
       "optionalRules": {
         "sensarecorderCandidates": "Performance-oriented careers taken two or more times may, with the source option, exchange Sensarecorder augmentation for Asset debt; later repeat careers increase that debt.",
@@ -26841,6 +26840,11 @@ window.INFINITY_DATA = {
         "Variable-X items remain parameterised rather than silently choosing an X value.",
         "Vehicles/TAGs and the Mulebot are catalogue/reference records and do not consume normal Equipment slots.",
         "Variant armour entries inherit the named base item rather than inventing a separate cost/restriction row."
+      ],
+      "qaNotes": [
+        "Aeropter detailed stat block lists Speed 1/2, while the Vehicle Costs Table lists Speed 2; the catalogue preserves the detailed stat-block value and records the table conflict.",
+        "Haladie X cost reconciled to 3+X§ from the Chapter 5 Melee Weapons Table.",
+        "Sigma-OXS Piailug spelling follows the Chapter 5 armour-variant sidebar."
       ]
     }
   },

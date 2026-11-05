@@ -4552,6 +4552,18 @@ function buildGlossaryEntries() {
 
     const normalisation = (panO.normalizationNotes || []).join(" ");
     if (normalisation) entries.push(glossaryEntry("Source References","PanOceania Source Normalisation Notes","PanOceania Reference",[panO.source],normalisation,normalisation));
+    const gear = panO.gearReconciliation;
+    if (gear) {
+      const gearText = [
+        gear.status,
+        `Chapter: ${gear.chapter}; printed pages ${gear.pages}.`,
+        `Imported records: ${gear.importedRecords} (${gear.tableEntries} table entries + ${gear.variantEntries} source variants).`,
+        `Tables: ${(gear.sourceTables || []).join(", ")}.`,
+        ...(gear.qaNotes || [])
+      ].join(" ");
+      entries.push(glossaryEntry("Source References","PanOceania Chapter 5 Gear Reconciliation","PanOceania Reference",
+        [`Source: ${panO.source}, pp. ${gear.pages}; Product ${panO.product}`],gearText,gearText));
+    }
   }
 
 
@@ -4875,7 +4887,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v75-technology-workshop-foundation";
+  document.documentElement.dataset.infinityBuild = "v78-panoceania-gear-reconciliation";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -4951,7 +4963,7 @@ window.addEventListener("load", () => {
    complete Corebook Lifepath: unsupported dice, contacts, talents and earned gear choices
    remain explicitly manual. All generated numeric bonuses are derived from a saved ledger. */
 (function installO12LifepathV74() {
-  const NEW_BUILD = "v75-technology-workshop-foundation";
+  const NEW_BUILD = "v78-panoceania-gear-reconciliation";
   const careerSources = DATA.o12Reference?.careerProfiles || {};
   const o12Source = DATA.o12Reference || {};
   const defaultLedger = () => ({ version: 74, lifePoints: 5, otherSpent: 0, phases: [], adolescent: null, pillar: null, criminalRecord: false });
@@ -5933,4 +5945,4 @@ window.addEventListener("load", () => {
    MUH050216 sourcebook is not present in the supplied source corpus. */
 window.INFINITY_BUILD = "v78-panoceania-gear-reconciliation";
 
-/* V78: PanOceania Chapter 5 gear reconciliation — 54 source-backed records from MUH050224. */
+/* V78: PanOceania Chapter 5 gear reconciliation — 54 source-backed records from MUH050224; source QA corrections applied. */

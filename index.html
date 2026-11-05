@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="infinity-build" content="v78-panoceania-gear-reconciliation">
-  <!-- DEPLOYMENT CHECK: v78-panoceania-gear-reconciliation | Adds persistent autosave snapshots with localStorage + IndexedDB fallback, pagehide/visibility flush, and recovery auto-load while keeping no Load button, Glossary and XML buttons, lore-clean glossary, XML import/export, logos, mobile stability, PDF safeguards, alphabetical dropdowns, faction/homeworld validation, Wounds 0-3, no XP/Heat, and total-only skill values. -->
+  <!-- DEPLOYMENT CHECK: v78-panoceania-gear-reconciliation | PanOceania Chapter 5 reconciled: 54 source-backed gear records including vehicles/TAGs, armour variants, weapons, explosives, remotes, tools, drugs, source metadata and QA corrections; existing character-sheet conventions retained. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinity 2D20 Campaign Character Sheet</title>
   <style data-portfolio-style>:root {
@@ -17907,9 +17907,8 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "subtype": "Remote Controller",
       "loadoutEligible": true,
       "loadoutConditional": false
-    }
-  ,
-  {
+    },
+    {
       "rarity": "",
       "weight": "",
       "loadoutConditional": false,
@@ -18119,7 +18118,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "name": "Haladie X",
       "brief": "Double-ended heritage dagger associated with Acontecimento Submondo circles.",
       "mechanic": "Melee; 1+4§; 1H; Heritage Weapon X (Acontecimento Submondo), Vicious 2.",
-      "cost": "5+X§",
+      "cost": "3+X§",
       "tariff": "T(X)",
       "category": "Weapon",
       "subtype": "Melee Weapon",
@@ -18945,7 +18944,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "sourceFile": "MUH050224 Infinity RPG - PanOceania Faction Book.pdf",
       "sourceProduct": "MUH050224",
       "type": "Armour",
-      "name": "Sigma-OXS Phaliug",
+      "name": "Sigma-OXS Piailug",
       "brief": "Advanced Vac Suit variant for experienced solitary explorers.",
       "mechanic": "Source variant of Vac Suit: Exo-Compass, two Sensor Suites of the purchaser's preferred type, one additional Oxygen Load and one Part. Users with Extraplanetary Focus below 3 suffer +2 Complication Range. Use the base Vac Suit profile; no separate acquisition row is provided.",
       "cost": "Variant — use Vac Suit",
@@ -21401,7 +21400,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "Shipboard Repair Kit",
       "Shovel",
       "SHVYY Poison",
-      "Sigma-OXS Phaliug",
+      "Sigma-OXS Piailug",
       "Silver Bullets",
       "Sixth Sense",
       "Skeletal Reinforcement X",
@@ -29473,7 +29472,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       "build": "v78-panoceania-gear-reconciliation",
       "status": "Complete Chapter 5 player-facing gear reconciliation",
       "chapter": "Chapter 5 — PanOceania Gear",
-      "pages": "67–78",
+      "pages": "67–79",
       "tableEntries": 48,
       "variantEntries": 6,
       "importedRecords": 54,
@@ -29503,7 +29502,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
         "Hexas Nightwear",
         "Swiss Guard Armour",
         "Doc Armour",
-        "Sigma-OXS Phaliug"
+        "Sigma-OXS Piailug"
       ],
       "optionalRules": {
         "sensarecorderCandidates": "Performance-oriented careers taken two or more times may, with the source option, exchange Sensarecorder augmentation for Asset debt; later repeat careers increase that debt.",
@@ -29515,6 +29514,11 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
         "Variable-X items remain parameterised rather than silently choosing an X value.",
         "Vehicles/TAGs and the Mulebot are catalogue/reference records and do not consume normal Equipment slots.",
         "Variant armour entries inherit the named base item rather than inventing a separate cost/restriction row."
+      ],
+      "qaNotes": [
+        "Aeropter detailed stat block lists Speed 1/2, while the Vehicle Costs Table lists Speed 2; the catalogue preserves the detailed stat-block value and records the table conflict.",
+        "Haladie X cost reconciled to 3+X§ from the Chapter 5 Melee Weapons Table.",
+        "Sigma-OXS Piailug spelling follows the Chapter 5 armour-variant sidebar."
       ]
     }
   },
@@ -34216,6 +34220,8 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
+window.INFINITY_BUILD = "v78-panoceania-gear-reconciliation";
+window.DATA = window.INFINITY_DATA;
 window.INFINITY_BUILD = "v75-technology-workshop-foundation";
 </script>
   <script>
@@ -38773,6 +38779,18 @@ function buildGlossaryEntries() {
 
     const normalisation = (panO.normalizationNotes || []).join(" ");
     if (normalisation) entries.push(glossaryEntry("Source References","PanOceania Source Normalisation Notes","PanOceania Reference",[panO.source],normalisation,normalisation));
+    const gear = panO.gearReconciliation;
+    if (gear) {
+      const gearText = [
+        gear.status,
+        `Chapter: ${gear.chapter}; printed pages ${gear.pages}.`,
+        `Imported records: ${gear.importedRecords} (${gear.tableEntries} table entries + ${gear.variantEntries} source variants).`,
+        `Tables: ${(gear.sourceTables || []).join(", ")}.`,
+        ...(gear.qaNotes || [])
+      ].join(" ");
+      entries.push(glossaryEntry("Source References","PanOceania Chapter 5 Gear Reconciliation","PanOceania Reference",
+        [`Source: ${panO.source}, pp. ${gear.pages}; Product ${panO.product}`],gearText,gearText));
+    }
   }
 
 
@@ -39096,7 +39114,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v75-technology-workshop-foundation";
+  document.documentElement.dataset.infinityBuild = "v78-panoceania-gear-reconciliation";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -39172,7 +39190,7 @@ window.addEventListener("load", () => {
    complete Corebook Lifepath: unsupported dice, contacts, talents and earned gear choices
    remain explicitly manual. All generated numeric bonuses are derived from a saved ledger. */
 (function installO12LifepathV74() {
-  const NEW_BUILD = "v75-technology-workshop-foundation";
+  const NEW_BUILD = "v78-panoceania-gear-reconciliation";
   const careerSources = DATA.o12Reference?.careerProfiles || {};
   const o12Source = DATA.o12Reference || {};
   const defaultLedger = () => ({ version: 74, lifePoints: 5, otherSpent: 0, phases: [], adolescent: null, pillar: null, criminalRecord: false });
@@ -40154,7 +40172,7 @@ window.addEventListener("load", () => {
    MUH050216 sourcebook is not present in the supplied source corpus. */
 window.INFINITY_BUILD = "v78-panoceania-gear-reconciliation";
 
-/* V78: PanOceania Chapter 5 gear reconciliation — 54 source-backed records from MUH050224. */
+/* V78: PanOceania Chapter 5 gear reconciliation — 54 source-backed records from MUH050224; source QA corrections applied. */
 </script>
 
 <script>
