@@ -4903,7 +4903,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v79-core-equipment-provenance-audit";
+  document.documentElement.dataset.infinityBuild = "v80-vehicle-tag-workshop";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -4979,7 +4979,7 @@ window.addEventListener("load", () => {
    complete Corebook Lifepath: unsupported dice, contacts, talents and earned gear choices
    remain explicitly manual. All generated numeric bonuses are derived from a saved ledger. */
 (function installO12LifepathV74() {
-  const NEW_BUILD = "v79-core-equipment-provenance-audit";
+  const NEW_BUILD = "v80-vehicle-tag-workshop";
   const careerSources = DATA.o12Reference?.careerProfiles || {};
   const o12Source = DATA.o12Reference || {};
   const defaultLedger = () => ({ version: 74, lifePoints: 5, otherSpent: 0, phases: [], adolescent: null, pillar: null, criminalRecord: false });
@@ -5980,6 +5980,387 @@ window.addEventListener("load", () => {
 /* V77 Mercenaries / NA2 source scaffold retained.
    The temporary War Market foundation panel was removed because the complete
    MUH050216 sourcebook is not present in the supplied source corpus. */
-window.INFINITY_BUILD = "v79-core-equipment-provenance-audit";
+window.INFINITY_BUILD = "v80-vehicle-tag-workshop";
 
 /* V79: Core Equipment provenance audit — 141 named acquisitions verified; 42 related only; 78 unresolved pending further sources. */
+
+/* V80 — Vehicle / TAG Workshop; Chapter 11 of the Gamemaster's Guide. */
+(function vehicleTagWorkshopV80() {
+  "use strict";
+  const SOURCE = DATA.vehicleWorkshop || {};
+  if (!Array.isArray(SOURCE.upgrades)) return;
+  const MAX = Number(SOURCE.maxGarage) || 6;
+  const CATEGORIES = SOURCE.hardpointCategories || ["Chassis","Comms","External","Internal","Motive","Weapons"];
+  const catalog = (DATA.equipment || []).filter(item => item.type === "Vehicle")
+    .sort((a, b) => String(a.name).localeCompare(String(b.name), undefined, {sensitivity:"base"}));
+  const catalogueByName = new Map(catalog.map(item => [item.name, item]));
+  const upgradesByName = new Map(SOURCE.upgrades.map(item => [item.name, item]));
+  const get = id => document.getElementById(id);
+  const narrow = (value, length = 250) => String(value == null ? "" : value).slice(0, length);
+  let garage = [];
+  let selectedId = "";
+  let lastMessage = "Vehicles and TAGs live here, separate from personal Weapons and Equipment.";
+  function itemFor(record) { return catalogueByName.get(record?.name) || null; }
+  function selected() { return garage.find(row => row.id === selectedId) || null; }
+  function profileFor(item) {
+    const p = SOURCE.profiles?.[item?.name];
+    if (p) return p;
+    // Legacy faction catalogue entries may only contain partial narrative stats.
+    const text = String(item?.mechanic || "");
+    const numeric = field => {
+      const re = new RegExp("\\b" + field + "\\s*[:=]?\\s*([\\dXx+\\-/−]+(?:\\s*\\([+\\d]+\\))?)", "i");
+      return re.exec(text)?.[1] || "—";
+    };
+    return {
+      types: item?.subtype || "Vehicle",
+      scale: numeric("Scale"), speed: numeric("Speed"), brawn: numeric("Brawn"),
+      structure: numeric("Structure"), firewall: numeric("Firewall"),
+      armour: numeric("Armour"), bts: numeric("BTS"),
+      passengers: numeric("Passengers"), impact: numeric("Impact"),
+      hardpoints: null, gear: "", weapons: "", special: ""
+    };
+  }
+  function capacityFor(record) {
+    const hp = profileFor(itemFor(record)).hardpoints;
+    return hp === null || hp === undefined ? null : hp;
+  }
+  function normalize(raw) {
+    if (!raw || typeof raw !== "object" || !catalogueByName.has(raw.name)) return null;
+    const p = profileFor(catalogueByName.get(raw.name));
+    const structureBase = Number.parseInt(String(p.structure ?? ""), 10);
+    const structure = Number.parseInt(String(raw.currentStructure ?? ""), 10);
+    const installs = Array.isArray(raw.upgrades) ? raw.upgrades.slice(0, 24)
+      .filter(name => typeof name === "string" && upgradesByName.has(name)) : [];
+    const slots = p.hardpoints;
+    const used = {};
+    const valid = [];
+    for (const name of installs) {
+      const cat = upgradesByName.get(name).category;
+      used[cat] = (used[cat] || 0) + 1;
+      if (slots && used[cat] <= (Number(slots[cat]) || 0)) valid.push(name);
+    }
+    return {
+      id: narrow(raw.id || ("vehicle-" + String(Date.now()) + "-" + String(Math.random()).slice(2)), 90),
+      name: raw.name,
+      nickname: narrow(raw.nickname, 90),
+      pilot: narrow(raw.pilot, 120),
+      currentStructure: Number.isInteger(structure) && structure >= 0 && structure <= 999
+        ? structure : (Number.isInteger(structureBase) ? structureBase : null),
+      notes: narrow(raw.notes, 1200),
+      upgrades: valid
+    };
+  }
+  function restore(raw) {
+    let parsed = raw;
+    if (typeof raw === "string") {
+      try { parsed = JSON.parse(raw); } catch { parsed = []; }
+    }
+    if (!Array.isArray(parsed)) return [];
+    const seen = new Set();
+    return parsed.slice(0, MAX).map(normalize).filter(row => {
+      if (!row || seen.has(row.id)) return false;
+      seen.add(row.id); return true;
+    });
+  }
+  function persist(message) {
+    if (message) lastMessage = message;
+    if (typeof scheduleAutosave === "function") scheduleAutosave();
+    const status = get("v80Status");
+    if (status) status.textContent = lastMessage;
+  }
+  function option(select, value, label) {
+    const opt = document.createElement("option");
+    opt.value = value; opt.textContent = label; select.appendChild(opt);
+  }
+  function catalogGroup(item) {
+    const p = profileFor(item);
+    const tags = (String(p.types || "") + " " + item.subtype + " " + item.name).toLowerCase();
+    if (tags.includes("tag")) return "TAG";
+    if (tags.includes("aircraft") || tags.includes("convertiplane")) return "Aircraft";
+    if (tags.includes("watercraft") || tags.includes("submersible") || tags.includes("skimmer")) return "Watercraft";
+    return "Ground / Other";
+  }
+  function refreshCatalogue() {
+    const list = get("v80Catalog");
+    if (!list) return;
+    const current = list.value;
+    const term = get("v80Search").value.trim().toLowerCase();
+    const group = get("v80Filter").value;
+    const filtered = catalog.filter(item =>
+      (group === "All" || catalogGroup(item) === group) &&
+      (!term || [item.name, item.subtype, item.brief, item.mechanic, item.source].join(" ").toLowerCase().includes(term)));
+    list.textContent = "";
+    for (const item of filtered) option(list, item.name, item.name + " — " + catalogGroup(item));
+    if (filtered.some(item => item.name === current)) list.value = current;
+    get("v80CatalogCount").textContent = filtered.length + " matching vehicles/TAGs; " + garage.length + "/" + MAX + " in this garage.";
+    renderCatalogDetail();
+  }
+  function formatProfile(item) {
+    if (!item) return "Select a vehicle or TAG to inspect its source profile.";
+    const p = profileFor(item), parts = [
+      item.name + " — " + (item.subtype || "Vehicle"),
+      "Source: " + (item.source || "Unverified") + (item.sourcePage ? ", p. " + item.sourcePage : ""),
+      "Acquisition: Restriction " + (item.sourceRestriction || "—") +
+        " | Cost " + (item.cost || "—") + " | Tariff " + (item.tariff || "—"),
+      "Types: " + (p.types || "—"),
+      "Scale " + (p.scale ?? "—") + " | Speed " + (p.speed ?? "—") + " | Brawn " + (p.brawn ?? "—"),
+      "Structure " + (p.structure ?? "—") + " | Firewall " + (p.firewall ?? "—") +
+        " | Armour " + (p.armour ?? "—") + " | BTS " + (p.bts ?? "—"),
+      "Passengers " + (p.passengers ?? "—") + " | Impact " + (p.impact ?? "—"),
+      "Available hardpoints: " + (p.hardpoints == null ? "Not listed / requires GM verification" :
+        CATEGORIES.map(c => c + " " + (p.hardpoints[c] || 0)).join(" · ")),
+      p.gear ? "Built-in gear: " + p.gear : "",
+      p.weapons ? "Mounted weapons: " + p.weapons : "",
+      p.special ? "Special: " + p.special : "",
+      "Rules / abilities: " + (item.mechanic || item.brief || "No complete profile recorded")
+    ];
+    return parts.filter(Boolean).join("\n");
+  }
+  function renderCatalogDetail() {
+    const item = catalogueByName.get(get("v80Catalog")?.value || "");
+    const out = get("v80CatalogDetail");
+    if (out) out.textContent = formatProfile(item);
+    const add = get("v80AddVehicle");
+    if (add) add.disabled = !item || garage.length >= MAX;
+  }
+  function refreshRoster() {
+    const list = get("v80Roster");
+    if (!list) return;
+    list.textContent = "";
+    garage.forEach(row => option(list, row.id, (row.nickname ? row.nickname + " — " : "") + row.name));
+    if (!garage.some(row => row.id === selectedId)) selectedId = garage[0]?.id || "";
+    list.value = selectedId;
+    renderGarageDetail();
+    refreshCatalogue();
+  }
+  function renderGarageDetail() {
+    const vehicle = selected(), item = itemFor(vehicle);
+    const info = get("v80OwnedProfile");
+    const on = !!vehicle;
+    for (const id of ["v80Nickname","v80Pilot","v80Structure","v80Notes","v80UpgradeCategory","v80Upgrade",
+      "v80Install","v80RemoveVehicle","v80Download"]) {
+      if (get(id)) get(id).disabled = !on;
+    }
+    if (!on) {
+      if (info) info.textContent = "No vehicle assigned. Choose an entry above and add it to this character's garage.";
+      ["v80Nickname","v80Pilot","v80Structure","v80Notes"].forEach(id => { if (get(id)) get(id).value = ""; });
+      get("v80Installed").textContent = ""; return;
+    }
+    const p = profileFor(item);
+    info.textContent = formatProfile(item);
+    get("v80Nickname").value = vehicle.nickname;
+    get("v80Pilot").value = vehicle.pilot;
+    get("v80Structure").value = vehicle.currentStructure ?? "";
+    get("v80Notes").value = vehicle.notes;
+    get("v80Structure").placeholder = String(p.structure ?? "Unspecified");
+    const capacity = capacityFor(vehicle);
+    const used = {};
+    vehicle.upgrades.forEach(name => { const category = upgradesByName.get(name)?.category; if (category) used[category] = (used[category] || 0) + 1; });
+    get("v80Hardpoints").textContent = capacity === null
+      ? "Hardpoint limits not listed: installation locked pending GM/source verification."
+      : CATEGORIES.map(cat => cat + " " + (used[cat] || 0) + "/" + (capacity[cat] || 0)).join("  |  ");
+    const installed = get("v80Installed");
+    installed.textContent = "";
+    vehicle.upgrades.forEach((name, i) => {
+      const meta = upgradesByName.get(name);
+      const row = document.createElement("li");
+      const label = document.createElement("span");
+      label.textContent = name + " [" + meta.category + "; " + meta.cost + "; " + meta.tariff + "] ";
+      const remove = document.createElement("button");
+      remove.type = "button"; remove.textContent = "Remove"; remove.setAttribute("aria-label", "Remove " + name);
+      remove.addEventListener("click", () => {
+        vehicle.upgrades.splice(i, 1); persist("Removed " + name + " from this vehicle."); renderGarageDetail();
+      });
+      row.append(label, remove); installed.appendChild(row);
+    });
+    refreshUpgrades();
+    get("v80RemoveVehicle").disabled = false;
+    get("v80Download").disabled = false;
+  }
+  function refreshUpgrades() {
+    const vehicle = selected(), list = get("v80Upgrade"), add = get("v80Install");
+    if (!list) return;
+    const previous = list.value, category = get("v80UpgradeCategory").value;
+    list.textContent = "";
+    SOURCE.upgrades.filter(x => x.category === category).forEach(up => option(list, up.name,
+      up.name + " (R " + up.restriction + "; " + up.cost + "; " + up.tariff + ")"));
+    if ([...list.options].some(opt => opt.value === previous)) list.value = previous;
+    const capacity = vehicle ? capacityFor(vehicle) : null;
+    const used = vehicle?.upgrades.filter(name => upgradesByName.get(name)?.category === category).length || 0;
+    add.disabled = !vehicle || !list.value || !capacity || used >= (Number(capacity[category]) || 0);
+    get("v80UpgradeRule").textContent = !vehicle ? "Choose a vehicle first." :
+      capacity == null ? "Hardpoints not recorded. Do not invent capacity; seek GM/source verification." :
+      "Available " + category + ": " + used + "/" + (capacity[category] || 0) +
+      ". Installed upgrades take one free hardpoint each. Effects/compatibility require GM review.";
+  }
+  function downloadDossier() {
+    const vehicle = selected(), item = itemFor(vehicle);
+    if (!item) return;
+    const content = [
+      "INFINITY 2D20 — VEHICLE / TAG DOSSIER",
+      "Character: " + (typeof currentCharacterName === "function" ? currentCharacterName() : "Unknown"),
+      formatProfile(item),
+      "Assigned name: " + vehicle.nickname,
+      "Pilot / owner: " + vehicle.pilot,
+      "Current Structure: " + (vehicle.currentStructure ?? "Not tracked"),
+      "Installed upgrades: " + (vehicle.upgrades.join(", ") || "None"),
+      "Notes: " + vehicle.notes,
+      "Customisation rules: " + SOURCE.source + ", Chapter 11, pp. 135–142"
+    ].join("\n\n");
+    const url = URL.createObjectURL(new Blob([content], {type:"text/plain;charset=utf-8"}));
+    const a = document.createElement("a"); a.href = url;
+    a.download = "vehicle-dossier-" + vehicle.name.toLowerCase().replace(/[^a-z0-9]+/g,"-") + ".txt";
+    document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    lastMessage = "Vehicle dossier exported.";
+    get("v80Status").textContent = lastMessage;
+  }
+  function init() {
+    if (get("v80VehicleWorkshop")) return;
+    const table = get("equipmentTable");
+    if (!table) return;
+    const section = document.createElement("section");
+    section.id = "v80VehicleWorkshop"; section.className = "panel no-print";
+    section.innerHTML = '<details open><summary><strong>Vehicle / TAG Workshop (V80)</strong> — separate garage, source profiles & hardpoint upgrades</summary>' +
+      '<p class="v80-small">Vehicles, TAGs and aircraft do not occupy your five Weapon or ten Equipment slots. This garage stores up to six individual vehicles. Chapter 11, <em>Gamemaster’s Guide</em>, pp. 123–144; costs and upgrade restrictions are official 2d20 values, not converted credits.</p>' +
+      '<div class="v80-columns"><div><label>Vehicle type<select id="v80Filter"><option>All</option><option>TAG</option><option>Aircraft</option><option>Watercraft</option><option>Ground / Other</option></select></label>' +
+      '<label>Search vehicle catalogue<input type="search" id="v80Search" placeholder="TAG, transport, source, faction"></label>' +
+      '<label>Available vehicles<select id="v80Catalog" size="8" aria-label="Vehicle catalogue"></select></label>' +
+      '<p id="v80CatalogCount" class="v80-small"></p><button type="button" id="v80AddVehicle">Add vehicle to garage</button></div>' +
+      '<div><h4>Source-backed vehicle profile</h4><pre id="v80CatalogDetail" class="v80-profile"></pre></div></div>' +
+      '<h4>Garage — assigned vehicles / TAGs</h4><div class="v80-columns"><div><label>Owned / assigned vehicles<select id="v80Roster" size="5" aria-label="Garage vehicles"></select></label>' +
+      '<label>Vehicle nickname / callsign<input id="v80Nickname" maxlength="90"></label>' +
+      '<label>Owner / pilot / operator<input id="v80Pilot" maxlength="120"></label>' +
+      '<label>Current Structure<input id="v80Structure" type="number" min="0" max="999" step="1"></label>' +
+      '<label>Operational and GM notes<textarea id="v80Notes" rows="3" maxlength="1200"></textarea></label>' +
+      '<button type="button" id="v80RemoveVehicle">Remove selected vehicle</button> ' +
+      '<button type="button" id="v80Download">Export vehicle dossier (.txt)</button></div>' +
+      '<div><h4>Assigned vehicle & hardpoint ledger</h4><pre id="v80OwnedProfile" class="v80-profile"></pre>' +
+      '<p id="v80Hardpoints" class="v80-small"></p>' +
+      '<div class="v80-columns"><label>Hardpoint category<select id="v80UpgradeCategory"></select></label>' +
+      '<label>Chapter 11 upgrade<select id="v80Upgrade"></select></label></div>' +
+      '<button type="button" id="v80Install">Install upgrade in free hardpoint</button>' +
+      '<p id="v80UpgradeRule" class="v80-small"></p><ul id="v80Installed" class="v80-installed"></ul></div></div>' +
+      '<details><summary>Vehicle operations, faults & upgrades — GM Guide Chapter 11</summary>' +
+      '<ul class="v80-small"><li>Vehicle Type controls terrain eligibility and passenger exposure.</li>' +
+      '<li>Evasive Action is a pilot Reaction; its Difficulty rises with vehicle Scale.</li>' +
+      '<li>Fault threshold is physical damage of 5 + Scale, or Structure reduced to zero.</li>' +
+      '<li>Available hardpoints are Chassis, Comms, External, Internal, Motive and Weapons. Default pre-installed equipment does not consume listed free hardpoints.</li>' +
+      '<li>Vehicle-mounted weapons and TAG-held weapons are distinct; installation is a bookkeeping record, not automatic character damage/Armour recalculation.</li>' +
+      '<li>Some older faction catalogue entries lack complete stat blocks or hardpoint lists. Blank/unknown values remain unverified; GM approval is required before fitting upgrades.</li></ul></details>' +
+      '<p id="v80Status" role="status" class="v80-small"></p></details>';
+    const anchor = get("v75TechnologyWorkshop") || table.closest(".table-wrap") || table;
+    anchor.insertAdjacentElement("afterend", section);
+    const style = document.createElement("style");
+    style.id = "v80VehicleStyles";
+    style.textContent = '#v80VehicleWorkshop{margin:.65rem 0;padding:.85rem;border:1px solid #88a4b7;border-radius:8px}' +
+      '#v80VehicleWorkshop summary{cursor:pointer;font-weight:700}' +
+      '#v80VehicleWorkshop .v80-small{font:12px/1.45 Arial,sans-serif}' +
+      '#v80VehicleWorkshop .v80-columns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}' +
+      '#v80VehicleWorkshop label{display:flex;flex-direction:column;gap:4px;margin:7px 0;font-size:12px}' +
+      '#v80VehicleWorkshop input,#v80VehicleWorkshop select,#v80VehicleWorkshop textarea{width:100%;box-sizing:border-box;min-height:32px}' +
+      '#v80VehicleWorkshop select[size]{height:auto;min-height:110px}' +
+      '#v80VehicleWorkshop .v80-profile{white-space:pre-wrap;overflow-wrap:anywhere;max-height:300px;overflow:auto;border:1px solid #b5c6d0;padding:8px;font:12px/1.45 Arial,sans-serif}' +
+      '#v80VehicleWorkshop button{padding:7px 10px;margin:3px;cursor:pointer}' +
+      '#v80VehicleWorkshop .v80-installed li{margin:6px 0}' +
+      '@media(max-width:760px){#v80VehicleWorkshop .v80-columns{grid-template-columns:1fr}}';
+    document.head.appendChild(style);
+    CATEGORIES.forEach(cat => option(get("v80UpgradeCategory"), cat, cat));
+    get("v80Filter").addEventListener("change", refreshCatalogue);
+    get("v80Search").addEventListener("input", refreshCatalogue);
+    get("v80Catalog").addEventListener("change", renderCatalogDetail);
+    get("v80Roster").addEventListener("change", () => {
+      selectedId = get("v80Roster").value; renderGarageDetail();
+    });
+    get("v80AddVehicle").addEventListener("click", () => {
+      const name = get("v80Catalog").value;
+      if (!catalogueByName.has(name) || garage.length >= MAX) return;
+      const next = normalize({name});
+      if (!next) return;
+      garage.push(next); selectedId = next.id;
+      persist("Added " + name + " to the vehicle garage; no personal Equipment slot used.");
+      refreshRoster();
+    });
+    get("v80RemoveVehicle").addEventListener("click", () => {
+      const row = selected(); if (!row) return;
+      if (!confirm("Remove " + (row.nickname || row.name) + " from this character's garage?")) return;
+      garage = garage.filter(x => x.id !== row.id);
+      selectedId = garage[0]?.id || "";
+      persist("Removed vehicle from garage.");
+      refreshRoster();
+    });
+    for (const [id,field] of [["v80Nickname","nickname"],["v80Pilot","pilot"],["v80Notes","notes"]]) {
+      get(id).addEventListener("input", () => {
+        const row = selected(); if (!row) return;
+        row[field] = narrow(get(id).value, field==="notes"?1200:field==="nickname"?90:120);
+        if (field==="nickname") {
+          const option = [...get("v80Roster").options].find(x => x.value === row.id);
+          if (option) option.textContent = (row.nickname ? row.nickname + " — " : "") + row.name;
+        }
+        persist("Vehicle record updated.");
+      });
+    }
+    get("v80Structure").addEventListener("input", () => {
+      const row = selected(); if (!row) return;
+      const raw = get("v80Structure").value;
+      const n = Number(raw);
+      if (!raw) row.currentStructure = null;
+      else if (Number.isInteger(n) && n >= 0 && n <= 999) row.currentStructure = n;
+      persist("Current vehicle Structure saved.");
+    });
+    get("v80UpgradeCategory").addEventListener("change", refreshUpgrades);
+    get("v80Upgrade").addEventListener("change", refreshUpgrades);
+    get("v80Install").addEventListener("click", () => {
+      const row = selected(), name = get("v80Upgrade").value, up = upgradesByName.get(name);
+      if (!row || !up) return;
+      const caps = capacityFor(row);
+      const used = row.upgrades.filter(s => upgradesByName.get(s)?.category === up.category).length;
+      if (!caps || used >= (Number(caps[up.category]) || 0)) {
+        persist("No verified free " + up.category + " hardpoint. No upgrade was installed.");
+        return;
+      }
+      row.upgrades.push(name);
+      persist("Recorded " + name + " on " + row.name + "; apply mechanics only after GM review.");
+      renderGarageDetail();
+    });
+    get("v80Download").addEventListener("click", downloadDossier);
+    refreshCatalogue(); refreshRoster();
+    get("v80Status").textContent = lastMessage;
+  }
+  const previousCollect = collectState;
+  collectState = function() {
+    const state = previousCollect();
+    state.vehicleWorkshopJson = JSON.stringify(garage);
+    return state;
+  };
+  const previousApply = applyState;
+  applyState = function(raw) {
+    garage = [];
+    selectedId = "";
+    previousApply(raw);
+    garage = restore(raw?.vehicleWorkshopJson);
+    // Migrate old saves containing vehicle names in legacy Equipment slots.
+    for (const name of (Array.isArray(raw?.equipment) ? raw.equipment : [])) {
+      if (catalogueByName.has(name) && garage.length < MAX && !garage.some(r => r.name === name)) {
+        garage.push(normalize({name}));
+      }
+    }
+    if (get("v80VehicleWorkshop")) refreshRoster();
+  };
+  const priorRandom = randomCharacter;
+  randomCharacter = function() { garage = []; selectedId = ""; priorRandom(); if (get("v80VehicleWorkshop")) refreshRoster(); };
+  const priorBeginner = randomBeginnerCharacter;
+  randomBeginnerCharacter = function() { garage = []; selectedId = ""; priorBeginner(); if (get("v80VehicleWorkshop")) refreshRoster(); };
+  const priorSupplement = printSupplementContent;
+  printSupplementContent = function() {
+    const content = priorSupplement();
+    if (garage.length) {
+      content.notes.push(["Vehicle / TAG Garage",
+        garage.map(row => (row.nickname || row.name) + " [" + row.name + "; " +
+          (row.currentStructure ?? "—") + " Structure; " + row.upgrades.length + " upgrades]").join("; ")]);
+    }
+    return content;
+  };
+  window.INFINITY_BUILD = "v80-vehicle-tag-workshop";
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+})();
