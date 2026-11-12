@@ -95,7 +95,7 @@ test('03 TAGs cannot silently gain unlisted hardpoints; dossier downloads',async
   const f=await download.path();
   const txt=fs.readFileSync(f,'utf8');
   expect(txt).toContain('Cutter TAG');
-  expect(txt).toContain('Hard Points');
+  expect(txt).toContain('Available hardpoints');
 });
 
 test('04 export/import XML roundtrip preserves garage',async({page})=>{
@@ -109,8 +109,9 @@ test('04 export/import XML roundtrip preserves garage',async({page})=>{
   const xml=fs.readFileSync(await dl.path(),'utf8');
   expect(xml).toContain('vehicleWorkshopJson');
   expect(xml).toContain('XML Runner');
-  await page.locator('#v80RemoveVehicle').click({noWaitAfter:true});
-  // App asks for removal confirmation.
+  page.once('dialog', dialog => dialog.accept());
+  await page.locator('#v80RemoveVehicle').click();
+  await expect(page.locator('#v80Roster option')).toHaveCount(0);
   await page.locator('#importXmlFile').setInputFiles({name:'qa-v80.xml',mimeType:'application/xml',buffer:Buffer.from(xml)});
   await expect(page.locator('#v80Roster option')).toHaveCount(1);
   await expect(page.locator('#v80Nickname')).toHaveValue('XML Runner');
