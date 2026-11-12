@@ -228,12 +228,12 @@ test('J previously generated character gear labels migrate on load',async({page}
   await openSheet(page);
   await page.evaluate(()=>{
     const previous=collectState();
-    previous.weapons=['rifles - Sniper (BS)','smoke bomb (BS)','','',''];
-    previous.equipment=['Military rations','Medikit','','','','','','','',''];
+    previous.weapons=['rifles - Sniper (BS)','','','',''];
+    previous.equipment=['Military rations','Medikit','smoke bomb (BS)','','','','','','',''];
     applyState(previous);
   });
   await expect(page.locator('select[data-weapon-select="0"]')).toHaveValue('Sniper Rifle (BS)');
-  await expect(page.locator('select[data-weapon-select="1"]')).toHaveValue('Smoke Bomb (BS)');
+  await expect(page.locator('select[data-equipment-select="2"]')).toHaveValue('Smoke Bomb (BS)');
   await expect(page.locator('select[data-equipment-select="0"]')).toHaveValue('Military Rations');
   await expect(page.locator('select[data-equipment-select="1"]')).toHaveValue('MediKit');
 });

@@ -1623,7 +1623,7 @@ function applyState(rawState) {
   };
   // Earlier starter portfolios contained noncanonical gear labels; migrate those
   // saved weapon entries rather than manufacturing phantom dropdown options.
-  const legacyStarterWeaponAliases = { "rifles - Sniper (BS)": "Sniper Rifle (BS)", "smoke bomb (BS)": "Smoke Bomb (BS)" };
+  const legacyStarterWeaponAliases = { "rifles - Sniper (BS)": "Sniper Rifle (BS)" };
   (state.weapons || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-weapon-select="${i}"]`);
     const equipmentAlias = legacyWeaponToEquipment[v];
@@ -1639,7 +1639,8 @@ function applyState(rawState) {
     "360* Visor": "360° Visor",
     "X Visor": "X-Visor",
     "Military rations": "Military Rations",
-    "Medikit": "MediKit"
+    "Medikit": "MediKit",
+    "smoke bomb (BS)": "Smoke Bomb (BS)"
   };
   const equipmentValues = (state.equipment || []).map(v => legacyEquipmentAliases[v] || v);
   migratedWeaponEquipment.forEach(migration => {
