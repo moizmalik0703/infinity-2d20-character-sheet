@@ -222,6 +222,11 @@ test('I every built-in starter template uses actual canonical catalogue names',a
       .map(name=>({template:template.name,name})));
   });
   expect(invalid,JSON.stringify(invalid)).toEqual([]);
+  const invalidOrigins=await page.evaluate(()=>STARTER_PORTFOLIOS
+    .filter(template=>!DATA.lists.factions.includes(template.faction) ||
+      !homeworldsForFaction(template.faction).includes(template.homeworld))
+    .map(template=>({name:template.name,faction:template.faction,homeworld:template.homeworld})));
+  expect(invalidOrigins,JSON.stringify(invalidOrigins)).toEqual([]);
 });
 
 test('J previously generated character gear labels migrate on load',async({page})=>{

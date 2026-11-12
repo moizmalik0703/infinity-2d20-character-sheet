@@ -1697,7 +1697,7 @@ const STARTER_PORTFOLIOS = [
   {
     name: "Nika 'Needle' Proxy-17", faction: "ALEPH", talentFaction: "ALEPH",
     doctrine: "Posthuman Proxy Program", career: "ALEPH Prestige",
-    homeworld: "Maya / ALEPH facilities", concept: "ALEPH Prestige from Posthuman Proxy Program",
+    homeworld: "Maya", concept: "ALEPH Prestige from Posthuman Proxy Program",
     restriction: "ALEPH access or Posthuman background",
     trait: "Sensor Evader", talent: "Enhanced Reflexes",
     weapons: ["Assault Rifle - EMT (BS)", "Assault Rifle - Viral (BS)"],
@@ -1706,7 +1706,7 @@ const STARTER_PORTFOLIOS = [
   {
     name: "Pavel 'Rook' Mirov", faction: "Nomads", talentFaction: "Nomads",
     doctrine: "Tunguska Interventor Program", career: "Hacker",
-    homeworld: "Nomad motherships", concept: "Nomad Hacker from Tunguska Interventor Program",
+    homeworld: "Tunguska", concept: "Nomad Hacker from Tunguska Interventor Program",
     restriction: "Nomad or advanced Hacking background",
     trait: "Empathic", talent: "System Cracker",
     weapons: ["Assault Rifle - Viral (BS)", "Boarding Shotgun (BS)"],
@@ -1724,7 +1724,7 @@ const STARTER_PORTFOLIOS = [
   {
     name: "Isabella 'Kite' Vega", faction: "PanOceania", talentFaction: "PanOceania",
     doctrine: "Fusilier Fireteam Doctrine", career: "Line Infantry",
-    homeworld: "Neoterra or Varuna", concept: "PanOceania Line Infantry from Fusilier Fireteam Doctrine",
+    homeworld: "Neoterra", concept: "PanOceania Line Infantry from Fusilier Fireteam Doctrine",
     restriction: "Military or security background",
     trait: "Duelist", talent: "Fireteam: Duo",
     weapons: ["Sniper Rifle (BS)", "Assault Rifle - Shock (BS)"],
@@ -1733,16 +1733,16 @@ const STARTER_PORTFOLIOS = [
   {
     name: "Reina 'Sable' Sato", faction: "Japanese Secessionist Army", talentFaction: "Japanese Secessionist Army",
     doctrine: "Japanese Secessionist Tech Cell", career: "Engineer",
-    homeworld: "Japanese territories", concept: "Japanese Secessionist Army Engineer from Japanese Secessionist Tech Cell",
+    homeworld: "Japanese-held territories", concept: "Japanese Secessionist Army Engineer from Japanese Secessionist Tech Cell",
     restriction: "JSA, engineer, or battlefield support background",
     trait: "Escape Artist", talent: "Field Technician",
     weapons: ["Pump Action Shotgun (CC / BS)", "Boarding Shotgun (BS)"],
     equipment: ["Net", "Soldering Kit", "Shovel", "Military Rations", "Foldable bicycle"]
   },
   {
-    name: "Sasha 'Signal' Wire", faction: "O-12 / Nomads", talentFaction: "O-12 / Nomads",
+    name: "Sasha 'Signal' Wire", faction: "O-12 / Nomads - Circular Crew", talentFaction: "O-12 / Nomads",
     doctrine: "Circular Crew Operations", career: "Voidfarer",
-    homeworld: "Circulars and classified stations", concept: "O-12 / Nomads Voidfarer from Circular Crew Operations",
+    homeworld: "Circulars", concept: "O-12 / Nomads Voidfarer from Circular Crew Operations",
     restriction: "Extraplanetary or shipboard operations background",
     trait: "Speed Typing", talent: "Spacecraft Pilot - Level 1",
     weapons: ["Assault Rifle - Viral (BS)", "Sniper Rifle (BS)"],
@@ -1760,7 +1760,7 @@ const STARTER_PORTFOLIOS = [
   {
     name: "Brigid 'Needle' Wallace", faction: "Ariadna", talentFaction: "Ariadna",
     doctrine: "Ariadna Ranger Doctrine", career: "Recon",
-    homeworld: "Dawn frontier", concept: "Ariadna Recon from Ariadna Ranger Doctrine",
+    homeworld: "Dawn", concept: "Ariadna Recon from Ariadna Ranger Doctrine",
     restriction: "Ariadna or frontier survival background",
     trait: "Imposing Figure", talent: "Wilderness Training",
     weapons: ["Dagger (CC)", "Pistol (Normal)"],
@@ -1769,16 +1769,16 @@ const STARTER_PORTFOLIOS = [
   {
     name: "Tala 'Lockstep' Rafiq", faction: "NA2 / Mercenaries", talentFaction: "NA2",
     doctrine: "Druze Bayram Security Contractor", career: "Smuggler",
-    homeworld: "Mercenary caravanserai", concept: "NA2 Smuggler from Druze Bayram Security Contractor",
+    homeworld: "caravanserai", concept: "NA2 Smuggler from Druze Bayram Security Contractor",
     restriction: "Mercenary, criminal, or trade-route background",
     trait: "Silver Tongue", talent: "Thief - Pickpocket",
     weapons: ["Boarding Shotgun (BS)", "Pump Action Shotgun (CC / BS)"],
     equipment: ["Torch Light", "Parachute", "Smoke Bomb (BS)", "Caltrops", "Backpack"]
   },
   {
-    name: "Tao 'Needle' Fernandes", faction: "PanOceania / Yu Jing", talentFaction: "PanOceania / Yu Jing",
+    name: "Tao 'Needle' Fernandes", faction: "PanOceania", talentFaction: "PanOceania / Yu Jing",
     doctrine: "Svalarheima Mountain Recon", career: "Recon",
-    homeworld: "Svalarheima border theatres", concept: "PanOceania / Yu Jing Recon from Svalarheima Mountain Recon",
+    homeworld: "Svalarheima", concept: "PanOceania / Yu Jing Recon from Svalarheima Mountain Recon",
     restriction: "Cold-weather or mountain operations background",
     trait: "Bureaucrat", talent: "Rock Climber",
     weapons: ["Pump Action Shotgun (CC / BS)", "Pistol (Normal)"],

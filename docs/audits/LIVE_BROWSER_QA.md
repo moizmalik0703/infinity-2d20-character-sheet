@@ -24,3 +24,8 @@ Build V80; 37 vehicles, 50 Chapter 11 upgrades; five Weapon slots and ten Equipm
 - Initial run found 4 defects: manual Focus summary stale; notes leaked into a new sheet; random selection chose non-automating sourcebook armour, resulting in 0 Armour; four stale starter-template gear labels not in the catalogue.
 - Fixes: live Focus summary event handler plus load refresh; clear gear and condition notes on confirmed New; restrict random generated armour to usable 5/10/15 loadout entries; standardise starter equipment names and migrate previous misspellings on load.
 - Eight-scenario sweep is retained in `tests/e2e/character-creation.spec.cjs` alongside the existing seven tests. Two more regression cases assert canonical starter names and legacy migration.
+
+## Additional starter-origin correction
+- Initial post-fix live test found a randomly selected starter (Tao 'Needle' Fernandes) with an invalid `PanOceania / Yu Jing` faction/homeworld pairing. Template audit uncovered several other shorthand origin labels.
+- Ten starter templates now choose canonical faction IDs and valid listed habitats/worlds (e.g., `O-12 / Nomads - Circular Crew` + `Circulars`; `PanOceania` + `Svalarheima`). No new source-world names were invented.
+- A deterministic audit now tests every starter template's canonical gear, faction and homeworld, not just a random subset.
