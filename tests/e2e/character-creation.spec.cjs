@@ -75,7 +75,6 @@ test('B manual focus allocation produces a visible, current summary',async({page
 });
 
 test('C changing faction clears incompatible homeworld; saves require a valid pairing',async({page})=>{
-  autoDialogs(page);
   await openSheet(page);
   await page.locator('input[data-field="characterName"]').fill('QA-FACTION-CHANGE');
   await page.locator('select[data-field="faction"]').selectOption('PanOceania');
