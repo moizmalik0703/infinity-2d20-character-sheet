@@ -2309,6 +2309,11 @@ function stateHasAutosaveContent(state) {
   if (Object.values(state.skillNotes || {}).some(Boolean)) return true;
   if (Object.values(state.focus || {}).some(Boolean)) return true;
   if (Object.values(state.mainSkills || {}).some(value => String(value) && String(value) !== "7")) return true;
+  // Vehicle-only characters also count as changed / saveable content.
+  try {
+    const vehicles = JSON.parse(state.vehicleWorkshopJson || "[]");
+    if (Array.isArray(vehicles) && vehicles.length > 0) return true;
+  } catch {}
   return false;
 }
 
@@ -2837,6 +2842,10 @@ function importCharacterXmlFile(file) {
 
 function newCharacterSheet() {
   if (!confirm("Start a new character sheet? Your current character has been autosaved in this browser.")) return;
+  // Save the outgoing character, then clear the independent V80 vehicle garage.
+  // A new sheet must never inherit another character's owned vehicles / TAGs.
+  flushPendingAutosave();
+  if (typeof window.resetVehicleGarageV80 === "function") window.resetVehicleGarageV80();
 
   autosaveSuppressed = true;
   try {
@@ -6350,6 +6359,12 @@ window.INFINITY_BUILD = "v80-vehicle-tag-workshop";
   randomCharacter = function() { garage = []; selectedId = ""; priorRandom(); if (get("v80VehicleWorkshop")) refreshRoster(); };
   const priorBeginner = randomBeginnerCharacter;
   randomBeginnerCharacter = function() { garage = []; selectedId = ""; priorBeginner(); if (get("v80VehicleWorkshop")) refreshRoster(); };
+  // Dedicated garage reset hook; invoked only after New Character is confirmed.
+  window.resetVehicleGarageV80 = function() {
+    garage = [];
+    selectedId = "";
+    if (get("v80VehicleWorkshop")) refreshRoster();
+  };
   const priorSupplement = printSupplementContent;
   printSupplementContent = function() {
     const content = priorSupplement();
