@@ -127,3 +127,14 @@ test('05 mobile viewport — garage controls fit and remain usable',async({page}
   await page.locator('#v80AddVehicle').click();
   await expect(page.locator('#v80Roster option')).toHaveCount(1);
 });
+
+test('06 new character starts with an empty vehicle garage, not the last character\'s assets',async({page})=>{
+  await openPortfolio(page);
+  await page.locator('input[data-field="characterName"]').fill('V80-QA-OLD-CHARACTER');
+  await addVehicle(page,'Car');
+  await expect(page.locator('#v80Roster option')).toHaveCount(1);
+  page.once('dialog',dialog=>dialog.accept());
+  await page.locator('#newSheetBtn').click();
+  await expect(page.locator('input[data-field="characterName"]')).toHaveValue('');
+  await expect(page.locator('#v80Roster option')).toHaveCount(0);
+});
