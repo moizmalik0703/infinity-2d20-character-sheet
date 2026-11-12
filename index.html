@@ -2595,7 +2595,7 @@ body.glossary-mode #glossaryBtn { background: #d9eaf7; }
       </div>
 
       <p class="rule">Main skills cannot use Focus. Change a main skill rating to update each sub-skill below it. Automatic Trait/Talent Rating bonuses apply only to named sub-skills; main skills never gain automatic Rating bonuses.</p>
-      <p id="focusAllocationStatus" class="filter-status">Generated Focus allocation: none.</p>
+      <p id="focusAllocationStatus" class="filter-status">Focus allocation: none.</p>
 
       <div class="skills-grid">
         <div class="table-wrap"><table id="skillsLeft"></table></div>
@@ -39784,7 +39784,11 @@ function buildSkillTable(tableId, skills) {
     body.appendChild(tr);
   });
   table.appendChild(body);
-  table.querySelectorAll("select[data-focus]").forEach(sel => makeOptions(sel, DATA.lists.focus, ""));
+  table.querySelectorAll("select[data-focus]").forEach(sel => {
+    makeOptions(sel, DATA.lists.focus, "");
+    // Manual character-build edits must keep the allocation summary current.
+    sel.addEventListener("change", updateFocusAllocationStatus);
+  });
 }
 
 function updateSkillRatings() {
@@ -40156,6 +40160,9 @@ function applyState(rawState) {
     "Palad Khik (BS)": "Palad Khik Ammo",
     "CrazyKoala Mine (BS)": "CrazyKoala Mine"
   };
+  // Earlier starter portfolios contained noncanonical gear labels; migrate those
+  // saved weapon entries rather than manufacturing phantom dropdown options.
+  const legacyStarterWeaponAliases = { "rifles - Sniper (BS)": "Sniper Rifle (BS)", "smoke bomb (BS)": "Smoke Bomb (BS)" };
   (state.weapons || []).forEach((v, i) => {
     const el = document.querySelector(`select[data-weapon-select="${i}"]`);
     const equipmentAlias = legacyWeaponToEquipment[v];
@@ -40164,12 +40171,14 @@ function applyState(rawState) {
       if (el) { el.value = ""; el.dispatchEvent(new Event("change")); }
       return;
     }
-    if (el) { el.value = v; el.dispatchEvent(new Event("change")); }
+    if (el) { el.value = legacyStarterWeaponAliases[v] || v; el.dispatchEvent(new Event("change")); }
   });
 
   const legacyEquipmentAliases = {
     "360* Visor": "360° Visor",
-    "X Visor": "X-Visor"
+    "X Visor": "X-Visor",
+    "Military rations": "Military Rations",
+    "Medikit": "MediKit"
   };
   const equipmentValues = (state.equipment || []).map(v => legacyEquipmentAliases[v] || v);
   migratedWeaponEquipment.forEach(migration => {
@@ -40214,6 +40223,7 @@ function applyState(rawState) {
   applyHostHeritageEffects({ recoverVigor: false });
   applyArmourFromEquipment();
   updateSkillRatings();
+  updateFocusAllocationStatus();
   syncDogfaceAutomation();
 }
 
@@ -40247,7 +40257,7 @@ const STARTER_PORTFOLIOS = [
     restriction: "Haqqislam or advanced Medicine background",
     trait: "Undercover Agent", talent: "Steady Scalpel",
     weapons: ["Pump Action Shotgun (CC / BS)", "Assault Rifle - Normal (BS)"],
-    equipment: ["Caltrops", "Parachute", "Climbing gear", "Military rations", "Binoculars"]
+    equipment: ["Caltrops", "Parachute", "Climbing gear", "Military Rations", "Binoculars"]
   },
   {
     name: "Isabella 'Kite' Vega", faction: "PanOceania", talentFaction: "PanOceania",
@@ -40255,8 +40265,8 @@ const STARTER_PORTFOLIOS = [
     homeworld: "Neoterra or Varuna", concept: "PanOceania Line Infantry from Fusilier Fireteam Doctrine",
     restriction: "Military or security background",
     trait: "Duelist", talent: "Fireteam: Duo",
-    weapons: ["rifles - Sniper (BS)", "Assault Rifle - Shock (BS)"],
-    equipment: ["Armour - Ballistic Vest", "Torch Light", "Shovel", "Medikit", "Climbing gear"]
+    weapons: ["Sniper Rifle (BS)", "Assault Rifle - Shock (BS)"],
+    equipment: ["Armour - Ballistic Vest", "Torch Light", "Shovel", "MediKit", "Climbing gear"]
   },
   {
     name: "Reina 'Sable' Sato", faction: "Japanese Secessionist Army", talentFaction: "Japanese Secessionist Army",
@@ -40265,7 +40275,7 @@ const STARTER_PORTFOLIOS = [
     restriction: "JSA, engineer, or battlefield support background",
     trait: "Escape Artist", talent: "Field Technician",
     weapons: ["Pump Action Shotgun (CC / BS)", "Boarding Shotgun (BS)"],
-    equipment: ["Net", "Soldering Kit", "Shovel", "Military rations", "Foldable bicycle"]
+    equipment: ["Net", "Soldering Kit", "Shovel", "Military Rations", "Foldable bicycle"]
   },
   {
     name: "Sasha 'Signal' Wire", faction: "O-12 / Nomads", talentFaction: "O-12 / Nomads",
@@ -40273,8 +40283,8 @@ const STARTER_PORTFOLIOS = [
     homeworld: "Circulars and classified stations", concept: "O-12 / Nomads Voidfarer from Circular Crew Operations",
     restriction: "Extraplanetary or shipboard operations background",
     trait: "Speed Typing", talent: "Spacecraft Pilot - Level 1",
-    weapons: ["Assault Rifle - Viral (BS)", "rifles - Sniper (BS)"],
-    equipment: ["Ball Bearings", "Suture Kit", "smoke bomb (BS)", "Torch Light", "Climbing gear"]
+    weapons: ["Assault Rifle - Viral (BS)", "Sniper Rifle (BS)"],
+    equipment: ["Ball Bearings", "Suture Kit", "Smoke Bomb (BS)", "Torch Light", "Climbing gear"]
   },
   {
     name: "Theo 'Ghost' Ramos", faction: "O-12", talentFaction: "O-12",
@@ -40283,7 +40293,7 @@ const STARTER_PORTFOLIOS = [
     restriction: "Diplomatic, legal, or political background",
     trait: "Disguise Expert", talent: "Attache",
     weapons: ["Boarding Shotgun (BS)", "Pistol (Normal)"],
-    equipment: ["Mechanic Tools", "Foldable bicycle", "Medikit", "smoke bomb (BS)", "Caltrops"]
+    equipment: ["Mechanic Tools", "Foldable bicycle", "MediKit", "Smoke Bomb (BS)", "Caltrops"]
   },
   {
     name: "Brigid 'Needle' Wallace", faction: "Ariadna", talentFaction: "Ariadna",
@@ -40301,7 +40311,7 @@ const STARTER_PORTFOLIOS = [
     restriction: "Mercenary, criminal, or trade-route background",
     trait: "Silver Tongue", talent: "Thief - Pickpocket",
     weapons: ["Boarding Shotgun (BS)", "Pump Action Shotgun (CC / BS)"],
-    equipment: ["Torch Light", "Parachute", "smoke bomb (BS)", "Caltrops", "Backpack"]
+    equipment: ["Torch Light", "Parachute", "Smoke Bomb (BS)", "Caltrops", "Backpack"]
   },
   {
     name: "Tao 'Needle' Fernandes", faction: "PanOceania / Yu Jing", talentFaction: "PanOceania / Yu Jing",
@@ -40310,7 +40320,7 @@ const STARTER_PORTFOLIOS = [
     restriction: "Cold-weather or mountain operations background",
     trait: "Bureaucrat", talent: "Rock Climber",
     weapons: ["Pump Action Shotgun (CC / BS)", "Pistol (Normal)"],
-    equipment: ["Suture Kit", "Health Kit", "Parachute", "Medikit", "Shovel"]
+    equipment: ["Suture Kit", "Health Kit", "Parachute", "MediKit", "Shovel"]
   }
 ];
 
@@ -40422,12 +40432,12 @@ function updateFocusAllocationStatus() {
     .filter(entry => entry.value);
 
   if (!allocations.length) {
-    status.textContent = "Generated Focus allocation: none.";
+    status.textContent = "Focus allocation: none.";
     return;
   }
 
   const total = allocations.reduce((sum, entry) => sum + Number(String(entry.value).replace("+", "")), 0);
-  status.textContent = `Generated Focus allocation: ${total} point${total === 1 ? "" : "s"} — ${allocations.map(entry => `${entry.skill} ${entry.value}`).join(", ")}.`;
+  status.textContent = `Focus allocation: ${total} point${total === 1 ? "" : "s"} — ${allocations.map(entry => `${entry.skill} ${entry.value}`).join(", ")}.`;
 }
 
 function assignRandomFocusPoints(totalPoints, preferredSkills = [], maxPerSkill = 2) {
@@ -40582,7 +40592,13 @@ function setMainSkillsToStartingBaseline() {
 }
 
 function randomGenericGear() {
-  const armourChoices = DATA.equipment.filter(item => item.loadoutEligible !== false && /armor|armour/i.test(`${item.type || ""} ${item.name || ""}`));
+  // Restrict generated starter armour to existing loadout entries which can map
+  // to the simplified 5 / 10 / 15 Armour track. Source-only location-soak
+  // profiles remain available for manual, GM-approved builds.
+  const armourChoices = DATA.equipment.filter(item =>
+    item.loadoutEligible !== false &&
+    DATA.lists.equipment.includes(item.name) &&
+    armourValueForItem(item) > 0);
   const armour = randomChoice(armourChoices);
   const nonArmourNames = DATA.lists.equipment.filter(name => {
     const item = byName(DATA.equipment, name);
@@ -41409,6 +41425,9 @@ function newCharacterSheet() {
         element.value = "";
         element.dispatchEvent(new Event("change"));
       });
+      // Blank character sheets must not inherit private gear/condition notes.
+      document.querySelectorAll("input[data-weapon-note], input[data-equipment-note], input[data-condition-note]")
+        .forEach(element => { element.value = ""; });
 
       clearFocusAllocations();
       setMainSkillsToStartingBaseline();

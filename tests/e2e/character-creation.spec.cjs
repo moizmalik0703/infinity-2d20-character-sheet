@@ -211,3 +211,29 @@ test('H all listed faction choices have a usable homeworld origin',async({page})
   const invalid=result.filter(x=>x.count===0 || x.disabled);
   expect(invalid,JSON.stringify(invalid)).toEqual([]);
 });
+
+test('I every built-in starter template uses actual canonical catalogue names',async({page})=>{
+  await openSheet(page);
+  const invalid=await page.evaluate(()=>{
+    const names=new Set(DATA.equipment.map(item=>item.name));
+    const options=new Set([...DATA.lists.weapons,...DATA.lists.equipment]);
+    return STARTER_PORTFOLIOS.flatMap(template=>[...template.weapons,...template.equipment]
+      .filter(name=>!names.has(name)||!options.has(name))
+      .map(name=>({template:template.name,name})));
+  });
+  expect(invalid,JSON.stringify(invalid)).toEqual([]);
+});
+
+test('J previously generated character gear labels migrate on load',async({page})=>{
+  await openSheet(page);
+  await page.evaluate(()=>{
+    const previous=collectState();
+    previous.weapons=['rifles - Sniper (BS)','smoke bomb (BS)','','',''];
+    previous.equipment=['Military rations','Medikit','','','','','','','',''];
+    applyState(previous);
+  });
+  await expect(page.locator('select[data-weapon-select="0"]')).toHaveValue('Sniper Rifle (BS)');
+  await expect(page.locator('select[data-weapon-select="1"]')).toHaveValue('Smoke Bomb (BS)');
+  await expect(page.locator('select[data-equipment-select="0"]')).toHaveValue('Military Rations');
+  await expect(page.locator('select[data-equipment-select="1"]')).toHaveValue('MediKit');
+});
