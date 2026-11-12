@@ -21,7 +21,10 @@ test('01 live deployment — V80 mounts with V79 provenance and unchanged loadou
   await openPortfolio(page);
   const result=await page.evaluate(()=>{
     const vehicles=DATA.equipment.filter(e=>e.type==='Vehicle');
-    const verified=DATA.equipment.filter(e=>e.provenanceStatus==='verified').length;
+    const audit=DATA.equipment.filter(e=>e.provenanceAudit?.version==='V79');
+    const verified=audit.filter(e=>e.provenanceAudit.status==='core-verified').length;
+    const related=audit.filter(e=>e.provenanceAudit.status==='related-core-only').length;
+    const unresolved=audit.filter(e=>e.provenanceAudit.status==='unverified').length;
     return {
       build:document.documentElement.dataset.infinityBuild,
       count:vehicles.length, upgrades:DATA.vehicleWorkshop.upgrades.length,
@@ -29,7 +32,7 @@ test('01 live deployment — V80 mounts with V79 provenance and unchanged loadou
       weapons:document.querySelectorAll('select[data-weapon-select]').length,
       equipment:document.querySelectorAll('select[data-equipment-select]').length,
       vehicleSlots:vehicles.filter(e=>e.loadoutEligible!==false).length,
-      verified
+      verified, related, unresolved, audited:audit.length
     };
   });
   expect(result.build).toBe('v80-vehicle-tag-workshop');
@@ -39,6 +42,7 @@ test('01 live deployment — V80 mounts with V79 provenance and unchanged loadou
   expect(result.weapons).toBe(5);
   expect(result.equipment).toBe(10);
   expect(result.vehicleSlots).toBe(0);
+  expect([result.audited,result.verified,result.related,result.unresolved]).toEqual([261,141,42,78]);
   expect(errors).toEqual([]);
 });
 
@@ -137,4 +141,18 @@ test('06 new character starts with an empty vehicle garage, not the last charact
   await page.locator('#newSheetBtn').click();
   await expect(page.locator('input[data-field="characterName"]')).toHaveValue('');
   await expect(page.locator('#v80Roster option')).toHaveCount(0);
+  // Reopen the outgoing character: its vehicle should be preserved, not deleted.
+  await page.locator('#characterSlotSelect').selectOption('v80-qa-old-character');
+  await expect(page.locator('input[data-field="characterName"]')).toHaveValue('V80-QA-OLD-CHARACTER');
+  await expect(page.locator('#v80Roster option')).toHaveCount(1);
+});
+
+test('07 printable portfolio references the separate vehicle garage',async({page})=>{
+  await openPortfolio(page);
+  await page.locator('input[data-field="characterName"]').fill('QA-PRINT-GARAGE');
+  await addVehicle(page,'Car');
+  await page.locator('#v80Nickname').fill('Campaign Rover');
+  await page.evaluate(()=>buildPrintPortfolio());
+  await expect(page.locator('#printPortfolio')).toContainText('Vehicle / TAG Garage');
+  await expect(page.locator('#printPortfolio')).toContainText('Campaign Rover');
 });
