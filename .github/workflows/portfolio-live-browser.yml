@@ -1,0 +1,43 @@
+name: Live browser smoke tests — Infinity portfolio
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'app.js'
+      - 'data.js'
+      - 'tests/e2e/**'
+      - '.github/workflows/portfolio-live-browser.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  chromium-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright runner and Chromium
+        run: |
+          npm install --no-save @playwright/test@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Execute real browser interactions against published GitHub Pages
+        env:
+          PORTFOLIO_URL: https://moizmalik0703.github.io/infinity-2d20-character-sheet/
+        run: |
+          npx playwright test tests/e2e/portfolio-live.spec.cjs --reporter=line --workers=1
+      - name: Upload browser diagnostic artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-browser-diagnostics
+          path: |
+            test-results/
+          retention-days: 7
+          if-no-files-found: ignore
