@@ -15,4 +15,7 @@ Campaign slug: `code-infinity-team-bravo`
 
 Played-session records supersede pre-session plans whenever they conflict.
 
-The current post-Session-7 lead is **DAYBREAK GATE**.
+The canonical record now extends through **Session 8 — Operation DAYBREAK**. All three Daybreak mission objectives were achieved. The current operational lead is the **manhunt for Pavel Rusk**, together with Bureau Toth's analysis of the preserved biological sample and the continuing investigation of PALE/07.
+
+- [Session 8 narrative report](sessions/session-08/summary.md)
+- [Session 8 authoritative XML dossier](sessions/session-08/session-08-operation-daybreak.xml)

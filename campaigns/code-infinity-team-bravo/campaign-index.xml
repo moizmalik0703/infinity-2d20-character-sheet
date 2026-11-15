@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <campaignArchive slug="code-infinity-team-bravo">
   <title>Code Infinity — Team Bravo</title>
-  <canonicalThroughSession>7</canonicalThroughSession>
-  <currentLead>DAYBREAK GATE</currentLead>
+  <canonicalThroughSession>8</canonicalThroughSession>
+  <currentLead>PAVEL RUSK MANHUNT / BUREAU TOTH BIOLOGICAL SAMPLE ANALYSIS</currentLead>
   <sessions>
     <session number="1" operation="FAULTLINE" file="sessions/session-01/session-01-operation-faultline.xml"/>
     <session number="2" operation="CINDER TRACE" file="sessions/session-02/session-02-operation-cinder-trace.xml"/>
@@ -11,6 +11,7 @@
     <session number="5" operation="JADE KNIFE" file="sessions/session-05/session-05-operation-jade-knife.xml"/>
     <session number="6" operation="WATCHGLASS" file="sessions/session-06/session-06-operation-watchglass.xml"/>
     <session number="7" operation="KNIFE EDGE" file="sessions/session-07/session-07-operation-knife-edge.xml"/>
+    <session number="8" operation="DAYBREAK" file="sessions/session-08/session-08-operation-daybreak.xml"/>
   </sessions>
   <canon>
     <state file="canon/campaign-state.xml"/>

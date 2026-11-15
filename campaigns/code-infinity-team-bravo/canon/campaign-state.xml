@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<campaignState campaignSlug="code-infinity-team-bravo" updatedAfterSession="7">
+<campaignState campaignSlug="code-infinity-team-bravo" updatedAfterSession="8">
   <campaign>Code Infinity — Team Bravo</campaign>
-  <currentSession>7</currentSession>
-  <nextLead>DAYBREAK GATE</nextLead>
+  <currentSession>8</currentSession>
+  <nextLead>PAVEL RUSK MANHUNT / BUREAU TOTH SAMPLE ANALYSIS</nextLead>
   <team>
-    <operative name="Sergeant Major Rabbit" callsign="Rabbit" status="Active" currentRole="Team Leader">
+    <operative name="Sergeant Major Rabbit" callsign="Rabbit" status="Active" currentRole="Team Leader" session8Deployment="Remained at Concilium for post-Session-7 cleanup">
       <honour>Ariadnan Cross of Valour — Awarded</honour>
     </operative>
-    <operative name="Gypsy" status="Active" leadershipEligibility="Restored">
+    <operative name="Gypsy" status="Active" leadershipEligibility="Restored" session8Role="Field Section Leader">
       <note>Returned from SHIFA. Bureau Noir leadership review closed after Operation KNIFE EDGE.</note>
       <honour>Ariadnan Medal of Allied Friendship — Awarded</honour>
+      <honour>Ariadnan Medal of Friendship — Awarded (Operation DAYBREAK)</honour>
+      <honour>PanOceania Medal of Bravery — Awarded (Operation DAYBREAK)</honour>
     </operative>
     <operative name="Buzzkill" status="Active">
       <honour>Ariadnan Medal of Allied Friendship — Awarded</honour>
+      <honour>JSA Kinshi Shunho Award — Awarded (Operation DAYBREAK)</honour>
     </operative>
     <operative name="Anya" status="Active">
       <honour>Ariadnan Medal of Allied Friendship — Awarded</honour>
+      <honour>PanOceania Medal of Bravery — Awarded (Operation DAYBREAK)</honour>
     </operative>
-    <operative name="Dr Farid Qassim" callsign="Q" status="Active" role="Haqqislam Akbar Doctor">
+    <operative name="Dr Farid Qassim" callsign="Q" status="Active" role="Haqqislam Akbar Doctor" session8Deployment="Remained at Concilium for post-Session-7 cleanup">
       <honour>Ariadnan Medal of Allied Friendship — Awarded</honour>
     </operative>
-    <operative name="Tom Hendry" callsign="Jobe" status="Active" role="Ariadnan assassin">
-      <honour status="PendingReview">Ariadnan Cross of Valour — Recommended</honour>
-      <administrativeNote>Confirmation pending satisfactory personal conduct review; Alcohol and Substance Use Management Workshop referral recommended.</administrativeNote>
+    <operative name="Tom Hendry" callsign="Jobe" alternateCallsign="Joby" status="Active" role="Ariadnan assassin">
+      <honour>Ariadnan Cross of Valour — Awarded after Session 8 (previously pending)</honour>
+      <honour>Ariadnan Medal of Valour — Awarded (Operation DAYBREAK)</honour>
+      <administrativeNote>Mandatory Substance Abuse Management Workshop remains due within six weeks of Session 8 confirmation; commendation does not waive requirement.</administrativeNote>
     </operative>
     <operative name="Karrion Voss" status="Alive" deploymentStatus="Not deployed in Session 7"/>
     <operative name="PalOFemi" status="Administrative leave / review"/>
@@ -30,11 +35,13 @@
   </team>
   <threats>
     <threat id="PALE-07" status="At large">
-      <note>True identity, origin and controller remain unknown.</note>
+      <note>True identity, origin and controller remain unknown. Coordinated a forged checkpoint order, MIRRORGLASS infiltrators and the Daybreak biological shipment.</note>
     </threat>
     <threat id="MIRRORGLASS" status="Active">
       <note>PALE can now begin masking MIRRORGLASS signatures using data stolen from Bureau Toth, reducing reliability of compatibility scans.</note>
     </threat>
+    <threat id="PAVEL-RUSK" status="At large"><note>Daybreak logistics officer identified as PALE/07 agent; Bureau Noir manhunt active.</note></threat>
+    <threat id="DAYBREAK-ENTITY" status="Neutralised; sample secured"><note>Adaptive flesh-metal organism assimilated damaged TAG and armoured transport; deployed psychic attack; living fragment isolated for Bureau Toth analysis.</note></threat>
   </threats>
   <session7Outcome>
     <item>All eight genuine Council of Knives principals survived.</item>
@@ -44,4 +51,17 @@
     <item>Three biological seed consignments were traced through DAYBREAK GATE.</item>
     <item>Bureau Noir confirmed Daybreak Gate had resumed communications and was transmitting.</item>
   </session7Outcome>
+  <session8Outcome operation="DAYBREAK" location="Daybreak Gate, Dawn">
+    <objectives>
+      <objective priority="primary" status="achieved">Seize Daybreak Gate and prevent transfer completion.</objective>
+      <objective priority="secondary" status="achieved">Protect genuine Ariadnan personnel and preserve evidence.</objective>
+      <objective priority="tertiary" status="achieved">Determine the origin/destination of the biological supply chain.</objective>
+    </objectives>
+    <item>Gypsy led the four-operative field section: Gypsy, Tom Hendry (Jobe/Joby), Buzzkill and Anya. Rabbit and Q stayed at Concilium.</item>
+    <item>MIRRORGLASS operatives and metallic explosive bugs attacked the Daybreak Gate checkpoint. Lieutenant Commander Elena Markova survived and cooperated with Team Bravo.</item>
+    <item>Incoming shipment traced from Kestrel-9 to Daybreak Gate Dock 7. Intended onward destination remains unknown.</item>
+    <item>Pavel Rusk revealed allegiance to PALE/07 and attempted to kill Team Bravo in a cryogenic chamber; he escaped and is wanted by Bureau Noir.</item>
+    <item>Alien organism assimilated transport and TAG wreckage, inflicted psychic harm and was neutralised; one living biological sample secured for Bureau Toth analysis.</item>
+    <item>Gypsy awarded Ariadnan Medal of Friendship and PanOceania Medal of Bravery. Tom Hendry's prior Ariadnan Cross of Valour confirmed, with compulsory workshop within six weeks, and he was awarded Ariadnan Medal of Valour. Anya awarded PanOceania Medal of Bravery. Buzzkill awarded JSA Kinshi Shunho Award.</item>
+  </session8Outcome>
 </campaignState>
