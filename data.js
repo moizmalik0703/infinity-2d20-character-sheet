@@ -9,7 +9,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Analysis to understand or exploit a digital battlespace.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "ALEPH, O-12, Nomad, or advanced Hacking background"
+      "restriction": "ALEPH, O-12, Nomad, or advanced Hacking background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -20,7 +21,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Extraplanetary or Pilot for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -31,7 +33,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -42,7 +45,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -53,7 +57,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Extraplanetary for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Amateur Archaeologist",
@@ -62,12 +67,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "You stumbled onto intriguing ruins while hiking.",
       "effect": "Narrative trait representing informal archaeological curiosity.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Combat",
@@ -78,7 +84,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -89,7 +96,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Antipode",
@@ -98,13 +106,14 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Playable member of Dawn's native species whose sapience is distributed across a trinary.",
       "effect": "AGI +2, AWA +1, BRW +2, COO −1, INT −2, PER −2; scent +2d20; +2 Vigour soak; Monstrous; Super-Jump; Primal Technology; Pack Mentality; Trinary Mind; no Firewall/geist/cybernetic augments.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Heritage",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 79,
       "hostHeritageOnly": true,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Heritage selection; not a separately purchased Trait."
     },
     {
       "category": "Infowar",
@@ -115,7 +124,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Thievery in Nomad, Submondo, or black-data contexts.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "Nomad or advanced Hacking background"
+      "restriction": "Nomad or advanced Hacking background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -126,7 +136,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Ariadnan Grit",
@@ -135,12 +146,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "When everything collapsed, stubborn endurance kept you functioning.",
       "effect": "Narrative trait representing Ariadnan perseverance.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Willpower",
@@ -151,7 +163,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Discipline or Psychology to maintain composure or identity coherence.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "ALEPH access or Posthuman background"
+      "restriction": "ALEPH access or Posthuman background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Astrophobia",
@@ -160,12 +173,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Time in the Helios orbitals left you uncomfortable off-world.",
       "effect": "Extraplanetary tests have +1 complication range.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Physical",
@@ -176,7 +190,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -187,7 +202,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -198,7 +214,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade in Nomad social scenes.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "Nomad, Bakunin, or Submondo background"
+      "restriction": "Nomad, Bakunin, or Submondo background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -209,7 +226,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -220,7 +238,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -231,7 +250,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -242,7 +262,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -253,7 +274,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -264,7 +286,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -275,7 +298,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -286,7 +310,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Haqqislam or academic background"
+      "restriction": "Haqqislam or academic background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Brand Loyalist",
@@ -295,12 +320,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "An early Ariadnan weapon became your personal standard.",
       "effect": "Acquire Americolt Eagle, Ojotnik or Teseum Hatchet; other-weapon tests have +1 complication range.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "General",
@@ -311,7 +337,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -322,7 +349,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Psychology or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -333,7 +361,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Education or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -344,7 +373,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -355,7 +385,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -366,7 +397,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -377,7 +409,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Mercenary, criminal, or trade-route background"
+      "restriction": "Mercenary, criminal, or trade-route background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -388,7 +421,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -399,7 +433,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -410,7 +445,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -421,7 +457,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -432,7 +469,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -443,7 +481,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -454,7 +493,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Extraplanetary or Tech aboard ships, stations, or orbital habitats.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Extraplanetary or shipboard operations background"
+      "restriction": "Extraplanetary or shipboard operations background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -465,7 +505,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -476,7 +517,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -487,7 +529,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -498,7 +541,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -509,7 +553,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -520,7 +565,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -531,7 +577,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -542,7 +589,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Education or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "O-12, legal, diplomatic, or command background"
+      "restriction": "O-12, legal, diplomatic, or command background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -553,7 +601,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "PanOceania or covert-service background"
+      "restriction": "PanOceania or covert-service background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -564,7 +613,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -575,7 +625,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Resistance in zero-g, high-g, or hard-labour scenes.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Nomad or shipboard operations background"
+      "restriction": "Nomad or shipboard operations background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -586,7 +637,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Psychology or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -597,7 +649,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -608,7 +661,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -619,7 +673,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -630,7 +685,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -641,7 +697,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Education or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Cybered-Up",
@@ -650,12 +707,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "A local clinic fitted an improvised cybernetic limb.",
       "effect": "Begin with Basic Limb Replacement; Maintenance +1; successful tests using it gain 1 bonus Momentum.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Medical",
@@ -666,7 +724,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -677,7 +736,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -688,7 +748,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -699,7 +760,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Nomad or advanced Hacking background"
+      "restriction": "Nomad or advanced Hacking background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -710,7 +772,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -721,7 +784,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Ariadna or frontier survival background"
+      "restriction": "Ariadna or frontier survival background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -732,7 +796,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -743,7 +808,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -754,7 +820,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -765,7 +832,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Disabled",
@@ -774,12 +842,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "A serious accident left a lasting disability and hardened resolve.",
       "effect": "Movement-related tests +1 Difficulty; Discipline tests −1 Difficulty, minimum D1.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Stealth",
@@ -790,7 +859,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Dogface",
@@ -799,13 +869,14 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Dog-Blooded Ariadnan who transforms into a Dog-Warrior under injury.",
       "effect": "Scent +2d20. On Wound: Discipline D1 or transform (may voluntarily fail): +2 Brawn, +2 Agility, +1 Vigour soak, recover all Vigour, Monstrous/Snarling Beast/Super-Jump; armour can be damaged; Fatigued when form ends.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Heritage",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Dog-Blooded career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 80,
       "hostHeritageOnly": true,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Heritage selection; not a separately purchased Trait."
     },
     {
       "category": "Combat",
@@ -816,7 +887,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -827,7 +899,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -838,7 +911,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -849,7 +923,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -860,7 +935,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Alien",
@@ -871,7 +947,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Discipline to interact with alien or VoodooTech systems.",
       "rarity": "Very Rare",
       "cost": "15",
-      "restriction": "Combined Army or alien technology background"
+      "restriction": "Combined Army or alien technology background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -882,7 +959,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -893,7 +971,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -904,7 +983,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Psychology or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -915,7 +995,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -926,7 +1007,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -937,7 +1019,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Analysis or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "ALEPH access or Posthuman background"
+      "restriction": "ALEPH access or Posthuman background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -948,7 +1031,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Analysis or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "ALEPH access or Posthuman background"
+      "restriction": "ALEPH access or Posthuman background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Entirely Misunderstood",
@@ -957,12 +1041,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "You accidentally saved a tourist and the event was Mayacast.",
       "effect": "Narrative trait representing unwanted public recognition.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Exploration",
@@ -973,7 +1058,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -984,7 +1070,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Thievery or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -995,7 +1082,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -1006,7 +1094,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -1017,7 +1106,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "Hassassin Bahram, martial, or covert-ops background"
+      "restriction": "Hassassin Bahram, martial, or covert-ops background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -1028,7 +1118,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -1039,7 +1130,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -1050,7 +1142,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -1061,7 +1154,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -1072,7 +1166,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1083,7 +1178,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Pilot or Extraplanetary for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -1094,7 +1190,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1105,7 +1202,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Analysis or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -1116,7 +1214,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "Military or security background"
+      "restriction": "Military or security background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1127,7 +1226,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Discipline or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Nomad or infiltration background"
+      "restriction": "Nomad or infiltration background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -1138,7 +1238,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1149,7 +1250,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Ariadna or frontier survival background"
+      "restriction": "Ariadna or frontier survival background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -1160,7 +1262,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Infowar",
@@ -1171,7 +1274,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Education with a Geist or helper program.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "ALEPH, Geist, or Hacking background"
+      "restriction": "ALEPH, Geist, or Hacking background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -1182,7 +1286,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -1193,7 +1298,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -1204,7 +1310,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -1215,7 +1322,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Grizzled",
@@ -1224,12 +1332,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Survived a month stranded on the frontier.",
       "effect": "Gain 1 rank in Survival; +1 complication range on Resistance tests against poison.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Combat",
@@ -1240,7 +1349,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Ballistics or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1251,7 +1361,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -1262,7 +1373,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Harried",
@@ -1271,12 +1383,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "An Antipode attack destroyed your place of business.",
       "effect": "Narrative trait; the source event also limits repeating/extending that career unless Earnings are lost.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Combat",
@@ -1287,7 +1400,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Ballistics or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Heirloom Weapon",
@@ -1296,12 +1410,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "You inherited a weapon with a long personal history.",
       "effect": "With the heirloom weapon, roll +1§ damage; tests with it have +1 complication range.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Faction",
@@ -1312,7 +1427,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "PanOceania, Varuna, or aquatic operations background"
+      "restriction": "PanOceania, Varuna, or aquatic operations background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -1323,7 +1439,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -1334,7 +1451,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -1345,7 +1463,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -1356,7 +1475,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1367,7 +1487,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "PanOceania or covert-service background"
+      "restriction": "PanOceania or covert-service background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -1378,7 +1499,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1389,7 +1511,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Discipline or Command for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Yu Jing or command/security background"
+      "restriction": "Yu Jing or command/security background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -1400,7 +1523,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -1411,7 +1535,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1422,7 +1547,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Infamous Lineage",
@@ -1431,12 +1557,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Your family carries a reputation for betrayal.",
       "effect": "Social skill tests with fellow Ariadnans have +2 complication range.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Stealth",
@@ -1447,7 +1574,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1458,7 +1586,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -1469,7 +1598,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -1480,7 +1610,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Psychology or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1491,7 +1622,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Command for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Military command or Yu Jing background"
+      "restriction": "Military command or Yu Jing background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -1502,7 +1634,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "It Takes One to Know One",
@@ -1511,15 +1644,16 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "An early brush with crime taught you how offenders think.",
       "effect": "Source event offers jail time, or an Asset debt plus 1 rank of Thievery.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "source-choice",
       "skillChoices": [
         "Thievery"
-      ]
+      ],
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Exploration",
@@ -1530,7 +1664,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1541,7 +1676,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Discipline or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "PanOceania Military Orders"
+      "restriction": "PanOceania Military Orders",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1552,7 +1688,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Tech on Lhosts, proxies, or synthetic bodies.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "ALEPH, Lhost, or medical-technical background"
+      "restriction": "ALEPH, Lhost, or medical-technical background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1563,7 +1700,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1574,7 +1712,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1585,7 +1724,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Education or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Ariadna or GM approval"
+      "restriction": "Ariadna or GM approval",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -1608,12 +1748,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "A disastrous off-world technological solution left you suspicious of advanced technology.",
       "effect": "Narrative trait; apply when distrust/unfamiliarity with advanced technology matters.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Physical",
@@ -1624,7 +1765,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1635,7 +1777,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Nomad or advanced Hacking background"
+      "restriction": "Nomad or advanced Hacking background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1646,7 +1789,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -1657,7 +1801,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Psychology or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -1668,7 +1813,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -1679,7 +1825,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -1690,7 +1837,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1701,7 +1849,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Mercenary, criminal, or trade-route background"
+      "restriction": "Mercenary, criminal, or trade-route background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -1712,7 +1861,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -1723,7 +1873,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Thievery or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -1734,7 +1885,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Education or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "ALEPH access or Posthuman background"
+      "restriction": "ALEPH access or Posthuman background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -1745,7 +1897,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Discipline in coordinated assault or morale scenes.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "Combined Army or Morat background"
+      "restriction": "Combined Army or Morat background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -1756,7 +1909,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Extraplanetary or Lifestyle on Nomad ships, stations, or densely packed habitats.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Nomad or shipboard operations background"
+      "restriction": "Nomad or shipboard operations background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -1767,7 +1921,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1778,7 +1933,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -1789,7 +1945,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -1800,7 +1957,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -1811,7 +1969,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1822,7 +1981,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -1833,7 +1993,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -1844,7 +2005,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -1855,7 +2017,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1866,7 +2029,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Extraplanetary or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Nomad or advanced Hacking background"
+      "restriction": "Nomad or advanced Hacking background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -1877,7 +2041,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -1888,7 +2053,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -1899,7 +2065,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Old Wound",
@@ -1908,12 +2075,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "A hunting accident left a gunshot wound that never healed properly.",
       "effect": "Narrative trait; apply complications when the old injury matters.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "name": "On the Watchlist",
@@ -1922,12 +2090,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Bureau Toth questioned you and released you under conditions.",
       "effect": "Narrative trait representing official surveillance or obligations.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "name": "Overconfident",
@@ -1936,12 +2105,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Surviving disaster convinced you that you are harder to kill than you really are.",
       "effect": "Narrative trait; complications should reflect reckless confidence.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Physical",
@@ -1952,7 +2122,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -1963,7 +2134,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Discipline or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Military or security background"
+      "restriction": "Military or security background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Paranoid",
@@ -1972,12 +2144,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Displacement or betrayal left you expecting hidden danger.",
       "effect": "Narrative trait; the source event can also trigger faction defection.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Physical",
@@ -1988,7 +2161,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -1999,7 +2173,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -2010,7 +2185,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Patriot",
@@ -2019,12 +2195,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "You foiled galactic sabotage and became associated with Ariadna's defence.",
       "effect": "Source event also grants +1 Earnings.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Technical",
@@ -2035,7 +2212,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -2046,7 +2224,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Pilot or Extraplanetary for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -2057,7 +2236,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Pioneer Spirit",
@@ -2066,12 +2246,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Adventure and the frontier became part of your identity.",
       "effect": "Add +1 Resolve.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Exploration",
@@ -2082,7 +2263,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Extraplanetary or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -2093,7 +2275,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -2104,7 +2287,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "ALEPH access or Posthuman background"
+      "restriction": "ALEPH access or Posthuman background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Biotech",
@@ -2115,7 +2299,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Resistance involving body mods, augmentations, or extreme adaptation.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "Nomad, Praxis, or body-modification background"
+      "restriction": "Nomad, Praxis, or body-modification background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -2126,7 +2311,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "ALEPH access or Posthuman background"
+      "restriction": "ALEPH access or Posthuman background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Priority Target",
@@ -2135,12 +2321,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "A group has singled you out as a problem that needs solving.",
       "effect": "Narrative trait representing active enemies or hunters.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Social",
@@ -2151,7 +2338,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -2162,7 +2350,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -2173,7 +2362,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2184,7 +2374,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Ballistics or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -2195,7 +2386,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Ballistics or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Raised in a Barn",
@@ -2204,8 +2396,8 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Extended isolation in the wilderness shaped your manners and instincts.",
       "effect": "Gain 1 rank in Animal Handling or Survival; +1 complication range on Personality-based tests.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
@@ -2213,7 +2405,8 @@ window.INFINITY_DATA = {
       "skillChoices": [
         "Animal Handling",
         "Survival"
-      ]
+      ],
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "name": "Rebel",
@@ -2222,12 +2415,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "You fought against the system.",
       "effect": "Gain +1 Morale Soak against authority figures.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Social",
@@ -2238,7 +2432,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Persuade or Command for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -2249,7 +2444,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "ALEPH access or Posthuman background"
+      "restriction": "ALEPH access or Posthuman background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -2260,7 +2456,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2271,7 +2468,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "PanOceania Military Orders"
+      "restriction": "PanOceania Military Orders",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -2282,7 +2480,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Pilot for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -2293,7 +2492,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2304,7 +2504,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2315,7 +2516,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -2326,7 +2528,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -2337,7 +2540,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -2348,7 +2552,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Discipline or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Rockstar",
@@ -2357,12 +2562,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "A Hiraeth music career brought fame and its complications.",
       "effect": "Begin at a chosen drug's addiction threshold with starting doses; Lifestyle tests −1 Difficulty, minimum D0.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Stealth",
@@ -2373,7 +2579,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Thievery or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -2384,7 +2591,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Thievery or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Sardonic",
@@ -2393,12 +2601,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Being burned once left you disciplined but cynical.",
       "effect": "Gain 1 rank in Discipline; positive/pleasant social interactions have +3 complication range.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "name": "Scarred",
@@ -2407,12 +2616,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "A violent Caledonian strike left lasting scars.",
       "effect": "Narrative source trait.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Stealth",
@@ -2423,7 +2633,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -2434,7 +2645,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -2445,7 +2657,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -2456,7 +2669,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -2467,7 +2681,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -2478,7 +2693,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2489,7 +2705,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -2500,7 +2717,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Survival to hide, escape, recover, or establish deep cover.",
       "rarity": "Very Rare",
       "cost": "15",
-      "restriction": "Combined Army or Shasvastii background"
+      "restriction": "Combined Army or Shasvastii background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2511,7 +2729,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -2522,7 +2741,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -2533,7 +2753,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -2544,7 +2765,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Haqqislam or advanced Medicine background"
+      "restriction": "Haqqislam or advanced Medicine background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -2555,7 +2777,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Sleepy",
@@ -2564,12 +2787,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Experimental tranquillisers left lasting drowsiness.",
       "effect": "Increase Difficulty of Surprise tests by 1.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Stealth",
@@ -2580,7 +2804,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Thievery or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2591,7 +2816,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Sole Survivor",
@@ -2600,12 +2826,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "You were the only one left alive after disaster.",
       "effect": "Gain 1 rank in Survival; reduce Earnings by 1, minimum 0.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Technical",
@@ -2616,7 +2843,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Science or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -2627,7 +2855,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Hacking or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Spirit of the 112",
@@ -2636,12 +2865,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "A 112 rescue inspired you toward emergency service.",
       "effect": "Gain 1 rank in Medicine and may choose 112 Emergency Responder first.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Physical",
@@ -2652,7 +2882,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -2663,7 +2894,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -2674,7 +2906,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Extraplanetary or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -2685,7 +2918,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Ballistics or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2696,7 +2930,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline in direct assault scenes.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "ALEPH or military elite background"
+      "restriction": "ALEPH or military elite background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -2707,7 +2942,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Street Fighter",
@@ -2716,12 +2952,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Early experience in underground fight clubs.",
       "effect": "Gain 1 rank in Close Combat and a 1 Asset debt.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Social",
@@ -2732,7 +2969,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -2743,7 +2981,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -2754,7 +2993,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -2765,7 +3005,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -2776,7 +3017,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Persuade or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical/Exploration",
@@ -2787,7 +3029,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Resistance or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction",
@@ -2798,7 +3041,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Mercenary, criminal, or trade-route background"
+      "restriction": "Mercenary, criminal, or trade-route background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2809,7 +3053,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2820,7 +3065,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -2831,7 +3077,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -2842,7 +3089,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -2853,7 +3101,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Survivor",
@@ -2862,8 +3111,8 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Survived an early Antipode attack and fought back.",
       "effect": "Gain 1 rank in either Ballistics or Close Combat.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
@@ -2871,7 +3120,8 @@ window.INFINITY_DATA = {
       "skillChoices": [
         "Ballistics",
         "Close Combat"
-      ]
+      ],
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Physical",
@@ -2882,7 +3132,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Athletics or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -2893,7 +3144,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Persuade or Psychology in diplomacy, negotiation, or double-agent scenes.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "Tohaa, Sygmaa, or alien diplomacy background"
+      "restriction": "Tohaa, Sygmaa, or alien diplomacy background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -2904,7 +3156,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Analysis or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -2915,7 +3168,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Command or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2926,7 +3180,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -2937,7 +3192,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -2948,7 +3204,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -2959,7 +3216,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -2970,7 +3228,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -2981,7 +3240,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -2992,7 +3252,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "ALEPH access or Posthuman background"
+      "restriction": "ALEPH access or Posthuman background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -3003,7 +3264,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -3014,7 +3276,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -3025,7 +3288,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -3036,7 +3300,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -3047,7 +3312,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "True Grit",
@@ -3056,12 +3322,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "You endured disaster through sheer determination.",
       "effect": "Source event grants 1 Life Point during Lifepath creation.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Social",
@@ -3072,7 +3339,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Lifestyle or Hacking around contracts, protected records, or black-market data.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "Nomad or advanced Hacking background"
+      "restriction": "Nomad or advanced Hacking background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -3083,7 +3351,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Unlikely Hero",
@@ -3092,12 +3361,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "You saved a tourist without realising the rescue was being Mayacast.",
       "effect": "Narrative trait representing unexpected public heroism.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Dog-Blooded career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 88,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Exploration",
@@ -3108,7 +3378,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -3119,7 +3390,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -3130,7 +3402,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Vengeful Progeny",
@@ -3139,12 +3412,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "A Dogface encountered in battle felt impossibly familiar.",
       "effect": "Narrative trait tying the character to Dog-Blooded ancestry and vengeance.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Combat",
@@ -3155,7 +3429,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -3166,7 +3441,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Extraplanetary or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -3177,7 +3453,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Tech or Extraplanetary for emergency repair, EVA, or ship survival.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "Extraplanetary or shipboard operations background"
+      "restriction": "Extraplanetary or shipboard operations background",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -3188,7 +3465,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -3199,7 +3477,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Weight of the World",
@@ -3208,12 +3487,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "A dying soldier entrusted you with unfinished business.",
       "effect": "Gain 1 rank in Discipline.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "General",
@@ -3224,7 +3504,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Persuade or Command for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Rare",
       "cost": "10",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -3235,7 +3516,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Animal Handling or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -3246,7 +3528,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Education or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -3257,7 +3540,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Wolfsbane",
@@ -3266,12 +3550,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Your role in a Dog Nation protest gave you a reputation.",
       "effect": "Source event grants 1 additional Momentum on Leadership tests.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "name": "Wulver",
@@ -3280,13 +3565,14 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Stable Dog-Blooded phenotype: powerful, keen-scented and permanently adapted.",
       "effect": "AGI +1, AWA +1, BRW +1, COO −1, PER −1, WIL −1; scent +2d20; +2 Vigour; Monstrous; Furious; Super-Jump; worn gear needs tailoring.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Heritage",
+      "cost": "Granted by Lifepath",
       "restriction": "Ariadna Dog-Blooded career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 80,
       "hostHeritageOnly": true,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Heritage selection; not a separately purchased Trait."
     },
     {
       "category": "Medical",
@@ -3297,7 +3583,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Science or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Physical",
@@ -3308,7 +3595,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Extraplanetary or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Common",
       "cost": "5",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -3319,7 +3607,8 @@ window.INFINITY_DATA = {
       "effect": "Reduce Difficulty by 1 when using Extraplanetary or Pilot for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
       "rarity": "Uncommon",
       "cost": "7",
-      "restriction": "No Restrictions"
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3328,12 +3617,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 2).",
       "effect": "Source event option: Increase Resolve by 1.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3342,12 +3632,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 3).",
       "effect": "Source event option: Gain +1 Analysis.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3356,12 +3647,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 4).",
       "effect": "Source event option: Social status becomes Al-Mustaslaha.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3370,12 +3662,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 6).",
       "effect": "Source event option: Gain +1 Education and a mentor contact.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3384,12 +3677,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 7).",
       "effect": "Source event option: Reduce Vigour by 1 and gain +1 Discipline.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3398,12 +3692,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 9).",
       "effect": "Source event option: Reduce Vigour by 1 and add +1 Momentum to all Contagion damage. Reversing this costs 5+5§ Assets.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3412,12 +3707,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 10).",
       "effect": "Source event option: May choose Academic as the first career.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3426,12 +3722,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 12).",
       "effect": "Source event option: Gain +1 Analysis and a mentor contact.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3440,12 +3737,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 13).",
       "effect": "Source event option: Gain +1 Psychology.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3454,12 +3752,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 14).",
       "effect": "Source event option: Increase Resolve by 1.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3468,12 +3767,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 15).",
       "effect": "Source event option: Spend 1d6 years in jail and gain a Criminal Record; may choose Kum Ganger as the first career.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3482,12 +3782,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 16).",
       "effect": "Source event option: Gain +1 Observation; may choose Odalisque as the first career.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3496,12 +3797,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 17).",
       "effect": "Source event option: Increase Complication Range by 2 on social skill tests with Haqqislam faction members.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3510,12 +3812,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 18).",
       "effect": "Source event option: Serum grants no bonus and instead inflicts 1+2§ damage.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3524,12 +3827,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 19).",
       "effect": "Source event option: Defect to a random faction.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     },
     {
       "category": "Haqqislam Adolescent Event",
@@ -3538,12 +3842,13 @@ window.INFINITY_DATA = {
       "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 20).",
       "effect": "Source event option: The character died and was resurrected.",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
       "sourcePage": 78,
-      "skillBonusMode": "special-effect"
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
     }
   ],
   "talents": [
@@ -3561,7 +3866,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Hacking or Analysis to map, defend, or disrupt a digital battlespace.",
       "prerequisite": "None",
       "rarity": "Rare",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -3577,7 +3883,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Animal Handling or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -3593,7 +3900,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Frontier Survivor",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -3609,7 +3917,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Search for Knowledge",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -3625,7 +3934,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 to Hacking or Stealth tests involving hidden networks or off-grid routes.",
       "prerequisite": "None",
       "rarity": "Uncommon",
-      "cost": "7"
+      "cost": "7",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -3641,7 +3951,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Hacking or Discipline to coordinate proxy presence, synthetic identity, or ALEPH support.",
       "prerequisite": "None",
       "rarity": "Rare",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -3657,7 +3968,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -3673,7 +3985,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Codebreaker",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -3689,7 +4002,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 to Lifestyle or Persuade tests in Nomad social economies.",
       "prerequisite": "None",
       "rarity": "Uncommon",
-      "cost": "7"
+      "cost": "7",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -3705,7 +4019,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Coordinated Assault",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -3721,7 +4036,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -3737,7 +4053,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Counter-Intrusion",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -3753,7 +4070,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -3769,7 +4087,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Close Combat or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -3785,7 +4104,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Command or Spacecraft during shipboard crisis scenes.",
       "prerequisite": "None",
       "rarity": "Uncommon",
-      "cost": "7"
+      "cost": "7",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -3801,14 +4121,15 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Lifestyle or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Catfall",
       "category": "Core Skill Talent",
-      "career": "",
+      "career": "General / Unrestricted",
       "doctrine": "Acrobatics",
-      "faction": "",
+      "faction": "All Factions",
       "restriction": "No Restrictions",
       "level": "1",
       "primary": "Athletics",
@@ -3816,12 +4137,13 @@ window.INFINITY_DATA = {
       "description": "Training in using wind resistance and landing surfaces to survive long falls.",
       "effect": "For each rank, treat the distance fallen as one zone shorter when calculating falling damage.",
       "prerequisite": "Long Jumper; Acrobatics Expertise 2",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Common",
+      "cost": "5",
       "source": "Infinity Corebook / Collector's Edition",
       "sourcePage": 75,
       "skillMappingNote": "Simplified rules house-rule: source Acrobatics is represented by Athletics.",
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "5 Infinity Points is the simplified character sheet's house-rule price for a Level 1 Talent; the official Infinity RPG corebook uses XP instead."
     },
     {
       "category": "Supplemental",
@@ -3837,7 +4159,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Lifestyle or Persuade aboard Circulars, stations, or trade-route habitats.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -3853,7 +4176,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Mountain Climber",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -3869,7 +4193,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -3885,7 +4210,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Naval Diver",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -3901,7 +4227,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -3917,7 +4244,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Tech or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Demolition Expert - Level 2",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -3933,7 +4261,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -3949,7 +4278,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Athletics or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Paratrooper",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -3965,7 +4295,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -3981,7 +4312,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Lifestyle or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Bureau Authority",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -3997,7 +4329,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Command or Persuade for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Attache",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -4013,7 +4346,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Command Cadet",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -4029,7 +4363,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Athletics or Close Combat in zero-g, EVA, or shipboard boarding actions.",
       "prerequisite": "None",
       "rarity": "Uncommon",
-      "cost": "7"
+      "cost": "7",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4045,7 +4380,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -4061,7 +4397,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -4077,7 +4414,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Firewall Sense",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -4093,7 +4431,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "System Cracker",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4109,7 +4448,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "False Identity",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -4125,7 +4465,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Tech or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -4141,7 +4482,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Demolition Expert - Level 1",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -4157,7 +4499,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Consul",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -4173,7 +4516,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Combat Diver",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -4189,7 +4533,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Athletics or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Combat Jumper",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -4205,7 +4550,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Hacking or Command with EI, VoodooTech, or alien command assets.",
       "prerequisite": "None",
       "rarity": "Very Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -4221,7 +4567,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Combat First Aid",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4237,7 +4584,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4253,7 +4601,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Engineer Level 1",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4269,7 +4618,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Engineer Level 2",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -4285,7 +4635,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Ballistics or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -4301,7 +4652,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Counter-Intel",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -4317,7 +4669,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4333,7 +4686,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -4349,7 +4703,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Hidden Compartments",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -4365,7 +4720,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Field Technician",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -4381,7 +4737,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -4397,7 +4754,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -4413,7 +4771,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Patient Aim",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4429,7 +4788,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Fireteam: Haris",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4445,7 +4805,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4461,7 +4822,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Fireteam: Haris",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4477,7 +4839,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4493,7 +4856,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Fireteam: Duo",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -4509,7 +4873,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4525,7 +4890,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Forward Observer",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4541,7 +4907,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4557,7 +4924,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Killer Hacking Suite",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -4573,7 +4941,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Survival or Resistance for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -4589,7 +4958,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when a Geist assists your Hacking or Education test.",
       "prerequisite": "None",
       "rarity": "Uncommon",
-      "cost": "7"
+      "cost": "7",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -4605,7 +4975,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Swarm Synchrony",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -4621,7 +4992,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Precision Strike",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4637,7 +5009,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Snowline Scout",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4653,7 +5026,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Martial Arts Lvl 1",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4669,7 +5043,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4685,7 +5060,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Gunner",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4701,7 +5077,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4717,7 +5094,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "ICEbreaker",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4733,7 +5111,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Killer Hacking Suite",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4749,7 +5128,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Space Walker",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -4765,7 +5145,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Scanner Sweep",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -4781,7 +5162,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Survival or Resistance for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Antipode Hunter",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -4797,7 +5179,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4813,7 +5196,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Resistance or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -4829,7 +5213,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Read the Room",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4845,7 +5230,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -4861,7 +5247,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Discipline or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "State Discipline",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4877,7 +5264,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4893,7 +5281,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Impersonation - Mimetism",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4909,7 +5298,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Deep Cover",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -4925,7 +5315,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Rapid Triage",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4941,7 +5332,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Counter-Intrusion",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -4957,7 +5349,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Ghost Operative",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -4973,7 +5366,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Tactical Advance",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -4989,7 +5383,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "ICEbreaker",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -5005,7 +5400,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Applied Wisdom",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -5021,7 +5417,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Faith and Steel",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -5037,7 +5434,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Medicine or Tech on Lhosts, proxies, or synthetic bodies.",
       "prerequisite": "None",
       "rarity": "Rare",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -5053,7 +5451,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Knight Commander",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -5069,7 +5468,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Field Fabricator",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -5085,7 +5485,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Discipline or Command for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Imperial Operative",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5101,7 +5502,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5117,7 +5519,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Marksman Level 1",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5133,7 +5536,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Marksman Level 2",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5149,7 +5553,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Martial Arts Lvl 2",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5165,7 +5570,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5181,7 +5587,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Martial Arts Lvl 1",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5197,7 +5604,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Martial Arts Lvl 2",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -5213,7 +5621,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "One lower-level talent from Ghulam Doctor Field School",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -5229,7 +5638,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Route Planner",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -5245,7 +5655,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Hacking or Lifestyle for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Data Ghost",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -5261,7 +5672,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Field Medic Initiate",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -5277,7 +5689,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Medicine - Medic",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -5293,7 +5706,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -5309,7 +5723,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Emergency Treatment",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -5325,7 +5740,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Ballistics or Discipline in a coordinated assault.",
       "prerequisite": "None",
       "rarity": "Rare",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -5341,7 +5757,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Rock Climber",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -5357,7 +5774,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -5373,7 +5791,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Persuade or Lifestyle for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Silver Tongue",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -5389,7 +5808,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Backdoor Access",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -5405,7 +5825,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Officer - Liutenant",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -5421,7 +5842,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -5437,7 +5859,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Officer - Captain",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5453,7 +5876,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Tactical Advance",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -5469,7 +5893,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Animal Handling or Command for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Pack Ranger",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -5485,7 +5910,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Animal Handling or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Animal Handler",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5501,7 +5927,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Athletics or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -5517,7 +5944,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5533,14 +5961,15 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Pattern Recognition",
       "category": "Core Skill Talent",
-      "career": "",
+      "career": "General / Unrestricted",
       "doctrine": "Analysis",
-      "faction": "",
+      "faction": "All Factions",
       "restriction": "No Restrictions",
       "level": "1",
       "primary": "Analysis",
@@ -5548,11 +5977,12 @@ window.INFINITY_DATA = {
       "description": "Recognise recurring structures and relationships in complex information.",
       "effect": "When making an Analysis test, reroll one d20 but accept the new result.",
       "prerequisite": "Analysis Expertise 1",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Common",
+      "cost": "5",
       "source": "Infinity Corebook / Collector's Edition",
       "sourcePage": 76,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "5 Infinity Points is the simplified character sheet's house-rule price for a Level 1 Talent; the official Infinity RPG corebook uses XP instead."
     },
     {
       "category": "Combat",
@@ -5568,7 +5998,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Impersonation Level 1",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -5584,7 +6015,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Recon Specialist",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -5600,7 +6032,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -5616,7 +6049,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Pilot - Remote 1",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -5632,7 +6066,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Pilot - Remote 2",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -5648,7 +6083,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Pilot - TAG Operator",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -5664,7 +6100,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Pilot - TAG Trainee",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -5680,7 +6117,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -5696,7 +6134,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Ballistics or Analysis with plasma, alien weapons, or unfamiliar battlefield effects.",
       "prerequisite": "None",
       "rarity": "Very Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -5712,7 +6151,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Hacking or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Proxy Synchrony",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -5728,7 +6168,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Medicine or Tech for augmentations, body mods, or unusual physiology.",
       "prerequisite": "None",
       "rarity": "Rare",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -5744,7 +6185,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -5760,7 +6202,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Command or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Enhanced Reactions",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -5776,7 +6219,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Human Intel",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -5792,7 +6236,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Steady Scalpel",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -5808,7 +6253,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -5824,7 +6270,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -5840,7 +6287,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Recon Level 1",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -5856,7 +6304,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Recon Level 2",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -5872,7 +6321,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Silent Movement",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -5888,7 +6338,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Bio-Scanner",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -5904,7 +6355,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Shock Trooper",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -5920,7 +6372,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -5936,7 +6389,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -5952,7 +6406,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Wilderness Training",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -5968,7 +6423,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Applied Wisdom",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -5984,7 +6440,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -6000,7 +6457,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -6016,7 +6474,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Stealth or Survival for ambush, escape, or deep-cover setup.",
       "prerequisite": "None",
       "rarity": "Very Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -6032,7 +6491,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Resistance or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Hold Position",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -6048,7 +6508,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Tech or Extraplanetary for shipboard repairs, life support, or EVA emergencies.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -6064,7 +6525,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Breacher",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Technical",
@@ -6080,7 +6542,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Forward Analyst",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Stealth",
@@ -6096,7 +6559,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -6112,7 +6576,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Regeneration Protocol",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -6128,7 +6593,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Persuade or Lifestyle for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -6144,7 +6610,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -6160,7 +6627,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Cosmonaut",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -6176,7 +6644,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -6192,7 +6661,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Spacecraft Pilot - Level 1",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -6208,7 +6678,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Spacecraft Pilot - Level 2",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -6224,7 +6695,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Espionage",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -6240,7 +6712,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -6256,7 +6729,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "One lower-level talent from Circular Crew Operations",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -6272,7 +6746,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Discipline or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Medical",
@@ -6288,7 +6763,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -6304,14 +6780,15 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Close Combat or Discipline during a direct assault.",
       "prerequisite": "None",
       "rarity": "Rare",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "name": "Sturdy",
       "category": "Core Skill Talent",
-      "career": "",
+      "career": "General / Unrestricted",
       "doctrine": "Resistance",
-      "faction": "",
+      "faction": "All Factions",
       "restriction": "No Restrictions",
       "level": "1",
       "primary": "Resistance",
@@ -6319,11 +6796,12 @@ window.INFINITY_DATA = {
       "description": "Physical conditioning that improves reliability on Resistance tests.",
       "effect": "When making a Resistance test, reroll dice that failed to generate a success on the initial roll, but accept the new results.",
       "prerequisite": "Resistance Expertise 1",
-      "rarity": "",
-      "cost": "",
+      "rarity": "Common",
+      "cost": "5",
       "source": "Infinity Corebook / Collector's Edition",
       "sourcePage": 91,
-      "skillBonusMode": "source-single"
+      "skillBonusMode": "source-single",
+      "pricingNote": "5 Infinity Points is the simplified character sheet's house-rule price for a Level 1 Talent; the official Infinity RPG corebook uses XP instead."
     },
     {
       "category": "Combat",
@@ -6339,7 +6817,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Stabilized Platform",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Tech",
@@ -6355,7 +6834,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Remote Link",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -6371,7 +6851,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Persuade or Psychology for diplomacy, cover identity, or double-agent work.",
       "prerequisite": "None",
       "rarity": "Rare",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -6387,7 +6868,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -6403,7 +6885,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Combat Drill",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -6419,7 +6902,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Thievery or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Thief - Pickpocket",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -6435,7 +6919,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Thief - Acquisitions",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "General",
@@ -6451,7 +6936,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Thievery or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -6467,7 +6953,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Hacking or Lifestyle with secure records, blackmail files, or contracts.",
       "prerequisite": "None",
       "rarity": "Rare",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -6483,7 +6970,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Resistance or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Shield Line",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -6499,7 +6987,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Social",
@@ -6515,7 +7004,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Command or Persuade for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Negotiator",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -6531,7 +7021,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Persuade or Command for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Concilium Mandate",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Faction Prestige",
@@ -6547,7 +7038,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Medical Authority",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -6563,7 +7055,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Extraplanetary or Athletics in EVA, vacuum, or zero-g work.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -6579,7 +7072,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Suppression Expert",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Combat",
@@ -6595,7 +7089,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Ghost Perch",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -6611,7 +7106,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "None",
       "rarity": "Common",
-      "cost": "5"
+      "cost": "5",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -6627,7 +7123,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +3d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Hazard Mapping",
       "rarity": "Rare",
-      "cost": "15"
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Exploration",
@@ -6643,7 +7140,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
       "prerequisite": "Vacuum Familiar",
       "rarity": "Uncommon",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     },
     {
       "category": "Supplemental",
@@ -6659,7 +7157,8 @@ window.INFINITY_DATA = {
       "effect": "Gain +1d20 when using Tech or Observation through a remote or drone asset.",
       "prerequisite": "None",
       "rarity": "Rare",
-      "cost": "10"
+      "cost": "10",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
     }
   ],
   "equipment": [
