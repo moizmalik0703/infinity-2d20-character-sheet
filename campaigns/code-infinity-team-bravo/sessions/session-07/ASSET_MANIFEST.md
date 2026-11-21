@@ -12,4 +12,4 @@
 - `citations/buzzkill-allied-friendship.png`
 - `citations/anya-allied-friendship.png`
 
-The binary PNG assets are maintained separately from the XML dossier so the campaign log remains portable.
+**Upload status (verified 21 November 2026):** None of the eight PNG files listed above is present at its designated GitHub path. These are intended filenames, not live image links. The underlying Session 7 narrative and honours are preserved in XML. Tom Hendry's pending Session 7 citation was subsequently confirmed and awarded in Session 8. See [archive record audit](../../canon/record-audit.md).
