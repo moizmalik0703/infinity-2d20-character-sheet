@@ -29,7 +29,9 @@
       <honour>Ariadnan Medal of Valour — Awarded (Operation DAYBREAK)</honour>
       <administrativeNote>Mandatory Substance Abuse Management Workshop remains due within six weeks of Session 8 confirmation; commendation does not waive requirement.</administrativeNote>
     </operative>
-    <operative name="Karrion Voss" status="Alive" deploymentStatus="Not deployed in Session 7"/>
+    <operative name="Karrion Voss" status="Deceased" finalDeployment="Session 6 — Operation WATCHGLASS" deploymentStatus="Killed at ORIZON-4; not deployed in Sessions 7–8">
+      <note>Killed during the pursuit aboard ORIZON-4 after PALE/07 compromised NYSA. Session 6 after-action record is authoritative.</note>
+    </operative>
     <operative name="PalOFemi" status="Administrative leave / review"/>
     <operative name="Mary D'Vorce" status="Administrative leave / retraining"/>
   </team>
