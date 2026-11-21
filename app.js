@@ -1173,9 +1173,17 @@ function calculateSkillBonuses() {
   // Chapter 4 ALEPH Psychogenetic Foundation gives a skill increase separate from main attributes.
   const aiFoundation = selectedAlephFoundation();
   if (aiFoundation?.skill) addSubskillBonus(aiFoundation.skill, `Psychogenetic Foundation: ${aiFoundation.name}`);
-  selectedTraitObjects().forEach(t => {
+  // Slot-indexed Traits ensure source-skill choices remain with the correct card.
+  document.querySelectorAll("select[data-trait-select]").forEach(select => {
+    const t = byName(DATA.traits, select.value);
+    if (!t?.name) return;
     addSubskillBonus(t.primary, `Trait: ${t.name}`);
     addSubskillBonus(t.secondary, `Trait: ${t.name}`);
+    if (Array.isArray(t.skillChoices)) {
+      const selector = `select[data-trait-bonus-choice="${select.dataset.traitSelect}"]`;
+      const chosen = document.querySelector(selector)?.value || "";
+      if (t.skillChoices.includes(chosen)) addSubskillBonus(chosen, `Trait choice: ${t.name}`);
+    }
   });
 
   selectedTalentObjects().forEach(t => {
@@ -1321,6 +1329,27 @@ function setTraitCard(index, traitName) {
   setText(document.querySelector(`[data-trait-cost="${index}"]`), t.cost);
   setText(document.querySelector(`[data-trait-brief="${index}"]`), t.brief);
   setText(document.querySelector(`[data-trait-effect="${index}"]`), t.effect);
+  const choiceSelect = document.querySelector(`select[data-trait-bonus-choice="${index}"]`);
+  const choiceWrap = document.querySelector(`[data-trait-choice-wrap="${index}"]`);
+  if (choiceSelect && choiceWrap) {
+    const options = Array.isArray(t.skillChoices) ? t.skillChoices : [];
+    const oldValue = choiceSelect.dataset.traitName === t.name ? choiceSelect.value : "";
+    choiceSelect.replaceChildren();
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = t.name === "It Takes One to Know One"
+      ? "No skill increase (jail option)" : "Choose the granted skill...";
+    choiceSelect.appendChild(placeholder);
+    options.forEach(skill => {
+      const opt = document.createElement("option");
+      opt.value = skill;
+      opt.textContent = skill;
+      choiceSelect.appendChild(opt);
+    });
+    choiceSelect.value = options.includes(oldValue) ? oldValue : "";
+    choiceSelect.dataset.traitName = t.name || "";
+    choiceWrap.style.display = options.length ? "" : "none";
+  }
   if (!suppressSkillRatingUpdates) updateSkillRatings();
 }
 
@@ -1331,6 +1360,8 @@ function setTalentCard(index, talentName) {
     const output = document.querySelector(`[data-talent-${k}="${index}"]`);
     if (output) setText(output, t[dataKey]);
   });
+  const primary = document.querySelector(`[data-talent-primary="${index}"]`);
+  if (primary) primary.title = t.skillMappingNote || "";
   if (!suppressSkillRatingUpdates) updateSkillRatings();
 }
 
@@ -1348,6 +1379,10 @@ function buildTraits() {
         <label>Eligibility<div class="output" data-trait-restriction="${i}"></div></label>
         <label>Rarity<div class="output" data-trait-rarity="${i}"></div></label>
         <label class="trait-cost">Cost<div class="output" data-trait-cost="${i}"></div></label>
+        <label class="trait-choice" data-trait-choice-wrap="${i}" style="display:none">
+          Lifepath skill choice (+1 Rating)
+          <select data-trait-bonus-choice="${i}"><option value="">Choose the granted skill...</option></select>
+        </label>
       </div>
       <div class="trait-full text-panel trait-brief">
         <div class="text-panel-heading">Brief Description</div>
@@ -1361,6 +1396,8 @@ function buildTraits() {
 
     const sel = card.querySelector(`[data-trait-select="${i}"]`);
     sel.addEventListener("change", () => setTraitCard(i, sel.value));
+    card.querySelector(`select[data-trait-bonus-choice="${i}"]`)
+      .addEventListener("change", updateSkillRatings);
   }
 }
 
@@ -1536,6 +1573,7 @@ function collectState() {
   state.skillNotes = {};
   document.querySelectorAll("input[data-skill-note]").forEach(el => state.skillNotes[el.dataset.skillNote] = el.value);
   state.traits = [...document.querySelectorAll("select[data-trait-select]")].map(el => el.value);
+  state.traitBonusChoices = [...document.querySelectorAll("select[data-trait-bonus-choice]")].map(el => el.value);
   state.talents = [...document.querySelectorAll("select[data-talent-select]")].map(el => el.value);
   state.weapons = [...document.querySelectorAll("select[data-weapon-select]")].map(el => el.value);
   state.equipment = [...document.querySelectorAll("select[data-equipment-select]")].map(el => el.value);
@@ -1605,6 +1643,13 @@ function applyState(rawState) {
     const el = document.querySelector(`select[data-trait-select="${i}"]`);
     if (el) {
       el.value = resolveLegacyTraitTalentName(v);
+      el.dispatchEvent(new Event("change"));
+    }
+  });
+  (state.traitBonusChoices || []).forEach((v, i) => {
+    const el = document.querySelector(`select[data-trait-bonus-choice="${i}"]`);
+    if (el && [...el.options].some(option => option.value === v)) {
+      el.value = v;
       el.dispatchEvent(new Event("change"));
     }
   });

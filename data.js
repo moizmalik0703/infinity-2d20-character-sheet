@@ -58,15 +58,16 @@ window.INFINITY_DATA = {
     {
       "name": "Amateur Archaeologist",
       "category": "Ariadna Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "You stumbled onto intriguing ruins while hiking.",
       "effect": "Narrative trait representing informal archaeological curiosity.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 68
+      "sourcePage": 68,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Combat",
@@ -93,8 +94,8 @@ window.INFINITY_DATA = {
     {
       "name": "Antipode",
       "category": "Host / Heritage",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Playable member of Dawn's native species whose sapience is distributed across a trinary.",
       "effect": "AGI +2, AWA +1, BRW +2, COO −1, INT −2, PER −2; scent +2d20; +2 Vigour soak; Monstrous; Super-Jump; Primal Technology; Pack Mentality; Trinary Mind; no Firewall/geist/cybernetic augments.",
       "rarity": "",
@@ -102,7 +103,8 @@ window.INFINITY_DATA = {
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 79,
-      "hostHeritageOnly": true
+      "hostHeritageOnly": true,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Infowar",
@@ -129,15 +131,16 @@ window.INFINITY_DATA = {
     {
       "name": "Ariadnan Grit",
       "category": "Ariadna Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "When everything collapsed, stubborn endurance kept you functioning.",
       "effect": "Narrative trait representing Ariadnan perseverance.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 68
+      "sourcePage": 68,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Willpower",
@@ -153,15 +156,16 @@ window.INFINITY_DATA = {
     {
       "name": "Astrophobia",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Time in the Helios orbitals left you uncomfortable off-world.",
       "effect": "Extraplanetary tests have +1 complication range.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Physical",
@@ -287,15 +291,16 @@ window.INFINITY_DATA = {
     {
       "name": "Brand Loyalist",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "An early Ariadnan weapon became your personal standard.",
       "effect": "Acquire Americolt Eagle, Ojotnik or Teseum Hatchet; other-weapon tests have +1 complication range.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "General",
@@ -641,15 +646,16 @@ window.INFINITY_DATA = {
     {
       "name": "Cybered-Up",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "A local clinic fitted an improvised cybernetic limb.",
       "effect": "Begin with Basic Limb Replacement; Maintenance +1; successful tests using it gain 1 bonus Momentum.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Medical",
@@ -764,15 +770,16 @@ window.INFINITY_DATA = {
     {
       "name": "Disabled",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "A serious accident left a lasting disability and hardened resolve.",
       "effect": "Movement-related tests +1 Difficulty; Discipline tests −1 Difficulty, minimum D1.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Stealth",
@@ -788,8 +795,8 @@ window.INFINITY_DATA = {
     {
       "name": "Dogface",
       "category": "Host / Heritage",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Dog-Blooded Ariadnan who transforms into a Dog-Warrior under injury.",
       "effect": "Scent +2d20. On Wound: Discipline D1 or transform (may voluntarily fail): +2 Brawn, +2 Agility, +1 Vigour soak, recover all Vigour, Monstrous/Snarling Beast/Super-Jump; armour can be damaged; Fatigued when form ends.",
       "rarity": "",
@@ -797,7 +804,8 @@ window.INFINITY_DATA = {
       "restriction": "Ariadna Dog-Blooded career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 80,
-      "hostHeritageOnly": true
+      "hostHeritageOnly": true,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Combat",
@@ -945,15 +953,16 @@ window.INFINITY_DATA = {
     {
       "name": "Entirely Misunderstood",
       "category": "Antipode Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "You accidentally saved a tourist and the event was Mayacast.",
       "effect": "Narrative trait representing unwanted public recognition.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 87
+      "sourcePage": 87,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Exploration",
@@ -1211,15 +1220,16 @@ window.INFINITY_DATA = {
     {
       "name": "Grizzled",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Survival",
+      "secondary": "Not applicable",
       "brief": "Survived a month stranded on the frontier.",
       "effect": "Gain 1 rank in Survival; +1 complication range on Resistance tests against poison.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Combat",
@@ -1257,15 +1267,16 @@ window.INFINITY_DATA = {
     {
       "name": "Harried",
       "category": "Ariadna Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "An Antipode attack destroyed your place of business.",
       "effect": "Narrative trait; the source event also limits repeating/extending that career unless Earnings are lost.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 68
+      "sourcePage": 68,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Combat",
@@ -1281,15 +1292,16 @@ window.INFINITY_DATA = {
     {
       "name": "Heirloom Weapon",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "You inherited a weapon with a long personal history.",
       "effect": "With the heirloom weapon, roll +1§ damage; tests with it have +1 complication range.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Faction",
@@ -1415,15 +1427,16 @@ window.INFINITY_DATA = {
     {
       "name": "Infamous Lineage",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Your family carries a reputation for betrayal.",
       "effect": "Social skill tests with fellow Ariadnans have +2 complication range.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Stealth",
@@ -1494,15 +1507,19 @@ window.INFINITY_DATA = {
     {
       "name": "It Takes One to Know One",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Choose below",
+      "secondary": "Not applicable",
       "brief": "An early brush with crime taught you how offenders think.",
       "effect": "Source event offers jail time, or an Asset debt plus 1 rank of Thievery.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "source-choice",
+      "skillChoices": [
+        "Thievery"
+      ]
     },
     {
       "category": "Exploration",
@@ -1573,28 +1590,30 @@ window.INFINITY_DATA = {
     {
       "category": "General",
       "name": "Lucky",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "You should have died, but luck remained on your side.",
       "effect": "Increase Infinity Point refresh by 1, maximum 4.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "name": "Luddite",
       "category": "Ariadna Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "A disastrous off-world technological solution left you suspicious of advanced technology.",
       "effect": "Narrative trait; apply when distrust/unfamiliarity with advanced technology matters.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 68
+      "sourcePage": 68,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Physical",
@@ -1885,41 +1904,44 @@ window.INFINITY_DATA = {
     {
       "name": "Old Wound",
       "category": "Antipode Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "A hunting accident left a gunshot wound that never healed properly.",
       "effect": "Narrative trait; apply complications when the old injury matters.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 87
+      "sourcePage": 87,
+      "skillBonusMode": "special-effect"
     },
     {
       "name": "On the Watchlist",
       "category": "Ariadna Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Bureau Toth questioned you and released you under conditions.",
       "effect": "Narrative trait representing official surveillance or obligations.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 68
+      "sourcePage": 68,
+      "skillBonusMode": "special-effect"
     },
     {
       "name": "Overconfident",
       "category": "Antipode Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Surviving disaster convinced you that you are harder to kill than you really are.",
       "effect": "Narrative trait; complications should reflect reckless confidence.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 87
+      "sourcePage": 87,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Physical",
@@ -1946,15 +1968,16 @@ window.INFINITY_DATA = {
     {
       "name": "Paranoid",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Displacement or betrayal left you expecting hidden danger.",
       "effect": "Narrative trait; the source event can also trigger faction defection.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Physical",
@@ -1992,15 +2015,16 @@ window.INFINITY_DATA = {
     {
       "name": "Patriot",
       "category": "Ariadna Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "You foiled galactic sabotage and became associated with Ariadna's defence.",
       "effect": "Source event also grants +1 Earnings.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 68
+      "sourcePage": 68,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Technical",
@@ -2038,15 +2062,16 @@ window.INFINITY_DATA = {
     {
       "name": "Pioneer Spirit",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Adventure and the frontier became part of your identity.",
       "effect": "Add +1 Resolve.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Exploration",
@@ -2106,15 +2131,16 @@ window.INFINITY_DATA = {
     {
       "name": "Priority Target",
       "category": "Antipode Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "A group has singled you out as a problem that needs solving.",
       "effect": "Narrative trait representing active enemies or hunters.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 87
+      "sourcePage": 87,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Social",
@@ -2174,28 +2200,34 @@ window.INFINITY_DATA = {
     {
       "name": "Raised in a Barn",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Choose below",
+      "secondary": "Not applicable",
       "brief": "Extended isolation in the wilderness shaped your manners and instincts.",
       "effect": "Gain 1 rank in Animal Handling or Survival; +1 complication range on Personality-based tests.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "source-choice",
+      "skillChoices": [
+        "Animal Handling",
+        "Survival"
+      ]
     },
     {
       "name": "Rebel",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "You fought against the system.",
       "effect": "Gain +1 Morale Soak against authority figures.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Social",
@@ -2321,15 +2353,16 @@ window.INFINITY_DATA = {
     {
       "name": "Rockstar",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "A Hiraeth music career brought fame and its complications.",
       "effect": "Begin at a chosen drug's addiction threshold with starting doses; Lifestyle tests −1 Difficulty, minimum D0.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Stealth",
@@ -2356,28 +2389,30 @@ window.INFINITY_DATA = {
     {
       "name": "Sardonic",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Discipline",
+      "secondary": "Not applicable",
       "brief": "Being burned once left you disciplined but cynical.",
       "effect": "Gain 1 rank in Discipline; positive/pleasant social interactions have +3 complication range.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "source-single"
     },
     {
       "name": "Scarred",
       "category": "Antipode Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "A violent Caledonian strike left lasting scars.",
       "effect": "Narrative source trait.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 87
+      "sourcePage": 87,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Stealth",
@@ -2525,15 +2560,16 @@ window.INFINITY_DATA = {
     {
       "name": "Sleepy",
       "category": "Antipode Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Experimental tranquillisers left lasting drowsiness.",
       "effect": "Increase Difficulty of Surprise tests by 1.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 87
+      "sourcePage": 87,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Stealth",
@@ -2560,15 +2596,16 @@ window.INFINITY_DATA = {
     {
       "name": "Sole Survivor",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Survival",
+      "secondary": "Not applicable",
       "brief": "You were the only one left alive after disaster.",
       "effect": "Gain 1 rank in Survival; reduce Earnings by 1, minimum 0.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Technical",
@@ -2595,15 +2632,16 @@ window.INFINITY_DATA = {
     {
       "name": "Spirit of the 112",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Medicine",
+      "secondary": "Not applicable",
       "brief": "A 112 rescue inspired you toward emergency service.",
       "effect": "Gain 1 rank in Medicine and may choose 112 Emergency Responder first.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Physical",
@@ -2674,15 +2712,16 @@ window.INFINITY_DATA = {
     {
       "name": "Street Fighter",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Close Combat",
+      "secondary": "Not applicable",
       "brief": "Early experience in underground fight clubs.",
       "effect": "Gain 1 rank in Close Combat and a 1 Asset debt.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Social",
@@ -2819,15 +2858,20 @@ window.INFINITY_DATA = {
     {
       "name": "Survivor",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Choose below",
+      "secondary": "Not applicable",
       "brief": "Survived an early Antipode attack and fought back.",
       "effect": "Gain 1 rank in either Ballistics or Close Combat.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "source-choice",
+      "skillChoices": [
+        "Ballistics",
+        "Close Combat"
+      ]
     },
     {
       "category": "Physical",
@@ -3008,15 +3052,16 @@ window.INFINITY_DATA = {
     {
       "name": "True Grit",
       "category": "Ariadna Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "You endured disaster through sheer determination.",
       "effect": "Source event grants 1 Life Point during Lifepath creation.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 68
+      "sourcePage": 68,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Social",
@@ -3043,15 +3088,16 @@ window.INFINITY_DATA = {
     {
       "name": "Unlikely Hero",
       "category": "Dog-Blooded Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "You saved a tourist without realising the rescue was being Mayacast.",
       "effect": "Narrative trait representing unexpected public heroism.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna Dog-Blooded career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 88
+      "sourcePage": 88,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Exploration",
@@ -3089,15 +3135,16 @@ window.INFINITY_DATA = {
     {
       "name": "Vengeful Progeny",
       "category": "Antipode Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "A Dogface encountered in battle felt impossibly familiar.",
       "effect": "Narrative trait tying the character to Dog-Blooded ancestry and vengeance.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna Antipode career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 87
+      "sourcePage": 87,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Combat",
@@ -3157,15 +3204,16 @@ window.INFINITY_DATA = {
     {
       "name": "Weight of the World",
       "category": "Ariadna Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Discipline",
+      "secondary": "Not applicable",
       "brief": "A dying soldier entrusted you with unfinished business.",
       "effect": "Gain 1 rank in Discipline.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 67
+      "sourcePage": 67,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "General",
@@ -3214,21 +3262,22 @@ window.INFINITY_DATA = {
     {
       "name": "Wolfsbane",
       "category": "Ariadna Career Event",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Your role in a Dog Nation protest gave you a reputation.",
       "effect": "Source event grants 1 additional Momentum on Leadership tests.",
       "rarity": "",
       "cost": "",
       "restriction": "Ariadna sourcebook career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
-      "sourcePage": 68
+      "sourcePage": 68,
+      "skillBonusMode": "special-effect"
     },
     {
       "name": "Wulver",
       "category": "Host / Heritage",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Stable Dog-Blooded phenotype: powerful, keen-scented and permanently adapted.",
       "effect": "AGI +1, AWA +1, BRW +1, COO −1, PER −1, WIL −1; scent +2d20; +2 Vigour; Monstrous; Furious; Super-Jump; worn gear needs tailoring.",
       "rarity": "",
@@ -3236,7 +3285,8 @@ window.INFINITY_DATA = {
       "restriction": "Ariadna Dog-Blooded career",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 80,
-      "hostHeritageOnly": true
+      "hostHeritageOnly": true,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Medical",
@@ -3274,210 +3324,226 @@ window.INFINITY_DATA = {
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Sālik!",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 2).",
       "effect": "Source event option: Increase Resolve by 1.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Unbalanced",
-      "primary": "",
-      "secondary": "",
+      "primary": "Analysis",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 3).",
       "effect": "Source event option: Gain +1 Analysis.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Divided Loyalties",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 4).",
       "effect": "Source event option: Social status becomes Al-Mustaslaha.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Bookworm",
-      "primary": "",
-      "secondary": "",
+      "primary": "Education",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 6).",
       "effect": "Source event option: Gain +1 Education and a mentor contact.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Crushing Expectations",
-      "primary": "",
-      "secondary": "",
+      "primary": "Discipline",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 7).",
       "effect": "Source event option: Reduce Vigour by 1 and gain +1 Discipline.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Weak Immune System",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 9).",
       "effect": "Source event option: Reduce Vigour by 1 and add +1 Momentum to all Contagion damage. Reversing this costs 5+5§ Assets.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Insatiably Curious",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 10).",
       "effect": "Source event option: May choose Academic as the first career.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Free Spirit",
-      "primary": "",
-      "secondary": "",
+      "primary": "Analysis",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 12).",
       "effect": "Source event option: Gain +1 Analysis and a mentor contact.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Trust Issues",
-      "primary": "",
-      "secondary": "",
+      "primary": "Psychology",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 13).",
       "effect": "Source event option: Gain +1 Psychology.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Vengeful",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 14).",
       "effect": "Source event option: Increase Resolve by 1.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Friends in Low Places",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 15).",
       "effect": "Source event option: Spend 1d6 years in jail and gain a Criminal Record; may choose Kum Ganger as the first career.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Wandering Eyes",
-      "primary": "",
-      "secondary": "",
+      "primary": "Observation",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 16).",
       "effect": "Source event option: Gain +1 Observation; may choose Odalisque as the first career.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Freeze Response",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 17).",
       "effect": "Source event option: Increase Complication Range by 2 on social skill tests with Haqqislam faction members.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Myriad Medications",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 18).",
       "effect": "Source event option: Serum grants no bonus and instead inflicts 1+2§ damage.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Ideologue",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 19).",
       "effect": "Source event option: Defect to a random faction.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect"
     },
     {
       "category": "Haqqislam Adolescent Event",
       "name": "Blind Faith",
-      "primary": "",
-      "secondary": "",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
       "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 20).",
       "effect": "Source event option: The character died and was resurrected.",
       "rarity": "",
       "cost": "",
       "restriction": "Haqqislam sourcebook career",
       "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect"
     }
   ],
   "talents": [
@@ -3745,15 +3811,17 @@ window.INFINITY_DATA = {
       "faction": "",
       "restriction": "No Restrictions",
       "level": "1",
-      "primary": "Acrobatics",
-      "secondary": "",
+      "primary": "Athletics",
+      "secondary": "Not applicable",
       "description": "Training in using wind resistance and landing surfaces to survive long falls.",
       "effect": "For each rank, treat the distance fallen as one zone shorter when calculating falling damage.",
       "prerequisite": "Long Jumper; Acrobatics Expertise 2",
       "rarity": "",
       "cost": "",
       "source": "Infinity Corebook / Collector's Edition",
-      "sourcePage": 75
+      "sourcePage": 75,
+      "skillMappingNote": "Simplified rules house-rule: source Acrobatics is represented by Athletics.",
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Supplemental",
@@ -5476,14 +5544,15 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions",
       "level": "1",
       "primary": "Analysis",
-      "secondary": "",
+      "secondary": "Not applicable",
       "description": "Recognise recurring structures and relationships in complex information.",
       "effect": "When making an Analysis test, reroll one d20 but accept the new result.",
       "prerequisite": "Analysis Expertise 1",
       "rarity": "",
       "cost": "",
       "source": "Infinity Corebook / Collector's Edition",
-      "sourcePage": 76
+      "sourcePage": 76,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Combat",
@@ -6246,14 +6315,15 @@ window.INFINITY_DATA = {
       "restriction": "No Restrictions",
       "level": "1",
       "primary": "Resistance",
-      "secondary": "",
+      "secondary": "Not applicable",
       "description": "Physical conditioning that improves reliability on Resistance tests.",
       "effect": "When making a Resistance test, reroll dice that failed to generate a success on the initial roll, but accept the new results.",
       "prerequisite": "Resistance Expertise 1",
       "rarity": "",
       "cost": "",
       "source": "Infinity Corebook / Collector's Edition",
-      "sourcePage": 91
+      "sourcePage": 91,
+      "skillBonusMode": "source-single"
     },
     {
       "category": "Combat",
