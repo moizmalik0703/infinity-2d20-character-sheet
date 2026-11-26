@@ -16,7 +16,7 @@ window.INFINITY_DATA = DATA;
 window.DATA = DATA;
 const mainSkills = ["Agility","Awareness","Brawn","Coordination","Intelligence","Personality","Willpower"];
 const skillGroups = {
-  "Agility": ["Close Combat","Stealth"],
+  "Agility": ["Acrobatics","Close Combat","Stealth"],
   "Awareness": ["Analysis","Extraplanetary","Observation","Survival","Thievery"],
   "Brawn": ["Athletics","Resistance"],
   "Coordination": ["Ballistics","Pilot","Spacecraft"],
@@ -25,7 +25,7 @@ const skillGroups = {
   "Willpower": ["Discipline"]
 };
 const skillOrder = [
-  "Agility","Close Combat","Stealth","Awareness","Analysis","Extraplanetary","Observation","Survival","Thievery",
+  "Agility","Acrobatics","Close Combat","Stealth","Awareness","Analysis","Extraplanetary","Observation","Survival","Thievery",
   "Brawn","Athletics","Resistance","Coordination","Ballistics","Pilot","Spacecraft",
   "Intelligence","Education","Hacking","Medicine","Psychology","Science","Tech",
   "Personality","Animal Handling","Command","Lifestyle","Persuade","Willpower","Discipline"
@@ -35,6 +35,7 @@ Object.entries(skillGroups).forEach(([parent, children]) => children.forEach(chi
 
 const subSkills = skillOrder.filter(skill => !mainSkills.includes(skill));
 let startingSkillBonuses = {};
+let talentGrantChoices = {};
 
 
 function makeOptions(select, values, placeholder = "") {
@@ -51,15 +52,27 @@ function makeOptions(select, values, placeholder = "") {
   });
 }
 const LEGACY_TRAIT_TALENT_ALIASES = {
-  "Counter Intelligence": "Counter-Intel",
-  "Tactical Awareness": "Tactical Perception",
+  "Counter-Intel": "Counter Intelligence",
+  "Tactical Perception": "Tactical Awareness",
+  "Automatic Response Order (ARO)": "Automatic Reaction Order (ARO)",
+  "Blending In": "Blending in",
+  "Berserk": "Dogged",
+  "Beserk": "Dogged",
+  "Frenzy": "Damage Resistance",
+  "Frenzy (total)": "Damage Resistance (Total)",
+  "Natural Born Warrior": "Born Leader",
+  "Fanatic (Hassassin Bahram Affiliate)": "Fanatic (Only for the members of the Hassassin Bahram or any valuable affiliates that was bestowed by the Imam.)",
+  "Drop zone Specialist": "Drop Zone Specialist",
+  "Officer - Liutenant": "Officer - Lieutenant",
+  "Pilot - TAG expert": "Pilot - TAG Expert",
+  "Attache": "Attaché",
   "Proxy Coordination": "Proxy Synchrony",
   "Human Intelligence": "Human Intel",
   "Swarm Coordination": "Swarm Synchrony",
   "Quick Reflexes": "Quick Reactions",
   "Enhanced Reflexes": "Enhanced Reactions",
   "Gladiator Reflexes": "Gladiator Reactions",
-  "Superior Tactics": "Superior Doctrine",
+  "Superior Doctrine": "Superior Tactics",
   "Streetwise": "Street Operator"
 };
 
@@ -69,8 +82,9 @@ function resolveLegacyTraitTalentName(value) {
 }
 
 function byName(list, name) {
-  const resolved = resolveLegacyTraitTalentName(name);
-  return list.find(x => x.name === resolved) || {};
+  const raw = String(name || "");
+  const resolved = resolveLegacyTraitTalentName(raw);
+  return list.find(x => x.name === raw) || list.find(x => x.name === resolved) || {};
 }
 
 function alphaCompare(a, b) {
@@ -819,7 +833,9 @@ function migrateLegacyHostState(state) {
     "covert mission sites":"Alamut","Bourak universities":"Bourak","bimaristans":"Bourak","research centres":"Bourak"
   };
   if (legacyHaqqHomeworldMap[copy.homeworld]) copy.homeworld = legacyHaqqHomeworldMap[copy.homeworld];
-  const legacyTraits = Array.isArray(copy.traits) ? copy.traits.map(resolveLegacyTraitTalentName) : [];
+  const legacyTraits = Array.isArray(copy.traits) ? copy.traits.map(name =>
+    !copy.houseRuleBuild && name === "Dogged" ? "Unshakable" : resolveLegacyTraitTalentName(name)) : [];
+  copy.houseRuleBuild = "v81-approved-house-rules";
   if (!copy.hostHeritage) {
     if (legacyTraits.includes("Wulver")) copy.hostHeritage = "Wulver";
     else if (legacyTraits.includes("Dogface")) copy.hostHeritage = "Dogface";
@@ -1156,6 +1172,53 @@ function selectedTalentObjects() {
 // Primary/Secondary on ordinary Traits and Talents are applicability labels,
 // not additional +1 Rating grants. d20/Difficulty/reroll bonuses remain
 // contextual rules in the corresponding Effect cards and skill rule tooltips.
+// Approved workbook ranks represent acquired prerequisite progressions.
+// The same lower rank is counted only once even if it occupies another slot.
+function approvedAbilityChain(list, item, seen = new Set()) {
+  if (!item?.name || seen.has(item.name)) return [];
+  seen.add(item.name);
+  const prior = item.rulesReview === "Approved workbook" && item.prerequisite
+    ? byName(list, item.prerequisite) : null;
+  const earlier = prior?.rulesReview === "Approved workbook"
+    ? approvedAbilityChain(list, prior, seen) : [];
+  return [...earlier, item];
+}
+function uniqueAcquiredAbilities(list, items) {
+  const seen = new Set();
+  return items.flatMap(item => approvedAbilityChain(list, item, seen));
+}
+function talentChoiceKey(item, group) {
+  return item.name + "|" + group;
+}
+function renderTalentGrantChoices(index, item) {
+  const wrap = document.querySelector(`[data-talent-choice-wrap="${index}"]`);
+  if (!wrap) return;
+  wrap.replaceChildren();
+  const ranks = approvedAbilityChain(DATA.talents, item);
+  ranks.forEach(rank => (rank.skillGrantChoices || []).forEach(group => {
+    const key = talentChoiceKey(rank, group);
+    const options = skillGroups[group] || [];
+    if (!options.length) return;
+    const label = document.createElement("label");
+    label.textContent = rank.name + ": +1 " + group + " subskill";
+    const select = document.createElement("select");
+    select.dataset.talentGrantKey = key;
+    makeOptions(select, options, "Choose the granted skill...");
+    select.value = options.includes(talentGrantChoices[key]) ? talentGrantChoices[key] : "";
+    select.addEventListener("change", () => {
+      if (options.includes(select.value)) talentGrantChoices[key] = select.value;
+      else delete talentGrantChoices[key];
+      document.querySelectorAll("select[data-talent-grant-key]").forEach(other => {
+        if (other.dataset.talentGrantKey === key && other !== select) other.value = select.value;
+      });
+      updateSkillRatings();
+    });
+    label.appendChild(select);
+    wrap.appendChild(label);
+  }));
+  wrap.style.display = wrap.childElementCount ? "" : "none";
+}
+
 function calculateSkillBonuses() {
   const direct = {};
   const details = {};
@@ -1177,11 +1240,15 @@ function calculateSkillBonuses() {
   const aiFoundation = selectedAlephFoundation();
   if (aiFoundation?.skill) addSubskillBonus(aiFoundation.skill, `Psychogenetic Foundation: ${aiFoundation.name}`);
 
-  // Exactly 12 source-single Traits explicitly grant a +1 Rating.
-  // Exactly 3 source-choice Traits grant +1 in the chosen skill, if chosen.
+  // Workbook-approved fixed skill grants are separate from situational effects.
+  uniqueAcquiredAbilities(DATA.traits, selectedTraitObjects()).forEach(t => {
+    (t.skillGrants || []).forEach(skill => addSubskillBonus(skill, `Trait: ${t.name} (approved +1 Rating)`));
+  });
+  const countedSourceTraits = new Set();
   document.querySelectorAll("select[data-trait-select]").forEach(select => {
     const t = byName(DATA.traits, select.value);
-    if (!t?.name) return;
+    if (!t?.name || countedSourceTraits.has(t.name)) return;
+    countedSourceTraits.add(t.name);
     if (t.skillBonusMode === "source-single") {
       addSubskillBonus(t.primary, `Trait: ${t.name} (explicit +1 Rating)`);
     } else if (t.skillBonusMode === "source-choice" && Array.isArray(t.skillChoices)) {
@@ -1192,9 +1259,14 @@ function calculateSkillBonuses() {
     // "special-effect" and generic Trait skill labels grant no Rating.
   });
 
-  // Talents, including core skill Talents with "source-single" mapping,
-  // do not grant +1 Rating unless a separate, explicit grant is later
-  // implemented. Their +Nd20, rerolls and other effects are conditional.
+  uniqueAcquiredAbilities(DATA.talents, selectedTalentObjects()).forEach(t => {
+    (t.skillGrants || []).forEach(skill => addSubskillBonus(skill, `Talent: ${t.name} (approved +1 Rating)`));
+    (t.skillGrantChoices || []).forEach(group => {
+      const chosen = talentGrantChoices[talentChoiceKey(t, group)];
+      if ((skillGroups[group] || []).includes(chosen))
+        addSubskillBonus(chosen, `Talent: ${t.name} (chosen +1 Rating)`);
+    });
+  });
   return { direct, details };
 }
 
@@ -1206,11 +1278,13 @@ function contextualSkillEffectNotes(skill) {
   const notes = [];
   const usesSkill = item =>
     [item.primary, item.secondary].some(label => normalizeSkillName(label) === skill);
+  const superseded = (list, items, item) => items.some(other => other.name !== item.name &&
+    approvedAbilityChain(list, other).some(rank => rank.name === item.name));
   selectedTraitObjects().forEach(t => {
-    if (usesSkill(t) && t.effect) notes.push(`Trait ${t.name}: ${t.effect}`);
+    if (usesSkill(t) && t.effect) notes.push(`Trait ${t.name}${superseded(DATA.traits, selectedTraitObjects(), t) ? " (lower rank: numerical bonus superseded)" : ""}: ${t.effect}`);
   });
   selectedTalentObjects().forEach(t => {
-    if (usesSkill(t) && t.effect) notes.push(`Talent ${t.name}: ${t.effect}`);
+    if (usesSkill(t) && t.effect) notes.push(`Talent ${t.name}${superseded(DATA.talents, selectedTalentObjects(), t) ? " (lower rank: numerical bonus superseded)" : ""}: ${t.effect}`);
   });
   return notes;
 }
@@ -1388,6 +1462,7 @@ function setTalentCard(index, talentName) {
   });
   const primary = document.querySelector(`[data-talent-primary="${index}"]`);
   if (primary) primary.title = t.skillMappingNote || "";
+  renderTalentGrantChoices(index, t);
   if (!suppressSkillRatingUpdates) updateSkillRatings();
 }
 
@@ -1443,6 +1518,7 @@ function buildTalents() {
       <label>Eligibility<div class="output" data-talent-restriction="${i}"></div></label>
       <label>Rarity<div class="output" data-talent-rarity="${i}"></div></label>
       <label>Cost<div class="output" data-talent-cost="${i}"></div></label>
+      <div class="wide-text text-panel" data-talent-choice-wrap="${i}" style="display:none"></div>
       <div class="wide-text text-panel talent-description">
         <div class="text-panel-heading">Description</div>
         <div class="output big-text" data-talent-description="${i}"></div>
@@ -1600,6 +1676,8 @@ function collectState() {
   document.querySelectorAll("input[data-skill-note]").forEach(el => state.skillNotes[el.dataset.skillNote] = el.value);
   state.traits = [...document.querySelectorAll("select[data-trait-select]")].map(el => el.value);
   state.traitBonusChoices = [...document.querySelectorAll("select[data-trait-bonus-choice]")].map(el => el.value);
+  state.talentGrantChoices = { ...talentGrantChoices };
+  state.houseRuleBuild = "v81-approved-house-rules";
   state.talents = [...document.querySelectorAll("select[data-talent-select]")].map(el => el.value);
   state.weapons = [...document.querySelectorAll("select[data-weapon-select]")].map(el => el.value);
   state.equipment = [...document.querySelectorAll("select[data-equipment-select]")].map(el => el.value);
@@ -1623,6 +1701,7 @@ function applyState(rawState) {
   delete state.restriction;
 
   startingSkillBonuses = { ...(state.startBonuses || {}) };
+  talentGrantChoices = { ...(state.talentGrantChoices || {}) };
 
   // Identity dependencies are restored in order so Faction -> Host -> Homeworld /
   // Career filtering is valid before the rest of the saved sheet is applied.
@@ -2116,6 +2195,7 @@ function setWeaponsAndEquipment(weapons = [], equipment = []) {
 }
 
 function clearTraitAndTalentSlots() {
+  talentGrantChoices = {};
   document.querySelectorAll("select[data-trait-select]").forEach((element, index) => setSelectValue(`select[data-trait-select="${index}"]`, ""));
   document.querySelectorAll("select[data-talent-select]").forEach((element, index) => setSelectValue(`select[data-talent-select="${index}"]`, ""));
 }
@@ -2307,7 +2387,7 @@ async function vaultGet(key) {
 
 function buildCharacterSnapshot(id, state) {
   return {
-    build: "v75-technology-workshop-foundation",
+    build: "v81-approved-house-rules",
     id: id || saveIdFromName(state?.characterName || currentCharacterName()),
     name: state?.characterName || currentCharacterName(),
     savedAt: state?.savedAt || new Date().toISOString(),
@@ -4403,7 +4483,7 @@ function traitGlossaryText(t) {
   const category = categoryLoreHook(t.category);
   const skillLine = skillLoreSentence(t.primary, t.secondary);
   const brief = t.brief ? `Character-sheet meaning: ${t.brief}` : "Character-sheet meaning: This Trait marks a recurring strength, training history, reputation, or survival instinct connected to the listed skills.";
-  const effect = t.effect ? `Rule effect: ${t.effect}` : "";
+  const effect = t.effect ? `Custom House Rule effect: ${t.effect}` : "";
   const eligibility = restrictionLoreText(t.restriction);
   const source = t.source && t.sourcePage ? `Source: ${t.source}, p. ${t.sourcePage}.` : "";
   const opening = hook || `${name} reflects a recognisable habit, reputation, or way of surviving that other people in the setting can notice and remember.`;
@@ -4418,7 +4498,7 @@ function talentGlossaryText(t) {
   const doctrine = t.doctrine ? `Doctrine / path: ${t.doctrine} suggests the school, unit culture, tactical habit, or specialist tradition behind the Talent.` : "";
   const skillLine = skillLoreSentence(t.primary, t.secondary);
   const original = t.description ? `Character-sheet meaning: ${t.description}` : "Character-sheet meaning: This Talent supports the listed concept, Career, Faction, doctrine, or skill link.";
-  const effect = t.effect ? `Rule effect: ${t.effect}` : "";
+  const effect = t.effect ? `Custom House Rule effect: ${t.effect}` : "";
   const limits = glossaryMetaLine([
     t.career ? `Career link: ${t.career}` : "",
     t.faction ? `Faction link: ${t.faction}` : "",
@@ -5003,7 +5083,7 @@ function hideGlossary(options = {}) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.documentElement.dataset.infinityBuild = "v80-vehicle-tag-workshop";
+  document.documentElement.dataset.infinityBuild = "v81-approved-house-rules";
   pruneLegacyProfileFields();
   initLists();
   buildMainSkills();
@@ -5079,7 +5159,7 @@ window.addEventListener("load", () => {
    complete Corebook Lifepath: unsupported dice, contacts, talents and earned gear choices
    remain explicitly manual. All generated numeric bonuses are derived from a saved ledger. */
 (function installO12LifepathV74() {
-  const NEW_BUILD = "v80-vehicle-tag-workshop";
+  const NEW_BUILD = "v81-approved-house-rules";
   const careerSources = DATA.o12Reference?.careerProfiles || {};
   const o12Source = DATA.o12Reference || {};
   const defaultLedger = () => ({ version: 74, lifePoints: 5, otherSpent: 0, phases: [], adolescent: null, pillar: null, criminalRecord: false });
@@ -6080,7 +6160,7 @@ window.addEventListener("load", () => {
 /* V77 Mercenaries / NA2 source scaffold retained.
    The temporary War Market foundation panel was removed because the complete
    MUH050216 sourcebook is not present in the supplied source corpus. */
-window.INFINITY_BUILD = "v80-vehicle-tag-workshop";
+window.INFINITY_BUILD = "v81-approved-house-rules";
 
 /* V79: Core Equipment provenance audit — 141 named acquisitions verified; 42 related only; 78 unresolved pending further sources. */
 
@@ -6466,7 +6546,7 @@ window.INFINITY_BUILD = "v80-vehicle-tag-workshop";
     }
     return content;
   };
-  window.INFINITY_BUILD = "v80-vehicle-tag-workshop";
+  window.INFINITY_BUILD = "v81-approved-house-rules";
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
