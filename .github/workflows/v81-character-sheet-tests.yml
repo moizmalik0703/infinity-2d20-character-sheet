@@ -1,0 +1,24 @@
+name: Character sheet v81 regression
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript and house-rule regression
+        run: node tests/v81-house-rules.cjs
+      - name: Install browser test dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Browser smoke test
+        run: node tests/v81-browser-smoke.cjs

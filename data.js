@@ -10,19 +10,27 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH, O-12, Nomad, or advanced Hacking background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
       "name": "Aerial Trooper",
-      "primary": "Extraplanetary",
+      "primary": "Pilot",
       "secondary": "Pilot",
-      "brief": "Focused training in Extraplanetary and Pilot, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to operate vehicles and manoeuvre through hostile conditions. This trait represents the character's specialised aptitude as a Aerial Trooper.",
-      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Pilot for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "With a functioning jetpack, make a Pilot test to deploy by air at an eligible location when combat starts; use the scatter template if needed. During combat, you may fly up to 10 ft above the ground.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 37,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Physical",
@@ -34,7 +42,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -46,19 +56,28 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "All Terrain Expert",
       "primary": "Survival",
       "secondary": "Extraplanetary",
-      "brief": "Extensive training in Survival and Extraplanetary, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to operate safely in space, vacuum, zero gravity, and hostile off-world environments. This trait represents the character's broad aptitude as a All Terrain Expert.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Extraplanetary for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reduce Difficulty by 2 on terrain-related skill tests. Requires Terrain Expert; replaces its reduction.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "15",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "3",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 73,
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "prerequisite": "Terrain Expert"
     },
     {
       "name": "Amateur Archaeologist",
@@ -73,7 +92,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -85,19 +106,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
       "name": "Anti Virus",
       "primary": "Hacking",
       "secondary": "Resistance",
-      "brief": "Extensive training in Hacking and Resistance, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Anti Virus.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "When an Infowar attack would inflict a Firewall Wound, spend 1 Momentum to halve the attack's Firewall damage (round down), then determine Wounds normally.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 26,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "name": "Antipode",
@@ -113,7 +142,9 @@ window.INFINITY_DATA = {
       "sourcePage": 79,
       "hostHeritageOnly": true,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Heritage selection; not a separately purchased Trait."
+      "pricingNote": "Heritage selection; not a separately purchased Trait.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Infowar",
@@ -125,7 +156,26 @@ window.INFINITY_DATA = {
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "Nomad or advanced Hacking background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Arachne Signal Mask",
+      "category": "Infowar",
+      "primary": "Hacking",
+      "secondary": "Stealth",
+      "effect": "When masking your own quantronic trail, add 1 Heat to reroll one failed Hacking d20. Accept the new result; once per test.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "Nomad or advanced Hacking background",
+      "source": "Nomads sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Specialist training inspired by Nomads operations."
     },
     {
       "category": "Exploration",
@@ -137,7 +187,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Ariadnan Grit",
@@ -152,7 +204,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Willpower",
@@ -164,7 +218,9 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH access or Posthuman background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Astrophobia",
@@ -179,7 +235,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -191,19 +249,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
-      "name": "Automatic Response Order (ARO)",
+      "name": "Automatic Reaction Order (ARO)",
       "primary": "Command",
       "secondary": "Observation",
-      "brief": "Focused training in Command and Observation, allowing the character to lead allies, issue orders, and coordinate group action while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Automatic Response Order (ARO).",
-      "effect": "Reduce Difficulty by 1 when using Command or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reaction: when an enemy leaves your immediate range (5 ft), spend 1 Momentum to attempt a CC or BS attack if eligible. On success, deal normal damage and stop that movement.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 27,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Social",
@@ -215,7 +281,9 @@ window.INFINITY_DATA = {
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "Nomad, Bakunin, or Submondo background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -227,7 +295,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -239,31 +309,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
-    },
-    {
-      "category": "General",
-      "name": "Berserk",
-      "primary": "Close Combat",
-      "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Berserk.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Rare",
-      "cost": "10",
-      "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Bio Immunity",
       "primary": "Resistance",
       "secondary": "Medicine",
-      "brief": "Extensive training in Resistance and Medicine, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to treat injuries, stabilize casualties, and apply medical or biotech knowledge. This trait represents the character's broad aptitude as a Bio Immunity.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Ignore Poisoned. Viral ammunition deals normal damage to you without its poison effect.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 39,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Medical",
@@ -275,7 +341,9 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -287,19 +355,81 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
-      "name": "Blending In",
+      "name": "Blending in",
       "primary": "Stealth",
       "secondary": "Lifestyle",
-      "brief": "Focused training in Stealth and Lifestyle, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Blending In.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Gain +1 Stealth skill point. On a Stealth test, you may reroll all failed d20s once; accept the new results.",
+      "rarity": "Rare",
+      "cost": "5",
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 28,
+      "skillGrants": [
+        "Stealth"
+      ],
+      "skillGrantChoices": []
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Blind Faith",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 20).",
+      "effect": "Source event option: The character died and was resurrected.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Bookworm",
+      "primary": "Education",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 6).",
+      "effect": "Source event option: Gain +1 Education and a mentor contact.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Social",
+      "name": "Born Leader",
+      "primary": "Command",
+      "secondary": "Close Combat",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once per long rest, automatically pass a Command test; gain no Momentum from that check.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 56,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Faction",
@@ -311,7 +441,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Haqqislam or academic background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Brand Loyalist",
@@ -326,31 +458,45 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Brutal Critical",
       "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Brutal Critical.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a subskill test, a natural 1 or a natural roll exactly equal to the skill target counts as a critical success (two successes). The latter is an exception to the normal under-target rule. A die cannot count as more than two successes; main-skill checks gain no expanded critical range.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 40,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Social",
       "name": "Brutality",
       "primary": "Psychology",
       "secondary": "Close Combat",
-      "brief": "Extensive training in Psychology and Close Combat, allowing the character to read behavior, resist manipulation, and understand motives while also being able to fight effectively at close range and control dangerous melee engagements. This trait represents the character's broad aptitude as a Brutality.",
-      "effect": "Reduce Difficulty by 1 when using Psychology or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "When you attack a target, it must pass a D1 Psychology test or become Frightened. Resolve at most once per target per round.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 41,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Social",
@@ -362,31 +508,69 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Cammo - Normal",
+      "category": "General",
+      "primary": "Stealth",
+      "secondary": "Not applicable",
+      "effect": "Gain +1d20 on Stealth tests while using functioning camouflage. On success, gain Hidden, not Invisible. Prerequisite for Cammo - TO 1.",
+      "cost": "5",
+      "level": "1",
+      "rarity": "Common",
+      "restriction": "No Restrictions",
+      "source": "Approved House Rule Catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": null,
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits."
     },
     {
       "category": "Social",
       "name": "Cammo - TO 1",
       "primary": "Stealth",
       "secondary": "Discipline",
-      "brief": "Extensive training in Stealth and Discipline, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Cammo - TO 1.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Gain +2d20 on Stealth tests using functioning TO camouflage. On success, gain Invisible. Gain +1 Discipline skill point on acquisition. Requires Cammo - Normal.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 42,
+      "skillGrants": [
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "prerequisite": "Cammo - Normal"
     },
     {
       "category": "Stealth",
       "name": "Cammo - TO 2",
       "primary": "Stealth",
       "secondary": "Survival",
-      "brief": "Extensive training in Stealth and Survival, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to navigate harsh terrain, endure hazards, and keep a group alive in the field. This trait represents the character's broad aptitude as a Cammo - TO 2.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Gain +3d20 on Stealth tests using functioning TO camouflage. On success, gain Invisible. Gain +1 Survival skill point on acquisition. Requires Cammo - TO 1; replaces its dice bonus.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "15",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "3",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 74,
+      "skillGrants": [
+        "Survival"
+      ],
+      "skillGrantChoices": [],
+      "prerequisite": "Cammo - TO 1"
     },
     {
       "category": "Stealth",
@@ -398,7 +582,9 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -410,7 +596,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Mercenary, criminal, or trade-route background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -422,7 +610,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -434,7 +624,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -446,7 +638,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -458,31 +652,45 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
       "name": "Chain of command",
       "primary": "Command",
       "secondary": "Discipline",
-      "brief": "Extensive training in Command and Discipline, allowing the character to lead allies, issue orders, and coordinate group action while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Chain of command.",
-      "effect": "Reduce Difficulty by 1 when using Command or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "When your officer becomes Unconscious or Dead, you may temporarily assume their Officer Talent for the encounter. Do not gain its permanent skill points or refresh spent orders.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 43,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Social",
       "name": "Charismatic",
       "primary": "Persuade",
       "secondary": "Lifestyle",
-      "brief": "Focused training in Persuade and Lifestyle, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to navigate status, wealth, etiquette, contacts, and social institutions. This trait represents the character's specialised aptitude as a Charismatic.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Lifestyle for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Persuade (Personality) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 3,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Exploration",
@@ -494,7 +702,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Extraplanetary or shipboard operations background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -506,7 +716,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -518,19 +730,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
       "name": "Combat Analysis",
       "primary": "Analysis",
       "secondary": "Observation",
-      "brief": "Focused training in Analysis and Observation, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Combat Analysis.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Minor Action: make a D1 Analysis test during combat. On success, identify one special ability, hidden item or technological advantage of an opponent. Spend 1 Momentum per additional detail.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 29,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Medical",
@@ -542,19 +762,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
       "name": "Combat Instinct",
       "primary": "Observation",
       "secondary": "Discipline",
-      "brief": "Extensive training in Observation and Discipline, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Combat Instinct.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "You are immune to the Surprised condition.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 44,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Medical",
@@ -566,7 +794,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -578,7 +808,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -590,7 +822,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "O-12, legal, diplomatic, or command background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -602,7 +836,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "PanOceania or covert-service background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -614,7 +850,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -626,19 +864,45 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Nomad or shipboard operations background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
       "name": "Counsellor",
       "primary": "Psychology",
       "secondary": "Education",
-      "brief": "Focused training in Psychology and Education, allowing the character to read behaviour, resist manipulation, and understand motives while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's specialised aptitude as a Counsellor.",
-      "effect": "Reduce Difficulty by 1 when using Psychology or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Psychology (Intelligence) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 4,
+      "skillGrants": [],
+      "skillGrantChoices": []
+    },
+    {
+      "name": "Counter Intelligence",
+      "category": "General",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "effect": "Once per long rest, automatically pass one skill check against a target. Gain no Momentum from that check.",
+      "cost": "10",
+      "level": "2",
+      "rarity": "Uncommon",
+      "restriction": "No Restrictions",
+      "source": "Approved House Rule Catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 45,
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits."
     },
     {
       "category": "Combat",
@@ -650,7 +914,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -662,19 +928,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Courageous",
       "primary": "Discipline",
       "secondary": "Resistance",
-      "brief": "Extensive training in Discipline and Resistance, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Courageous.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "When you would gain Frightened, spend 1 Momentum to ignore that instance of the condition.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 30,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Combat",
@@ -686,7 +960,26 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Crushing Expectations",
+      "primary": "Discipline",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 7).",
+      "effect": "Source event option: Reduce Vigour by 1 and gain +1 Discipline.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -698,7 +991,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Cybered-Up",
@@ -713,7 +1008,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -725,7 +1022,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -737,7 +1036,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -749,7 +1050,46 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Combat",
+      "name": "Damage Resistance",
+      "primary": "Resistance",
+      "secondary": "Discipline",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "When damaged by an attack, spend 1 Momentum to reduce the damage by 1d6, to a minimum of 0.",
+      "rarity": "Rare",
+      "cost": "5",
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 32,
+      "skillGrants": [],
+      "skillGrantChoices": []
+    },
+    {
+      "name": "Damage Resistance (Total)",
+      "category": "General",
+      "primary": "Resistance",
+      "secondary": "Not applicable",
+      "effect": "When damaged by an attack, reduce damage by 1d6 (minimum 0). Each 6 explodes: roll another d6 and add it. Requires Damage Resistance; this replaces that Trait’s reduction.",
+      "cost": "10",
+      "level": "2",
+      "rarity": "Uncommon",
+      "restriction": "No Restrictions",
+      "source": "Approved House Rule Catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 48,
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "prerequisite": "Damage Resistance"
     },
     {
       "category": "Faction",
@@ -761,7 +1101,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Nomad or advanced Hacking background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -773,7 +1115,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -785,7 +1129,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Ariadna or frontier survival background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -797,19 +1143,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
       "name": "Defensive Play",
-      "primary": "Close Combat",
-      "secondary": "Resistance",
-      "brief": "Focused training in Close Combat and Resistance, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Defensive Play.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Acrobatics",
+      "secondary": "Close Combat",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "When defending against an attack, you may use Close Combat against melee attacks or Acrobatics against ranged attacks instead of main-skill Agility.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 46,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Exploration",
@@ -821,7 +1175,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -833,7 +1189,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Disabled",
@@ -848,7 +1206,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -860,7 +1220,26 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Divided Loyalties",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 4).",
+      "effect": "Source event option: Social status becomes Al-Mustaslaha.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Dogface",
@@ -876,19 +1255,27 @@ window.INFINITY_DATA = {
       "sourcePage": 80,
       "hostHeritageOnly": true,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Heritage selection; not a separately purchased Trait."
+      "pricingNote": "Heritage selection; not a separately purchased Trait.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
-      "category": "Combat",
+      "category": "General",
       "name": "Dogged",
-      "primary": "Resistance",
+      "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Extensive training in Resistance and Discipline, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Dogged.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "If reduced to 0 HP without immediate death, you may ignore Unconscious for the rest of the encounter. At the start of each of your turns at 0 HP, roll 1d20; a natural 20 kills you. Shocked still causes immediate death. If still at 0 HP when the encounter ends, become Unconscious.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 38,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Technical",
@@ -900,7 +1287,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -912,31 +1301,45 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Dumb Luck",
       "primary": "Lifestyle",
       "secondary": "Discipline",
-      "brief": "Focused training in Lifestyle and Discipline, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's specialised aptitude as a Dumb Luck.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once per encounter, spend 1 Momentum after rolling a skill check to reroll up to two failed d20s. Accept the new results.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 31,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Combat",
       "name": "Eagle Eye",
       "primary": "Observation",
-      "secondary": "Analysis",
-      "brief": "Focused training in Observation and Analysis, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Eagle Eye.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "secondary": "Ballistics",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reduce Difficulty by 1 on Observation or Ballistics tests involving sniping.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 47,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Alien",
@@ -948,7 +1351,9 @@ window.INFINITY_DATA = {
       "rarity": "Very Rare",
       "cost": "15",
       "restriction": "Combined Army or alien technology background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -960,7 +1365,26 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Emergency Bulkhead Drill",
+      "category": "Technical",
+      "primary": "Tech",
+      "secondary": "Extraplanetary",
+      "effect": "While attempting to seal a damaged ship compartment, reroll one failed d20 on a Tech test. Accept the new result; once per test.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "Extraplanetary or shipboard operations background",
+      "source": "Ships of the Human Sphere sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Specialist training inspired by Ships of the Human Sphere operations."
     },
     {
       "category": "Medical",
@@ -972,7 +1396,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -984,7 +1410,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -996,7 +1424,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -1008,19 +1438,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Enhanced (Meta Humans only)",
       "primary": "Analysis",
       "secondary": "Science",
-      "brief": "Focused training in Analysis and Science, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's specialised aptitude as a Enhanced (Meta Humans only).",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once per session, select one purchased or purchasable Trait for which you meet all prerequisites and species/faction restrictions, excluding Enhanced and other bestowed-only Traits. Use it for one encounter. Do not select it again until all eligible choices have been used.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "0",
       "restriction": "ALEPH access or Posthuman background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 81,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Faction",
@@ -1032,7 +1470,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "ALEPH access or Posthuman background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Entirely Misunderstood",
@@ -1047,7 +1487,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -1059,7 +1501,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -1071,7 +1515,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -1083,7 +1529,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -1095,43 +1543,63 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
-      "name": "Fanatic (Hassassin Bahram Affiliate)",
+      "name": "Fanatic (Only for the members of the Hassassin Bahram or any valuable affiliates that was bestowed by the Imam.)",
       "primary": "Medicine",
       "secondary": "Analysis",
-      "brief": "Extensive training in Medicine and Analysis, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Fanatic (Hassassin Bahram Affiliate).",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "If you have a Cube and would die from HP loss, become Unconscious instead, unless Shocked or your Cube is destroyed. A Medic or Doctor may revive a functional body or transfer the intact Cube to a prepared body. Requires eligible Hassassin Bahram membership or Imam-bestowed affiliation.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "0",
       "restriction": "Hassassin Bahram, martial, or covert-ops background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 82,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Medical",
       "name": "Fast Healer",
       "primary": "Resistance",
       "secondary": "Medicine",
-      "brief": "Extensive training in Resistance and Medicine, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to treat injuries, stabilize casualties, and apply medical or biotech knowledge. This trait represents the character's broad aptitude as a Fast Healer.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "After each long rest, remove half your current physical Wounds (round down) without medical attention.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "15",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "3",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 76,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Combat",
       "name": "Fatality",
       "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Fatality.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "After a successful Close Combat attack and damage resolution, a target with fewer than 5 HP remaining dies.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "15",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "3",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 77,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Medical",
@@ -1143,19 +1611,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
       "name": "First-Aider",
       "primary": "Medicine",
       "secondary": "Education",
-      "brief": "Focused training in Medicine and Education, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's specialised aptitude as a First-Aider.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Medicine (Intelligence) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 5,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Social",
@@ -1167,19 +1643,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
       "name": "Flying Ace",
-      "primary": "Pilot",
+      "primary": "Spacecraft",
       "secondary": "Extraplanetary",
-      "brief": "Focused training in Pilot and Extraplanetary, allowing the character to operate vehicles and manoeuvre through hostile conditions while also being able to operate safely in space, vacuum, zero gravity, and hostile off-world environments. This trait represents the character's specialised aptitude as a Flying Ace.",
-      "effect": "Reduce Difficulty by 1 when using Pilot or Extraplanetary for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Spacecraft (Coordination) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 6,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Exploration",
@@ -1191,7 +1675,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -1203,19 +1689,44 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Formation (for fireteam talent only)",
       "primary": "Command",
       "secondary": "Analysis",
-      "brief": "Focused training in Command and Analysis, allowing the character to lead allies, issue orders, and coordinate group action while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Formation (for fireteam talent only).",
-      "effect": "Reduce Difficulty by 1 when using Command or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "While linked with your fireteam within 10 ft, gain 360-degree vision and immunity to Surprised. Requires Fire Team Member or higher.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "0",
       "restriction": "Military or security background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 83,
+      "skillGrants": [],
+      "skillGrantChoices": []
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Free Spirit",
+      "primary": "Analysis",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 12).",
+      "effect": "Source event option: Gain +1 Analysis and a mentor contact.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -1227,19 +1738,43 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Nomad or infiltration background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
-      "category": "Combat",
-      "name": "Frenzy",
-      "primary": "Resistance",
-      "secondary": "Discipline",
-      "brief": "Extensive training in Resistance and Discipline, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Frenzy.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Rare",
-      "cost": "10",
-      "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "category": "Haqqislam Adolescent Event",
+      "name": "Freeze Response",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 17).",
+      "effect": "Source event option: Increase Complication Range by 2 on social skill tests with Haqqislam faction members.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Friends in Low Places",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 15).",
+      "effect": "Source event option: Spend 1d6 years in jail and gain a Criminal Record; may choose Kum Ganger as the first career.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -1251,7 +1786,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Ariadna or frontier survival background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -1263,7 +1800,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Infowar",
@@ -1275,7 +1814,9 @@ window.INFINITY_DATA = {
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "ALEPH, Geist, or Hacking background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -1287,7 +1828,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -1299,19 +1842,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
       "name": "Graceful",
-      "primary": "Stealth",
+      "primary": "Acrobatics",
       "secondary": "Athletics",
-      "brief": "Focused training in Stealth and Athletics, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's specialised aptitude as a Graceful.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On an Acrobatics (Agility) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 7,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Combat",
@@ -1323,7 +1874,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Grizzled",
@@ -1338,7 +1891,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -1350,7 +1905,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -1362,19 +1919,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Hard to Kill",
       "primary": "Resistance",
       "secondary": "Discipline",
-      "brief": "Extensive training in Resistance and Discipline, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Hard to Kill.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "When your HP reaches 0, spend 1 Momentum to recover 1d6 HP before applying Unconscious. Cannot prevent immediate death, including Shocked. Once per triggering attack.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 49,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "name": "Harried",
@@ -1389,7 +1954,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -1401,7 +1968,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Heirloom Weapon",
@@ -1416,7 +1985,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -1428,7 +1999,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "PanOceania, Varuna, or aquatic operations background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -1440,7 +2013,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -1452,7 +2027,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -1464,7 +2041,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
@@ -1476,7 +2055,9 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -1488,19 +2069,44 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "PanOceania or covert-service background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Ideologue",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 19).",
+      "effect": "Source event option: Defect to a random faction.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Immunity (Total)",
       "primary": "Resistance",
       "secondary": "Medicine",
-      "brief": "Focused training in Resistance and Medicine, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to treat injuries, stabilize casualties, and apply medical or biotech knowledge. This trait represents the character's specialised aptitude as a Immunity (Total).",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Medicine for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Treat special ammunition as normal damage; ignore its ammunition-specific saving checks and secondary effects. Ordinary damage still applies.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "15",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "3",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 78,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Faction",
@@ -1512,31 +2118,45 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Yu Jing or command/security background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Impetuous",
       "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Focused training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's specialised aptitude as a Impetuous.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once per round on your turn, spend 1 Momentum to take one extra Standard Action. Does not stack with Tactical Awareness.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 33,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Social",
       "name": "Imposing Figure",
-      "primary": "Command",
+      "primary": "Psychology",
       "secondary": "Persuade",
-      "brief": "Focused training in Command and Persuade, allowing the character to lead allies, issue orders, and coordinate group action while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's specialised aptitude as a Imposing Figure.",
-      "effect": "Reduce Difficulty by 1 when using Command or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once per encounter, as a Standard Action, confront hostile targets within the circle template. Each must pass a D1 Psychology test or become Frightened and move away when able.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 50,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Technical",
@@ -1548,7 +2168,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Infamous Lineage",
@@ -1563,7 +2185,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -1575,19 +2199,44 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
       "name": "Influencer",
       "primary": "Lifestyle",
       "secondary": "Persuade",
-      "brief": "Focused training in Lifestyle and Persuade, allowing the character to navigate status, wealth, etiquette, contacts, and social institutions while also being able to negotiate, influence, bargain, and de-escalate conflict. This trait represents the character's specialised aptitude as a Influencer.",
-      "effect": "Reduce Difficulty by 1 when using Lifestyle or Persuade for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Lifestyle (Personality) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 8,
+      "skillGrants": [],
+      "skillGrantChoices": []
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Insatiably Curious",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 10).",
+      "effect": "Source event option: May choose Academic as the first career.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -1599,7 +2248,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -1611,7 +2262,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -1623,7 +2276,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Military command or Yu Jing background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -1635,7 +2290,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "It Takes One to Know One",
@@ -1653,7 +2310,9 @@ window.INFINITY_DATA = {
       "skillChoices": [
         "Thievery"
       ],
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -1665,7 +2324,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -1677,7 +2338,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "PanOceania Military Orders",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -1689,31 +2352,45 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH, Lhost, or medical-technical background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
       "name": "Linked with the AI (Note: Free for Enhanced Humans)",
-      "primary": "Tech",
+      "primary": "Analysis",
       "secondary": "Hacking",
-      "brief": "Extensive training in Tech and Hacking, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to breach networks, defend systems, and manipulate quantronic infrastructure. This trait represents the character's broad aptitude as a Linked with the AI (Note: Free for Enhanced Humans).",
-      "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reduce Difficulty by 1 on Tech, Hacking or Analysis tests. You may be targeted by eligible hacking attacks. Free for Enhanced Humans.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 51,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Technical",
       "name": "Linked with the EI (Note: Free for ALF or any Combined army factions)",
-      "primary": "Tech",
+      "primary": "Analysis",
       "secondary": "Hacking",
-      "brief": "Extensive training in Tech and Hacking, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to breach networks, defend systems, and manipulate quantronic infrastructure. This trait represents the character's broad aptitude as a Linked with the EI (Note: Free for ALF or any Combined army factions).",
-      "effect": "Reduce Difficulty by 1 when using Tech or Hacking for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reduce Difficulty by 2 on Tech, Hacking or Analysis tests. You may be targeted by eligible hacking attacks. Free for ALF or Combined Army faction members.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 52,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Faction",
@@ -1725,7 +2402,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Ariadna or GM approval",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
@@ -1733,13 +2412,18 @@ window.INFINITY_DATA = {
       "primary": "Not applicable",
       "secondary": "Not applicable",
       "brief": "You should have died, but luck remained on your side.",
-      "effect": "Increase Infinity Point refresh by 1, maximum 4.",
+      "effect": "Before each session, roll 1d6 to determine your uses of Lucky. Spend one use after rolling to reroll one failed d20 on a skill check. Accept the new result. Unused uses expire at session end; long rests do not refresh them.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
-      "skillBonusMode": "special-effect"
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 53,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "name": "Luddite",
@@ -1754,7 +2438,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -1766,7 +2452,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -1778,7 +2466,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Nomad or advanced Hacking background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -1790,7 +2480,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -1802,19 +2494,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
       "name": "Medical Expert",
       "primary": "Medicine",
       "secondary": "Analysis",
-      "brief": "Extensive training in Medicine and Analysis, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Medical Expert.",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once per encounter, when using a Health Kit to restore HP to yourself or an ally, restore an additional 2d6 HP (up to maximum). Requires Medicine - Medic, Medicine - Doctor or Medicine - Doctor+.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 54,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Medical",
@@ -1826,7 +2526,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -1838,7 +2540,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -1850,43 +2554,80 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Mercenary, criminal, or trade-route background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
       "name": "Mimetism",
       "primary": "Stealth",
       "secondary": "Thievery",
-      "brief": "Focused training in Stealth and Thievery, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to bypass security, manipulate locks, and handle covert intrusion work. This trait represents the character's specialised aptitude as a Mimetism.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Thievery for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "When targeted by a ranged attack requiring line of sight, add 1 Heat to the GM pool to gain +1d20 on your defensive test. Alternatively, reroll one failed d20 on that defence for 1 Heat. Choose only one option per attack.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 55,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Stealth",
       "name": "Misdirection",
       "primary": "Thievery",
       "secondary": "Stealth",
-      "brief": "Focused training in Thievery and Stealth, allowing the character to bypass security, manipulate locks, and handle covert intrusion work while also being able to avoid detection, infiltrate secure areas, and conceal movement. This trait represents the character's specialised aptitude as a Misdirection.",
-      "effect": "Reduce Difficulty by 1 when using Thievery or Stealth for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Thievery (Awareness) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 9,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "General",
       "name": "Mnemonica (only for ALF or any Combined Army faction members)",
       "primary": "Education",
       "secondary": "Analysis",
-      "brief": "Focused training in Education and Analysis, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Mnemonica (only for ALF or any Combined Army faction members).",
-      "effect": "Reduce Difficulty by 1 when using Education or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once only, when you die, transfer your consciousness and skill attributes into a preselected compatible, consenting friendly host. Requires ALF or Combined Army faction membership; GM confirms host compatibility. Keep the chosen host private until activation.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "0",
       "restriction": "ALEPH access or Posthuman background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 84,
+      "skillGrants": [],
+      "skillGrantChoices": []
+    },
+    {
+      "name": "Morat Battle Resolve",
+      "category": "Combat",
+      "primary": "Discipline",
+      "secondary": "Command",
+      "effect": "Reduce Difficulty by 1 on Discipline tests to resist Frightened while a conscious allied fireteam member is within 10 ft. Minimum D0.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "Combined Army or Morat background",
+      "source": "Combined Army sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Specialist training inspired by Combined Army operations."
     },
     {
       "category": "Combat",
@@ -1898,7 +2639,9 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "Combined Army or Morat background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -1910,7 +2653,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Nomad or shipboard operations background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -1922,7 +2667,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -1934,19 +2681,26 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
-      "category": "Social",
-      "name": "Natural Born Warrior",
-      "primary": "Command",
-      "secondary": "Close Combat",
-      "brief": "Focused training in Command and Close Combat, allowing the character to lead allies, issue orders, and coordinate group action while also being able to fight effectively at close range and control dangerous melee engagements. This trait represents the character's specialised aptitude as a Natural Born Warrior.",
-      "effect": "Reduce Difficulty by 1 when using Command or Close Combat for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
-      "rarity": "Rare",
-      "cost": "10",
-      "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "category": "Haqqislam Adolescent Event",
+      "name": "Myriad Medications",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 18).",
+      "effect": "Source event option: Serum grants no bonus and instead inflicts 1+2§ damage.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -1958,7 +2712,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -1970,7 +2726,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -1982,7 +2740,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -1994,7 +2754,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -2006,19 +2768,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Night Vision",
       "primary": "Observation",
       "secondary": "Survival",
-      "brief": "Focused training in Observation and Survival, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to navigate hazards, find resources, and keep a group alive in the field. This trait represents the character's specialised aptitude as a Night Vision.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "See in low light and darkness up to 60 ft.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "15",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "3",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 79,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Faction",
@@ -2030,19 +2800,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Nomad or advanced Hacking background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
       "name": "Non-Hackable",
-      "primary": "Tech",
-      "secondary": "Analysis",
-      "brief": "Extensive training in Tech and Analysis, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Non-Hackable.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "primary": "Pilot",
+      "secondary": "Hacking",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "You cannot be targeted by hacking attacks restricted to specific eligible unit types (e.g. HI, Pilot or TAG). Other applicable Infowar attacks remain possible.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "15",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "3",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 80,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Stealth",
@@ -2054,7 +2832,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -2066,7 +2846,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Old Wound",
@@ -2081,7 +2863,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "On the Watchlist",
@@ -2096,7 +2880,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Overconfident",
@@ -2111,7 +2897,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -2123,7 +2911,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -2135,7 +2925,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Military or security background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Paranoid",
@@ -2150,7 +2942,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -2162,7 +2956,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -2174,7 +2970,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -2186,7 +2984,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Patriot",
@@ -2201,31 +3001,45 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
       "name": "Pattern Recognition",
       "primary": "Analysis",
       "secondary": "Observation",
-      "brief": "Focused training in Analysis and Observation, allowing the character to interpret evidence, identify patterns, and make sound tactical deductions while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's specialised aptitude as a Pattern Recognition.",
-      "effect": "Reduce Difficulty by 1 when using Analysis or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On an Analysis (Awareness) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 10,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Technical",
       "name": "Pedal to the Metal",
       "primary": "Pilot",
       "secondary": "Extraplanetary",
-      "brief": "Focused training in Pilot and Extraplanetary, allowing the character to operate vehicles and manoeuvre through hostile conditions while also being able to operate safely in space, vacuum, zero gravity, and hostile off-world environments. This trait represents the character's specialised aptitude as a Pedal to the Metal.",
-      "effect": "Reduce Difficulty by 1 when using Pilot or Extraplanetary for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Pilot (Coordination) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 11,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Medical",
@@ -2237,7 +3051,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Pioneer Spirit",
@@ -2252,7 +3068,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -2264,7 +3082,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -2276,7 +3096,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -2288,7 +3110,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "ALEPH access or Posthuman background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Biotech",
@@ -2300,7 +3124,9 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "Nomad, Praxis, or body-modification background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -2312,7 +3138,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "ALEPH access or Posthuman background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Priority Target",
@@ -2327,19 +3155,27 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
       "name": "Professional",
       "primary": "Command",
       "secondary": "Education",
-      "brief": "Focused training in Command and Education, allowing the character to lead allies, issue orders, and coordinate group action while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's specialised aptitude as a Professional.",
-      "effect": "Reduce Difficulty by 1 when using Command or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Command (Personality) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 12,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Technical",
@@ -2351,7 +3187,26 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Proxy Latency Control",
+      "category": "Infowar",
+      "primary": "Pilot",
+      "secondary": "Hacking",
+      "effect": "When controlling a remote through a functioning data link, add 1 Heat before a Pilot test for +1d20, once per test.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "ALEPH, O-12, Nomad, or advanced Hacking background",
+      "source": "ALEPH sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Specialist training inspired by ALEPH operations."
     },
     {
       "category": "Social",
@@ -2363,7 +3218,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -2375,7 +3232,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -2387,7 +3246,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Raised in a Barn",
@@ -2406,7 +3267,9 @@ window.INFINITY_DATA = {
         "Animal Handling",
         "Survival"
       ],
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Rebel",
@@ -2421,7 +3284,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -2433,19 +3298,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Regeneration (NOTE: for AI, Neo Humans and ALF only)",
       "primary": "Medicine",
       "secondary": "Resistance",
-      "brief": "Focused training in Medicine and Resistance, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Regeneration (NOTE: for AI, Neo Humans and ALF only).",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once per encounter, at the start of one of your turns while conscious, recover 1d6 HP, up to your maximum. Requires AI, Neo Human or ALF.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH access or Posthuman background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 57,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Medical",
@@ -2457,19 +3330,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
       "name": "Religious Troop",
       "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Religious Troop.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reduce Difficulty by 1 on checks to resist Frightened or Stressed. Free for Haqqislam characters.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "PanOceania Military Orders",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 58,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Technical",
@@ -2481,7 +3362,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -2493,31 +3376,63 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
       "name": "Resilient",
       "primary": "Close Combat",
       "secondary": "Resistance",
-      "brief": "Focused training in Close Combat and Resistance, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Resilient.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Close Combat (Agility) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 13,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Combat",
       "name": "Resistance (Shock)",
       "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Resistance (Shock).",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reduce Difficulty by 1 on checks to resist Shocked or a Shock attack’s special effect.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 59,
+      "skillGrants": [],
+      "skillGrantChoices": []
+    },
+    {
+      "name": "Resistance (Viral)",
+      "category": "General",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "effect": "Reduce Difficulty by 1 on checks to resist Poisoned from viral attacks.",
+      "cost": "10",
+      "level": "2",
+      "rarity": "Uncommon",
+      "restriction": "No Restrictions",
+      "source": "Approved House Rule Catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 60,
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits."
     },
     {
       "category": "Medical",
@@ -2529,31 +3444,45 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Rigorous Training",
       "primary": "Athletics",
       "secondary": "Resistance",
-      "brief": "Focused training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Rigorous Training.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Gain 1 bonus Momentum on each successful Athletics test.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 34,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "General",
       "name": "Risk Taker",
       "primary": "Discipline",
       "secondary": "Psychology",
-      "brief": "Focused training in Discipline and Psychology, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to read behaviour, resist manipulation, and understand motives. This trait represents the character's specialised aptitude as a Risk Taker.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once per encounter, after a successful damaging attack, treat its damage dice as maximum values. Whenever you fail a skill check, lose 1 Momentum (minimum 0).",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 35,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "name": "Rockstar",
@@ -2568,7 +3497,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -2580,7 +3511,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -2592,7 +3525,26 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Sālik!",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 2).",
+      "effect": "Source event option: Increase Resolve by 1.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Sardonic",
@@ -2607,7 +3559,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Scarred",
@@ -2622,19 +3576,27 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
       "name": "Scout",
       "primary": "Stealth",
       "secondary": "Survival",
-      "brief": "Focused training in Stealth and Survival, allowing the character to avoid detection, infiltrate secure areas, and conceal movement while also being able to navigate hazards, find resources, and keep a group alive in the field. This trait represents the character's specialised aptitude as a Scout.",
-      "effect": "Reduce Difficulty by 1 when using Stealth or Survival for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Stealth (Agility) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Common",
-      "cost": "5",
+      "cost": "1",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 14,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Technical",
@@ -2646,7 +3608,26 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Sensor Calibration",
+      "category": "Technical",
+      "primary": "Observation",
+      "secondary": "Analysis",
+      "effect": "When using a functioning visor or sensor to locate a Hidden target, add 1 Heat before rolling for +1d20 on Observation, once per test.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "PanOceania or advanced sensor background",
+      "source": "PanOceania sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Specialist training inspired by PanOceania operations."
     },
     {
       "category": "Stealth",
@@ -2658,7 +3639,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -2670,7 +3653,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -2682,19 +3667,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Sharp Senses",
       "primary": "Observation",
       "secondary": "Analysis",
-      "brief": "Focused training in Observation and Analysis, allowing the character to notice threats, track details, and read changing battlefield conditions while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Sharp Senses.",
-      "effect": "Reduce Difficulty by 1 when using Observation or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On an Observation (Awareness) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 15,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Combat",
@@ -2706,7 +3699,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -2718,7 +3713,9 @@ window.INFINITY_DATA = {
       "rarity": "Very Rare",
       "cost": "15",
       "restriction": "Combined Army or Shasvastii background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -2730,7 +3727,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -2742,7 +3741,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -2754,7 +3755,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction",
@@ -2766,7 +3769,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Haqqislam or advanced Medicine background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -2778,7 +3783,44 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Silk Stabiliser",
+      "category": "Faction",
+      "primary": "Medicine",
+      "secondary": "Science",
+      "effect": "When stabilising a living casualty with suitable medical equipment, add 1 Heat to reroll one failed Medicine d20. Accept the new result; once per test.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "Haqqislam or advanced Medicine background",
+      "source": "Haqqislam sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Specialist training inspired by Haqqislam operations."
+    },
+    {
+      "name": "Sixth Sense",
+      "category": "General",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "effect": "Reduce Difficulty by 1 on defensive or surprise checks against surprise attacks. If an attack catches you off guard, you may add 1 Heat to reroll one failed d20 on that defence.",
+      "cost": "10",
+      "level": "2",
+      "rarity": "Uncommon",
+      "restriction": "No Restrictions",
+      "source": "Approved House Rule Catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 61,
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits."
     },
     {
       "name": "Sleepy",
@@ -2793,7 +3835,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -2805,7 +3849,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -2817,7 +3863,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Sole Survivor",
@@ -2832,31 +3880,45 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
       "name": "Specialist",
       "primary": "Science",
       "secondary": "Education",
-      "brief": "Focused training in Science and Education, allowing the character to test hypotheses, evaluate data, and apply scientific principles while also being able to recall formal knowledge, follow procedure, and apply academic training. This trait represents the character's specialised aptitude as a Specialist.",
-      "effect": "Reduce Difficulty by 1 when using Science or Education for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Science (Intelligence) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 16,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Technical",
       "name": "Speed Typing",
       "primary": "Hacking",
       "secondary": "Tech",
-      "brief": "Focused training in Hacking and Tech, allowing the character to breach networks, defend systems, and manipulate quantronic infrastructure while also being able to repair, modify, operate, and maintain complex equipment. This trait represents the character's specialised aptitude as a Speed Typing.",
-      "effect": "Reduce Difficulty by 1 when using Hacking or Tech for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Hacking (Intelligence) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 17,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "name": "Spirit of the 112",
@@ -2871,7 +3933,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -2883,7 +3947,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -2895,7 +3961,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -2907,7 +3975,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -2919,7 +3989,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -2931,19 +4003,27 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH or military elite background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Strategist",
       "primary": "Command",
       "secondary": "Analysis",
-      "brief": "Extensive training in Command and Analysis, allowing the character to lead allies, issue orders, and coordinate group action while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's broad aptitude as a Strategist.",
-      "effect": "Reduce Difficulty by 1 when using Command or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Before an encounter, roll 1d20 and record its value. Once during the encounter, subtract it from one of your own rolled skill-test d20 results (minimum 1). Use the adjusted result only for ordinary success; it cannot create a critical or Focus success, and cannot remove a natural-20 complication.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 62,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "name": "Street Fighter",
@@ -2958,7 +4038,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -2970,7 +4052,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -2982,55 +4066,81 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Strong Grip",
       "primary": "Athletics",
       "secondary": "Resistance",
-      "brief": "Focused training in Athletics and Resistance, allowing the character to run, climb, swim, jump, and overcome physical obstacles while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Strong Grip.",
-      "effect": "Reduce Difficulty by 1 when using Athletics or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "You cannot be forcibly disarmed or made to drop a held item unless you choose to release it.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 63,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Social",
       "name": "Stubborn",
       "primary": "Discipline",
       "secondary": "Resistance",
-      "brief": "Focused training in Discipline and Resistance, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Stubborn.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Discipline (Willpower) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 18,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Social",
       "name": "Stunning Presence",
-      "primary": "Persuade",
+      "primary": "Psychology",
       "secondary": "Psychology",
-      "brief": "Focused training in Persuade and Psychology, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to read behaviour, resist manipulation, and understand motives. This trait represents the character's specialised aptitude as a Stunning Presence.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "When you attack a target, it must pass a D1 Psychology test or become Stunned. Resolve at most once per target per round. Free for Odalisques.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 64,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Physical/Exploration",
       "name": "Sturdy",
       "primary": "Resistance",
       "secondary": "Athletics",
-      "brief": "Focused training in Resistance and Athletics, allowing the character to endure fatigue, pain, toxins, environmental stress, and battlefield punishment while also being able to run, climb, swim, jump, and overcome physical obstacles. This trait represents the character's specialised aptitude as a Sturdy.",
-      "effect": "Reduce Difficulty by 1 when using Resistance or Athletics for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Resistance (Brawn) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 19,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Faction",
@@ -3042,19 +4152,45 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Mercenary, criminal, or trade-route background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Super Jump",
+      "category": "General",
+      "primary": "Athletics",
+      "secondary": "Not applicable",
+      "effect": "You may jump up to twice your base Brawn score in feet, using the normal Athletics (Brawn) jump action.",
+      "cost": "10",
+      "level": "2",
+      "rarity": "Uncommon",
+      "restriction": "No Restrictions",
+      "source": "Approved House Rule Catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 65,
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits."
     },
     {
       "category": "Combat",
-      "name": "Superior Doctrine",
+      "name": "Superior Tactics",
       "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Superior Doctrine.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reduce Difficulty by 1 on skill checks to execute surprise attacks.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 66,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Combat",
@@ -3066,7 +4202,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -3078,7 +4216,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -3090,7 +4230,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -3102,7 +4244,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Survivor",
@@ -3121,7 +4265,9 @@ window.INFINITY_DATA = {
         "Ballistics",
         "Close Combat"
       ],
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -3133,7 +4279,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -3145,7 +4293,9 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "Tohaa, Sygmaa, or alien diplomacy background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -3157,19 +4307,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
-      "name": "Tactical Perception",
+      "name": "Tactical Awareness",
       "primary": "Command",
       "secondary": "Observation",
-      "brief": "Extensive training in Command and Observation, allowing the character to lead allies, issue orders, and coordinate group action while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Tactical Perception.",
-      "effect": "Reduce Difficulty by 1 when using Command or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once per round on your turn, take one extra Standard Action. This does not stack with the extra action from Impetuous.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 67,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Combat",
@@ -3181,7 +4339,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -3193,31 +4353,45 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
       "name": "Technician",
       "primary": "Tech",
       "secondary": "Science",
-      "brief": "Focused training in Tech and Science, allowing the character to repair, modify, operate, and maintain complex equipment while also being able to test hypotheses, evaluate data, and apply scientific principles. This trait represents the character's specialised aptitude as a Technician.",
-      "effect": "Reduce Difficulty by 1 when using Tech or Science for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Tech (Intelligence) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 20,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "General",
       "name": "Terrain Expert",
       "primary": "Survival",
       "secondary": "Observation",
-      "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Terrain Expert.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reduce Difficulty by 1 on skill tests involving terrain.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 68,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Exploration",
@@ -3229,31 +4403,46 @@ window.INFINITY_DATA = {
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
       "name": "Total Reaction",
       "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Total Reaction.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reaction: when an enemy in line of sight attacks you, spend 1 Momentum to oppose the attack with an eligible CC or BS attack. Resolve using the workbook’s Face Off rule. You may add 1 Heat for +1d20 to this reaction, once per reaction.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 69,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "General",
       "name": "Total Regeneration (NOTE: for AI, Neo Humans and ALF only)",
       "primary": "Medicine",
       "secondary": "Resistance",
-      "brief": "Focused training in Medicine and Resistance, allowing the character to treat injuries, stabilize casualties, and apply medical or biotech knowledge while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's specialised aptitude as a Total Regeneration (NOTE: for AI, Neo Humans and ALF only).",
-      "effect": "Reduce Difficulty by 1 when using Medicine or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Once per encounter, at the start of one of your turns while conscious, recover 1d6 HP, up to your maximum. Each 6 explodes: roll another d6 and add it. Requires Regeneration and replaces its effect.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "ALEPH access or Posthuman background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 70,
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "prerequisite": "Regeneration (NOTE: for AI, Neo Humans and ALF only)"
     },
     {
       "category": "Medical",
@@ -3265,19 +4454,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
       "name": "Tracker",
       "primary": "Survival",
       "secondary": "Observation",
-      "brief": "Extensive training in Survival and Observation, allowing the character to navigate harsh terrain, endure hazards, and keep a group alive in the field while also being able to notice threats, track details, and read changing battlefield conditions. This trait represents the character's broad aptitude as a Tracker.",
-      "effect": "Reduce Difficulty by 1 when using Survival or Observation for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Survival (Awareness) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 21,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Exploration",
@@ -3289,7 +4486,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -3301,19 +4500,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
       "name": "Trigger Happy",
-      "primary": "Close Combat",
+      "primary": "Ballistics",
       "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Trigger Happy.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On a Ballistics (Coordination) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 22,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "name": "True Grit",
@@ -3328,7 +4535,26 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Trust Issues",
+      "primary": "Psychology",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 13).",
+      "effect": "Source event option: Gain +1 Psychology.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -3340,7 +4566,26 @@ window.INFINITY_DATA = {
       "rarity": "Uncommon",
       "cost": "7",
       "restriction": "Nomad or advanced Hacking background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Unbalanced",
+      "primary": "Analysis",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 3).",
+      "effect": "Source event option: Gain +1 Analysis.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -3352,7 +4597,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Unlikely Hero",
@@ -3367,7 +4614,27 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 88,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Combat",
+      "name": "Unshakable",
+      "primary": "Resistance",
+      "secondary": "Discipline",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Reduce Difficulty by 2 on checks to resist Frightened or Stressed.",
+      "rarity": "Rare",
+      "cost": "15",
+      "restriction": "No Restrictions",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "3",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 75,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Exploration",
@@ -3379,7 +4646,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -3391,7 +4660,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -3403,7 +4674,26 @@ window.INFINITY_DATA = {
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Vengeful",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 14).",
+      "effect": "Source event option: Increase Resolve by 1.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Vengeful Progeny",
@@ -3418,19 +4708,27 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 87,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
       "name": "Veteran",
       "primary": "Discipline",
       "secondary": "Resistance",
-      "brief": "Extensive training in Discipline and Resistance, allowing the character to remain focused, resist fear, and act decisively under stress while also being able to endure fatigue, pain, toxins, environmental stress, and battlefield punishment. This trait represents the character's broad aptitude as a Veteran.",
-      "effect": "Reduce Difficulty by 1 when using Discipline or Resistance for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "Ignore penalties caused by your officer being incapacitated, lost or out of range.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 71,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Exploration",
@@ -3442,7 +4740,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -3454,7 +4754,26 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "Extraplanetary or shipboard operations background",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Wandering Eyes",
+      "primary": "Observation",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 16).",
+      "effect": "Source event option: Gain +1 Observation; may choose Odalisque as the first career.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "source-single",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -3466,19 +4785,44 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "category": "Haqqislam Adolescent Event",
+      "name": "Weak Immune System",
+      "primary": "Not applicable",
+      "secondary": "Not applicable",
+      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 9).",
+      "effect": "Source event option: Reduce Vigour by 1 and add +1 Momentum to all Contagion damage. Reversing this costs 5+5§ Assets.",
+      "rarity": "Lifepath Event",
+      "cost": "Granted by Lifepath",
+      "restriction": "Haqqislam sourcebook career",
+      "source": "Infinity RPG — Haqqislam Supplement",
+      "sourcePage": 78,
+      "skillBonusMode": "special-effect",
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
       "name": "Weapon Master",
       "primary": "Close Combat",
       "secondary": "Discipline",
-      "brief": "Extensive training in Close Combat and Discipline, allowing the character to fight effectively at close range and control dangerous melee engagements while also being able to remain focused, resist fear, and act decisively under stress. This trait represents the character's broad aptitude as a Weapon Master.",
-      "effect": "Reduce Difficulty by 1 when using Close Combat or Discipline for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "When you make a successful Close Combat attack, each Momentum spent on bonus damage adds 2d6 instead of 1d6.",
       "rarity": "Rare",
       "cost": "10",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "2",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 72,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "name": "Weight of the World",
@@ -3493,43 +4837,63 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 67,
       "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
       "name": "Wild Card",
       "primary": "Persuade",
       "secondary": "Command",
-      "brief": "Focused training in Persuade and Command, allowing the character to negotiate, influence, bargain, and de-escalate conflict while also being able to lead allies, issue orders, and coordinate group action. This trait represents the character's specialised aptitude as a Wild Card.",
-      "effect": "Reduce Difficulty by 1 when using Persuade or Command for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "At the start of an encounter, add 1 Heat to the GM pool to let your side act first, subject to GM adjudication of surprise.",
       "rarity": "Rare",
-      "cost": "10",
+      "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "1",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 36,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Exploration",
       "name": "Wild Empathy",
       "primary": "Animal Handling",
       "secondary": "Psychology",
-      "brief": "Focused training in Animal Handling and Psychology, allowing the character to control, train, calm, and coordinate animals or companion creatures while also being able to read behaviour, resist manipulation, and understand motives. This trait represents the character's specialised aptitude as a Wild Empathy.",
-      "effect": "Reduce Difficulty by 1 when using Animal Handling or Psychology for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On an Animal Handling (Personality) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 23,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Technical",
       "name": "Wild Guess",
       "primary": "Education",
       "secondary": "Analysis",
-      "brief": "Focused training in Education and Analysis, allowing the character to recall formal knowledge, follow procedure, and apply academic training while also being able to interpret evidence, identify patterns, and make sound tactical deductions. This trait represents the character's specialised aptitude as a Wild Guess.",
-      "effect": "Reduce Difficulty by 1 when using Education or Analysis for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On an Education (Intelligence) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 24,
+      "skillGrants": [],
+      "skillGrantChoices": []
     },
     {
       "category": "Stealth",
@@ -3541,7 +4905,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Wolfsbane",
@@ -3556,7 +4922,9 @@ window.INFINITY_DATA = {
       "source": "Infinity RPG — Ariadna Supplement (Updated)",
       "sourcePage": 68,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Wulver",
@@ -3572,7 +4940,9 @@ window.INFINITY_DATA = {
       "sourcePage": 80,
       "hostHeritageOnly": true,
       "skillBonusMode": "special-effect",
-      "pricingNote": "Heritage selection; not a separately purchased Trait."
+      "pricingNote": "Heritage selection; not a separately purchased Trait.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -3584,7 +4954,9 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Physical",
@@ -3596,259 +4968,27 @@ window.INFINITY_DATA = {
       "rarity": "Common",
       "cost": "5",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
       "name": "Zero-Gravity",
       "primary": "Extraplanetary",
       "secondary": "Pilot",
-      "brief": "Focused training in Extraplanetary and Pilot, allowing the character to operate safely in space, vacuum, zero gravity, and hostile off-world environments while also being able to operate vehicles and manoeuvre through hostile conditions. This trait represents the character's specialised aptitude as a Zero-Gravity.",
-      "effect": "Reduce Difficulty by 1 when using Extraplanetary or Pilot for a task where this Trait clearly applies. This reduction cannot lower Difficulty below 0.",
+      "brief": "Approved custom Trait. See Effect for its exact activation and limits.",
+      "effect": "On an Extraplanetary (Awareness) test, you may reroll one d20 once. Accept the new result.",
       "rarity": "Uncommon",
-      "cost": "7",
+      "cost": "2",
       "restriction": "No Restrictions",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Sālik!",
-      "primary": "Not applicable",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 2).",
-      "effect": "Source event option: Increase Resolve by 1.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Unbalanced",
-      "primary": "Analysis",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 3).",
-      "effect": "Source event option: Gain +1 Analysis.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Divided Loyalties",
-      "primary": "Not applicable",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 4).",
-      "effect": "Source event option: Social status becomes Al-Mustaslaha.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Bookworm",
-      "primary": "Education",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 6).",
-      "effect": "Source event option: Gain +1 Education and a mentor contact.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Crushing Expectations",
-      "primary": "Discipline",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 7).",
-      "effect": "Source event option: Reduce Vigour by 1 and gain +1 Discipline.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Weak Immune System",
-      "primary": "Not applicable",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 9).",
-      "effect": "Source event option: Reduce Vigour by 1 and add +1 Momentum to all Contagion damage. Reversing this costs 5+5§ Assets.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Insatiably Curious",
-      "primary": "Not applicable",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 10).",
-      "effect": "Source event option: May choose Academic as the first career.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Free Spirit",
-      "primary": "Analysis",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 12).",
-      "effect": "Source event option: Gain +1 Analysis and a mentor contact.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Trust Issues",
-      "primary": "Psychology",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 13).",
-      "effect": "Source event option: Gain +1 Psychology.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Vengeful",
-      "primary": "Not applicable",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 14).",
-      "effect": "Source event option: Increase Resolve by 1.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Friends in Low Places",
-      "primary": "Not applicable",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 15).",
-      "effect": "Source event option: Spend 1d6 years in jail and gain a Criminal Record; may choose Kum Ganger as the first career.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Wandering Eyes",
-      "primary": "Observation",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 16).",
-      "effect": "Source event option: Gain +1 Observation; may choose Odalisque as the first career.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "source-single",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Freeze Response",
-      "primary": "Not applicable",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 17).",
-      "effect": "Source event option: Increase Complication Range by 2 on social skill tests with Haqqislam faction members.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Myriad Medications",
-      "primary": "Not applicable",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 18).",
-      "effect": "Source event option: Serum grants no bonus and instead inflicts 1+2§ damage.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Ideologue",
-      "primary": "Not applicable",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 19).",
-      "effect": "Source event option: Defect to a random faction.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
-    },
-    {
-      "category": "Haqqislam Adolescent Event",
-      "name": "Blind Faith",
-      "primary": "Not applicable",
-      "secondary": "Not applicable",
-      "brief": "Suggested character trait from the Haqqislam Adolescent Event Table (roll 20).",
-      "effect": "Source event option: The character died and was resurrected.",
-      "rarity": "Lifepath Event",
-      "cost": "Granted by Lifepath",
-      "restriction": "Haqqislam sourcebook career",
-      "source": "Infinity RPG — Haqqislam Supplement",
-      "sourcePage": 78,
-      "skillBonusMode": "special-effect",
-      "pricingNote": "Sourcebook lifepath/event selection; not assigned an independent Infinity Point purchase price."
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "level": "0",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 25,
+      "skillGrants": [],
+      "skillGrantChoices": []
     }
   ],
   "talents": [
@@ -3867,7 +5007,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Rare",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -3879,12 +5021,20 @@ window.INFINITY_DATA = {
       "name": "Animal Handler",
       "primary": "Animal Handling",
       "secondary": "Command",
-      "description": "Level 1 talent from the Antipode Handler Doctrine. Use this training with Animal Handling or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Animal Handling or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point to Animal Handling (personality)",
+      "effect": "Gain +1d20 on Animal Handling tests involving a companion. Control up to 1 companion.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 3,
+      "skillGrants": [
+        "Animal Handling"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill point to Animal Handling (personality)"
     },
     {
       "category": "Faction Prestige",
@@ -3897,11 +5047,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 2 talent from the Ariadna Ranger Corps. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Stealth for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Frontier Survivor",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -3914,11 +5066,13 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Science",
       "description": "Level 2 talent from the Haqqislamite Scholar-Physician. Use this training with Education or Science to apply specialist training during relevant missions.",
-      "effect": "Gain +2d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Education or Science for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Search for Knowledge",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -3935,7 +5089,30 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Uncommon",
       "cost": "7",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Arachne Trace Breaker",
+      "category": "Supplemental",
+      "primary": "Hacking",
+      "secondary": "Thievery",
+      "effect": "Gain +1d20 on Hacking tests to conceal or erase traces of your own access. Once per test, add 1 Heat to reroll one failed d20.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "Nomad or advanced Hacking background",
+      "source": "Nomads sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "career": "Arachne Broker",
+      "doctrine": "Nomad Arachne Tradecraft",
+      "faction": "Nomads",
+      "description": "Specialist training inspired by Nomads operations.",
+      "prerequisite": "None"
     },
     {
       "category": "Supplemental",
@@ -3952,7 +5129,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Rare",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -3961,15 +5140,23 @@ window.INFINITY_DATA = {
       "faction": "O-12",
       "restriction": "Diplomatic, legal, or political background",
       "level": "1",
-      "name": "Attache",
+      "name": "Attaché",
       "primary": "Education",
       "secondary": "Science",
-      "description": "Level 1 talent from the O-12 Liaison Corps. Use this training with Education or Science to negotiate, influence others, and control social pressure.",
-      "effect": "Gain +1d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 Skill point in Lifestyle (Personality)",
+      "effect": "Gain +1d20 on applicable social tests involving influence, high society, status, access to resources or relevant general knowledge.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 66,
+      "skillGrants": [
+        "Lifestyle"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 Skill point in Lifestyle (Personality)"
     },
     {
       "category": "Tech",
@@ -3982,11 +5169,13 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 2 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Codebreaker",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -4003,7 +5192,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Uncommon",
       "cost": "7",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -4016,11 +5207,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Yu Jing Imperial Command School. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Command or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Coordinated Assault",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -4033,11 +5226,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 1 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Tech",
@@ -4050,11 +5245,13 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 3 talent from the Bureau Noir Counter-Intrusion Cell. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Counter-Intrusion",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -4067,11 +5264,13 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Athletics",
       "description": "Level 1 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Athletics during relevant missions.",
-      "effect": "Gain +1d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Close Combat or Athletics for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -4084,11 +5283,13 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Thievery",
       "description": "Level 1 talent from the Khawarij Assault Doctrine. Use this training with Close Combat or Thievery during relevant missions.",
-      "effect": "Gain +1d20 when using Close Combat or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Close Combat or Thievery for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -4105,7 +5306,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Uncommon",
       "cost": "7",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -4118,11 +5321,13 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Command",
       "description": "Level 1 talent from the Bureau Aegis Command Track. Use this training with Lifestyle or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Lifestyle or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Lifestyle or Command for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Catfall",
@@ -4143,7 +5348,9 @@ window.INFINITY_DATA = {
       "sourcePage": 75,
       "skillMappingNote": "Simplified rules house-rule: source Acrobatics is represented by Athletics.",
       "skillBonusMode": "source-single",
-      "pricingNote": "5 Infinity Points is the simplified character sheet's house-rule price for a Level 1 Talent; the official Infinity RPG corebook uses XP instead."
+      "pricingNote": "5 Infinity Points is the simplified character sheet's house-rule price for a Level 1 Talent; the official Infinity RPG corebook uses XP instead.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -4160,7 +5367,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -4170,14 +5379,23 @@ window.INFINITY_DATA = {
       "restriction": "Cold-weather or mountain operations background",
       "level": "3",
       "name": "Climbing Expert",
-      "primary": "Athletics",
+      "primary": "Acrobatics",
       "secondary": "Survival",
-      "description": "Level 3 talent from the Svalarheima Mountain Recon. Use this training with Athletics or Survival during relevant missions.",
-      "effect": "Gain +3d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point in Acrobatics (Agility) and in Discipline (willpower)",
+      "effect": "Gain +3d20 on Acrobatics tests to climb structures. If rigged securely, you may fire a medium weapon while climbing.",
       "prerequisite": "Mountain Climber",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 8,
+      "skillGrants": [
+        "Acrobatics",
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Mountain climber. Add 1 skill point in Acrobatics (Agility) and in Discipline (willpower)"
     },
     {
       "category": "Tech",
@@ -4190,11 +5408,13 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 1 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Hacking or Tech for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -4206,12 +5426,21 @@ window.INFINITY_DATA = {
       "name": "Combat Diver",
       "primary": "Athletics",
       "secondary": "Survival",
-      "description": "Level 2 talent from the Varuna Amphibious Commandos. Use this training with Athletics or Survival to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +2d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in  Athletics (Brawn) and in Survival (Awareness)",
+      "effect": "Gain +2d20 on applicable tests while performing activities underwater.",
       "prerequisite": "Naval Diver",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 10,
+      "skillGrants": [
+        "Survival",
+        "Athletics"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Naval Diver. Add 1 skill point in  Athletics (Brawn) and in Survival (Awareness)"
     },
     {
       "category": "Combat",
@@ -4224,11 +5453,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Fusilier Fireteam Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
@@ -4241,11 +5472,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Thievery",
       "description": "Level 3 talent from the Machinist Combat Engineer. Use this training with Tech or Thievery to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Tech or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Tech or Thievery for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Demolition Expert - Level 2",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -4258,11 +5491,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 1 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -4274,12 +5509,21 @@ window.INFINITY_DATA = {
       "name": "Combat Jumper",
       "primary": "Athletics",
       "secondary": "Stealth",
-      "description": "Level 2 talent from the Tiger Soldier Drop Troops. Use this training with Athletics or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Athletics or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in Athletics (Brawn) and in Survival (Awareness)",
+      "effect": "Gain +1d20 on tests for combat jumps. You may fight during the jump.",
       "prerequisite": "Paratrooper",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 13,
+      "skillGrants": [
+        "Survival",
+        "Athletics"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Paratrooper. Add 1 skill point in Athletics (Brawn) and in Survival (Awareness)"
     },
     {
       "category": "Social",
@@ -4292,11 +5536,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Yu Jing Imperial Command School. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Command or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -4309,11 +5555,13 @@ window.INFINITY_DATA = {
       "primary": "Lifestyle",
       "secondary": "Command",
       "description": "Level 2 talent from the Bureau Aegis Command Track. Use this training with Lifestyle or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Lifestyle or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Lifestyle or Command for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Bureau Authority",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -4325,12 +5573,21 @@ window.INFINITY_DATA = {
       "name": "Consul",
       "primary": "Command",
       "secondary": "Persuade",
-      "description": "Level 2 talent from the O-12 Liaison Corps. Use this training with Command or Persuade during relevant missions.",
-      "effect": "Gain +2d20 when using Command or Persuade for this Talent. This bonus counts toward the +3d20 talent cap.",
-      "prerequisite": "Attache",
+      "description": "Approved Level 2 custom Talent. Add 1 Skill point in Lifestyle (Personality) and in Persuade (Personality)",
+      "effect": "Gain +2d20 on applicable social tests involving influence, high society, status, access to resources or relevant general knowledge.",
+      "prerequisite": "Attaché",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 67,
+      "skillGrants": [
+        "Lifestyle",
+        "Persuade"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Attaché. Add 1 Skill point in Lifestyle (Personality) and in Persuade (Personality)"
     },
     {
       "category": "Social",
@@ -4343,11 +5600,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Yu Jing Imperial Command School. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Command or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Command Cadet",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -4364,7 +5623,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Uncommon",
       "cost": "7",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -4376,12 +5637,20 @@ window.INFINITY_DATA = {
       "name": "Cosmonaut",
       "primary": "Extraplanetary",
       "secondary": "Survival",
-      "description": "Level 1 talent from the Circular Void Operations Crew. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +1d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point in Extraplanetary (Awareness)",
+      "effect": "Gain +1d20 on applicable social, task or combat tests performed in zero gravity.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 69,
+      "skillGrants": [
+        "Extraplanetary"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill point in Extraplanetary (Awareness)"
     },
     {
       "category": "General",
@@ -4390,15 +5659,23 @@ window.INFINITY_DATA = {
       "faction": "PanOceania",
       "restriction": "PanOceania or covert-service background",
       "level": "1",
-      "name": "Counter-Intel",
+      "name": "Counter Intelligence",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 1 talent from the Hexa Operative Cell. Use this training with Analysis or Observation to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point to any Intelligence subskills",
+      "effect": "Gain +1d20 on Intelligence-related skill tests.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 15,
+      "skillGrants": [],
+      "skillGrantChoices": [
+        "Intelligence"
+      ],
+      "acquisitionNotes": "Add 1 skill point to any Intelligence subskills"
     },
     {
       "category": "Tech",
@@ -4411,11 +5688,13 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 2 talent from the Bureau Noir Counter-Intrusion Cell. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Firewall Sense",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -4428,11 +5707,13 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 2 talent from the Tunguska Interventor Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "System Cracker",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -4445,11 +5726,13 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Stealth",
       "description": "Level 2 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to approach targets, maintain cover, and strike decisively.",
-      "effect": "Gain +2d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Persuade or Stealth for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "False Identity",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
@@ -4461,12 +5744,20 @@ window.INFINITY_DATA = {
       "name": "Demolition Expert - Level 1",
       "primary": "Tech",
       "secondary": "Thievery",
-      "description": "Level 1 talent from the Machinist Combat Engineer. Use this training with Tech or Thievery to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point in Ballistics (Coordination)",
+      "effect": "Gain +1d20 on sabotage or demolition tests when using a D-Charge unit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 18,
+      "skillGrants": [
+        "Ballistics"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill point in Ballistics (Coordination)"
     },
     {
       "category": "General",
@@ -4478,12 +5769,47 @@ window.INFINITY_DATA = {
       "name": "Demolition Expert - Level 2",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 2 talent from the Machinist Combat Engineer. Use this training with Analysis or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 Skill point in Ballistics (coordination) and in Education (intelligence)",
+      "effect": "Gain +2d20 on sabotage or demolition tests when using a D-Charge unit.",
       "prerequisite": "Demolition Expert - Level 1",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 19,
+      "skillGrants": [
+        "Ballistics",
+        "Education"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Demolition Expert - Level 1. Add 1 Skill point in Ballistics (coordination) and in Education (intelligence)"
+    },
+    {
+      "category": "General",
+      "career": "Engineer",
+      "doctrine": "Machinist Combat Engineer",
+      "faction": "PanOceania",
+      "restriction": "Engineer or military support background",
+      "level": "3",
+      "name": "Demolition Expert - Level 3",
+      "primary": "Analysis",
+      "secondary": "Observation",
+      "description": "Approved Level 3 custom Talent. Add 1 Skill point in Ballistics (coordination) and in Discipline (Will Power)",
+      "effect": "Gain +3d20 on sabotage or demolition tests when using a D-Charge unit.",
+      "prerequisite": "Demolition Expert - Level 2",
+      "rarity": "Uncommon",
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 20,
+      "skillGrants": [
+        "Ballistics",
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Demolition Expert - Level 2. Add 1 Skill point in Ballistics (coordination) and in Discipline (Will Power)"
     },
     {
       "category": "Social",
@@ -4495,12 +5821,21 @@ window.INFINITY_DATA = {
       "name": "Diplomat",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 3 talent from the O-12 Liaison Corps. Use this training with Analysis or Observation to negotiate, influence others, and control social pressure.",
-      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 Skill point in Lifestyle (Personality) and in Psychology (Intelligence)",
+      "effect": "Gain +3d20 on applicable social tests involving influence, high society, status, access to resources or relevant general knowledge.",
       "prerequisite": "Consul",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 68,
+      "skillGrants": [
+        "Psychology",
+        "Lifestyle"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Consul. Add 1 Skill point in Lifestyle (Personality) and in Psychology (Intelligence)"
     },
     {
       "category": "Exploration",
@@ -4512,12 +5847,21 @@ window.INFINITY_DATA = {
       "name": "Diving Specialist",
       "primary": "Athletics",
       "secondary": "Survival",
-      "description": "Level 3 talent from the Varuna Amphibious Commandos. Use this training with Athletics or Survival to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +3d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point in Athletics (Brawn) and in Discipline (willpower)",
+      "effect": "Gain +3d20 on applicable tests while performing activities underwater.",
       "prerequisite": "Combat Diver",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 11,
+      "skillGrants": [
+        "Athletics",
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Combat Diver. Add 1 skill point in Athletics (Brawn) and in Discipline (willpower)"
     },
     {
       "category": "Stealth",
@@ -4526,15 +5870,24 @@ window.INFINITY_DATA = {
       "faction": "Yu Jing",
       "restriction": "Yu Jing or airborne operations background",
       "level": "3",
-      "name": "Drop zone Specialist",
-      "primary": "Athletics",
+      "name": "Drop Zone Specialist",
+      "primary": "Stealth",
       "secondary": "Stealth",
-      "description": "Level 3 talent from the Tiger Soldier Drop Troops. Use this training with Athletics or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Athletics or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point in Athletics (Brawn) and in Stealth (Agility)",
+      "effect": "Gain +1d20 on tests for combat jumps. After dropping into enemy territory, gain +5 to your Stealth target until discovered.",
       "prerequisite": "Combat Jumper",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 14,
+      "skillGrants": [
+        "Stealth",
+        "Athletics"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Combat Jumper. Add 1 skill point in Athletics (Brawn) and in Stealth (Agility)"
     },
     {
       "category": "Supplemental",
@@ -4551,7 +5904,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Very Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -4564,11 +5919,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Combat First Aid",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -4580,12 +5937,20 @@ window.INFINITY_DATA = {
       "name": "Engineer Level 1",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 1 talent from the Nomad Clockmaker Cell. Use this training with Analysis or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point in Education (intelligence)",
+      "effect": "Gain +1d20 on tests to repair structures or recover an allied TAG/remote’s Firewall.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 21,
+      "skillGrants": [
+        "Education"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill point in Education (intelligence)"
     },
     {
       "category": "Technical",
@@ -4597,12 +5962,21 @@ window.INFINITY_DATA = {
       "name": "Engineer Level 2",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 2 talent from the Nomad Clockmaker Cell. Use this training with Analysis or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in Education (intelligence) and in Hacking (intelligence)",
+      "effect": "Gain +2d20 on tests to repair structures or recover an allied TAG/remote’s Firewall; +1d20 to recover a person’s Firewall.",
       "prerequisite": "Engineer Level 1",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 22,
+      "skillGrants": [
+        "Education",
+        "Hacking"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Engineer Level 1. Add 1 skill point in Education (intelligence) and in Hacking (intelligence)"
     },
     {
       "category": "Technical",
@@ -4614,12 +5988,21 @@ window.INFINITY_DATA = {
       "name": "Engineer Level 3",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 3 talent from the Nomad Clockmaker Cell. Use this training with Analysis or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point in Education (intelligence) and in Tech (Intelligence)",
+      "effect": "Gain +3d20 on tests to repair structures or recover an allied TAG/remote’s Firewall; +2d20 to recover a person’s Firewall.",
       "prerequisite": "Engineer Level 2",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 23,
+      "skillGrants": [
+        "Education",
+        "Tech"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Engineer Level 2. Add 1 skill point in Education (intelligence) and in Tech (Intelligence)"
     },
     {
       "category": "Faction Prestige",
@@ -4632,11 +6015,13 @@ window.INFINITY_DATA = {
       "primary": "Ballistics",
       "secondary": "Observation",
       "description": "Level 1 talent from the Posthuman Proxy Program. Use this training with Ballistics or Observation during relevant missions.",
-      "effect": "Gain +1d20 when using Ballistics or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Ballistics or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
@@ -4648,12 +6033,21 @@ window.INFINITY_DATA = {
       "name": "Espionage",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 2 talent from the Hexa Operative Cell. Use this training with Analysis or Observation to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
-      "prerequisite": "Counter-Intel",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point to any Intelligence subskill and in any Awareness subskill",
+      "effect": "Gain +2d20 on Intelligence-related skill tests.",
+      "prerequisite": "Counter Intelligence",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 16,
+      "skillGrants": [],
+      "skillGrantChoices": [
+        "Intelligence",
+        "Awareness"
+      ],
+      "acquisitionNotes": "Counter Intelligence. Add 1 skill point to any Intelligence subskill and in any Awareness subskill"
     },
     {
       "category": "Faction Prestige",
@@ -4666,11 +6060,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Father Knight Order. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Command or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -4683,11 +6079,13 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Stealth",
       "description": "Level 1 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to approach targets, maintain cover, and strike decisively.",
-      "effect": "Gain +1d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Persuade or Stealth for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -4700,11 +6098,13 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 2 talent from the Druze Bayram Security Contractor. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Stealth or Thievery for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Hidden Compartments",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Tech",
@@ -4717,11 +6117,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 2 talent from the Japanese Secessionist Tech Cell. Use this training with Tech or Education to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Tech or Education for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Field Technician",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -4734,11 +6136,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 1 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Tech",
@@ -4751,11 +6155,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 1 talent from the Japanese Secessionist Tech Cell. Use this training with Tech or Education to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Education for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -4765,14 +6171,23 @@ window.INFINITY_DATA = {
       "restriction": "Military or security background",
       "level": "2",
       "name": "Fire Team Leader",
-      "primary": "Command",
+      "primary": "Ballistics",
       "secondary": "Discipline",
-      "description": "Level 2 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
-      "prerequisite": "Patient Aim",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in Ballistics (Coordination) and in Discipline (Will Power)",
+      "effect": "Gain +2d20 on Ballistics tests while in formation and +5 to your Agility target when defending against ranged attacks.",
+      "prerequisite": "Fire Team Member",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 25,
+      "skillGrants": [
+        "Ballistics",
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Fire Team Member. Add 1 skill point in Ballistics (Coordination) and in Discipline (Will Power)"
     },
     {
       "category": "Combat",
@@ -4782,14 +6197,23 @@ window.INFINITY_DATA = {
       "restriction": "Military or security background",
       "level": "3",
       "name": "Fire Team Master",
-      "primary": "Command",
+      "primary": "Ballistics",
       "secondary": "Discipline",
-      "description": "Level 3 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
-      "prerequisite": "Fireteam: Haris",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point Ballistics (Coordination) and in Survival (Awareness)",
+      "effect": "Gain +3d20 on Ballistics tests while in formation and +10 to your Agility target when defending against ranged attacks.",
+      "prerequisite": "Fire Team Leader",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 26,
+      "skillGrants": [
+        "Survival",
+        "Ballistics"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Fire Team Leader. Add 1 skill point Ballistics (Coordination) and in Survival (Awareness)"
     },
     {
       "category": "Combat",
@@ -4799,14 +6223,22 @@ window.INFINITY_DATA = {
       "restriction": "Military or security background",
       "level": "1",
       "name": "Fire Team Member",
-      "primary": "Command",
+      "primary": "Ballistics",
       "secondary": "Discipline",
-      "description": "Level 1 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point in Ballistics (Coordination). Fireteam must be linked 10 feet from each other.",
+      "effect": "Gain +1d20 on Ballistics tests while in linked formation. Gain the Formation Trait.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 24,
+      "skillGrants": [
+        "Ballistics"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill point in Ballistics (Coordination). Fireteam must be linked 10 feet from each other."
     },
     {
       "category": "Combat",
@@ -4819,11 +6251,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Command or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Fireteam: Haris",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -4836,11 +6270,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Command or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -4853,11 +6289,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Command or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Fireteam: Duo",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Tech",
@@ -4870,11 +6308,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 1 talent from the Bureau Noir Counter-Intrusion Cell. Use this training with Tech or Education to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Education for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -4886,12 +6326,21 @@ window.INFINITY_DATA = {
       "name": "Forward Analyst",
       "primary": "Hacking",
       "secondary": "Tech",
-      "description": "Level 2 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in Observation (awareness) and in Analysis (Awareness)",
+      "effect": "While you have line of sight to a target within 100 ft, you may relay targeting information to allies, including hackers, so they can use your sightline where their attack or hacking method permits it.",
       "prerequisite": "Forward Observer",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 28,
+      "skillGrants": [
+        "Analysis",
+        "Observation"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Forward Observer.  Add 1 skill point in Observation (awareness) and in Analysis (Awareness)"
     },
     {
       "category": "Technical",
@@ -4903,12 +6352,20 @@ window.INFINITY_DATA = {
       "name": "Forward Observer",
       "primary": "Hacking",
       "secondary": "Tech",
-      "description": "Level 1 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point in Observation (Awareness)",
+      "effect": "While you have line of sight to a target within 60 ft, you may relay targeting information to allies, including hackers, so they can use your sightline where their attack or hacking method permits it.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 27,
+      "skillGrants": [
+        "Observation"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill point in Observation (Awareness)"
     },
     {
       "category": "Technical",
@@ -4920,12 +6377,21 @@ window.INFINITY_DATA = {
       "name": "Forward Signaler",
       "primary": "Hacking",
       "secondary": "Tech",
-      "description": "Level 3 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
-      "prerequisite": "Killer Hacking Suite",
+      "description": "Approved Level 3 custom Talent. Add 1 skill points in Observation (Awareness) and in Command (Personality)",
+      "effect": "While you have line of sight to a target within 200 ft, you may relay targeting information to allies, including hackers, so they can use your sightline where their attack or hacking method permits it.",
+      "prerequisite": "Forward Analyst",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 29,
+      "skillGrants": [
+        "Observation",
+        "Command"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Forward Analyst. Add 1 skill points in Observation (Awareness) and in Command (Personality)"
     },
     {
       "category": "Faction Prestige",
@@ -4938,11 +6404,13 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Resistance",
       "description": "Level 1 talent from the Ariadna Ranger Corps. Use this training with Survival or Resistance to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +1d20 when using Survival or Resistance for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Survival or Resistance for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -4959,7 +6427,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Uncommon",
       "cost": "7",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Tech",
@@ -4972,11 +6442,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "description": "Level 3 talent from the Zond Remote Controller. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Tech or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Swarm Synchrony",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -4989,11 +6461,13 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 2 talent from the Hassassin Bahram Operative. Use this training with Extraplanetary or Survival to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Precision Strike",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -5006,11 +6480,13 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 2 talent from the Nisse Ranger Doctrine. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Stealth or Thievery for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Snowline Scout",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -5023,11 +6499,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 2 talent from the Hassassin Close Combat Doctrine. Use this training with Tech or Education to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Tech or Education for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Martial Arts Lvl 1",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -5037,14 +6515,22 @@ window.INFINITY_DATA = {
       "restriction": "Heavy infantry or military background",
       "level": "1",
       "name": "Gunner",
-      "primary": "Observation",
+      "primary": "Ballistics",
       "secondary": "Discipline",
-      "description": "Level 1 talent from the Mobile Brigada Heavy Weapons. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point in Ballistics (Coordination)",
+      "effect": "Gain +1d20 on Ballistics tests with heavy firearms.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 30,
+      "skillGrants": [
+        "Ballistics"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill point in Ballistics (Coordination)"
     },
     {
       "category": "Combat",
@@ -5054,14 +6540,49 @@ window.INFINITY_DATA = {
       "restriction": "Heavy infantry or military background",
       "level": "2",
       "name": "Gunnery Sergeant",
-      "primary": "Observation",
+      "primary": "Ballistics",
       "secondary": "Discipline",
-      "description": "Level 2 talent from the Mobile Brigada Heavy Weapons. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in Ballistics (Coordination) and in Discipline (Willpower)",
+      "effect": "Gain +2d20 on Ballistics tests with heavy firearms. Ignore penalties specifically for operating heavy firearms.",
       "prerequisite": "Gunner",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 31,
+      "skillGrants": [
+        "Ballistics",
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Gunner. Add 1 skill point in Ballistics (Coordination) and in Discipline (Willpower)"
+    },
+    {
+      "category": "Combat",
+      "career": "Heavy Infantry",
+      "doctrine": "Mobile Brigada Heavy Weapons",
+      "faction": "Nomads",
+      "restriction": "Heavy infantry or military background",
+      "level": "3",
+      "name": "Gunnery Sergeant Major",
+      "primary": "Ballistics",
+      "secondary": "Discipline",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point in Ballistics (Coordination) and in Psychology (Intelligence)",
+      "effect": "Gain +3d20 on Ballistics tests with heavy firearms. Ignore penalties specifically for operating heavy firearms.",
+      "prerequisite": "Gunnery Sergeant",
+      "rarity": "Uncommon",
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 32,
+      "skillGrants": [
+        "Ballistics",
+        "Psychology"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Gunnery Sergeant. Add 1 skill point in Ballistics (Coordination) and in Psychology (Intelligence)"
     },
     {
       "category": "Technical",
@@ -5071,14 +6592,22 @@ window.INFINITY_DATA = {
       "restriction": "Nomad or advanced Hacking background",
       "level": "1",
       "name": "Hacker Level 1",
-      "primary": "Analysis",
+      "primary": "Hacking",
       "secondary": "Observation",
-      "description": "Level 1 talent from the Interventor Cyberwarfare Program. Use this training with Analysis or Observation to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill points in Hacking (intelligence)",
+      "effect": "Gain +1d20 on Hacking tests involving software or hardware.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 33,
+      "skillGrants": [
+        "Hacking"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill points in Hacking (intelligence)"
     },
     {
       "category": "Technical",
@@ -5088,14 +6617,23 @@ window.INFINITY_DATA = {
       "restriction": "Nomad or advanced Hacking background",
       "level": "2",
       "name": "Hacker Level 2",
-      "primary": "Analysis",
+      "primary": "Hacking",
       "secondary": "Observation",
-      "description": "Level 2 talent from the Interventor Cyberwarfare Program. Use this training with Analysis or Observation to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
-      "prerequisite": "ICEbreaker",
+      "description": "Approved Level 2 custom Talent. Add 1 skill points in Hacking (Intelligence) and in Analysis (Awareness)",
+      "effect": "Gain +2d20 on Hacking tests involving software or hardware; +1d20 on hacking attacks against a person.",
+      "prerequisite": "Hacker Level 1",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 34,
+      "skillGrants": [
+        "Analysis",
+        "Hacking"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Hacker Level 1. Add 1 skill points in Hacking (Intelligence) and in Analysis (Awareness)"
     },
     {
       "category": "Technical",
@@ -5105,14 +6643,23 @@ window.INFINITY_DATA = {
       "restriction": "Nomad or advanced Hacking background",
       "level": "3",
       "name": "Hacker Level 3",
-      "primary": "Analysis",
+      "primary": "Hacking",
       "secondary": "Observation",
-      "description": "Level 3 talent from the Interventor Cyberwarfare Program. Use this training with Analysis or Observation to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
-      "prerequisite": "Killer Hacking Suite",
+      "description": "Approved Level 3 custom Talent. Add 1 skill points in Hacking (intelligence) and in Tech (intelligence)",
+      "effect": "Gain +3d20 on Hacking tests involving software or hardware; +2d20 on hacking attacks against a person.",
+      "prerequisite": "Hacker Level 2",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 35,
+      "skillGrants": [
+        "Hacking",
+        "Tech"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Hacker Level 2 Add 1 skill points in Hacking (intelligence) and in Tech (intelligence)"
     },
     {
       "category": "Combat",
@@ -5125,11 +6672,13 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 3 talent from the Circular Void Operations Crew. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +3d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Extraplanetary or Survival for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Space Walker",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -5142,11 +6691,13 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 2 talent from the O-12 Survey Corps. Use this training with Survival or Observation to survive hostile terrain and act independently in the field.",
-      "effect": "Gain +2d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Survival or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Scanner Sweep",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -5159,11 +6710,13 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Resistance",
       "description": "Level 3 talent from the Ariadna Ranger Corps. Use this training with Survival or Resistance to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +3d20 when using Survival or Resistance for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Survival or Resistance for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Antipode Hunter",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -5176,11 +6729,13 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 1 talent from the Druze Bayram Security Contractor. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -5193,11 +6748,34 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Janissary Defensive Doctrine. Use this training with Resistance or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +1d20 when using Resistance or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Resistance or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Hull Isolation Specialist",
+      "category": "Supplemental",
+      "primary": "Tech",
+      "secondary": "Extraplanetary",
+      "effect": "Gain +1d20 on Tech tests to isolate a breached or malfunctioning ship compartment. Once per encounter, add 1 Heat to reroll one failed d20 on such a test.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "Extraplanetary or shipboard operations background",
+      "source": "Ships of the Human Sphere sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "career": "Voidship Engineer",
+      "doctrine": "Shipboard Damage Control",
+      "faction": "O-12 / Nomads",
+      "description": "Specialist training inspired by Ships of the Human Sphere operations.",
+      "prerequisite": "None"
     },
     {
       "category": "Social",
@@ -5210,11 +6788,13 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Yu Jing Imperial Command School. Use this training with Analysis or Observation to apply specialist training during relevant missions.",
-      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Read the Room",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -5227,11 +6807,13 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 1 talent from the Interventor Cyberwarfare Program. Use this training with Analysis or Observation to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -5244,11 +6826,13 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Command",
       "description": "Level 2 talent from the Imperial Service Agent. Use this training with Discipline or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Discipline or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Discipline or Command for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "State Discipline",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -5260,12 +6844,20 @@ window.INFINITY_DATA = {
       "name": "Impersonation - Mimetism",
       "primary": "Persuade",
       "secondary": "Stealth",
-      "description": "Level 1 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Added 1 skill points in Persuade (Personality)",
+      "effect": "Gain +1d20 on Persuade tests to impersonate a human. This talent does not permit impersonation of other species.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 36,
+      "skillGrants": [
+        "Persuade"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Added 1 skill points in Persuade (Personality)"
     },
     {
       "category": "Combat",
@@ -5277,12 +6869,21 @@ window.INFINITY_DATA = {
       "name": "Impersonation Level 1",
       "primary": "Persuade",
       "secondary": "Stealth",
-      "description": "Level 2 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill points in Persuade (personality) and in Stealth (Agility)",
+      "effect": "Gain +2d20 on Persuade tests to impersonate a human, or +1d20 to impersonate another species.",
       "prerequisite": "Impersonation - Mimetism",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 37,
+      "skillGrants": [
+        "Stealth",
+        "Persuade"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Impersonation - Mimetism. Add 1 skill points in Persuade (personality) and in Stealth (Agility)"
     },
     {
       "category": "Combat",
@@ -5294,12 +6895,21 @@ window.INFINITY_DATA = {
       "name": "Impersonation Level 2",
       "primary": "Persuade",
       "secondary": "Stealth",
-      "description": "Level 3 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +3d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
-      "prerequisite": "Deep Cover",
+      "description": "Approved Level 3 custom Talent. Add 1 skill points in Persuade (Personality) and in Survival (Awareness)",
+      "effect": "Gain +3d20 on Persuade tests to impersonate a human, or +2d20 to impersonate another species.",
+      "prerequisite": "Impersonation Level 1",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 38,
+      "skillGrants": [
+        "Survival",
+        "Persuade"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Impersonation Level 1. Add 1 skill points in Persuade (Personality) and in Survival (Awareness)"
     },
     {
       "category": "Medical",
@@ -5312,11 +6922,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 3 talent from the Akbar Doctor Program. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Rapid Triage",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -5329,11 +6941,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 3 talent from the Bureau Noir Counter-Intrusion Cell. Use this training with Tech or Education to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Tech or Education for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Counter-Intrusion",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -5346,11 +6960,13 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 3 talent from the Hassassin Bahram Operative. Use this training with Stealth or Thievery to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Ghost Operative",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -5363,11 +6979,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Fusilier Fireteam Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Tactical Advance",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -5380,11 +6998,13 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 2 talent from the Interventor Cyberwarfare Program. Use this training with Analysis or Observation to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "ICEbreaker",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -5397,11 +7017,13 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 3 talent from the Haqqislamite Scholar-Physician. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Applied Wisdom",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -5414,11 +7036,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Father Knight Order. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Command or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Faith and Steel",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -5435,7 +7059,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Rare",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -5448,11 +7074,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Father Knight Order. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Command or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Knight Commander",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Tech",
@@ -5465,11 +7093,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 3 talent from the Japanese Secessionist Tech Cell. Use this training with Tech or Education to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Tech or Education for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Field Fabricator",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -5482,11 +7112,13 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Command",
       "description": "Level 3 talent from the Imperial Service Agent. Use this training with Discipline or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Discipline or Command for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Discipline or Command for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Imperial Operative",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -5496,14 +7128,22 @@ window.INFINITY_DATA = {
       "restriction": "PanOceania, recon, or sniper background",
       "level": "1",
       "name": "Marksman Level 1",
-      "primary": "Observation",
+      "primary": "Ballistics",
       "secondary": "Discipline",
-      "description": "Level 1 talent from the Nisse Marksman Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 Skill points in Discipline (Will Power)",
+      "effect": "Gain +1d20 on Ballistics tests when firing a firearm.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 39,
+      "skillGrants": [
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 Skill points in Discipline (Will Power)"
     },
     {
       "category": "Combat",
@@ -5513,14 +7153,23 @@ window.INFINITY_DATA = {
       "restriction": "PanOceania, recon, or sniper background",
       "level": "2",
       "name": "Marksman Level 2",
-      "primary": "Observation",
+      "primary": "Ballistics",
       "secondary": "Discipline",
-      "description": "Level 2 talent from the Nisse Marksman Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 Skill points in Discipline (Willpower) and Stealth (Agility)",
+      "effect": "Gain +2d20 on Ballistics tests when firing a firearm.",
       "prerequisite": "Marksman Level 1",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 40,
+      "skillGrants": [
+        "Stealth",
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Marksman Level 1. Add 1 Skill points in Discipline (Willpower) and Stealth (Agility)"
     },
     {
       "category": "Combat",
@@ -5530,14 +7179,23 @@ window.INFINITY_DATA = {
       "restriction": "PanOceania, recon, or sniper background",
       "level": "3",
       "name": "Marksman Level 3",
-      "primary": "Observation",
+      "primary": "Ballistics",
       "secondary": "Discipline",
-      "description": "Level 3 talent from the Nisse Marksman Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 Skill points in Discipline (Willpower) and in Survival (Awareness)",
+      "effect": "Gain +3d20 on Ballistics tests when firing a firearm.",
       "prerequisite": "Marksman Level 2",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 41,
+      "skillGrants": [
+        "Survival",
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Marksman Level 2. Add 1 Skill points in Discipline (Willpower) and in Survival (Awareness)"
     },
     {
       "category": "Combat",
@@ -5550,11 +7208,13 @@ window.INFINITY_DATA = {
       "primary": "Close Combat",
       "secondary": "Athletics",
       "description": "Level 3 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Athletics during relevant missions.",
-      "effect": "Gain +3d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Close Combat or Athletics for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Martial Arts Lvl 2",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -5566,12 +7226,20 @@ window.INFINITY_DATA = {
       "name": "Martial Arts Lvl 1",
       "primary": "Close Combat",
       "secondary": "Athletics",
-      "description": "Level 1 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Athletics during relevant missions.",
-      "effect": "Gain +1d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 Skill points in Close combat (Agility)",
+      "effect": "Gain +1d20 on Close Combat tests.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 42,
+      "skillGrants": [
+        "Close Combat"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 Skill points in Close combat (Agility)"
     },
     {
       "category": "Combat",
@@ -5583,12 +7251,20 @@ window.INFINITY_DATA = {
       "name": "Martial Arts Lvl 2",
       "primary": "Close Combat",
       "secondary": "Athletics",
-      "description": "Level 2 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Athletics during relevant missions.",
-      "effect": "Gain +2d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill points in Stealth (Agility)",
+      "effect": "Gain +2d20 on Close Combat tests.",
       "prerequisite": "Martial Arts Lvl 1",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 43,
+      "skillGrants": [
+        "Stealth"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Martial Arts Lvl 1. Add 1 skill points in Stealth (Agility)"
     },
     {
       "category": "Combat",
@@ -5600,12 +7276,21 @@ window.INFINITY_DATA = {
       "name": "Martial Arts Lvl 3",
       "primary": "Close Combat",
       "secondary": "Athletics",
-      "description": "Level 3 talent from the Hassassin Close Combat Doctrine. Use this training with Close Combat or Athletics during relevant missions.",
-      "effect": "Gain +3d20 when using Close Combat or Athletics for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point in Close Combat (Agility) and Discipline (Willpower)",
+      "effect": "Gain +3d20 on Close Combat tests.",
       "prerequisite": "Martial Arts Lvl 2",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 44,
+      "skillGrants": [
+        "Close Combat",
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Martial Arts Lvl 2. Add 1 skill point in Close Combat (Agility) and Discipline (Willpower)"
     },
     {
       "category": "Faction Prestige",
@@ -5618,11 +7303,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "One lower-level talent from Ghulam Doctor Field School",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -5635,11 +7322,13 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 3 talent from the Ariadna Ranger Doctrine. Use this training with Survival or Observation to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +3d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Survival or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Route Planner",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -5652,11 +7341,13 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Lifestyle",
       "description": "Level 3 talent from the Tunguska Interventor Program. Use this training with Hacking or Lifestyle to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Hacking or Lifestyle for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Hacking or Lifestyle for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Data Ghost",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -5669,11 +7360,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Field Medic Initiate",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -5683,14 +7376,49 @@ window.INFINITY_DATA = {
       "restriction": "Medicine or Haqqislamite military background",
       "level": "2",
       "name": "Medicine - Doctor",
-      "primary": "Analysis",
+      "primary": "Medicine",
       "secondary": "Observation",
-      "description": "Level 2 talent from the Ghulam Doctor Field School. Use this training with Analysis or Observation to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point to Medicine (intelligence) and Resistance (brawn)",
+      "effect": "Gain +2d20 on Medicine tests. You may revive the same casualty per encounter up to 2 times. Follow the normal healing equipment and revival requirements.",
       "prerequisite": "Medicine - Medic",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 46,
+      "skillGrants": [
+        "Resistance",
+        "Medicine"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Medicine - Medic. Add 1 skill point to Medicine (intelligence) and Resistance (brawn)"
+    },
+    {
+      "category": "Medical",
+      "career": "Doctor",
+      "doctrine": "Ghulam Doctor Field School",
+      "faction": "Haqqislam",
+      "restriction": "Medicine or Haqqislamite military background",
+      "level": "3",
+      "name": "Medicine - Doctor+",
+      "primary": "Medicine",
+      "secondary": "Observation",
+      "description": "Approved Level 3 custom Talent. Add 1 skill points in Medicine (Intelligence) and Tech (Intelligence)",
+      "effect": "Gain +3d20 on Medicine tests. You may revive the same casualty per encounter up to 3 times. Follow the normal healing equipment and revival requirements.",
+      "prerequisite": "Medicine - Doctor",
+      "rarity": "Uncommon",
+      "cost": "15",
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 47,
+      "skillGrants": [
+        "Medicine",
+        "Tech"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Medicine - Doctor. Add 1 skill points in Medicine (Intelligence) and Tech (Intelligence)"
     },
     {
       "category": "Medical",
@@ -5702,12 +7430,20 @@ window.INFINITY_DATA = {
       "name": "Medicine - Medic",
       "primary": "Medicine",
       "secondary": "Analysis",
-      "description": "Level 1 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 Skill point in Medicine (Intelligence)",
+      "effect": "Gain +1d20 on Medicine tests. You may revive the same casualty per encounter up to 1 time. Follow the normal healing equipment and revival requirements.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 45,
+      "skillGrants": [
+        "Medicine"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 Skill point in Medicine (Intelligence)"
     },
     {
       "category": "Medical",
@@ -5720,11 +7456,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 3 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Emergency Treatment",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -5741,7 +7479,30 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Rare",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Morat Rally Officer",
+      "category": "Supplemental",
+      "primary": "Command",
+      "secondary": "Discipline",
+      "effect": "Once per encounter, as a Standard Action, make a D1 Command test to rally one conscious ally within 30 ft. On success, that ally may reroll one failed d20 on their next Discipline test before the encounter ends.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "Combined Army or Morat background",
+      "source": "Combined Army sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "career": "Morat Warrior",
+      "doctrine": "Morat Assault Doctrine",
+      "faction": "Combined Army",
+      "description": "Specialist training inspired by Combined Army operations.",
+      "prerequisite": "None"
     },
     {
       "category": "Exploration",
@@ -5751,14 +7512,23 @@ window.INFINITY_DATA = {
       "restriction": "Cold-weather or mountain operations background",
       "level": "2",
       "name": "Mountain Climber",
-      "primary": "Athletics",
+      "primary": "Acrobatics",
       "secondary": "Survival",
-      "description": "Level 2 talent from the Svalarheima Mountain Recon. Use this training with Athletics or Survival during relevant missions.",
-      "effect": "Gain +2d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point to Acrobatics (Agility) and in Survival (awareness)",
+      "effect": "Gain +2d20 on Acrobatics tests to climb structures. You may fire a small weapon while climbing.",
       "prerequisite": "Rock Climber",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 7,
+      "skillGrants": [
+        "Acrobatics",
+        "Survival"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Rock Climber. Add 1 skill point to Acrobatics (Agility) and in Survival (awareness)"
     },
     {
       "category": "Exploration",
@@ -5770,12 +7540,20 @@ window.INFINITY_DATA = {
       "name": "Naval Diver",
       "primary": "Athletics",
       "secondary": "Survival",
-      "description": "Level 1 talent from the Varuna Amphibious Commandos. Use this training with Athletics or Survival to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +1d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill checks in Athletics (Brawn)",
+      "effect": "Gain +1d20 on applicable tests while performing activities underwater.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 9,
+      "skillGrants": [
+        "Athletics"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill checks in Athletics (Brawn)"
     },
     {
       "category": "Social",
@@ -5788,11 +7566,13 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Lifestyle",
       "description": "Level 2 talent from the O-12 Liaison Corps. Use this training with Persuade or Lifestyle during relevant missions.",
-      "effect": "Gain +2d20 when using Persuade or Lifestyle for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Persuade or Lifestyle for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Silver Tongue",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Tech",
@@ -5805,11 +7585,13 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 3 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Backdoor Access",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -5821,12 +7603,21 @@ window.INFINITY_DATA = {
       "name": "Officer - Captain",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 2 talent from the Yu Jing Imperial Command School. Use this training with Analysis or Observation to apply specialist training during relevant missions.",
-      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
-      "prerequisite": "Officer - Liutenant",
+      "description": "Approved Level 2 custom Talent. Add 1 Skill points in Command (personality) and Education (Intelligence)",
+      "effect": "Before each encounter, roll 1d6 to determine available orders. Spend one order as a Free Action to let an ally within 30 ft repeat an action they performed this round.",
+      "prerequisite": "Officer - Lieutenant",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 49,
+      "skillGrants": [
+        "Education",
+        "Command"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Officer - Lieutenant. Add 1 Skill points in Command (personality) and Education (Intelligence)"
     },
     {
       "category": "Social",
@@ -5835,15 +7626,23 @@ window.INFINITY_DATA = {
       "faction": "Yu Jing",
       "restriction": "Yu Jing or command/security background",
       "level": "1",
-      "name": "Officer - Liutenant",
+      "name": "Officer - Lieutenant",
       "primary": "Command",
       "secondary": "Discipline",
-      "description": "Level 1 talent from the Yu Jing Imperial Command School. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 Skill point in Command (Personality)",
+      "effect": "Before the session, roll 1d6 to determine available orders. Spend one order as a Free Action to let an ally within 30 ft repeat an action they performed this round.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 48,
+      "skillGrants": [
+        "Command"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 Skill point in Command (Personality)"
     },
     {
       "category": "Social",
@@ -5855,12 +7654,21 @@ window.INFINITY_DATA = {
       "name": "Officer - Major",
       "primary": "Command",
       "secondary": "Discipline",
-      "description": "Level 3 talent from the Yu Jing Imperial Command School. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Added 1 Skill point in Command (Personality) and Discipline (Will Power)",
+      "effect": "Once per turn, as a Free Action, order an ally within 30 ft to repeat an action they performed this round.",
       "prerequisite": "Officer - Captain",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 50,
+      "skillGrants": [
+        "Command",
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Officer - Captain. Added 1 Skill point in Command (Personality) and Discipline (Will Power)"
     },
     {
       "category": "Combat",
@@ -5873,11 +7681,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Fusilier Fireteam Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Tactical Advance",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -5889,12 +7699,21 @@ window.INFINITY_DATA = {
       "name": "Pack Leader",
       "primary": "Animal Handling",
       "secondary": "Command",
-      "description": "Level 3 talent from the Antipode Handler Doctrine. Use this training with Animal Handling or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +3d20 when using Animal Handling or Command for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 skill points in Animal handling (personality) and Command (Personality)",
+      "effect": "Gain +3d20 on Animal Handling tests involving companions. Control up to 3 companions. Once per round, use a Free Action to order one companion to attack.",
       "prerequisite": "Pack Ranger",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 5,
+      "skillGrants": [
+        "Animal Handling",
+        "Command"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Pack Ranger. Add 1 skill points in Animal handling (personality) and Command (Personality)"
     },
     {
       "category": "Exploration",
@@ -5906,12 +7725,21 @@ window.INFINITY_DATA = {
       "name": "Pack Ranger",
       "primary": "Animal Handling",
       "secondary": "Command",
-      "description": "Level 2 talent from the Antipode Handler Doctrine. Use this training with Animal Handling or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Animal Handling or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in Animal Handling (Personality) and in Observation (Awareness)",
+      "effect": "Gain +2d20 on Animal Handling tests involving companions. Control up to 2 companions. Once per round, use a Free Action to order one companion to attack.",
       "prerequisite": "Animal Handler",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 4,
+      "skillGrants": [
+        "Observation",
+        "Animal Handling"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Animal Handler. Add 1 skill point in Animal Handling (Personality) and in Observation (Awareness)"
     },
     {
       "category": "Combat",
@@ -5923,12 +7751,20 @@ window.INFINITY_DATA = {
       "name": "Paratrooper",
       "primary": "Athletics",
       "secondary": "Stealth",
-      "description": "Level 1 talent from the Tiger Soldier Drop Troops. Use this training with Athletics or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Athletics or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point in Athletics (Brawn)",
+      "effect": "Gain +1d20 on tests for combat jumps.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 12,
+      "skillGrants": [
+        "Athletics"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill point in Athletics (Brawn)"
     },
     {
       "category": "Tech",
@@ -5941,11 +7777,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Education",
       "description": "Level 1 talent from the Nomad Clockmaker Cell. Use this training with Tech or Education to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Education for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Education for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -5958,11 +7796,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Fusilier Fireteam Doctrine. Use this training with Observation or Discipline to fight as part of a trained fireteam and support squad tactics.",
-      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Pattern Recognition",
@@ -5982,7 +7822,9 @@ window.INFINITY_DATA = {
       "source": "Infinity Corebook / Collector's Edition",
       "sourcePage": 76,
       "skillBonusMode": "source-single",
-      "pricingNote": "5 Infinity Points is the simplified character sheet's house-rule price for a Level 1 Talent; the official Infinity RPG corebook uses XP instead."
+      "pricingNote": "5 Infinity Points is the simplified character sheet's house-rule price for a Level 1 Talent; the official Infinity RPG corebook uses XP instead.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -5995,11 +7837,13 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Stealth",
       "description": "Level 3 talent from the Hassassin Fiday Impersonator. Use this training with Persuade or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Persuade or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Persuade or Stealth for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Impersonation Level 1",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -6012,11 +7856,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 3 talent from the Croc Man Recon Doctrine. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Stealth for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Recon Specialist",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -6028,12 +7874,20 @@ window.INFINITY_DATA = {
       "name": "Pilot - Remote 1",
       "primary": "Tech",
       "secondary": "Observation",
-      "description": "Level 1 talent from the Zond Remote Controller. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skills point in Pilot (Coordination)",
+      "effect": "Gain +1d20 on tests to operate one remote.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 51,
+      "skillGrants": [
+        "Pilot"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skills point in Pilot (Coordination)"
     },
     {
       "category": "Technical",
@@ -6045,12 +7899,21 @@ window.INFINITY_DATA = {
       "name": "Pilot - Remote 2",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 2 talent from the Zond Remote Controller. Use this training with Analysis or Observation to coordinate remotes, drones, and automated support.",
-      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in Pilot (Coordination) and Education (Intelligence)",
+      "effect": "Gain up to +2d20 when operating one remote, or up to +1d20 when operating two remotes.",
       "prerequisite": "Pilot - Remote 1",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 52,
+      "skillGrants": [
+        "Pilot",
+        "Education"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Pilot - Remote 1. Add 1 skill point in Pilot (Coordination) and Education (Intelligence)"
     },
     {
       "category": "Technical",
@@ -6062,12 +7925,21 @@ window.INFINITY_DATA = {
       "name": "Pilot - Remote 3",
       "primary": "Tech",
       "secondary": "Observation",
-      "description": "Level 3 talent from the Zond Remote Controller. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point in Pilot (coordination) and Lifestyle (Personality)",
+      "effect": "Gain +3d20 when operating one remote, or +2d20 when operating two remotes.",
       "prerequisite": "Pilot - Remote 2",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 53,
+      "skillGrants": [
+        "Pilot",
+        "Lifestyle"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Pilot - Remote 2. Add 1 skill point in Pilot (coordination) and Lifestyle (Personality)"
     },
     {
       "category": "General",
@@ -6076,15 +7948,24 @@ window.INFINITY_DATA = {
       "faction": "PanOceania",
       "restriction": "TAG, heavy infantry, or advanced Tech background",
       "level": "3",
-      "name": "Pilot - TAG expert",
+      "name": "Pilot - TAG Expert",
       "primary": "Tech",
       "secondary": "Observation",
-      "description": "Level 3 talent from the Seraph TAG Pilot Program. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +3d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 Skill points in Pilot (Coordination) and  Analysis (Awareness)",
+      "effect": "Gain +3d20 on applicable tests to operate a TAG.",
       "prerequisite": "Pilot - TAG Operator",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 56,
+      "skillGrants": [
+        "Analysis",
+        "Pilot"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Pilot - TAG Operator. Add 1 Skill points in Pilot (Coordination) and  Analysis (Awareness)"
     },
     {
       "category": "General",
@@ -6096,12 +7977,21 @@ window.INFINITY_DATA = {
       "name": "Pilot - TAG Operator",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 2 talent from the Seraph TAG Pilot Program. Use this training with Analysis or Observation to operate heavy combat platforms and manage battlefield systems.",
-      "effect": "Gain +2d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill points in Pilot (Coordination) and Tech (Intelligence)",
+      "effect": "Gain +2d20 on applicable tests to operate a TAG.",
       "prerequisite": "Pilot - TAG Trainee",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 55,
+      "skillGrants": [
+        "Pilot",
+        "Tech"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Pilot - TAG trainee. Add 1 skill points in Pilot (Coordination) and Tech (Intelligence)"
     },
     {
       "category": "General",
@@ -6113,12 +8003,20 @@ window.INFINITY_DATA = {
       "name": "Pilot - TAG Trainee",
       "primary": "Tech",
       "secondary": "Observation",
-      "description": "Level 1 talent from the Seraph TAG Pilot Program. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skills points in Pilot (Coordination)",
+      "effect": "Gain +1d20 on applicable tests to operate a TAG.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 54,
+      "skillGrants": [
+        "Pilot"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skills points in Pilot (Coordination)"
     },
     {
       "category": "Supplemental",
@@ -6135,7 +8033,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Very Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -6148,11 +8048,13 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Analysis",
       "description": "Level 3 talent from the Posthuman Proxy Program. Use this training with Hacking or Analysis during relevant missions.",
-      "effect": "Gain +3d20 when using Hacking or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Hacking or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Proxy Synchrony",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -6169,7 +8071,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Rare",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -6182,11 +8086,34 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 1 talent from the Hassassin Bahram Operative. Use this training with Stealth or Thievery to approach targets, strike decisively, and escape notice.",
-      "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Proxy Reserve Operator",
+      "category": "Supplemental",
+      "primary": "Hacking",
+      "secondary": "Pilot",
+      "effect": "Gain +1d20 on tests to restore the connection to your own remote. Once per encounter, add 1 Heat before such a test for one further d20.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "ALEPH, O-12, Nomad, or advanced Hacking background",
+      "source": "ALEPH sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "career": "Advanced Infowar Analyst",
+      "doctrine": "ALEPH Advanced Infowar",
+      "faction": "ALEPH",
+      "description": "Specialist training inspired by ALEPH operations.",
+      "prerequisite": "None"
     },
     {
       "category": "Faction Prestige",
@@ -6199,11 +8126,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Posthuman Proxy Program. Use this training with Command or Analysis during relevant missions.",
-      "effect": "Gain +2d20 when using Command or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Command or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Enhanced Reactions",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -6216,11 +8145,13 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 3 talent from the Yu Jing Imperial Command School. Use this training with Analysis or Observation to apply specialist training during relevant missions.",
-      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Human Intel",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -6233,11 +8164,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Akbar Doctor Program. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Steady Scalpel",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -6250,11 +8183,13 @@ window.INFINITY_DATA = {
       "primary": "Analysis",
       "secondary": "Observation",
       "description": "Level 1 talent from the Yu Jing Imperial Command School. Use this training with Analysis or Observation to apply specialist training during relevant missions.",
-      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Analysis or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -6266,12 +8201,20 @@ window.INFINITY_DATA = {
       "name": "Recon Level 1",
       "primary": "Observation",
       "secondary": "Stealth",
-      "description": "Level 1 talent from the Spektr Recon Cell. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point in Survival (Awareness)",
+      "effect": "Gain +1d20 on applicable reconnaissance tests.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 57,
+      "skillGrants": [
+        "Survival"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill point in Survival (Awareness)"
     },
     {
       "category": "Stealth",
@@ -6283,12 +8226,21 @@ window.INFINITY_DATA = {
       "name": "Recon Level 2",
       "primary": "Observation",
       "secondary": "Stealth",
-      "description": "Level 2 talent from the Spektr Recon Cell. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill points in Survival (Awareness) and Observation (Awareness)",
+      "effect": "Gain +2d20 on applicable reconnaissance tests.",
       "prerequisite": "Recon Level 1",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 58,
+      "skillGrants": [
+        "Observation",
+        "Survival"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Recon Level 1. Add 1 skill points in Survival (Awareness) and Observation (Awareness)"
     },
     {
       "category": "Stealth",
@@ -6300,12 +8252,21 @@ window.INFINITY_DATA = {
       "name": "Recon Level 3",
       "primary": "Observation",
       "secondary": "Stealth",
-      "description": "Level 3 talent from the Spektr Recon Cell. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point in Survival (Awareness) and Discipline (will power)",
+      "effect": "Gain +3d20 on applicable reconnaissance tests.",
       "prerequisite": "Recon Level 2",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 59,
+      "skillGrants": [
+        "Survival",
+        "Discipline"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Recon Level 2. Add 1 skill point in Survival (Awareness) and Discipline (will power)"
     },
     {
       "category": "Stealth",
@@ -6318,11 +8279,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 2 talent from the Croc Man Recon Doctrine. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +2d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Stealth for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Silent Movement",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -6335,11 +8298,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 2 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Bio-Scanner",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -6352,11 +8317,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Khawarij Assault Doctrine. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Shock Trooper",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Tech",
@@ -6369,11 +8336,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "description": "Level 1 talent from the Zond Remote Controller. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Tech or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -6383,14 +8352,22 @@ window.INFINITY_DATA = {
       "restriction": "Cold-weather or mountain operations background",
       "level": "1",
       "name": "Rock Climber",
-      "primary": "Athletics",
+      "primary": "Acrobatics",
       "secondary": "Survival",
-      "description": "Level 1 talent from the Svalarheima Mountain Recon. Use this training with Athletics or Survival during relevant missions.",
-      "effect": "Gain +1d20 when using Athletics or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skill point in Acrobatics (Agility)",
+      "effect": "Climb up to your movement speed as a Free Action. Gain +1d20 on Acrobatics tests to climb structures.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 6,
+      "skillGrants": [
+        "Acrobatics"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skill point in Acrobatics (Agility)"
     },
     {
       "category": "Exploration",
@@ -6403,11 +8380,13 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 2 talent from the Ariadna Ranger Doctrine. Use this training with Survival or Observation to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +2d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Survival or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Wilderness Training",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -6420,11 +8399,13 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Science",
       "description": "Level 3 talent from the Haqqislamite Scholar-Physician. Use this training with Education or Science to apply specialist training during relevant missions.",
-      "effect": "Gain +3d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Education or Science for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Applied Wisdom",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -6437,11 +8418,13 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 1 talent from the O-12 Survey Corps. Use this training with Survival or Observation to survive hostile terrain and act independently in the field.",
-      "effect": "Gain +1d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Survival or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -6454,11 +8437,34 @@ window.INFINITY_DATA = {
       "primary": "Education",
       "secondary": "Science",
       "description": "Level 1 talent from the Haqqislamite Scholar-Physician. Use this training with Education or Science to apply specialist training during relevant missions.",
-      "effect": "Gain +1d20 when using Education or Science for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Education or Science for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Sensor Fusion Operator",
+      "category": "Exploration",
+      "primary": "Observation",
+      "secondary": "Analysis",
+      "effect": "Gain +1d20 on Observation or Analysis tests to combine readings from two functioning sensors. Once per test, you may add 1 Heat to reroll one failed d20.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "PanOceania or advanced sensor background",
+      "source": "PanOceania sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "career": "Explorer",
+      "doctrine": "O-12 Survey Corps",
+      "faction": "PanOceania",
+      "description": "Specialist training inspired by PanOceania operations.",
+      "prerequisite": "None"
     },
     {
       "category": "Supplemental",
@@ -6475,7 +8481,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Very Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -6488,11 +8496,13 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Janissary Defensive Doctrine. Use this training with Resistance or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +2d20 when using Resistance or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Resistance or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Hold Position",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -6509,7 +8519,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -6522,11 +8534,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Khawarij Assault Doctrine. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Breacher",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Technical",
@@ -6539,11 +8553,13 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 3 talent from the Interventor Cyberwarfare Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Hacking or Tech for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Forward Analyst",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Stealth",
@@ -6556,11 +8572,34 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Stealth",
       "description": "Level 1 talent from the Croc Man Recon Doctrine. Use this training with Observation or Stealth to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Observation or Stealth for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Stealth for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
+    },
+    {
+      "name": "Silk Field Responder",
+      "category": "Medical",
+      "primary": "Medicine",
+      "secondary": "Resistance",
+      "effect": "Gain +1d20 on Medicine tests to stabilise an injured ally using a Health Kit or MediKit. Once per encounter, add 1 Heat to reroll one failed d20 on such a test.",
+      "rarity": "Common",
+      "cost": "5",
+      "level": "1",
+      "restriction": "Medicine or Haqqislamite military background",
+      "source": "Haqqislam sourcebook — thematic inspiration; original house-rule design",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "New custom expansion — playtest",
+      "skillGrants": [],
+      "skillGrantChoices": [],
+      "career": "Doctor",
+      "doctrine": "Ghulam Doctor Field School",
+      "faction": "Haqqislam",
+      "description": "Specialist training inspired by Haqqislam operations.",
+      "prerequisite": "None"
     },
     {
       "category": "Medical",
@@ -6573,11 +8612,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 3 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Regeneration Protocol",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -6590,11 +8631,13 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Lifestyle",
       "description": "Level 1 talent from the O-12 Liaison Corps. Use this training with Persuade or Lifestyle during relevant missions.",
-      "effect": "Gain +1d20 when using Persuade or Lifestyle for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Persuade or Lifestyle for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -6607,11 +8650,13 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 1 talent from the Nisse Ranger Doctrine. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Stealth or Thievery for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -6623,12 +8668,21 @@ window.INFINITY_DATA = {
       "name": "Space Walker",
       "primary": "Extraplanetary",
       "secondary": "Survival",
-      "description": "Level 2 talent from the Circular Void Operations Crew. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in Extraplanetary (Awareness) and in Survival (Awareness)",
+      "effect": "Gain +2d20 on applicable social, task or combat tests performed in zero gravity.",
       "prerequisite": "Cosmonaut",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 70,
+      "skillGrants": [
+        "Extraplanetary",
+        "Survival"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Cosmonaut. Add 1 skill point in Extraplanetary (Awareness) and in Survival (Awareness)"
     },
     {
       "category": "General",
@@ -6638,14 +8692,22 @@ window.INFINITY_DATA = {
       "restriction": "Extraplanetary or shipboard operations background",
       "level": "1",
       "name": "Spacecraft Pilot - Level 1",
-      "primary": "Extraplanetary",
+      "primary": "Spacecraft",
       "secondary": "Survival",
-      "description": "Level 1 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +1d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 skills point in Pilot (Coordination)",
+      "effect": "Gain +1d20 on applicable tests when piloting an aircraft or spacecraft.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 60,
+      "skillGrants": [
+        "Pilot"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 skills point in Pilot (Coordination)"
     },
     {
       "category": "General",
@@ -6655,14 +8717,23 @@ window.INFINITY_DATA = {
       "restriction": "Extraplanetary or shipboard operations background",
       "level": "2",
       "name": "Spacecraft Pilot - Level 2",
-      "primary": "Extraplanetary",
+      "primary": "Spacecraft",
       "secondary": "Survival",
-      "description": "Level 2 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in Pilot (Coordination) and in Spacecraft (coordination)",
+      "effect": "Gain +2d20 on applicable tests when piloting an aircraft or spacecraft.",
       "prerequisite": "Spacecraft Pilot - Level 1",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 61,
+      "skillGrants": [
+        "Pilot",
+        "Spacecraft"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Spacecraft Pilot - Level 1. Add 1 skill point in Pilot (Coordination) and in Spacecraft (coordination)"
     },
     {
       "category": "General",
@@ -6672,14 +8743,23 @@ window.INFINITY_DATA = {
       "restriction": "Extraplanetary or shipboard operations background",
       "level": "3",
       "name": "Spacecraft Pilot - Level 3",
-      "primary": "Extraplanetary",
+      "primary": "Spacecraft",
       "secondary": "Survival",
-      "description": "Level 3 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +3d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1  skill point in Pilot (Coordination) and in Extraplanetary (Awareness)",
+      "effect": "Gain +3d20 on applicable tests when piloting an aircraft or spacecraft.",
       "prerequisite": "Spacecraft Pilot - Level 2",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 62,
+      "skillGrants": [
+        "Extraplanetary",
+        "Pilot"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Spacecraft Pilot - Level 2. Add 1  skill point in Pilot (Coordination) and in Extraplanetary (Awareness)"
     },
     {
       "category": "General",
@@ -6691,12 +8771,21 @@ window.INFINITY_DATA = {
       "name": "Spy",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 3 talent from the Hexa Operative Cell. Use this training with Analysis or Observation to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point to any Intelligence subskill and in any Awareness subskill",
+      "effect": "Gain +3d20 on Intelligence-related skill tests.",
       "prerequisite": "Espionage",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 17,
+      "skillGrants": [],
+      "skillGrantChoices": [
+        "Intelligence",
+        "Awareness"
+      ],
+      "acquisitionNotes": "Espionage. Add 1 skill point to any Intelligence subskill and in any Awareness subskill"
     },
     {
       "category": "Combat",
@@ -6709,11 +8798,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 1 talent from the Mobile Brigada Heavy Weapons. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Observation or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -6725,12 +8816,21 @@ window.INFINITY_DATA = {
       "name": "Starship Trooper",
       "primary": "Analysis",
       "secondary": "Observation",
-      "description": "Level 3 talent from the Circular Crew Operations. Use this training with Analysis or Observation to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
-      "prerequisite": "One lower-level talent from Circular Crew Operations",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point in Extraplanetary (Awareness) and in Tech (Intelligence)",
+      "effect": "Gain +3d20 on applicable social, task or combat tests performed in zero gravity.",
+      "prerequisite": "Space Walker",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 71,
+      "skillGrants": [
+        "Extraplanetary",
+        "Tech"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Space Walker. Add 1 skill point in Extraplanetary (Awareness) and in Tech (Intelligence)"
     },
     {
       "category": "Faction Prestige",
@@ -6743,11 +8843,13 @@ window.INFINITY_DATA = {
       "primary": "Discipline",
       "secondary": "Command",
       "description": "Level 1 talent from the Imperial Service Agent. Use this training with Discipline or Command to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +1d20 when using Discipline or Command for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Discipline or Command for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Medical",
@@ -6760,11 +8862,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 1 talent from the Akbar Doctor Program. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -6781,7 +8885,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Rare",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "name": "Sturdy",
@@ -6801,7 +8907,9 @@ window.INFINITY_DATA = {
       "source": "Infinity Corebook / Collector's Edition",
       "sourcePage": 91,
       "skillBonusMode": "source-single",
-      "pricingNote": "5 Infinity Points is the simplified character sheet's house-rule price for a Level 1 Talent; the official Infinity RPG corebook uses XP instead."
+      "pricingNote": "5 Infinity Points is the simplified character sheet's house-rule price for a Level 1 Talent; the official Infinity RPG corebook uses XP instead.",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -6814,11 +8922,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Mobile Brigada Heavy Weapons. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +2d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Observation or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Stabilized Platform",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Tech",
@@ -6831,11 +8941,13 @@ window.INFINITY_DATA = {
       "primary": "Tech",
       "secondary": "Observation",
       "description": "Level 2 talent from the Zond Remote Controller. Use this training with Tech or Observation to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Tech or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Tech or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Remote Link",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -6852,7 +8964,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Rare",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -6865,11 +8979,13 @@ window.INFINITY_DATA = {
       "primary": "Hacking",
       "secondary": "Tech",
       "description": "Level 1 talent from the Tunguska Interventor Program. Use this training with Hacking or Tech to attack, defend, or manipulate quantronic systems.",
-      "effect": "Gain +1d20 when using Hacking or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Hacking or Tech for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -6882,11 +8998,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Discipline",
       "description": "Level 2 talent from the Fusilier Fireteam Doctrine. Use this training with Command or Discipline to lead allies, coordinate plans, and impose discipline.",
-      "effect": "Gain +2d20 when using Command or Discipline for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Command or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Combat Drill",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "General",
@@ -6898,12 +9016,21 @@ window.INFINITY_DATA = {
       "name": "Thief - Acquisitions",
       "primary": "Thievery",
       "secondary": "Tech",
-      "description": "Level 2 talent from the Druze Bayram Security Contractor. Use this training with Thievery or Tech to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +2d20 when using Thievery or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 2 custom Talent. Add 1 skill point in Thievery (Awareness) and in Lifestyle (Personality)",
+      "effect": "Gain +2d20 on Thievery tests involving sleight of hand.",
       "prerequisite": "Thief - Pickpocket",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 64,
+      "skillGrants": [
+        "Thievery",
+        "Lifestyle"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Thief - Pickpocket. Add 1 skill point in Thievery (Awareness) and in Lifestyle (Personality)"
     },
     {
       "category": "General",
@@ -6913,14 +9040,23 @@ window.INFINITY_DATA = {
       "restriction": "Mercenary, criminal, or trade-route background",
       "level": "3",
       "name": "Thief - Master",
-      "primary": "Analysis",
+      "primary": "Thievery",
       "secondary": "Observation",
-      "description": "Level 3 talent from the Druze Bayram Security Contractor. Use this training with Analysis or Observation to move goods, evade inspection, and bypass security.",
-      "effect": "Gain +3d20 when using Analysis or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "description": "Approved Level 3 custom Talent. Add 1 skill point in Thievery (Awareness) and in Analysis (Awareness)",
+      "effect": "Gain +3d20 on Thievery tests involving sleight of hand.",
       "prerequisite": "Thief - Acquisitions",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 65,
+      "skillGrants": [
+        "Analysis",
+        "Thievery"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Thief - Acquisitions. Add 1 skill point in Thievery (Awareness) and in Analysis (Awareness)"
     },
     {
       "category": "General",
@@ -6932,12 +9068,20 @@ window.INFINITY_DATA = {
       "name": "Thief - Pickpocket",
       "primary": "Thievery",
       "secondary": "Tech",
-      "description": "Level 1 talent from the Druze Bayram Security Contractor. Use this training with Thievery or Tech to repair, modify, or exploit machines and field equipment.",
-      "effect": "Gain +1d20 when using Thievery or Tech for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "description": "Approved Level 1 custom Talent. Add 1 Skill point in Thievery (Awareness)",
+      "effect": "Gain +1d20 on Thievery tests involving sleight of hand.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Approved workbook",
+      "approvedCatalogueRow": 63,
+      "skillGrants": [
+        "Thievery"
+      ],
+      "skillGrantChoices": [],
+      "acquisitionNotes": "Add 1 Skill point in Thievery (Awareness)"
     },
     {
       "category": "Supplemental",
@@ -6954,7 +9098,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Rare",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -6967,11 +9113,13 @@ window.INFINITY_DATA = {
       "primary": "Resistance",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Janissary Defensive Doctrine. Use this training with Resistance or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +3d20 when using Resistance or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Resistance or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Shield Line",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -6984,11 +9132,13 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 1 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +1d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Extraplanetary or Survival for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Social",
@@ -7001,11 +9151,13 @@ window.INFINITY_DATA = {
       "primary": "Command",
       "secondary": "Persuade",
       "description": "Level 3 talent from the O-12 Liaison Corps. Use this training with Command or Persuade during relevant missions.",
-      "effect": "Gain +3d20 when using Command or Persuade for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Command or Persuade for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Negotiator",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -7018,11 +9170,13 @@ window.INFINITY_DATA = {
       "primary": "Persuade",
       "secondary": "Command",
       "description": "Level 3 talent from the Bureau Aegis Command Track. Use this training with Persuade or Command during relevant missions.",
-      "effect": "Gain +3d20 when using Persuade or Command for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Persuade or Command for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Concilium Mandate",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Faction Prestige",
@@ -7035,11 +9189,13 @@ window.INFINITY_DATA = {
       "primary": "Medicine",
       "secondary": "Analysis",
       "description": "Level 3 talent from the Ghulam Doctor Field School. Use this training with Medicine or Analysis to stabilise casualties, treat injuries, and solve medical problems.",
-      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Medicine or Analysis for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Medical Authority",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -7056,7 +9212,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -7069,11 +9227,13 @@ window.INFINITY_DATA = {
       "primary": "Observation",
       "secondary": "Discipline",
       "description": "Level 3 talent from the Mobile Brigada Heavy Weapons. Use this training with Observation or Discipline to hold ground, assault defended positions, and absorb pressure.",
-      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Observation or Discipline for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Suppression Expert",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Combat",
@@ -7086,11 +9246,13 @@ window.INFINITY_DATA = {
       "primary": "Stealth",
       "secondary": "Thievery",
       "description": "Level 3 talent from the Nisse Ranger Doctrine. Use this training with Stealth or Thievery to infiltrate, remain hidden, and exploit tactical openings.",
-      "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Stealth or Thievery for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Ghost Perch",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -7103,11 +9265,13 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 1 talent from the Ariadna Ranger Doctrine. Use this training with Survival or Observation to scout terrain, observe threats, and guide allies.",
-      "effect": "Gain +1d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +1d20 when using Survival or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "None",
       "rarity": "Common",
       "cost": "5",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -7120,11 +9284,13 @@ window.INFINITY_DATA = {
       "primary": "Survival",
       "secondary": "Observation",
       "description": "Level 3 talent from the O-12 Survey Corps. Use this training with Survival or Observation to survive hostile terrain and act independently in the field.",
-      "effect": "Gain +3d20 when using Survival or Observation for this Talent. This bonus counts toward the +3d20 talent cap. With GM approval, a matching cinematic benefit may be used once per scene.",
+      "effect": "Gain +3d20 when using Survival or Observation for this Talent. All bonus dice count toward the 5d20 total pool limit. With GM approval, a matching cinematic benefit may be used once per scene.",
       "prerequisite": "Hazard Mapping",
       "rarity": "Rare",
       "cost": "15",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Exploration",
@@ -7137,11 +9303,13 @@ window.INFINITY_DATA = {
       "primary": "Extraplanetary",
       "secondary": "Survival",
       "description": "Level 2 talent from the Circular Crew Operations. Use this training with Extraplanetary or Survival to operate in spacecraft, vacuum, and zero-gravity environments.",
-      "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. This bonus counts toward the +3d20 talent cap.",
+      "effect": "Gain +2d20 when using Extraplanetary or Survival for this Talent. All bonus dice count toward the 5d20 total pool limit.",
       "prerequisite": "Vacuum Familiar",
       "rarity": "Uncommon",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     },
     {
       "category": "Supplemental",
@@ -7158,7 +9326,9 @@ window.INFINITY_DATA = {
       "prerequisite": "None",
       "rarity": "Rare",
       "cost": "10",
-      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue"
+      "source": "Infinity 2D20 Character Sheet — custom/adapted catalogue",
+      "rulesClassification": "Custom House Rule",
+      "rulesReview": "Existing expanded catalogue — not individually workbook-approved"
     }
   ],
   "equipment": [
@@ -21893,27 +24063,29 @@ window.INFINITY_DATA = {
       "Anti Virus",
       "Antipode",
       "Arachne Native",
+      "Arachne Signal Mask",
       "Arctic Survivor",
       "Ariadnan Grit",
       "Aspect Discipline",
       "Astrophobia",
       "Athletic",
-      "Automatic Response Order (ARO)",
+      "Automatic Reaction Order (ARO)",
       "Bakunin Social Energy",
       "Battle Fit",
       "Battle Hardened",
-      "Berserk",
       "Bio Immunity",
       "Biomedical Master",
       "Biotech Specialist",
-      "Blending In",
+      "Blending in",
       "Blind Faith",
       "Bookworm",
+      "Born Leader",
       "Bourak Survivor",
       "Brand Loyalist",
       "Brutal Critical",
       "Brutality",
       "Bureaucrat",
+      "Cammo - Normal",
       "Cammo - TO 1",
       "Cammo - TO 2",
       "Camouflage",
@@ -21937,6 +24109,7 @@ window.INFINITY_DATA = {
       "Corporate Insider",
       "Corregidor G-Time Veteran",
       "Counsellor",
+      "Counter Intelligence",
       "Counter Sniper",
       "Counter Surveillance",
       "Courageous",
@@ -21947,6 +24120,8 @@ window.INFINITY_DATA = {
       "Cybernetic Surgeon",
       "Cyberneticist",
       "Cybersecurity Expert",
+      "Damage Resistance",
+      "Damage Resistance (Total)",
       "Data Anarchist",
       "Data Miner",
       "Dawn Survivor",
@@ -21965,6 +24140,7 @@ window.INFINITY_DATA = {
       "Eagle Eye",
       "EI Voodoo Interface",
       "Electronics Expert",
+      "Emergency Bulkhead Drill",
       "Emergency Responder",
       "Empathic",
       "Enduring",
@@ -21976,7 +24152,7 @@ window.INFINITY_DATA = {
       "Escape Artist",
       "Executioner",
       "Expedition Leader",
-      "Fanatic (Hassassin Bahram Affiliate)",
+      "Fanatic (Only for the members of the Hassassin Bahram or any valuable affiliates that was bestowed by the Imam.)",
       "Fast Healer",
       "Fatality",
       "Field Doctor",
@@ -21989,7 +24165,6 @@ window.INFINITY_DATA = {
       "Free Spirit",
       "Free Thinker",
       "Freeze Response",
-      "Frenzy",
       "Friends in Low Places",
       "Frontier Born",
       "Frontier Guide",
@@ -22045,12 +24220,12 @@ window.INFINITY_DATA = {
       "Mimetism",
       "Misdirection",
       "Mnemonica (only for ALF or any Combined Army faction members)",
+      "Morat Battle Resolve",
       "Morat Cohesion",
       "Mothership Native",
       "Mountaineer",
       "Multitask Matrix",
       "Myriad Medications",
-      "Natural Born Warrior",
       "Natural Survivor",
       "Navigator",
       "Network Architect",
@@ -22083,6 +24258,7 @@ window.INFINITY_DATA = {
       "Priority Target",
       "Professional",
       "Programmer",
+      "Proxy Latency Control",
       "Public Figure",
       "Quick Draw",
       "Quick Reactions",
@@ -22096,6 +24272,7 @@ window.INFINITY_DATA = {
       "Research Physician",
       "Resilient",
       "Resistance (Shock)",
+      "Resistance (Viral)",
       "Resuscitation Expert",
       "Rigorous Training",
       "Risk Taker",
@@ -22107,6 +24284,7 @@ window.INFINITY_DATA = {
       "Scarred",
       "Scout",
       "Sensor Array",
+      "Sensor Calibration",
       "Sensor Evader",
       "Sensor Expert",
       "Shadow Operative",
@@ -22118,6 +24296,8 @@ window.INFINITY_DATA = {
       "Silent Step",
       "Silk Adept",
       "Silk Researcher",
+      "Silk Stabiliser",
+      "Sixth Sense",
       "Sleepy",
       "Smuggler",
       "Sniper",
@@ -22139,7 +24319,8 @@ window.INFINITY_DATA = {
       "Stunning Presence",
       "Sturdy",
       "Submondo Ties",
-      "Superior Doctrine",
+      "Super Jump",
+      "Superior Tactics",
       "Suppressive Shooter",
       "Sure-Footed",
       "Surgeon",
@@ -22148,7 +24329,7 @@ window.INFINITY_DATA = {
       "Swimmer",
       "Sygmaa Envoy",
       "Systems Analyst",
-      "Tactical Perception",
+      "Tactical Awareness",
       "TAG Hunter",
       "Tech Whisperer",
       "Technician",
@@ -22167,6 +24348,7 @@ window.INFINITY_DATA = {
       "Unbalanced",
       "Undercover Agent",
       "Unlikely Hero",
+      "Unshakable",
       "Urban Explorer",
       "Urban Fighter",
       "Vanguard (Infiltration)",
@@ -22196,8 +24378,9 @@ window.INFINITY_DATA = {
       "Antipode Hunter",
       "Applied Wisdom",
       "Arachne Ghostwalk",
+      "Arachne Trace Breaker",
       "Aspect Synchrony",
-      "Attache",
+      "Attaché",
       "Backdoor Access",
       "Bakunin Social Leverage",
       "Battlefield Commander",
@@ -22222,15 +24405,16 @@ window.INFINITY_DATA = {
       "Coordinated Assault",
       "Corregidor Zero-G Fighter",
       "Cosmonaut",
-      "Counter-Intel",
+      "Counter Intelligence",
       "Counter-Intrusion",
       "Data Ghost",
       "Deep Cover",
       "Demolition Expert - Level 1",
       "Demolition Expert - Level 2",
+      "Demolition Expert - Level 3",
       "Diplomat",
       "Diving Specialist",
-      "Drop zone Specialist",
+      "Drop Zone Specialist",
       "EI Voodoo Command",
       "Emergency Treatment",
       "Engineer Level 1",
@@ -22262,6 +24446,7 @@ window.INFINITY_DATA = {
       "Gladiator Reactions",
       "Gunner",
       "Gunnery Sergeant",
+      "Gunnery Sergeant Major",
       "Hacker Level 1",
       "Hacker Level 2",
       "Hacker Level 3",
@@ -22270,6 +24455,7 @@ window.INFINITY_DATA = {
       "Hero of Dawn",
       "Hidden Compartments",
       "Hold Position",
+      "Hull Isolation Specialist",
       "Human Intel",
       "ICEbreaker",
       "Imperial Operative",
@@ -22299,15 +24485,17 @@ window.INFINITY_DATA = {
       "Maya Legend",
       "Medical Authority",
       "Medicine - Doctor",
+      "Medicine - Doctor+",
       "Medicine - Medic",
       "Miracle Worker",
       "Morat Fire Discipline",
+      "Morat Rally Officer",
       "Mountain Climber",
       "Naval Diver",
       "Negotiator",
       "Network Phantom",
       "Officer - Captain",
-      "Officer - Liutenant",
+      "Officer - Lieutenant",
       "Officer - Major",
       "One Shot Doctrine",
       "Pack Leader",
@@ -22321,13 +24509,14 @@ window.INFINITY_DATA = {
       "Pilot - Remote 1",
       "Pilot - Remote 2",
       "Pilot - Remote 3",
-      "Pilot - TAG expert",
+      "Pilot - TAG Expert",
       "Pilot - TAG Operator",
       "Pilot - TAG Trainee",
       "Plasma Doctrine",
       "Posthuman Sync",
       "Praxis Bodysmith",
       "Precision Strike",
+      "Proxy Reserve Operator",
       "Proxy Synchrony",
       "Puppet Master",
       "Rapid Triage",
@@ -22344,12 +24533,14 @@ window.INFINITY_DATA = {
       "Sage of Bourak",
       "Scanner Sweep",
       "Search for Knowledge",
+      "Sensor Fusion Operator",
       "Shasvastii Seed Ambush",
       "Shield Line",
       "Shipboard Engineer",
       "Shock Trooper",
       "Signal Dominion",
       "Silent Movement",
+      "Silk Field Responder",
       "Silk Master",
       "Silver Tongue",
       "Snowline Scout",
@@ -36423,9 +38614,139 @@ window.INFINITY_DATA = {
         "sourcePage": 142
       }
     ]
+  },
+  "houseRuleGuide": [
+    {
+      "topic": "Scope",
+      "rule": "Approved workbook rules are authoritative for matching abilities; supplemental entries are custom adaptations and remain subject to GM review."
+    },
+    {
+      "topic": "Authority",
+      "rule": "This guide and the revised Traits/Talents descriptions govern bonus mechanics. Published sources are thematic references, not alternate playable rules. Unchanged Basic Rules and Conditions apply unless an ability expressly overrides them."
+    },
+    {
+      "topic": "Dice pool",
+      "rule": "Minimum 2d20, maximum 5d20. Add bonus dice before rolling. Never exceed 5d20, including Momentum and Heat dice."
+    },
+    {
+      "topic": "Rerolls",
+      "rule": "Reroll only eligible dice after rolling; each die may be rerolled at most once per test. Accept its replacement result. Free rerolls cost nothing."
+    },
+    {
+      "topic": "Difficulty",
+      "rule": "Difficulty is the required number of successes (D0–D5), not number of dice. Difficulty reductions have a minimum of D0."
+    },
+    {
+      "topic": "Heat exchange",
+      "rule": "Heat Boost: add 1 Heat to the GM pool per permitted additional d20 before rolling. Heat Reroll: add 1 Heat per permitted rerolled die after rolling. Available only when the ability explicitly grants it. Do not generate Heat for dice you cannot add or reroll."
+    },
+    {
+      "topic": "Momentum",
+      "rule": "Preserve personal Momentum and the stated Momentum costs. A Heat option does not replace a Momentum cost unless expressly stated."
+    },
+    {
+      "topic": "Ranked abilities",
+      "rule": "Within the same progression, use only the highest applicable rank’s numerical bonus, activation count and limits. Earlier unlocked capabilities and permanent skill gains remain unless replaced. Acquire lower ranks first when required. Distinct bonuses may combine subject to the 5d20 cap."
+    },
+    {
+      "topic": "Focus",
+      "rule": "Main skills cannot use Focus. Subskills use their normal Focus rules. Main-skill increases raise every subskill in that group correspondingly. Talent skill gains are permanent, applied once upon acquisition."
+    },
+    {
+      "topic": "Damage",
+      "rule": "d6 rolls are damage or recovery; d20 rolls are skill tests. HP (Vigour), Resolve, Firewall and Wounds remain distinct."
+    },
+    {
+      "topic": "Action economy",
+      "rule": "Tactical Awareness and Impetuous do not stack. Reactions and specialist actions follow their stated action and cost rules."
+    },
+    {
+      "topic": "Balance",
+      "rule": "Dumb Luck, Lucky, Risk Taker and regeneration are bounded. Exact new numerical limits are implementation decisions for playtesting. Other automatic successes retain their original explicit long-rest limits."
+    },
+    {
+      "topic": "Recovery",
+      "rule": "Revival limits are per casualty per encounter for Medic/Doctor/Doctor+. Shocked or immediate death cannot be bypassed by ordinary HP recovery. A specific ability can override a condition only as stated."
+    }
+  ],
+  "houseRuleMigration": {
+    "build": "v81-approved-house-rules",
+    "renamed": [
+      [
+        "traits",
+        "Automatic Response Order (ARO)",
+        "Automatic Reaction Order (ARO)"
+      ],
+      [
+        "traits",
+        "Blending In",
+        "Blending in"
+      ],
+      [
+        "traits",
+        "Frenzy",
+        "Damage Resistance"
+      ],
+      [
+        "traits",
+        "Berserk",
+        "Dogged"
+      ],
+      [
+        "traits",
+        "Natural Born Warrior",
+        "Born Leader"
+      ],
+      [
+        "traits",
+        "Superior Doctrine",
+        "Superior Tactics"
+      ],
+      [
+        "traits",
+        "Tactical Perception",
+        "Tactical Awareness"
+      ],
+      [
+        "traits",
+        "Dogged",
+        "Unshakable"
+      ],
+      [
+        "traits",
+        "Fanatic (Hassassin Bahram Affiliate)",
+        "Fanatic (Only for the members of the Hassassin Bahram or any valuable affiliates that was bestowed by the Imam.)"
+      ],
+      [
+        "talents",
+        "Drop zone Specialist",
+        "Drop Zone Specialist"
+      ],
+      [
+        "talents",
+        "Counter-Intel",
+        "Counter Intelligence"
+      ],
+      [
+        "talents",
+        "Officer - Liutenant",
+        "Officer - Lieutenant"
+      ],
+      [
+        "talents",
+        "Pilot - TAG expert",
+        "Pilot - TAG Expert"
+      ],
+      [
+        "talents",
+        "Attache",
+        "Attaché"
+      ]
+    ],
+    "source": "Infinity_2D20_Approved_House_Rule_Catalogue.xlsx"
   }
 };
 
 // Compatibility alias: older browser builds may still read window.DATA.
 window.DATA = window.INFINITY_DATA;
-window.INFINITY_BUILD = "v80-vehicle-tag-workshop";
+window.INFINITY_BUILD = "v81-approved-house-rules";
