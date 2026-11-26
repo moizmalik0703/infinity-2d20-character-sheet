@@ -1,3 +1,4 @@
+const baseline = require("./fixtures/v81-baseline.json");
 const fs = require("node:fs");
 const assert = require("node:assert/strict");
 const vm = require("node:vm");
@@ -8,12 +9,18 @@ new vm.Script(appCode, {filename:"app.js"});
 const context = {window:{}};
 vm.runInNewContext(dataCode, context, {filename:"data.js"});
 const DATA = context.window.INFINITY_DATA;
-assert.equal(context.window.INFINITY_BUILD, "v81-approved-house-rules");
-assert.equal(DATA.traits.length, 318);
-assert.equal(DATA.talents.length, 203);
-for(const [key, expected] of [["traits",83],["talents",69]]) {
+assert.equal(context.window.INFINITY_BUILD, baseline.build);
+assert.equal(DATA.traits.length, baseline.counts.traits);
+assert.equal(DATA.talents.length, baseline.counts.talents);
+for(const [key, expected] of [["traits",baseline.counts.approvedTraits],["talents",baseline.counts.approvedTalents]]) {
   const list = DATA[key];
   assert.equal(list.filter(x=>x.rulesReview==="Approved workbook").length, expected);
+  for (const row of baseline.approved[key]) {
+    const actual=list.find(x=>x.name===row.name);
+    assert.ok(actual, row.name+" missing");
+    assert.equal(actual.rulesReview,"Approved workbook",row.name);
+    for(const field of ["effect","level","cost"]) assert.equal(String(actual[field]),row[field],row.name+" "+field);
+  }
   assert.equal(new Set(list.map(x=>x.name.toLowerCase())).size, list.length);
   assert.ok(list.every(x=>x.rulesClassification==="Custom House Rule" && x.effect));
   assert.equal(JSON.stringify(DATA.lists[key==="traits"?"traitNames":"talentNames"]),JSON.stringify(list.map(x=>x.name)));
@@ -63,5 +70,9 @@ assert.match(find("traits","Mimetism").effect,/1 Heat/);
 assert.equal(find("talents","Medicine - Doctor+").level,"3");
 assert.equal(find("talents","Fire Team Master").prerequisite,"Fire Team Leader");
 assert.equal(find("traits","Cammo - TO 1").prerequisite,"Cammo - Normal");
+assert.equal(DATA.traits.filter(t=>t.skillGrants?.length&&t.rulesReview==="Approved workbook").length,baseline.counts.approvedFixedTraits);
+assert.equal(DATA.talents.filter(t=>t.skillGrants?.length&&t.rulesReview==="Approved workbook").length,baseline.counts.approvedFixedTalents);
+assert.equal(DATA.talents.filter(t=>t.skillGrantChoices?.length&&t.rulesReview==="Approved workbook").length,baseline.counts.approvedChoiceTalents);
+assert.equal([...DATA.traits,...DATA.talents].filter(t=>t.rulesReview==="New custom expansion — playtest").length,baseline.counts.newExpansion);
 assert.ok(DATA.vehicleWorkshop);
 console.log("PASS: syntax, data integrity, build assets, approved counts, rank deduplication, skill choices, aliases and retained vehicle workshop.");

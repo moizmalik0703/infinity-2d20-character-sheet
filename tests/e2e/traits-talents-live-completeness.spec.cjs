@@ -1,3 +1,4 @@
+const baseline = require('../fixtures/v81-baseline.json');
 const { test, expect } = require('@playwright/test');
 
 const site = process.env.PORTFOLIO_URL || 'https://moizmalik0703.github.io/infinity-2d20-character-sheet/';
@@ -34,8 +35,8 @@ test('live data.js includes all corrected Traits and Talents with no blank displ
       })
     };
   });
-  expect(audit.traits).toBe(306);
-  expect(audit.talents).toBe(194);
+  expect(audit.traits).toBe(baseline.counts.traits);
+  expect(audit.talents).toBe(baseline.counts.talents);
   expect(audit.missingTraits).toEqual([]);
   expect(audit.missingTalents).toEqual([]);
   expect(audit.lifepath).toBe(51);
@@ -66,6 +67,25 @@ test('live UI displays corrected rarity, cost and eligibility when records are s
     await expect(page.locator('[data-talent-cost="0"]')).toHaveText('5');
     await expect(page.locator('[data-talent-description="0"]')).not.toBeEmpty();
     await expect(page.locator('[data-talent-effect="0"]')).not.toBeEmpty();
+  }
+  expect(errors).toEqual([]);
+});
+
+// Compare all approved effects to the independent workbook fixture, not the running data itself.
+test('live approved house rules match all 152 workbook records', async ({page}) => {
+  const errors = await openLive(page);
+  const actual = await page.evaluate(() => ({
+    build: window.INFINITY_BUILD,
+    traits: DATA.traits.map(({name,effect,level,cost,rulesClassification,rulesReview})=>({name,effect,level,cost,rulesClassification,rulesReview})),
+    talents: DATA.talents.map(({name,effect,level,cost,rulesClassification,rulesReview})=>({name,effect,level,cost,rulesClassification,rulesReview}))
+  }));
+  expect(actual.build).toBe(baseline.build);
+  for(const key of ['traits','talents']) {
+    expect(actual[key].length).toBe(baseline.counts[key]);
+    expect(new Set(actual[key].map(x=>x.name.toLowerCase())).size).toBe(actual[key].length);
+    expect(actual[key].every(x=>x.rulesClassification==='Custom House Rule' && x.effect)).toBe(true);
+    const approved=actual[key].filter(x=>x.rulesReview==='Approved workbook').map(({name,effect,level,cost})=>({name,effect,level:String(level),cost:String(cost)}));
+    expect(approved.sort((a,b)=>a.name.localeCompare(b.name))).toEqual([...baseline.approved[key]].sort((a,b)=>a.name.localeCompare(b.name)));
   }
   expect(errors).toEqual([]);
 });

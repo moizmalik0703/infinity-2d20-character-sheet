@@ -1,0 +1,936 @@
+{
+  "qaVersion": "V81.1",
+  "build": "v81-approved-house-rules",
+  "counts": {
+    "traits": 318,
+    "talents": 203,
+    "approvedTraits": 83,
+    "approvedTalents": 69,
+    "newExpansion": 12,
+    "legacySingle": 12,
+    "legacyChoice": 3,
+    "legacySpecial": 39,
+    "approvedFixedTraits": 3,
+    "approvedFixedTalents": 66,
+    "approvedChoiceTalents": 3
+  },
+  "source": "Infinity_2D20_Approved_House_Rule_Catalogue.xlsx",
+  "approved": {
+    "traits": [
+      {
+        "name": "Charismatic",
+        "effect": "On a Persuade (Personality) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Counsellor",
+        "effect": "On a Psychology (Intelligence) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "First-Aider",
+        "effect": "On a Medicine (Intelligence) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Flying Ace",
+        "effect": "On a Spacecraft (Coordination) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Graceful",
+        "effect": "On an Acrobatics (Agility) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Influencer",
+        "effect": "On a Lifestyle (Personality) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Misdirection",
+        "effect": "On a Thievery (Awareness) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Pattern Recognition",
+        "effect": "On an Analysis (Awareness) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Pedal to the Metal",
+        "effect": "On a Pilot (Coordination) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Professional",
+        "effect": "On a Command (Personality) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Resilient",
+        "effect": "On a Close Combat (Agility) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Scout",
+        "effect": "On a Stealth (Agility) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "1"
+      },
+      {
+        "name": "Sharp Senses",
+        "effect": "On an Observation (Awareness) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Specialist",
+        "effect": "On a Science (Intelligence) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Speed Typing",
+        "effect": "On a Hacking (Intelligence) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Stubborn",
+        "effect": "On a Discipline (Willpower) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Sturdy",
+        "effect": "On a Resistance (Brawn) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Technician",
+        "effect": "On a Tech (Intelligence) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Tracker",
+        "effect": "On a Survival (Awareness) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Trigger Happy",
+        "effect": "On a Ballistics (Coordination) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Wild Empathy",
+        "effect": "On an Animal Handling (Personality) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Wild Guess",
+        "effect": "On an Education (Intelligence) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Zero-Gravity",
+        "effect": "On an Extraplanetary (Awareness) test, you may reroll one d20 once. Accept the new result.",
+        "level": "0",
+        "cost": "2"
+      },
+      {
+        "name": "Anti Virus",
+        "effect": "When an Infowar attack would inflict a Firewall Wound, spend 1 Momentum to halve the attack's Firewall damage (round down), then determine Wounds normally.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Automatic Reaction Order (ARO)",
+        "effect": "Reaction: when an enemy leaves your immediate range (5 ft), spend 1 Momentum to attempt a CC or BS attack if eligible. On success, deal normal damage and stop that movement.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Blending in",
+        "effect": "Gain +1 Stealth skill point. On a Stealth test, you may reroll all failed d20s once; accept the new results.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Combat Analysis",
+        "effect": "Minor Action: make a D1 Analysis test during combat. On success, identify one special ability, hidden item or technological advantage of an opponent. Spend 1 Momentum per additional detail.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Courageous",
+        "effect": "When you would gain Frightened, spend 1 Momentum to ignore that instance of the condition.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Dumb Luck",
+        "effect": "Once per encounter, spend 1 Momentum after rolling a skill check to reroll up to two failed d20s. Accept the new results.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Damage Resistance",
+        "effect": "When damaged by an attack, spend 1 Momentum to reduce the damage by 1d6, to a minimum of 0.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Impetuous",
+        "effect": "Once per round on your turn, spend 1 Momentum to take one extra Standard Action. Does not stack with Tactical Awareness.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Rigorous Training",
+        "effect": "Gain 1 bonus Momentum on each successful Athletics test.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Risk Taker",
+        "effect": "Once per encounter, after a successful damaging attack, treat its damage dice as maximum values. Whenever you fail a skill check, lose 1 Momentum (minimum 0).",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Wild Card",
+        "effect": "At the start of an encounter, add 1 Heat to the GM pool to let your side act first, subject to GM adjudication of surprise.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Aerial Trooper",
+        "effect": "With a functioning jetpack, make a Pilot test to deploy by air at an eligible location when combat starts; use the scatter template if needed. During combat, you may fly up to 10 ft above the ground.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Dogged",
+        "effect": "If reduced to 0 HP without immediate death, you may ignore Unconscious for the rest of the encounter. At the start of each of your turns at 0 HP, roll 1d20; a natural 20 kills you. Shocked still causes immediate death. If still at 0 HP when the encounter ends, become Unconscious.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Bio Immunity",
+        "effect": "Ignore Poisoned. Viral ammunition deals normal damage to you without its poison effect.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Brutal Critical",
+        "effect": "On a subskill test, a natural 1 or a natural roll exactly equal to the skill target counts as a critical success (two successes). The latter is an exception to the normal under-target rule. A die cannot count as more than two successes; main-skill checks gain no expanded critical range.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Brutality",
+        "effect": "When you attack a target, it must pass a D1 Psychology test or become Frightened. Resolve at most once per target per round.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Cammo - TO 1",
+        "effect": "Gain +2d20 on Stealth tests using functioning TO camouflage. On success, gain Invisible. Gain +1 Discipline skill point on acquisition. Requires Cammo - Normal.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Chain of command",
+        "effect": "When your officer becomes Unconscious or Dead, you may temporarily assume their Officer Talent for the encounter. Do not gain its permanent skill points or refresh spent orders.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Combat Instinct",
+        "effect": "You are immune to the Surprised condition.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Counter Intelligence",
+        "effect": "Once per long rest, automatically pass one skill check against a target. Gain no Momentum from that check.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Defensive Play",
+        "effect": "When defending against an attack, you may use Close Combat against melee attacks or Acrobatics against ranged attacks instead of main-skill Agility.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Eagle Eye",
+        "effect": "Reduce Difficulty by 1 on Observation or Ballistics tests involving sniping.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Damage Resistance (Total)",
+        "effect": "When damaged by an attack, reduce damage by 1d6 (minimum 0). Each 6 explodes: roll another d6 and add it. Requires Damage Resistance; this replaces that Trait’s reduction.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Hard to Kill",
+        "effect": "When your HP reaches 0, spend 1 Momentum to recover 1d6 HP before applying Unconscious. Cannot prevent immediate death, including Shocked. Once per triggering attack.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Imposing Figure",
+        "effect": "Once per encounter, as a Standard Action, confront hostile targets within the circle template. Each must pass a D1 Psychology test or become Frightened and move away when able.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Linked with the AI (Note: Free for Enhanced Humans)",
+        "effect": "Reduce Difficulty by 1 on Tech, Hacking or Analysis tests. You may be targeted by eligible hacking attacks. Free for Enhanced Humans.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Linked with the EI (Note: Free for ALF or any Combined army factions)",
+        "effect": "Reduce Difficulty by 2 on Tech, Hacking or Analysis tests. You may be targeted by eligible hacking attacks. Free for ALF or Combined Army faction members.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Lucky",
+        "effect": "Before each session, roll 1d6 to determine your uses of Lucky. Spend one use after rolling to reroll one failed d20 on a skill check. Accept the new result. Unused uses expire at session end; long rests do not refresh them.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Medical Expert",
+        "effect": "Once per encounter, when using a Health Kit to restore HP to yourself or an ally, restore an additional 2d6 HP (up to maximum). Requires Medicine - Medic, Medicine - Doctor or Medicine - Doctor+.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Mimetism",
+        "effect": "When targeted by a ranged attack requiring line of sight, add 1 Heat to the GM pool to gain +1d20 on your defensive test. Alternatively, reroll one failed d20 on that defence for 1 Heat. Choose only one option per attack.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Born Leader",
+        "effect": "Once per long rest, automatically pass a Command test; gain no Momentum from that check.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Regeneration (NOTE: for AI, Neo Humans and ALF only)",
+        "effect": "Once per encounter, at the start of one of your turns while conscious, recover 1d6 HP, up to your maximum. Requires AI, Neo Human or ALF.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Religious Troop",
+        "effect": "Reduce Difficulty by 1 on checks to resist Frightened or Stressed. Free for Haqqislam characters.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Resistance (Shock)",
+        "effect": "Reduce Difficulty by 1 on checks to resist Shocked or a Shock attack’s special effect.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Resistance (Viral)",
+        "effect": "Reduce Difficulty by 1 on checks to resist Poisoned from viral attacks.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Sixth Sense",
+        "effect": "Reduce Difficulty by 1 on defensive or surprise checks against surprise attacks. If an attack catches you off guard, you may add 1 Heat to reroll one failed d20 on that defence.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Strategist",
+        "effect": "Before an encounter, roll 1d20 and record its value. Once during the encounter, subtract it from one of your own rolled skill-test d20 results (minimum 1). Use the adjusted result only for ordinary success; it cannot create a critical or Focus success, and cannot remove a natural-20 complication.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Strong Grip",
+        "effect": "You cannot be forcibly disarmed or made to drop a held item unless you choose to release it.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Stunning Presence",
+        "effect": "When you attack a target, it must pass a D1 Psychology test or become Stunned. Resolve at most once per target per round. Free for Odalisques.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Super Jump",
+        "effect": "You may jump up to twice your base Brawn score in feet, using the normal Athletics (Brawn) jump action.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Superior Tactics",
+        "effect": "Reduce Difficulty by 1 on skill checks to execute surprise attacks.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Tactical Awareness",
+        "effect": "Once per round on your turn, take one extra Standard Action. This does not stack with the extra action from Impetuous.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Terrain Expert",
+        "effect": "Reduce Difficulty by 1 on skill tests involving terrain.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Total Reaction",
+        "effect": "Reaction: when an enemy in line of sight attacks you, spend 1 Momentum to oppose the attack with an eligible CC or BS attack. Resolve using the workbook’s Face Off rule. You may add 1 Heat for +1d20 to this reaction, once per reaction.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Total Regeneration (NOTE: for AI, Neo Humans and ALF only)",
+        "effect": "Once per encounter, at the start of one of your turns while conscious, recover 1d6 HP, up to your maximum. Each 6 explodes: roll another d6 and add it. Requires Regeneration and replaces its effect.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Veteran",
+        "effect": "Ignore penalties caused by your officer being incapacitated, lost or out of range.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Weapon Master",
+        "effect": "When you make a successful Close Combat attack, each Momentum spent on bonus damage adds 2d6 instead of 1d6.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "All Terrain Expert",
+        "effect": "Reduce Difficulty by 2 on terrain-related skill tests. Requires Terrain Expert; replaces its reduction.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Cammo - TO 2",
+        "effect": "Gain +3d20 on Stealth tests using functioning TO camouflage. On success, gain Invisible. Gain +1 Survival skill point on acquisition. Requires Cammo - TO 1; replaces its dice bonus.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Unshakable",
+        "effect": "Reduce Difficulty by 2 on checks to resist Frightened or Stressed.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Fast Healer",
+        "effect": "After each long rest, remove half your current physical Wounds (round down) without medical attention.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Fatality",
+        "effect": "After a successful Close Combat attack and damage resolution, a target with fewer than 5 HP remaining dies.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Immunity (Total)",
+        "effect": "Treat special ammunition as normal damage; ignore its ammunition-specific saving checks and secondary effects. Ordinary damage still applies.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Night Vision",
+        "effect": "See in low light and darkness up to 60 ft.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Non-Hackable",
+        "effect": "You cannot be targeted by hacking attacks restricted to specific eligible unit types (e.g. HI, Pilot or TAG). Other applicable Infowar attacks remain possible.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Enhanced (Meta Humans only)",
+        "effect": "Once per session, select one purchased or purchasable Trait for which you meet all prerequisites and species/faction restrictions, excluding Enhanced and other bestowed-only Traits. Use it for one encounter. Do not select it again until all eligible choices have been used.",
+        "level": "0",
+        "cost": "0"
+      },
+      {
+        "name": "Fanatic (Only for the members of the Hassassin Bahram or any valuable affiliates that was bestowed by the Imam.)",
+        "effect": "If you have a Cube and would die from HP loss, become Unconscious instead, unless Shocked or your Cube is destroyed. A Medic or Doctor may revive a functional body or transfer the intact Cube to a prepared body. Requires eligible Hassassin Bahram membership or Imam-bestowed affiliation.",
+        "level": "0",
+        "cost": "0"
+      },
+      {
+        "name": "Formation (for fireteam talent only)",
+        "effect": "While linked with your fireteam within 10 ft, gain 360-degree vision and immunity to Surprised. Requires Fire Team Member or higher.",
+        "level": "0",
+        "cost": "0"
+      },
+      {
+        "name": "Mnemonica (only for ALF or any Combined Army faction members)",
+        "effect": "Once only, when you die, transfer your consciousness and skill attributes into a preselected compatible, consenting friendly host. Requires ALF or Combined Army faction membership; GM confirms host compatibility. Keep the chosen host private until activation.",
+        "level": "0",
+        "cost": "0"
+      },
+      {
+        "name": "Cammo - Normal",
+        "effect": "Gain +1d20 on Stealth tests while using functioning camouflage. On success, gain Hidden, not Invisible. Prerequisite for Cammo - TO 1.",
+        "level": "1",
+        "cost": "5"
+      }
+    ],
+    "talents": [
+      {
+        "name": "Animal Handler",
+        "effect": "Gain +1d20 on Animal Handling tests involving a companion. Control up to 1 companion.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Pack Ranger",
+        "effect": "Gain +2d20 on Animal Handling tests involving companions. Control up to 2 companions. Once per round, use a Free Action to order one companion to attack.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Pack Leader",
+        "effect": "Gain +3d20 on Animal Handling tests involving companions. Control up to 3 companions. Once per round, use a Free Action to order one companion to attack.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Rock Climber",
+        "effect": "Climb up to your movement speed as a Free Action. Gain +1d20 on Acrobatics tests to climb structures.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Mountain Climber",
+        "effect": "Gain +2d20 on Acrobatics tests to climb structures. You may fire a small weapon while climbing.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Climbing Expert",
+        "effect": "Gain +3d20 on Acrobatics tests to climb structures. If rigged securely, you may fire a medium weapon while climbing.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Naval Diver",
+        "effect": "Gain +1d20 on applicable tests while performing activities underwater.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Combat Diver",
+        "effect": "Gain +2d20 on applicable tests while performing activities underwater.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Diving Specialist",
+        "effect": "Gain +3d20 on applicable tests while performing activities underwater.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Paratrooper",
+        "effect": "Gain +1d20 on tests for combat jumps.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Combat Jumper",
+        "effect": "Gain +1d20 on tests for combat jumps. You may fight during the jump.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Drop Zone Specialist",
+        "effect": "Gain +1d20 on tests for combat jumps. After dropping into enemy territory, gain +5 to your Stealth target until discovered.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Counter Intelligence",
+        "effect": "Gain +1d20 on Intelligence-related skill tests.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Espionage",
+        "effect": "Gain +2d20 on Intelligence-related skill tests.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Spy",
+        "effect": "Gain +3d20 on Intelligence-related skill tests.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Demolition Expert - Level 1",
+        "effect": "Gain +1d20 on sabotage or demolition tests when using a D-Charge unit.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Demolition Expert - Level 2",
+        "effect": "Gain +2d20 on sabotage or demolition tests when using a D-Charge unit.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Demolition Expert - Level 3",
+        "effect": "Gain +3d20 on sabotage or demolition tests when using a D-Charge unit.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Engineer Level 1",
+        "effect": "Gain +1d20 on tests to repair structures or recover an allied TAG/remote’s Firewall.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Engineer Level 2",
+        "effect": "Gain +2d20 on tests to repair structures or recover an allied TAG/remote’s Firewall; +1d20 to recover a person’s Firewall.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Engineer Level 3",
+        "effect": "Gain +3d20 on tests to repair structures or recover an allied TAG/remote’s Firewall; +2d20 to recover a person’s Firewall.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Fire Team Member",
+        "effect": "Gain +1d20 on Ballistics tests while in linked formation. Gain the Formation Trait.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Fire Team Leader",
+        "effect": "Gain +2d20 on Ballistics tests while in formation and +5 to your Agility target when defending against ranged attacks.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Fire Team Master",
+        "effect": "Gain +3d20 on Ballistics tests while in formation and +10 to your Agility target when defending against ranged attacks.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Forward Observer",
+        "effect": "While you have line of sight to a target within 60 ft, you may relay targeting information to allies, including hackers, so they can use your sightline where their attack or hacking method permits it.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Forward Analyst",
+        "effect": "While you have line of sight to a target within 100 ft, you may relay targeting information to allies, including hackers, so they can use your sightline where their attack or hacking method permits it.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Forward Signaler",
+        "effect": "While you have line of sight to a target within 200 ft, you may relay targeting information to allies, including hackers, so they can use your sightline where their attack or hacking method permits it.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Gunner",
+        "effect": "Gain +1d20 on Ballistics tests with heavy firearms.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Gunnery Sergeant",
+        "effect": "Gain +2d20 on Ballistics tests with heavy firearms. Ignore penalties specifically for operating heavy firearms.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Gunnery Sergeant Major",
+        "effect": "Gain +3d20 on Ballistics tests with heavy firearms. Ignore penalties specifically for operating heavy firearms.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Hacker Level 1",
+        "effect": "Gain +1d20 on Hacking tests involving software or hardware.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Hacker Level 2",
+        "effect": "Gain +2d20 on Hacking tests involving software or hardware; +1d20 on hacking attacks against a person.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Hacker Level 3",
+        "effect": "Gain +3d20 on Hacking tests involving software or hardware; +2d20 on hacking attacks against a person.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Impersonation - Mimetism",
+        "effect": "Gain +1d20 on Persuade tests to impersonate a human. This talent does not permit impersonation of other species.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Impersonation Level 1",
+        "effect": "Gain +2d20 on Persuade tests to impersonate a human, or +1d20 to impersonate another species.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Impersonation Level 2",
+        "effect": "Gain +3d20 on Persuade tests to impersonate a human, or +2d20 to impersonate another species.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Marksman Level 1",
+        "effect": "Gain +1d20 on Ballistics tests when firing a firearm.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Marksman Level 2",
+        "effect": "Gain +2d20 on Ballistics tests when firing a firearm.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Marksman Level 3",
+        "effect": "Gain +3d20 on Ballistics tests when firing a firearm.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Martial Arts Lvl 1",
+        "effect": "Gain +1d20 on Close Combat tests.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Martial Arts Lvl 2",
+        "effect": "Gain +2d20 on Close Combat tests.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Martial Arts Lvl 3",
+        "effect": "Gain +3d20 on Close Combat tests.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Medicine - Medic",
+        "effect": "Gain +1d20 on Medicine tests. You may revive the same casualty per encounter up to 1 time. Follow the normal healing equipment and revival requirements.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Medicine - Doctor",
+        "effect": "Gain +2d20 on Medicine tests. You may revive the same casualty per encounter up to 2 times. Follow the normal healing equipment and revival requirements.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Medicine - Doctor+",
+        "effect": "Gain +3d20 on Medicine tests. You may revive the same casualty per encounter up to 3 times. Follow the normal healing equipment and revival requirements.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Officer - Lieutenant",
+        "effect": "Before the session, roll 1d6 to determine available orders. Spend one order as a Free Action to let an ally within 30 ft repeat an action they performed this round.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Officer - Captain",
+        "effect": "Before each encounter, roll 1d6 to determine available orders. Spend one order as a Free Action to let an ally within 30 ft repeat an action they performed this round.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Officer - Major",
+        "effect": "Once per turn, as a Free Action, order an ally within 30 ft to repeat an action they performed this round.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Pilot - Remote 1",
+        "effect": "Gain +1d20 on tests to operate one remote.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Pilot - Remote 2",
+        "effect": "Gain up to +2d20 when operating one remote, or up to +1d20 when operating two remotes.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Pilot - Remote 3",
+        "effect": "Gain +3d20 when operating one remote, or +2d20 when operating two remotes.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Pilot - TAG Trainee",
+        "effect": "Gain +1d20 on applicable tests to operate a TAG.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Pilot - TAG Operator",
+        "effect": "Gain +2d20 on applicable tests to operate a TAG.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Pilot - TAG Expert",
+        "effect": "Gain +3d20 on applicable tests to operate a TAG.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Recon Level 1",
+        "effect": "Gain +1d20 on applicable reconnaissance tests.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Recon Level 2",
+        "effect": "Gain +2d20 on applicable reconnaissance tests.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Recon Level 3",
+        "effect": "Gain +3d20 on applicable reconnaissance tests.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Spacecraft Pilot - Level 1",
+        "effect": "Gain +1d20 on applicable tests when piloting an aircraft or spacecraft.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Spacecraft Pilot - Level 2",
+        "effect": "Gain +2d20 on applicable tests when piloting an aircraft or spacecraft.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Spacecraft Pilot - Level 3",
+        "effect": "Gain +3d20 on applicable tests when piloting an aircraft or spacecraft.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Thief - Pickpocket",
+        "effect": "Gain +1d20 on Thievery tests involving sleight of hand.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Thief - Acquisitions",
+        "effect": "Gain +2d20 on Thievery tests involving sleight of hand.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Thief - Master",
+        "effect": "Gain +3d20 on Thievery tests involving sleight of hand.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Attaché",
+        "effect": "Gain +1d20 on applicable social tests involving influence, high society, status, access to resources or relevant general knowledge.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Consul",
+        "effect": "Gain +2d20 on applicable social tests involving influence, high society, status, access to resources or relevant general knowledge.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Diplomat",
+        "effect": "Gain +3d20 on applicable social tests involving influence, high society, status, access to resources or relevant general knowledge.",
+        "level": "3",
+        "cost": "15"
+      },
+      {
+        "name": "Cosmonaut",
+        "effect": "Gain +1d20 on applicable social, task or combat tests performed in zero gravity.",
+        "level": "1",
+        "cost": "5"
+      },
+      {
+        "name": "Space Walker",
+        "effect": "Gain +2d20 on applicable social, task or combat tests performed in zero gravity.",
+        "level": "2",
+        "cost": "10"
+      },
+      {
+        "name": "Starship Trooper",
+        "effect": "Gain +3d20 on applicable social, task or combat tests performed in zero gravity.",
+        "level": "3",
+        "cost": "15"
+      }
+    ]
+  }
+}

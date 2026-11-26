@@ -1,11 +1,12 @@
+const baseline = require('../fixtures/v81-baseline.json');
 const { test, expect } = require('@playwright/test');
 
-const site = 'https://moizmalik0703.github.io/infinity-2d20-character-sheet/';
+const site = process.env.PORTFOLIO_URL || 'https://moizmalik0703.github.io/infinity-2d20-character-sheet/';
 test.use({ viewport: { width: 1280, height: 900 } });
 test.setTimeout(90000);
 const rating = (page, skill) => page.locator('[data-rating="' + skill + '"]').innerText().then(Number);
 
-test('Ordinary Trait reduces Difficulty situationally; never silently increases Ratings', async ({ page }) => {
+test('Charismatic grants a situational reroll; never silently increases Ratings', async ({ page }) => {
   await page.goto(site, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('select[data-trait-select="0"]')).toBeVisible();
   const persuade = await rating(page, 'Persuade');
@@ -13,12 +14,12 @@ test('Ordinary Trait reduces Difficulty situationally; never silently increases 
   await page.locator('select[data-trait-select="0"]').selectOption('Charismatic');
   expect(await rating(page, 'Persuade')).toBe(persuade);
   expect(await rating(page, 'Lifestyle')).toBe(lifestyle);
-  await expect(page.locator('[data-trait-effect="0"]')).toContainText('Reduce Difficulty by 1');
+  await expect(page.locator('[data-trait-effect="0"]')).toContainText('reroll one d20');
   await expect(page.locator('[data-skill-rule="Persuade"]')).toContainText('situational effect');
-  expect(await page.locator('[data-skill-rule="Persuade"]').getAttribute('title')).toContain('Reduce Difficulty by 1');
+  expect(await page.locator('[data-skill-rule="Persuade"]').getAttribute('title')).toContain('reroll one d20');
 });
 
-test('Talent bonus dice and core skill effects do not become +1 Ratings', async ({ page }) => {
+test('Talent situational effects stay separate from explicit permanent Rating grants', async ({ page }) => {
   await page.goto(site, { waitUntil: 'domcontentloaded' });
   await expect(page.locator('select[data-talent-select="0"]')).toBeVisible();
   const athletics = await rating(page, 'Athletics');
@@ -37,13 +38,17 @@ test('Talent bonus dice and core skill effects do not become +1 Ratings', async 
     const select = document.querySelector('select[data-talent-select="0"]');
     select.add(new Option('Animal Handler', 'Animal Handler'));
   });
+  const animalBefore = await rating(page, 'Animal Handling');
+  const commandBefore = await rating(page, 'Command');
   await talentSlot.selectOption('Animal Handler');
   const animal = await rating(page, 'Animal Handling');
   const command = await rating(page, 'Command');
-  expect(animal).toBe(7);
-  expect(command).toBe(7);
+  expect(animal).toBe(animalBefore + 1);
+  expect(command).toBe(commandBefore);
   await expect(page.locator('[data-talent-effect="0"]')).toContainText('+1d20');
   expect(await page.locator('[data-skill-rule="Animal Handling"]').getAttribute('title')).toContain('+1d20');
+  await talentSlot.selectOption('');
+  expect(await rating(page, 'Animal Handling')).toBe(animalBefore);
 });
 
 test('Explicit grants persist, and XML reload does not convert situational effects into Rating', async ({ page }) => {
@@ -78,7 +83,7 @@ test('No ordinary Trait/Talent or inherited main skill label is a generic +1 Rat
     mainSkillsHaveFocus: mainSkills.some(s => document.querySelector('[data-focus="' + s + '"]')),
     mainRating: skillRatingParts('Awareness').traitTalentBonus
   }));
-  expect([data.traits, data.talents, data.explicitSingle, data.explicitChoice]).toEqual([306, 194, 12, 3]);
+  expect([data.traits, data.talents, data.explicitSingle, data.explicitChoice]).toEqual([baseline.counts.traits, baseline.counts.talents, baseline.counts.legacySingle, baseline.counts.legacyChoice]);
   expect(data.mappedCore.sort()).toEqual(['Catfall', 'Pattern Recognition', 'Sturdy']);
   expect(data.resultKeys.sort()).toEqual(['details', 'direct']);
   expect(data.mainSkillsHaveFocus).toBe(false);

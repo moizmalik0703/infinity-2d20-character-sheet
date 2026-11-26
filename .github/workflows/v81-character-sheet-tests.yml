@@ -1,4 +1,4 @@
-name: Character sheet v81 regression
+name: Character sheet regression — V81.1 QA
 on:
   pull_request:
     branches: [main]
@@ -7,18 +7,37 @@ permissions:
   contents: read
 jobs:
   regression:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: JavaScript and house-rule regression
+      - name: JavaScript and independent workbook baseline regression
         run: node tests/v81-house-rules.cjs
       - name: Install browser test dependencies
         run: |
-          npm install --no-save --no-package-lock playwright
+          npm install --no-save --no-package-lock @playwright/test@1.56.1
           npx playwright install --with-deps chromium
-      - name: Browser smoke test
+      - name: Approved house-rule browser smoke test
         run: node tests/v81-browser-smoke.cjs
+      - name: Full pre-deployment browser suite against checked-out assets
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/infinity-qa-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8765/index.html > /dev/null; then break; fi
+            sleep 1
+          done
+          curl --fail --silent http://127.0.0.1:8765/index.html > /dev/null
+          PORTFOLIO_URL=http://127.0.0.1:8765/ npx playwright test tests/e2e/ --reporter=line --workers=1
+      - name: Upload browser diagnostic artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: predeployment-browser-diagnostics
+          path: test-results/
+          retention-days: 7
+          if-no-files-found: ignore

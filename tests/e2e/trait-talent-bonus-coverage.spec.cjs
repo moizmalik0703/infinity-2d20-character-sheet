@@ -1,20 +1,17 @@
+const baseline = require('../fixtures/v81-baseline.json');
 const { test, expect } = require('@playwright/test');
-const fs = require('node:fs');
-const path = require('node:path');
-const site = 'https://moizmalik0703.github.io/infinity-2d20-character-sheet/';
-const html = fs.readFileSync(path.join(__dirname, '..', '..', 'index.html'), 'utf8');
+const site = process.env.PORTFOLIO_URL || 'https://moizmalik0703.github.io/infinity-2d20-character-sheet/';
 test.setTimeout(120000);
 test.use({viewport:{width:1280,height:900},screenshot:'only-on-failure',trace:'retain-on-failure'});
 
-async function openLocal(page) {
-  await page.route(site,route=>route.fulfill({status:200,contentType:'text/html; charset=utf-8',body:html}));
+async function openSheet(page) {
   await page.goto(site,{waitUntil:'domcontentloaded',timeout:60000});
   await expect(page.locator('select[data-trait-select="0"]')).toBeVisible();
 }
 const rating=(page,skill)=>page.locator('[data-rating="'+skill+'"]').innerText().then(Number);
 
 test('Trait and Talent catalogue has no blank or invalid Primary/Secondary bonus labels',async({page})=>{
-  await openLocal(page);
+  await openSheet(page);
   const result=await page.evaluate(()=>{
     const valid=new Set([...subSkills,'Not applicable','Choose below']);
     const bad=[...DATA.traits,...DATA.talents].flatMap(item=>
@@ -25,17 +22,17 @@ test('Trait and Talent catalogue has no blank or invalid Primary/Secondary bonus
       special:DATA.traits.filter(t=>t.skillBonusMode==='special-effect').length,
       catfall:DATA.talents.find(t=>t.name==='Catfall')};
   });
-  expect(result.traits).toBe(306);
-  expect(result.talents).toBe(194);
+  expect(result.traits).toBe(baseline.counts.traits);
+  expect(result.talents).toBe(baseline.counts.talents);
   expect(result.bad).toEqual([]);
-  expect([result.single,result.choice,result.special]).toEqual([12,3,40]);
+  expect([result.single,result.choice,result.special]).toEqual([baseline.counts.legacySingle,baseline.counts.legacyChoice,baseline.counts.legacySpecial]);
   expect(result.catfall.primary).toBe('Athletics');
   expect(result.catfall.secondary).toBe('Not applicable');
   expect(result.catfall.skillMappingNote).toContain('Acrobatics');
 });
 
 test('Single-skill source Trait grants exactly one sub-skill Rating, not a main skill',async({page})=>{
-  await openLocal(page);
+  await openSheet(page);
   const oldSurvival=await rating(page,'Survival');
   const oldAwareness=await rating(page,'Awareness');
   await page.locator('select[data-trait-select="0"]').selectOption('Grizzled');
@@ -49,7 +46,7 @@ test('Single-skill source Trait grants exactly one sub-skill Rating, not a main 
 });
 
 test('Two choice-based Traits work independently and persist in an XML roundtrip',async({page})=>{
-  await openLocal(page);
+  await openSheet(page);
   const oldAnimal=await rating(page,'Animal Handling');
   const oldSurvival=await rating(page,'Survival');
   const oldBallistics=await rating(page,'Ballistics');
@@ -77,7 +74,7 @@ test('Two choice-based Traits work independently and persist in an XML roundtrip
 });
 
 test('Conditional Thievery starts at zero; Catfall maps to Athletics only',async({page})=>{
-  await openLocal(page);
+  await openSheet(page);
   const oldThievery=await rating(page,'Thievery');
   const oldAthletics=await rating(page,'Athletics');
   const oldBrawn=await rating(page,'Brawn');

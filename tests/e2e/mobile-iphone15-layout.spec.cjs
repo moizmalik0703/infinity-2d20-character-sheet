@@ -1,20 +1,16 @@
 const { test, expect } = require('@playwright/test');
-const fs = require('node:fs');
-const path = require('node:path');
-// Load the exact checked-out build instead of racing Pages publication.
-const url='https://moizmalik0703.github.io/infinity-2d20-character-sheet/';
-const html=fs.readFileSync(path.join(__dirname,'..','..','index.html'),'utf8');
+// Use the full local checkout for PR testing or the full public deployment for live testing.
+const url=process.env.PORTFOLIO_URL || 'https://moizmalik0703.github.io/infinity-2d20-character-sheet/';
 test.setTimeout(120000);
 test.use({viewport:{width:393,height:852},screenshot:'only-on-failure',trace:'retain-on-failure'});
 
-async function openLocalBuild(page){
-  await page.route(url,route=>route.fulfill({status:200,contentType:'text/html; charset=utf-8',body:html}));
+async function openSheet(page){
   await page.goto(url,{waitUntil:'domcontentloaded',timeout:60000});
   await expect(page.locator('input[data-field="characterName"]')).toBeVisible();
 }
 
 test('iPhone 15 and nearby sizes: single-column identity, compact two-column controls',async({page})=>{
-  await openLocalBuild(page);
+  await openSheet(page);
   for (const width of [375,390,393,430]) {
     await page.setViewportSize({width,height:852});
     const result=await page.evaluate(()=>{
@@ -40,7 +36,7 @@ test('iPhone 15 and nearby sizes: single-column identity, compact two-column con
 });
 
 test('320px narrow phones use one-column toolbar and tracks',async({page})=>{
-  await openLocalBuild(page);
+  await openSheet(page);
   await page.setViewportSize({width:320,height:700});
   const cols=await page.evaluate(()=>{
     const count=q=>getComputedStyle(document.querySelector(q)).gridTemplateColumns.trim().split(/\s+/).length;

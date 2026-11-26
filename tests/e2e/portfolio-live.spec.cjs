@@ -1,3 +1,4 @@
+const baseline = require('../fixtures/v81-baseline.json');
 const {test, expect} = require('@playwright/test');
 const fs = require('node:fs');
 const site = process.env.PORTFOLIO_URL || 'https://moizmalik0703.github.io/infinity-2d20-character-sheet/';
@@ -15,7 +16,7 @@ async function addVehicle(page,name) {
   await expect(page.locator('#v80Roster option')).toHaveCount(1);
 }
 
-test('01 live deployment — V80 mounts with V79 provenance and unchanged loadout slots',async({page})=>{
+test('01 live deployment — V81 mounts with V79 provenance and unchanged loadout slots',async({page})=>{
   const errors=[];
   page.on('pageerror', e=>errors.push(String(e)));
   await openPortfolio(page);
@@ -35,7 +36,7 @@ test('01 live deployment — V80 mounts with V79 provenance and unchanged loadou
       verified, related, unresolved, audited:audit.length
     };
   });
-  expect(result.build).toBe('v80-vehicle-tag-workshop');
+  expect(result.build).toBe(baseline.build);
   expect(result.loaded).toBe(true);
   expect(result.count).toBe(37);
   expect(result.upgrades).toBe(50);
