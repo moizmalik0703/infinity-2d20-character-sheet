@@ -1,3 +1,4 @@
+const baseline = require("./fixtures/v81-baseline.json");
 // Run against a local checkout or a deployed URL with SHEET_URL=https://...
 const { chromium } = require("playwright");
 const assert = require("node:assert/strict");
@@ -29,9 +30,9 @@ const os = require("node:os");
     page.on("dialog",d=>d.accept());
     await page.goto(url,{waitUntil:"domcontentloaded"});
     await page.locator('select[data-talent-select="0"]').waitFor();
-    await page.waitForFunction(()=>window.INFINITY_BUILD==="v81-approved-house-rules");
-    assert.equal(await page.evaluate(()=>window.INFINITY_DATA.traits.length),318);
-    assert.equal(await page.evaluate(()=>window.INFINITY_DATA.talents.length),203);
+    await page.waitForFunction(build=>window.INFINITY_BUILD===build,baseline.build);
+    assert.equal(await page.evaluate(()=>window.INFINITY_DATA.traits.length),baseline.counts.traits);
+    assert.equal(await page.evaluate(()=>window.INFINITY_DATA.talents.length),baseline.counts.talents);
     const career=page.locator('select[data-field="career"]');
     if(await career.locator('option[value="General / Unrestricted"]').count()) await career.selectOption("General / Unrestricted");
     const choose=(kind,index,value)=>page.locator('select[data-'+kind+'-select="'+index+'"]').selectOption(value);
@@ -56,7 +57,7 @@ const os = require("node:os");
     }
     const saved=await page.evaluate(()=>collectState());
     assert.equal(saved.talentGrantChoices["Spy|Awareness"],"Survival");
-    assert.equal(saved.houseRuleBuild,"v81-approved-house-rules");
+    assert.equal(saved.houseRuleBuild,baseline.build);
     await page.locator('input[data-field="characterName"]').fill("V81 Smoke Test");
     const downloadPromise=page.waitForEvent("download");
     await page.locator("#exportXmlBtn").click();
