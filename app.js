@@ -1152,6 +1152,10 @@ function selectedTalentObjects() {
     .filter(t => t && t.name);
 }
 
+// Only explicit Rating grants change a skill's displayed Rating.
+// Primary/Secondary on ordinary Traits and Talents are applicability labels,
+// not additional +1 Rating grants. d20/Difficulty/reroll bonuses remain
+// contextual rules in the corresponding Effect cards and skill rule tooltips.
 function calculateSkillBonuses() {
   const direct = {};
   const details = {};
@@ -1162,36 +1166,53 @@ function calculateSkillBonuses() {
 
   function addSubskillBonus(skillName, source) {
     const skill = normalizeSkillName(skillName);
-    // Main skills are references only. They never gain or pass on automatic Rating bonuses.
-    // Only explicit sub-skills may receive automatic Trait/Talent Rating bonuses.
-    // Main skills and unknown labels are never valid bonus targets.
+    // Preserve the custom rule: main skills receive no Trait/Talent Rating
+    // bonuses, and their child skills cannot be increased implicitly.
     if (!skill || !subSkills.includes(skill)) return;
     direct[skill] = (direct[skill] || 0) + 1;
     details[skill].push(source);
   }
 
-  // Chapter 4 ALEPH Psychogenetic Foundation gives a skill increase separate from main attributes.
+  // ALEPH Psychogenetic Foundations explicitly grant a subskill rank.
   const aiFoundation = selectedAlephFoundation();
   if (aiFoundation?.skill) addSubskillBonus(aiFoundation.skill, `Psychogenetic Foundation: ${aiFoundation.name}`);
-  // Slot-indexed Traits ensure source-skill choices remain with the correct card.
+
+  // Exactly 12 source-single Traits explicitly grant a +1 Rating.
+  // Exactly 3 source-choice Traits grant +1 in the chosen skill, if chosen.
   document.querySelectorAll("select[data-trait-select]").forEach(select => {
     const t = byName(DATA.traits, select.value);
     if (!t?.name) return;
-    addSubskillBonus(t.primary, `Trait: ${t.name}`);
-    addSubskillBonus(t.secondary, `Trait: ${t.name}`);
-    if (Array.isArray(t.skillChoices)) {
+    if (t.skillBonusMode === "source-single") {
+      addSubskillBonus(t.primary, `Trait: ${t.name} (explicit +1 Rating)`);
+    } else if (t.skillBonusMode === "source-choice" && Array.isArray(t.skillChoices)) {
       const selector = `select[data-trait-bonus-choice="${select.dataset.traitSelect}"]`;
       const chosen = document.querySelector(selector)?.value || "";
-      if (t.skillChoices.includes(chosen)) addSubskillBonus(chosen, `Trait choice: ${t.name}`);
+      if (t.skillChoices.includes(chosen)) addSubskillBonus(chosen, `Trait choice: ${t.name} (explicit +1 Rating)`);
     }
+    // "special-effect" and generic Trait skill labels grant no Rating.
   });
 
-  selectedTalentObjects().forEach(t => {
-    addSubskillBonus(t.primary, `Talent: ${t.name}`);
-    addSubskillBonus(t.secondary, `Talent: ${t.name}`);
-  });
-
+  // Talents, including core skill Talents with "source-single" mapping,
+  // do not grant +1 Rating unless a separate, explicit grant is later
+  // implemented. Their +Nd20, rerolls and other effects are conditional.
   return { direct, details };
+}
+
+// Show situational bonuses without silently adding them to permanent Ratings.
+// Whether a particular Effect applies depends on the declared test and GM.
+// The full text is kept, including stacking caps and complications.
+function contextualSkillEffectNotes(skill) {
+  if (!subSkills.includes(skill)) return [];
+  const notes = [];
+  const usesSkill = item =>
+    [item.primary, item.secondary].some(label => normalizeSkillName(label) === skill);
+  selectedTraitObjects().forEach(t => {
+    if (usesSkill(t) && t.effect) notes.push(`Trait ${t.name}: ${t.effect}`);
+  });
+  selectedTalentObjects().forEach(t => {
+    if (usesSkill(t) && t.effect) notes.push(`Talent ${t.name}: ${t.effect}`);
+  });
+  return notes;
 }
 
 function skillRatingParts(skill) {
@@ -1274,9 +1295,14 @@ function updateSkillRatings() {
       const modifiers = [];
       if (parts.hostModifier !== 0) modifiers.push(`Host ${parts.hostModifier > 0 ? "+" : ""}${parts.hostModifier}`);
       if (parts.startBonus > 0) modifiers.push(`Start +${parts.startBonus}`);
-      if (parts.traitTalentBonus > 0) modifiers.push(`Trait/Talent +${parts.traitTalentBonus}`);
+      if (parts.traitTalentBonus > 0) modifiers.push(`Explicit Rating +${parts.traitTalentBonus}`);
+      const contextual = contextualSkillEffectNotes(skill);
+      if (contextual.length) modifiers.push(`${contextual.length} situational effect${contextual.length === 1 ? "" : "s"} (see cards)`);
       ruleCell.textContent = modifiers.length ? `${baseRule}; ${modifiers.join("; ")}` : baseRule;
-      ruleCell.title = parts.sources.length ? parts.sources.join("; ") : "";
+      ruleCell.title = [
+        ...parts.sources,
+        ...contextual.map(effect => `Conditional — ${effect}`)
+      ].join("\n");
       ruleCell.classList.toggle("auto-bonus", parts.bonus > 0);
     }
   });

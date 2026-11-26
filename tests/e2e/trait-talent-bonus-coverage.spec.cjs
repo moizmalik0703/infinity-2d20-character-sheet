@@ -88,6 +88,9 @@ test('Conditional Thievery starts at zero; Catfall maps to Athletics only',async
   await page.locator('select[data-talent-select="0"]').selectOption('Catfall');
   await expect(page.locator('[data-talent-primary="0"]')).toHaveText('Athletics');
   await expect(page.locator('[data-talent-secondary="0"]')).toHaveText('Not applicable');
-  expect(await rating(page,'Athletics')).toBe(oldAthletics+1);
+  // Catfall affects falling damage, not Athletics Rating.
+  expect(await rating(page,'Athletics')).toBe(oldAthletics);
+  await expect(page.locator('[data-skill-rule="Athletics"]')).toContainText('situational effect');
+  expect(await page.locator('[data-skill-rule="Athletics"]').getAttribute('title')).toContain('one zone shorter');
   expect(await rating(page,'Brawn')).toBe(oldBrawn);
 });
